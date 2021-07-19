@@ -7,3 +7,6 @@
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
+
+# Typescript, Tsc, Build, Compile, Etc.
+web/event-server/*.js
