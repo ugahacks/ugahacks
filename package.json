@@ -1,0 +1,13 @@
+{
+  "name": "ugahacks",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "workspaces": [
+    "web/event-server",
+    "web/myugahacks",
+    "web/ugahacks-6",
+    "web/ugahacks-7",
+    "web/ugahacks-org"
+  ]
+}
