@@ -2,7 +2,7 @@ name: Feature Branch CI/CD
 on:
   push:
     branches:
-      - 'master'
+      - 'feature/*'
 env:
   example_var: "a928fdb"
 jobs:

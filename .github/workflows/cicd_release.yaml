@@ -2,7 +2,7 @@ name: Release Branch CI/CD
 on:
   push:
     branches:
-      - 'master'
+      - 'release'
 env:
   example_var: "a928fdb"
 jobs:
