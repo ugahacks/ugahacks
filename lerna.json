@@ -1,0 +1,6 @@
+{
+    "packages": ["web/**"],
+    "version": "independent",
+    "npmClient": "yarn",
+    "useWorkspace": true
+}
