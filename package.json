@@ -1,13 +1,18 @@
 {
   "name": "ugahacks",
   "version": "1.0.0",
-  "main": "index.ts",
+  "repository": "",
   "license": "MIT",
   "workspaces": [
-    "web/event-server",
+    "web/static-server",
     "web/myugahacks",
     "web/ugahacks-6",
     "web/ugahacks-7",
     "web/ugahacks-org"
-  ]
+  ],
+  "scripts": {},
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "depedencies": {}
 }
