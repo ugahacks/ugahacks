@@ -45,6 +45,9 @@ jobs:
     needs: [python_lint, typescript_lint, pytest, jest]
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
       - name: Docker Build
         run: |-
           docker build web/ugahacks-7 -t test_build:latest
