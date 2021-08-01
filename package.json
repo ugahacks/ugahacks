@@ -1,5 +1,6 @@
 {
   "name": "ugahacks",
+  "private": true,
   "version": "1.0.0",
   "repository": "",
   "license": "MIT",
