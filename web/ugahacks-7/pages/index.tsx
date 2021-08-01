@@ -28,7 +28,7 @@ export default function Home() {
 
           <a href="https://6.ugahacks.com" className={styles.card}>
             <h2>6.ugahacks.com &rarr;</h2>
-            <p>Check out our last event&apos;s site!</p>
+            <p>Previous event site</p>
           </a>
         </div>
       </main>
