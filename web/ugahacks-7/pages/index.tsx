@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>UGAHacks 7</title>
         <meta name="description" content="UGAHacks 7 Event Site [[ event info here ]]" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
