@@ -42,7 +42,7 @@ jobs:
         run: echo "TYPESCRIPT UNIT TESTING COMPLETE"
  
   build:
-    needs: [python_list, typescript_lint, pytest, jest]
+    needs: [python_lint, typescript_lint, pytest, jest]
     runs-on: ubuntu-latest
     steps:
       - name: Docker Build
