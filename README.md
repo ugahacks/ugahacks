@@ -1,9 +1,7 @@
 # UGAHacks
 
-### Welcome
+[![master](https://github.com/ugahacks/ugahacks/actions/workflows/cicd_master.yaml/badge.svg)](https://github.com/ugahacks/ugahacks/actions/workflows/cicd_master.yaml) [![release](https://github.com/ugahacks/ugahacks/actions/workflows/cicd_release.yaml/badge.svg?branch=release)](https://github.com/ugahacks/ugahacks/actions/workflows/cicd_release.yaml)
 
-This is repository hosts all code for all things UGAHacks.
+## Welcome
 
-If you're viewing us right now, we're still in the process of coverting our infrarstructure.
-
-We're very excited to stand this repo up. Stay tuned!
+This is repository hosts all code for all things UGAHacks. If you're viewing us right now, we're still in the process of coverting our infrarstructure.
