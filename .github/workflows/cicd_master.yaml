@@ -44,6 +44,7 @@ jobs:
   build:
     needs: [python_list, typescript_lint, pytest, jest]
     runs-on: ubuntu-latest
+    steps:
       - name: Docker Build
         run: |-
           docker build web/ugahacks-7 -t test_build:latest
