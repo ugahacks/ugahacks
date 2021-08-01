@@ -16,16 +16,12 @@ jobs:
     steps:
       - name: Version Check
         run: python -V
-      - name: Env Check
-        run: echo $example_var
 
   typescript_lint:
     runs-on: ubuntu-latest
     steps:
       - name: Version Check
         run: npm --version 
-      - name: Env Check
-        run: echo $example_var
  
   pytest:
     needs: python_lint

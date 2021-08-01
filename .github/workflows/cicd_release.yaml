@@ -3,34 +3,70 @@ on:
   push:
     branches:
       - 'release'
+
 env:
-  example_var: "a928fdb"
+  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}  
+  SERVICE: ugahacks-7-stage
+  REGION: us-central1
+
 jobs:
+
   python_lint:
     runs-on: ubuntu-latest
     steps:
       - name: Version Check
         run: python -V
-      - name: Env Check
-        run: echo $example_var
+
   typescript_lint:
     runs-on: ubuntu-latest
     steps:
       - name: Version Check
         run: npm --version 
-      - name: Env Check
-        run: echo $example_var
+ 
   pytest:
     needs: python_lint
     runs-on: ubuntu-latest
     steps:
       - name: Python Unit Test
         run: echo "PYTHON UNIT TESTING COMPLETE"
+ 
   jest:
     needs: typescript_lint
     runs-on: ubuntu-latest
     steps:
       - name: Python Unit Test
         run: echo "TYPESCRIPT UNIT TESTING COMPLETE"
+ 
+  deploy:
+    needs: [python_lint, typescript_lint, pytest, jest]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
+      - name: Setup Cloud SDK
+        uses: google-github-actions/setup-gcloud@v0.2.0
+        with:
+          project_id: ${{ env.PROJECT_ID }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true  # Set to true to authenticate the Cloud Run action
+
+      - name: Authorize Docker push
+        run: gcloud auth configure-docker
+
+      - name: Build and Push Container
+        run: |-
+          docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }} web/ugahacks-7
+          docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }}
+          
+      - name: Deploy to Cloud Run
+        id: deploy
+        uses: google-github-actions/deploy-cloudrun@v0.4.0
+        with:
+          service: ${{ env.SERVICE }}
+          image: gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{ github.sha }}
+          region: ${{ env.REGION }}
+
+      - name: Show Output
+        run: echo ${{ steps.deploy.outputs.url }}
 
