@@ -11,8 +11,11 @@
     "web/ugahacks-7",
     "web/ugahacks-org"
   ],
-  "scripts": {},
+  "scripts": {
+    "postinstall": "husky install"
+  },
   "devDependencies": {
+    "husky": "^7.0.0",
     "lerna": "^4.0.0"
   },
   "depedencies": {}
