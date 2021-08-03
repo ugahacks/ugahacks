@@ -8,33 +8,34 @@ env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}  
   SERVICE: ugahacks-7-stage
   REGION: us-central1
+  BUILD_ENV: stage
 
 jobs:
 
-  python_lint:
+  flake8:
     runs-on: ubuntu-latest
     steps:
-      - name: Version Check
+      - name: Lint Python Code 
         run: python -V
 
-  typescript_lint:
+  eslint:
     runs-on: ubuntu-latest
     steps:
-      - name: Version Check
+      - name: Lint Typescript Code 
         run: npm --version 
  
   pytest:
     needs: python_lint
     runs-on: ubuntu-latest
     steps:
-      - name: Python Unit Test
+      - name: Test Python Code 
         run: echo "PYTHON UNIT TESTING COMPLETE"
  
   jest:
     needs: typescript_lint
     runs-on: ubuntu-latest
     steps:
-      - name: Python Unit Test
+      - name: Test Typescript Code 
         run: echo "TYPESCRIPT UNIT TESTING COMPLETE"
  
   deploy:
@@ -53,6 +54,30 @@ jobs:
 
       - name: Authorize Docker push
         run: gcloud auth configure-docker
+
+
+      - id: file_changes
+        uses: trilom/file-changes-action@v1.2.3
+        with:
+          output: ','
+          fileOutput: ','
+        - name: test_file_changes
+          run: |
+            echo "Changed Files (~/files.csv):"
+            cat $HOME/files.csv
+
+      - name: ugahacks-7
+        run: echo "ugahacks-7 changed, building ..."
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-7')
+      
+      - name: ugahacks-6 
+        run: echo "ugahacks-6 changed, building ..."
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-6')
+  
+      - name: ugahacks-org 
+        run: echo "ugahacks-org changed, building ..."
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-org')
+
 
       - name: Build and Push Container
         run: |-
