@@ -61,10 +61,10 @@ jobs:
         with:
           output: ','
           fileOutput: ','
-        - name: test_file_changes
-          run: |
-            echo "Changed Files (~/files.csv):"
-            cat $HOME/files.csv
+      - name: test_file_changes
+        run: |
+          echo "Changed Files (~/files.csv):"
+          cat $HOME/files.csv
 
       - name: ugahacks-7
         run: echo "ugahacks-7 changed, building ..."
