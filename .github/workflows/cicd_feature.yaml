@@ -1,36 +1,34 @@
 name: Feature Branch CI/CD
+
 on:
   push:
     branches:
       - 'feature/*'
-env:
-  example_var: "a928fdb"
-jobs:
-  python_lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Version Check
-        run: python -V
-      - name: Env Check
-        run: echo $example_var
-  typescript_lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Version Check
-        run: npm --version 
-      - name: Env Check
-        run: echo $example_var
-  pytest:
-    needs: python_lint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Python Unit Test
-        run: echo "PYTHON UNIT TESTING COMPLETE"
-  jest:
-    needs: typescript_lint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Python Unit Test
-        run: echo "TYPESCRIPT UNIT TESTING COMPLETE"
 
+jobs:
+  flake8:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint Python Code 
+        run: python -V
+
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint Typescript Code 
+        run: npm --version 
+ 
+  pytest:
+    needs: flake8 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Python Code 
+        run: echo "PYTHON UNIT TESTING COMPLETE"
+ 
+  jest:
+    needs: eslint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Typescript Code 
+        run: echo "TYPESCRIPT UNIT TESTING COMPLETE"
 
