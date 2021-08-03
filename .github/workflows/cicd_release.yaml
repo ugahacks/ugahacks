@@ -6,39 +6,41 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}  
-  SERVICE: ugahacks-7-stage
   REGION: us-central1
+  DEPLOY_ENV: stage
+  CI: true # silences "yarn install"
 
 jobs:
 
-  python_lint:
+  flake8:
     runs-on: ubuntu-latest
     steps:
-      - name: Version Check
+      - name: Lint Python Code 
         run: python -V
 
-  typescript_lint:
+  eslint:
     runs-on: ubuntu-latest
     steps:
-      - name: Version Check
+      - name: Lint Typescript Code 
         run: npm --version 
  
   pytest:
-    needs: python_lint
+    needs: flake8 
     runs-on: ubuntu-latest
     steps:
-      - name: Python Unit Test
+      - name: Test Python Code 
         run: echo "PYTHON UNIT TESTING COMPLETE"
  
   jest:
-    needs: typescript_lint
+    needs: eslint
     runs-on: ubuntu-latest
     steps:
-      - name: Python Unit Test
+      - name: Test Typescript Code 
         run: echo "TYPESCRIPT UNIT TESTING COMPLETE"
  
+  # Conditionally build, containerize, and deploy UGAHacks services iff files are changed #
   deploy:
-    needs: [python_lint, typescript_lint, pytest, jest]
+    needs: [flake8, eslint, pytest, jest]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -54,19 +56,89 @@ jobs:
       - name: Authorize Docker push
         run: gcloud auth configure-docker
 
-      - name: Build and Push Container
+
+      - id: file_changes
+        name: Get Changed Files
+        uses: trilom/file-changes-action@v1.2.3
+        with:
+          output: ','
+          fileOutput: ','
+
+      - name: Output Changed Files 
+        run: |
+          echo "Changed Files (~/files.csv):"
+          cat $HOME/files.csv
+
+
+      # UGAHacks 7
+      - name: Build and Push ugahacks-7 Container
         run: |-
-          docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }} web/ugahacks-7
-          docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }}
-          
-      - name: Deploy to Cloud Run
-        id: deploy
+          echo "ugahacks-7 changed, building ..."
+          docker build -t gcr.io/${{ env.PROJECT_ID }}/ugahacks-7-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/ugahacks-7
+          docker push gcr.io/${{ env.PROJECT_ID }}/ugahacks-7-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-7')
+ 
+      - name: Deploy ugahacks-7 to Cloud Run
+        id: deploy_ugahacks_7
         uses: google-github-actions/deploy-cloudrun@v0.4.0
         with:
-          service: ${{ env.SERVICE }}
-          image: gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{ github.sha }}
+          service: ugahacks-7-${{ env.DEPLOY_ENV }}
+          image: gcr.io/${{ env.PROJECT_ID }}/ugahacks-7-${{ env.DEPLOY_ENV }}:${{ github.sha }}
           region: ${{ env.REGION }}
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-7')
 
-      - name: Show Output
-        run: echo ${{ steps.deploy.outputs.url }}
+      - name: ugahacks-7 Post Deployment 
+        run: |-
+          echo "Active URL:"
+          echo ${{ steps.deploy_ugahacks_7.outputs.url }}
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-7')
+     
+     
+      # UGAHacks 6 
+      - name: Build and Push ugahacks-6 Container
+        run: |-
+          echo "ugahacks-6 changed, building ..."
+          docker build -t gcr.io/${{ env.PROJECT_ID }}/ugahacks-6-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/ugahacks-6
+          docker push gcr.io/${{ env.PROJECT_ID }}/ugahacks-6-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-6')
+ 
+      - name: Deploy ugahacks-6 to Cloud Run
+        id: deploy_ugahacks_6
+        uses: google-github-actions/deploy-cloudrun@v0.4.0
+        with:
+          service: ugahacks-6-${{ env.DEPLOY_ENV }}
+          image: gcr.io/${{ env.PROJECT_ID }}/ugahacks-6-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+          region: ${{ env.REGION }}
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-6')
+
+      - name: ugahacks-6 Post Deployment 
+        run: |-
+          echo "Active URL:"
+          echo ${{ steps.deploy_ugahacks_6.outputs.url }}
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-6')
+
+  
+
+      # UGAHacks Org 
+      - name: Build and Push ugahacks-org Container
+        run: |-
+          echo "ugahacks-org changed, building ..."
+          docker build -t gcr.io/${{ env.PROJECT_ID }}/ugahacks-org-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/ugahacks-org
+          docker push gcr.io/${{ env.PROJECT_ID }}/ugahacks-org-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-org')
+ 
+      - name: Deploy ugahacks-org to Cloud Run
+        id: deploy_ugahacks_org
+        uses: google-github-actions/deploy-cloudrun@v0.4.0
+        with:
+          service: ugahacks-org-${{ env.DEPLOY_ENV }}
+          image: gcr.io/${{ env.PROJECT_ID }}/ugahacks-org-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+          region: ${{ env.REGION }}
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-org')
+
+      - name: ugahacks-org Post Deployment 
+        run: |-
+          echo "Active URL:"
+          echo ${{ steps.deploy_ugahacks_org.outputs.url }}
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-org')
 
