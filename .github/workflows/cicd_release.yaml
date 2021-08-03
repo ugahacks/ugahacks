@@ -69,7 +69,6 @@ jobs:
           echo "Changed Files (~/files.csv):"
           cat $HOME/files.csv
 
-     
 
       # UGAHacks 7
       - name: Build and Push ugahacks-7 Container
