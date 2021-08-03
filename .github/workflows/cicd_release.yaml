@@ -39,7 +39,7 @@ jobs:
         run: echo "TYPESCRIPT UNIT TESTING COMPLETE"
  
   deploy:
-    needs: [python_lint, typescript_lint, pytest, jest]
+    needs: [flake8, eslint, pytest, jest]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
