@@ -20,3 +20,8 @@ A simple YES or NO will suffice. If yes, elaborate in 1-3 sentences.
 ### Did you add any depedencies to the project? 
 
 A simple YES or NO will suffice. If yes, give one phrase or sentence to outline its purpose.
+
+
+### Did you update the relevant documentation?
+
+A simple YES or NO will suffice. If no, give a reason as to why you did not update documentation.
