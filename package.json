@@ -5,11 +5,7 @@
   "repository": "",
   "license": "MIT",
   "workspaces": [
-    "web/static-server",
-    "web/myugahacks",
-    "web/ugahacks-6",
-    "web/ugahacks-7",
-    "web/ugahacks-org"
+    "web/*"
   ],
   "scripts": {
     "postinstall": "husky install"
