@@ -98,7 +98,25 @@ jobs:
       - name: Build and Push ugahacks-6 Container
         run: |-
           echo "ugahacks-6 changed, building ..."
+          docker build -t gcr.io/${{ env.PROJECT_ID }}/ugahacks-6-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/ugahacks-6
+          docker push gcr.io/${{ env.PROJECT_ID }}/ugahacks-6-${{ env.DEPLOY_ENV }}:${{ github.sha }}
         if: contains(steps.file_changes.outputs.files , 'ugahacks-6')
+ 
+      - name: Deploy ugahacks-6 to Cloud Run
+        id: deploy_ugahacks_6
+        uses: google-github-actions/deploy-cloudrun@v0.4.0
+        with:
+          service: ugahacks-6-${{ env.DEPLOY_ENV }}
+          image: gcr.io/${{ env.PROJECT_ID }}/ugahacks-6-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+          region: ${{ env.REGION }}
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-6')
+
+      - name: ugahacks-6 Post Deployment 
+        run: |-
+          echo "Active URL:"
+          echo ${{ steps.deploy_ugahacks_6.outputs.url }}
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-6')
+
   
 
       # UGAHacks Org 
