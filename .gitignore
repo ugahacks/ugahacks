@@ -2,7 +2,7 @@
 
 # Yarn 2
 .yarn/*
-.pnp.*
+!.yarn/cache
 !.yarn/releases
 !.yarn/plugins
 !.yarn/sdks
