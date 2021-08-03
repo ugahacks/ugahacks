@@ -79,7 +79,7 @@ jobs:
           docker push gcr.io/${{ env.PROJECT_ID }}/ugahacks-7-${{ env.DEPLOY_ENV }}:${{ github.sha }}
         if: contains(steps.file_changes.outputs.files , 'ugahacks-7')
  
-      - name: Deploy to Cloud Run
+      - name: Deploy ugahacks-7 to Cloud Run
         id: deploy_ugahacks_7
         uses: google-github-actions/deploy-cloudrun@v0.4.0
         with:
@@ -88,7 +88,7 @@ jobs:
           region: ${{ env.REGION }}
         if: contains(steps.file_changes.outputs.files , 'ugahacks-7')
 
-      - name: Show Output
+      - name: ugahacks-7 Post Deployment 
         run: |-
           echo "Active URL:"
           echo ${{ steps.deploy_ugahacks_7.outputs.url }}
