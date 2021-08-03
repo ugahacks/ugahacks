@@ -25,14 +25,14 @@ jobs:
         run: npm --version 
  
   pytest:
-    needs: python_lint
+    needs: flake8 
     runs-on: ubuntu-latest
     steps:
       - name: Test Python Code 
         run: echo "PYTHON UNIT TESTING COMPLETE"
  
   jest:
-    needs: typescript_lint
+    needs: eslint
     runs-on: ubuntu-latest
     steps:
       - name: Test Typescript Code 
