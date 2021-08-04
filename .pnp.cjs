@@ -27,10 +27,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:web/myugahacks"
       },
       {
-        "name": "ugahacks-5",
-        "reference": "workspace:web/ugahacks-5"
-      },
-      {
         "name": "ugahacks-6",
         "reference": "workspace:web/ugahacks-6"
       },
@@ -48,7 +44,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "fallbackExclusionList": [
       ["myugahacks", ["workspace:web/myugahacks"]],
       ["ugahacks", ["workspace:."]],
-      ["ugahacks-5", ["workspace:web/ugahacks-5"]],
       ["ugahacks-6", ["workspace:web/ugahacks-6"]],
       ["ugahacks-7", ["workspace:web/ugahacks-7"]],
       ["ugahacks-org", ["workspace:web/ugahacks-org"]]
@@ -368,13 +363,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-16.4.10-7fcafea653-b2b550c233.zip/node_modules/@types/node/",
           "packageDependencies": [
             ["@types/node", "npm:16.4.10"]
-          ],
-          "linkType": "HARD",
-        }],
-        ["npm:16.4.11", {
-          "packageLocation": "./.yarn/cache/@types-node-npm-16.4.11-9f16741294-9c50c79acc.zip/node_modules/@types/node/",
-          "packageDependencies": [
-            ["@types/node", "npm:16.4.11"]
           ],
           "linkType": "HARD",
         }]
@@ -5460,23 +5448,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["ugahacks", "workspace:."],
             ["husky", "npm:7.0.1"]
-          ],
-          "linkType": "SOFT",
-        }]
-      ]],
-      ["ugahacks-5", [
-        ["workspace:web/ugahacks-5", {
-          "packageLocation": "./web/ugahacks-5/",
-          "packageDependencies": [
-            ["ugahacks-5", "workspace:web/ugahacks-5"],
-            ["@types/node", "npm:16.4.11"],
-            ["@types/react", "npm:17.0.15"],
-            ["eslint", "npm:7.32.0"],
-            ["eslint-config-next", "virtual:8a779053433de9489a6f2e65051a3a30adffdb21110c8dba58f035109e663f9ca0c0c6dd600e3b41d71c7e71d38065e60aecca72a372d228bc048833acfada12#npm:11.0.1"],
-            ["next", "virtual:8a779053433de9489a6f2e65051a3a30adffdb21110c8dba58f035109e663f9ca0c0c6dd600e3b41d71c7e71d38065e60aecca72a372d228bc048833acfada12#npm:11.0.1"],
-            ["react", "npm:17.0.2"],
-            ["react-dom", "virtual:8a779053433de9489a6f2e65051a3a30adffdb21110c8dba58f035109e663f9ca0c0c6dd600e3b41d71c7e71d38065e60aecca72a372d228bc048833acfada12#npm:17.0.2"],
-            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
           ],
           "linkType": "SOFT",
         }]
