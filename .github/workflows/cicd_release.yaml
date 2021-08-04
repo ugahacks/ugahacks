@@ -8,6 +8,7 @@ env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}  
   REGION: us-central1
   DEPLOY_ENV: stage
+  CI: true # silences "yarn install"
 
 jobs:
 
@@ -27,8 +28,7 @@ jobs:
         run: |
           echo "yarn version: $(yarn --version)"
           yarn workspaces foreach run lint 
-
-
+ 
   pytest:
     needs: flake8 
     runs-on: ubuntu-latest

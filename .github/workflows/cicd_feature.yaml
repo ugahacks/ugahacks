@@ -22,7 +22,8 @@ jobs:
         run: |
           echo "yarn version: $(yarn --version)"
           yarn workspaces foreach run lint 
-
+ 
+>>>>>>> master
   pytest:
     needs: flake8 
     runs-on: ubuntu-latest
