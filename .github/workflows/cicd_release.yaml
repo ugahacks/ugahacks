@@ -142,3 +142,27 @@ jobs:
           echo ${{ steps.deploy_ugahacks_org.outputs.url }}
         if: contains(steps.file_changes.outputs.files , 'ugahacks-org')
 
+
+      # my.ugahacks  
+      - name: Build and Push myugahacks Container
+        run: |-
+          echo "myugahacks changed, building ..."
+          docker build -t gcr.io/${{ env.PROJECT_ID }}/myugahacks-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/myugahacks
+          docker push gcr.io/${{ env.PROJECT_ID }}/myugahacks-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+        if: contains(steps.file_changes.outputs.files , 'myugahacks')
+ 
+      - name: Deploy myugahacks to Cloud Run
+        id: deploy_myugahacks
+        uses: google-github-actions/deploy-cloudrun@v0.4.0
+        with:
+          service: myugahacks-${{ env.DEPLOY_ENV }}
+          image: gcr.io/${{ env.PROJECT_ID }}/myugahacks-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+          region: ${{ env.REGION }}
+        if: contains(steps.file_changes.outputs.files , 'myugahacks')
+
+      - name: myugahacks Post Deployment 
+        run: |-
+          echo "Active URL:"
+          echo ${{ steps.deploy_myugahacks.outputs.url }}
+        if: contains(steps.file_changes.outputs.files , 'myugahacks')
+
