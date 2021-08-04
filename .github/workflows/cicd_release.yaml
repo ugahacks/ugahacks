@@ -8,7 +8,6 @@ env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}  
   REGION: us-central1
   DEPLOY_ENV: stage
-  CI: true # silences "yarn install"
 
 jobs:
 
