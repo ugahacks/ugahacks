@@ -15,27 +15,13 @@ jobs:
   eslint:
     runs-on: ubuntu-latest
     steps:
- 
       - name: Checkout
         uses: actions/checkout@v2
 
-      - id: file_changes
-        name: Get Changed Files
-        uses: trilom/file-changes-action@v1.2.3
-        with:
-          output: ','
-          fileOutput: ','
-
-      - name: Output Changed Files 
-        run: |
-          echo "Changed Files (~/files.csv):"
-          cat $HOME/files.csv
-
       - name: Lint
         run: |
-          yarn --version
+          echo "yarn version: $(yarn --version)"
           yarn workspaces foreach run lint 
-
 
   pytest:
     needs: flake8 

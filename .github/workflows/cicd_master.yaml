@@ -21,9 +21,15 @@ jobs:
   eslint:
     runs-on: ubuntu-latest
     steps:
-      - name: Lint Typescript Code 
-        run: npm --version 
- 
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Lint
+        run: |
+          echo "yarn version: $(yarn --version)"
+          yarn workspaces foreach run lint 
+
+
   pytest:
     needs: flake8 
     runs-on: ubuntu-latest
