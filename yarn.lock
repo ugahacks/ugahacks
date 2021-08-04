@@ -253,6 +253,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^16.4.11":
+  version: 16.4.11
+  resolution: "@types/node@npm:16.4.11"
+  checksum: 9c50c79acc587d90be4d2a408772a53239d9532b7a4b88e27baadb652a15a4a57e3bb6a242a1b153a30b6cf55cb69db87992494f47b2aa2683f2f28cfd5c3bd4
+  languageName: node
+  linkType: hard
+
 "@types/prop-types@npm:*":
   version: 15.7.4
   resolution: "@types/prop-types@npm:15.7.4"
@@ -4635,6 +4642,21 @@ typescript@4.3.5:
   checksum: bc2c4fdf0f1557fdafe4ef74848c72ebd9c8c60829568248f869121aea2bb20e16649a252431d0acb185ec118143be22bed73d08f64379557810d82756afedde
   languageName: node
   linkType: hard
+
+"ugahacks-5@workspace:web/ugahacks-5":
+  version: 0.0.0-use.local
+  resolution: "ugahacks-5@workspace:web/ugahacks-5"
+  dependencies:
+    "@types/node": ^16.4.11
+    "@types/react": 17.0.15
+    eslint: 7.32.0
+    eslint-config-next: 11.0.1
+    next: 11.0.1
+    react: 17.0.2
+    react-dom: 17.0.2
+    typescript: 4.3.5
+  languageName: unknown
+  linkType: soft
 
 "ugahacks-6@workspace:web/ugahacks-6":
   version: 0.0.0-use.local
