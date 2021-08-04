@@ -9,5 +9,6 @@
 !.yarn/versions
 !.yarn/unplugged
 
-# Typescript, Tsc, Build, Compile, Etc.
-web/*/*.js
+# Build files
+web/*/*build*
+web/*/.next
