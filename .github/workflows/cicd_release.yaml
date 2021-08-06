@@ -64,7 +64,7 @@ jobs:
 
       - id: file_changes
         name: Get Changed Files
-        uses: trilom/file-changes-action@v1.2.3
+        uses: trilom/file-changes-action@v1.2.4
         with:
           output: ','
           fileOutput: ','
