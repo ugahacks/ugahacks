@@ -22,10 +22,15 @@ export default function Home() {
 
         <div className={styles.grid}>
           <a href="https://ugahacks.com" className={styles.card}>
-            <h2>UGAHacks.com &rarr;</h2>
-            <p>UGAHacks&apos; organization site</p>
+              <h2>UGAHacks.com &rarr;</h2>
+              <p>UGAHacks&apos; organization site</p>
           </a>
 
+          <a href="https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_82Gn6acN70D0wg6" className={styles.card}>
+            <h2>UGAHacks 7&rarr;</h2>
+            <p>Pre-Register for our seventh event, coming this October 22-24th, 2021!</p>
+          </a>
+          
           <a href="https://6.ugahacks.com" className={styles.card}>
             <h2>6.ugahacks.com &rarr;</h2>
             <p>Previous event site</p>
