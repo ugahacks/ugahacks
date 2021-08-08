@@ -55,7 +55,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
-            ["husky", "npm:7.0.1"]
+            ["husky", "npm:7.0.1"],
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
           ],
           "linkType": "SOFT",
         }]
@@ -7057,7 +7058,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["ugahacks", "workspace:."],
-            ["husky", "npm:7.0.1"]
+            ["husky", "npm:7.0.1"],
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
           ],
           "linkType": "SOFT",
         }]
