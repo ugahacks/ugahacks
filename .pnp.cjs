@@ -210,6 +210,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+        ["npm:0.1.2", {
+          "packageLocation": "./.yarn/cache/@next-auth-prisma-legacy-adapter-npm-0.1.2-65f2608820-cdfe7334f4.zip/node_modules/@next-auth/prisma-legacy-adapter/",
+          "packageDependencies": [
+            ["@next-auth/prisma-legacy-adapter", "npm:0.1.2"]
+          ],
+          "linkType": "SOFT",
+        }],
         ["virtual:d71aa5393973a4469a5274868f14a5780cb9df8399ec5afbb4214e60a3b72512d1af28b07f0c8e411f5aa7e8eadf54cc564b9b523945ffd479b15d95ab0a1dba#npm:0.0.1-canary.127", {
           "packageLocation": "./.yarn/__virtual__/@next-auth-prisma-legacy-adapter-virtual-67eb298902/0/cache/@next-auth-prisma-legacy-adapter-npm-0.0.1-canary.127-fe5a179fb0-aafb22a5e0.zip/node_modules/@next-auth/prisma-legacy-adapter/",
           "packageDependencies": [
@@ -219,6 +226,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/next-auth", null],
             ["@types/prisma__client", null],
             ["next-auth", "virtual:8a779053433de9489a6f2e65051a3a30adffdb21110c8dba58f035109e663f9ca0c0c6dd600e3b41d71c7e71d38065e60aecca72a372d228bc048833acfada12#npm:3.27.3"]
+          ],
+          "packagePeers": [
+            "@prisma/client",
+            "@types/next-auth",
+            "@types/prisma__client",
+            "next-auth"
+          ],
+          "linkType": "HARD",
+        }],
+        ["virtual:e85fbbd85556171901b8da59445d168be19f70549efc2779c8afb0bc62b702ef3741ff2fe6996d6475318f495dacf009ee127ab4bd782bafefeeded4c94531e7#npm:0.1.2", {
+          "packageLocation": "./.yarn/__virtual__/@next-auth-prisma-legacy-adapter-virtual-c25d0578f5/0/cache/@next-auth-prisma-legacy-adapter-npm-0.1.2-65f2608820-cdfe7334f4.zip/node_modules/@next-auth/prisma-legacy-adapter/",
+          "packageDependencies": [
+            ["@next-auth/prisma-legacy-adapter", "virtual:e85fbbd85556171901b8da59445d168be19f70549efc2779c8afb0bc62b702ef3741ff2fe6996d6475318f495dacf009ee127ab4bd782bafefeeded4c94531e7#npm:0.1.2"],
+            ["@babel/runtime", "npm:7.14.8"],
+            ["@prisma/client", null],
+            ["@types/next-auth", null],
+            ["@types/prisma__client", null],
+            ["next-auth", "virtual:a61c9422dcf205a5ddb20a239867760fba19c08c020cd654d1f56c54217228d69c1ec42d119708fda0b0c84d5d369616e68a7cb717ced7940dc52752b48265e5#npm:3.29.0"]
           ],
           "packagePeers": [
             "@prisma/client",
@@ -237,6 +262,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+        ["npm:0.1.4", {
+          "packageLocation": "./.yarn/cache/@next-auth-typeorm-legacy-adapter-npm-0.1.4-aca7d0f2e5-6e28b49bc1.zip/node_modules/@next-auth/typeorm-legacy-adapter/",
+          "packageDependencies": [
+            ["@next-auth/typeorm-legacy-adapter", "npm:0.1.4"]
+          ],
+          "linkType": "SOFT",
+        }],
         ["virtual:d71aa5393973a4469a5274868f14a5780cb9df8399ec5afbb4214e60a3b72512d1af28b07f0c8e411f5aa7e8eadf54cc564b9b523945ffd479b15d95ab0a1dba#npm:0.0.2-canary.129", {
           "packageLocation": "./.yarn/__virtual__/@next-auth-typeorm-legacy-adapter-virtual-624ac9fc98/0/cache/@next-auth-typeorm-legacy-adapter-npm-0.0.2-canary.129-626761b5ab-fbf0c77235.zip/node_modules/@next-auth/typeorm-legacy-adapter/",
           "packageDependencies": [
@@ -251,6 +283,38 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mssql", null],
             ["mysql", null],
             ["next-auth", "virtual:8a779053433de9489a6f2e65051a3a30adffdb21110c8dba58f035109e663f9ca0c0c6dd600e3b41d71c7e71d38065e60aecca72a372d228bc048833acfada12#npm:3.27.3"],
+            ["pg", null],
+            ["require_optional", "npm:1.0.1"],
+            ["typeorm", "virtual:624ac9fc98312ac3ce508a91764c5c53d9a71dd3fcf59078e33ced7399dba0b6cf5eca2811b21c5a81e409fe58d77dc77ee7c618e6683fbb2b0a4ed7ae2f0d60#npm:0.2.36"]
+          ],
+          "packagePeers": [
+            "@types/mongodb",
+            "@types/mssql",
+            "@types/mysql",
+            "@types/next-auth",
+            "@types/pg",
+            "mongodb",
+            "mssql",
+            "mysql",
+            "next-auth",
+            "pg"
+          ],
+          "linkType": "HARD",
+        }],
+        ["virtual:e85fbbd85556171901b8da59445d168be19f70549efc2779c8afb0bc62b702ef3741ff2fe6996d6475318f495dacf009ee127ab4bd782bafefeeded4c94531e7#npm:0.1.4", {
+          "packageLocation": "./.yarn/__virtual__/@next-auth-typeorm-legacy-adapter-virtual-7068e2ba70/0/cache/@next-auth-typeorm-legacy-adapter-npm-0.1.4-aca7d0f2e5-6e28b49bc1.zip/node_modules/@next-auth/typeorm-legacy-adapter/",
+          "packageDependencies": [
+            ["@next-auth/typeorm-legacy-adapter", "virtual:e85fbbd85556171901b8da59445d168be19f70549efc2779c8afb0bc62b702ef3741ff2fe6996d6475318f495dacf009ee127ab4bd782bafefeeded4c94531e7#npm:0.1.4"],
+            ["@babel/runtime", "npm:7.14.8"],
+            ["@types/mongodb", null],
+            ["@types/mssql", null],
+            ["@types/mysql", null],
+            ["@types/next-auth", null],
+            ["@types/pg", null],
+            ["mongodb", null],
+            ["mssql", null],
+            ["mysql", null],
+            ["next-auth", "virtual:a61c9422dcf205a5ddb20a239867760fba19c08c020cd654d1f56c54217228d69c1ec42d119708fda0b0c84d5d369616e68a7cb717ced7940dc52752b48265e5#npm:3.29.0"],
             ["pg", null],
             ["require_optional", "npm:1.0.1"],
             ["typeorm", "virtual:624ac9fc98312ac3ce508a91764c5c53d9a71dd3fcf59078e33ced7399dba0b6cf5eca2811b21c5a81e409fe58d77dc77ee7c618e6683fbb2b0a4ed7ae2f0d60#npm:0.2.36"]
@@ -4663,6 +4727,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+        ["npm:3.29.0", {
+          "packageLocation": "./.yarn/cache/next-auth-npm-3.29.0-32b75bf48b-7c866bc275.zip/node_modules/next-auth/",
+          "packageDependencies": [
+            ["next-auth", "npm:3.29.0"]
+          ],
+          "linkType": "SOFT",
+        }],
         ["virtual:8a779053433de9489a6f2e65051a3a30adffdb21110c8dba58f035109e663f9ca0c0c6dd600e3b41d71c7e71d38065e60aecca72a372d228bc048833acfada12#npm:3.27.3", {
           "packageLocation": "./.yarn/__virtual__/next-auth-virtual-d71aa53939/0/cache/next-auth-npm-3.27.3-ca56a7490c-47784c1ae2.zip/node_modules/next-auth/",
           "packageDependencies": [
@@ -4672,6 +4743,35 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@next-auth/typeorm-legacy-adapter", "virtual:d71aa5393973a4469a5274868f14a5780cb9df8399ec5afbb4214e60a3b72512d1af28b07f0c8e411f5aa7e8eadf54cc564b9b523945ffd479b15d95ab0a1dba#npm:0.0.2-canary.129"],
             ["@types/react", "npm:17.0.15"],
             ["@types/react-dom", "npm:17.0.9"],
+            ["futoin-hkdf", "npm:1.4.2"],
+            ["jose", "npm:1.28.1"],
+            ["jsonwebtoken", "npm:8.5.1"],
+            ["nodemailer", "npm:6.6.3"],
+            ["oauth", "npm:0.9.15"],
+            ["pkce-challenge", "npm:2.2.0"],
+            ["preact", "npm:10.5.14"],
+            ["preact-render-to-string", "virtual:d71aa5393973a4469a5274868f14a5780cb9df8399ec5afbb4214e60a3b72512d1af28b07f0c8e411f5aa7e8eadf54cc564b9b523945ffd479b15d95ab0a1dba#npm:5.1.19"],
+            ["querystring", "npm:0.2.1"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:8a779053433de9489a6f2e65051a3a30adffdb21110c8dba58f035109e663f9ca0c0c6dd600e3b41d71c7e71d38065e60aecca72a372d228bc048833acfada12#npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@types/react-dom",
+            "@types/react",
+            "react-dom",
+            "react"
+          ],
+          "linkType": "HARD",
+        }],
+        ["virtual:a61c9422dcf205a5ddb20a239867760fba19c08c020cd654d1f56c54217228d69c1ec42d119708fda0b0c84d5d369616e68a7cb717ced7940dc52752b48265e5#npm:3.29.0", {
+          "packageLocation": "./.yarn/__virtual__/next-auth-virtual-e85fbbd855/0/cache/next-auth-npm-3.29.0-32b75bf48b-7c866bc275.zip/node_modules/next-auth/",
+          "packageDependencies": [
+            ["next-auth", "virtual:a61c9422dcf205a5ddb20a239867760fba19c08c020cd654d1f56c54217228d69c1ec42d119708fda0b0c84d5d369616e68a7cb717ced7940dc52752b48265e5#npm:3.29.0"],
+            ["@babel/runtime", "npm:7.14.8"],
+            ["@next-auth/prisma-legacy-adapter", "virtual:e85fbbd85556171901b8da59445d168be19f70549efc2779c8afb0bc62b702ef3741ff2fe6996d6475318f495dacf009ee127ab4bd782bafefeeded4c94531e7#npm:0.1.2"],
+            ["@next-auth/typeorm-legacy-adapter", "virtual:e85fbbd85556171901b8da59445d168be19f70549efc2779c8afb0bc62b702ef3741ff2fe6996d6475318f495dacf009ee127ab4bd782bafefeeded4c94531e7#npm:0.1.4"],
+            ["@types/react", "npm:17.0.15"],
+            ["@types/react-dom", null],
             ["futoin-hkdf", "npm:1.4.2"],
             ["jose", "npm:1.28.1"],
             ["jsonwebtoken", "npm:8.5.1"],
@@ -7091,6 +7191,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.32.0"],
             ["eslint-config-next", "virtual:d20ae7b0d66957141e7f94d9a8c27ff88a9aa8c716e7e6e02e42152d9e1afb388e27e64b126ad17c4853aaf7dc19c48a5541ecf955a4fafe40bed51fa9895fe9#npm:11.0.1"],
             ["next", "virtual:d20ae7b0d66957141e7f94d9a8c27ff88a9aa8c716e7e6e02e42152d9e1afb388e27e64b126ad17c4853aaf7dc19c48a5541ecf955a4fafe40bed51fa9895fe9#npm:11.0.1"],
+            ["next-auth", "virtual:a61c9422dcf205a5ddb20a239867760fba19c08c020cd654d1f56c54217228d69c1ec42d119708fda0b0c84d5d369616e68a7cb717ced7940dc52752b48265e5#npm:3.29.0"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:8a779053433de9489a6f2e65051a3a30adffdb21110c8dba58f035109e663f9ca0c0c6dd600e3b41d71c7e71d38065e60aecca72a372d228bc048833acfada12#npm:17.0.2"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
