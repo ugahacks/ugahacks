@@ -6,4 +6,13 @@ module.exports = {
     GOOGLE_ID: "436222925278-b10ko5o6anq8iknvtat06utc875kh9uo.apps.googleusercontent.com",
     GOOGLE_SECRET: "oWfXfR3RE0wGcN8aqYABoDrR"
   }
+  async redirects() {
+    return [
+      {
+        source: '/sponsorship-packet',
+        destination: 'https://storage.googleapis.com/ugahacks-public/external/UH7SponsorshipPacket.pdf',
+        permanent: true,
+      },
+    ]
+  },
 }

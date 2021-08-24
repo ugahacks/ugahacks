@@ -9,7 +9,7 @@
 }
 
 .main {
-  padding: 5rem 0;
+  height: 100vh;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -108,14 +108,23 @@
   line-height: 1.5;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.subheading {
+  position: absolute;
+  bottom: 15%;
+  color: white;
+  font-size: 2.5em;
+  text-align: center;
+  margin: auto;
 }
 
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+  .subheading {
+    font-size: 1.5em;
+    margin: 0px 25px;
+    position: unset;
   }
 }
