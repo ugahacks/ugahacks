@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import UGAHacksBanner from "../public/UGAHacksLogo.png";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -18,10 +17,11 @@ export default function Home() {
 
       <main className={styles.main}>
         <Image
-          src={UGAHacksBanner}
+          src="/UGAHacksLogo.png"
           alt="UGAHacks logo"
-          layout="intrinsic"
           objectFit="cover"
+          width={1080}
+          height={590}
           className={styles.logo}
         />
         <h1 className={styles.subheading}>
