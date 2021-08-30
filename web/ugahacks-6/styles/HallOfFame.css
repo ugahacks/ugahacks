@@ -1,0 +1,48 @@
+.hof-section {
+  background-image: url(../pages/components/HallofFame/media/bp2animated.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover !important;
+  min-height: 100vh;
+  margin: auto;
+  /*display: flex;*/
+}
+
+.header {
+  color: white;
+  text-align: center;
+  padding-top: 5vh;
+  font-weight: 700;
+}
+
+.subheader {
+  color: #FFE401;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.title {
+  color: white;
+  text-align: center;
+}
+
+.carousel {
+  padding-top: 1vh;
+  max-width: 90vw;
+  /*margin-left: 5vw;*/
+  margin: auto;
+}
+
+.carousel li {
+  padding: 0.2em;
+}
+
+.alice-carousel__dots {
+  margin: 10px 3px 5px !important;
+}
+
+.center {
+  margin: auto;
+}
+
+

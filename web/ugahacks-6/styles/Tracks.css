@@ -1,0 +1,119 @@
+
+.tracks-section {
+  background-image: url(../pages/components/Tracks/images/yellowbg-02.svg);
+  background-size: cover !important;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.tracks-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.tracks-text-container {
+  /*min-height: 100vh;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 0;
+  width: 50%;
+}
+
+.tracks-text-container h1{
+  font-weight: 700;
+  text-align: center;
+  font-size: 64px;
+  color: black;
+}
+
+.tracks-text-container p{
+  color: black;
+  font-size: 1.3em;
+}
+
+#show-more {
+  margin-top: 0px;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: Poppins;
+  border-radius: 40px;
+  color: white;
+  text-align: center;
+  /*width: 100%;*/
+  white-space: nowrap;
+  margin: 40px auto;
+  outline: none;
+}
+
+.show-more-black {
+  background-color: black !important;
+}
+
+.winner-byte {
+  margin: auto 0;
+  max-width: 30vw;
+}
+
+@media only screen and (max-width: 1150px) {
+  .tracks-text-container {
+    width: 90%;
+    margin: auto;
+  }
+  .tracks-container {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .tracks-section {
+    background-image: url(../pages/components/Tracks/images/yellowbg-02-mobile.svg);
+  }
+  .winner-byte {
+    width: 80%;
+    min-width: 350px;
+    margin: 0 auto 30px;
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .tracks-text-container h1 {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .tracks-text-container {
+    width: 90%;
+    margin: auto;
+  }
+
+  .tracks-text-container > h1 {
+    margin-top: 30px;
+    color: #21232c;
+  }
+
+  .tracks-container {
+    flex-direction: column;
+  }
+  .winner-byte {
+    width: 90%;
+    margin: 0px auto 50px;
+    min-width: 350px;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  #show-more {
+    width: 100%;
+    white-space: normal;
+  }
+  .tracks-text-container h1 {
+    font-size: 50px;
+  }
+  .tracks-text-container p {
+    text-align: center;
+  }
+}

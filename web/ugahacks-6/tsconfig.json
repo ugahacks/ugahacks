@@ -12,8 +12,9 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "strictNullChecks": true,
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/components/HallOfFame/HallOfFame.jsx", "pages/components/HallOfFame/MediaCard.jsx", "pages/components/Sponsors/SponsorLogo.jsx"],
   "exclude": ["node_modules"]
 }
