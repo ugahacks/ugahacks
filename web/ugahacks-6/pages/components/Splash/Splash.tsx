@@ -1,9 +1,13 @@
 import React, { useEffect, useState, ReactElement } from "react";
 //import "./Splash.module.css";
-import sixLogo from "./images/sixlogoncr.svg";
+//import sixLogo from "./images/sixlogoncr.svg";
 import Button from "@material-ui/core/Button";
 import { withStyles } from '@material-ui/core/styles';
-import Image from 'next/image';
+//import Image from 'next/image';
+
+const sixLogo: string = "/icons/SplashImages/images/sixlogoncr.svg";
+
+const eventRecap: string = "/media/event_recap.pdf";
 
 interface TimeLeftObject {
   days?: number,
@@ -90,7 +94,7 @@ function Countdown(): ReactElement {
           <h2 id="tagline"><b>BOOT UP YOUR DREAMS.<span className="eventline"> BUILD THE FUTURE.</span></b></h2>
           <h2 id="eventdate">February 5-7, 2021 Online</h2>
         </div>
-        <CustomButton variant="contained" size="large" href="/recap">Event Recap</CustomButton> 
+        <CustomButton variant="contained" size="large" href={eventRecap}>Event Recap</CustomButton> 
       </div>
     );
   }
@@ -105,7 +109,7 @@ function Splash(): ReactElement {
       <a id="mlh-trust-badge" href="https://mlh.io/seasons/2021/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=white" target="_blank" rel="noopener noreferrer">
         <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-white.svg" alt="Major League Hacking 2021 Hackathon Season"/></a>
         <div className="headercontainer">
-          <Image className="logo" src={sixLogo} alt="UGAHacks 6 Logo"/>
+          <img className="logo" src={sixLogo} alt="UGAHacks 6 Logo"/>
           <Countdown/>
         </div>
       </section>

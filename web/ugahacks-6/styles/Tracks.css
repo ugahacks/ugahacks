@@ -1,6 +1,6 @@
 
 .tracks-section {
-  background-image: url(../pages/components/Tracks/images/yellowbg-02.svg);
+  background-image: url(/icons/TracksImages/images/yellowbg-02.svg);
   background-size: cover !important;
   align-items: center;
   display: flex;
@@ -68,7 +68,7 @@
     justify-content: space-evenly;
   }
   .tracks-section {
-    background-image: url(../pages/components/Tracks/images/yellowbg-02-mobile.svg);
+    background-image: url(/icons/TracksImages/images/yellowbg-02-mobile.svg);
   }
   .winner-byte {
     width: 80%;

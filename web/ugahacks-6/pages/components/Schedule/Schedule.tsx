@@ -2,11 +2,15 @@ import React, { useState, ReactElement } from 'react';
 //import './Schedule.module.css';
 //import '../../bootstrap.css'
 import { motion } from "framer-motion"
-import day1 from './images/day1.svg';
-import day2 from './images/day2.svg';
-import day3 from './images/day3.svg';
+// import day1 from './images/day1.svg';
+// import day2 from './images/day2.svg';
+// import day3 from './images/day3.svg';
 // import comingsoon from './images/comingsoon.svg';
-import Image from 'next/image';
+// import Image from 'next/image';
+
+const day1: string = "/icons/ScheduleImages/images/day1.svg";
+const day2: string = "/icons/ScheduleImages/images/day2.svg";
+const day3: string = "/icons/ScheduleImages/images/day3.svg";
 
 interface ScheduleProps {
   image: string,
@@ -25,10 +29,9 @@ const buttonVariants = {
 
 function DayImg(props: ScheduleProps): ReactElement {
   return (
-      <Image
+      <img
         src={props.image}
         alt={props.alt}
-        layout="fill"
       />
   );
 }

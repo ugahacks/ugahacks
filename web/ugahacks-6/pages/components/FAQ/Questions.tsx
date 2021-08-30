@@ -2,7 +2,9 @@ import React, { useState, ReactElement } from "react";
 //import "./FAQ.module.css";
 import { motion } from "framer-motion";
 import {collapseVariants, hoverVariants} from "../../../util/CommonVariants";
-import screw from "./images/screw-01.svg";
+//import screw from "./images/screw-01.svg";
+
+const screw: string = "/icons/FAQImgaes/images/screw-01.svg";
 
 interface QuestionsProps {
   question: string,

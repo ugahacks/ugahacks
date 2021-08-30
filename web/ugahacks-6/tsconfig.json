@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "strictNullChecks": true,
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/components/HallOfFame/HallOfFame.jsx", "pages/components/HallOfFame/MediaCard.jsx", "pages/components/Sponsors/SponsorLogo.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/components/HallOfFame/HallOfFame.tsx", "pages/components/HallOfFame/MediaCard.tsx", "pages/components/Sponsors/SponsorLogo.tsx"],
   "exclude": ["node_modules"]
 }

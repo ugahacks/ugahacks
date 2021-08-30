@@ -1,11 +1,16 @@
 import React, { ReactElement } from 'react';
 // import './About.module.css';
-import laptop from './images/laptop.svg';
-import charger from './images/charger.svg';
-import phone from './images/phone.svg';
-// import sleepingBag from './images/sleepingbag.svg';
-import slack from './images/slack.svg';
+//import laptop from '/icons/AboutImages/images/laptop.svg';
+// import charger from '../../../public/icons/AboutImages/images/charger.svg';
+// import phone from '../../../public/icons/AboutImages/images/phone.svg';
+// // import sleepingBag from './images/sleepingbag.svg';
+// import slack from '../../../public/icons/AboutImages/images/slack.svg';
 import { motion } from "framer-motion";
+
+const laptop: string = "/icons/AboutImages/images/laptop.svg";
+const charger: string = "/icons/AboutImages/images/charger.svg";
+const phone: string = "/icons/AboutImages/images/phone.svg";
+const slack: string = "/icons/AboutImages/images/slack.svg";
 
 interface AboutProps {
   image: string,

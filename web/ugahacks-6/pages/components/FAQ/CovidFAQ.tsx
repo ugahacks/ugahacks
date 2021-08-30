@@ -5,9 +5,11 @@ import React, { ReactElement } from "react";
 import Button from '@material-ui/core/Button';
 import Question from "./Questions";
 // import {collapseVariants} from "./CommonVariants";
-import covidByte from "./images/covidbyte-01.svg"
+//import covidByte from "../../../public/icons/FAQImages/images/covidbyte-01.svg"
 import Image from 'next/image'
 
+//const covidByte = require("../../../public/icons/FAQImages/images/covidbyte-01.svg");
+const covidByte: string = "/icons/FAQImages/images/covidbyte-01.svg";
 
 function CovidFAQ(): ReactElement {
 
@@ -54,7 +56,7 @@ function CovidFAQ(): ReactElement {
             </div>
             <Button className="show-more-black" variant="contained" size="large" id="show-more" href="https://blog.ugahacks.com/full/8/">{COVID_LEARN_MORE}</Button>
           </div>
-          <Image className="covid-byte" alt="" src={covidByte}/>
+          <img className="covid-byte" alt="" src={covidByte}/>
         </div>
 
       </section>

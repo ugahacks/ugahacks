@@ -1,9 +1,10 @@
 import React, { ReactElement } from "react";
 //import "./Tracks.module.css";
 import Button from '@material-ui/core/Button';
-import winnerByte from "./images/winnerbyte-01.png";
-import Image from 'next/image';
+// import winnerByte from "./images/winnerbyte-01.png";
+//import Image from 'next/image';
 
+const winnerByte: string = "/icons/TracksImages/images/winnerbyte-01.png";
 
 function Tracks(): ReactElement {
 
@@ -20,7 +21,7 @@ function Tracks(): ReactElement {
             <b> There may even be a chance to score some sweet prizes!</b></p>
             <Button className="show-more-black" variant="contained" size="large" id="show-more" href="https://6.ugahacks.com/static/media/pre_event_packet.99c85e96.pdf" target="_blank">Check Out Our Pre-event Guide</Button>
           </div>
-          <Image className="winner-byte" alt="Winner Byte" src={winnerByte}/>
+          <img className="winner-byte" alt="Winner Byte" src={winnerByte}/>
         </div>
       </section>
     </>

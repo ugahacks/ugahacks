@@ -1,5 +1,5 @@
 #schedule {
-  background-image: url(../pages/components/Schedule/images/bp1animated.svg);
+  background-image: url(/icons/ScheduleImages/images/bp1animated.svg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover !important;
@@ -45,14 +45,14 @@
 }
 
 .back-button{
-  background: url('../pages/components/Schedule/images/arrow_back_ios-24dp.svg') no-repeat;
+  background: url('/icons/ScheduleImages/images/arrow_back_ios-24dp.svg') no-repeat;
   border: none;
   padding-right: 15px;
   margin-top: 13px;
 }
 
 .forward-button {
-  background: url('../pages/components/Schedule/images/arrow_forward_ios-24dp.svg') no-repeat;
+  background: url('/icons/ScheduleImages/images/arrow_forward_ios-24dp.svg') no-repeat;
   border: none;
   padding-left: 15px;
   margin-top: 13px;

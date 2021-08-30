@@ -1,5 +1,5 @@
 .about {
-  background-image: url('../pages/components/About/images/finaltools.svg');
+  background-image: url('../public/icons/AboutImages/images/finaltools.svg');
   /**background-image: url(./images/colortools-01.svg);*/
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -41,7 +41,7 @@
 
 @media only screen and (max-width: 1450px) {
   .about {
-    background-image: radial-gradient(rgba(250, 250, 250, 0.9), rgba(255, 255, 255, 0.9)), url(../pages/components/About/images/toolpattern.svg);
+    background-image: radial-gradient(rgba(250, 250, 250, 0.9), rgba(255, 255, 255, 0.9)), url(../public/icons/AboutImages/images/toolpattern.svg);
   }
 }
 

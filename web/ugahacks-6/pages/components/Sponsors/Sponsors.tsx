@@ -1,21 +1,25 @@
 import React, { ReactElement } from 'react';
 //import './Sponsors.module.css';
 import SponsorLogo from './SponsorLogo';
-import ncr from './images/sponsorlogos/NCR.png';
-import digitalOcean from './images/sponsorlogos/DigitalOcean.svg';
-import stickerMule from './images/sponsorlogos/stickermule.svg';
-import blackRock from './images/sponsorlogos/blackrock.svg';
-import echoAR from './images/sponsorlogos/echoAR.png';
-import entreProg from './images/sponsorlogos/ENTR.png';
-import equifax from './images/sponsorlogos/equifax.png';
-import statefarm from './images/sponsorlogos/statefarm.png';
-import capitalone from './images/sponsorlogos/capitalone.png';
-import tsys from './images/sponsorlogos/tsys.png';
-import uga from './images/sponsorlogos/uga-combo.png';
-import credera from './images/sponsorlogos/credera.png';
-import acm from './images/sponsorlogos/acm.png';
+
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
+
+const ncr: string = "/icons/SponsorsImages/images/sponsorlogos/NCR.png";
+const digitalOcean: string = "/icons/SponsorsImages/images/sponsorlogos/DigitalOcean.svg";
+const stickerMule: string = "/icons/SponsorsImages/images/sponsorlogos/stickermule.svg";
+const blackRock: string = "/icons/SponsorsImages/images/sponsorlogos/blackrock.svg";
+const echoAR: string = "/icons/SponsorsImages/images/sponsorlogos/echoAR.png";
+const entreProg: string = "/icons/SponsorsImages/images/sponsorlogos/ENTR.png";
+const equifax: string = "/icons/SponsorsImages/images/sponsorlogos/equifax.png";
+const statefarm: string = "/icons/SponsorsImages/images/sponsorlogos/statefarm.png";
+const capitalone: string = "/icons/SponsorsImages/images/sponsorlogos/capitalone.png";
+const tsys: string = "/icons/SponsorsImages/images/sponsorlogos/tsys.png";
+const uga: string = "/icons/SponsorsImages/images/sponsorlogos/uga-combo.png";
+const credera: string = "/icons/SponsorsImages/images/sponsorlogos/credera.png";
+const acm: string = "/icons/SponsorsImages/images/sponsorlogos/acm.png";
+
+const sponsorshipPacket: string = "/media/sponsorship_packet.pdf";
 
 const CustomButton = withStyles({
   root: {
@@ -61,7 +65,7 @@ function Sponsors(): ReactElement {
           <SponsorLogo id="acm" image={acm} alt="ACM" tier="partner" link="https://uga.campuslabs.com/engage/organization/acm" />
         </div>
         <p><i>This event is supported in part by the President&apos;s Venture Fund through the generous gifts of University of Georgia donors.</i></p>
-        <CustomButton variant="contained" size="large" href="nextjs/link">Sponsorship Packet</CustomButton>
+        <CustomButton variant="contained" size="large" href={sponsorshipPacket}>Sponsorship Packet</CustomButton>
       </div>
     </section>
   );
