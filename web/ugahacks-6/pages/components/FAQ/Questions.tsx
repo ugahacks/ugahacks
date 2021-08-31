@@ -1,16 +1,16 @@
 import React, { useState, ReactElement } from "react";
 //import "./FAQ.module.css";
 import { motion } from "framer-motion";
-import {collapseVariants, hoverVariants} from "../../../util/CommonVariants";
+import { collapseVariants, hoverVariants } from "../../../util/CommonVariants";
 //import screw from "./images/screw-01.svg";
 
-const screw: string = "/icons/FAQImgaes/images/screw-01.svg";
+const screw: string = "/icons/FAQImages/images/screw-01.svg";
 
 interface QuestionsProps {
-  question: string,
-  answer: string,
-  link?: string,
-  linktxt?: string,
+  question: string;
+  answer: string;
+  link?: string;
+  linktxt?: string;
 }
 
 const screwVariants = {
@@ -19,7 +19,6 @@ const screwVariants = {
 };
 
 function Question(props: QuestionsProps): ReactElement {
-
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
@@ -34,26 +33,25 @@ function Question(props: QuestionsProps): ReactElement {
         <div className="screw-wrapper">
           <motion.img
             className="screw"
-            src={screw} alt="screw" width="15"
+            src={screw}
+            alt="screw"
+            width="15"
             height="15"
             variants={screwVariants}
-            animate={isOpen ? "open": "closed"}
-            />
+            animate={isOpen ? "open" : "closed"}
+          />
         </div>
-
-
-
       </motion.button>
       <motion.div
         className="faq-answer"
         variants={collapseVariants}
         animate={isOpen ? "open" : "closed"}
-
       >
-        <p>{props.answer} <a href={props.link}>{props.linktxt}</a></p>
+        <p>
+          {props.answer} <a href={props.link}>{props.linktxt}</a>
+        </p>
       </motion.div>
     </>
-
   );
 }
 

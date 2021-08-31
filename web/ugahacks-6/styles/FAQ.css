@@ -27,11 +27,7 @@
   justify-content: center;
 }
 
-.title-text {
-  text-color: #FFE401;
-}
-
-.faq-container{
+.faq-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -39,7 +35,6 @@
   padding: 30px 0;
   margin: 0 0 0 10vw;
   width: 50%;
-
 }
 
 .faq-question-wrapper {
@@ -49,7 +44,6 @@
 
 .faq-question-wrapper::-webkit-scrollbar {
   width: 0.5em;
-
 }
 
 .faq-question-wrapper::-webkit-scrollbar-track {
@@ -67,7 +61,6 @@
   scrollbar-color: slategrey rbga(0, 0, 0, 0);
 }
 
-
 .covid-faq-container {
   /*min-height: 100vh;*/
   display: flex;
@@ -77,7 +70,7 @@
   width: 40%;
 }
 
-.covid-faq-container h1{
+.covid-faq-container h1 {
   font-weight: 700;
   text-align: center;
   font-size: 64px;
@@ -86,7 +79,7 @@
   color: black;
 }
 
-.faq-container h1{
+.faq-container h1 {
   font-weight: 700;
   text-align: center;
   font-size: 64px;
@@ -95,7 +88,7 @@
 }
 
 .faq-question {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-top: 15px;
   background-color: #eee;
   color: #444;
@@ -119,7 +112,7 @@
 }
 
 .active:after {
-  content: '\2796'
+  content: "\2796";
 }
 
 .faq-question:active {
@@ -139,7 +132,7 @@
   overflow: hidden;
   background-color: #f5f5f5;
   color: #444;
-  order: -1
+  order: -1;
 }
 
 .faq-answer p {
@@ -190,7 +183,7 @@
   float: right;
 }
 
-.screw img{
+.screw img {
   float: right;
   margin: auto 0;
 }
@@ -222,7 +215,11 @@
 
 @media only screen and (max-width: 1450px) {
   .faq-section {
-    background-image: radial-gradient(rgba(250, 250, 250, 0.9), rgba(255, 255, 255, 0.9)), url(/icons/FAQImages/images/screws-01.svg);
+    background-image: radial-gradient(
+        rgba(250, 250, 250, 0.9),
+        rgba(255, 255, 255, 0.9)
+      ),
+      url(/icons/FAQImages/images/screws-01.svg);
   }
 
   .faq-container {
@@ -233,11 +230,11 @@
   .covid-faq-container h1 {
     margin-top: 50px;
   }
-
 }
 
 @media only screen and (max-width: 800px) {
-  .covid-faq-container, .faq-container {
+  .covid-faq-container,
+  .faq-container {
     width: 90%;
     margin: auto;
   }
@@ -257,14 +254,12 @@
   }
 }
 
-
 @media only screen and (max-width: 480px) {
   .faq-question {
-    font-size: .70em;
+    font-size: 0.7em;
   }
   #show-more {
     width: 100%;
     white-space: normal;
   }
-
 }

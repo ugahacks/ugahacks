@@ -11,7 +11,11 @@
 }
 
 .eventline {
-  color: #FFE401;
+  color: #ffe401;
+}
+
+#tagline {
+  margin: 20px 0px;
 }
 
 #eventdate {
@@ -40,10 +44,6 @@
   letter-spacing: 0.2em;
 }
 
-.subheader {
-  padding: 4% 3px 0;
-}
-
 .covid-alert {
   background-color: #fe3d40;
   text-align: center;
@@ -51,7 +51,8 @@
   padding: 10px;
 }
 
-.covid-alert a, .covid-alert a:visited {
+.covid-alert a,
+.covid-alert a:visited {
   color: white;
   text-decoration: none;
   transition: opacity 0.2s ease-in-out;
@@ -70,14 +71,14 @@ li {
   list-style-type: none;
   padding: 1em;
   text-transform: uppercase;
-  color: #FFE401;
+  color: #ffe401;
   font-weight: 700;
 }
 
 li span {
   display: block;
   font-size: 3.5rem;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 /* END */
 
@@ -102,7 +103,7 @@ li span {
     font-size: 1.5em;
   }
   li {
-    font-size: .875em;
+    font-size: 0.875em;
   }
   li span {
     font-size: 2.75em;
