@@ -1,12 +1,13 @@
 .about {
-  background-image: url('../public/icons/AboutImages/images/finaltools.svg');
+  background-image: url("../public/icons/AboutImages/images/finaltools.svg");
   /**background-image: url(./images/colortools-01.svg);*/
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover !important;
 }
 
-.about-text, .tool {
+.about-text,
+.tool {
   color: black;
 }
 
@@ -41,7 +42,11 @@
 
 @media only screen and (max-width: 1450px) {
   .about {
-    background-image: radial-gradient(rgba(250, 250, 250, 0.9), rgba(255, 255, 255, 0.9)), url(../public/icons/AboutImages/images/toolpattern.svg);
+    background-image: radial-gradient(
+        rgba(250, 250, 250, 0.9),
+        rgba(255, 255, 255, 0.9)
+      ),
+      url(../public/icons/AboutImages/images/toolpattern.svg);
   }
 }
 
@@ -57,7 +62,6 @@
 }
 
 @media only screen and (max-width: 1230px) {
-
   .tool-rack > * {
     padding-top: 2%;
     padding-bottom: 2%;

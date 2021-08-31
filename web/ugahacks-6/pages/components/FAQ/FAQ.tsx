@@ -1,21 +1,13 @@
 import React, { ReactElement } from "react";
-// import { useState } from "react";
-//import "./FAQ.module.css";
-// import { motion } from "framer-motion";
-// import Button from '@material-ui/core/Button';
 import Question from "./Questions";
-// import {collapseVariants} from "./CommonVariants"
-
 
 function FAQ(): ReactElement {
-
   // const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       <section className="section faq-section" id="faq">
         <div className="faq-container">
-
           <h1 className="title-text">FAQ</h1>
 
           <div className="faq-question-wrapper">
@@ -35,8 +27,8 @@ function FAQ(): ReactElement {
             />
 
             <Question
-            question="How do I access a virtual workshop?"
-            answer="We'll announce the Google Meet link for workshops on Slack ahead of time."
+              question="How do I access a virtual workshop?"
+              answer="We'll announce the Google Meet link for workshops on Slack ahead of time."
             />
 
             <Question
@@ -74,13 +66,10 @@ function FAQ(): ReactElement {
               question="Can I volunteer/mentor at UGAHacks?"
               answer="We love your enthusiasm! Volunteers and mentors can apply via the registration form above! If you have any questions regarding the position, please contact us at hello@ugahacks.com - Be sure to mention the specific position in the subject of the email. See you at the event!"
             />
-
           </div>
         </div>
-
       </section>
     </>
-
   );
 }
 

@@ -1,9 +1,4 @@
 import React, { ReactElement } from "react";
-// import './About.module.css';
-// import laptop from '/icons/AboutImages/images/laptop.svg';
-// import charger from '../../../public/icons/AboutImages/images/charger.svg';
-// import phone from '../../../public/icons/AboutImages/images/phone.svg';
-// import slack from '../../../public/icons/AboutImages/images/slack.svg';
 import { motion } from "framer-motion";
 
 const laptop: string = "/icons/AboutImages/images/laptop.svg";

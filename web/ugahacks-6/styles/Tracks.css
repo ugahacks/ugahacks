@@ -1,4 +1,3 @@
-
 .tracks-section {
   background-image: url(/icons/TracksImages/images/yellowbg-02.svg);
   background-size: cover !important;
@@ -23,14 +22,14 @@
   width: 50%;
 }
 
-.tracks-text-container h1{
+.tracks-text-container h1 {
   font-weight: 700;
   text-align: center;
   font-size: 64px;
   color: black;
 }
 
-.tracks-text-container p{
+.tracks-text-container p {
   color: black;
   font-size: 1.3em;
 }
@@ -103,7 +102,6 @@
     min-width: 350px;
   }
 }
-
 
 @media only screen and (max-width: 480px) {
   #show-more {

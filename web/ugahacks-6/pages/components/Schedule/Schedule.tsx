@@ -1,11 +1,5 @@
-import React, { useState, ReactElement } from 'react';
-//import './Schedule.module.css';
-//import '../../bootstrap.css'
-import { motion } from "framer-motion"
-// import day1 from './images/day1.svg';
-// import day2 from './images/day2.svg';
-// import day3 from './images/day3.svg';
-// import comingsoon from './images/comingsoon.svg';
+import React, { useState, ReactElement } from "react";
+import { motion } from "framer-motion";
 // import Image from 'next/image';
 
 const day1: string = "/icons/ScheduleImages/images/day1.svg";
@@ -13,8 +7,8 @@ const day2: string = "/icons/ScheduleImages/images/day2.svg";
 const day3: string = "/icons/ScheduleImages/images/day3.svg";
 
 interface ScheduleProps {
-  image: string,
-  alt: string
+  image: string;
+  alt: string;
 }
 
 // eslint-disable-next-line
@@ -23,27 +17,21 @@ const buttonVariants = {
     scale: 1.1,
   },
   tap: {
-    scale: .9,
-  }
-}
+    scale: 0.9,
+  },
+};
 
 function DayImg(props: ScheduleProps): ReactElement {
-  return (
-      <img
-        src={props.image}
-        alt={props.alt}
-      />
-  );
+  return <img src={props.image} alt={props.alt} />;
 }
 
 function Schedule(): ReactElement {
-
   // eslint-disable-next-line
   const dayMapping = {
     0: "friday",
     1: "saturday",
     2: "sunday",
-  }
+  };
 
   const [day, setDay] = useState<number>(getDay());
 
@@ -58,7 +46,7 @@ function Schedule(): ReactElement {
 
     if (dateDay === 6) {
       return 1;
-    } else if( dateDay === 0) {
+    } else if (dateDay === 0) {
       return 2;
     } else {
       return 0;
@@ -70,193 +58,210 @@ function Schedule(): ReactElement {
     if (day === 0) {
       return (
         <>
-        <DayImg image={day1} alt="Day 1 banner"/>
-        <div>
-          <table>
-            <tbody>
-              <tr>
-                <td>Opening Ceremony</td>
-                <td>6:30 pm</td>
-              </tr>
-              <tr>
-                <td>Dinner and Check-in Closes</td>
-                <td>7:00 pm</td>
-              </tr>
-              <tr>
-                <td>First Time Hacker/Team Building Workshop</td>
-                <td>7:30 pm</td>
-              </tr>
-              <tr>
-                <td>Art Contest</td>
-                <td>7:30 pm</td>
-              </tr>
-              <tr>
-                <td>Sponsor Fair</td>
-                <td>8:30 pm</td>
-              </tr>
-              <tr>
-                <td>Workshop - NCR</td>
-                <td>9:30 pm</td>
-              </tr>
-              <tr>
-                <td>Workshop - NCR</td>
-                <td>10:30 pm</td>
-              </tr>
-              <tr>
-                <td>BlackRock: Sustainable Investing Challenge + API Demo</td>
-                <td>10:30 pm</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          <DayImg image={day1} alt="Day 1 banner" />
+          <div>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Opening Ceremony</td>
+                  <td>6:30 pm</td>
+                </tr>
+                <tr>
+                  <td>Dinner and Check-in Closes</td>
+                  <td>7:00 pm</td>
+                </tr>
+                <tr>
+                  <td>First Time Hacker/Team Building Workshop</td>
+                  <td>7:30 pm</td>
+                </tr>
+                <tr>
+                  <td>Art Contest</td>
+                  <td>7:30 pm</td>
+                </tr>
+                <tr>
+                  <td>Sponsor Fair</td>
+                  <td>8:30 pm</td>
+                </tr>
+                <tr>
+                  <td>Workshop - NCR</td>
+                  <td>9:30 pm</td>
+                </tr>
+                <tr>
+                  <td>Workshop - NCR</td>
+                  <td>10:30 pm</td>
+                </tr>
+                <tr>
+                  <td>BlackRock: Sustainable Investing Challenge + API Demo</td>
+                  <td>10:30 pm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </>
       );
     } else if (day === 1) {
       return (
         <>
-        <DayImg image={day2} alt="Day 2 banner"/>
-        <div className="daytwo-wrapper">
-          <table className="daytwo">
-            <tbody>
-              <tr>
-                <td>Breakfast</td>
-                <td>9:00 am</td>
-              </tr>
-              <tr>
-                <td>How to Start Building Your Web App - Paul Hansa</td>
-                <td>10:00 am</td>
-              </tr>
-              <tr>
-                <td>How to Test Your Website with Selenium WebDriver - Safiyullah Khan </td>
-                <td>10:00 am</td>
-              </tr>
-              <tr>
-                <td>Building an API w/ Python and FastAPI - Paul Hansa</td>
-                <td>11:00 am</td>
-              </tr>
-              <tr>
-                <td>Workshop - TSYS</td>
-                <td>11:00 am</td>
-              </tr>
-              <tr>
-                <td>Break (15 mins)</td>
-                <td>12:00 pm</td>
-              </tr>
-              <tr>
-                <td>NCR Q&A/1-on-1s and BlackRock Q&A/1-on-1s</td>
-                <td>12:15 pm</td>
-              </tr>
-              <tr>
-                <td>Equifax/State Farm/TSYS 1-on-1s</td>
-                <td>1:15 pm</td>
-              </tr>
-              <tr>
-                <td>Life After College is Hard: This Session Can Help - Malinda Inthirath</td>
-                <td>1:15 pm</td>
-              </tr>
-              <tr>
-                <td>Lunch</td>
-                <td>2:15 pm</td>
-              </tr>
-              <tr>
-                <td>BlackRock: Journey to FinTech - Aladdin</td>
-                <td>3:15 pm</td>
-              </tr>
-              <tr>
-                <td>Pitch Perfect: Communicating Your Ideas Quickly, Succinctly, <br></br> and Compellingly - Penn Hansa</td>
-                <td>3:15 pm</td>
-              </tr>
-              <tr>
-                <td>AWS at State Farm Workshop</td>
-                <td>4:15 pm</td>
-              </tr>
-              <tr>
-                <td>Getting Started with Angular - Chris Martinez</td>
-                <td>4:15 pm</td>
-              </tr>
-              <tr>
-                <td>Break (15 mins)</td>
-                <td>5:15 pm</td>
-              </tr>
-              <tr>
-                <td>Manipulating Cloud Data - Equifax</td>
-                <td>5:30 pm</td>
-              </tr>
-              <tr>
-                <td>Data Base with Data Lake & Blockchain - Jose Alexandro Acha Gomes</td>
-                <td>5:30 pm</td>
-              </tr>
-              <tr>
-                <td>Building Serverless Applications with AWS - Nick Tang</td>
-                <td>6:30 pm</td>
-              </tr>
-              <tr>
-                <td>Patient Health History Record System - Jose Alexandro Acha Gomes</td>
-                <td>6:30 pm</td>
-              </tr>
-              <tr>
-                <td>NCR Mini Event/Raffle</td>
-                <td>7:30 pm</td>
-              </tr>
-              <tr>
-                <td>Dinner</td>
-                <td>8:00 pm</td>
-              </tr>
-              <tr>
-                <td>Git(Hub) Basics: Git + GitHub Concepts - Shaun Mitchell</td>
-                <td>9:00 pm</td>
-              </tr>
-              <tr>
-                <td>Join the UGAHacks Team + Hacker Initiatives Workshop</td>
-                <td>9:00 pm</td>
-              </tr>
-              <tr>
-                <td>Tips and Tricks for a Broke College Dev - Paul Hansa</td>
-                <td>10:00 pm</td>
-              </tr>
-              <tr>
-                <td>Git - Akash Veerappan</td>
-                <td>10:00 pm</td>
-              </tr>
-              <tr>
-                <td>Break (15 mins)</td>
-                <td>11:00 pm</td>
-              </tr>
-              <tr>
-                <td>Among Us</td>
-                <td>11:15 pm</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          <DayImg image={day2} alt="Day 2 banner" />
+          <div className="daytwo-wrapper">
+            <table className="daytwo">
+              <tbody>
+                <tr>
+                  <td>Breakfast</td>
+                  <td>9:00 am</td>
+                </tr>
+                <tr>
+                  <td>How to Start Building Your Web App - Paul Hansa</td>
+                  <td>10:00 am</td>
+                </tr>
+                <tr>
+                  <td>
+                    How to Test Your Website with Selenium WebDriver -
+                    Safiyullah Khan{" "}
+                  </td>
+                  <td>10:00 am</td>
+                </tr>
+                <tr>
+                  <td>Building an API w/ Python and FastAPI - Paul Hansa</td>
+                  <td>11:00 am</td>
+                </tr>
+                <tr>
+                  <td>Workshop - TSYS</td>
+                  <td>11:00 am</td>
+                </tr>
+                <tr>
+                  <td>Break (15 mins)</td>
+                  <td>12:00 pm</td>
+                </tr>
+                <tr>
+                  <td>NCR Q&A/1-on-1s and BlackRock Q&A/1-on-1s</td>
+                  <td>12:15 pm</td>
+                </tr>
+                <tr>
+                  <td>Equifax/State Farm/TSYS 1-on-1s</td>
+                  <td>1:15 pm</td>
+                </tr>
+                <tr>
+                  <td>
+                    Life After College is Hard: This Session Can Help - Malinda
+                    Inthirath
+                  </td>
+                  <td>1:15 pm</td>
+                </tr>
+                <tr>
+                  <td>Lunch</td>
+                  <td>2:15 pm</td>
+                </tr>
+                <tr>
+                  <td>BlackRock: Journey to FinTech - Aladdin</td>
+                  <td>3:15 pm</td>
+                </tr>
+                <tr>
+                  <td>
+                    Pitch Perfect: Communicating Your Ideas Quickly, Succinctly,{" "}
+                    <br></br> and Compellingly - Penn Hansa
+                  </td>
+                  <td>3:15 pm</td>
+                </tr>
+                <tr>
+                  <td>AWS at State Farm Workshop</td>
+                  <td>4:15 pm</td>
+                </tr>
+                <tr>
+                  <td>Getting Started with Angular - Chris Martinez</td>
+                  <td>4:15 pm</td>
+                </tr>
+                <tr>
+                  <td>Break (15 mins)</td>
+                  <td>5:15 pm</td>
+                </tr>
+                <tr>
+                  <td>Manipulating Cloud Data - Equifax</td>
+                  <td>5:30 pm</td>
+                </tr>
+                <tr>
+                  <td>
+                    Data Base with Data Lake & Blockchain - Jose Alexandro Acha
+                    Gomes
+                  </td>
+                  <td>5:30 pm</td>
+                </tr>
+                <tr>
+                  <td>Building Serverless Applications with AWS - Nick Tang</td>
+                  <td>6:30 pm</td>
+                </tr>
+                <tr>
+                  <td>
+                    Patient Health History Record System - Jose Alexandro Acha
+                    Gomes
+                  </td>
+                  <td>6:30 pm</td>
+                </tr>
+                <tr>
+                  <td>NCR Mini Event/Raffle</td>
+                  <td>7:30 pm</td>
+                </tr>
+                <tr>
+                  <td>Dinner</td>
+                  <td>8:00 pm</td>
+                </tr>
+                <tr>
+                  <td>
+                    Git(Hub) Basics: Git + GitHub Concepts - Shaun Mitchell
+                  </td>
+                  <td>9:00 pm</td>
+                </tr>
+                <tr>
+                  <td>Join the UGAHacks Team + Hacker Initiatives Workshop</td>
+                  <td>9:00 pm</td>
+                </tr>
+                <tr>
+                  <td>Tips and Tricks for a Broke College Dev - Paul Hansa</td>
+                  <td>10:00 pm</td>
+                </tr>
+                <tr>
+                  <td>Git - Akash Veerappan</td>
+                  <td>10:00 pm</td>
+                </tr>
+                <tr>
+                  <td>Break (15 mins)</td>
+                  <td>11:00 pm</td>
+                </tr>
+                <tr>
+                  <td>Among Us</td>
+                  <td>11:15 pm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </>
       );
     } else {
       return (
         <>
-        <DayImg image={day3} alt="Day 3 banner"/>
-        <div>
-          <table>
-            <tbody>
-              <tr>
-                <td>Breakfast and Submissions Due</td>
-                <td>9:00 am</td>
-              </tr>
-              <tr>
-                <td>Judging Expo</td>
-                <td>10:00 am</td>
-              </tr>
-              <tr>
-                <td>Lunch</td>
-                <td>2:00 pm</td>
-              </tr>
-              <tr>
-                <td>Closing Ceremony</td>
-                <td>3:00 pm</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          <DayImg image={day3} alt="Day 3 banner" />
+          <div>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Breakfast and Submissions Due</td>
+                  <td>9:00 am</td>
+                </tr>
+                <tr>
+                  <td>Judging Expo</td>
+                  <td>10:00 am</td>
+                </tr>
+                <tr>
+                  <td>Lunch</td>
+                  <td>2:00 pm</td>
+                </tr>
+                <tr>
+                  <td>Closing Ceremony</td>
+                  <td>3:00 pm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </>
       );
     }
@@ -269,7 +274,7 @@ function Schedule(): ReactElement {
     }
 
     if (day + increment >= 0 && day + increment <= 2) {
-      setDay(day+increment);
+      setDay(day + increment);
     }
   }
 
@@ -292,7 +297,7 @@ function Schedule(): ReactElement {
 
   return (
     <>
-      <section id='schedule' className='section'>
+      <section id="schedule" className="section">
         <div className="section-text schedule-text">
           <h1 id="scheduleheader">Schedule</h1>
           <div className="day-header">
@@ -301,7 +306,7 @@ function Schedule(): ReactElement {
               className="back-button"
               variants={buttonVariants}
               whileHover="hover"
-              ></motion.button>
+            ></motion.button>
             <h1>{displayDay(day)} </h1>
             <motion.button
               onClick={() => changeDay(1)}
@@ -309,12 +314,14 @@ function Schedule(): ReactElement {
               variants={buttonVariants}
               whileHover="hover"
               whileTap="tap"
-              > </motion.button>
+            >
+              {" "}
+            </motion.button>
           </div>
-          <div className="day-container">
-          {renderDay()}
-          </div>
-          <p id="timecaption"><i>All times are in Eastern Standard Time</i></p>
+          <div className="day-container">{renderDay()}</div>
+          <p id="timecaption">
+            <i>All times are in Eastern Standard Time</i>
+          </p>
         </div>
       </section>
     </>

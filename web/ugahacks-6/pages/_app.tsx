@@ -1,6 +1,5 @@
 import "../styles/bootstrap.css";
 import "../styles/globals.css";
-//import '../styles/Nav.css'
 import "../styles/Splash.css";
 import "../styles/HallOfFame.css";
 import "../styles/About.css";

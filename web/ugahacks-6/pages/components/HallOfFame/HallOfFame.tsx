@@ -1,35 +1,14 @@
 /* eslint-disable react/jsx-key */
-import React from 'react';
-//import './HallOfFame.module.css';
+import React, { ReactElement } from "react";
 
-import MediaCard from './MediaCard';
+import MediaCard from "./MediaCard";
 
-import AliceCarousel from 'react-alice-carousel';
+import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
-import IconButton from '@material-ui/core/IconButton';
-import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-
-// import reading_buddy from "./media/reading_buddy.png";
-// import astrodog from "./media/astrodog.png";
-// import luxstra from "./media/luxstra.png";
-// import octocat from "./media/octocat.png";
-// import macro from "./media/macro.png";
-// import sign_assist from "./media/sign_assist.png";
-// import inventrack from "./media/inventrack.png";
-// import chopchop from "./media/chopchop.png";
-// import atm_pal from "./media/atm_pal.png";
-// import landr from "./media/landr.png";
-// import solvit_sus from "./media/solvit_sus.png";
-// import oz from "./media/oz.png";
-// import magic from "./media/magic.png";
-// import food_1 from "./media/food_1.png";
-// import food_2 from "./media/food_2.png";
-// import food_3 from "./media/food_3.png";
-// import workspace_1 from "./media/workspace_1.png";
-// import workspace_2 from "./media/workspace_2.png";
-// import workspace_3 from "./media/workspace_3.png";
+import IconButton from "@material-ui/core/IconButton";
+import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
+import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 
 const reading_buddy: string = "/icons/HallOfFameImages/media/reading_buddy.png";
 const astrodog: string = "/icons/HallOfFameImages/media/astrodog.png";
@@ -51,17 +30,16 @@ const workspace_1: string = "/icons/HallOfFameImages/media/workspace_1.png";
 const workspace_2: string = "/icons/HallOfFameImages/media/workspace_2.png";
 const workspace_3: string = "/icons/HallOfFameImages/media/workspace_3.png";
 
-
 const responsive = {
-    0: { items: 1 },
-    568: { items: 2 },
-    1024: { items: 4 },
-    2400: { items: 6},
-    2800: { items: 8 },
-    3400: { items: 10 },
+  0: { items: 1 },
+  568: { items: 2 },
+  1024: { items: 4 },
+  2400: { items: 6 },
+  2800: { items: 8 },
+  3400: { items: 10 },
 };
 
-const overall_items = [
+const overall_items: ReactElement[] = [
   <MediaCard
     teamImage={reading_buddy}
     placement="[UGAHacks] 1st"
@@ -190,7 +168,7 @@ const overall_items = [
   />,
 ];
 
-const category_items = [
+const category_items: ReactElement[] = [
   <MediaCard
     teamImage={inventrack}
     placement="[NCR] 1st"
@@ -250,18 +228,26 @@ const category_items = [
 ];
 
 interface disabledProps {
-  isDisabled: boolean
+  isDisabled: boolean;
 }
 
 const PrevButton = ({ isDisabled }: disabledProps) => {
-  return <IconButton disabled={isDisabled} color="inherit"><NavigateBeforeIcon fontSize="large" aria-label="Previous"/></IconButton>
+  return (
+    <IconButton disabled={isDisabled} color="inherit">
+      <NavigateBeforeIcon fontSize="large" aria-label="Previous" />
+    </IconButton>
+  );
 };
 
 const NextButton = ({ isDisabled }: disabledProps) => {
-  return <IconButton disabled={isDisabled} color="inherit"><NavigateNextIcon fontSize="large" aria-label="Next"/></IconButton>
-}
+  return (
+    <IconButton disabled={isDisabled} color="inherit">
+      <NavigateNextIcon fontSize="large" aria-label="Next" />
+    </IconButton>
+  );
+};
 
-const HallOfFame = () => {
+const HallOfFame = (): ReactElement => {
   return (
     <section className="section hof-section" id="hof">
       <div id="HallOfFame">
@@ -269,18 +255,33 @@ const HallOfFame = () => {
         <h2 className="subheader">Congratulations to Our Winners!</h2>
         <div className="carousel overall-winners">
           <h3 className="title">Overall Winners</h3>
-          <AliceCarousel mouseTracking autoPlay autoPlayInterval={2000} disableDotsControls
-          responsive={responsive} renderPrevButton={PrevButton} renderNextButton={NextButton} items={overall_items} />
+          <AliceCarousel
+            mouseTracking
+            autoPlay
+            autoPlayInterval={2000}
+            disableDotsControls
+            responsive={responsive}
+            renderPrevButton={PrevButton}
+            renderNextButton={NextButton}
+            items={overall_items}
+          />
         </div>
         <div className="carousel art-winners">
           <h3 className="title">Sponsor Winners</h3>
-          <AliceCarousel mouseTracking autoPlay autoPlayInterval={2000} disableDotsControls
-          responsive={responsive} renderPrevButton={PrevButton} renderNextButton={NextButton} items={category_items} />
+          <AliceCarousel
+            mouseTracking
+            autoPlay
+            autoPlayInterval={2000}
+            disableDotsControls
+            responsive={responsive}
+            renderPrevButton={PrevButton}
+            renderNextButton={NextButton}
+            items={category_items}
+          />
         </div>
       </div>
     </section>
   );
-}
-
+};
 
 export default HallOfFame;
