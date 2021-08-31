@@ -13,8 +13,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "strictNullChecks": true,
+    "strictNullChecks": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/components/HallOfFame/HallOfFame.tsx", "pages/components/HallOfFame/MediaCard.tsx", "pages/components/Sponsors/SponsorLogo.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/components/HallOfFame/HallOfFame.tsx",
+    "pages/components/HallOfFame/MediaCard.tsx",
+    "pages/components/Sponsors/SponsorLogo.tsx"
+  ],
   "exclude": ["node_modules"]
 }

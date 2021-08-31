@@ -32,9 +32,3 @@ yarn-error.log*
 
 # vercel
 .vercel
-
-#yarn
-.yarn/*
-!.yarn/releases
-!.yarn/plugins
-.pnp.*

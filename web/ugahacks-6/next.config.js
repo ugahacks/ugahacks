@@ -1,8 +1,5 @@
 module.exports = {
   reactStrictMode: true,
-  env: {
-    HOSTNAME: "localhost",
-  },
   settings: {
     "import/resolver": {
       node: {
