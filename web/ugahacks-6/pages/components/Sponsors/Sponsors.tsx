@@ -23,8 +23,6 @@ const uga: string = "/icons/SponsorsImages/images/sponsorlogos/uga-combo.png";
 const credera: string = "/icons/SponsorsImages/images/sponsorlogos/credera.png";
 const acm: string = "/icons/SponsorsImages/images/sponsorlogos/acm.png";
 
-const sponsorshipPacket: string = "/media/sponsorship_packet.pdf";
-
 const CustomButton = withStyles({
   root: {
     backgroundColor: "#fafafa",
@@ -141,7 +139,11 @@ function Sponsors(): ReactElement {
             through the generous gifts of University of Georgia donors.
           </i>
         </p>
-        <CustomButton variant="contained" size="large" href={sponsorshipPacket}>
+        <CustomButton
+          variant="contained"
+          size="large"
+          href="/sponsorship-packet"
+        >
           Sponsorship Packet
         </CustomButton>
       </div>

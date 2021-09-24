@@ -44,3 +44,27 @@
 .center {
   margin: auto;
 }
+
+.card-container {
+  max-width: 345px;
+  text-align: center;
+}
+
+.card-pic {
+  height: 180px;
+}
+
+.card-text-container {
+  color: black;
+}
+
+.card-action-container {
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    max-width: 100%;
+  }
+}

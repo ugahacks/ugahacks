@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { withStyles, makeStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
@@ -23,70 +23,37 @@ const CustomButton = withStyles({
     fontSize: "1.1em",
     fontFamily: "Poppins",
     borderRadius: "50px",
+    textAlign: "center",
+    color: "#ffffff",
   },
 })(Button);
 
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-    height: 300,
-    textAlign: "center",
-    "@media (max-width:480px)": {
-      maxWidth: "100%",
-    },
-  },
-  media: {
-    height: 180,
-  },
-  h5: {
-    color: "black",
-  },
-  btext: {
-    size: "1em",
-    textAlign: "center",
-    color: "#fff",
-  },
-  button: {
-    color: "black",
-    display: "inline-block",
-  },
-  cardcontent: {
-    padding: "0px",
-  },
-});
-
 export default function MediaCard(props: MediaCardProps): ReactElement {
-  const classes = useStyles();
-
   return (
-    <Card className={classes.root}>
+    <Card className="card-container">
       <CardActionArea>
         <CardMedia
-          className={classes.media}
+          className="card-pic"
           image={props.teamImage}
           title="Winner"
         />
-        <CardContent className={classes.cardcontent}>
-          <Typography variant="h6" component="h6" className={classes.h5}>
+        <CardContent className="card-text-container">
+          <Typography variant="h6" component="h6">
             {props.placement}
           </Typography>
-          <Typography variant="body1" component="h6" className={classes.h5}>
+          <Typography variant="body1" component="h6">
             {props.teamName}
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions className={classes.button}>
+      <CardActions className="card-action-container">
         <CustomButton
           variant="contained"
           size="small"
           color="primary"
           href={props.link}
         >
-          <Typography
-            variant="subtitle1"
-            component="h6"
-            className={classes.btext}
-          >
+          <Typography variant="subtitle1" component="h6">
             {props.buttonText}
           </Typography>
         </CustomButton>

@@ -96,6 +96,9 @@ li span {
   #eventdate {
     padding-top: 6%;
   }
+  #tagline {
+    margin: 0px;
+  }
   .subheader {
     padding: 6% 3%;
   }
