@@ -15,6 +15,12 @@ module.exports = {
           "https://storage.googleapis.com/ugahacks-public/external/UGAHacks6-Recap-Packet.pdf",
         permanent: true,
       },
+      {
+        source: "/sponsorship-packet",
+        destination:
+          "https://storage.googleapis.com/ugahacks-public/external/UGAHacks6-Sponsorship-Packet.pdf",
+        permanent: true,
+      },
     ];
   },
 };

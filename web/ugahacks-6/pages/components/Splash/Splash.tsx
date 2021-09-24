@@ -5,8 +5,6 @@ import { withStyles } from "@material-ui/core/styles";
 
 const sixLogo: string = "/icons/SplashImages/images/sixlogoncr.svg";
 
-const eventRecap: string = "/media/event_recap.pdf";
-
 interface TimeLeftObject {
   days?: number;
   hours?: number;
@@ -104,7 +102,7 @@ function Countdown(): ReactElement {
           </h2>
           <h2 id="eventdate">February 5-7, 2021 Online</h2>
         </div>
-        <CustomButton variant="contained" size="large" href={eventRecap}>
+        <CustomButton variant="contained" size="large" href="/recap">
           Event Recap
         </CustomButton>
       </div>
