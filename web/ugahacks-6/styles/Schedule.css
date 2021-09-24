@@ -1,0 +1,186 @@
+#schedule {
+  background-image: url(/icons/ScheduleImages/images/bp1animated.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Working within the confines of fullpage.js */
+#schedule,
+#timecaption {
+  text-align: center;
+}
+
+.schedule-container {
+  font-size: 1.2em;
+  padding: 30px;
+}
+
+#scheduleheader {
+  font-weight: 700;
+  font-size: 3em;
+  margin: 30px auto;
+}
+
+.day-header {
+  font-size: 1.7em;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.day-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.day-container img {
+  width: 30%;
+  height: 100%;
+  max-width: 200px;
+}
+
+.back-button {
+  background: url("/icons/ScheduleImages/images/arrow_back_ios-24dp.svg")
+    no-repeat;
+  border: none;
+  padding-right: 15px;
+  margin-top: 13px;
+}
+
+.forward-button {
+  background: url("/icons/ScheduleImages/images/arrow_forward_ios-24dp.svg")
+    no-repeat;
+  border: none;
+  padding-left: 15px;
+  margin-top: 13px;
+}
+
+table {
+  margin: auto;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-align: left;
+}
+
+td {
+  padding: 15px;
+  font-size: 1.2em;
+}
+
+.daytwo-wrapper {
+  overflow-y: scroll;
+  height: 70vh;
+}
+
+.daytwo-wrapper::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.daytwo-wrapper::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+
+.daytwo-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ffe401;
+}
+
+/* FIREFOX: */
+
+.daytwo-wrapper {
+  scrollbar-width: thin;
+  scrollbar-color: #ffe401;
+}
+
+td:last-child {
+  color: #ffe401;
+}
+
+.disabled {
+  opacity: 0.2;
+}
+
+.active {
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.active:hover {
+  color: #ffe401;
+}
+
+.visible {
+  display: block;
+}
+
+.collapse {
+  display: none;
+}
+
+div {
+  font-weight: 400;
+  color: #fff;
+}
+
+#schedule h1,
+#schedule h2 {
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1580px) {
+  #schedule {
+    display: flex;
+  }
+
+  #commingsoonimg {
+    margin-left: 12.5vw;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .day-container img {
+    width: 20%;
+    max-width: 150px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #schedule {
+    display: flex;
+  }
+  #commingsoonimg,
+  .schedule-text {
+    width: 90%;
+  }
+  .day-container img {
+    display: none;
+  }
+  .day-container {
+    margin-bottom: 30px;
+  }
+  td {
+    padding: 5px;
+    font-size: 1.1em;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 770px) {
+  .schedule-container {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  *,
+  *:focus,
+  *:hover {
+    outline: none !important;
+  }
+}

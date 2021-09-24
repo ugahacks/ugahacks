@@ -1,0 +1,119 @@
+.splash {
+  background-image: url(/icons/SplashImages/images/splash.svg);
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.eventline {
+  color: #ffe401;
+}
+
+#tagline {
+  margin: 20px 0px;
+}
+
+#eventdate {
+  margin-top: 25px;
+  color: white;
+}
+
+#mlh-trust-badge {
+  display: block;
+  max-width: 100px;
+  min-width: 60px;
+  position: absolute;
+  right: 50px;
+  top: 0;
+  width: 10%;
+  z-index: 10000;
+}
+
+.countdown-registration > span {
+  font-size: 1.5em;
+}
+
+.countdown-registration > h1 {
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.covid-alert {
+  background-color: #fe3d40;
+  text-align: center;
+  margin: 0px;
+  padding: 10px;
+}
+
+.covid-alert a,
+.covid-alert a:visited {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.covid-alert a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  color: white;
+}
+
+/* Lana codepen */
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+  color: #ffe401;
+  font-weight: 700;
+}
+
+li span {
+  display: block;
+  font-size: 3.5rem;
+  color: #ffffff;
+}
+/* END */
+
+@media only screen and (max-width: 1600px) {
+  .splash {
+    background-image: url(/icons/SplashImages/images/mobilesplash.svg);
+  }
+
+  .logo {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #eventdate {
+    padding-top: 6%;
+  }
+  #tagline {
+    margin: 0px;
+  }
+  .subheader {
+    padding: 6% 3%;
+  }
+  .subheader > h2 {
+    font-size: 1.5em;
+  }
+  li {
+    font-size: 0.875em;
+  }
+  li span {
+    font-size: 2.75em;
+  }
+
+  .countdown-registration > h1 {
+    margin-top: 30px;
+    font-size: 1.5em;
+  }
+}
