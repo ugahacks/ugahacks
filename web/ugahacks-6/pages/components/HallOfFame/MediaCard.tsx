@@ -16,8 +16,9 @@ interface MediaCardProps {
   buttonText: string;
 }
 
-const CustomButton = withStyles({
+const CardButton = withStyles({
   root: {
+    width: "250px",
     paddingLeft: "15px",
     paddingRight: "15px",
     fontSize: "1.1em",
@@ -47,7 +48,7 @@ export default function MediaCard(props: MediaCardProps): ReactElement {
         </CardContent>
       </CardActionArea>
       <CardActions className="card-action-container">
-        <CustomButton
+        <CardButton
           variant="contained"
           size="small"
           color="primary"
@@ -56,7 +57,7 @@ export default function MediaCard(props: MediaCardProps): ReactElement {
           <Typography variant="subtitle1" component="h6">
             {props.buttonText}
           </Typography>
-        </CustomButton>
+        </CardButton>
       </CardActions>
     </Card>
   );
