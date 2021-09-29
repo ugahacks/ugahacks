@@ -1,0 +1,29 @@
+.main {
+    box-sizing: border-box;
+    background-image: url("../pages/Graphics/splash2-01.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;   
+    background-size: contain;
+    height: 90vh;
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.border {
+    background-color: #ee789d;
+    border: .75vh solid #000;
+    padding: 2vh;
+}
+
+.greyTop {
+    border-top: .75vh solid #000;
+    border-left: .75vh solid #000;
+    border-right: .75vh solid #000;
+    background-color: lightgray;
+    height: 5vh;
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+}

@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Splash from './splash'
 
 export default function Home() {
   return (
+    <div> 
+    <Splash/>
     <div className={styles.container}>
       <Head>
         <title>UGAHacks 7</title>
@@ -51,5 +54,6 @@ export default function Home() {
         </a>
       </footer>
     </div>
+    </div> //remove me
   )
 }
