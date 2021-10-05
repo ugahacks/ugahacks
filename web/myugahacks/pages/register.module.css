@@ -1,0 +1,40 @@
+.register {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.register label {
+    text-align: left;
+    display: block;
+}
+
+.register h1 {
+    font-size: 40px;
+    color: red;
+    margin-bottom: 30px;
+}
+
+.register h2 {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.register input, .register select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+}
+
+.register button {
+    background: red;
+    color: black;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
