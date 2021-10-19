@@ -15,5 +15,9 @@
     "typescript": "^4.3.5"
   },
   "depedencies": {},
-  "packageManager": "yarn@3.0.0"
+  "packageManager": "yarn@3.0.0",
+  "dependencies": {
+    "firebase": "^9.1.1",
+    "react-firestore": "^1.0.1"
+  }
 }
