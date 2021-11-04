@@ -12,13 +12,13 @@
     background-color: #ee789d;
     background-size: 100%;
     border: .5vh solid #000;
-    padding: 2%;
+    padding: 8vh;
 }
 
 .main {
     background-image: url("../public/splash2-01.svg");
     background-repeat: no-repeat;
-    background-position:right;  
+    background-position:center;  /*should be changed to right when nav added*/  
     /**background-size: 80% 100%;*/
     height: 100%;
     width:100%;
