@@ -1,0 +1,9 @@
+.blueBanner {
+  background: linear-gradient(90deg, navy, #53bdf8);
+}
+.url {
+  font-size: 1.25em;
+}
+.bodyText {
+  font-size: 2em;
+}

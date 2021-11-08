@@ -56,9 +56,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["husky", "npm:7.0.1"],
-            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
           "linkType": "SOFT",
+        }]
+      ]],
+      ["98.css", [
+        ["npm:0.1.17", {
+          "packageLocation": "./.yarn/cache/98.css-npm-0.1.17-f81ba9a8d5-faefad2b67.zip/node_modules/98.css/",
+          "packageDependencies": [
+            ["98.css", "npm:0.1.17"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["@babel/code-frame", [
@@ -877,7 +886,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/typescript-estree", "virtual:cf4a423810b99e1fb32d6895d51238004a52fad294af774c7afd9eab18189179f58cd93e187f32348dfdfda813c47b3c234a2fcac320ee807e4f9a46c2acafdb#npm:4.28.5"],
             ["debug", "virtual:ee1bbcab87c0701d4ea83dd18afa59b10c6343191c17b3a8e7844ecdde3ca8e8977791131460b822baae289e9261b3b228709bc45987d850e69091b4d363edfa#npm:4.3.2"],
             ["eslint", "npm:7.32.0"],
-            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
           "packagePeers": [
             "@types/eslint",
@@ -926,7 +935,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-glob", "npm:4.0.1"],
             ["semver", "npm:7.3.5"],
             ["tsutils", "virtual:d2a78c401d82f19543ca5dce92bb14db76a3b375c601e3a93f326585b0e9047e1695b11f33f1c39f978722c1cb643a3c0070af9d06ab581e9dddc8807fbc76b3#npm:3.21.0"],
-            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
           "packagePeers": [
             "typescript"
@@ -2649,7 +2658,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:57965686dd75db303b923fd268b26ac8e6a8b5e562f6632a63a5ca96066b09ff1d6a19a5fb7598ac3ce2491e479329a2f0157c2e07a1a1bbe641777eda58b7a4#npm:7.24.0"],
             ["eslint-plugin-react-hooks", "virtual:57965686dd75db303b923fd268b26ac8e6a8b5e562f6632a63a5ca96066b09ff1d6a19a5fb7598ac3ce2491e479329a2f0157c2e07a1a1bbe641777eda58b7a4#npm:4.2.0"],
             ["next", "virtual:8a779053433de9489a6f2e65051a3a30adffdb21110c8dba58f035109e663f9ca0c0c6dd600e3b41d71c7e71d38065e60aecca72a372d228bc048833acfada12#npm:11.1.2"],
-            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
           "packagePeers": [
             "@types/eslint",
@@ -2679,7 +2688,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:57965686dd75db303b923fd268b26ac8e6a8b5e562f6632a63a5ca96066b09ff1d6a19a5fb7598ac3ce2491e479329a2f0157c2e07a1a1bbe641777eda58b7a4#npm:7.24.0"],
             ["eslint-plugin-react-hooks", "virtual:57965686dd75db303b923fd268b26ac8e6a8b5e562f6632a63a5ca96066b09ff1d6a19a5fb7598ac3ce2491e479329a2f0157c2e07a1a1bbe641777eda58b7a4#npm:4.2.0"],
             ["next", "virtual:d20ae7b0d66957141e7f94d9a8c27ff88a9aa8c716e7e6e02e42152d9e1afb388e27e64b126ad17c4853aaf7dc19c48a5541ecf955a4fafe40bed51fa9895fe9#npm:11.1.2"],
-            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
           "packagePeers": [
             "@types/eslint",
@@ -4902,7 +4911,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:8a779053433de9489a6f2e65051a3a30adffdb21110c8dba58f035109e663f9ca0c0c6dd600e3b41d71c7e71d38065e60aecca72a372d228bc048833acfada12#npm:17.0.2"],
             ["sqlite3", "virtual:8a779053433de9489a6f2e65051a3a30adffdb21110c8dba58f035109e663f9ca0c0c6dd600e3b41d71c7e71d38065e60aecca72a372d228bc048833acfada12#npm:5.0.2"],
-            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
           "linkType": "SOFT",
         }]
@@ -6288,6 +6297,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["react-draggable", [
+        ["npm:4.4.4", {
+          "packageLocation": "./.yarn/cache/react-draggable-npm-4.4.4-f0b7a5c546-b8258a5893.zip/node_modules/react-draggable/",
+          "packageDependencies": [
+            ["react-draggable", "npm:4.4.4"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:a61c9422dcf205a5ddb20a239867760fba19c08c020cd654d1f56c54217228d69c1ec42d119708fda0b0c84d5d369616e68a7cb717ced7940dc52752b48265e5#npm:4.4.4", {
+          "packageLocation": "./.yarn/__virtual__/react-draggable-virtual-a247d127b0/0/cache/react-draggable-npm-4.4.4-f0b7a5c546-b8258a5893.zip/node_modules/react-draggable/",
+          "packageDependencies": [
+            ["react-draggable", "virtual:a61c9422dcf205a5ddb20a239867760fba19c08c020cd654d1f56c54217228d69c1ec42d119708fda0b0c84d5d369616e68a7cb717ced7940dc52752b48265e5#npm:4.4.4"],
+            ["@types/react", "npm:17.0.15"],
+            ["@types/react-dom", null],
+            ["clsx", "npm:1.1.1"],
+            ["prop-types", "npm:15.7.2"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:8a779053433de9489a6f2e65051a3a30adffdb21110c8dba58f035109e663f9ca0c0c6dd600e3b41d71c7e71d38065e60aecca72a372d228bc048833acfada12#npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@types/react-dom",
+            "@types/react",
+            "react-dom",
+            "react"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["react-is", [
         ["npm:16.13.1", {
           "packageLocation": "./.yarn/cache/react-is-npm-16.13.1-a9b9382b4f-f7a19ac349.zip/node_modules/react-is/",
@@ -7482,7 +7519,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tsutils", "virtual:d2a78c401d82f19543ca5dce92bb14db76a3b375c601e3a93f326585b0e9047e1695b11f33f1c39f978722c1cb643a3c0070af9d06ab581e9dddc8807fbc76b3#npm:3.21.0"],
             ["@types/typescript", null],
             ["tslib", "npm:1.14.1"],
-            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
           "packagePeers": [
             "@types/typescript",
@@ -7648,10 +7685,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["typescript", [
-        ["patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7", {
-          "packageLocation": "./.yarn/cache/typescript-patch-bb3b548ba1-bc2c4fdf0f.zip/node_modules/typescript/",
+        ["patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b", {
+          "packageLocation": "./.yarn/cache/typescript-patch-6e3648db44-4e2edec3c9.zip/node_modules/typescript/",
           "packageDependencies": [
-            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
           "linkType": "HARD",
         }]
@@ -7671,7 +7708,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["ugahacks", "workspace:."],
             ["husky", "npm:7.0.1"],
-            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
           "linkType": "SOFT",
         }]
@@ -7694,7 +7731,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-alice-carousel", "virtual:d20ae7b0d66957141e7f94d9a8c27ff88a9aa8c716e7e6e02e42152d9e1afb388e27e64b126ad17c4853aaf7dc19c48a5541ecf955a4fafe40bed51fa9895fe9#npm:2.5.1"],
             ["react-device-detect", "virtual:d20ae7b0d66957141e7f94d9a8c27ff88a9aa8c716e7e6e02e42152d9e1afb388e27e64b126ad17c4853aaf7dc19c48a5541ecf955a4fafe40bed51fa9895fe9#npm:1.17.0"],
             ["react-dom", "virtual:8a779053433de9489a6f2e65051a3a30adffdb21110c8dba58f035109e663f9ca0c0c6dd600e3b41d71c7e71d38065e60aecca72a372d228bc048833acfada12#npm:17.0.2"],
-            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
           "linkType": "SOFT",
         }]
@@ -7704,6 +7741,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./web/ugahacks-7/",
           "packageDependencies": [
             ["ugahacks-7", "workspace:web/ugahacks-7"],
+            ["98.css", "npm:0.1.17"],
             ["@types/node", "npm:16.4.10"],
             ["@types/react", "npm:17.0.15"],
             ["eslint", "npm:7.32.0"],
@@ -7711,7 +7749,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next", "virtual:d20ae7b0d66957141e7f94d9a8c27ff88a9aa8c716e7e6e02e42152d9e1afb388e27e64b126ad17c4853aaf7dc19c48a5541ecf955a4fafe40bed51fa9895fe9#npm:11.1.2"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:8a779053433de9489a6f2e65051a3a30adffdb21110c8dba58f035109e663f9ca0c0c6dd600e3b41d71c7e71d38065e60aecca72a372d228bc048833acfada12#npm:17.0.2"],
-            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+            ["react-draggable", "virtual:a61c9422dcf205a5ddb20a239867760fba19c08c020cd654d1f56c54217228d69c1ec42d119708fda0b0c84d5d369616e68a7cb717ced7940dc52752b48265e5#npm:4.4.4"],
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
           "linkType": "SOFT",
         }]
@@ -7728,7 +7767,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next", "virtual:d20ae7b0d66957141e7f94d9a8c27ff88a9aa8c716e7e6e02e42152d9e1afb388e27e64b126ad17c4853aaf7dc19c48a5541ecf955a4fafe40bed51fa9895fe9#npm:11.1.2"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:8a779053433de9489a6f2e65051a3a30adffdb21110c8dba58f035109e663f9ca0c0c6dd600e3b41d71c7e71d38065e60aecca72a372d228bc048833acfada12#npm:17.0.2"],
-            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
           "linkType": "SOFT",
         }]
@@ -13746,11 +13785,9 @@ class NodeFS extends BasePortableFakeFS {
     return this.realFs.readFileSync(fsNativePath, encoding);
   }
 
-  async readdirPromise(p, {
-    withFileTypes
-  } = {}) {
+  async readdirPromise(p, opts) {
     return await new Promise((resolve, reject) => {
-      if (withFileTypes) {
+      if (opts === null || opts === void 0 ? void 0 : opts.withFileTypes) {
         this.realFs.readdir(npath.fromPortablePath(p), {
           withFileTypes: true
         }, this.makeCallback(resolve, reject));
@@ -13760,10 +13797,8 @@ class NodeFS extends BasePortableFakeFS {
     });
   }
 
-  readdirSync(p, {
-    withFileTypes
-  } = {}) {
-    if (withFileTypes) {
+  readdirSync(p, opts) {
+    if (opts === null || opts === void 0 ? void 0 : opts.withFileTypes) {
       return this.realFs.readdirSync(npath.fromPortablePath(p), {
         withFileTypes: true
       });
@@ -14064,20 +14099,12 @@ class ProxiedFS extends FakeFS {
     }
   }
 
-  async readdirPromise(p, {
-    withFileTypes
-  } = {}) {
-    return this.baseFs.readdirPromise(this.mapToBase(p), {
-      withFileTypes: withFileTypes
-    });
+  async readdirPromise(p, opts) {
+    return this.baseFs.readdirPromise(this.mapToBase(p), opts);
   }
 
-  readdirSync(p, {
-    withFileTypes
-  } = {}) {
-    return this.baseFs.readdirSync(this.mapToBase(p), {
-      withFileTypes: withFileTypes
-    });
+  readdirSync(p, opts) {
+    return this.baseFs.readdirSync(this.mapToBase(p), opts);
   }
 
   async readlinkPromise(p) {
@@ -14197,7 +14224,7 @@ class VirtualFS extends ProxiedFS {
     if (this.pathUtils.isAbsolute(p)) return VirtualFS.resolveVirtual(p);
     const resolvedRoot = VirtualFS.resolveVirtual(this.baseFs.resolve(PortablePath.dot));
     const resolvedP = VirtualFS.resolveVirtual(this.baseFs.resolve(p));
-    return ppath.relative(resolvedRoot, resolvedP);
+    return ppath.relative(resolvedRoot, resolvedP) || PortablePath.dot;
   }
 
   mapFromBase(p) {
@@ -15829,23 +15856,17 @@ class ZipFS extends BasePortableFakeFS {
     return this.getFileSource(entry, opts);
   }
 
-  async readdirPromise(p, {
-    withFileTypes
-  } = {}) {
-    return this.readdirSync(p, {
-      withFileTypes: withFileTypes
-    });
+  async readdirPromise(p, opts) {
+    return this.readdirSync(p, opts);
   }
 
-  readdirSync(p, {
-    withFileTypes
-  } = {}) {
+  readdirSync(p, opts) {
     const resolvedP = this.resolveFilename(`scandir '${p}'`, p);
     if (!this.entries.has(resolvedP) && !this.listings.has(resolvedP)) throw ENOENT(`scandir '${p}'`);
     const directoryListing = this.listings.get(resolvedP);
     if (!directoryListing) throw ENOTDIR(`scandir '${p}'`);
     const entries = [...directoryListing];
-    if (!withFileTypes) return entries;
+    if (!(opts === null || opts === void 0 ? void 0 : opts.withFileTypes)) return entries;
     return entries.map(name => {
       return Object.assign(this.statImpl(`lstat`, ppath.join(p, name)), {
         name
@@ -16720,37 +16741,25 @@ class ZipOpenFS extends BasePortableFakeFS {
     });
   }
 
-  async readdirPromise(p, {
-    withFileTypes
-  } = {}) {
+  async readdirPromise(p, opts) {
     return await this.makeCallPromise(p, async () => {
-      return await this.baseFs.readdirPromise(p, {
-        withFileTypes: withFileTypes
-      });
+      return await this.baseFs.readdirPromise(p, opts);
     }, async (zipFs, {
       subPath
     }) => {
-      return await zipFs.readdirPromise(subPath, {
-        withFileTypes: withFileTypes
-      });
+      return await zipFs.readdirPromise(subPath, opts);
     }, {
       requireSubpath: false
     });
   }
 
-  readdirSync(p, {
-    withFileTypes
-  } = {}) {
+  readdirSync(p, opts) {
     return this.makeCallSync(p, () => {
-      return this.baseFs.readdirSync(p, {
-        withFileTypes: withFileTypes
-      });
+      return this.baseFs.readdirSync(p, opts);
     }, (zipFs, {
       subPath
     }) => {
-      return zipFs.readdirSync(subPath, {
-        withFileTypes: withFileTypes
-      });
+      return zipFs.readdirSync(subPath, opts);
     }, {
       requireSubpath: false
     });
