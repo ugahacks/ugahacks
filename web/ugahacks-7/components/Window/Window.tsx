@@ -18,7 +18,7 @@ const generateWindowStructure = (
   windowTitle: string,
   heading = "",
   bodyText = "",
-  dataList?
+  dataList?: [{ id: number; sender: string; message: string }]
 ): ReactElement => {
   switch (type) {
     case "browser":
@@ -43,11 +43,13 @@ const generateWindowStructure = (
         <>
           <ul className="tree-view">
             {dataList &&
-              dataList.map((data) => (
-                <li key={data.id}>
-                  <span>{data.sender}</span>: {data.message}
-                </li>
-              ))}
+              dataList.map(
+                (data: { id: number; sender: string; message: string }) => (
+                  <li key={data.id}>
+                    <span>{data.sender}</span>: {data.message}
+                  </li>
+                )
+              )}
           </ul>
           <div className="field-row-stacked">
             <textarea></textarea>
