@@ -26,9 +26,9 @@ export default function Home() {
               <p>UGAHacks&apos; organization site</p>
           </a>
 
-          <a href="https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_82Gn6acN70D0wg6" className={styles.card}>
+          <a href="https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_3sjHnVW94c2Xkz4" className={styles.card}>
             <h2>UGAHacks 7&rarr;</h2>
-            <p>Pre-Register for our seventh event, coming this October 22-24th, 2021!</p>
+            <p>Register for our seventh event, coming this February 18-20th, 2022!</p>
           </a>
           
           <a href="https://6.ugahacks.com" className={styles.card}>
