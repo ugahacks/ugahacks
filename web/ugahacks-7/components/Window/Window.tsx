@@ -30,7 +30,7 @@ const generateWindowStructure = (
           </ul>
           <ul className="tree-view">
             <li>
-              <h3>{heading}</h3>
+              <h3 className={styles.heading}>{heading}</h3>
             </li>
             <li>
               <p className={styles.bodyText}>{bodyText}</p>
