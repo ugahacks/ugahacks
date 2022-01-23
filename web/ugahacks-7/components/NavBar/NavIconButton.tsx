@@ -1,7 +1,10 @@
+import React, { ReactElement } from "react";
 import Image from 'next/image'
-import styles from './NavIconButton.module.css'
+import styles from '../../styles/NavIconButton.module.css'
 
-function NavIconButton( props: {name: string, myClick: ()=> void} ) {
+
+
+function NavIconButton( props: {name: string, myClick: any} ): ReactElement {
     return (
         <div className={styles.container}>
             <button type='button' onClick={props.myClick} className={styles.icon}>
