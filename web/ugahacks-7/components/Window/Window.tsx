@@ -64,8 +64,8 @@ const generateWindowStructure = (
 
 const Window = ({
   windowTitle,
-  width = "50vh",
-  height = "50vh",
+  width,
+  height,
   windowType = "browser",
   showTopBarButtons,
   windowHeading,
@@ -76,12 +76,14 @@ const Window = ({
     <Draggable handle=".title-bar">
       <div className="window" style={{ width: width, height: height }}>
         <div className={`title-bar ${styles.blueBanner}`}>
-          <div className="title-bar-text">{windowTitle}</div>
+          <div className="title-bar-text" style={{ fontSize: "1.75em" }}>
+            {windowTitle}
+          </div>
           {showTopBarButtons && (
             <div className="title-bar-controls">
-              <button aria-label="Minimize" />
-              <button aria-label="Maximize" />
-              <button aria-label="Close" />
+              <button aria-label="Minimize" style={{ padding: "1em", backgroundSize: "1em", backgroundPosition: "50% 80%" }} />
+              <button aria-label="Maximize" style={{ padding: "1em", backgroundSize: "1.3em" }} />
+              <button aria-label="Close" style={{ padding: "1em", backgroundSize: "1.3em" }} />
             </div>
           )}
         </div>
