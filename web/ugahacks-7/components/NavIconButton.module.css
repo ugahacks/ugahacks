@@ -1,0 +1,19 @@
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5vh;
+    padding: 0%;
+}
+
+.icon {
+    background-color: transparent;
+    border: none;    
+    outline: none;
+    margin: 0%;
+    padding: 0%;
+}
+.caption {
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+}
