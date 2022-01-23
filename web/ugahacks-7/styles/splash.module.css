@@ -37,13 +37,3 @@
     max-height: 100%;
     position: relative;
 }
-
-.redirectBtn {
-    position:relative;
-    top: 20%;
-    left: 35%;
-    height: 35%;
-    width: 50%;
-    background-color:transparent;
-    border: none;
-}
