@@ -10,9 +10,7 @@ export function Splash(): ReactElement {
       </div>
       <div className={styles.border}>
         <div className={styles.main}>
-          <a href="https://my.ugahacks.com/apply">
-            <button className={styles.redirectBtn}></button>
-          </a>
+          
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@
     position: absolute;
     top: 25px;
     left: 0;
-    z-index: 1000;
+    z-index: auto;
     height: 80vh;
     width: 15vw;
 }

@@ -10,11 +10,11 @@ function NavBar(props: any): ReactElement {
     return (
         <div className={styles.flex_container}>
             <div>
-            {/* <NavIconButton name="SPLASH" myClick={click}/> */}
+            <NavIconButton name="SPLASH" myClick={() => setActive("About")}/>
             <NavIconButton name="ABOUT" myClick={() => setActive("About")}/>
-            {/* <NavIconButton name="SCHEDULE" myClick={click}/>
-            <NavIconButton name="FAQ" myClick={click}/>
-            <NavIconButton name="SPONSORS" myClick={click}/> */}
+            <NavIconButton name="SCHEDULE" myClick={() => setActive("About")}/>
+            <NavIconButton name="FAQ" myClick={() => setActive("About")}/>
+            <NavIconButton name="SPONSORS" myClick={() => setActive("About")}/>
             </div>
             <div>
                 {active === "About" && <About />}

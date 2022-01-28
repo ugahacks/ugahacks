@@ -11,6 +11,8 @@ interface WindowProps {
   showTopBarButtons: boolean;
   windowHeading?: string;
   windowBodyText?: string;
+  position?: string;
+  
 }
 
 const generateWindowStructure = (
@@ -24,7 +26,7 @@ const generateWindowStructure = (
     case "browser":
     default:
       return (
-        <>
+        <div className="layer">
           <ul className="tree-view">
             <li className={styles.url}>https://7.ugahacks.com/{windowTitle}</li>
           </ul>
@@ -36,11 +38,11 @@ const generateWindowStructure = (
               <p className={styles.bodyText}>{bodyText}</p>
             </li>
           </ul>
-        </>
+        </div>
       );
     case "chat":
       return (
-        <>
+        <div className="layer">
           <ul className="tree-view">
             {dataList &&
               dataList.map(
@@ -55,10 +57,14 @@ const generateWindowStructure = (
             <textarea></textarea>
           </div>
           <button>Send Message</button>
-        </>
+        </div>
       );
     case "image":
-      return <p></p>; // Add similar structure to chat layout with mapping over an obj with image data - See Sponsors section on Hacks 6
+      return (
+        <div className="layer">
+          
+        </div> // Add similar structure to chat layout with mapping over an obj with image data - See Sponsors section on Hacks 6
+      )
   }
 };
 
@@ -74,7 +80,7 @@ const Window = ({
   return (
     // Add check for mobile/pc and only use draggable on pc
     <Draggable handle=".title-bar">
-      <div className="window" style={{ width: width, height: height }}>
+      <div className="window" style={{ width: width, height: height, position: "absolute", top: "20em", left: "55em" }}>
         <div className={`title-bar ${styles.blueBanner}`}>
           <div className="title-bar-text">{windowTitle}</div>
           {showTopBarButtons && (
