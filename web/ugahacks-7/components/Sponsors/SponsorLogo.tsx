@@ -24,6 +24,8 @@ function SponsorLogo(props: SponsorProps): ReactElement {
         id={props.id}
         src={props.image}
         alt={props.alt}
+        height="200px"
+        width="200px"
         // variants={logoVariants}
         // whileHover="hover"
       />
