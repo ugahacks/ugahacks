@@ -41,7 +41,7 @@ const generateWindowStructure = (
     case "chat":
       return (
         <>
-          <ul className="tree-view">
+          {/* <ul className="tree-view">
             {dataList &&
               dataList.map(
                 (data: { id: number; sender: string; message: string }) => (
@@ -50,11 +50,16 @@ const generateWindowStructure = (
                   </li>
                 )
               )}
-          </ul>
-          <div className="field-row-stacked">
-            <textarea></textarea>
+          </ul> */}
+          <div className="faq-text">
+            <div className="field-row-stacked">
+            <textarea style={{width: "100%", height: "50vh",marginBottom: "5%", marginTop: "5%", resize: "none"}}></textarea>
+            </div>
           </div>
-          <button>Send Message</button>
+          <div className="field-row-stacked">
+            <textarea style={{width: "100%", height: "5vh",marginBottom: "5%", marginTop: "5%", resize: "none"}}></textarea>
+          </div>
+          <button className="send-btn">Send Message</button>
         </>
       );
     case "image":

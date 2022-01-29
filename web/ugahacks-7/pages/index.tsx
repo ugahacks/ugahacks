@@ -3,6 +3,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Splash from "../components/Splash";
 import About from "../components/About";
+import FAQ from "../components/FAQ";
 
 export default function Home(): ReactElement {
   return (
@@ -15,8 +16,9 @@ export default function Home(): ReactElement {
         />
         <link rel="icon" href="/icons/favicon.ico" />
       </Head>
-      <Splash />
-      <About />
+      {/* <Splash />
+      <About /> */}
+      <FAQ />
     </div>
   );
 }

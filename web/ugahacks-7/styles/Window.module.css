@@ -9,3 +9,8 @@
 .bodyText {
   font-size: 2em;
 }
+
+textarea.faq-text {
+  width: auto;
+  margin: 100px;
+}
