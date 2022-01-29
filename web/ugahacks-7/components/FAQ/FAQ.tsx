@@ -6,7 +6,7 @@ const FAQ = (): ReactElement => {
     return(
         <Window
             windowTitle="FAQ"
-            windowType="chat"
+            windowType="chat-faq"
             windowBodyText={faq}
             windowHeading="Frequently Asked Questions"
             showTopBarButtons

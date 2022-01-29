@@ -7,7 +7,7 @@ interface WindowProps {
   windowTitle: string;
   width?: string;
   height?: string;
-  windowType: "browser" | "chat" | "image";
+  windowType: "browser" | "chat" | "chat-faq" | "image";
   showTopBarButtons: boolean;
   windowHeading?: string;
   windowBodyText?: string;
@@ -41,7 +41,7 @@ const generateWindowStructure = (
     case "chat":
       return (
         <>
-          {/* <ul className="tree-view">
+          <ul className="tree-view">
             {dataList &&
               dataList.map(
                 (data: { id: number; sender: string; message: string }) => (
@@ -50,16 +50,30 @@ const generateWindowStructure = (
                   </li>
                 )
               )}
-          </ul> */}
-          <div className="faq-text">
+          </ul>
+          <div className="field-row-stacked">
+            <textarea></textarea>
+          </div>
+          <button className="send-btn">Send Message</button>
+        </>
+      );
+    case "chat-faq":
+      return (
+        <>
+          <div className="chat">
             <div className="field-row-stacked">
-            <textarea style={{width: "100%", height: "50vh",marginBottom: "5%", marginTop: "5%", resize: "none"}}></textarea>
+              <textarea
+                className={styles.chatBody}
+                value={bodyText}
+              ></textarea>
             </div>
           </div>
           <div className="field-row-stacked">
-            <textarea style={{width: "100%", height: "5vh",marginBottom: "5%", marginTop: "5%", resize: "none"}}></textarea>
+            <textarea
+              className={styles.inputChat}
+            ></textarea>
           </div>
-          <button className="send-btn">Send Message</button>
+          <button className={styles.sendBtn}>Send Message</button>
         </>
       );
     case "image":

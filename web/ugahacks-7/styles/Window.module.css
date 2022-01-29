@@ -14,3 +14,24 @@ textarea.faq-text {
   width: auto;
   margin: 100px;
 }
+
+.chatBody {
+  font-size: 1.5em;
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  resize: none;
+}
+
+.inputChat {
+  width: 100%;
+  height: 10vh;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  resize: none;
+}
+
+.sendBtn {
+  font-size: 1.75em;
+}
