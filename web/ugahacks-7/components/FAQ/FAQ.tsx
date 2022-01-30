@@ -1,8 +1,11 @@
 import React, { ReactElement } from "react";
 import Window from "../Window";
+import styles from "../../styles/FAQ.module.css";
+
+export { faqQuestions };
 
 const FAQ = (): ReactElement => {
-    const faq = "FAQ: What is a hackathon?"
+    const faq = "<h1>Hello</h1>"
     return(
         <Window
             windowTitle="FAQ"
@@ -13,6 +16,20 @@ const FAQ = (): ReactElement => {
             width="75vh"
             height="auto"
         />
+    );
+};
+
+function faqQuestions(): ReactElement {
+    return (
+      <>
+        <div className="chat">
+          <div className="field-row-stacked">
+            <textarea className={styles.chatBody}>
+
+            </textarea>
+          </div>
+        </div>
+      </>
     );
 };
 

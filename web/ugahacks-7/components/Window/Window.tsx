@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import Draggable from "react-draggable";
 import "98.css";
+import { faqQuestions } from "../FAQ/FAQ";
 import styles from "../../styles/Window.module.css";
 
 interface WindowProps {
@@ -59,19 +60,19 @@ const generateWindowStructure = (
       );
     case "chat-faq":
       return (
+        // Thinking of passing array of faq and answers, and reading them
         <>
-          <div className="chat">
+          <ul className="tree-view">
+            <li className={styles.url}>https://7.ugahacks.com/{windowTitle}</li>
+          </ul>
+          {/* <div className="chat">
             <div className="field-row-stacked">
-              <textarea
-                className={styles.chatBody}
-                value={bodyText}
-              ></textarea>
+              <textarea className={styles.chatBody} value={bodyText}></textarea>
             </div>
-          </div>
+          </div> */}
+          {faqQuestions()}
           <div className="field-row-stacked">
-            <textarea
-              className={styles.inputChat}
-            ></textarea>
+            <textarea className={styles.inputChat}></textarea>
           </div>
           <button className={styles.sendBtn}>Send Message</button>
         </>

@@ -16,8 +16,8 @@ export default function Home(): ReactElement {
         />
         <link rel="icon" href="/icons/favicon.ico" />
       </Head>
-      {/* <Splash />
-      <About /> */}
+      <Splash />
+      {/* <About /> */}
       <FAQ />
     </div>
   );
