@@ -22,8 +22,6 @@ const FAQ = (): ReactElement => {
     <Window
       windowTitle="FAQ"
       windowType="chat-faq"
-      windowBodyText={faq}
-      windowHeading="Frequently Asked Questions"
       showTopBarButtons
       width="75vh"
       height="auto"
@@ -31,82 +29,44 @@ const FAQ = (): ReactElement => {
   );
 };
 
-function faq(): ReactElement {
-  return (
-    <>
-      <span className={styles.faq}>FAQ: </span>
-    </>
-  );
-}
-
-function byte(): ReactElement {
-  return (
-    <>
-      <span className={styles.byte}>Byte: </span>
-    </>
-  );
-}
-
-function question(index: number): ReactElement {
-  return (
-    <>
-      <li className={styles.questions}>
-        {faq()}
-        {questions[index]}
-      </li>
-    </>
-  );
-}
-
-function answer(index: number): ReactElement {
-  return (
-    <>
-      <li className={styles.answers}>
-        {byte()}
-        {answers[index]}
-      </li>
-    </>
-  );
-}
-
+/**
+ * Combine the questions and answers array and display it in the chatbox.
+ * We are combining the questions and answers array in an alternating format so
+ * that FAQ and Byte will be alternating.
+ *
+ * @return {ReactElement} Returns a <ul> containing <li> of questions and answers.
+ */
 function generateFAQ(): ReactElement {
-  let faq: ReactElement[] = []
+  let faq: ReactElement[] = [];
 
   for (var i = 0; i < questions.length; i++) {
-    faq.push(<li className={styles.questions}><span className={styles.faq}>FAQ: </span>{questions[i]}</li>);
-    faq.push(<li className={styles.answers}><span className={styles.byte}>Byte: </span>{answers[i]}</li>)
+    faq.push(
+      <li className={styles.questions}>
+        <span className={styles.faq}>FAQ: </span>
+        {questions[i]}
+      </li>
+    );
+    faq.push(
+      <li className={styles.answers}>
+        <span className={styles.byte}>Byte: </span>
+        {answers[i]}
+      </li>
+    );
   } // for
 
-  for (var i = 0; i < faq.length; i++) {
-    console.log(faq[i]);
-  }
-
-  return(
-    <>
-      <ul className="tree-view">
-        {faq}
-      </ul>
-    </>
-  )
-}
-
-function generate(): ReactElement {
   return (
     <>
-      <ul className="tree-view">
-        {questions.map(function (question, index) {
-          return (
-            <>
-            <li className={styles.questions} key={index}>{faq()}{question}</li>
-
-            </>         
-          );
-        })}
-      </ul>
+      <ul className="tree-view">{faq}</ul>
     </>
   );
-};
+}
 
+/**
+ * This function calls the generateFAQ() function to display all the faqs 
+ * in the chatbox. This function is being exported to Window.tsx.
+ * 
+ * @returns {ReactElement} Returns the faq container chatbox.
+ */
 function faqQuestions(): ReactElement {
   return (
     <>
