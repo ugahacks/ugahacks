@@ -30,4 +30,8 @@
 
 .sendBtn {
   font-size: 1.75em;
+
+.blueBanner, .url, .bodyText, .heading {
+  font-family: 'Times New Roman', Times, serif;
+  padding-left: 2px;
 }
