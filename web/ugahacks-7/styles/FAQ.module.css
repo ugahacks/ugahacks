@@ -4,6 +4,7 @@
 
 .byte {
   color: blue;
+  font-weight: bold;
 }
 
 .chatBody {
@@ -21,8 +22,23 @@
 
 .questions {
   font-size: 1.5em;
+  font-family: monospace;
+  font-weight: bold;
 }
 
 .answers {
   font-size: 1.5em;
+  font-family: monospace;
+}
+
+.window {
+  display: flex;
+}
+
+.dropdown {
+  margin-bottom: 2em;
+  width: 100%;
+  font-size: 1.5em;
+  font-family: monospace;
+  font-weight: bold;
 }
