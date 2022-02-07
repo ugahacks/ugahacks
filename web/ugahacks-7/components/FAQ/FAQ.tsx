@@ -7,7 +7,7 @@ export { faqQuestions };
 // Create an array of topics that will be accessed by the option HTML tag
 const topics: string[] = ["COVID", "Logistics", "About the Hackathon"];
 
-// Question and answer arrays for each topic
+// Question and answer arrays for each topic, add your questions and answers into the corresponding topic arrays
 const questions_COVID: string[] = [
   "Where will it be held this year?",
   "How much will it cost to sign up?",
