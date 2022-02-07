@@ -42,3 +42,9 @@
   font-family: monospace;
   font-weight: bold;
 }
+
+.topic {
+  font-size: 1.25em;
+  font-weight: bold;
+  color: purple;
+}
