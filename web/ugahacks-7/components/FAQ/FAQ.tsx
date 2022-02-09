@@ -40,7 +40,7 @@ const answers_hackathon: string[] = [
  * Uses the useState hook to check which FAQs to display based on the topic. We
  * are setting the topic based on the option values.
  *
- * @returns {ReactElement} The dropdown menu and FAQ textarea will be rendered everytime
+ * @returns {ReactElement} The dropdown menu and FAQ text area will be rendered everytime
  * a new topic is selected.
  */
 function CurrentTopic(): ReactElement {
@@ -58,7 +58,9 @@ function CurrentTopic(): ReactElement {
         <option value={"Logistics"}>{topics[1]}</option>
         <option value={"About the Hackathon"}>{topics[2]}</option>
       </select>
-      {generateFAQ(topic)}
+      <div className={styles.scroll}>
+        {generateFAQ(topic)}
+      </div>
     </>
   );
 }
@@ -73,7 +75,7 @@ const FAQ = (): ReactElement => {
             windowTitle="FAQ"
             windowType="chat-faq"
             showTopBarButtons
-            width="75vh"
+            width="40vw"
             height="auto"
           />
         </div>

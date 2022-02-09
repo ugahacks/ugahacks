@@ -48,3 +48,9 @@
   font-weight: bold;
   color: purple;
 }
+
+.scroll {
+  overflow-y: scroll;
+  overflow-x: auto;
+  max-height: 40vh;
+}

@@ -84,8 +84,8 @@ const generateWindowStructure = (
 
 const Window = ({
   windowTitle,
-  width,
-  height,
+  width = "50vw",
+  height = "auto",
   windowType = "browser",
   showTopBarButtons,
   windowHeading,
