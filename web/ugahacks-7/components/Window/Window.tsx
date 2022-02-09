@@ -72,7 +72,11 @@ const generateWindowStructure = (
               sponsorList.map(
                 (data: { id: number; image: string; alt: string }) => (
                   <li key={data.id}>
-                    <span>{data.image}</span>
+                    <span>
+                      <SponsorLogo 
+                       
+                      />
+                    </span>
                   </li>
                 )
               )}
