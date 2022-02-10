@@ -6,6 +6,7 @@ import About from "../components/About";
 import FAQ from "../components/FAQ";
 import NavBar from "../components/NavBar";
 import Sponsors from "../components/Sponsors";
+import Schedule from "../components/Schedule";
 
 export default function Home(): ReactElement {
   const bodystyle = {
@@ -27,7 +28,7 @@ export default function Home(): ReactElement {
       {/* <About /> */}
       {/* <Sponsors /> */}
       <NavBar />
-    
+      <Schedule />
     </div>
   );
 }
