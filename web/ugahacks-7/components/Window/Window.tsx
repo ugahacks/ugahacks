@@ -3,6 +3,8 @@ import Draggable from "react-draggable";
 import "98.css";
 import { faqQuestions } from "../FAQ/FAQ";
 import styles from "../../styles/Window.module.css";
+import Sponsors from "../../components/Sponsors";
+import SponsorLogo from "../../components/Sponsors";
 
 interface WindowProps {
   windowTitle: string;
@@ -12,6 +14,10 @@ interface WindowProps {
   showTopBarButtons: boolean;
   windowHeading?: string;
   windowBodyText?: string;
+  position?: string;
+  dataList?: [{ id: number; sender: string; message: string }];
+  sponsorList?: [{ id: number; image: string; alt: string}];
+
 }
 
 const generateWindowStructure = (
@@ -19,13 +25,14 @@ const generateWindowStructure = (
   windowTitle: string,
   heading = "",
   bodyText = "",
-  dataList?: [{ id: number; sender: string; message: string }]
+  dataList?: [{ id: number; sender: string; message: string }],
+  sponsorList?: [{ id: number; image: string; alt: string}],
 ): ReactElement => {
   switch (type) {
     case "browser":
     default:
       return (
-        <>
+        <div className="layer">
           <ul className="tree-view">
             <li className={styles.url}>https://7.ugahacks.com/{windowTitle}</li>
           </ul>
@@ -37,11 +44,11 @@ const generateWindowStructure = (
               <p className={styles.bodyText}>{bodyText}</p>
             </li>
           </ul>
-        </>
+        </div>
       );
     case "chat":
       return (
-        <>
+        <div className="layer">
           <ul className="tree-view">
             {dataList &&
               dataList.map(
@@ -56,7 +63,7 @@ const generateWindowStructure = (
             <textarea></textarea>
           </div>
           <button className="send-btn">Send Message</button>
-        </>
+        </div>
       );
     case "chat-faq":
       return (
@@ -77,8 +84,25 @@ const generateWindowStructure = (
           <button className={styles.sendBtn}>Send Message</button>
         </>
       );
-    case "image":
-      return <p></p>; // Add similar structure to chat layout with mapping over an obj with image data - See Sponsors section on Hacks 6
+    case "sponsors":
+      return (
+        <div className="layer">
+          <ul className="tree-view">
+            {sponsorList &&
+              sponsorList.map(
+                (data: { id: number; image: string; alt: string }) => (
+                  <li key={data.id}>
+                    <span>
+                      <SponsorLogo 
+                       
+                      />
+                    </span>
+                  </li>
+                )
+              )}
+          </ul>
+        </div> // Add similar structure to chat layout with mapping over an obj with image data - See Sponsors section on Hacks 6
+      )
   }
 };
 
@@ -90,11 +114,13 @@ const Window = ({
   showTopBarButtons,
   windowHeading,
   windowBodyText,
+  dataList,
+  sponsorList,
 }: WindowProps): ReactElement => {
   return (
     // Add check for mobile/pc and only use draggable on pc
     <Draggable handle=".title-bar">
-      <div className="window" style={{ width: width, height: height }}>
+      <div className="window" style={{ width: width, height: height, position: "absolute", top: "20em", left: "55em" }}>
         <div className={`title-bar ${styles.blueBanner}`}>
           <div className="title-bar-text" style={{ fontSize: "1.75em" }}>
             {windowTitle}
@@ -112,7 +138,9 @@ const Window = ({
             windowType,
             windowTitle,
             windowHeading,
-            windowBodyText
+            windowBodyText,
+            dataList,
+            sponsorList,
           )}
         </div>
       </div>

@@ -1563,7 +1563,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/browserslist-npm-4.16.6-a20cef1ca7-3dffc86892.zip/node_modules/browserslist/",
           "packageDependencies": [
             ["browserslist", "npm:4.16.6"],
-            ["caniuse-lite", "npm:1.0.30001248"],
+            ["caniuse-lite", "npm:1.0.30001303"],
             ["colorette", "npm:1.2.2"],
             ["electron-to-chromium", "npm:1.3.792"],
             ["escalade", "npm:3.1.1"],
@@ -1685,10 +1685,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["caniuse-lite", [
-        ["npm:1.0.30001248", {
-          "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001248-9a84973707-86b3c232ad.zip/node_modules/caniuse-lite/",
+        ["npm:1.0.30001303", {
+          "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001303-170ddd75cd-fe77fb680c.zip/node_modules/caniuse-lite/",
           "packageDependencies": [
-            ["caniuse-lite", "npm:1.0.30001248"]
+            ["caniuse-lite", "npm:1.0.30001303"]
           ],
           "linkType": "HARD",
         }]
@@ -2082,7 +2082,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["cssnano-preset-simple", "virtual:2033adb950d4f0c0d45a0a846905287d61ec1ccdd581502be8af3a2cbeabdf7cf10a40b105bb6f180e64b7e02f8255d48c26ec61bf5740ad1c4b435c091a1e10#npm:3.0.0"],
             ["@types/postcss", null],
-            ["caniuse-lite", "npm:1.0.30001248"],
+            ["caniuse-lite", "npm:1.0.30001303"],
             ["postcss", "npm:8.2.15"]
           ],
           "packagePeers": [
@@ -5001,7 +5001,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["browserify-zlib", "npm:0.2.0"],
             ["browserslist", "npm:4.16.6"],
             ["buffer", "npm:5.6.0"],
-            ["caniuse-lite", "npm:1.0.30001248"],
+            ["caniuse-lite", "npm:1.0.30001303"],
             ["chalk", "npm:2.4.2"],
             ["chokidar", "npm:3.5.1"],
             ["constants-browserify", "npm:1.0.0"],
@@ -5084,7 +5084,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["browserify-zlib", "npm:0.2.0"],
             ["browserslist", "npm:4.16.6"],
             ["buffer", "npm:5.6.0"],
-            ["caniuse-lite", "npm:1.0.30001248"],
+            ["caniuse-lite", "npm:1.0.30001303"],
             ["chalk", "npm:2.4.2"],
             ["chokidar", "npm:3.5.1"],
             ["constants-browserify", "npm:1.0.0"],

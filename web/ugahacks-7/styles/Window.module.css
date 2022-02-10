@@ -36,3 +36,7 @@
   font-family: 'Times New Roman', Times, serif;
   padding-left: 2px;
 }
+.layer {
+  position: absolute;
+  z-index: 3;
+}
