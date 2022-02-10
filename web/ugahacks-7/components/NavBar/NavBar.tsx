@@ -2,6 +2,7 @@ import React, { ReactElement, useState } from "react";
 import styles from '../../styles/NavBar.module.css';
 import NavIconButton from './NavIconButton';
 import About from '../../components/About';
+import FAQ from '../../components/FAQ';
 
 
 function NavBar(props: any): ReactElement {
@@ -9,15 +10,15 @@ function NavBar(props: any): ReactElement {
 
     return (
         <div className={styles.flex_container}>
-            <div>
-            <NavIconButton name="SPLASH" myClick={() => setActive("About")}/>
+            <div className={styles.navbar_container}>
             <NavIconButton name="ABOUT" myClick={() => setActive("About")}/>
-            <NavIconButton name="SCHEDULE" myClick={() => setActive("About")}/>
-            <NavIconButton name="FAQ" myClick={() => setActive("About")}/>
-            <NavIconButton name="SPONSORS" myClick={() => setActive("About")}/>
+            <NavIconButton name="SCHEDULE" myClick={() => setActive("Schedule")}/>
+            <NavIconButton name="FAQ" myClick={() => setActive("FAQ")}/>
+            <NavIconButton name="SPONSORS" myClick={() => setActive("Sponsors")}/>
             </div>
-            <div>
+            <div className={styles.window_container}>
                 {active === "About" && <About />}
+                {active === "FAQ" && <FAQ/>}
             </div>
         </div>
     )

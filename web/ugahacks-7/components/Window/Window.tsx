@@ -108,7 +108,7 @@ const generateWindowStructure = (
 
 const Window = ({
   windowTitle,
-  width = "50vw",
+  width = "40vw",
   height = "auto",
   windowType = "browser",
   showTopBarButtons,
@@ -118,33 +118,34 @@ const Window = ({
   sponsorList,
 }: WindowProps): ReactElement => {
   return (
-    // Add check for mobile/pc and only use draggable on pc
-    <Draggable handle=".title-bar">
-      <div className="window" style={{ width: width, height: height, position: "absolute", top: "20em", left: "55em" }}>
-        <div className={`title-bar ${styles.blueBanner}`}>
-          <div className="title-bar-text" style={{ fontSize: "1.75em" }}>
-            {windowTitle}
-          </div>
-          {showTopBarButtons && (
-            <div className="title-bar-controls">
-              <button aria-label="Minimize" style={{ padding: "1em", backgroundSize: "1em", backgroundPosition: "50% 80%" }} />
-              <button aria-label="Maximize" style={{ padding: "1em", backgroundSize: "1.3em" }} />
-              <button aria-label="Close" style={{ padding: "1em", backgroundSize: "1.3em" }} />
+    <div className={styles.draggable_container} >
+      <Draggable handle=".title-bar" defaultPosition={{ x: 550, y: 75}} bounds="parent">
+        <div className="window" style={{ width: width, height: height }}>
+          <div className={`title-bar ${styles.blueBanner}`}>
+            <div className="title-bar-text" style={{ fontSize: "1.75em" }}>
+              {windowTitle}
             </div>
-          )}
+            {showTopBarButtons && (
+              <div className="title-bar-controls">
+                <button aria-label="Minimize" style={{ padding: "1em", backgroundSize: "1em", backgroundPosition: "50% 80%" }} />
+                <button aria-label="Maximize" style={{ padding: "1em", backgroundSize: "1.3em" }} />
+                <button aria-label="Close" style={{ padding: "1em", backgroundSize: "1.3em" }} />
+              </div>
+            )}
+          </div>
+          <div className="window-body">
+            {generateWindowStructure(
+              windowType,
+              windowTitle,
+              windowHeading,
+              windowBodyText,
+              dataList,
+              sponsorList,
+            )}
+          </div>
         </div>
-        <div className="window-body">
-          {generateWindowStructure(
-            windowType,
-            windowTitle,
-            windowHeading,
-            windowBodyText,
-            dataList,
-            sponsorList,
-          )}
-        </div>
-      </div>
-    </Draggable>
+      </Draggable>
+    </div>
   );
 };
 

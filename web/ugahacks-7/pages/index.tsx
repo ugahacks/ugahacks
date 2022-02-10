@@ -23,9 +23,9 @@ export default function Home(): ReactElement {
         <link rel="icon" href="/icons/favicon.ico" />
       </Head>
       <Splash />
-      <FAQ />
+      {/* <FAQ /> */}
       {/* <About /> */}
-      <Sponsors />
+      {/* <Sponsors /> */}
       <NavBar />
     
     </div>
