@@ -20,7 +20,7 @@ function NavBar(props: any): ReactElement {
             <div className={styles.window_container}>
                 {active === "About" && <About />}
                 {active === "FAQ" && <FAQ/>}
-                {active === "Sponsors" && <Sponsors/>}
+                {/* {active === "Sponsors" && <Sponsors/>} */}
             </div>
         </div>
     )
