@@ -23,11 +23,8 @@ export default function Home(): ReactElement {
         />
         <link rel="icon" href="/icons/favicon.ico" />
       </Head>
+
       <Splash />
-      {/* <FAQ /> */}
-      {/* <About /> */}
-      {/* <Sponsors /> */}
-      <NavBar />
       <Schedule />
     </div>
   );

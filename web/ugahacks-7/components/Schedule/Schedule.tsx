@@ -2,41 +2,43 @@ import React, { ReactElement, useState } from "react";
 import Window from "../Window";
 import styles from "../../styles/Schedule.module.css";
 
-export { faqQuestions };
+export { schedule };
 
-// Create an array of topics that will be accessed by the option HTML tag
-const topics: string[] = ["COVID", "Logistics", "About the Hackathon"];
+// Create an array of days that will be accessed by the option HTML tag
+const days: string[] = ["February 18, 2022", "February 19, 2022", "February 20, 2022"];
 
-// Question and answer arrays for each topic, add your questions and answers into the corresponding topic arrays
-const questions_COVID: string[] = [
-  "Where will it be held this year?",
-  "How much will it cost to sign up?",
-  "Who can sign up?",
+// Schedule array for February 18
+const schedule_18: string[] = [
+    "Eat Food"
 ];
 
-const answers_COVID: string[] = [
-  "The event will be a hybrid model where it will be located in MLC for in-person and virtual over slack!",
-  "Nothing! The entire event and its amazing perks are free for all participants, including meals and snacks to keep you powered throughout the weekend, as well as workshops to help you get started and sharpen your hacking skills!",
-  "All university students! We welcome all undergraduates and graduate students of all skill levels to attend. Professionals and other guests are welcome to attend as mentors or volunteers.",
+// Schedule array for February 19
+const schedule_19: string[] = [
+    "EAT FOOD"
 ];
 
-const questions_logistics: string[] = ["Logistics Questions"];
+// Schedule array for February 20
+const schedule_20: string[] = [
+    "Eating Competition"
+];
 
-const answers_logistics: string[] = ["Logistics Answers"];
+// Times for corresponding schedules on February 18
+const time_18: string[] = [
+    "8:00 AM EST"
+]; 
 
-const questions_hackathon: string[] = ["Questions about the Hackathon"];
+// Times for corresponding schedules on February 19
+const time_19: string[] = [
+    "8:00 PM EST"
+]; 
 
-const answers_hackathon: string[] = ["Answers about the Hackathon"];
+// Times for corresponding schedules on February 20
+const time_20: string[] = [
+    "12:00 PM EST"
+]; 
 
-/**
- * Uses the useState hook to check which FAQs to display based on the topic. We
- * are setting the topic based on the option values.
- *
- * @returns {ReactElement} The dropdown menu and FAQ text area will be rendered everytime
- * a new topic is selected.
- */
 function CurrentDay(): ReactElement {
-  const [day, setDay] = useState("COVID");
+  const [day, setDay] = useState(days[0]);
 
   const inputHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setDay(e.target.value);
@@ -44,13 +46,13 @@ function CurrentDay(): ReactElement {
 
   return (
     <>
-      <label className={styles.topic}>Topics: </label>
+      <label className={styles.dates}>Dates: </label>
       <select value={day} onChange={inputHandler} className={styles.dropdown}>
-        <option value={"COVID"}>{topics[0]}</option>
-        <option value={"Logistics"}>{topics[1]}</option>
-        <option value={"About the Hackathon"}>{topics[2]}</option>
+        <option value={"18"}>{days[0]}</option>
+        <option value={"19"}>{days[1]}</option>
+        <option value={"20"}>{days[2]}</option>
       </select>
-      <div className={styles.scroll}>{generateFAQ(day)}</div>
+      <div className={styles.scroll}>{generateSchedule(day)}</div>
     </>
   );
 }
@@ -60,7 +62,7 @@ const Schedule = (): ReactElement => {
     <>
       <div>
         <Window
-          windowTitle="FAQ"
+          windowTitle="Schedule"
           windowType="schedule"
           showTopBarButtons
           width="40vw"
@@ -71,86 +73,59 @@ const Schedule = (): ReactElement => {
   );
 };
 
-/**
- * Based on the topic selected from the dropdown menu, the FAQ textarea will change its
- * window by selecting the correct case in the switch case clause. Each case will be a
- * topic for the FAQ. More topics can be added to the topics array and CurrentTopic()
- * functional component.
- *
- * @return {ReactElement} Returns a <ul> containing <li> of questions and answers.
- */
-function generateFAQ(type: string): ReactElement {
-  let faq: ReactElement[] = [];
+function generateSchedule(date: string): ReactElement {
+  let schedule: ReactElement[] = [];
 
-  switch (type) {
-    case "COVID":
-      faq = generateQAArray(questions_COVID, answers_COVID);
+  switch (date) {
+    case "18":
+      schedule = generateTimeScheduleArray(time_18, schedule_18);
       break;
-    case "Logistics":
-      faq = generateQAArray(questions_logistics, answers_logistics);
+    case "19":
+      schedule = generateTimeScheduleArray(time_19, schedule_19);
       break;
-    case "About the Hackathon":
-      faq = generateQAArray(questions_hackathon, answers_hackathon);
+    case "20":
+      schedule = generateTimeScheduleArray(time_20, schedule_20);
       break;
     default:
-      faq = generateQAArray(questions_COVID, answers_logistics);
+      schedule = generateTimeScheduleArray(time_18, schedule_18);
       break;
   }
 
   return (
     <>
-      <ul className="tree-view">{faq}</ul>
+      <ul className="tree-view">{schedule}</ul>
     </>
   );
 }
 
-/**
- * Generates alternating questions and answers array so that the questions and answers will
- * display in an alternating fashion in the FAQ textarea. This is a helper function to the
- * generateFAQ() function. Returns an array of alternating quesitons and answers so that the
- * generateFAQ() function can iterate through the returned array and display it in the textarea.
- *
- * @param question_array the array containing the questions
- * @param answer_array the array containing the answers
- *
- * @returns {ReactElement} Returns the list of FAQ (questions) and Byte (answers) in JSX.
- */
-function generateQAArray(
-  question_array: string[],
-  answer_array: string[]
+function generateTimeScheduleArray(
+  time_array: string[],
+  schedule_array: string[]
 ): ReactElement[] {
-  let faq: ReactElement[] = [];
+  let schedule: ReactElement[] = [];
 
-  for (let i = 0; i < question_array.length; i++) {
-    faq.push(
-      <li className={styles.questions}>
-        <span className={styles.faq}>FAQ: </span>
-        {question_array[i]}
+  for (let i = 0; i < schedule_array.length; i++) {
+    schedule.push(
+      <li className={styles.scheduleText}>
+        <span className={styles.time}>{time_array[i]}: </span>
+        {schedule_array[i]}
       </li>
     );
-    faq.push(
-      <li className={styles.answers}>
-        <span className={styles.byte}>Byte: </span>
-        {answer_array[i]}
+    schedule.push(
+      <li className={styles.scheduleText}>
+        <span className={styles.time2}>{time_array[i]}: </span>
+        {schedule_array[i]}
       </li>
     );
   } // for
 
-  return faq;
+  return schedule;
 } // generateQA
 
-/**
- * This function calls the generateFAQ() function to display all the faqs
- * in the chatbox. This function is being exported to Window.tsx.
- *
- * @returns {ReactElement} Returns the faq container chatbox.
- */
-function faqQuestions(): ReactElement {
-  var type = "COVID";
-
+function schedule(): ReactElement {
   return (
     <>
-      <div className={styles.faqContainer}>{CurrentDay()}</div>
+      <div className={styles.scheduleContainer}>{CurrentDay()}</div>
     </>
   );
 }
