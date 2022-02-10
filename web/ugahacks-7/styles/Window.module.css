@@ -38,7 +38,7 @@
 }
 
 .blueBanner, .url, .bodyText, .heading {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'monospace', Times, serif;
   padding-left: 2px;
 }
 .layer {
