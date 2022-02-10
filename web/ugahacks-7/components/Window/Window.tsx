@@ -1,13 +1,14 @@
 import React, { ReactElement } from "react";
 import Draggable from "react-draggable";
 import "98.css";
+import { faqQuestions } from "../FAQ/FAQ";
 import styles from "../../styles/Window.module.css";
 
 interface WindowProps {
   windowTitle: string;
   width?: string;
   height?: string;
-  windowType: "browser" | "chat" | "image";
+  windowType: "browser" | "chat" | "chat-faq" | "image";
   showTopBarButtons: boolean;
   windowHeading?: string;
   windowBodyText?: string;
@@ -54,7 +55,26 @@ const generateWindowStructure = (
           <div className="field-row-stacked">
             <textarea></textarea>
           </div>
-          <button>Send Message</button>
+          <button className="send-btn">Send Message</button>
+        </>
+      );
+    case "chat-faq":
+      return (
+        // Thinking of passing array of faq and answers, and reading them
+        <>
+          <ul className="tree-view">
+            <li className={styles.url}>https://7.ugahacks.com/{windowTitle}</li>
+          </ul>
+          {/* <div className="chat">
+            <div className="field-row-stacked">
+              <textarea className={styles.chatBody} value={bodyText}></textarea>
+            </div>
+          </div> */}
+          {faqQuestions()}
+          <div className="field-row-stacked">
+            <textarea className={styles.inputChat}></textarea>
+          </div>
+          <button className={styles.sendBtn}>Send Message</button>
         </>
       );
     case "image":
@@ -64,8 +84,8 @@ const generateWindowStructure = (
 
 const Window = ({
   windowTitle,
-  width,
-  height,
+  width = "50vw",
+  height = "auto",
   windowType = "browser",
   showTopBarButtons,
   windowHeading,
