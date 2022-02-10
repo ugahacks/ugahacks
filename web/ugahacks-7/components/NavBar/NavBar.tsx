@@ -3,6 +3,7 @@ import styles from '../../styles/NavBar.module.css';
 import NavIconButton from './NavIconButton';
 import About from '../../components/About';
 import FAQ from '../../components/FAQ';
+import Sponsors from '../../components/Sponsors';
 
 
 function NavBar(props: any): ReactElement {
@@ -19,6 +20,7 @@ function NavBar(props: any): ReactElement {
             <div className={styles.window_container}>
                 {active === "About" && <About />}
                 {active === "FAQ" && <FAQ/>}
+                {active === "Sponsors" && <Sponsors/>}
             </div>
         </div>
     )

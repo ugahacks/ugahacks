@@ -25,11 +25,11 @@
 }
 
 .greyTop {
-    min-height: 5vh;
+    min-height: 4vh;
     border-top: .5vh solid #000;
     border-left: .5vh solid #000;
     border-right: .5vh solid #000;
-    background-color: lightgray;
+    background-color: #04293A;
     background-size: cover;
     
     max-width: 100%;
