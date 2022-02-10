@@ -69,8 +69,7 @@ const FAQ = (): ReactElement => {
   const faq = "<h1>Hello</h1>";
   return (
     <>
-      <div className={styles.window}>
-        <div className="inactive">
+      <div >
           <Window
             windowTitle="FAQ"
             windowType="chat-faq"
@@ -78,7 +77,6 @@ const FAQ = (): ReactElement => {
             width="40vw"
             height="auto"
           />
-        </div>
       </div>
     </>
   );

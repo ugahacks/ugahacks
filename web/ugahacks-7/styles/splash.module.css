@@ -3,34 +3,33 @@
     position: fixed;
     width: 100%;
     min-height: 100%;
-    padding-bottom: 5vh;
+    padding-bottom: 1vh;
 }
 
 .border {
     height: 100%;
     width: 100%;
-    background-color: #ee789d;
+    background-color: #2D0320;
     background-size: 100%;
-    border: .5vh solid #000;
-    padding: 8vh;
 }
 
 .main {
-    background-image: url("../public/splash2-01.svg");
+    background-image: url("../public/logo_background.png");
     background-repeat: no-repeat;
     background-position:center;  /*should be changed to right when nav added*/  
     /**background-size: 80% 100%;*/
+    background-size: cover;
     height: 100%;
     width:100%;
     max-width: 100%;
 }
 
 .greyTop {
-    min-height: 5vh;
+    min-height: 4vh;
     border-top: .5vh solid #000;
     border-left: .5vh solid #000;
     border-right: .5vh solid #000;
-    background-color: lightgray;
+    background-color: #04293A;
     background-size: cover;
     
     max-width: 100%;

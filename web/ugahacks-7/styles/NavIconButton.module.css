@@ -1,0 +1,23 @@
+.iconContainer {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5vh;
+    padding: 0%;
+    width: 50vw;
+}
+
+.icon {
+    background: none;
+    border: none !important;    
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+}
+.caption {
+    margin: 0 auto;
+    padding: 0%;
+    display: block;
+    color: #14AFF1;
+    font-weight: bold;
+}

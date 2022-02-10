@@ -2,6 +2,11 @@
   background: linear-gradient(90deg, navy, #53bdf8);
 }
 
+.draggable_container {
+  height: calc(100vh - 10px);
+  padding: 10px;
+}
+
 .url {
   font-size: 1.25em;
 }
@@ -35,4 +40,8 @@
 .blueBanner, .url, .bodyText, .heading {
   font-family: 'Times New Roman', Times, serif;
   padding-left: 2px;
+}
+.layer {
+  position: absolute;
+  z-index: 3;
 }
