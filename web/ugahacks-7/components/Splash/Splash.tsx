@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import Countdown from "./Countdown";
 import styles from "../../styles/splash.module.css";
 import Image from 'next/image'
+import mlh_badge from '../../public/mlh-trust-badge-2022-blue.svg'
 
 export function Splash(): ReactElement {
   return (
@@ -14,7 +15,7 @@ export function Splash(): ReactElement {
         className={styles.mlh_trust_badge}
       >
         <Image
-          src="https://s3.amazonaws.com/logged-assets/trust-badge/2022/mlh-trust-badge-2022-blue.svg"
+          src={mlh_badge}
           alt="Major League Hacking 2022 Hackathon Season"
         />
       </a>
