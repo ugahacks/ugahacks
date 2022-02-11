@@ -15,7 +15,7 @@ const About = (): ReactElement => {
       windowBodyText={AboutContent}
       windowHeading="What is UGAHacks?"
       showTopBarButtons
-      width="50vw"
+      width="40vw"
       height="auto"
     />
   );

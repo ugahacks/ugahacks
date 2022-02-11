@@ -5,8 +5,16 @@ import styles from "../styles/Home.module.css";
 import Splash from "../components/Splash";
 import About from "../components/About";
 import MobileSite from "../components/mobileSite";
+import NavBar from "../components/NavBar";
+import Sponsors from "../components/Sponsors";
+import Schedule from "../components/Schedule";
+import TaskBar from "../components/TaskBar";
 
 export default function Home(): ReactElement {
+  const bodystyle = {
+    overflow: 'hidden'
+  }
+
   return (
     <>
       <BrowserView>
@@ -20,9 +28,11 @@ export default function Home(): ReactElement {
             <link rel="icon" href="/icons/favicon.ico" />
           </Head>
           <Splash />
-          <About />
+          <NavBar />
+          <TaskBar />
         </div>
       </BrowserView>
+      
       <MobileView>
         <MobileSite />
        </MobileView>
