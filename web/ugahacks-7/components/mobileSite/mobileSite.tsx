@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import mobileStyle from "../../styles/mobile.module.css";
 import Sides from "../Sides";
-import FAQ from "./FAQ";
+import FAQ from "./FAQ.js";
 import Image from 'next/image';
 import titleWithByte from './TitlewithByte.png'
 
