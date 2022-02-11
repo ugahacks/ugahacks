@@ -6,6 +6,21 @@
     padding-bottom: 1vh;
 }
 
+.mlh_trust_badge {
+  display: block;
+  max-width: 100px;
+  min-width: 60px;
+  position: fixed;
+  right: 50px;
+  top: 0;
+  width: 10%;
+  z-index: 10000;
+}
+
+.mlh_trust_badge:focus {
+    outline: 0;
+}
+
 .border {
     height: 100%;
     width: 100%;

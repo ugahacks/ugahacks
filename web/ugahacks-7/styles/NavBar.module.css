@@ -6,12 +6,12 @@
 .navbar_container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    position: fixed;
-    top: -9vh;
+    justify-content:flex-start;
+    position: absolute;
     left: 25px;
     height: 80vh;
     width: 15vw;
+    margin-top: 5vh;
 }
 
 .window.container {
