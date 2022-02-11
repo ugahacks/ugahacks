@@ -2526,12 +2526,41 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framer-motion@npm:^6.2.6":
+  version: 6.2.6
+  resolution: "framer-motion@npm:6.2.6"
+  dependencies:
+    "@emotion/is-prop-valid": ^0.8.2
+    framesync: 6.0.1
+    hey-listen: ^1.0.8
+    popmotion: 11.0.3
+    style-value-types: 5.0.0
+    tslib: ^2.1.0
+  peerDependencies:
+    react: ">=16.8 || ^17.0.0 || ^18.0.0"
+    react-dom: ">=16.8 || ^17.0.0 || ^18.0.0"
+  dependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+  checksum: 84c0b0176c083a2d752b7a59f29d20c21ad9d6147366d0bf324bc75bcfd9cfaf2b9827e14df1e773e366a68c0277156bc0fabf62ac53aba7ab64afd0012a7efe
+  languageName: node
+  linkType: hard
+
 "framesync@npm:5.3.0":
   version: 5.3.0
   resolution: "framesync@npm:5.3.0"
   dependencies:
     tslib: ^2.1.0
   checksum: 9ebbb2863e6a1cfd2e9dd1b73af427d23caa03c92dd49ea767ebdd208c3a573bba4a1026f67068d856a21704f79adcdf2f750cc852ff73bc1f0e80edaaecded8
+  languageName: node
+  linkType: hard
+
+"framesync@npm:6.0.1":
+  version: 6.0.1
+  resolution: "framesync@npm:6.0.1"
+  dependencies:
+    tslib: ^2.1.0
+  checksum: a23ebe8f7e20a32c0b99c2f8175b6f07af3ec6316aad52a2316316a6d011d717af8d2175dcc2827031c59fabb30232ed3e19a720a373caba7f070e1eae436325
   languageName: node
   linkType: hard
 
@@ -3722,6 +3751,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"lodash.throttle@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "lodash.throttle@npm:4.1.1"
+  checksum: 129c0a28cee48b348aef146f638ef8a8b197944d4e9ec26c1890c19d9bf5a5690fe11b655c77a4551268819b32d27f4206343e30c78961f60b561b8608c8c805
+  languageName: node
+  linkType: hard
+
 "lodash.truncate@npm:^4.4.2":
   version: 4.4.2
   resolution: "lodash.truncate@npm:4.4.2"
@@ -4849,6 +4885,18 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"popmotion@npm:11.0.3":
+  version: 11.0.3
+  resolution: "popmotion@npm:11.0.3"
+  dependencies:
+    framesync: 6.0.1
+    hey-listen: ^1.0.8
+    style-value-types: 5.0.0
+    tslib: ^2.1.0
+  checksum: 9fe7d03b4ec0e85bfb9dadc23b745147bfe42e16f466ba06e6327197d0e38b72015afc2f918a8051dedc3680310417f346ffdc463be6518e2e92e98f48e30268
+  languageName: node
+  linkType: hard
+
 "popmotion@npm:9.3.6":
   version: 9.3.6
   resolution: "popmotion@npm:9.3.6"
@@ -5114,6 +5162,18 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"react-device-detect@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "react-device-detect@npm:2.1.2"
+  dependencies:
+    ua-parser-js: ^0.7.30
+  peerDependencies:
+    react: ">= 0.14.0 < 18.0.0"
+    react-dom: ">= 0.14.0 < 18.0.0"
+  checksum: 3cc16b41324194cb812c2a6214107a2d75d8d4c44f3457b547040e24c24774e3b062d28be6dfa1775608d05a83dbc0dc226ed6e52077e27c1fc957e11dd553dc
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:17.0.2, react-dom@npm:^17.0.2":
   version: 17.0.2
   resolution: "react-dom@npm:17.0.2"
@@ -5158,6 +5218,19 @@ fsevents@~2.3.1:
   version: 0.8.3
   resolution: "react-refresh@npm:0.8.3"
   checksum: 3cffe5a9cbac1c5d59bf74bf9fff43c987d87ef32098b9092ea94b6637377d86c08565b9374d9397f446b3fbcd95de986ec77220a16f979687cb39b7b89e2f91
+  languageName: node
+  linkType: hard
+
+"react-scroll@npm:^1.8.4":
+  version: 1.8.4
+  resolution: "react-scroll@npm:1.8.4"
+  dependencies:
+    lodash.throttle: ^4.1.1
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: ^15.5.4 || ^16.0.0 || ^17.0.0
+    react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0
+  checksum: fd31206090e7a223989d11bd51f0f6fbc4ddfa3a218c266f2ec5698b93021187b6e2604010defa3341653bc8fdc3ddfb91c2d45a251b7c9e8e1857dc0da715f5
   languageName: node
   linkType: hard
 
@@ -5964,6 +6037,16 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"style-value-types@npm:5.0.0":
+  version: 5.0.0
+  resolution: "style-value-types@npm:5.0.0"
+  dependencies:
+    hey-listen: ^1.0.8
+    tslib: ^2.1.0
+  checksum: 16d198302cd102edf9dba94e7752a2364c93b1eaa5cc7c32b42b28eef4af4ccb5149a3f16bc2a256adc02616a2404f4612bd15f3081c1e8ca06132cae78be6c0
+  languageName: node
+  linkType: hard
+
 "styled-jsx@npm:4.0.1":
   version: 4.0.1
   resolution: "styled-jsx@npm:4.0.1"
@@ -6379,6 +6462,13 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"ua-parser-js@npm:^0.7.30":
+  version: 0.7.31
+  resolution: "ua-parser-js@npm:0.7.31"
+  checksum: e2f8324a83d1715601576af85b2b6c03890699aaa7272950fc77ea925c70c5e4f75060ae147dc92124e49f7f0e3d6dd2b0a91e7f40d267e92df8894be967ba8b
+  languageName: node
+  linkType: hard
+
 "ugahacks-6@workspace:web/ugahacks-6":
   version: 0.0.0-use.local
   resolution: "ugahacks-6@workspace:web/ugahacks-6"
@@ -6409,10 +6499,13 @@ resolve@^2.0.0-next.3:
     "@types/react": 17.0.15
     eslint: 7.32.0
     eslint-config-next: 11.0.1
+    framer-motion: ^6.2.6
     next: ^11.1.2
     react: 17.0.2
+    react-device-detect: ^2.1.2
     react-dom: 17.0.2
     react-draggable: ^4.4.4
+    react-scroll: ^1.8.4
     typescript: 4.3.5
   languageName: unknown
   linkType: soft
