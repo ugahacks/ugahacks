@@ -25,7 +25,7 @@ export default function Home(): ReactElement {
       </Head>
 
       <Splash />
-      <Schedule />
+      <NavBar />
     </div>
   );
 }
