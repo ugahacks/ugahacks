@@ -24,12 +24,8 @@ export default function Home(): ReactElement {
       </Head>
 
       <Splash />
-      {/* <FAQ /> */}
-      {/* <About /> */}
-      {/* <Sponsors /> */}
       <NavBar />
       <TaskBar />
-    
     </div>
   );
 }
