@@ -2,6 +2,7 @@ import React, { ReactElement } from "react";
 import Draggable from "react-draggable";
 import "98.css";
 import { faqQuestions } from "../FAQ/FAQ";
+import { schedule } from "../Schedule/Schedule";
 import styles from "../../styles/Window.module.css";
 import Sponsors from "../../components/Sponsors";
 import SponsorLogo from "../../components/Sponsors";
@@ -10,7 +11,7 @@ interface WindowProps {
   windowTitle: string;
   width?: string;
   height?: string;
-  windowType: "browser" | "chat" | "chat-faq" | "image";
+  windowType: "browser" | "chat" | "chat-faq" | "schedule" | "image";
   showTopBarButtons: boolean;
   windowHeading?: string;
   windowBodyText?: string;
@@ -72,16 +73,21 @@ const generateWindowStructure = (
           <ul className="tree-view">
             <li className={styles.url}>https://7.ugahacks.com/{windowTitle}</li>
           </ul>
-          {/* <div className="chat">
-            <div className="field-row-stacked">
-              <textarea className={styles.chatBody} value={bodyText}></textarea>
-            </div>
-          </div> */}
           {faqQuestions()}
           <div className="field-row-stacked">
             <textarea className={styles.inputChat}></textarea>
           </div>
           <button className={styles.sendBtn}>Send Message</button>
+        </>
+      );
+    case "schedule":
+      return (
+        // Thinking of passing array of schedule
+        <>
+          <ul className="tree-view">
+            <li className={styles.url}>https://7.ugahacks.com/{windowTitle}</li>
+          </ul>
+          {schedule()}
         </>
       );
     case "sponsors":

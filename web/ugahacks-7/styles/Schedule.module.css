@@ -1,0 +1,51 @@
+.time {
+  color: red;
+}
+
+.time2 {
+  color: red;
+}
+
+.chatBody {
+  font-size: 1.5em;
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  resize: none;
+}
+
+.scheduleContainer {
+  margin-top: 2em;
+}
+
+.scheduleText {
+  font-size: 1.5em;
+}
+
+.answers {
+  font-size: 1.5em;
+}
+
+.window {
+  display: flex;
+}
+
+.dropdown {
+  margin-bottom: 2em;
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.dates {
+  font-size: 1.25em;
+  font-weight: bold;
+  color: purple;
+}
+
+.scroll {
+  overflow-y: scroll;
+  overflow-x: auto;
+  max-height: 40vh;
+}
