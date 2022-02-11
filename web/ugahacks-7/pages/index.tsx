@@ -2,11 +2,10 @@ import { ReactElement } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Splash from "../components/Splash";
-import About from "../components/About";
-import FAQ from "../components/FAQ";
 import NavBar from "../components/NavBar";
 import Sponsors from "../components/Sponsors";
 import Schedule from "../components/Schedule";
+import TaskBar from "../components/TaskBar";
 
 export default function Home(): ReactElement {
   const bodystyle = {
@@ -25,7 +24,12 @@ export default function Home(): ReactElement {
       </Head>
 
       <Splash />
-      <Schedule />
+      {/* <FAQ /> */}
+      {/* <About /> */}
+      {/* <Sponsors /> */}
+      <NavBar />
+      <TaskBar />
+    
     </div>
   );
 }
