@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useState } from "react";
 import Draggable from "react-draggable";
 import "98.css";
 import { faqQuestions } from "../FAQ/FAQ";
@@ -18,6 +18,7 @@ interface WindowProps {
   position?: string;
   dataList?: [{ id: number; sender: string; message: string }];
   sponsorList?: [{ id: number; image: string; alt: string}];
+  open?: boolean;
 
 }
 
@@ -122,10 +123,12 @@ const Window = ({
   windowBodyText,
   dataList,
   sponsorList,
+  open,
 }: WindowProps): ReactElement => {
-  return (
+  const [active, setActive] = useState(true);
+  const win = (
     <div className={styles.draggable_container} >
-      <Draggable handle=".title-bar" defaultPosition={{ x: 550, y: 75}} bounds="parent">
+      <Draggable handle=".title-bar" defaultPosition={{ x: 550, y: 75 }} bounds="parent">
         <div className="window" style={{ width: width, height: height }}>
           <div className={`title-bar ${styles.blueBanner}`}>
             <div className="title-bar-text" style={{ fontSize: "1.75em" }}>
@@ -135,7 +138,7 @@ const Window = ({
               <div className="title-bar-controls">
                 <button aria-label="Minimize" style={{ padding: "1em", backgroundSize: "1em", backgroundPosition: "50% 80%" }} />
                 <button aria-label="Maximize" style={{ padding: "1em", backgroundSize: "1.3em" }} />
-                <button aria-label="Close" style={{ padding: "1em", backgroundSize: "1.3em" }} />
+                <button aria-label="Close" style={{ padding: "1em", backgroundSize: "1.3em" }} onClick={() => setActive(false)} />
               </div>
             )}
           </div>
@@ -153,6 +156,15 @@ const Window = ({
       </Draggable>
     </div>
   );
+
+if (active) {
+  return win;
+}
+else {
+  return (
+    <div></div>
+  )
+}
 };
 
 export default Window;

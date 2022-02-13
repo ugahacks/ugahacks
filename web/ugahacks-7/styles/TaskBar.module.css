@@ -9,7 +9,7 @@
     border-bottom: 1px solid #4e4e4e;
     position: fixed;
     z-index: 9999;
-    line-height: 1.8;
+    line-height: 1.5;
     text-rendering: optimizeLegibility;
     color: rgba(255,255,255,.8);
 }
