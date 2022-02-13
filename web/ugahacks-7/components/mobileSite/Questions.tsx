@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {collapseVariants, hoverVariants} from "./CommonVariants";
 import fileImage from '../../public/graphics/fileicon-01.svg'
+import styles from '../../styles/MobileFAQ.module.css'
 
 const screwVariants = {
   open: { rotate: 45 },
@@ -15,7 +16,7 @@ function Question(props: any) {
   return (
     <>
       <motion.button
-        className="faq-question"
+        className={styles.faq_question}
         onClick={() => setIsOpen(!isOpen)}
         variants={hoverVariants}
         whileHover="hover"
@@ -35,7 +36,7 @@ function Question(props: any) {
 
       </motion.button>
       <motion.div
-        className="faq-answer"
+        className={styles.faq_answer}
         variants={collapseVariants}
         animate={isOpen ? "open" : "closed"}
 

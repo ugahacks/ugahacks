@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import mobileStyle from "../../styles/mobile.module.css";
 import Sides from "../Sides";
-// import FAQ from "./MobileFAQ";
+import FAQ from "./MobileFAQ";
 import Image from 'next/image';
 import titleWithByte from '../../public/TitlewithByte.png'
 
@@ -53,7 +53,7 @@ export function mobileSite(): ReactElement {
             <div id="faq" className={mobileStyle.faq}>
               <h4 className={mobileStyle.titleText}>FAQ</h4>
               <div className={mobileStyle.border}>
-                {/* <FAQ /> */}
+                <FAQ />
               </div>
 
             </div>
