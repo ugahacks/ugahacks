@@ -23,11 +23,11 @@
     align-items: center;
   }
   
-  .loft,
-  .apartment,
-  .penthouse,
-  .doghouse,
-  .mansion,
+ 
+  .tier5,
+  .tier4,
+  .tier3,
+  .tier2,
   .partner {
     margin: 10px;
     filter: brightness(0) invert(1);
@@ -36,25 +36,25 @@
   #acm {
     filter: none;
   }
+
+  .tier5 {
+    width: 420px;
+  }
   
-  .penthouse {
+  .tier4 {
     width: 325px;
   }
   
-  .apartment {
+  .tier3 {
     width: 235px;
   }
   
-  .doghouse {
+  .tier2 {
     width: 200px;
   }
   
   .loft {
     width: 125px;
-  }
-  
-  .mansion {
-    width: 420px;
   }
   
   .partner {
@@ -90,19 +90,19 @@
       width: 90%;
     }
   
-    .mansion {
+    .tier5 {
       width: 90%;
     }
   
-    .penthouse {
+    .tier4 {
       width: 85%;
     }
   
-    .apartment {
+    .tier3 {
       width: 55%;
     }
   
-    .doghouse {
+    .tier2 {
       width: 45%;
     }
   

@@ -19,10 +19,10 @@ function NavBar(props: any): ReactElement {
             <NavIconButton name="SPONSORS" myClick={() => setActive("Sponsors")}/>
             </div>
             <div className={styles.window_container}>
-                {active === "About" && <About />}
+                {active === "About" && <About/>}
                 {active === "FAQ" && <FAQ/>}
-                {active === "Schedule" && <Schedule />}
-                {/* {active === "Sponsors" && <Sponsors/>} */}
+                {active === "Schedule" && <Schedule/>}
+                {active === "Sponsors" && <Sponsors/>}
             </div>
         </div>
     )

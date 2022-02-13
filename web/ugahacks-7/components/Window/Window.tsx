@@ -4,14 +4,14 @@ import "98.css";
 import { faqQuestions } from "../FAQ/FAQ";
 import { schedule } from "../Schedule/Schedule";
 import styles from "../../styles/Window.module.css";
-import Sponsors from "../../components/Sponsors";
+import { sponsors } from "../Sponsors/Sponsors";
 import SponsorLogo from "../../components/Sponsors";
 
 interface WindowProps {
   windowTitle: string;
   width?: string;
   height?: string;
-  windowType: "browser" | "chat" | "chat-faq" | "schedule" | "image";
+  windowType: "browser" | "chat" | "chat-faq" | "schedule" | "image" | "sponsors";
   showTopBarButtons: boolean;
   windowHeading?: string;
   windowBodyText?: string;
@@ -92,23 +92,13 @@ const generateWindowStructure = (
       );
     case "sponsors":
       return (
-        <div className="layer">
+        <>
           <ul className="tree-view">
-            {sponsorList &&
-              sponsorList.map(
-                (data: { id: number; image: string; alt: string }) => (
-                  <li key={data.id}>
-                    <span>
-                      <SponsorLogo 
-                       
-                      />
-                    </span>
-                  </li>
-                )
-              )}
+            <li className={styles.url}>https://7.ugahacks.com/{windowTitle}</li>
           </ul>
-        </div> // Add similar structure to chat layout with mapping over an obj with image data - See Sponsors section on Hacks 6
-      )
+          {sponsors()}
+        </>
+      );
   }
 };
 
