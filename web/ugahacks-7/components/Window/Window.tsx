@@ -18,8 +18,7 @@ interface WindowProps {
   position?: string;
   dataList?: [{ id: number; sender: string; message: string }];
   sponsorList?: [{ id: number; image: string; alt: string}];
-  open?: boolean;
-
+  stateChanger?: any;
 }
 
 const generateWindowStructure = (
@@ -123,7 +122,7 @@ const Window = ({
   windowBodyText,
   dataList,
   sponsorList,
-  open,
+  stateChanger,
 }: WindowProps): ReactElement => {
   const [active, setActive] = useState(true);
   const win = (
@@ -138,7 +137,7 @@ const Window = ({
               <div className="title-bar-controls">
                 <button aria-label="Minimize" style={{ padding: "1em", backgroundSize: "1em", backgroundPosition: "50% 80%" }} />
                 <button aria-label="Maximize" style={{ padding: "1em", backgroundSize: "1.3em" }} />
-                <button aria-label="Close" style={{ padding: "1em", backgroundSize: "1.3em" }} onClick={() => setActive(false)} />
+                <button aria-label="Close" style={{ padding: "1em", backgroundSize: "1.3em" }} onClick={() => {setActive(false); stateChanger("")}} />
               </div>
             )}
           </div>

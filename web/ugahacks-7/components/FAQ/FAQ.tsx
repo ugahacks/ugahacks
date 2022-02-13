@@ -65,7 +65,7 @@ function CurrentTopic(): ReactElement {
   );
 }
 
-const FAQ = (): ReactElement => {
+const FAQ = (props: any): ReactElement => {
   const faq = "<h1>Hello</h1>";
   return (
     <>
@@ -76,6 +76,7 @@ const FAQ = (): ReactElement => {
             showTopBarButtons
             width="40vw"
             height="auto"
+            stateChanger = {props.stateChanger}
           />
       </div>
     </>

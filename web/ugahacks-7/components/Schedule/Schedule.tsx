@@ -1,6 +1,7 @@
 import React, { ReactElement, useState } from "react";
 import Window from "../Window";
 import styles from "../../styles/Schedule.module.css";
+import { filterProps } from "framer-motion";
 
 export { schedule };
 
@@ -67,7 +68,7 @@ function CurrentDay(): ReactElement {
   );
 }
 
-const Schedule = (): ReactElement => {
+const Schedule = (props: any): ReactElement => {
   return (
     <>
       <div>
@@ -77,6 +78,7 @@ const Schedule = (): ReactElement => {
           showTopBarButtons
           width="40vw"
           height="auto"
+          stateChanger = {props.stateChanger}
         />
       </div>
     </>

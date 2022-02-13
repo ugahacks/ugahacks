@@ -9,7 +9,6 @@ import Sponsors from '../../components/Sponsors';
 
 function NavBar(props: any): ReactElement {
     const [active, setActive] = useState("About");
-    const [opened, setOpened] = useState(0);
 
     return (
         <div className={styles.flex_container}>
@@ -20,10 +19,10 @@ function NavBar(props: any): ReactElement {
             <NavIconButton name="SPONSORS" myClick={() => setActive("Sponsors")}/>
             </div>
             <div className={styles.window_container}>
-                {active === "About" && <About />}
-                {active === "FAQ" && <FAQ/>}
-                {active === "Schedule" && <Schedule />}
-                {/* {active === "Sponsors" && <Sponsors/>} */}
+                {(active === "About") && <About stateChanger={setActive}/>}
+                {active === "FAQ" && <FAQ stateChanger={setActive}/>}
+                {active === "Schedule" && <Schedule stateChanger={setActive}/>}
+                {/* {active === "Sponsors" && <Sponsors stateChanger={setActive}/>} */}
             </div>
         </div>
     )
