@@ -135,8 +135,8 @@ const Window = ({
             </div>
             {showTopBarButtons && (
               <div className="title-bar-controls">
-                <button aria-label="Minimize" style={{ padding: "1em", backgroundSize: "1em", backgroundPosition: "50% 80%" }} />
-                <button aria-label="Maximize" style={{ padding: "1em", backgroundSize: "1.3em" }} />
+                {/* <button aria-label="Minimize" style={{ padding: "1em", backgroundSize: "1em", backgroundPosition: "50% 80%" }} /> */}
+                {/* <button aria-label="Maximize" style={{ padding: "1em", backgroundSize: "1.3em" }} /> */}
                 <button aria-label="Close" style={{ padding: "1em", backgroundSize: "1.3em" }} onClick={() => {setActive(false); stateChanger("")}} />
               </div>
             )}
