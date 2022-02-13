@@ -84,6 +84,4 @@ function sponsors(): ReactElement {
     );
 };
 
-
-
 export default Sponsors;
