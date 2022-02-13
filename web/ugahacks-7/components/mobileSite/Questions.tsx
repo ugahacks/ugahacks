@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {collapseVariants, hoverVariants} from "./CommonVariants";
-import screw from "./images/screw-01.svg";
+import fileImage from '../../public/graphics/fileicon-01.svg'
+import styles from '../../styles/MobileFAQ.module.css'
 
 const screwVariants = {
   open: { rotate: 45 },
   closed: { rotate: 0 },
 };
 
-function Question(props) {
+function Question(props: any) {
 
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       <motion.button
-        className="faq-question"
+        className={styles.faq_question}
         onClick={() => setIsOpen(!isOpen)}
         variants={hoverVariants}
         whileHover="hover"
@@ -24,7 +25,7 @@ function Question(props) {
         <div className="screw-wrapper">
           <motion.img
             className="screw"
-            src={screw} alt="screw" width="15"
+            src={fileImage} alt="screw" width="15"
             height="15"
             variants={screwVariants}
             animate={isOpen ? "open": "closed"}
@@ -35,7 +36,7 @@ function Question(props) {
 
       </motion.button>
       <motion.div
-        className="faq-answer"
+        className={styles.faq_answer}
         variants={collapseVariants}
         animate={isOpen ? "open" : "closed"}
 
