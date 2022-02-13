@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import SponsorLogo from "./SponsorLogo";
 import Window from "../Window";
+import styles from "../../styles/Sponsors.module.css";
 
 export { sponsors };
 // tier 5
@@ -48,34 +49,37 @@ const Sponsors = (): ReactElement => {
 function sponsors(): ReactElement {
     return (
         <>
-            <div className = "sponsors-container">
-                <SponsorLogo
-                    image={ncr}
-                    alt="NCR logo"
-                    tier="5"
-                    link="https://www.ncr.com/"
-                />
-                <div className="logo-container">
+            <section className={styles.section}>
+                <div className={styles.sponsors_container}>
+                    <div>Sponsors</div>
                     <SponsorLogo
-                        image={blackrock}
-                        alt="BlackRock logo"
-                        tier="4"
-                        link="https://careers.blackrock.com/early-careers/"
+                        image={ncr}
+                        alt="NCR logo"
+                        tier="5"
+                        link="https://www.ncr.com/"
                     />
-                    <SponsorLogo
-                        image={tsys}
-                        alt="BlackRock logo"
-                        tier="3"
-                        link="https://careers.blackrock.com/early-careers/"
-                    />
-                    <SponsorLogo
-                        image={tsys}
-                        alt="BlackRock logo"
-                        tier="3"
-                        link="https://careers.blackrock.com/early-careers/"
-                    />
+                    <div className={styles.logo_container}>
+                        <SponsorLogo
+                            image={blackrock}
+                            alt="BlackRock logo"
+                            tier="4"
+                            link="https://careers.blackrock.com/early-careers/"
+                        />
+                        <SponsorLogo
+                            image={tsys}
+                            alt="TSYS logo"
+                            tier="3"
+                            link="https://tsys.com/"
+                        />
+                        <SponsorLogo
+                            image={capitalone}
+                            alt="Capital One logo"
+                            tier="3"
+                            link="https://www.capitalone.com/"
+                        />
+                    </div>
                 </div>
-            </div>
+            </section>
         </>
     );
 };
