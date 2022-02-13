@@ -4,19 +4,20 @@ import React from "react";
 // import Button from '@material-ui/core/Button';
 import Question from "./Questions";
 // import {collapseVariants} from "./CommonVariants"
+import styles from '../../styles/MobileFAQ.module.css'
 
 
-function FAQ(props) {
+function FAQ(props: any) {
 
   // const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <section className="section faq-section" id="faq">
-        <div className="faq-container">
+      <section className={styles.faq_section} id="faq">
+        <div className={styles.faq_container}>
 
 
-          <div className="faq-question-wrapper">
+          <div className={styles.faq_question_wrapper}>
             <Question
               question="Where will it be held this year?"
               answer="UGAHacks 7 will be held at MLC."

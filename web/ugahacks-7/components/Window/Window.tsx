@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useState } from "react";
 import Draggable from "react-draggable";
 import "98.css";
 import { faqQuestions } from "../FAQ/FAQ";
@@ -123,6 +123,7 @@ const Window = ({
   dataList,
   sponsorList,
 }: WindowProps): ReactElement => {
+  const [active, setActive] = useState(true);
   return (
     <div className={styles.draggable_container} >
       <Draggable handle=".title-bar" defaultPosition={{ x: 550, y: 75}} bounds="parent">
