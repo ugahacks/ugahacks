@@ -1,15 +1,30 @@
  .faq_question {
   font-family: 'Poppins', sans-serif;
-  margin-top: 15px;
   background-color: white;
   color: #444;
   cursor: pointer;
   padding: 5px;
+  border-radius: .6em;
   width: 98.5%;
   border: none;
   text-align: left;
   outline: none;
   font-size: medium;
+}
+.faq_answer {
+  width: 98.5%;
+  overflow: hidden;
+  border-radius: .6em;
+  background-color: #f5f5f5;
+  background-color: black;
+  color: #444;
+  color:white;
+  order: -1
+}
+.QandA {
+  margin-top: 10px;
+  margin-bottom: 5px;
+
 }
 .question_wrapper {
   color: black;
@@ -62,13 +77,7 @@
 .faq_question:focus {
   outline: 0;
 }
-.faq_answer {
-  width: 98.5%;
-  overflow: hidden;
-  background-color: #f5f5f5;
-  color: #444;
-  order: -1
-}
+
 
 .faq_answer p {
   margin: auto 0;
