@@ -1,4 +1,4 @@
-import React, { FormEventHandler, ReactElement, useState } from "react";
+import React, { ReactElement, useEffect, useRef, useState } from "react";
 import Window from "../Window";
 import styles from "../../styles/FAQ.module.css";
 
@@ -64,6 +64,12 @@ function CurrentTopic(): ReactElement {
     body: "",
   });
 
+  const scrollRef = useRef<null | HTMLDivElement>(null);
+
+  useEffect( () => {
+    scrollRef.current?.scrollIntoView({behavior: "smooth"});
+  }, [message]);
+
   const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -89,6 +95,7 @@ function CurrentTopic(): ReactElement {
       </select>
       <div className={styles.scroll}>
         {generateFAQ(topic)}
+        <div ref={scrollRef} />
       </div>
       <form onSubmit={handleSend}>
         <div className="field-row-stacked">
@@ -130,6 +137,7 @@ const FAQ = (props: any): ReactElement => {
  * window by selecting the correct case in the switch case clause. Each case will be a
  * topic for the FAQ. More topics can be added to the topics array and CurrentTopic()
  * functional component.
+ * Additionally, chat box will update with the user sending messages.
  *
  * @return {ReactElement} Returns a <ul> containing <li> of questions and answers.
  */
