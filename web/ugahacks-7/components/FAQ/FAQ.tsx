@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from "react";
+import React, { FormEventHandler, ReactElement, useState } from "react";
 import Window from "../Window";
 import styles from "../../styles/FAQ.module.css";
 
@@ -7,10 +7,27 @@ export { faqWindow };
 // Create an array of topics that will be accessed by the option HTML tag
 const topics: string[] = ["COVID", "Logistics", "About the Hackathon"];
 
+// Idea is to maintain a log of message for each topic, and the responses array will hold all the possible response to user questions
 // Message array
-const user_message: string[] = [
-  
-];
+const user_message_COVID: string[] = [];
+
+// Message array
+const user_message_logistics: string[] = [];
+
+// Message array
+const user_message_about: string[] = [];
+
+// Response to choose from
+const responses: string[] = ["Just eat more food bro"];
+
+// Response to user message array
+const user_message_answers_COVID: string[] = [];
+
+// Response to user message array
+const user_message_answers_logistics: string[] = [];
+
+// Response to user message array
+const user_message_answers_about: string[] = [];
 
 // Question and answer arrays for each topic, add your questions and answers into the corresponding topic arrays
 const questions_COVID: string[] = [
@@ -47,11 +64,15 @@ function CurrentTopic(): ReactElement {
     body: "",
   });
 
-  const handleSend = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
 
     // Add to message array
-    user_message.push(e.target.value);
+    addToMessageArray(topic, message.body);
+
+    setMessage({
+      body: "",
+    });
   };
 
   const inputHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -66,18 +87,23 @@ function CurrentTopic(): ReactElement {
         <option value={"Logistics"}>{topics[1]}</option>
         <option value={"About the Hackathon"}>{topics[2]}</option>
       </select>
-      <div className={styles.scroll}>{generateFAQ(topic)}</div>
-      <div className="field-row-stacked">
-        <textarea
-          className={styles.inputChat}
-          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>): void =>
-            setMessage({ body: e.target.value })
-          }
-          value={message.body}
-          onSubmit={handleSend}
-        ></textarea>
+      <div className={styles.scroll}>
+        {generateFAQ(topic)}
       </div>
-      <button className={styles.sendBtn}>Send Message</button>
+      <form onSubmit={handleSend}>
+        <div className="field-row-stacked">
+          <textarea
+            className={styles.inputChat}
+            onChange={(e: React.ChangeEvent<HTMLTextAreaElement>): void =>
+              setMessage({ body: e.target.value })
+            }
+            value={message.body}
+          ></textarea>
+        </div>
+        <button className={styles.sendBtn} type="submit">
+          Send Message
+        </button>
+      </form>
     </>
   );
 }
@@ -109,6 +135,7 @@ const FAQ = (props: any): ReactElement => {
  */
 function generateFAQ(type: string): ReactElement {
   let faq: ReactElement[] = [];
+  let message: ReactElement[] = generateMessage(type);
 
   switch (type) {
     case "COVID":
@@ -123,14 +150,66 @@ function generateFAQ(type: string): ReactElement {
     default:
       faq = generateQAArray(questions_COVID, answers_logistics);
       break;
-  }
+  } // switch
 
   return (
     <>
-      <ul className="tree-view">{faq}</ul>
+      <ul className="tree-view">
+        {faq}
+        {message}
+      </ul>
     </>
   );
+} // generateFAQ
+
+function generateMessage(type: string): ReactElement[] {
+  let message: ReactElement[] = [];
+
+  switch (type) {
+    case "COVID":
+      message = generateMessageArray(
+        user_message_COVID,
+        user_message_answers_COVID
+      );
+      break;
+
+    case "Logistics":
+      message = generateMessageArray(
+        user_message_logistics,
+        user_message_answers_logistics
+      );
+      break;
+
+    case "About the Hackathon":
+      message = generateMessageArray(user_message_about, user_message_about);
+      break;
+
+    default:
+      message = generateMessageArray(
+        user_message_COVID,
+        user_message_answers_COVID
+      );
+      break;
+  } // switch
+
+  return message;
 }
+
+function addToMessageArray(type: string, body: string): void {
+  switch (type) {
+    case "COVID":
+      user_message_COVID.push(body);
+      break;
+
+    case "Logistics":
+      user_message_logistics.push(body);
+      break;
+
+    case "About the Hackathon":
+      user_message_about.push(body);
+      break;
+  } // switch
+} // addToMessageArray
 
 /**
  * Generates alternating questions and answers array so that the questions and answers will
@@ -167,15 +246,38 @@ function generateQAArray(
   return faq;
 } // generateQA
 
+function generateMessageArray(
+  user_array: string[],
+  user_answer: string[]
+): ReactElement[] {
+  let message: ReactElement[] = [];
+
+  for (let i = 0; i < user_array.length; i++) {
+    message.push(
+      <li className={styles.questions}>
+        <span className={styles.faq}>User: </span>
+        {user_array}
+      </li>
+    );
+    message.push(
+      <li className={styles.questions}>
+        <span className={styles.byte}>Byte: </span>
+        {user_answer}
+      </li>
+    );
+  } // for
+
+  return message;
+}
+
 function CurrentMessage(): ReactElement {
   const [message, setMessage] = useState({
-    body: ""
+    body: "",
   });
 
   const handleSend = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     e.preventDefault();
-
-  }
+  };
 
   return (
     <>
@@ -183,7 +285,7 @@ function CurrentMessage(): ReactElement {
         <textarea
           className={styles.inputChat}
           onChange={(e: React.ChangeEvent<HTMLTextAreaElement>): void =>
-            setMessage({body: e.target.value})
+            setMessage({ body: e.target.value })
           }
           value={message.body}
           onSubmit={handleSend}

@@ -57,11 +57,11 @@
 
 .inputChat {
   width: 100%;
-  height: 10vh;
+  height: 5.3vh;
   margin-bottom: 5%;
   margin-top: 5%;
   resize: none;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .sendBtn {
