@@ -4,6 +4,7 @@ import Sides from "../Sides";
 import FAQ from "./MobileFAQ";
 import Image from 'next/image';
 import titleWithByte from '../../public/TitlewithByte.png'
+import MobileSchedule from "./MobileSchedule";
 
 export function mobileSite(): ReactElement {
   return (
@@ -13,10 +14,14 @@ export function mobileSite(): ReactElement {
           </div>
           <div className={mobileStyle.middle}>
             <div className={mobileStyle.title}>
+              <div className={mobileStyle.logo}>
               <Image className={mobileStyle.logoTitle} src={titleWithByte} alt="logo"/>
-              <p className={mobileStyle.topText} style={{margin: "0"}}>Reimagine your world one pixel at a time.</p>
-              <p className={mobileStyle.topText}>Febuary 18-20, 2022</p>
+              <p className={mobileStyle.topText} style={{margin: "0"}}>Reimagine your world</p>
+              <p className={mobileStyle.topText}> one pixel at a time.</p>
               <span>&nbsp;&nbsp;</span>
+              <p className={mobileStyle.topText}>February 18-20, 2022</p>
+              <span>&nbsp;&nbsp;</span>
+              </div>
               <div className={mobileStyle.borderlink}>
                 <a href="#about">
                   <h3 className={mobileStyle.link}>About</h3>
@@ -38,6 +43,8 @@ export function mobileSite(): ReactElement {
                 </a>
               </div> */}
             </div>
+            <div className={mobileStyle.pageSep} />
+            <div className={mobileStyle.pageSep} />
             <div id="about" className={mobileStyle.about}>
               <h4 className={mobileStyle.titleText}>What is UGAHacks?</h4>
               <div className={mobileStyle.border}>
@@ -45,11 +52,24 @@ export function mobileSite(): ReactElement {
               <p>Even though submitting a project is the main objective, that&quot;s not all there is. We&quot;ll have mentors, free food, video game competitions, workshops and more. There&quot;s even a workshop at the event for anyone that still needs to find some teammates!</p>
               </div>
             </div>
+            <div className={mobileStyle.pageSep} />
+            <div className={mobileStyle.pageSep} />
            <div id="schedule" className={mobileStyle.schedule}>
               <h4 className={mobileStyle.titleText}>Schedule</h4>
               <div className={mobileStyle.border}>
+                {/* <div className={mobileStyle.day}> */}
+                  {/* <div className={mobileStyle.schLinkDiv}>
+                      <a href="day1.html" className={mobileStyle.schLink1}>Day 1</a>
+                      <div className={mobileStyle.schLink2}>Day 2</div>
+                      <div className={mobileStyle.schLink3}>Day 3</div>
+ */}
+
+                <MobileSchedule />
+                <div className={mobileStyle.spacing} />
               </div>
             </div>
+            <div className={mobileStyle.pageSep} />
+            <div className={mobileStyle.pageSep} />
             <div id="faq" className={mobileStyle.faq}>
               <h4 className={mobileStyle.titleText}>FAQ</h4>
               <div className={mobileStyle.border}>
