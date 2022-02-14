@@ -76,6 +76,10 @@ function CurrentTopic(): ReactElement {
     // Add to message array
     addToMessageArray(topic, message.body);
 
+    user_message_COVID.forEach(function (entry) {
+      console.log(entry);
+    });
+
     setMessage({
       body: "",
     });
@@ -126,6 +130,7 @@ const FAQ = (props: any): ReactElement => {
           showTopBarButtons
           width="40vw"
           height="auto"
+          stateChanger={props.stateChanger}
         />
       </div>
     </>
@@ -246,7 +251,7 @@ function generateQAArray(
     faq.push(
       <li className={styles.answers}>
         <span className={styles.byte}>Byte: </span>
-        {answer_array[i]}
+        {answer_array[i % answer_array.length]}
       </li>
     );
   } // for
@@ -264,7 +269,7 @@ function generateMessageArray(
     message.push(
       <li className={styles.questions}>
         <span className={styles.faq}>User: </span>
-        {user_array}
+        {user_array[i]}
       </li>
     );
     message.push(
@@ -273,6 +278,7 @@ function generateMessageArray(
         {user_answer}
       </li>
     );
+
   } // for
 
   return message;
