@@ -14,7 +14,8 @@ function Question(props: any) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
+    <div className={styles.QandA}>
+
       <motion.button
         className={styles.faq_question}
         onClick={() => setIsOpen(!isOpen)}
@@ -43,7 +44,7 @@ function Question(props: any) {
       >
         <p>{props.answer} <a href={props.link}>{props.linktxt}</a></p>
       </motion.div>
-    </>
+      </div>
 
   );
 }
