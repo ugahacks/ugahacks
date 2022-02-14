@@ -4,6 +4,24 @@ import styles from "../../styles/FAQ.module.css";
 
 export { faqWindow };
 
+const FAQ = (props: any): ReactElement => {
+  const faq = "<h1>Hello</h1>";
+  return (
+    <>
+      <div>
+        <Window
+          windowTitle="FAQ"
+          windowType="chat-faq"
+          showTopBarButtons
+          width="40vw"
+          height="auto"
+          stateChanger={props.stateChanger}
+        />
+      </div>
+    </>
+  );
+};
+
 // Create an array of topics that will be accessed by the option HTML tag
 const topics: string[] = ["COVID", "Logistics", "About the Hackathon"];
 
@@ -18,7 +36,11 @@ const user_message_logistics: string[] = [];
 const user_message_about: string[] = [];
 
 // Response to choose from
-const responses: string[] = ["Just eat more food bro"];
+const responses: string[] = [
+  "Just eat more food bro",
+  "My name is Jeffrey",
+  "Just beat up Logistics team",
+];
 
 // Response to user message array
 const user_message_answers_COVID: string[] = [];
@@ -53,9 +75,12 @@ const answers_hackathon: string[] = ["Answers about the Hackathon"];
 /**
  * Uses the useState hook to check which FAQs to display based on the topic. We
  * are setting the topic based on the option values.
+ * Use React Form to maintain state of the user messages and submit it to chatbox
+ * using the send message button.
  *
  * @returns {ReactElement} The dropdown menu and FAQ text area will be rendered everytime
- * a new topic is selected.
+ * a new topic is selected. The FAQ text area will also update once the user clicks on
+ * send message button.
  */
 function CurrentTopic(): ReactElement {
   const [topic, setTopic] = useState("COVID");
@@ -66,6 +91,7 @@ function CurrentTopic(): ReactElement {
 
   const scrollRef = useRef<null | HTMLDivElement>(null);
 
+  // The chatbox will scroll to the bottom when user sends message
   useEffect(() => {
     scrollRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [message]);
@@ -75,10 +101,6 @@ function CurrentTopic(): ReactElement {
 
     // Add to message array
     addToMessageArray(topic, message.body);
-
-    user_message_COVID.forEach(function (entry) {
-      console.log(entry);
-    });
 
     setMessage({
       body: "",
@@ -119,24 +141,6 @@ function CurrentTopic(): ReactElement {
   );
 }
 
-const FAQ = (props: any): ReactElement => {
-  const faq = "<h1>Hello</h1>";
-  return (
-    <>
-      <div>
-        <Window
-          windowTitle="FAQ"
-          windowType="chat-faq"
-          showTopBarButtons
-          width="40vw"
-          height="auto"
-          stateChanger={props.stateChanger}
-        />
-      </div>
-    </>
-  );
-};
-
 /**
  * Based on the topic selected from the dropdown menu, the FAQ textarea will change its
  * window by selecting the correct case in the switch case clause. Each case will be a
@@ -175,6 +179,16 @@ function generateFAQ(type: string): ReactElement {
   );
 } // generateFAQ
 
+/**
+ * Based on the topic selected from the dropdown menu, the FAQ textarea will change its
+ * window by selecting the correct case in the switch case clause. Each case will be a
+ * topic for the FAQ. More topics can be added to the topics array and CurrentTopic()
+ * functional component.
+ * Additionally, chat box will update with the user sending messages and will stay
+ * within that particular topic. So messages will not persist across all topics.
+ *
+ * @return {ReactElement} Returns a <ul> containing <li> of questions and answers.
+ */
 function generateMessage(type: string): ReactElement[] {
   let message: ReactElement[] = [];
 
@@ -208,26 +222,33 @@ function generateMessage(type: string): ReactElement[] {
   return message;
 }
 
+/**
+ * This helper function adds the user message to a corresponding array
+ * so that it maintains a log of messages for each topic in faq.
+ *
+ * @param type The topic of faq
+ * @param body The content of the user message
+ */
 function addToMessageArray(type: string, body: string): void {
   switch (type) {
     case "COVID":
       user_message_COVID.push(body);
       user_message_answers_COVID.push(
-        responses[randomInt(0, responses.length) % responses.length]
+        responses[randomInt(0, responses.length - 1)]
       );
       break;
 
     case "Logistics":
       user_message_logistics.push(body);
       user_message_answers_logistics.push(
-        responses[randomInt(0, responses.length) % responses.length]
+        responses[randomInt(0, responses.length - 1)]
       );
       break;
 
     case "About the Hackathon":
       user_message_about.push(body);
       user_message_answers_about.push(
-        responses[randomInt(0, responses.length) % responses.length]
+        responses[randomInt(0, responses.length - 1)]
       );
       break;
   } // switch
@@ -268,6 +289,17 @@ function generateQAArray(
   return faq;
 } // generateQA
 
+/**
+ * Generates alternating user messages and answers array so that the messages and answers will
+ * display in an alternating fashion in the FAQ textarea. This is a helper function to the
+ * generateMessage() function. Returns an array of alternating messages and answers so that the
+ * generateMessage() function can iterate through the returned array and display it in the textarea.
+ *
+ * @param user_array the array containing the user messages
+ * @param user_answer the array containing the responses or answers
+ *
+ * @returns {ReactElement} Returns the list of user messages and Byte (answers) in JSX.
+ */
 function generateMessageArray(
   user_array: string[],
   user_answer: string[]
@@ -292,6 +324,13 @@ function generateMessageArray(
   return message;
 }
 
+/**
+ * Generate a random number in between the ranges of min and max. Inclusive.
+ *
+ * @param min The lower range
+ * @param max The upper range
+ * @returns A random number between min and max inclusive.
+ */
 function randomInt(min: number, max: number): number {
   // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min);
