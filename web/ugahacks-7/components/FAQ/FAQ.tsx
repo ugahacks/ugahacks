@@ -208,7 +208,10 @@ function generateMessage(type: string): ReactElement[] {
       break;
 
     case "About the Hackathon":
-      message = generateMessageArray(user_message_about, user_message_about);
+      message = generateMessageArray(
+        user_message_about,
+        user_message_answers_about
+      );
       break;
 
     default:
