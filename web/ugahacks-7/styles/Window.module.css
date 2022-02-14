@@ -9,6 +9,7 @@
 
 .url {
   font-size: 1.25em;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .bodyText {
@@ -31,6 +32,7 @@
   margin-top: 5%;
   resize: none;
   font-size: 2em;
+  /* font-family: 'Courier New', Courier, monospace; */
 }
 
 .sendBtn {
@@ -38,8 +40,11 @@
 }
 
 .blueBanner, .url, .bodyText, .heading {
-  font-family: 'monospace', Times, serif;
   padding-left: 2px;
+}
+
+.bodyText {
+  font-family: 'monospace', Times, serif;
 }
 
 .layer {
