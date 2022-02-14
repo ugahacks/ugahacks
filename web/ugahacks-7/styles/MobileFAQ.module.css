@@ -3,13 +3,14 @@
   background-color: white;
   color: #444;
   cursor: pointer;
-  padding: 5px;
+  padding: 12px;
   border-radius: .6em;
   width: 98.5%;
   border: none;
   text-align: left;
   outline: none;
   font-size: medium;
+  font-family:"pixelated MS Sans Serif";
 }
 .faq_answer {
   width: 98.5%;
@@ -19,7 +20,7 @@
   background-color: black;
   color: #444;
   color:white;
-  order: -1
+  order: -1;
 }
 .QandA {
   margin-top: 10px;
