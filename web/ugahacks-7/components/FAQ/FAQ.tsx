@@ -66,8 +66,8 @@ function CurrentTopic(): ReactElement {
 
   const scrollRef = useRef<null | HTMLDivElement>(null);
 
-  useEffect( () => {
-    scrollRef.current?.scrollIntoView({behavior: "smooth"});
+  useEffect(() => {
+    scrollRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [message]);
 
   const handleSend = (e: React.FormEvent) => {
@@ -212,14 +212,23 @@ function addToMessageArray(type: string, body: string): void {
   switch (type) {
     case "COVID":
       user_message_COVID.push(body);
+      user_message_answers_COVID.push(
+        responses[randomInt(0, responses.length) % responses.length]
+      );
       break;
 
     case "Logistics":
       user_message_logistics.push(body);
+      user_message_answers_logistics.push(
+        responses[randomInt(0, responses.length) % responses.length]
+      );
       break;
 
     case "About the Hackathon":
       user_message_about.push(body);
+      user_message_answers_about.push(
+        responses[randomInt(0, responses.length) % responses.length]
+      );
       break;
   } // switch
 } // addToMessageArray
@@ -251,7 +260,7 @@ function generateQAArray(
     faq.push(
       <li className={styles.answers}>
         <span className={styles.byte}>Byte: </span>
-        {answer_array[i % answer_array.length]}
+        {answer_array[i]}
       </li>
     );
   } // for
@@ -275,40 +284,18 @@ function generateMessageArray(
     message.push(
       <li className={styles.questions}>
         <span className={styles.byte}>Byte: </span>
-        {user_answer}
+        {user_answer[i % user_answer.length]}
       </li>
     );
-
   } // for
 
   return message;
 }
 
-function CurrentMessage(): ReactElement {
-  const [message, setMessage] = useState({
-    body: "",
-  });
-
-  const handleSend = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    e.preventDefault();
-  };
-
-  return (
-    <>
-      <div className="field-row-stacked">
-        <textarea
-          className={styles.inputChat}
-          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>): void =>
-            setMessage({ body: e.target.value })
-          }
-          value={message.body}
-          onSubmit={handleSend}
-        ></textarea>
-      </div>
-      <button className={styles.sendBtn}>Send Message</button>
-    </>
-  );
-} // sendMessage
+function randomInt(min: number, max: number): number {
+  // min and max included
+  return Math.floor(Math.random() * (max - min + 1) + min);
+} // randomInt
 
 /**
  * This function calls the generateFAQ() function to display all the faqs
