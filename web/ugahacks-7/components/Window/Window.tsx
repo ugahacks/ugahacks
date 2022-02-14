@@ -1,7 +1,7 @@
 import React, { ReactElement, useState } from "react";
 import Draggable from "react-draggable";
 import "98.css";
-import { faqQuestions } from "../FAQ/FAQ";
+import { faqWindow } from "../FAQ/FAQ";
 import { schedule } from "../Schedule/Schedule";
 import styles from "../../styles/Window.module.css";
 import Sponsors from "../../components/Sponsors";
@@ -73,11 +73,7 @@ const generateWindowStructure = (
           <ul className="tree-view">
             <li className={styles.url}>https://7.ugahacks.com/{windowTitle}</li>
           </ul>
-          {faqQuestions()}
-          <div className="field-row-stacked">
-            <textarea className={styles.inputChat}></textarea>
-          </div>
-          <button className={styles.sendBtn}>Send Message</button>
+          {faqWindow()}
         </>
       );
     case "schedule":

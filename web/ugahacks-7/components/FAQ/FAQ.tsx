@@ -2,10 +2,15 @@ import React, { ReactElement, useState } from "react";
 import Window from "../Window";
 import styles from "../../styles/FAQ.module.css";
 
-export { faqQuestions };
+export { faqWindow };
 
 // Create an array of topics that will be accessed by the option HTML tag
 const topics: string[] = ["COVID", "Logistics", "About the Hackathon"];
+
+// Message array
+const user_message: string[] = [
+  
+];
 
 // Question and answer arrays for each topic, add your questions and answers into the corresponding topic arrays
 const questions_COVID: string[] = [
@@ -20,21 +25,13 @@ const answers_COVID: string[] = [
   "All university students! We welcome all undergraduates and graduate students of all skill levels to attend. Professionals and other guests are welcome to attend as mentors or volunteers.",
 ];
 
-const questions_logistics: string[] = [
-  "Logistics Questions"
-];
+const questions_logistics: string[] = ["Logistics Questions"];
 
-const answers_logistics: string[] = [
-  "Logistics Answers"
-];
+const answers_logistics: string[] = ["Logistics Answers"];
 
-const questions_hackathon: string[] = [
-  "Questions about the Hackathon"
-];
+const questions_hackathon: string[] = ["Questions about the Hackathon"];
 
-const answers_hackathon: string[] = [
-  "Answers about the Hackathon"
-];
+const answers_hackathon: string[] = ["Answers about the Hackathon"];
 
 /**
  * Uses the useState hook to check which FAQs to display based on the topic. We
@@ -45,6 +42,17 @@ const answers_hackathon: string[] = [
  */
 function CurrentTopic(): ReactElement {
   const [topic, setTopic] = useState("COVID");
+
+  const [message, setMessage] = useState({
+    body: "",
+  });
+
+  const handleSend = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    e.preventDefault();
+
+    // Add to message array
+    user_message.push(e.target.value);
+  };
 
   const inputHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setTopic(e.target.value);
@@ -58,9 +66,18 @@ function CurrentTopic(): ReactElement {
         <option value={"Logistics"}>{topics[1]}</option>
         <option value={"About the Hackathon"}>{topics[2]}</option>
       </select>
-      <div className={styles.scroll}>
-        {generateFAQ(topic)}
+      <div className={styles.scroll}>{generateFAQ(topic)}</div>
+      <div className="field-row-stacked">
+        <textarea
+          className={styles.inputChat}
+          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>): void =>
+            setMessage({ body: e.target.value })
+          }
+          value={message.body}
+          onSubmit={handleSend}
+        ></textarea>
       </div>
+      <button className={styles.sendBtn}>Send Message</button>
     </>
   );
 }
@@ -69,15 +86,14 @@ const FAQ = (props: any): ReactElement => {
   const faq = "<h1>Hello</h1>";
   return (
     <>
-      <div >
-          <Window
-            windowTitle="FAQ"
-            windowType="chat-faq"
-            showTopBarButtons
-            width="40vw"
-            height="auto"
-            stateChanger = {props.stateChanger}
-          />
+      <div>
+        <Window
+          windowTitle="FAQ"
+          windowType="chat-faq"
+          showTopBarButtons
+          width="40vw"
+          height="auto"
+        />
       </div>
     </>
   );
@@ -151,13 +167,40 @@ function generateQAArray(
   return faq;
 } // generateQA
 
+function CurrentMessage(): ReactElement {
+  const [message, setMessage] = useState({
+    body: ""
+  });
+
+  const handleSend = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    e.preventDefault();
+
+  }
+
+  return (
+    <>
+      <div className="field-row-stacked">
+        <textarea
+          className={styles.inputChat}
+          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>): void =>
+            setMessage({body: e.target.value})
+          }
+          value={message.body}
+          onSubmit={handleSend}
+        ></textarea>
+      </div>
+      <button className={styles.sendBtn}>Send Message</button>
+    </>
+  );
+} // sendMessage
+
 /**
  * This function calls the generateFAQ() function to display all the faqs
  * in the chatbox. This function is being exported to Window.tsx.
  *
  * @returns {ReactElement} Returns the faq container chatbox.
  */
-function faqQuestions(): ReactElement {
+function faqWindow(): ReactElement {
   var type = "COVID";
 
   return (
