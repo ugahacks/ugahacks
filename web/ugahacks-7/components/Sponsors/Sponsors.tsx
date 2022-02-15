@@ -16,7 +16,7 @@ const tsys: string = "/icons/SponsorsImages/images/sponsorlogos/tsys.png";
 // tier 2
 const capitalone: string = "/icons/SponsorsImages/images/sponsorlogos/capitalone.png";
 const statefarm: string = "/icons/SponsorsImages/images/sponsorlogos/statefarm.png";
-// const figma: string = "/icons/SponsorsImages/images/sponsorlogos/";
+const figma: string = "/icons/SponsorsImages/images/sponsorlogos/figma.svg";
 // const deloitte: string = "/icons/SponsorsImages/images/sponsorlogos/";
 const credera: string = "/icons/SponsorsImages/images/sponsorlogos/credera.png";
 
@@ -25,7 +25,7 @@ const ugacombo: string = "/icons/SponsorsImages/images/sponsorlogos/uga-combo.pn
 const digitalocean: string = "/icons/SponsorsImages/images/sponsorlogos/DigitalOcean.svg";
 // const AWS
 // const Echo3D
-// const Sticker Mule
+const stickermule: string = "/icons/SponsorsImages/images/sponsorlogos/DigitalOcean.svg";
 // const Major League Hacking
 
     
