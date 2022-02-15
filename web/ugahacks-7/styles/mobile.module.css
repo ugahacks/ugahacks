@@ -5,7 +5,11 @@
 .body { 
     padding: 0;
     margin: 0;
-    display: flex
+    display: flex;
+    background-image: repeating-linear-gradient(to bottom, #E83151, #E83151 100px,  #2D0320 100px  ,
+     #2D0320 200px);
+  font-family:"pixelated MS Sans Serif";
+    
 }
 .leftSide, .rightSide, .middle {
   -webkit-overflow-scrolling: touch;
@@ -27,9 +31,6 @@
   width: 7%;
   height: 100%;
   min-height: 2000px;
-  background-color: #FDAFF6;
-  background-color: #2D0320;
-  background-color: #14AFF1;
 }
 
 .leftSide {
@@ -42,18 +43,8 @@
 .middle {
   width: 86%;
   float: left;
-  background-color: #04293A;
 }
-div.leftSide>div:nth-of-type(odd), div.rightSide>div:nth-of-type(odd) {
-    background-color: #04293A;
-    background-color: #E83151;
-  background-color: #21FA90;
-    background-color: #14AFF1;
-    background-color: #2D0320;
-}
-.block {
-    height: 100px;
-}
+
 
 
 .logoTitle {
@@ -78,12 +69,13 @@ div.leftSide>div:nth-of-type(odd), div.rightSide>div:nth-of-type(odd) {
   border-style: solid;
   padding: 4%;
   font-size: 1.6em;
+  border-width: .2.5em;
 } 
 .borderlink {
   border: #E83151;
   border-style: double;
   max-width: 100%;
-  border-width: .5em;
+  border-width: .6em;
   max-height: 0%;
   margin: 1.5em;
 }
@@ -165,5 +157,5 @@ div.leftSide>div:nth-of-type(odd), div.rightSide>div:nth-of-type(odd) {
 
 
 .spacing {
-  height: auto;
+  height: 5em;
 }

@@ -1,15 +1,9 @@
 import React from "react";
-// import { useState } from "react";
-// import { motion } from "framer-motion";
-// import Button from '@material-ui/core/Button';
 import Question from "./Questions";
-// import {collapseVariants} from "./CommonVariants"
 import styles from '../../styles/MobileFAQ.module.css'
 
 
 function FAQ(props: any) {
-
-  // const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>

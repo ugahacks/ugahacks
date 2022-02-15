@@ -9,8 +9,8 @@ import MobileSchedule from "./MobileSchedule";
 export function mobileSite(): ReactElement {
   return (
   <body className={mobileStyle.body}>
+
           <div className={mobileStyle.leftSide}>
-            <Sides />
           </div>
           <div className={mobileStyle.middle}>
             <div className={mobileStyle.title}>
@@ -21,6 +21,7 @@ export function mobileSite(): ReactElement {
               <span>&nbsp;&nbsp;</span>
               <p className={mobileStyle.topText}>February 18-20, 2022</p>
               <span>&nbsp;&nbsp;</span>
+                <a href="">Apply</a>
               </div>
               <div className={mobileStyle.borderlink}>
                 <a href="#about">
@@ -57,15 +58,7 @@ export function mobileSite(): ReactElement {
            <div id="schedule" className={mobileStyle.schedule}>
               <h4 className={mobileStyle.titleText}>Schedule</h4>
               <div className={mobileStyle.border}>
-                {/* <div className={mobileStyle.day}> */}
-                  {/* <div className={mobileStyle.schLinkDiv}>
-                      <a href="day1.html" className={mobileStyle.schLink1}>Day 1</a>
-                      <div className={mobileStyle.schLink2}>Day 2</div>
-                      <div className={mobileStyle.schLink3}>Day 3</div>
- */}
-
                 <MobileSchedule />
-                <div className={mobileStyle.spacing} />
               </div>
             </div>
             <div className={mobileStyle.pageSep} />
@@ -86,8 +79,8 @@ export function mobileSite(): ReactElement {
           </div>
 
           <div className={mobileStyle.rightSide}>
-            <Sides />
           </div>
+
         </body>
   );
 }
