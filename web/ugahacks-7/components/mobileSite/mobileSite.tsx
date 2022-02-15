@@ -21,7 +21,9 @@ export function mobileSite(): ReactElement {
               <span>&nbsp;&nbsp;</span>
               <p className={mobileStyle.topText}>February 18-20, 2022</p>
               <span>&nbsp;&nbsp;</span>
-                <a href="">Apply</a>
+              <div className={mobileStyle.regLinkDiv}>
+                <a className={mobileStyle.regLink} href="https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_3sjHnVW94c2Xkz4">Register here!</a>
+              </div>
               </div>
               <div className={mobileStyle.borderlink}>
                 <a href="#about">
@@ -44,8 +46,6 @@ export function mobileSite(): ReactElement {
                 </a>
               </div> */}
             </div>
-            <div className={mobileStyle.pageSep} />
-            <div className={mobileStyle.pageSep} />
             <div id="about" className={mobileStyle.about}>
               <h4 className={mobileStyle.titleText}>What is UGAHacks?</h4>
               <div className={mobileStyle.border}>
@@ -53,16 +53,12 @@ export function mobileSite(): ReactElement {
               <p>Even though submitting a project is the main objective, that&quot;s not all there is. We&quot;ll have mentors, free food, video game competitions, workshops and more. There&quot;s even a workshop at the event for anyone that still needs to find some teammates!</p>
               </div>
             </div>
-            <div className={mobileStyle.pageSep} />
-            <div className={mobileStyle.pageSep} />
            <div id="schedule" className={mobileStyle.schedule}>
               <h4 className={mobileStyle.titleText}>Schedule</h4>
               <div className={mobileStyle.border}>
                 <MobileSchedule />
               </div>
             </div>
-            <div className={mobileStyle.pageSep} />
-            <div className={mobileStyle.pageSep} />
             <div id="faq" className={mobileStyle.faq}>
               <h4 className={mobileStyle.titleText}>FAQ</h4>
               <div className={mobileStyle.border}>

@@ -39,6 +39,11 @@
   height: 50vh;
 }
 
+.faq-question-wrapper {
+  scrollbar-width: thin;
+  scrollbar-color: slategrey rbga(0, 0, 0, 0);
+}
+
 .faq_question_wrapper::-webkit-scrollbar {
   width: 0.5em;
 
@@ -54,6 +59,7 @@
 
 .active .faq_question:hover {
   background-color: #ddd;
+  padding: 12px;
 }
 
 .faq_question:after {
@@ -87,4 +93,10 @@
 
 .hidden_questions {
   overflow: hidden;
+}
+
+.faq_link {
+  color: #FF901F;
+  text-decoration: underline;
+
 }
