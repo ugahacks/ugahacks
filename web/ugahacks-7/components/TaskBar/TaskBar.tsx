@@ -9,7 +9,7 @@ export function TaskBar(): ReactElement {
         </button>
       </div>
       <div className={styles.time}>
-        Hammer time
+        Reimagine your world one pixel at a time.
       </div>
     </div>
   );

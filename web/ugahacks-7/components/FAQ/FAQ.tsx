@@ -37,9 +37,9 @@ const user_message_about: string[] = [];
 
 // Response to choose from
 const responses: string[] = [
-  "Just eat more food bro",
-  "My name is Jeffrey",
-  "Just beat up Logistics team",
+  "Stay hydrated. This is a threat.",
+  "We've been trying to reach you about your car's extended warranty",
+  "Something funny"
 ];
 
 // Response to user message array
@@ -317,7 +317,7 @@ function generateMessageArray(
       </li>
     );
     message.push(
-      <li className={styles.questions}>
+      <li className={styles.answers}>
         <span className={styles.byte}>Byte: </span>
         {user_answer[i % user_answer.length]}
       </li>
