@@ -1,17 +1,26 @@
-.sponsors-section {
-    background-image: url(/icons/SponsorsImages/images/bp2animated.svg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover !important;
-    min-height: 100vh;
-    margin: auto;
+.section {
     display: flex;
+    max-height: 55vh;
+    overflow-y: scroll;
+    overflow-x: auto;
+    height: 100%;
   }
   
   .sponsors_container {
     text-align: center;
     margin: auto;
-    width: 65%;
+  }
+
+  .logos {
+    max-width: 100% !important;
+    width: auto;
+    height: auto;
+  }
+
+  .logolinks {
+    max-width: 100% !important;
+    width: 100%;
+    height: 100%;
   }
   
   .logo_container {
@@ -30,7 +39,7 @@
   .tier2,
   .partner {
     margin: 10px;
-    filter: brightness(0) invert(1);
+    filter: brightness(0);
   }
   
   #acm {
@@ -85,51 +94,4 @@
     margin-top: 30px;
   }
   
-  @media only screen and (max-width: 480px) {
-    .sponsors-container {
-      width: 90%;
-    }
-  
-    .tier5 {
-      width: 90%;
-    }
-  
-    .tier4 {
-      width: 85%;
-    }
-  
-    .tier3 {
-      width: 55%;
-    }
-  
-    .tier2 {
-      width: 45%;
-    }
-  
-    .loft {
-      width: 35%;
-    }
-  
-    .logo-container {
-      flex-direction: column;
-    }
-  
-    .sponsors-container h2 {
-      font-size: 2.2em;
-    }
-  
-    #ugacombologo {
-      width: 95%;
-    }
-  
-    .packet-text p {
-      width: 100%;
-    }
-  }
-  
-  @media only screen and (min-width: 700px) and (max-width: 1750px) {
-    .sponsors-container {
-      width: 80%;
-    }
-  }
   
