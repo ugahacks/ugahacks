@@ -1,13 +1,11 @@
-/* @font-face {
-  font-family: pixel;
-  src: url("./vp-pixel/VP\ Pixel\ Simplified\ -\ Font\ by\ VP\ Pixel/VPPixel-Simplified");
-} */
 .body { 
     padding: 0;
     margin: 0;
     display: flex;
-    background-image: repeating-linear-gradient(to bottom, #E83151, #E83151 100px,  #2D0320 100px  ,
-     #2D0320 200px);
+    /* background-image: repeating-linear-gradient(to bottom, #E83151, #E83151 100px,  #2D0320 100px  ,
+     #2D0320 200px); */
+    /* background-image: linear-gradient(to right,#2D0320,#E83151, #2D0320); */
+    background-image: linear-gradient(#2D0320,#E83151, #2D0320);
   font-family:"pixelated MS Sans Serif";
     
 }
@@ -22,11 +20,6 @@
 
 
 }
-/* .pageSep {
-  background-color: white;
-  height: 2px;
-  margin-top: 15px;
-} */
 .leftSide, .rightSide {
   width: 7%;
   height: 100%;
@@ -83,6 +76,7 @@
   color: #FF901F;
   padding: .35em;
   margin: 0;
+
 }
 
 
@@ -110,6 +104,8 @@
   text-align: center;
  border-width: .5em;
   background-color: #392B58;
+  margin-bottom: 2em;
+  margin-top: 3em;
 
 }
 .about {
@@ -121,9 +117,7 @@
   border-style: groove;
   border-radius: 3em;
   border-width: .5em;
-
-
-  /* background-color: #04293A; */
+  margin-bottom: 2em;
 }
 .schedule {
   background-color: #392B58;
@@ -137,8 +131,7 @@
   color: white;
   padding: 5%;
   border-radius: 3em;
-
-
+  margin-bottom: 2em;
 }
 .faq {
   background-color: #392B58;
@@ -150,12 +143,23 @@
   border-style: solid;
   border-style: groove;
   border-width: .5em;
-
   border-radius: 3em;
-
+  margin-bottom: 3em;
 }
 
 
 .spacing {
   height: 5em;
+}
+.regLink {
+  color: white;
+  font-size: 2em;
+  padding-top: 1em;
+  padding: .2em;
+  margin: .2em;
+  text-decoration: none;
+}
+.regLinkDiv {
+  margin-bottom: 1.3em;
+  text-decoration: underline;
 }

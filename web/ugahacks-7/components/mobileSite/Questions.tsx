@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {collapseVariants, hoverVariants} from "./CommonVariants";
 import styles from '../../styles/MobileFAQ.module.css'
+import { faqWindow } from "../FAQ/FAQ";
 
 const screwVariants = {
   open: { rotate: 45 },
@@ -34,7 +35,7 @@ function Question(props: any) {
         animate={isOpen ? "open" : "closed"}
 
       >
-        <p>{props.answer} <a href={props.link}>{props.linktxt}</a></p>
+        <p>{props.answer} <a className={styles.faq_link} href={props.link}>{props.linktxt}</a></p>
       </motion.div>
       </div>
 
