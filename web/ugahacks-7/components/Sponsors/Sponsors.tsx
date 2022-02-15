@@ -51,7 +51,6 @@ function sponsors(): ReactElement {
                 <ul className="tree-view">
             <section className={styles.section}>
                     <div className={styles.sponsors_container}>
-                        <div>Sponsors</div>
                         <div className={styles.tier5}>
                         <SponsorLogo
                             image={ncr}
