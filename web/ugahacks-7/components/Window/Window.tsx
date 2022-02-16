@@ -4,7 +4,7 @@ import "98.css";
 import { faqWindow } from "../FAQ/FAQ";
 import { schedule } from "../Schedule/Schedule";
 import styles from "../../styles/Window.module.css";
-import Sponsors from "../../components/Sponsors";
+import { sponsors } from "../Sponsors/Sponsors";
 import SponsorLogo from "../../components/Sponsors";
 
 // Sign up link
@@ -15,7 +15,7 @@ interface WindowProps {
   windowTitle: string;
   width?: string;
   height?: string;
-  windowType: "browser" | "chat" | "chat-faq" | "schedule" | "image";
+  windowType: "browser" | "chat" | "chat-faq" | "schedule" | "image" | "sponsors";
   showTopBarButtons: boolean;
   windowHeading?: string;
   windowBodyText?: string;
@@ -102,20 +102,12 @@ const generateWindowStructure = (
       );
     case "sponsors":
       return (
-        <div className="layer">
+        <>
           <ul className="tree-view">
-            {sponsorList &&
-              sponsorList.map(
-                (data: { id: number; image: string; alt: string }) => (
-                  <li key={data.id}>
-                    <span>
-                      <SponsorLogo />
-                    </span>
-                  </li>
-                )
-              )}
+            <li className={styles.url}>https://7.ugahacks.com/{windowTitle}</li>
           </ul>
-        </div> // Add similar structure to chat layout with mapping over an obj with image data - See Sponsors section on Hacks 6
+          {sponsors()}
+        </>
       );
   }
 };
@@ -137,7 +129,7 @@ const Window = ({
     <div className={styles.draggable_container}>
       <Draggable
         handle=".title-bar"
-        defaultPosition={{ x: 550, y: 75 }}
+        defaultPosition={{ x: 450, y: 75 }}
         bounds="parent"
       >
         <div className="window" style={{ width: width, height: height }}>

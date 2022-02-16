@@ -22,7 +22,7 @@ function NavBar(props: any): ReactElement {
                 {(active === "About") && <About stateChanger={setActive}/>}
                 {active === "FAQ" && <FAQ stateChanger={setActive}/>}
                 {active === "Schedule" && <Schedule stateChanger={setActive}/>}
-                {/* {active === "Sponsors" && <Sponsors stateChanger={setActive}/>} */}
+                {active === "Sponsors" && <Sponsors stateChanger={setActive}/>}
             </div>
         </div>
     )

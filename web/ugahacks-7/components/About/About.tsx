@@ -1,6 +1,7 @@
 import { filterProps } from "framer-motion";
 import React, { ReactElement } from "react";
 import Window from "../Window";
+import {motion, AnimatePresence} from 'framer-motion';
 
 const About = (props: any): ReactElement => {
   const AboutContent =
@@ -10,16 +11,20 @@ const About = (props: any): ReactElement => {
   We will have mentors, free food, video game competitions, workshops and more. There's even a workshop at the event for \
   anyone that still needs to find some teammates!";
   return (
-    <Window
-      windowTitle="About"
-      windowType="browser"
-      windowBodyText={AboutContent}
-      windowHeading="What is UGAHacks?"
-      showTopBarButtons
-      width="40vw"
-      height="auto"
-      stateChanger = {props.stateChanger}
-    />
+    // <AnimatePresence exitBeforeEnter={true}>
+    //   <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}
+    //     transition={{ duration: 0.5 }} exit={{ scale: 0 }}>
+        <Window
+          windowTitle="About"
+          windowType="browser"
+          windowBodyText={AboutContent}
+          windowHeading="What is UGAHacks?"
+          showTopBarButtons
+          width="40vw"
+          height="auto"
+        />
+    //   </motion.div>
+    // </AnimatePresence>
   );
 };
 
