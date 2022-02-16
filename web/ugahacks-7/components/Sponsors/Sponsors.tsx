@@ -118,14 +118,14 @@ function sponsors(): ReactElement {
                             </div>
                         </div>
                         <div className={styles.tier_container}>
-                            <div className={styles.tier1}>
+                            {/* <div className={styles.tier1}>
                                 <SponsorLogo
                                     image={aws}
                                     alt="AWS logo"
                                     tier="tier1"
                                     link=""
                                 />
-                            </div>
+                            </div> */}
                             <div className={styles.ugacombologo} >
                                 <SponsorLogo
                                     image={ugacombo}
