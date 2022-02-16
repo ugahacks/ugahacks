@@ -5,6 +5,7 @@ import FAQ from "./MobileFAQ";
 import Image from 'next/image';
 import titleWithByte from '../../public/TitlewithByte.png'
 import MobileSchedule from "./MobileSchedule";
+import MobileSponsors from "./MobileSponsers";
 
 export function mobileSite(): ReactElement {
   return (
@@ -40,11 +41,11 @@ export function mobileSite(): ReactElement {
                   <h3 className={mobileStyle.link}>FAQ</h3>
                 </a>
               </div>
-              {/* <div className={mobileStyle.borderlink}>
+              <div className={mobileStyle.borderlink}>
                 <a href="#sponsers">
                   <h3 className={mobileStyle.link} >Sponsers</h3>
                 </a>
-              </div> */}
+              </div>
             </div>
             <div id="about" className={mobileStyle.about}>
               <h4 className={mobileStyle.titleText}>What is UGAHacks?</h4>
@@ -66,11 +67,12 @@ export function mobileSite(): ReactElement {
               </div>
 
             </div>
-            {/* <div id="sponsers" className={mobileStyle.sponsers}> */}
-              {/* <h4 className={mobileStyle.titleText}>Sponsers</h4> */}
-              {/* <div className={mobileStyle.border}> */}
-              {/* </div> */}
-            {/* </div> */}
+            <div id="sponsers" className={mobileStyle.sponsers}>
+              <h4 className={mobileStyle.titleText}>Sponsers</h4>
+              <div className={mobileStyle.border}> 
+              <MobileSponsors />
+              </div>
+            </div> 
             
           </div>
 

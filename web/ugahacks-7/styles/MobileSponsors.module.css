@@ -1,0 +1,22 @@
+.tier5,
+  .tier4,
+  .tier3,
+  .tier2,
+  .tier1,
+  .ugacombologo,
+  .partner {
+    margin: 10px;
+    filter: brightness(0) invert(1);
+    width: auto;
+  }
+ .section {
+     padding-top: 1em;
+    display: block;
+    max-height: 67vh;
+    overflow-y: scroll;
+    height: 100%;
+    justify-items: center;
+    justify-content: space-evenly;
+    display: flex;
+  }
+  
