@@ -48,14 +48,15 @@ const generateWindowStructure = (
             <li>
               <p className={styles.bodyText}>{bodyText}</p>
               <div className={styles.centerText}>
-                <a
-                  href={signUpLink}
-                  className={styles.registerLink}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Register Here!
-                </a>
+                <button className={styles.packet}>
+                  <a
+                    href={signUpLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Register Here!
+                  </a>
+                </button>
               </div>
             </li>
           </ul>
