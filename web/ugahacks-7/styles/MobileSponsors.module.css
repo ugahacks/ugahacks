@@ -3,11 +3,17 @@
   .tier3,
   .tier2,
   .tier1,
+  .deloitte,
+  .aws,
   .ugacombologo,
-  .partner {
-    margin: 10px;
+  .mlh,
+  .partner, .tier2figma{
+    margin-top: 10px;
+    margin-bottom: 10px;
     filter: brightness(0) invert(1);
-    width: auto;
+    margin-left: auto ;
+    margin-right: auto ;
+    display: block;
   }
  .section {
      padding-top: 1em;
@@ -19,4 +25,31 @@
     justify-content: space-evenly;
     display: flex;
   }
-  
+  .tier2 {
+      margin-top: .9em;
+      margin-bottom: 1.9em;
+      padding-top: .5em;
+  }
+  .tier2figma {
+      margin-top: 0em;
+      margin-bottom: 0em;
+      width: 200px;
+
+  }
+.deloitte {
+    margin-bottom: 0em;
+}
+.aws {
+      margin-top: .9em;
+      margin-bottom: 1.9em;
+      padding-top: .5em;
+      margin-left: 2em;
+
+}
+.mlh {
+      margin-top: .9em;
+      margin-bottom: 1.9em;
+      padding-top: .5em;
+      margin-left: 1em;
+
+}

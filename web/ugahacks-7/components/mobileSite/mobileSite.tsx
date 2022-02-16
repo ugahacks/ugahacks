@@ -43,7 +43,7 @@ export function mobileSite(): ReactElement {
               </div>
               <div className={mobileStyle.borderlink}>
                 <a href="#sponsers">
-                  <h3 className={mobileStyle.link} >Sponsers</h3>
+                  <h3 className={mobileStyle.link} >Sponsors</h3>
                 </a>
               </div>
             </div>
@@ -68,7 +68,7 @@ export function mobileSite(): ReactElement {
 
             </div>
             <div id="sponsers" className={mobileStyle.sponsers}>
-              <h4 className={mobileStyle.titleText}>Sponsers</h4>
+              <h4 className={mobileStyle.titleText}>Sponsors</h4>
               <div className={mobileStyle.border}> 
               <MobileSponsors />
               </div>

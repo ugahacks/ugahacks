@@ -24,6 +24,7 @@ const digitalocean: string = "/icons/SponsorsImages/images/sponsorlogos/DigitalO
 const aws: string = "/icons/SponsorsImages/images/sponsorlogos/aws.png";
 const echo3d = "/icons/SponsorsImages/images/sponsorlogos/echo3d.png";
 const stickermule: string = "/icons/SponsorsImages/images/sponsorlogos/stickermule.svg";
+const mlh: string = "/icons/SponsorsImages/images/sponsorlogos/mlh-logo-black.png";
 // const Major League Hacking
 
 
@@ -38,8 +39,8 @@ function MobileSponsors(): ReactElement {
                                 alt="NCR logo"
                                 tier="tier5"
                                 link="https://www.hackathon.ncrcloud.com/"
-                                width="400px"
-                                height="180px"
+                                width="300px"
+                                height="100px"
                             />
                         </div>
                         <div className={styles.tier4}>
@@ -48,6 +49,9 @@ function MobileSponsors(): ReactElement {
                                 alt="BlackRock logo"
                                 tier="tier4"
                                 link="https://careers.blackrock.com/early-careers/"
+                                width="300px"
+                                height="180px"
+
                             />
                         </div>
                         <div className={styles.tier3}>
@@ -56,6 +60,8 @@ function MobileSponsors(): ReactElement {
                                 alt="TSYS logo"
                                 tier="tier3"
                                 link="https://tsys.com/"
+                                width="300px"
+                                height="180px"
                             />
                         </div>
                             <div className={styles.tier2}>
@@ -64,6 +70,8 @@ function MobileSponsors(): ReactElement {
                                     alt="Capital One logo"
                                     tier="tier2"
                                     link="https://www.capitalone.com/"
+                                width="320px"
+                                height="110px"
                                 />
                             </div>
                             <div className={styles.tier2}>
@@ -72,6 +80,8 @@ function MobileSponsors(): ReactElement {
                                     alt="State Farm logo"
                                     tier="tier2"
                                     link="https://www.statefarm.com/careers"
+                                width="500px"
+                                height="130px"
                                 />
                             </div>
                             <div className={styles.tier2}>
@@ -80,14 +90,18 @@ function MobileSponsors(): ReactElement {
                                     alt="Deloitte logo"
                                     tier="tier2"
                                     link="https://www2.deloitte.com/us/en.html"
+                                width="300px"
+                                height="180px"
                                 />
                             </div>
-                            <div className={styles.tier2}>
+                            <div id={styles.figma} className={styles.tier2figma}>
                                 <MobileSponsersImg
                                     image={figma}
                                     alt="Figma logo"
                                     tier="tier2"
                                     link="https://www.figma.com/education/students/"
+                                width="300px"
+                                height="180px"
                                 />
                             </div>
                             <div className={styles.tier2}>
@@ -96,14 +110,18 @@ function MobileSponsors(): ReactElement {
                                     alt="Credera logo"
                                     tier="tier2"
                                     link="https://www.credera.com/"
+                                width="300px"
+                                height="180px"
                                 />
                             </div>
-                            <div className={styles.tier1}>
+                            <div className={styles.aws}>
                                 <MobileSponsersImg
                                     image={aws}
                                     alt="AWS logo"
                                     tier="tier1"
-                                    link=""
+                                    link="https://aws.amazon.com/"
+                                width="170px"
+                                height="80px"
                                 />
                             </div>
                             <div className={styles.ugacombologo} >
@@ -112,6 +130,8 @@ function MobileSponsors(): ReactElement {
                                     alt="UGA Funding Sources logo"
                                     tier="tier1"
                                     link="https://www.cs.uga.edu/"
+                                width="400px"
+                                height="180px"
                                 />
                             </div>
                             <div className={styles.tier1}>
@@ -120,6 +140,8 @@ function MobileSponsors(): ReactElement {
                                     alt="Digital Ocean logo"
                                     tier="tier1"
                                     link="https://try.digitalocean.com/developer-cloud/"
+                                width="300px"
+                                height="180px"
                                 />
                             </div>
                             <div className={styles.tier1}>
@@ -128,6 +150,8 @@ function MobileSponsors(): ReactElement {
                                     alt="Stickermule logo"
                                     tier="tier1"
                                     link="https://www.stickermule.com/"
+                                width="300px"
+                                height="180px"
                                 />
                             </div>
                             <div className={styles.tier1}>
@@ -136,7 +160,21 @@ function MobileSponsors(): ReactElement {
                                     alt="Echo3D logo"
                                     tier="tier1"
                                     link="https://www.echo3d.co/"
+                                width="300px"
+                                height="180px"
                                 />
+                                </div>
+                            <div className={styles.mlh}>
+                                <MobileSponsersImg
+                                    image={mlh}
+                                    alt="mlh logo"
+                                    tier="tier1"
+                                    link=""
+                                width="200px"
+                                height="70px"
+                                />
+
+
                         </div>
                     </div>
                 </section>
