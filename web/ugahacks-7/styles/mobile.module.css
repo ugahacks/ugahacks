@@ -144,9 +144,22 @@
   border-style: groove;
   border-width: .5em;
   border-radius: 3em;
+  margin-bottom: 2em;
+}
+.sponsers {
+  background-color: #392B58;
+  color: white;
+  padding: 5%;
+  border: #FDAFF6;
+  border-style: solid;
+  border-style: groove;
+  border-radius: 1em;
+  border-width: .5em;
+  color: white;
+  padding: 5%;
+  border-radius: 3em;
   margin-bottom: 3em;
 }
-
 
 .spacing {
   height: 5em;
