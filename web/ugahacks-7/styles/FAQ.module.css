@@ -68,3 +68,8 @@
 .sendBtn {
   font-size: 1.75em;
 }
+
+.link {
+  color: blue !important;
+  text-decoration: underline !important;
+}

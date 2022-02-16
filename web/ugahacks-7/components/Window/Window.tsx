@@ -7,6 +7,10 @@ import styles from "../../styles/Window.module.css";
 import Sponsors from "../../components/Sponsors";
 import SponsorLogo from "../../components/Sponsors";
 
+// Sign up link
+const signUpLink: string =
+  "https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_82Gn6acN70D0wg6";
+
 interface WindowProps {
   windowTitle: string;
   width?: string;
@@ -17,7 +21,7 @@ interface WindowProps {
   windowBodyText?: string;
   position?: string;
   dataList?: [{ id: number; sender: string; message: string }];
-  sponsorList?: [{ id: number; image: string; alt: string}];
+  sponsorList?: [{ id: number; image: string; alt: string }];
   stateChanger?: any;
 }
 
@@ -27,7 +31,7 @@ const generateWindowStructure = (
   heading = "",
   bodyText = "",
   dataList?: [{ id: number; sender: string; message: string }],
-  sponsorList?: [{ id: number; image: string; alt: string}],
+  sponsorList?: [{ id: number; image: string; alt: string }]
 ): ReactElement => {
   switch (type) {
     case "browser":
@@ -43,6 +47,16 @@ const generateWindowStructure = (
             </li>
             <li>
               <p className={styles.bodyText}>{bodyText}</p>
+              <div className={styles.centerText}>
+                <a
+                  href={signUpLink}
+                  className={styles.registerLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Register Here!
+                </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -95,16 +109,14 @@ const generateWindowStructure = (
                 (data: { id: number; image: string; alt: string }) => (
                   <li key={data.id}>
                     <span>
-                      <SponsorLogo 
-                       
-                      />
+                      <SponsorLogo />
                     </span>
                   </li>
                 )
               )}
           </ul>
         </div> // Add similar structure to chat layout with mapping over an obj with image data - See Sponsors section on Hacks 6
-      )
+      );
   }
 };
 
@@ -122,8 +134,12 @@ const Window = ({
 }: WindowProps): ReactElement => {
   const [active, setActive] = useState(true);
   const win = (
-    <div className={styles.draggable_container} >
-      <Draggable handle=".title-bar" defaultPosition={{ x: 550, y: 75 }} bounds="parent">
+    <div className={styles.draggable_container}>
+      <Draggable
+        handle=".title-bar"
+        defaultPosition={{ x: 550, y: 75 }}
+        bounds="parent"
+      >
         <div className="window" style={{ width: width, height: height }}>
           <div className={`title-bar ${styles.blueBanner}`}>
             <div className="title-bar-text" style={{ fontSize: "1.75em" }}>
@@ -133,7 +149,14 @@ const Window = ({
               <div className="title-bar-controls">
                 {/* <button aria-label="Minimize" style={{ padding: "1em", backgroundSize: "1em", backgroundPosition: "50% 80%" }} /> */}
                 {/* <button aria-label="Maximize" style={{ padding: "1em", backgroundSize: "1.3em" }} /> */}
-                <button aria-label="Close" style={{ padding: "1em", backgroundSize: "1.3em" }} onClick={() => {setActive(false); stateChanger("")}} />
+                <button
+                  aria-label="Close"
+                  style={{ padding: "1em", backgroundSize: "1.3em" }}
+                  onClick={() => {
+                    setActive(false);
+                    stateChanger("");
+                  }}
+                />
               </div>
             )}
           </div>
@@ -144,7 +167,7 @@ const Window = ({
               windowHeading,
               windowBodyText,
               dataList,
-              sponsorList,
+              sponsorList
             )}
           </div>
         </div>
@@ -152,14 +175,11 @@ const Window = ({
     </div>
   );
 
-if (active) {
-  return win;
-}
-else {
-  return (
-    <div></div>
-  )
-}
+  if (active) {
+    return win;
+  } else {
+    return <div></div>;
+  }
 };
 
 export default Window;
