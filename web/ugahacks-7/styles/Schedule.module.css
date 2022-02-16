@@ -13,6 +13,7 @@
   margin-bottom: 5%;
   margin-top: 5%;
   resize: none;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .scheduleContainer {
@@ -21,10 +22,12 @@
 
 .scheduleText {
   font-size: 1.5em;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .answers {
   font-size: 1.5em;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .window {
@@ -36,6 +39,7 @@
   width: 100%;
   font-size: 1.5em;
   font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .dates {

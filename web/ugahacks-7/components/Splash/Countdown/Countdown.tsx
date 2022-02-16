@@ -3,8 +3,9 @@ import styles from "../../../styles/countdown.module.css";
 
 const Countdown = (): ReactElement => {
   const [countdownDate, setCountdownDate] = useState(
-    new Date("02/18/2022").getTime()
+    new Date(2022, 1, 18, 18).getTime() 
   );
+  console.log( new Date());
   const [state, setState] = useState({
     days: 0,
     hours: 0,

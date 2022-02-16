@@ -3,7 +3,6 @@ import { BrowserView, MobileView } from "react-device-detect";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Splash from "../components/Splash";
-import About from "../components/About";
 import MobileSite from "../components/mobileSite";
 import NavBar from "../components/NavBar";
 import Sponsors from "../components/Sponsors";

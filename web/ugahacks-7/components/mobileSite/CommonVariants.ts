@@ -1,5 +1,5 @@
 const collapseVariants = {
-  open: { height: "auto",},
+  open: { height: "auto", transition: {duration:.2}},
   closed: {
     height: 0,
     transition: {

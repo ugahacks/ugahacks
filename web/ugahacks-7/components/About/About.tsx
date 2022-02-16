@@ -1,8 +1,9 @@
+import { filterProps } from "framer-motion";
 import React, { ReactElement } from "react";
 import Window from "../Window";
 import {motion, AnimatePresence} from 'framer-motion';
 
-const About = (): ReactElement => {
+const About = (props: any): ReactElement => {
   const AboutContent =
     "UGAHacks is an annual hackathon organized by fellow students at the University of Georgia in \
   Athens, Georgia. Hackathons are all about groups of dedicated people coming together to create something amazing in \

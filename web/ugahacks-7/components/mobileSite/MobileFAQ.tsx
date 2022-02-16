@@ -1,26 +1,34 @@
 import React from "react";
-// import { useState } from "react";
-// import { motion } from "framer-motion";
-// import Button from '@material-ui/core/Button';
 import Question from "./Questions";
-// import {collapseVariants} from "./CommonVariants"
+import styles from '../../styles/MobileFAQ.module.css'
 
 
-function FAQ(props) {
-
-  // const [isOpen, setIsOpen] = useState(false);
+function FAQ(props: any) {
 
   return (
     <>
-      <section className="section faq-section" id="faq">
-        <div className="faq-container">
+      <section className={styles.faq_section} id="faq">
+        <div className={styles.faq_container}>
 
 
-          <div className="faq-question-wrapper">
+          <div className={styles.faq_question_wrapper}>
+            <Question
+              question="Where can I sign up?"
+              answer="You can sign up through this" 
+              link= "https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_82Gn6acN70D0wg6"
+              linktxt="link"
+              />
             <Question
               question="Where will it be held this year?"
               answer="UGAHacks 7 will be held at MLC."
             />
+
+            <Question
+              question="What time should I get to the hackathon and do I have to go to all of the events?"
+              answer="On Friday, check-in opens at 5pm. Tate Free Parking opens at 6. 
+You can pick and choose which workshops, events, and ceremonies you attend, but we highly encourage you to make the most out of your hackathon experience by attending most. 
+You are not obligated to sleep at the hackathon, and can leave and go as you would like."
+              />
 
             <Question
               question="How much will it cost to sign up?"
@@ -29,13 +37,14 @@ function FAQ(props) {
 
             <Question
               question="Can I apply for travel reimbursements?"
-              answer="No, we will not be providing reimbursements for travel this year because the event will be held virtually."
+              answer="No, we will not be providing reimbursements for travel this year."
             />
 
             <Question
             question="How do I access a virtual workshop?"
-            answer="We'll announce the Google Meet link for workshops on Slack ahead of time."
+            answer="We'll announce the link for workshops on Slack ahead of time."
             />
+
 
             <Question
               question="Can I start working on my project before the event?"
@@ -61,6 +70,11 @@ function FAQ(props) {
             <Question
               question="How many people can I have on my team?"
               answer="There is no hard limit, but we recommend teams be at most 4 people, as we only have prizes for 4 people per team."
+            />
+            <Question
+              question="Is the hackathon virtual or hybrid?"
+              answer="The hackathon will be hybrid this year. Your acceptance later will clearly state whether you will be in-person or virtual. 
+If you are attending in person, it will be a decentralized event. So, we will have two locations MLC and Studio 225."
             />
 
             <Question

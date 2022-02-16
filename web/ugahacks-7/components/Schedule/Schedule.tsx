@@ -1,6 +1,7 @@
 import React, { ReactElement, useState } from "react";
 import Window from "../Window";
 import styles from "../../styles/Schedule.module.css";
+import { filterProps } from "framer-motion";
 
 export { schedule };
 
@@ -9,42 +10,44 @@ const days: string[] = ["February 18, 2022", "February 19, 2022", "February 20, 
 
 // Schedule array for February 18
 const schedule_18: string[] = [
-    "Eat Food",
-    "DRINK",
-    "SHOTS",
-    "BEAT UP LOGISTICS TEAM",
+    "Opening Ceremony",
+    "Dinner",
 ];
 
 // Schedule array for February 19
 const schedule_19: string[] = [
-    "EAT FOOD",
-    "EATING MORE FOOD",
-    "FREE FOOD"
+    "Breakfast",
+    "Lunch",
+    "Dinner",
 ];
 
 // Schedule array for February 20
 const schedule_20: string[] = [
-    "Eating Competition"
+    "Submissions Due",
+    "Breakfast",
+    "Judging Expo",
+    "Closing Ceremony",
 ];
 
 // Times for corresponding schedules on February 18
 const time_18: string[] = [
-    "5:30 PM - 6:00 PM EST",
     "6:30 PM - 7:00 PM EST",
     "7:00 PM - 8:00 PM EST",
-    "8:00 PM - 11:00 PM EST",
 ]; 
 
 // Times for corresponding schedules on February 19
 const time_19: string[] = [
-    "8:00 PM EST",
-    "9:00 PM EST",
-    "12:00 PM EST",
+    "8:00 AM - 9:00 AM EST",
+    "12:00 PM - 1:00 PM EST",
+    "7:00 PM - 8:00 PM EST",
 ]; 
 
 // Times for corresponding schedules on February 20
 const time_20: string[] = [
-    "12:00 PM EST"
+    "8:00 AM EST",
+    "8:00 AM - 9:00 AM EST",
+    "9:30 AM - 1:00 PM EST",
+    "2:30 PM - 3:00 PM EST",
 ]; 
 
 function CurrentDay(): ReactElement {
@@ -67,7 +70,7 @@ function CurrentDay(): ReactElement {
   );
 }
 
-const Schedule = (): ReactElement => {
+const Schedule = (props: any): ReactElement => {
   return (
     <>
       <div>
@@ -77,6 +80,7 @@ const Schedule = (): ReactElement => {
           showTopBarButtons
           width="40vw"
           height="auto"
+          stateChanger = {props.stateChanger}
         />
       </div>
     </>
@@ -118,12 +122,6 @@ function generateTimeScheduleArray(
     schedule.push(
       <li className={styles.scheduleText}>
         <span className={styles.time}>{time_array[i]}: </span>
-        {schedule_array[i]}
-      </li>
-    );
-    schedule.push(
-      <li className={styles.scheduleText}>
-        <span className={styles.time2}>{time_array[i]}: </span>
         {schedule_array[i]}
       </li>
     );

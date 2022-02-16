@@ -1,0 +1,52 @@
+
+.day1, .day2, .day3 {
+  display: none;
+    color: #f2f2f2;
+    font-size: 19px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.timeSlot {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding-top: .5em;
+  padding-bottom: 2em;
+
+  font-size: medium;
+}
+.event, .time {
+  width: 50%;
+  height: 100%;
+}
+.time {
+ float: left;
+}
+.event {
+  position: relative;
+  float: right;
+  text-align: center;
+}
+.button {
+  background-color: #FF901F;
+  border: none;
+  display: inline-block;
+  box-shadow: 3px 4px 1px black;
+  margin-left: .2em;
+  margin-right: .2em;
+  font-size: .9em;
+}
+.button:hover, .button:active {
+  box-shadow: none; 
+  border: 2px solid black;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.date {
+  padding-top: 1em;
+  text-align: center;
+  font-size: 1.4em;
+}

@@ -1,21 +1,30 @@
 import React, { ReactElement } from "react";
 import mobileStyle from "../../styles/mobile.module.css";
 import Sides from "../Sides";
+import FAQ from "./MobileFAQ";
 import Image from 'next/image';
-import titleWithByte from './TitlewithByte.png'
+import titleWithByte from '../../public/TitlewithByte.png'
+import MobileSchedule from "./MobileSchedule";
 
 export function mobileSite(): ReactElement {
   return (
   <body className={mobileStyle.body}>
+
           <div className={mobileStyle.leftSide}>
-            <Sides />
           </div>
           <div className={mobileStyle.middle}>
             <div className={mobileStyle.title}>
+              <div className={mobileStyle.logo}>
               <Image className={mobileStyle.logoTitle} src={titleWithByte} alt="logo"/>
-              <p className={mobileStyle.topText} style={{margin: "0"}}>Reimagine your world one pixel at a time.</p>
-              <p className={mobileStyle.topText}>Febuary 18-20, 2022</p>
+              <p className={mobileStyle.topText} style={{margin: "0"}}>Reimagine your world</p>
+              <p className={mobileStyle.topText}> one pixel at a time.</p>
               <span>&nbsp;&nbsp;</span>
+              <p className={mobileStyle.topText}>February 18-20, 2022</p>
+              <span>&nbsp;&nbsp;</span>
+              <div className={mobileStyle.regLinkDiv}>
+                <a className={mobileStyle.regLink} href="https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_3sjHnVW94c2Xkz4">Register here!</a>
+              </div>
+              </div>
               <div className={mobileStyle.borderlink}>
                 <a href="#about">
                   <h3 className={mobileStyle.link}>About</h3>
@@ -47,6 +56,7 @@ export function mobileSite(): ReactElement {
            <div id="schedule" className={mobileStyle.schedule}>
               <h4 className={mobileStyle.titleText}>Schedule</h4>
               <div className={mobileStyle.border}>
+                <MobileSchedule />
               </div>
             </div>
             <div id="faq" className={mobileStyle.faq}>
@@ -65,8 +75,8 @@ export function mobileSite(): ReactElement {
           </div>
 
           <div className={mobileStyle.rightSide}>
-            <Sides />
           </div>
+
         </body>
   );
 }
