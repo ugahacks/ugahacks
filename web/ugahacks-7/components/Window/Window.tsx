@@ -51,7 +51,6 @@ const generateWindowStructure = (
                 <button className={styles.packet}>
                   <a
                     href={signUpLink}
-                    className={styles.registerLink}
                     target="_blank"
                     rel="noreferrer"
                   >
