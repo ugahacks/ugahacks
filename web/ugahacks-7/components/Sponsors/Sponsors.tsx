@@ -28,7 +28,7 @@ const stickermule: string = "/icons/SponsorsImages/images/sponsorlogos/stickermu
 const mlh: string = "/icons/SponsorsImages/images/sponsorlogos/mlh-logo-black.png";
 
     
-const Sponsors = (): ReactElement => {
+const Sponsors = (props: any): ReactElement => {
     
     return (
         <>
@@ -39,6 +39,7 @@ const Sponsors = (): ReactElement => {
               showTopBarButtons
               width="60vw"
               height="auto"
+              stateChanger = {props.stateChanger}
             />
           </div>
         </>
