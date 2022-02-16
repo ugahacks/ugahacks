@@ -1,9 +1,9 @@
 .section {
     display: flex;
-    max-height: 67vh;
     overflow-y: scroll;
     overflow-x: auto;
-    height: 100%;
+    resize: none;
+    max-height: 70vh;
   }
   
   .sponsors_container {
@@ -19,6 +19,19 @@
 
   .logos {
     max-width: 100% !important;
+  }
+
+  .italicized {
+    font-style: italic;
+    font-size: 1.4em;
+    margin-top: 0;
+  }
+
+  .packet {
+    height: 2vh;
+    width: 10vw;
+    margin: 1em;
+    font-size: 1.2em;
   }
 
   .logoContainer {

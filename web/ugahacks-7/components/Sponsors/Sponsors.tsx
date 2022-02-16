@@ -25,7 +25,7 @@ const digitalocean: string = "/icons/SponsorsImages/images/sponsorlogos/DigitalO
 const aws: string = "/icons/SponsorsImages/images/sponsorlogos/aws.png";
 const echo3d = "/icons/SponsorsImages/images/sponsorlogos/echo3d.png";
 const stickermule: string = "/icons/SponsorsImages/images/sponsorlogos/stickermule.svg";
-// const Major League Hacking
+const mlh: string = "/icons/SponsorsImages/images/sponsorlogos/mlh-logo-black.png";
 
     
 const Sponsors = (): ReactElement => {
@@ -38,7 +38,7 @@ const Sponsors = (): ReactElement => {
               windowType="sponsors"
               showTopBarButtons
               width="60vw"
-              height="80vh"
+              height="auto"
             />
           </div>
         </>
@@ -47,9 +47,9 @@ const Sponsors = (): ReactElement => {
 
 function sponsors(): ReactElement {
     return (
-        <>
+        <div>
             <ul className="tree-view">
-                <section className={styles.section}>
+                <li className={styles.section}>
                     <div className={styles.sponsors_container}>
                         <div className={styles.tier5}>
                             <SponsorLogo
@@ -118,14 +118,14 @@ function sponsors(): ReactElement {
                             </div>
                         </div>
                         <div className={styles.tier_container}>
-                            {/* <div className={styles.tier1}>
+                            <div className={styles.tier1}>
                                 <SponsorLogo
                                     image={aws}
                                     alt="AWS logo"
                                     tier="tier1"
-                                    link=""
+                                    link="https://aws.amazon.com/"
                                 />
-                            </div> */}
+                            </div>
                             <div className={styles.ugacombologo} >
                                 <SponsorLogo
                                     image={ugacombo}
@@ -158,11 +158,25 @@ function sponsors(): ReactElement {
                                     link="https://www.echo3d.co/"
                                 />
                             </div>
+                            <div className={styles.tier1}>
+                                <SponsorLogo
+                                    image={mlh}
+                                    alt="Major League Hacking logo"
+                                    tier="tier1"
+                                    link="https://mlh.io/"
+                                />
+                            </div>
                         </div>
+                    <p className={styles.italicized}>
+                    This event is supported in part by the President&apos;s Venture Fund through the generous gifts of the University of Georgia donors.
+                    </p>
+                    <button className={styles.packet} >
+                        <a href="/sponsorship-packet">Sponsorship Packet</a>
+                    </button>
                     </div>
-                </section>
+                </li>
             </ul>
-        </>
+        </div>
     );
 };
 
