@@ -115,7 +115,7 @@ const Window = ({
 }: WindowProps): ReactElement => {
   return (
     <div className={styles.draggable_container} >
-      <Draggable handle=".title-bar" defaultPosition={{ x: 550, y: 75}} bounds="parent">
+      <Draggable handle=".title-bar" defaultPosition={{ x: 450, y: 75}} bounds="parent">
         <div className="window" style={{ width: width, height: height }}>
           <div className={`title-bar ${styles.blueBanner}`}>
             <div className="title-bar-text" style={{ fontSize: "1.75em" }}>

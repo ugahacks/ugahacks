@@ -18,7 +18,7 @@ const logoVariants = {
 
 function SponsorLogo(props: SponsorProps): ReactElement {
   return (
-    <a href={props.link} className={styles.logolinks}>
+    <a href={props.link} className={styles.logoContainer}>
       <motion.img
         className={styles.logos}
         id={props.id}
