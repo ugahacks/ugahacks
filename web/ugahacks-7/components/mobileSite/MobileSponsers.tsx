@@ -38,7 +38,7 @@ function MobileSponsors(): ReactElement {
                                 image={ncr}
                                 alt="NCR logo"
                                 tier="tier5"
-                                link="https://www.hackathon.ncrcloud.com/"
+                                link="https://www.ncr.com/careers"
                                 width="300px"
                                 height="100px"
                             />
@@ -169,7 +169,7 @@ function MobileSponsors(): ReactElement {
                                     image={mlh}
                                     alt="mlh logo"
                                     tier="tier1"
-                                    link=""
+                                    link="https://www.ncr.com/careers"
                                 width="200px"
                                 height="70px"
                                 />

@@ -63,7 +63,7 @@ export function mobileSite(): ReactElement {
             <div id="faq" className={mobileStyle.faq}>
               <h4 className={mobileStyle.titleText}>FAQ</h4>
               <div className={mobileStyle.border}>
-                {/* <FAQ /> */}
+                <FAQ />
               </div>
 
             </div>
