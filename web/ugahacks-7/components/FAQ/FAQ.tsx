@@ -23,17 +23,23 @@ const FAQ = (props: any): ReactElement => {
 };
 
 // Create an array of topics that will be accessed by the option HTML tag
-const topics: string[] = ["COVID", "Logistics", "About the Hackathon"];
+const topics: string[] = ["About the event", "Team", "Registration", "Virtual"];
 
 // Idea is to maintain a log of message for each topic, and the responses array will hold all the possible response to user questions
 // Message array
-const user_message_COVID: string[] = [];
+const user_message_about: string[] = [
+
+];
 
 // Message array
-const user_message_logistics: string[] = [];
+const user_message_team: string[] = [];
 
 // Message array
-const user_message_about: string[] = [];
+const user_message_register: string[] = [
+
+];
+
+const user_message_virtual: string[] = [];
 
 // Response to choose from
 const responses: string[] = [
@@ -43,34 +49,71 @@ const responses: string[] = [
 ];
 
 // Response to user message array
-const user_message_answers_COVID: string[] = [];
-
-// Response to user message array
-const user_message_answers_logistics: string[] = [];
-
-// Response to user message array
 const user_message_answers_about: string[] = [];
 
+// Response to user message array
+const user_message_answers_team: string[] = [];
+
+// Response to user message array
+const user_message_answers_register: string[] = [
+
+];
+
+const user_message_answers_virtual: string[] = [
+
+];
+
+
 // Question and answer arrays for each topic, add your questions and answers into the corresponding topic arrays
-const questions_COVID: string[] = [
-  "Where will it be held this year?",
-  "How much will it cost to sign up?",
+const questions_about: string[] = [
+  "What time should I get to the hackathon?",
+  "Do I have to go to all of the events?",
+  "Do I have to stay the entire duration of the hackathon?",
+  "What are the rules attendees must follow?"
+];
+
+const answers_about: string[] = [
+  "On Friday, check-in opens at 5pm. Tate Free Parking opens at 6.",
+  "You can pick and choose which workshops, events, and ceremonies you attend, but we highly encourage you to make the most out of your hackathon experience by attending most.",
+  "You are not obligated to sleep at the hackathon, and can leave and go as you would like.",
+  "UGAHacks will be following the MLH Code of Conduct. By participating in UGAHacks, you are agreeing to follow the Code of Conduct throughout the duration of the event.",
+];
+
+const questions_team: string[] = [
+  "What if I don't have a team or an idea!?",
+  "How many people can I have on my team?",
+];
+
+const answers_team: string[] = [
+  "Don't sweat it! You're free to join any existing team or form a new one when you get there. We'll also provide ample opportunities for hackers to meet each other and brainstorm some amazing ideas.\n" +
+    "If you're looking for a team, here's a link to find one: Find Team",
+  "There is no hard limit, but we recommend teams be at most 4 people, as we only have prizes for 4 people per team.",
+];
+
+const questions_registration: string[] = [
+  "Where can I sign up?",
   "Who can sign up?",
+  "Does it cost to sign up?",
+  "Can I apply for travel reimbursements?",
 ];
 
-const answers_COVID: string[] = [
-  "The event will be a hybrid model where it will be located in MLC for in-person and virtual over slack!",
-  "Nothing! The entire event and its amazing perks are free for all participants, including meals and snacks to keep you powered throughout the weekend, as well as workshops to help you get started and sharpen your hacking skills!",
-  "All university students! We welcome all undergraduates and graduate students of all skill levels to attend. Professionals and other guests are welcome to attend as mentors or volunteers.",
+const answers_registration: string[] = [
+  "You can sign up through this link",
+  "All university students and those who are within one year post graduation! We welcome all undergraduates and graduate students of all skill levels to attend. Professionals and other guests are welcome to attend as mentors or volunteers.",
+  "Nope! The entire event and its amazing perks are free for all participants, including meals and snacks to keep you powered throughout the weekend, as well as workshops to help you get started and sharpen your hacking skills.",
+  "No, we will not be providing reimbursements for travel this year.",
 ];
 
-const questions_logistics: string[] = ["Logistics Questions"];
+const questions_virtual: string[] = [
+  "Is the hackathon virtual or hybrid?",
+  "How do I access a virtual workshop?",
+];
 
-const answers_logistics: string[] = ["Logistics Answers"];
-
-const questions_hackathon: string[] = ["Questions about the Hackathon"];
-
-const answers_hackathon: string[] = ["Answers about the Hackathon"];
+const answers_virtual: string[] = [
+  "The hackathon will be hybrid this year. Your acceptance later will clearly state whether you will be in-person or virtual.\n" +
+    "If you are attending in person, it will be a decentralized event. So, we will have two locations MLC and Studio 225.",
+  "We'll announce the link for workshops on Slack ahead of time."
+];
 
 /**
  * Uses the useState hook to check which FAQs to display based on the topic. We
@@ -115,9 +158,10 @@ function CurrentTopic(): ReactElement {
     <>
       <label className={styles.topic}>Topics: </label>
       <select value={topic} onChange={inputHandler} className={styles.dropdown}>
-        <option value={"COVID"}>{topics[0]}</option>
-        <option value={"Logistics"}>{topics[1]}</option>
-        <option value={"About the Hackathon"}>{topics[2]}</option>
+        <option value={"About"}>{topics[0]}</option>
+        <option value={"Team"}>{topics[1]}</option>
+        <option value={"Registration"}>{topics[2]}</option>
+        <option value={"Virtual"}>{topics[3]}</option>
       </select>
       <div className={styles.scroll}>
         {generateFAQ(topic)}
@@ -155,17 +199,20 @@ function generateFAQ(type: string): ReactElement {
   let message: ReactElement[] = generateMessage(type);
 
   switch (type) {
-    case "COVID":
-      faq = generateQAArray(questions_COVID, answers_COVID);
+    case "About":
+      faq = generateQAArray(questions_about, answers_about);
       break;
-    case "Logistics":
-      faq = generateQAArray(questions_logistics, answers_logistics);
+    case "Team":
+      faq = generateQAArray(questions_team, answers_team);
       break;
-    case "About the Hackathon":
-      faq = generateQAArray(questions_hackathon, answers_hackathon);
+    case "Registration":
+      faq = generateQAArray(questions_registration, answers_registration);
+      break;
+    case "Virtual":
+      faq = generateQAArray(questions_virtual, answers_virtual);
       break;
     default:
-      faq = generateQAArray(questions_COVID, answers_logistics);
+      faq = generateQAArray(questions_about, answers_team);
       break;
   } // switch
 
@@ -193,31 +240,38 @@ function generateMessage(type: string): ReactElement[] {
   let message: ReactElement[] = [];
 
   switch (type) {
-    case "COVID":
-      message = generateMessageArray(
-        user_message_COVID,
-        user_message_answers_COVID
-      );
-      break;
-
-    case "Logistics":
-      message = generateMessageArray(
-        user_message_logistics,
-        user_message_answers_logistics
-      );
-      break;
-
-    case "About the Hackathon":
+    case "About":
       message = generateMessageArray(
         user_message_about,
         user_message_answers_about
       );
       break;
 
+    case "Team":
+      message = generateMessageArray(
+        user_message_team,
+        user_message_answers_team
+      );
+      break;
+
+    case "Registration":
+      message = generateMessageArray(
+        user_message_register,
+        user_message_answers_register
+      );
+      break;
+
+    case "Virtual":
+      message = generateMessageArray(
+        user_message_virtual,
+        user_message_answers_virtual
+      );
+      break;
+
     default:
       message = generateMessageArray(
-        user_message_COVID,
-        user_message_answers_COVID
+        user_message_about,
+        user_message_answers_about
       );
       break;
   } // switch
@@ -234,23 +288,30 @@ function generateMessage(type: string): ReactElement[] {
  */
 function addToMessageArray(type: string, body: string): void {
   switch (type) {
-    case "COVID":
-      user_message_COVID.push(body);
-      user_message_answers_COVID.push(
-        responses[randomInt(0, responses.length - 1)]
-      );
-      break;
-
-    case "Logistics":
-      user_message_logistics.push(body);
-      user_message_answers_logistics.push(
-        responses[randomInt(0, responses.length - 1)]
-      );
-      break;
-
-    case "About the Hackathon":
+    case "About":
       user_message_about.push(body);
       user_message_answers_about.push(
+        responses[randomInt(0, responses.length - 1)]
+      );
+      break;
+
+    case "Team":
+      user_message_team.push(body);
+      user_message_answers_team.push(
+        responses[randomInt(0, responses.length - 1)]
+      );
+      break;
+
+    case "Registration":
+      user_message_register.push(body);
+      user_message_answers_register.push(
+        responses[randomInt(0, responses.length - 1)]
+      );
+      break;
+
+    case "Virtual":
+      user_message_virtual.push(body);
+      user_message_answers_virtual.push(
         responses[randomInt(0, responses.length - 1)]
       );
       break;
@@ -346,7 +407,6 @@ function randomInt(min: number, max: number): number {
  * @returns {ReactElement} Returns the faq container chatbox.
  */
 function faqWindow(): ReactElement {
-  var type = "COVID";
 
   return (
     <>
