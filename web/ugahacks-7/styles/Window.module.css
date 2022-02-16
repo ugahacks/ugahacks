@@ -51,3 +51,13 @@
   position: absolute;
   z-index: 3;
 }
+
+.registerLink {
+  font-size: 2em;
+  color: blue !important;
+  text-decoration: underline !important;
+}
+
+.centerText {
+  text-align: center;
+}
