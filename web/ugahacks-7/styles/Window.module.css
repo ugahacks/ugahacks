@@ -1,0 +1,63 @@
+.blueBanner {
+  background: linear-gradient(90deg, navy, #53bdf8);
+}
+
+.draggable_container {
+  height: calc(100vh - 10px);
+  padding: 10px;
+}
+
+.url {
+  font-size: 1.25em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.bodyText {
+  font-size: 2em;
+}
+
+.chatBody {
+  font-size: 1.5em;
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  resize: none;
+}
+
+.inputChat {
+  width: 100%;
+  height: 10vh;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  resize: none;
+  font-size: 2em;
+  /* font-family: 'Courier New', Courier, monospace; */
+}
+
+.sendBtn {
+  font-size: 1.75em;
+}
+
+.blueBanner, .url, .bodyText, .heading {
+  padding-left: 2px;
+}
+
+.bodyText {
+  font-family: 'monospace', Times, serif;
+}
+
+.layer {
+  position: absolute;
+  z-index: 3;
+}
+
+.registerLink {
+  font-size: 2em;
+  color: blue !important;
+  text-decoration: underline !important;
+}
+
+.centerText {
+  text-align: center;
+}

@@ -5,6 +5,13 @@ __metadata:
   version: 4
   cacheKey: 8
 
+"98.css@npm:^0.1.17":
+  version: 0.1.17
+  resolution: "98.css@npm:0.1.17"
+  checksum: faefad2b6768e4062cde34902ad1b154915c8b2226d2344775b755fe032b49a49218d267fa4d690df866a06cdae0721e57986d627fa630999cca0db4c5d24527
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:7.12.11":
   version: 7.12.11
   resolution: "@babel/code-frame@npm:7.12.11"
@@ -1273,9 +1280,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001202, caniuse-lite@npm:^1.0.30001219, caniuse-lite@npm:^1.0.30001228":
-  version: 1.0.30001248
-  resolution: "caniuse-lite@npm:1.0.30001248"
-  checksum: 86b3c232ad60982f3789a8c1bb9391848dad4b324cb220a925c730b744f8bceee5816cf15932bcd501d98fe31fcfd46e6a0e88fe08be92ce326b67d4b3f79b75
+  version: 1.0.30001303
+  resolution: "caniuse-lite@npm:1.0.30001303"
+  checksum: fe77fb680c94c875be2fb78c9507a69d3ed6be8894832d3ee8a7d24e4c5c7599bf217f030fcdfd761ea211065042679bf697a57eefe114058a3208561e2fd042
   languageName: node
   linkType: hard
 
@@ -1414,7 +1421,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:^1.0.4":
+"clsx@npm:^1.0.4, clsx@npm:^1.1.1":
   version: 1.1.1
   resolution: "clsx@npm:1.1.1"
   checksum: ff052650329773b9b245177305fc4c4dc3129f7b2be84af4f58dc5defa99538c61d4207be7419405a5f8f3d92007c954f4daba5a7b74e563d5de71c28c830063
@@ -2519,12 +2526,41 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framer-motion@npm:^6.2.6":
+  version: 6.2.6
+  resolution: "framer-motion@npm:6.2.6"
+  dependencies:
+    "@emotion/is-prop-valid": ^0.8.2
+    framesync: 6.0.1
+    hey-listen: ^1.0.8
+    popmotion: 11.0.3
+    style-value-types: 5.0.0
+    tslib: ^2.1.0
+  peerDependencies:
+    react: ">=16.8 || ^17.0.0 || ^18.0.0"
+    react-dom: ">=16.8 || ^17.0.0 || ^18.0.0"
+  dependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+  checksum: 84c0b0176c083a2d752b7a59f29d20c21ad9d6147366d0bf324bc75bcfd9cfaf2b9827e14df1e773e366a68c0277156bc0fabf62ac53aba7ab64afd0012a7efe
+  languageName: node
+  linkType: hard
+
 "framesync@npm:5.3.0":
   version: 5.3.0
   resolution: "framesync@npm:5.3.0"
   dependencies:
     tslib: ^2.1.0
   checksum: 9ebbb2863e6a1cfd2e9dd1b73af427d23caa03c92dd49ea767ebdd208c3a573bba4a1026f67068d856a21704f79adcdf2f750cc852ff73bc1f0e80edaaecded8
+  languageName: node
+  linkType: hard
+
+"framesync@npm:6.0.1":
+  version: 6.0.1
+  resolution: "framesync@npm:6.0.1"
+  dependencies:
+    tslib: ^2.1.0
+  checksum: a23ebe8f7e20a32c0b99c2f8175b6f07af3ec6316aad52a2316316a6d011d717af8d2175dcc2827031c59fabb30232ed3e19a720a373caba7f070e1eae436325
   languageName: node
   linkType: hard
 
@@ -3715,6 +3751,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"lodash.throttle@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "lodash.throttle@npm:4.1.1"
+  checksum: 129c0a28cee48b348aef146f638ef8a8b197944d4e9ec26c1890c19d9bf5a5690fe11b655c77a4551268819b32d27f4206343e30c78961f60b561b8608c8c805
+  languageName: node
+  linkType: hard
+
 "lodash.truncate@npm:^4.4.2":
   version: 4.4.2
   resolution: "lodash.truncate@npm:4.4.2"
@@ -4842,6 +4885,18 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"popmotion@npm:11.0.3":
+  version: 11.0.3
+  resolution: "popmotion@npm:11.0.3"
+  dependencies:
+    framesync: 6.0.1
+    hey-listen: ^1.0.8
+    style-value-types: 5.0.0
+    tslib: ^2.1.0
+  checksum: 9fe7d03b4ec0e85bfb9dadc23b745147bfe42e16f466ba06e6327197d0e38b72015afc2f918a8051dedc3680310417f346ffdc463be6518e2e92e98f48e30268
+  languageName: node
+  linkType: hard
+
 "popmotion@npm:9.3.6":
   version: 9.3.6
   resolution: "popmotion@npm:9.3.6"
@@ -4942,7 +4997,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
+"prop-types@npm:^15.6.0, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
   version: 15.7.2
   resolution: "prop-types@npm:15.7.2"
   dependencies:
@@ -5107,6 +5162,18 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"react-device-detect@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "react-device-detect@npm:2.1.2"
+  dependencies:
+    ua-parser-js: ^0.7.30
+  peerDependencies:
+    react: ">= 0.14.0 < 18.0.0"
+    react-dom: ">= 0.14.0 < 18.0.0"
+  checksum: 3cc16b41324194cb812c2a6214107a2d75d8d4c44f3457b547040e24c24774e3b062d28be6dfa1775608d05a83dbc0dc226ed6e52077e27c1fc957e11dd553dc
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:17.0.2, react-dom@npm:^17.0.2":
   version: 17.0.2
   resolution: "react-dom@npm:17.0.2"
@@ -5117,6 +5184,19 @@ fsevents@~2.3.1:
   peerDependencies:
     react: 17.0.2
   checksum: 1c1eaa3bca7c7228d24b70932e3d7c99e70d1d04e13bb0843bbf321582bc25d7961d6b8a6978a58a598af2af496d1cedcfb1bf65f6b0960a0a8161cb8dab743c
+  languageName: node
+  linkType: hard
+
+"react-draggable@npm:^4.4.4":
+  version: 4.4.4
+  resolution: "react-draggable@npm:4.4.4"
+  dependencies:
+    clsx: ^1.1.1
+    prop-types: ^15.6.0
+  peerDependencies:
+    react: ">= 16.3.0"
+    react-dom: ">= 16.3.0"
+  checksum: b8258a58938c261a79f1b9ffd67774283c1ac732423c1c9c9f5fe4d17a06886edd659891e445ba089828ca59f1885e5b909262e24cf60640b8ed05c8499c88bb
   languageName: node
   linkType: hard
 
@@ -5138,6 +5218,19 @@ fsevents@~2.3.1:
   version: 0.8.3
   resolution: "react-refresh@npm:0.8.3"
   checksum: 3cffe5a9cbac1c5d59bf74bf9fff43c987d87ef32098b9092ea94b6637377d86c08565b9374d9397f446b3fbcd95de986ec77220a16f979687cb39b7b89e2f91
+  languageName: node
+  linkType: hard
+
+"react-scroll@npm:^1.8.4":
+  version: 1.8.4
+  resolution: "react-scroll@npm:1.8.4"
+  dependencies:
+    lodash.throttle: ^4.1.1
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: ^15.5.4 || ^16.0.0 || ^17.0.0
+    react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0
+  checksum: fd31206090e7a223989d11bd51f0f6fbc4ddfa3a218c266f2ec5698b93021187b6e2604010defa3341653bc8fdc3ddfb91c2d45a251b7c9e8e1857dc0da715f5
   languageName: node
   linkType: hard
 
@@ -5944,6 +6037,16 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"style-value-types@npm:5.0.0":
+  version: 5.0.0
+  resolution: "style-value-types@npm:5.0.0"
+  dependencies:
+    hey-listen: ^1.0.8
+    tslib: ^2.1.0
+  checksum: 16d198302cd102edf9dba94e7752a2364c93b1eaa5cc7c32b42b28eef4af4ccb5149a3f16bc2a256adc02616a2404f4612bd15f3081c1e8ca06132cae78be6c0
+  languageName: node
+  linkType: hard
+
 "styled-jsx@npm:4.0.1":
   version: 4.0.1
   resolution: "styled-jsx@npm:4.0.1"
@@ -6344,11 +6447,11 @@ resolve@^2.0.0-next.3:
 
 "typescript@patch:typescript@4.3.5#~builtin<compat/typescript>, typescript@patch:typescript@^4.3.5#~builtin<compat/typescript>":
   version: 4.3.5
-  resolution: "typescript@patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"
+  resolution: "typescript@patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: bc2c4fdf0f1557fdafe4ef74848c72ebd9c8c60829568248f869121aea2bb20e16649a252431d0acb185ec118143be22bed73d08f64379557810d82756afedde
+  checksum: 4e2edec3c9b7b9a22ad9cbf9371339d9e13bfe44731f0e2d6a5287f991c3b0e3e0ac0c0ebbf9bf6fc2051e30559c789bfc9cf572cd6b836a0222ae141fac1dba
   languageName: node
   linkType: hard
 
@@ -6356,6 +6459,13 @@ resolve@^2.0.0-next.3:
   version: 0.7.28
   resolution: "ua-parser-js@npm:0.7.28"
   checksum: a7da4ad54527211e878ee016c2ef64efad5c2f5a31277d36c9da93b4c89ecaa64f391ad4cf158ada76a9ad8e53004a950705ff1c2f27a52ca8bfb3f1381c39ff
+  languageName: node
+  linkType: hard
+
+"ua-parser-js@npm:^0.7.30":
+  version: 0.7.31
+  resolution: "ua-parser-js@npm:0.7.31"
+  checksum: e2f8324a83d1715601576af85b2b6c03890699aaa7272950fc77ea925c70c5e4f75060ae147dc92124e49f7f0e3d6dd2b0a91e7f40d267e92df8894be967ba8b
   languageName: node
   linkType: hard
 
@@ -6384,13 +6494,18 @@ resolve@^2.0.0-next.3:
   version: 0.0.0-use.local
   resolution: "ugahacks-7@workspace:web/ugahacks-7"
   dependencies:
+    98.css: ^0.1.17
     "@types/node": ^16.4.10
     "@types/react": 17.0.15
     eslint: 7.32.0
     eslint-config-next: 11.0.1
+    framer-motion: ^6.2.6
     next: ^11.1.2
     react: 17.0.2
+    react-device-detect: ^2.1.2
     react-dom: 17.0.2
+    react-draggable: ^4.4.4
+    react-scroll: ^1.8.4
     typescript: 4.3.5
   languageName: unknown
   linkType: soft
