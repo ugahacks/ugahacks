@@ -10,8 +10,17 @@ const days: string[] = ["February 18, 2022", "February 19, 2022", "February 20, 
 
 // Schedule array for February 18
 const schedule_18: string[] = [
+    "Event Check-in",
     "Opening Ceremony",
     "Dinner",
+    "Sponsor Introduce Challenges + Art Competetion",
+    "NCR Digital Banking API Crash Course",
+    "Hot Ones broadcast #1 - State Farm",
+    "Sponsor Fair",
+    "I LOVE Data Science, but HATE Web Dev: An Intro to Dash",
+    "First time Hacker workshop",
+    "Gaming Tournament with esports",
+    "Midnight Anime/Movie Session"
 ];
 
 // Schedule array for February 19
@@ -31,8 +40,17 @@ const schedule_20: string[] = [
 
 // Times for corresponding schedules on February 18
 const time_18: string[] = [
-    "6:30 PM - 7:00 PM EST",
-    "7:00 PM - 8:00 PM EST",
+  "5:30 PM - 6:00 PM",
+  "6:30 PM - 7:00 PM",
+  "7:00 PM - 8:00 PM",
+  "8:00 PM - 10:00 PM",
+  "8:00 PM - 8:45 PM",
+  "8:00 PM",
+  "8:30 PM - 9:30 PM",
+  "8:45 PM - 9:30 PM",
+  "9:00 PM - 10:00 PM",
+  "10:00 PM - 12:00 AM",
+  "11:00 PM - 12:00 AM",
 ]; 
 
 // Times for corresponding schedules on February 19
