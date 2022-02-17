@@ -99,6 +99,9 @@ const generateWindowStructure = (
             <li className={styles.url}>https://7.ugahacks.com/{windowTitle}</li>
           </ul>
           {schedule()}
+          <div className="status-bar">
+            <p className={styles.scheduleStatusBar}>All Times are in Eastern Standard Time</p>
+          </div>
         </>
       );
     case "sponsors":
