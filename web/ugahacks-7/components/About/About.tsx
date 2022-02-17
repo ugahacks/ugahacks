@@ -2,6 +2,7 @@ import { filterProps } from "framer-motion";
 import React, { ReactElement } from "react";
 import Window from "../Window";
 import {motion, AnimatePresence} from 'framer-motion';
+import { prependOnceListener } from "process";
 
 const About = (props: any): ReactElement => {
   const AboutContent =
@@ -22,6 +23,7 @@ const About = (props: any): ReactElement => {
           showTopBarButtons
           width="40vw"
           height="auto"
+          stateChanger = {props.stateChanger}
         />
     //   </motion.div>
     // </AnimatePresence>
