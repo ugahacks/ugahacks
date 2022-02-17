@@ -29,9 +29,9 @@
 
   .packet {
     height: 2vh;
-    width: 10vw;
     margin: 1em;
     font-size: 1.2em;
+    display: inline-block;
   }
 
   .logoContainer {
@@ -111,5 +111,4 @@
   .sponsors_container h2:first-of-type {
     margin-top: 30px;
   }
-  
   

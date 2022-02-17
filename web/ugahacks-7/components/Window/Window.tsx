@@ -9,7 +9,7 @@ import SponsorLogo from "../../components/Sponsors";
 
 // Sign up link
 const signUpLink: string =
-  "https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_82Gn6acN70D0wg6";
+  "https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_3sjHnVW94c2Xkz4";
 
 interface WindowProps {
   windowTitle: string;
@@ -48,14 +48,15 @@ const generateWindowStructure = (
             <li>
               <p className={styles.bodyText}>{bodyText}</p>
               <div className={styles.centerText}>
-                <a
-                  href={signUpLink}
-                  className={styles.registerLink}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Register Here!
-                </a>
+                <button className={styles.packet}>
+                  <a
+                    href={signUpLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Register Here!
+                  </a>
+                </button>
               </div>
             </li>
           </ul>
@@ -98,6 +99,9 @@ const generateWindowStructure = (
             <li className={styles.url}>https://7.ugahacks.com/{windowTitle}</li>
           </ul>
           {schedule()}
+          <div className="status-bar">
+            <p className={styles.scheduleStatusBar}>All Times are in Eastern Standard Time</p>
+          </div>
         </>
       );
     case "sponsors":

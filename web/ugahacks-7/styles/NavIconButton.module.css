@@ -18,6 +18,8 @@
     margin: 0 auto;
     padding: 0%;
     display: block;
-    color: #14AFF1;
+    /* color: #14AFF1; */
+    /* color: #14f144; */
+    color: white;
     font-weight: bold;
 }

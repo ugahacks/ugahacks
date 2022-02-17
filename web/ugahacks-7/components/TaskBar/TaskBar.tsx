@@ -5,8 +5,10 @@ export function TaskBar(): ReactElement {
   return (
     <div className={styles.startBar}>
       <div className={styles.startButton_container}>
-        <button className={styles.startButton}>
-        </button>
+        <a href="https://hopin.com/events/ugahacks-7" target="_blank" rel="noreferrer">
+          <button type="button" className={styles.startButton}>
+          </button>
+        </a>
       </div>
       <div className={styles.time}>
         Reimagine your world one pixel at a time.

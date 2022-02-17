@@ -6,49 +6,105 @@ import { filterProps } from "framer-motion";
 export { schedule };
 
 // Create an array of days that will be accessed by the option HTML tag
-const days: string[] = ["February 18, 2022", "February 19, 2022", "February 20, 2022"];
+const days: string[] = [
+  "February 18, 2022",
+  "February 19, 2022",
+  "February 20, 2022",
+];
 
 // Schedule array for February 18
 const schedule_18: string[] = [
-    "Opening Ceremony",
-    "Dinner",
+  "Event Check-in",
+  "Opening Ceremony",
+  "Dinner",
+  "Sponsor\'s Introduce Challenges + Art Competetion",
+  "NCR Digital Banking API Crash Course",
+  "Hot Ones Broadcast #1 - State Farm",
+  "Sponsor Fair",
+  "I LOVE Data Science, but HATE Web Dev: An Intro to Dash",
+  "First Time Hacker Workshop",
+  "Gaming Tournament with Esports",
+  "Midnight Anime/Movie Session",
 ];
 
 // Schedule array for February 19
 const schedule_19: string[] = [
-    "Breakfast",
-    "Lunch",
-    "Dinner",
+  "Breakfast",
+  "Yoga with Shakti",
+  "Pokemon Showdown Battles",
+  "How We Built ByteCoin",
+  "Lunch",
+  "Aladdin Software Overview and Technology at BlackRock",
+  'NCR\'s "Digital Art Competition"',
+  "Hot Ones Broadcast #2 - NCR",
+  "An Intro into Asset Management with BlackRock",
+  "Entrepreneurship Info Session with Kickstart",
+  "Data Science in Industry",
+  "Introduction to Static Site Generation and How to get started with Eleventy with Max Rey",
+  "State Farm Raffle",
+  "Hot Ones Broadcast #3",
+  "\"Fundamentals of Augmented Reality\" with NCR",
+  "Join the UH8 Team!",
+  "\"Applied ML in Industry - NLP and CV\" with NCR",
+  "Dinner",
+  "Nerf Gun Fight",
+  "Midnight Anime/Movie Session"
 ];
 
 // Schedule array for February 20
 const schedule_20: string[] = [
-    "Submissions Due",
-    "Breakfast",
-    "Judging Expo",
-    "Closing Ceremony",
+  "Submissions Due",
+  "Breakfast",
+  "Judging Begin/Expo",
+  "Closing Ceremony"
 ];
 
 // Times for corresponding schedules on February 18
 const time_18: string[] = [
-    "6:30 PM - 7:00 PM EST",
-    "7:00 PM - 8:00 PM EST",
-]; 
+  "5:30 PM - 6:00 PM",
+  "6:30 PM - 7:00 PM",
+  "7:00 PM - 8:00 PM",
+  "8:00 PM - 10:00 PM",
+  "8:00 PM - 8:45 PM",
+  "8:00 PM",
+  "8:30 PM - 9:30 PM",
+  "8:45 PM - 9:30 PM",
+  "9:00 PM - 10:00 PM",
+  "10:00 PM - 12:00 AM",
+  "11:00 PM - 12:00 AM",
+];
 
 // Times for corresponding schedules on February 19
 const time_19: string[] = [
-    "8:00 AM - 9:00 AM EST",
-    "12:00 PM - 1:00 PM EST",
-    "7:00 PM - 8:00 PM EST",
-]; 
+  "8:00 AM - 9:00 AM",
+  "9:00 AM - 10:00 AM",
+  "10:00 AM - 3:00 PM",
+  "10:30 AM - 11:30 AM",
+  "12:00 PM - 1:00 PM",
+  "1:00 PM - 2:00 PM",
+  "1:30 PM - 2:00 PM",
+  "2:00 PM",
+  "2:00 PM - 3:00 PM",
+  "3:00 PM - 4:00 PM",
+  "3:00 PM - 4:00 PM",
+  "3:00 PM - 4:00 PM",
+  "4:00 PM",
+  "4:00 PM",
+  "4:15 PM - 5:00 PM",
+  "5:00 PM - 6:00 PM",
+  "6:00 PM - 7:00 PM",
+  "7:00 PM - 8:00 PM",
+  "8:15 PM - 9:00 PM",
+  "11:00 PM - 12:00 AM"
+];
 
 // Times for corresponding schedules on February 20
 const time_20: string[] = [
-    "8:00 AM EST",
-    "8:00 AM - 9:00 AM EST",
-    "9:30 AM - 1:00 PM EST",
-    "2:30 PM - 3:00 PM EST",
-]; 
+  "8:00 AM",
+  "8:00 AM - 9:00 AM",
+  "9:30 AM - 1:00 PM",
+  "2:30 PM - 3:00 PM",
+];
 
 function CurrentDay(): ReactElement {
   const [day, setDay] = useState(days[0]);
@@ -78,9 +134,9 @@ const Schedule = (props: any): ReactElement => {
           windowTitle="Schedule"
           windowType="schedule"
           showTopBarButtons
-          width="40vw"
+          width="60vw"
           height="auto"
-          stateChanger = {props.stateChanger}
+          stateChanger={props.stateChanger}
         />
       </div>
     </>
