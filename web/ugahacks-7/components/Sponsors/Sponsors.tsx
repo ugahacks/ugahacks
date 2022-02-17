@@ -57,7 +57,7 @@ function sponsors(): ReactElement {
                                 image={ncr}
                                 alt="NCR logo"
                                 tier="tier5"
-                                link="https://www.ncr.com/careers"
+                                link="https://hackathon.ncrcloud.com/"
                             />
                         </div>
                         <div className={styles.tier4}>
