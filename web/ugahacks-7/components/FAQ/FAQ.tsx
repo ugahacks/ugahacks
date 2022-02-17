@@ -197,9 +197,15 @@ function CurrentTopic(): ReactElement {
   });
 
   const scrollRef = useRef<null | HTMLDivElement>(null);
+  const firstRender = useRef(true);
 
   // The chatbox will scroll to the bottom when user sends message
   useEffect(() => {
+    // Should not scroll on the first render of the faq window
+    if (firstRender.current) {
+      firstRender.current = false;
+      return;
+    }
     scrollRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [message]);
 
