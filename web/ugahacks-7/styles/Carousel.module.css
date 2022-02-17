@@ -9,7 +9,7 @@
 }
 .timeSlot {
   margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin-bottom: 3em;
   padding-top: .5em;
   padding-bottom: 2em;
 
@@ -49,4 +49,9 @@
   padding-top: 1em;
   text-align: center;
   font-size: 1.4em;
+}
+
+.timeZone {
+  font-size: 0.65em;
+  font-style: italic;
 }
