@@ -19,11 +19,9 @@ function Question(props: any) {
       <motion.button
         className={styles.faq_question}
         onClick={() => setIsOpen(!isOpen)}
-        variants={hoverVariants}
-        whileHover="hover"
       >
+        <div className="pad">
         {props.question}
-        <div className="screw-wrapper">
         </div>
 
 
