@@ -19,9 +19,6 @@ export function Splash(): ReactElement {
           alt="Major League Hacking 2022 Hackathon Season"
         />
       </a>
-      <div className={styles.greyTop}>
-        <Countdown />
-      </div>
       <div className={styles.border}>
         <div className={styles.main}>
         </div>
