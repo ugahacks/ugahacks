@@ -9,9 +9,10 @@
 }
 .timeSlot {
   margin-top: 1.5em;
-  margin-bottom: 3em;
+  margin-bottom: 5.1em;
   padding-top: .5em;
   padding-bottom: 2em;
+  border-top: #FF901F 2px solid;
 
   font-size: medium;
 }

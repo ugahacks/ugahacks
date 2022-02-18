@@ -47,7 +47,7 @@ const generateWindowStructure = (
             </li>
             <li>
               <p className={styles.bodyText}>{bodyText}</p>
-              <div className={styles.centerText}>
+              {/* <div className={styles.centerText}>
                 <button className={styles.packet}>
                   <a
                     href={signUpLink}
@@ -57,7 +57,7 @@ const generateWindowStructure = (
                     Register Here!
                   </a>
                 </button>
-              </div>
+              </div> */}
             </li>
           </ul>
         </div>
