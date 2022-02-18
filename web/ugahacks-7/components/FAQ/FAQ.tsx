@@ -34,7 +34,7 @@ type answerType = {
 
 // Sign up link
 const signUpLink: string =
-  "https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_82Gn6acN70D0wg6";
+  "https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_3sjHnVW94c2Xkz4";
 
 // Find a team link
 const findTeamLink: string =
