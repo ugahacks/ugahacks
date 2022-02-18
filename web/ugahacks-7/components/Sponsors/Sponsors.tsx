@@ -169,7 +169,7 @@ function sponsors(): ReactElement {
                             </div>
                         </div>
                     <p className={styles.italicized}>
-                    This event is supported in part by the President&apos;s Venture Fund through the generous gifts of the University of Georgia donors.
+                    This event is supported in part by the President&apos;s Venture Fund and the Diversity Fund through the generous gifts of the University of Georgia donors.
                     </p>
                     <button className={styles.packet} >
                         <a href="/sponsorship-packet">Sponsorship Packet</a>

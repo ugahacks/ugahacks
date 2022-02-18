@@ -134,7 +134,7 @@ const answers_team: answerType[] = [
 ];
 
 const questions_registration: questionType[] = [
-  { question: "Where can I sign up?", link: signUpLink },
+  { question: "Where can I sign up?", link: ""},
   { question: "Who can sign up?", link: "" },
   { question: "Does it cost to sign up?", link: "" },
   { question: "Can I apply for travel reimbursements?", link: "" },
@@ -142,8 +142,8 @@ const questions_registration: questionType[] = [
 
 const answers_registration: answerType[] = [
   {
-    answer: "You can sign up through this link",
-    linkName: "Click Here to Register!",
+    answer: "You can't sign up, you snooze you lose.",
+    linkName: "",
   },
   {
     answer:
