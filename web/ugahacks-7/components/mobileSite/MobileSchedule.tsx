@@ -146,16 +146,16 @@ function generateTitleDate(date: string): ReactElement {
 
     switch (date) {
         case "day1":
-            currentDate = "February 18, 2021";
+            currentDate = "February 18, 2022";
             break;
         case "day2":
-            currentDate = "February 19, 2021";
+            currentDate = "February 19, 2022";
             break;
         case "day3":
-            currentDate = "February 20, 2021";
+            currentDate = "February 20, 2022";
             break;
         default:
-            currentDate = "February 18, 2021";
+            currentDate = "February 18, 2022";
             break;
     } // switch
 

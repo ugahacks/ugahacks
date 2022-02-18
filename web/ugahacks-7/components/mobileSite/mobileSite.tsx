@@ -22,9 +22,9 @@ export function mobileSite(): ReactElement {
               <span>&nbsp;&nbsp;</span>
               <p className={mobileStyle.topText}>February 18-20, 2022</p>
               <span>&nbsp;&nbsp;</span>
-              <div className={mobileStyle.regLinkDiv}>
-                <a className={mobileStyle.regLink} href="https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_3sjHnVW94c2Xkz4">Register here!</a>
-              </div>
+              {/* <div className={mobileStyle.regLinkDiv}>
+                {/* <a className={mobileStyle.regLink} href="https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_3sjHnVW94c2Xkz4">Register here!</a> */}
+              {/* </div> */} 
               </div>
               <div className={mobileStyle.borderlink}>
                 <a href="#about">

@@ -81,17 +81,17 @@ function MobileSponsors(): ReactElement {
                                     tier="tier2"
                                     link="https://www.statefarm.com/careers"
                                 width="500px"
-                                height="130px"
+                                height="80px"
                                 />
                             </div>
-                            <div className={styles.tier2}>
+                            <div className={styles.deloitte}>
                                 <MobileSponsersImg
                                     image={deloitte}
                                     alt="Deloitte logo"
                                     tier="tier2"
                                     link="https://www2.deloitte.com/us/en.html"
-                                width="300px"
-                                height="180px"
+                                width="400px"
+                                height="80px"
                                 />
                             </div>
                             <div id={styles.figma} className={styles.tier2figma}>
@@ -176,6 +176,8 @@ function MobileSponsors(): ReactElement {
 
 
                         </div>
+                        <p className={styles.supported}>This event is supported in part by the President&apos;s Venture Fund and the Diversity Fund through the generous gifts of the University of Georgia donors.
+</p>
                     </div>
                 </section>
         </>
