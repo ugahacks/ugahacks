@@ -28,7 +28,7 @@
   .tier2 {
       margin-top: .9em;
       margin-bottom: 1.9em;
-      padding-top: .5em;
+      padding-top: 2.5em;
   }
   .tier2figma {
       margin-top: 0em;
@@ -38,10 +38,16 @@
   }
 
 .deloitte {
-    margin-bottom: 0em;
+    margin-bottom: 3em;
+    margin-top: 4em;
 }
+  .ugacombologo {
+    margin-bottom: 1em;
+    margin-top: 3em;
+
+  }
 .aws {
-      margin-top: .9em;
+      margin-top: 3.4em;
       margin-bottom: 1.9em;
       padding-top: .5em;
       margin-left: 2em;
