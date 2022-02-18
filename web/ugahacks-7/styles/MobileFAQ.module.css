@@ -1,5 +1,4 @@
  .faq_question {
-  font-family: 'Poppins', sans-serif;
   background-color: white;
   cursor: pointer;
   border-radius: .6em;
@@ -27,7 +26,6 @@
   order: -1;
 }
 .QandA {
-  font-family: 'monospace', times, serif;
   margin-top: 10px;
   margin-bottom: 5px;
 

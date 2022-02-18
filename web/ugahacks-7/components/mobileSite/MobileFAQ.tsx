@@ -12,12 +12,12 @@ function FAQ(props: any) {
 
 
           <div className={styles.faq_question_wrapper}>
-            <Question
+            {/* <Question
               question="Where can I sign up?"
               answer="You can sign up through this" 
               link= "https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_82Gn6acN70D0wg6"
               linktxt="link"
-              />
+              /> */}
             <Question
               question="Where will it be held this year?"
               answer="UGAHacks 7 will be held at MLC."

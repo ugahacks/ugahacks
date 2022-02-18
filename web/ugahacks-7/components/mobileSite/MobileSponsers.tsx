@@ -176,6 +176,8 @@ function MobileSponsors(): ReactElement {
 
 
                         </div>
+                        <p className={styles.supported}>This event is supported in part by the President&apos;s Venture Fund and the Diversity Fund through the generous gifts of the University of Georgia donors.
+</p>
                     </div>
                 </section>
         </>

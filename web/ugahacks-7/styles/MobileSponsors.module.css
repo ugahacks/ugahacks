@@ -59,3 +59,10 @@
       padding-top: .5em;
       margin-left: 1em;
 }
+
+.supported {
+  font-style: italic;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: .8em;
+}
