@@ -30,10 +30,10 @@ function NavBar(props: any): ReactElement {
             myClick={() => setActive("Sponsors")}
           />
           <NavIconButton
-            name="BYTECOIN"
+            name="WINNERS"
             myClick={() => {
                 window.open(
-                  "https://bytecoin-kehjkmr6ua-ue.a.run.app/",
+                  "https://ugahacks-7.devpost.com/project-gallery",
                   "_blank"
                 );
             }}

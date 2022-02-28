@@ -51,8 +51,8 @@ export function mobileSite(): ReactElement {
             </a>
           </div>
           <div className={mobileStyle.borderlink}>
-            <a href="https://bytecoin-kehjkmr6ua-ue.a.run.app/">
-              <h3 className={mobileStyle.link}>ByteCoin</h3>
+            <a href="https://ugahacks-7.devpost.com/project-gallery">
+              <h3 className={mobileStyle.link}>Winners</h3>
             </a>
           </div>
         </div>
