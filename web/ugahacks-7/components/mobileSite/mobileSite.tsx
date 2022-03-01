@@ -55,6 +55,11 @@ export function mobileSite(): ReactElement {
               <h3 className={mobileStyle.link}>Winners</h3>
             </a>
           </div>
+          <div className={mobileStyle.borderlink}>
+            <a href="https://storage.googleapis.com/ugahacks-public/external/UGAHacks7-Recap-Packet.pdf">
+              <h3 className={mobileStyle.link}>Recap Packet</h3>
+            </a>
+          </div>
         </div>
         <div id="about" className={mobileStyle.about}>
           <h4 className={mobileStyle.titleText}>What is UGAHacks?</h4>
