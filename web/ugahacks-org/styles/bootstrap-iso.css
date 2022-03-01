@@ -1,0 +1,126 @@
+.bootstrap-iso {}
+.bootstrap-iso article, .bootstrap-iso aside, .bootstrap-iso details, .bootstrap-iso figcaption, .bootstrap-iso figure, .bootstrap-iso footer, .bootstrap-iso header, .bootstrap-iso hgroup, .bootstrap-iso main, .bootstrap-iso menu, .bootstrap-iso nav, .bootstrap-iso section, .bootstrap-iso summary {display: block;}
+.bootstrap-iso a {background-color: transparent;}
+.bootstrap-iso b, .bootstrap-iso strong {font-weight: bold;}
+.bootstrap-iso img {border: 0;}
+.bootstrap-iso * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;}
+
+.bootstrap-iso *:before, .bootstrap-iso *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+      .bootstrap-iso a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+      .bootstrap-iso img {
+    vertical-align: middle;
+}
+      .bootstrap-iso h1, .bootstrap-iso h2, .bootstrap-iso h3, .bootstrap-iso h4, .bootstrap-iso h5, .bootstrap-iso h6, .bootstrap-iso .h1, .bootstrap-iso .h2, .bootstrap-iso .h3, .bootstrap-iso .h4, .bootstrap-iso .h5, .bootstrap-iso .h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+      .bootstrap-iso h1, .bootstrap-iso .h1, .bootstrap-iso h2, .bootstrap-iso .h2, .bootstrap-iso h3, .bootstrap-iso .h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+      .bootstrap-iso h2, .bootstrap-iso .h2 {
+    font-size: 30px;
+}
+      .bootstrap-iso ul, .bootstrap-iso ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+      .bootstrap-iso .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+    .bootstrap-iso .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .bootstrap-iso .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bootstrap-iso .container {
+        width: 1170px;
+    }
+}
+
+.bootstrap-iso .fade {
+    opacity: 0;
+    -webkit-transition: opacity 0.15s linear;
+    -o-transition: opacity 0.15s linear;
+    transition: opacity 0.15s linear;
+}
+
+.bootstrap-iso .fade.in {
+    opacity: 1;
+}
+
+    .bootstrap-iso .nav {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.bootstrap-iso .nav > li {
+    position: relative;
+    display: block;
+}
+
+.bootstrap-iso .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+    .bootstrap-iso .nav-tabs {
+    border-bottom: 1px solid #dddddd;
+}
+
+.bootstrap-iso .nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+
+.bootstrap-iso .nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+
+      .bootstrap-iso .tab-content > .tab-pane {
+    display: none;
+}
+
+.bootstrap-iso .tab-content > .active {
+    display: block;
+}
+
+.bootstrap-iso .clearfix:before, .bootstrap-iso .clearfix:after, .bootstrap-iso .dl-horizontal dd:before, .bootstrap-iso .dl-horizontal dd:after, .bootstrap-iso .container:before, .bootstrap-iso .container:after, .bootstrap-iso .container-fluid:before, .bootstrap-iso .container-fluid:after, .bootstrap-iso .row:before, .bootstrap-iso .row:after, .bootstrap-iso .form-horizontal .form-group:before, .bootstrap-iso .form-horizontal .form-group:after, .bootstrap-iso .btn-toolbar:before, .bootstrap-iso .btn-toolbar:after, .bootstrap-iso .btn-group-vertical > .btn-group:before, .bootstrap-iso .btn-group-vertical > .btn-group:after, .bootstrap-iso .nav:before, .bootstrap-iso .nav:after, .bootstrap-iso .navbar:before, .bootstrap-iso .navbar:after, .bootstrap-iso .navbar-header:before, .bootstrap-iso .navbar-header:after, .bootstrap-iso .navbar-collapse:before, .bootstrap-iso .navbar-collapse:after, .bootstrap-iso .pager:before, .bootstrap-iso .pager:after, .bootstrap-iso .panel-body:before, .bootstrap-iso .panel-body:after, .bootstrap-iso .modal-footer:before, .bootstrap-iso .modal-footer:after {
+      content: " ";
+      display: table;
+  }
+
+.bootstrap-iso .clearfix:after, .bootstrap-iso .dl-horizontal dd:after, .bootstrap-iso .container:after, .bootstrap-iso .container-fluid:after, .bootstrap-iso .row:after, .bootstrap-iso .form-horizontal .form-group:after, .bootstrap-iso .btn-toolbar:after, .bootstrap-iso .btn-group-vertical > .btn-group:after, .bootstrap-iso .nav:after, .bootstrap-iso .navbar:after, .bootstrap-iso .navbar-header:after, .bootstrap-iso .navbar-collapse:after, .bootstrap-iso .pager:after, .bootstrap-iso .panel-body:after, .bootstrap-iso .modal-footer:after {
+    clear: both;
+}
