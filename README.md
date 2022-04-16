@@ -4,4 +4,4 @@
 
 ## Welcome
 
-This is repository hosts all code for all things UGAHacks. If you're viewing us right now, we're still in the process of coverting our infrarstructure.
+This is repository hosts all code for all things UGAHacks. If you're viewing us right now, we're still in the process of coverting our infrastructure.
