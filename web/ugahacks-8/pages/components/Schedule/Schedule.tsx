@@ -62,38 +62,7 @@ function Schedule(): ReactElement {
           <div>
             <table>
               <tbody>
-                <tr>
-                  <td>Opening Ceremony</td>
-                  <td>6:30 pm</td>
-                </tr>
-                <tr>
-                  <td>Dinner and Check-in Closes</td>
-                  <td>7:00 pm</td>
-                </tr>
-                <tr>
-                  <td>First Time Hacker/Team Building Workshop</td>
-                  <td>7:30 pm</td>
-                </tr>
-                <tr>
-                  <td>Art Contest</td>
-                  <td>7:30 pm</td>
-                </tr>
-                <tr>
-                  <td>Sponsor Fair</td>
-                  <td>8:30 pm</td>
-                </tr>
-                <tr>
-                  <td>Workshop - NCR</td>
-                  <td>9:30 pm</td>
-                </tr>
-                <tr>
-                  <td>Workshop - NCR</td>
-                  <td>10:30 pm</td>
-                </tr>
-                <tr>
-                  <td>BlackRock: Sustainable Investing Challenge + API Demo</td>
-                  <td>10:30 pm</td>
-                </tr>
+                <tr>COMING SOON NEXT YEAR!</tr>
               </tbody>
             </table>
           </div>
@@ -106,131 +75,7 @@ function Schedule(): ReactElement {
           <div className="daytwo-wrapper">
             <table className="daytwo">
               <tbody>
-                <tr>
-                  <td>Breakfast</td>
-                  <td>9:00 am</td>
-                </tr>
-                <tr>
-                  <td>How to Start Building Your Web App - Paul Hansa</td>
-                  <td>10:00 am</td>
-                </tr>
-                <tr>
-                  <td>
-                    How to Test Your Website with Selenium WebDriver -
-                    Safiyullah Khan{" "}
-                  </td>
-                  <td>10:00 am</td>
-                </tr>
-                <tr>
-                  <td>Building an API w/ Python and FastAPI - Paul Hansa</td>
-                  <td>11:00 am</td>
-                </tr>
-                <tr>
-                  <td>Workshop - TSYS</td>
-                  <td>11:00 am</td>
-                </tr>
-                <tr>
-                  <td>Break (15 mins)</td>
-                  <td>12:00 pm</td>
-                </tr>
-                <tr>
-                  <td>NCR Q&A/1-on-1s and BlackRock Q&A/1-on-1s</td>
-                  <td>12:15 pm</td>
-                </tr>
-                <tr>
-                  <td>Equifax/State Farm/TSYS 1-on-1s</td>
-                  <td>1:15 pm</td>
-                </tr>
-                <tr>
-                  <td>
-                    Life After College is Hard: This Session Can Help - Malinda
-                    Inthirath
-                  </td>
-                  <td>1:15 pm</td>
-                </tr>
-                <tr>
-                  <td>Lunch</td>
-                  <td>2:15 pm</td>
-                </tr>
-                <tr>
-                  <td>BlackRock: Journey to FinTech - Aladdin</td>
-                  <td>3:15 pm</td>
-                </tr>
-                <tr>
-                  <td>
-                    Pitch Perfect: Communicating Your Ideas Quickly, Succinctly,{" "}
-                    <br></br> and Compellingly - Penn Hansa
-                  </td>
-                  <td>3:15 pm</td>
-                </tr>
-                <tr>
-                  <td>AWS at State Farm Workshop</td>
-                  <td>4:15 pm</td>
-                </tr>
-                <tr>
-                  <td>Getting Started with Angular - Chris Martinez</td>
-                  <td>4:15 pm</td>
-                </tr>
-                <tr>
-                  <td>Break (15 mins)</td>
-                  <td>5:15 pm</td>
-                </tr>
-                <tr>
-                  <td>Manipulating Cloud Data - Equifax</td>
-                  <td>5:30 pm</td>
-                </tr>
-                <tr>
-                  <td>
-                    Data Base with Data Lake & Blockchain - Jose Alexandro Acha
-                    Gomes
-                  </td>
-                  <td>5:30 pm</td>
-                </tr>
-                <tr>
-                  <td>Building Serverless Applications with AWS - Nick Tang</td>
-                  <td>6:30 pm</td>
-                </tr>
-                <tr>
-                  <td>
-                    Patient Health History Record System - Jose Alexandro Acha
-                    Gomes
-                  </td>
-                  <td>6:30 pm</td>
-                </tr>
-                <tr>
-                  <td>NCR Mini Event/Raffle</td>
-                  <td>7:30 pm</td>
-                </tr>
-                <tr>
-                  <td>Dinner</td>
-                  <td>8:00 pm</td>
-                </tr>
-                <tr>
-                  <td>
-                    Git(Hub) Basics: Git + GitHub Concepts - Shaun Mitchell
-                  </td>
-                  <td>9:00 pm</td>
-                </tr>
-                <tr>
-                  <td>Join the UGAHacks Team + Hacker Initiatives Workshop</td>
-                  <td>9:00 pm</td>
-                </tr>
-                <tr>
-                  <td>Tips and Tricks for a Broke College Dev - Paul Hansa</td>
-                  <td>10:00 pm</td>
-                </tr>
-                <tr>
-                  <td>Git - Akash Veerappan</td>
-                  <td>10:00 pm</td>
-                </tr>
-                <tr>
-                  <td>Break (15 mins)</td>
-                  <td>11:00 pm</td>
-                </tr>
-                <tr>
-                  <td>Among Us</td>
-                  <td>11:15 pm</td>
-                </tr>
+                <tr>COMING SOON NEXT YEAR!</tr>
               </tbody>
             </table>
           </div>
@@ -243,22 +88,7 @@ function Schedule(): ReactElement {
           <div>
             <table>
               <tbody>
-                <tr>
-                  <td>Breakfast and Submissions Due</td>
-                  <td>9:00 am</td>
-                </tr>
-                <tr>
-                  <td>Judging Expo</td>
-                  <td>10:00 am</td>
-                </tr>
-                <tr>
-                  <td>Lunch</td>
-                  <td>2:00 pm</td>
-                </tr>
-                <tr>
-                  <td>Closing Ceremony</td>
-                  <td>3:00 pm</td>
-                </tr>
+                <tr>COMING SOON NEXT YEAR!</tr>
               </tbody>
             </table>
           </div>
