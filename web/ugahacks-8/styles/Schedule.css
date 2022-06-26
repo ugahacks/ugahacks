@@ -74,7 +74,7 @@ td {
   font-size: 1.2em;
 }
 
-.daytwo-wrapper {
+/* .daytwo-wrapper {
   overflow-y: scroll;
   height: 70vh;
 }
@@ -89,7 +89,7 @@ td {
 
 .daytwo-wrapper::-webkit-scrollbar-thumb {
   background-color: #ffe401;
-}
+} */
 
 /* FIREFOX: */
 
