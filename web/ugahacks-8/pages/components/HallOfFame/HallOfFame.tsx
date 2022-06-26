@@ -42,23 +42,30 @@ const responsive = {
 const overall_items: ReactElement[] = [
   <MediaCard
     teamImage={reading_buddy}
-    placement="[UGAHacks] 1st"
-    teamName="Reading Buddy"
-    link="https://devpost.com/software/reading-buddy-0idbug"
+    placement="Best Overall"
+    teamName="Path Finder"
+    link="https://devpost.com/software/path-finder-l1zg0x"
     buttonText="See on Devpost"
   />,
   <MediaCard
     teamImage={astrodog}
-    placement="[UGAHacks] 2nd"
-    teamName="AstroDog"
-    link="https://devpost.com/software/astrodog"
+    placement="Best Solo"
+    teamName="GoGetEmployed"
+    link="https://devpost.com/software/gogetemployed"
     buttonText="See on Devpost"
   />,
   <MediaCard
     teamImage={luxstra}
-    placement="[UGAHacks] 3rd"
-    teamName="Luxstra"
-    link="https://devpost.com/software/luxstra"
+    placement="Best First Time Hacker"
+    teamName="Style Sensei"
+    link="https://devpost.com/software/style-sensei"
+    buttonText="See on Devpost"
+  />,
+  <MediaCard
+    teamImage={luxstra}
+    placement="Best First Time Hacker"
+    teamName="CourseMiner"
+    link="https://devpost.com/software/courseminer"
     buttonText="See on Devpost"
   />,
   <MediaCard
@@ -76,17 +83,17 @@ const overall_items: ReactElement[] = [
     buttonText="See Artwork"
   />,
   <MediaCard
-    teamImage={octocat}
-    placement="Best Octocat Drawing"
-    teamName="@ThePigOverlord"
-    link="https://twitter.com/ThePigOverlord/status/1357845688743124993?s=20"
-    buttonText="See Tweet"
+    teamImage={macro}
+    placement="[MLH] Best Domain"
+    teamName="m4cro.space"
+    link="https://devpost.com/software/dawgtreats"
+    buttonText="Go to Wesbite"
   />,
   <MediaCard
     teamImage={macro}
-    placement="Best Domain"
-    teamName="m4cro.space"
-    link="https://m4cro.space"
+    placement="[MLH] Creative GitHub"
+    teamName="Byte Driver"
+    link="https://devpost.com/software/byte-driver"
     buttonText="Go to Wesbite"
   />,
   <MediaCard
@@ -97,31 +104,17 @@ const overall_items: ReactElement[] = [
     buttonText="See on Devpost"
   />,
   <MediaCard
-    teamImage={sign_assist}
-    placement="Best First Time Hacker"
-    teamName="Sign Assist"
-    link="https://devpost.com/software/sign-assist"
-    buttonText="See on Devpost"
-  />,
-  <MediaCard
-    teamImage={sign_assist}
-    placement="[Digi Key] 1st"
-    teamName="Sign Assist"
-    link="https://devpost.com/software/sign-assist"
-    buttonText="See on Devpost"
-  />,
-  <MediaCard
-    teamImage={astrodog}
-    placement="[Digi Key] 2nd"
-    teamName="AstroDog"
-    link="https://devpost.com/software/astrodog"
+    teamImage={solvit_sus}
+    placement="[MLH] Best CI/CD"
+    teamName="Biolearn"
+    link="https://devpost.com/software/biolearn-awvgeb"
     buttonText="See on Devpost"
   />,
   <MediaCard
     teamImage={astrodog}
     placement="Best Hardware Track"
-    teamName="AstroDog"
-    link="https://devpost.com/software/astrodog"
+    teamName="Share Stead"
+    link="https://devpost.com/software/namegoeshere"
     buttonText="See on Devpost"
   />,
   <MediaCard
@@ -171,58 +164,65 @@ const overall_items: ReactElement[] = [
 const category_items: ReactElement[] = [
   <MediaCard
     teamImage={inventrack}
-    placement="[NCR] 1st"
-    teamName="InvenTrack"
-    link="https://devpost.com/software/inventrack"
+    placement="[NCR] Data Science Winner"
+    teamName="Demand-Based POS Rec"
+    link="https://devpost.com/software/max-and-abdu"
     buttonText="See on Devpost"
   />,
   <MediaCard
     teamImage={chopchop}
-    placement="[NCR] 2nd"
-    teamName="ChopChop"
-    link="https://devpost.com/software/chopchop"
+    placement="[NCR] Eliminate the Friction"
+    teamName="CourseDawg"
+    link="https://devpost.com/software/coursedawg"
     buttonText="See on Devpost"
   />,
   <MediaCard
     teamImage={atm_pal}
-    placement="[NCR] 3rd"
-    teamName="ATM-Pal"
-    link="https://devpost.com/software/atm-pal"
-    buttonText="See on Devpost"
-  />,
-  <MediaCard
-    teamImage={luxstra}
-    placement="[State Farm] 1st"
-    teamName="Luxstra"
-    link="https://devpost.com/software/luxstra"
+    placement="[NCR] Eliminate the Friction"
+    teamName="DawgConnect"
+    link="https://devpost.com/software/dawgconnect"
     buttonText="See on Devpost"
   />,
   <MediaCard
     teamImage={atm_pal}
-    placement="[Capital One] 1st"
-    teamName="ATM Pal"
-    link="https://devpost.com/software/atm-pal"
+    placement="[NCR] Blockchain Tech"
+    teamName="CryptoClerk"
+    link="https://devpost.com/software/cryptoclerk"
+    buttonText="See on Devpost"
+  />,
+  <MediaCard
+    teamImage={atm_pal}
+    placement="[NCR] Blockchain Tech"
+    teamName="DeSign"
+    link="https://devpost.com/software/design-7f1w6r"
+    buttonText="See on Devpost"
+  />,
+  <MediaCard
+    teamImage={atm_pal}
+    placement="[NCR] Retail Gamification"
+    teamName="spaceGO"
+    link="https://devpost.com/software/spagego"
     buttonText="See on Devpost"
   />,
   <MediaCard
     teamImage={luxstra}
-    placement="[GCP] 1st"
-    teamName="Luxstra"
-    link="https://devpost.com/software/luxstra"
+    placement="[GCP] Best GCP Use"
+    teamName="Free Food UGA"
+    link="https://devpost.com/software/free-food-uga"
     buttonText="See on Devpost"
   />,
   <MediaCard
     teamImage={landr}
     placement="[BlackRock] 1st"
-    teamName="Landr"
-    link="https://devpost.com/software/landr"
+    teamName="Jasmine - Green, Grassroots Investing"
+    link="https://devpost.com/software/pending-name"
     buttonText="See on Devpost"
   />,
   <MediaCard
     teamImage={solvit_sus}
     placement="[BlackRock] 2nd"
-    teamName="Solvit Sustainable"
-    link="https://devpost.com/software/solvit-eja01g"
+    teamName="lightswitch"
+    link="https://devpost.com/software/lightswitch"
     buttonText="See on Devpost"
   />,
 ];

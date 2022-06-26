@@ -83,7 +83,7 @@
   font-weight: 700;
   text-align: center;
   font-size: 64px;
-  color: #ffe401;
+  color: #097969;
   order: -1;
 }
 
@@ -219,7 +219,7 @@
         rgba(250, 250, 250, 0.9),
         rgba(255, 255, 255, 0.9)
       ),
-      url(/icons/FAQImages/images/screws-01.svg);
+      url(/icons/FAQImages/images/AboutBackground1.png);
   }
 
   .faq-container {
