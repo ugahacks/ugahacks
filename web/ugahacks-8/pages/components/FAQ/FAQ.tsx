@@ -13,7 +13,7 @@ function FAQ(): ReactElement {
           <div className="faq-question-wrapper">
             <Question
               question="Where will it be held this year?"
-              answer="Due to Covid-19, UGAHacks 6 will be held virtually."
+              answer="UGA Hacks 8 will be a hybrid event where participants can attend in-person at MLC Building on UGA Campus or online!"
             />
 
             <Question
@@ -23,12 +23,7 @@ function FAQ(): ReactElement {
 
             <Question
               question="Can I apply for travel reimbursements?"
-              answer="No, we will not be providing reimbursements for travel this year because the event will be held virtually."
-            />
-
-            <Question
-              question="How do I access a virtual workshop?"
-              answer="We'll announce the Google Meet link for workshops on Slack ahead of time."
+              answer="Currently we do not provide travel reimbursements but this can change in the future!"
             />
 
             <Question
