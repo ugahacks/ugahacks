@@ -6510,6 +6510,27 @@ resolve@^2.0.0-next.3:
   languageName: unknown
   linkType: soft
 
+"ugahacks-8@workspace:web/ugahacks-8":
+  version: 0.0.0-use.local
+  resolution: "ugahacks-8@workspace:web/ugahacks-8"
+  dependencies:
+    "@material-ui/core": ^4.12.3
+    "@material-ui/icons": ^4.11.2
+    "@types/node": ^16.4.10
+    "@types/react": 17.0.15
+    eslint: 7.32.0
+    eslint-config-next: 11.0.1
+    framer-motion: ^4.1.17
+    lodash: ^4.17.21
+    next: ^11.1.2
+    react: 17.0.2
+    react-alice-carousel: ^2.5.1
+    react-device-detect: ^1.17.0
+    react-dom: 17.0.2
+    typescript: 4.3.5
+  languageName: unknown
+  linkType: soft
+
 "ugahacks-org@workspace:web/ugahacks-org":
   version: 0.0.0-use.local
   resolution: "ugahacks-org@workspace:web/ugahacks-org"

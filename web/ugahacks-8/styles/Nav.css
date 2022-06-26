@@ -1,0 +1,77 @@
+nav {
+  position: fixed;
+  left: 1vw;
+  top: 40vh;
+  display: grid;
+}
+
+.dotstyle div {
+  position: relative;
+  display: block;
+  margin: 16px 0;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.dotstyle div a {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border-radius: 50%;
+  background-color: transparent;
+  text-indent: -999em; /* make the text accessible to screen readers */
+  cursor: pointer;
+  position: absolute;
+}
+
+.dotstyle div a:focus {
+  outline: none;
+}
+
+.dotstyle-fillin div a {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px #223c9d;
+  -webkit-transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+}
+
+.dotstyle-fillin div a:hover,
+.dotstyle-fillin div a:focus {
+  box-shadow: inset 0 0 0 2px #4e61aa;
+}
+
+.dotstyle-fillin div a.current {
+  box-shadow: inset 0 0 0 9px #223c9d;
+}
+
+.dotstyle-fillin-inverted div a {
+  box-shadow: inset 0 0 0 2px white;
+}
+
+.dotstyle-fillin-inverted div a:hover,
+.dotstyle-fillin-inverted div a:focus {
+  box-shadow: inset 0 0 0 2px #ebecf1;
+}
+
+.dotstyle-fillin-inverted div a.current {
+  box-shadow: inset 0 0 0 9px white;
+}
+
+@media only screen and (max-width: 800px) {
+  .dotstyle div a {
+    left: -25px;
+  }
+
+  nav {
+    left: 35px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  nav {
+    display: none !important;
+  }
+}
