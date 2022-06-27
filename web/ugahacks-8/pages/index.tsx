@@ -11,12 +11,12 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>UGAHacks 6</title>
+        <title>UGAHacks 8</title>
         <meta
           name="description"
-          content="UGAHacks 6 Event Site - Boot up your dreams and build the future! February 5-7, 2021"
+          content="UGAHacks 8 Event Site - Create your own adventure! February 10 - 12, 2023"
         />
-        <link rel="icon" href="/icons/favicon.ico" />
+        <link rel="icon" href="/icons/byteGoggleDown.png" />
       </Head>
 
       <Splash />
