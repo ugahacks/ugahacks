@@ -109,7 +109,6 @@ function Sponsors(): ReactElement {
             link="https://www.figma.com/education/students/"
           />
         </div>
-        <h2>Partners</h2>
         <div className="logo-container">
           <SponsorLogo
             image={digitalOcean}
