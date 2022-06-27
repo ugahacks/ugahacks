@@ -10,25 +10,26 @@ import IconButton from "@material-ui/core/IconButton";
 import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 
-const reading_buddy: string = "/icons/HallOfFameImages/media/reading_buddy.png";
-const astrodog: string = "/icons/HallOfFameImages/media/astrodog.png";
-const luxstra: string = "/icons/HallOfFameImages/media/luxstra.png";
-const octocat: string = "/icons/HallOfFameImages/media/octocat.png";
-const macro: string = "/icons/HallOfFameImages/media/macro.png";
-const sign_assist: string = "/icons/HallOfFameImages/media/sign_assist.png";
-const inventrack: string = "/icons/HallOfFameImages/media/inventrack.png";
-const chopchop: string = "/icons/HallOfFameImages/media/chopchop.png";
-const atm_pal: string = "/icons/HallOfFameImages/media/atm_pal.png";
-const landr: string = "/icons/HallOfFameImages/media/landr.png";
-const solvit_sus: string = "/icons/HallOfFameImages/media/solvit_sus.png";
-const oz: string = "/icons/HallOfFameImages/media/oz.png";
-const magic: string = "/icons/HallOfFameImages/media/magic.png";
-const food_1: string = "/icons/HallOfFameImages/media/food_1.png";
-const food_2: string = "/icons/HallOfFameImages/media/food_2.png";
-const food_3: string = "/icons/HallOfFameImages/media/food_3.png";
-const workspace_1: string = "/icons/HallOfFameImages/media/workspace_1.png";
-const workspace_2: string = "/icons/HallOfFameImages/media/workspace_2.png";
-const workspace_3: string = "/icons/HallOfFameImages/media/workspace_3.png";
+const lightswitch: string = "/icons/HallOfFameImages/media/lightswitch.jpg";
+const esports: string = "/icons/HallOfFameImages/media/esports.png";
+const jasmine: string = "/icons/HallOfFameImages/media/jasmine.png";
+const shareStead: string = "/icons/HallOfFameImages/media/shareStead.png";
+const cryptoClerk: string = "/icons/HallOfFameImages/media/cryptoClerk.png";
+const cryptoClerkNCR: string =
+  "/icons/HallOfFameImages/media/cryptoClerkNCR.png";
+const posRec: string = "/icons/HallOfFameImages/media/POSRec.png";
+const courseDawg: string = "/icons/HallOfFameImages/media/courseDawg.png";
+const dawgConnect: string = "/icons/HallOfFameImages/media/dawgConnect.png";
+const deSign: string = "/icons/HallOfFameImages/media/DeSign.png";
+const spaceGo: string = "/icons/HallOfFameImages/media/spaceGo.png";
+const freeFoodUGA: string = "/icons/HallOfFameImages/media/freeFoodUGA.png";
+const pathFinder: string = "/icons/HallOfFameImages/media/pathFinder.png";
+const goGetEmployed: string = "/icons/HallOfFameImages/media/goGetEmployed.png";
+const styleSensei: string = "/icons/HallOfFameImages/media/styleSensei.png";
+const courseMiner: string = "/icons/HallOfFameImages/media/courseMiner.png";
+const dawgTreats: string = "/icons/HallOfFameImages/media/dawgTreats.png";
+const byteDriver: string = "/icons/HallOfFameImages/media/byteDriver.png";
+const bioLearn: string = "/icons/HallOfFameImages/media/bioLearn.png";
 
 const responsive = {
   0: { items: 1 },
@@ -41,188 +42,146 @@ const responsive = {
 
 const overall_items: ReactElement[] = [
   <MediaCard
-    teamImage={reading_buddy}
+    teamImage={pathFinder}
     placement="Best Overall"
     teamName="Path Finder"
     link="https://devpost.com/software/path-finder-l1zg0x"
     buttonText="See on Devpost"
   />,
   <MediaCard
-    teamImage={astrodog}
+    teamImage={goGetEmployed}
     placement="Best Solo"
     teamName="GoGetEmployed"
     link="https://devpost.com/software/gogetemployed"
     buttonText="See on Devpost"
   />,
   <MediaCard
-    teamImage={luxstra}
+    teamImage={styleSensei}
     placement="Best First Time Hacker"
     teamName="Style Sensei"
     link="https://devpost.com/software/style-sensei"
     buttonText="See on Devpost"
   />,
   <MediaCard
-    teamImage={luxstra}
+    teamImage={courseMiner}
     placement="Best First Time Hacker"
     teamName="CourseMiner"
     link="https://devpost.com/software/courseminer"
     buttonText="See on Devpost"
   />,
   <MediaCard
-    teamImage={oz}
-    placement="[Art Contest] 1st"
-    teamName="Danielle Mawson"
-    link={oz}
-    buttonText="See Artwork"
-  />,
-  <MediaCard
-    teamImage={magic}
-    placement="[Art Contest] 2nd"
-    teamName="Lauren Lin"
-    link={magic}
-    buttonText="See Artwork"
-  />,
-  <MediaCard
-    teamImage={macro}
+    teamImage={dawgTreats}
     placement="[MLH] Best Domain"
-    teamName="m4cro.space"
+    teamName="DawgTreats"
     link="https://devpost.com/software/dawgtreats"
-    buttonText="Go to Wesbite"
-  />,
-  <MediaCard
-    teamImage={macro}
-    placement="[MLH] Creative GitHub"
-    teamName="Byte Driver"
-    link="https://devpost.com/software/byte-driver"
-    buttonText="Go to Wesbite"
-  />,
-  <MediaCard
-    teamImage={reading_buddy}
-    placement="Best Solo Hack"
-    teamName="Reading Buddy"
-    link="https://devpost.com/software/reading-buddy-0idbug"
     buttonText="See on Devpost"
   />,
   <MediaCard
-    teamImage={solvit_sus}
+    teamImage={byteDriver}
+    placement="[MLH] Creative GitHub"
+    teamName="Byte Driver"
+    link="https://devpost.com/software/byte-driver"
+    buttonText="See on Devpost"
+  />,
+  <MediaCard
+    teamImage={bioLearn}
     placement="[MLH] Best CI/CD"
     teamName="Biolearn"
     link="https://devpost.com/software/biolearn-awvgeb"
     buttonText="See on Devpost"
   />,
   <MediaCard
-    teamImage={astrodog}
+    teamImage={shareStead}
     placement="Best Hardware Track"
     teamName="Share Stead"
     link="https://devpost.com/software/namegoeshere"
     buttonText="See on Devpost"
   />,
   <MediaCard
-    teamImage={food_1}
-    placement="[Best Meal] 1st"
-    teamName="Anita Yep"
-    link={food_1}
-    buttonText="See Meal"
-  />,
-  <MediaCard
-    teamImage={food_2}
-    placement="[Best Meal] 2nd"
-    teamName="Ngan Tran"
-    link={food_2}
-    buttonText="See Meal"
-  />,
-  <MediaCard
-    teamImage={food_3}
-    placement="[Best Meal] 3rd"
-    teamName="Deeksha Koya"
-    link={food_3}
-    buttonText="See Meal"
-  />,
-  <MediaCard
-    teamImage={workspace_1}
-    placement="[Best Workspace] 1st"
-    teamName="Rachel Moan"
-    link={workspace_1}
-    buttonText="See Workspace"
-  />,
-  <MediaCard
-    teamImage={workspace_2}
-    placement="[Best Workspace] 2nd"
-    teamName="Katie Park"
-    link={workspace_2}
-    buttonText="See Workspace"
-  />,
-  <MediaCard
-    teamImage={workspace_3}
-    placement="[Best Workspace] 3rd"
-    teamName="Brandon Yau"
-    link={workspace_3}
-    buttonText="See Workspace"
+    teamImage={esports}
+    placement="[eSports] Best Gamers"
+    teamName="UGA eSports"
+    link={esports}
+    buttonText="See Winners"
   />,
 ];
 
 const category_items: ReactElement[] = [
   <MediaCard
-    teamImage={inventrack}
+    teamImage={posRec}
     placement="[NCR] Data Science Winner"
     teamName="Demand-Based POS Rec"
     link="https://devpost.com/software/max-and-abdu"
     buttonText="See on Devpost"
   />,
   <MediaCard
-    teamImage={chopchop}
+    teamImage={courseDawg}
     placement="[NCR] Eliminate the Friction"
     teamName="CourseDawg"
     link="https://devpost.com/software/coursedawg"
     buttonText="See on Devpost"
   />,
   <MediaCard
-    teamImage={atm_pal}
+    teamImage={dawgConnect}
     placement="[NCR] Eliminate the Friction"
     teamName="DawgConnect"
     link="https://devpost.com/software/dawgconnect"
     buttonText="See on Devpost"
   />,
   <MediaCard
-    teamImage={atm_pal}
+    teamImage={cryptoClerkNCR}
     placement="[NCR] Blockchain Tech"
     teamName="CryptoClerk"
     link="https://devpost.com/software/cryptoclerk"
     buttonText="See on Devpost"
   />,
   <MediaCard
-    teamImage={atm_pal}
+    teamImage={deSign}
     placement="[NCR] Blockchain Tech"
     teamName="DeSign"
     link="https://devpost.com/software/design-7f1w6r"
     buttonText="See on Devpost"
   />,
   <MediaCard
-    teamImage={atm_pal}
+    teamImage={spaceGo}
     placement="[NCR] Retail Gamification"
     teamName="spaceGO"
     link="https://devpost.com/software/spagego"
     buttonText="See on Devpost"
   />,
   <MediaCard
-    teamImage={luxstra}
-    placement="[GCP] Best GCP Use"
-    teamName="Free Food UGA"
-    link="https://devpost.com/software/free-food-uga"
-    buttonText="See on Devpost"
-  />,
-  <MediaCard
-    teamImage={landr}
+    teamImage={jasmine}
     placement="[BlackRock] 1st"
     teamName="Jasmine - Green, Grassroots Investing"
     link="https://devpost.com/software/pending-name"
     buttonText="See on Devpost"
   />,
   <MediaCard
-    teamImage={solvit_sus}
+    teamImage={lightswitch}
     placement="[BlackRock] 2nd"
     teamName="lightswitch"
     link="https://devpost.com/software/lightswitch"
+    buttonText="See on Devpost"
+  />,
+  <MediaCard
+    teamImage={cryptoClerk}
+    placement="[Capital One] 1st"
+    teamName="CryptoClerk"
+    link="https://devpost.com/software/cryptoclerk"
+    buttonText="See on Devpost"
+  />,
+  <MediaCard
+    teamImage={cryptoClerk}
+    placement="[TSYS] 1st"
+    teamName="CryptoClerk"
+    link="https://devpost.com/software/cryptoclerk"
+    buttonText="See on Devpost"
+  />,
+  <MediaCard
+    teamImage={freeFoodUGA}
+    placement="[MLH] Best GCP Use"
+    teamName="Free Food UGA"
+    link="https://devpost.com/software/free-food-uga"
     buttonText="See on Devpost"
   />,
 ];

@@ -1,5 +1,5 @@
 .sponsors-section {
-  background-image: url(/icons/SponsorsImages/images/bp2animated.svg);
+  background-image: url(/icons/SplashImages/images/Background.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover !important;
@@ -12,6 +12,7 @@
   text-align: center;
   margin: auto;
   width: 65%;
+  color: #42885a;
 }
 
 .logo-container {
@@ -21,6 +22,7 @@
   justify-content: space-evenly;
   justify-items: center;
   align-items: center;
+  color: #42885a;
 }
 
 .loft,
@@ -39,6 +41,7 @@
 
 .penthouse {
   width: 325px;
+  color: #42885a;
 }
 
 .apartment {
