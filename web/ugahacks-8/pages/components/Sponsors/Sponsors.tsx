@@ -133,7 +133,7 @@ function Sponsors(): ReactElement {
             image={aws}
             alt="AWS"
             tier="partner"
-            link="https://hackp.ac/mlh-stickermule-hackathons"
+            link="https://aws.amazon.com/"
           />
           <SponsorLogo
             id="acm"
