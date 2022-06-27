@@ -72,7 +72,7 @@ jobs:
           echo "Changed Files (~/files.csv):"
           cat $HOME/files.csv
 
-      # UGAHacks 7
+      # UGAHacks 8
       - name: Build and Push ugahacks-8 Container
         run: |-
           echo "ugahacks-8 changed, building ..."
