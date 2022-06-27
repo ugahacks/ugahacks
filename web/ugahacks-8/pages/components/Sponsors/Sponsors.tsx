@@ -21,6 +21,10 @@ const capitalone: string =
 const tsys: string = "/icons/SponsorsImages/images/sponsorlogos/tsys.png";
 const uga: string = "/icons/SponsorsImages/images/sponsorlogos/uga-combo.png";
 const credera: string = "/icons/SponsorsImages/images/sponsorlogos/credera.png";
+const deloitte: string =
+  "/icons/SponsorsImages/images/sponsorlogos/deloitte.svg";
+const figma: string = "/icons/SponsorsImages/images/sponsorlogos/figma.svg";
+const aws: string = "/icons/SponsorsImages/images/sponsorlogos/aws.png";
 const acm: string = "/icons/SponsorsImages/images/sponsorlogos/acm.png";
 
 const CustomButton = withStyles({
@@ -62,34 +66,28 @@ function Sponsors(): ReactElement {
             link="https://www.blackrock.com/corporate/about-us"
           />
           <SponsorLogo
-            image={statefarm}
-            alt="StateFarm"
-            tier="apartment"
-            link="https://www.statefarm.com/about-us"
-          />
-          <SponsorLogo
-            image={capitalone}
-            alt="Capital One"
-            tier="apartment"
-            link="https://campus.capitalone.com/"
-          />
-          <SponsorLogo
             image={tsys}
             alt="TSYS"
             tier="apartment"
             link="https://www.tsys.com/"
           />
           <SponsorLogo
+            image={statefarm}
+            alt="StateFarm"
+            tier="doghouse"
+            link="https://www.statefarm.com/about-us"
+          />
+          <SponsorLogo
+            image={capitalone}
+            alt="Capital One"
+            tier="doghouse"
+            link="https://campus.capitalone.com/"
+          />
+          <SponsorLogo
             image={equifax}
             alt="Equifax"
             tier="doghouse"
             link="https://www.equifax.com/personal/"
-          />
-          <SponsorLogo
-            image={entreProg}
-            alt="UGA Entrepreneurship Program"
-            tier="doghouse"
-            link="https://www.terry.uga.edu/academics/entrepreneurship/index.php"
           />
           <SponsorLogo
             id="ugacombologo"
@@ -103,6 +101,18 @@ function Sponsors(): ReactElement {
             alt="Credera"
             tier="loft"
             link="https://www.credera.com/"
+          />
+          <SponsorLogo
+            image={deloitte}
+            alt="Deloitte"
+            tier="loft"
+            link="https://www2.deloitte.com/us/en.html"
+          />
+          <SponsorLogo
+            image={figma}
+            alt="Figma"
+            tier="loft"
+            link="https://www.figma.com/education/students/"
           />
         </div>
         <h2>Partners</h2>
@@ -122,6 +132,12 @@ function Sponsors(): ReactElement {
           <SponsorLogo
             image={stickerMule}
             alt="StickerMule"
+            tier="partner"
+            link="https://hackp.ac/mlh-stickermule-hackathons"
+          />
+          <SponsorLogo
+            image={aws}
+            alt="AWS"
             tier="partner"
             link="https://hackp.ac/mlh-stickermule-hackathons"
           />
