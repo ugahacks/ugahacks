@@ -566,6 +566,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react@npm:^18.0.14":
+  version: 18.0.14
+  resolution: "@types/react@npm:18.0.14"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: 608eb57a383eedc54c79949673e5e8314f6b0c61542bff58721c8c47a18c23e2832e77c656050c2c2c004b62cf25582136c7c56fe1b6263a285c065fae31dbcf
+  languageName: node
+  linkType: hard
+
 "@types/scheduler@npm:*":
   version: 0.16.2
   resolution: "@types/scheduler@npm:0.16.2"
@@ -6517,7 +6528,7 @@ resolve@^2.0.0-next.3:
     "@material-ui/core": ^4.12.3
     "@material-ui/icons": ^4.11.2
     "@types/node": ^16.4.10
-    "@types/react": 17.0.15
+    "@types/react": ^18.0.14
     eslint: 7.32.0
     eslint-config-next: 11.0.1
     framer-motion: ^4.1.17
