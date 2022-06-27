@@ -3,7 +3,7 @@ import Button from "@material-ui/core/Button";
 import { withStyles } from "@material-ui/core/styles";
 //import Image from 'next/image';
 
-const sixLogo: string = "/icons/SplashImages/images/Hacks8Logo.png";
+const eightLogo: string = "/icons/SplashImages/images/Hacks8Logo.png";
 
 interface TimeLeftObject {
   days?: number;
@@ -124,7 +124,7 @@ function Splash(): ReactElement {
         />
       </a>
       <div className="headercontainer">
-        <img className="logo" src={sixLogo} alt="UGAHacks 6 Logo" />
+        <img className="logo" src={eightLogo} alt="UGAHacks 6 Logo" />
         <Countdown />
       </div>
     </section>
