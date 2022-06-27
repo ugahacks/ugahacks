@@ -119,7 +119,7 @@ function Splash(): ReactElement {
         rel="noopener noreferrer"
       >
         <img
-          src="/icons/SplashImages/images/mlh-trust-badge-2022-blue.svg"
+          src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-white.svg"
           alt="Major League Hacking 2022 Hackathon Season"
         />
       </a>

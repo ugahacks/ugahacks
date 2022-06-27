@@ -84,12 +84,6 @@ function Sponsors(): ReactElement {
             link="https://campus.capitalone.com/"
           />
           <SponsorLogo
-            image={equifax}
-            alt="Equifax"
-            tier="doghouse"
-            link="https://www.equifax.com/personal/"
-          />
-          <SponsorLogo
             id="ugacombologo"
             image={uga}
             alt="UGA Department of Computer Science, Parents Leadership Council, Resident Hall Association, Student Government Association"

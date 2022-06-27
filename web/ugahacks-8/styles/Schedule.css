@@ -1,5 +1,5 @@
 #schedule {
-  background-image: url(/icons/ScheduleImages/images/bp1animated.svg);
+  background-image: url(/icons/SplashImages/images/Background.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover !important;
@@ -125,7 +125,7 @@ td:last-child {
 
 div {
   font-weight: 400;
-  color: #fff;
+  color: #42885a;
 }
 
 #schedule h1,

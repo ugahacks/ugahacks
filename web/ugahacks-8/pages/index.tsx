@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
 
       <Splash />
-      <HallOfFame />
+      {/* <HallOfFame /> */}
       <About />
       <Schedule />
       <FAQ />
