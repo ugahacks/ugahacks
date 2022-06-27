@@ -10,15 +10,15 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: "/recap",
+        source: "/recap-7",
         destination:
-          "https://storage.googleapis.com/ugahacks-public/external/UGAHacks6-Recap-Packet.pdf",
+          "https://storage.googleapis.com/ugahacks-public/external/UGAHacks7-Recap-Packet.pdf",
         permanent: true,
       },
       {
-        source: "/sponsorship-packet",
+        source: "/sponsorship-packet-8",
         destination:
-          "https://storage.googleapis.com/ugahacks-public/external/UGAHacks6-Sponsorship-Packet.pdf",
+          "https://storage.googleapis.com/ugahacks-public/external/UH8SponsorshipPacket.pdf",
         permanent: true,
       },
     ];

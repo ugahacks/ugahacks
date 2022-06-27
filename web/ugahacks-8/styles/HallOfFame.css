@@ -9,20 +9,20 @@
 }
 
 .header {
-  color: white;
+  color: #42885a;
   text-align: center;
   padding-top: 5vh;
   font-weight: 700;
 }
 
 .subheader {
-  color: #ffe401;
+  color: black;
   text-align: center;
   padding-top: 20px;
 }
 
 .title {
-  color: white;
+  color: black;
   text-align: center;
 }
 

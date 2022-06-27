@@ -152,7 +152,7 @@ function Sponsors(): ReactElement {
         <CustomButton
           variant="contained"
           size="large"
-          href="/sponsorship-packet"
+          href="/sponsorship-packet-8"
         >
           Sponsorship Packet
         </CustomButton>
