@@ -102,7 +102,7 @@ function Countdown(): ReactElement {
           <h2 id="eventdate">February 3-5, 2023 Hybrid</h2>
         </div>
         <CustomButton variant="contained" size="large" href="/recap-7">
-          Pre-Register Here
+          UGA Hacks 7 RECAP
         </CustomButton>
       </div>
     );

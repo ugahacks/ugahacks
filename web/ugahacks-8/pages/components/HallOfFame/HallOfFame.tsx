@@ -31,6 +31,10 @@ const dawgTreats: string = "/icons/HallOfFameImages/media/dawgTreats.png";
 const byteDriver: string = "/icons/HallOfFameImages/media/byteDriver.png";
 const bioLearn: string = "/icons/HallOfFameImages/media/bioLearn.png";
 
+const firstArt: string = "/icons/HallOfFameImages/media/UGAHacksArt.png";
+const secondArt: string = "/icons/HallOfFameImages/media/Hacks7SecondArt.png";
+const thirdArt: string = "/icons/HallOfFameImages/media/UGAHACKSV.03.gif";
+
 const responsive = {
   0: { items: 1 },
   568: { items: 2 },
@@ -70,32 +74,32 @@ const overall_items: ReactElement[] = [
     buttonText="See on Devpost"
   />,
   <MediaCard
-    teamImage={dawgTreats}
-    placement="[MLH] Best Domain"
-    teamName="DawgTreats"
-    link="https://devpost.com/software/dawgtreats"
-    buttonText="See on Devpost"
-  />,
-  <MediaCard
-    teamImage={byteDriver}
-    placement="[MLH] Creative GitHub"
-    teamName="Byte Driver"
-    link="https://devpost.com/software/byte-driver"
-    buttonText="See on Devpost"
-  />,
-  <MediaCard
-    teamImage={bioLearn}
-    placement="[MLH] Best CI/CD"
-    teamName="Biolearn"
-    link="https://devpost.com/software/biolearn-awvgeb"
-    buttonText="See on Devpost"
-  />,
-  <MediaCard
     teamImage={shareStead}
     placement="Best Hardware Track"
     teamName="Share Stead"
     link="https://devpost.com/software/namegoeshere"
     buttonText="See on Devpost"
+  />,
+  <MediaCard
+    teamImage={firstArt}
+    placement="1st Place Art"
+    teamName="Prateek Yadav"
+    link={firstArt}
+    buttonText="View Art"
+  />,
+  <MediaCard
+    teamImage={secondArt}
+    placement="2nd Place Art"
+    teamName="Nnamdi Obichi"
+    link={secondArt}
+    buttonText="View Art"
+  />,
+  <MediaCard
+    teamImage={thirdArt}
+    placement="3rd Place Art"
+    teamName="Prateek Yadav"
+    link={thirdArt}
+    buttonText="View Art"
   />,
   <MediaCard
     teamImage={esports}
@@ -107,6 +111,13 @@ const overall_items: ReactElement[] = [
 ];
 
 const category_items: ReactElement[] = [
+  <MediaCard
+    teamImage={styleSensei}
+    placement="[NCR] Data Science Winner"
+    teamName="Style Sensei"
+    link="https://devpost.com/software/style-sensei"
+    buttonText="See on Devpost"
+  />,
   <MediaCard
     teamImage={posRec}
     placement="[NCR] Data Science Winner"
@@ -178,10 +189,52 @@ const category_items: ReactElement[] = [
     buttonText="See on Devpost"
   />,
   <MediaCard
+    teamImage={shareStead}
+    placement="[TSYS] 2nd"
+    teamName="CryptoClerk"
+    link="https://devpost.com/software/namegoeshere"
+    buttonText="See on Devpost"
+  />,
+  <MediaCard
+    teamImage={jasmine}
+    placement="[Figma] 1st"
+    teamName="Jasmine - Green, Grassroots Investing"
+    link="https://devpost.com/software/pending-name"
+    buttonText="See on Devpost"
+  />,
+  <MediaCard
     teamImage={freeFoodUGA}
     placement="[MLH] Best GCP Use"
     teamName="Free Food UGA"
     link="https://devpost.com/software/free-food-uga"
+    buttonText="See on Devpost"
+  />,
+  <MediaCard
+    teamImage={dawgTreats}
+    placement="[MLH] Best Domain"
+    teamName="DawgTreats"
+    link="https://devpost.com/software/dawgtreats"
+    buttonText="See on Devpost"
+  />,
+  <MediaCard
+    teamImage={byteDriver}
+    placement="[MLH] Creative GitHub"
+    teamName="Byte Driver"
+    link="https://devpost.com/software/byte-driver"
+    buttonText="See on Devpost"
+  />,
+  <MediaCard
+    teamImage={bioLearn}
+    placement="[MLH] Best CI/CD"
+    teamName="Biolearn"
+    link="https://devpost.com/software/biolearn-awvgeb"
+    buttonText="See on Devpost"
+  />,
+  <MediaCard
+    teamImage={pathFinder}
+    placement="[MLH] Best Twilio"
+    teamName="Path Finder"
+    link="https://devpost.com/software/path-finder-l1zg0x"
     buttonText="See on Devpost"
   />,
 ];
