@@ -78,7 +78,7 @@ jobs:
           echo "ugahacks-8 changed, building ..."
           docker build -t gcr.io/${{ env.PROJECT_ID }}/ugahacks-8-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/ugahacks-8
           docker push gcr.io/${{ env.PROJECT_ID }}/ugahacks-8-${{ env.DEPLOY_ENV }}:${{ github.sha }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-7')
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-8')
 
       - name: Deploy ugahacks-8 to Cloud Run
         id: deploy_ugahacks_8
