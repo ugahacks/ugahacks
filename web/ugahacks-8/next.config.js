@@ -21,6 +21,12 @@ module.exports = {
           "https://storage.googleapis.com/ugahacks-public/external/UH8SponsorshipPacket.pdf",
         permanent: true,
       },
+      {
+        source: "/pre-register-8",
+        destination:
+          "https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_eglN8b2Chwwb4G2",
+        permanent: true,
+      },
     ];
   },
 };
