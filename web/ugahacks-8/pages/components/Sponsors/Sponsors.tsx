@@ -29,7 +29,7 @@ const acm: string = "/icons/SponsorsImages/images/sponsorlogos/acm.png";
 
 const CustomButton = withStyles({
   root: {
-    backgroundColor: "#fafafa",
+    backgroundColor: "#42885a",
     paddingLeft: "55px",
     paddingRight: "55px",
     fontWeight: 600,
@@ -51,7 +51,7 @@ function Sponsors(): ReactElement {
   return (
     <section className="section sponsors-section" id="sponsors">
       <div className="sponsors-container">
-        <h2>Sponsors</h2>
+        <h2>Past Sponsors</h2>
         <SponsorLogo
           image={ncr}
           alt="NCR logo"

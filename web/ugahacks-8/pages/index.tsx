@@ -14,7 +14,7 @@ export default function Home() {
         <title>UGAHacks 8</title>
         <meta
           name="description"
-          content="UGAHacks 8 Event Site - Create your own adventure! February 10 - 12, 2023"
+          content="UGAHacks 8 Event Site - Create your own adventure! February 3 - 5, 2023"
         />
         <link rel="icon" href="/icons/byteGoggleDown.png" />
       </Head>
@@ -22,8 +22,8 @@ export default function Home() {
       <Splash />
       <HallOfFame />
       <About />
-      <Schedule />
-      <FAQ />
+      {/* <Schedule />
+      <FAQ /> */}
       <Sponsors />
       <Footer />
     </div>
