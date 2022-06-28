@@ -269,28 +269,22 @@ const HallOfFame = (): ReactElement => {
           <h3 className="title">Overall Winners</h3>
           <AliceCarousel
             mouseTracking
-            autoPlay
-            autoPlayInterval={2000}
             disableDotsControls
             responsive={responsive}
             renderPrevButton={PrevButton}
             renderNextButton={NextButton}
             items={overall_items}
-            infinite
           />
         </div>
         <div className="carousel art-winners">
           <h3 className="title">Sponsor Winners</h3>
           <AliceCarousel
             mouseTracking
-            autoPlay
-            autoPlayInterval={2500}
             disableDotsControls
             responsive={responsive}
             renderPrevButton={PrevButton}
             renderNextButton={NextButton}
             items={category_items}
-            infinite
           />
         </div>
       </div>
