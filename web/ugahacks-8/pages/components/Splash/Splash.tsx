@@ -12,19 +12,22 @@ interface TimeLeftObject {
   seconds?: number;
 }
 
-const CustomButton = withStyles({
-  root: {
-    backgroundColor: "#fafafa",
-    paddingLeft: "55px",
-    paddingRight: "55px",
-    marginTop: "25px",
-    fontSize: "1.3em",
-    fontWeight: 600,
-    fontFamily: "Poppins",
-    borderRadius: "50px",
-    width: "320px",
+const CustomButton = withStyles(
+  {
+    root: {
+      backgroundColor: "#42885a",
+      paddingLeft: "55px",
+      paddingRight: "55px",
+      marginTop: "25px",
+      fontSize: "1.3em",
+      fontWeight: 600,
+      fontFamily: "Poppins",
+      borderRadius: "50px",
+      width: "320px",
+    },
   },
-})(Button);
+  { index: 1 }
+)(Button);
 
 function Countdown(): ReactElement {
   const calculateTimeLeft = (): TimeLeftObject => {
