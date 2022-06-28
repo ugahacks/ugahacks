@@ -27,25 +27,28 @@ const figma: string = "/icons/SponsorsImages/images/sponsorlogos/figma.svg";
 const aws: string = "/icons/SponsorsImages/images/sponsorlogos/aws.png";
 const acm: string = "/icons/SponsorsImages/images/sponsorlogos/acm.png";
 
-const CustomButton = withStyles({
-  root: {
-    backgroundColor: "#42885a",
-    paddingLeft: "55px",
-    paddingRight: "55px",
-    fontWeight: 600,
-    fontSize: "1.1em",
-    fontFamily: "Poppins",
-    borderRadius: "50px",
-    marginTop: "25px",
-    marginBottom: "20px",
-    "@media (max-width:480px)": {
-      width: "100%",
-      fontSize: "1em",
-      paddingRight: "10px",
-      paddingLeft: "10px",
+const CustomButton = withStyles(
+  {
+    root: {
+      backgroundColor: "#42885a",
+      paddingLeft: "55px",
+      paddingRight: "55px",
+      fontWeight: 600,
+      fontSize: "1.1em",
+      fontFamily: "Poppins",
+      borderRadius: "50px",
+      marginTop: "25px",
+      marginBottom: "20px",
+      "@media (max-width:480px)": {
+        width: "100%",
+        fontSize: "1em",
+        paddingRight: "10px",
+        paddingLeft: "10px",
+      },
     },
   },
-})(Button);
+  { index: 1 }
+)(Button);
 
 function Sponsors(): ReactElement {
   return (

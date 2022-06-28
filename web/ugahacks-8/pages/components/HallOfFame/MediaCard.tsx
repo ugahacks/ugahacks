@@ -16,18 +16,21 @@ interface MediaCardProps {
   buttonText: string;
 }
 
-const CardButton = withStyles({
-  root: {
-    width: "250px",
-    paddingLeft: "15px",
-    paddingRight: "15px",
-    fontSize: "1.1em",
-    fontFamily: "Poppins",
-    borderRadius: "50px",
-    textAlign: "center",
-    color: "#42885a",
+const CardButton = withStyles(
+  {
+    root: {
+      width: "250px",
+      paddingLeft: "15px",
+      paddingRight: "15px",
+      fontSize: "1.1em",
+      fontFamily: "Poppins",
+      borderRadius: "50px",
+      textAlign: "center",
+      color: "#42885a",
+    },
   },
-})(Button);
+  { index: 1 }
+)(Button);
 
 export default function MediaCard(props: MediaCardProps): ReactElement {
   return (
