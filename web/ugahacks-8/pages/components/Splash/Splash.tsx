@@ -108,7 +108,7 @@ function Countdown(): ReactElement {
           UGA Hacks 7 RECAP
         </CustomButton>
         <CustomButton variant="contained" size="large" href="/pre-register-8">
-          Pre-registration Form
+          Pre-register
         </CustomButton>
       </div>
     );
