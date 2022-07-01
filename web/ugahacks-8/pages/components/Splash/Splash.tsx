@@ -19,6 +19,7 @@ const CustomButton = withStyles(
       paddingLeft: "55px",
       paddingRight: "55px",
       marginTop: "25px",
+      marginLeft: "55px",
       fontSize: "1.3em",
       fontWeight: 600,
       fontFamily: "Poppins",
