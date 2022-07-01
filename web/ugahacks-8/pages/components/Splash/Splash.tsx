@@ -120,7 +120,7 @@ function Splash(): ReactElement {
     <section className="section splash" id="splash">
       <a
         id="mlh-trust-badge"
-        href="https://mlh.io/seasons/2022/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=white"
+        href="https://mlh.io/seasons/2023/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=white"
         target="_blank"
         rel="noopener noreferrer"
       >
