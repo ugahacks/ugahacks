@@ -8,6 +8,7 @@
 !.yarn/sdks
 !.yarn/versions
 !.yarn/unplugged
+.yarn/cache/*
 
 # Build files
 web/*/*build*
