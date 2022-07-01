@@ -22,8 +22,8 @@ export default function Home() {
       <Splash />
       <HallOfFame />
       <About />
-      {/* <Schedule />
-      <FAQ /> */}
+      {/* <Schedule /> */}
+      <FAQ />
       <Sponsors />
       <Footer />
     </div>
