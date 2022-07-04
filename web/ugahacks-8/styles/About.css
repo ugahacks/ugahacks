@@ -1,5 +1,5 @@
 .about {
-  background-image: url("../public/icons/AboutImages/images/AboutBackground1.svg");
+  background-image: url("../public/icons/AboutImages/images/finaltools.svg");
   /**background-image: url(./images/colortools-01.svg);*/
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -46,7 +46,7 @@
         rgba(250, 250, 250, 0.9),
         rgba(255, 255, 255, 0.9)
       ),
-      url(../public/icons/AboutImages/images/AboutBackground1.svg);
+      url(../public/icons/AboutImages/images/toolpattern.svg);
   }
 }
 

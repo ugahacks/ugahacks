@@ -1,5 +1,5 @@
 .faq-section {
-  background-image: url(/icons/SplashImages/images/Background.svg);
+  background-image: url(/icons/FAQImages/images/finalscrews-bg.svg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover !important;
@@ -219,7 +219,7 @@
         rgba(250, 250, 250, 0.9),
         rgba(255, 255, 255, 0.9)
       ),
-      url(/icons/FAQImages/images/AboutBackground1.svg);
+      url(/icons/FAQImages/images/AboutBackground1.png);
   }
 
   .faq-container {
