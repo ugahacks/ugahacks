@@ -130,7 +130,7 @@ function Splash(): ReactElement {
         />
       </a>
       <div className="headercontainer">
-        <img className="logo" src={eightLogo} alt="UGAHacks 6 Logo" />
+        <img className="logo" src={eightLogo} alt="UGAHacks 8 Logo" />
         <Countdown />
       </div>
     </section>
