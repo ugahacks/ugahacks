@@ -142,7 +142,7 @@ function Sponsors(): ReactElement {
             image={acm}
             alt="ACM"
             tier="partner"
-            link="https://uga.campuslabs.com/engage/organization/acm"
+            link="https://acm.uga.edu/"
           />
         </div>
         <p>
