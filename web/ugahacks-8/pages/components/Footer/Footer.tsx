@@ -54,7 +54,7 @@ function Footer(): ReactElement {
       <p>
         Spotted a <BugReportIcon></BugReportIcon>?{" "}
         <a
-          href="https://github.com/ugahacks/ugahacks-6/issues/new"
+          href="https://github.com/ugahacks/ugahacks-8/issues/new"
           target="_blank"
           rel="noopener noreferrer"
         >
