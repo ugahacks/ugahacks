@@ -1,0 +1,92 @@
+.about {
+  background-image: url("../public/icons/AboutImages/images/leafyBacksplash.png");
+  /**background-image: url(./images/colortools-01.svg);*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover !important;
+}
+
+.about-text,
+.tool {
+  color: #8A6851;
+}
+
+.tool-rack {
+  margin-top: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tool {
+  font-size: 25px;
+  text-align: center;
+  width: 25%;
+  flex-grow: 0;
+}
+
+.tool h3 {
+  margin-top: 5px;
+}
+
+.about-text {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 0;
+  margin: 0 0 0 10vw;
+  width: 50%;
+  font-size: 1.3em;
+}
+
+@media only screen and (max-width: 1450px) {
+  .about {
+    background-image: url("../public/icons/AboutImages/images/leafyBacksplash.png");
+
+    /* background-image: radial-gradient(
+        rgba(250, 250, 250, 0.9),
+        rgba(255, 255, 255, 0.9)
+      ),
+      url("../public/icons/AboutImages/images/leafyBacksplash.png"); */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+  .tool {
+    width: 70%;
+    margin: auto;
+  }
+  .tool-rack {
+    flex-direction: column;
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (max-width: 1230px) {
+  .tool-rack > * {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  .section-text {
+    width: 80%;
+    text-align: center;
+  }
+
+  .section-text > h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+/*
+@media only screen and (max-width: px) {
+  .about {
+    background-image: radial-gradient(rgba(250, 250, 250, 0.9), rgba(255, 255, 255, 0.9)), url(./images/toolpattern.svg);
+  }
+  .section-text {
+      width: 90%;
+    }
+}
+*/
