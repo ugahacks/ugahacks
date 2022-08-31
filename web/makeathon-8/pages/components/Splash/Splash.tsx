@@ -3,7 +3,7 @@ import Button from "@material-ui/core/Button";
 import { withStyles } from "@material-ui/core/styles";
 //import Image from 'next/image';
 
-const makeEightLogo: string = "/icons/SplashImages/images/Hacks8Logo.png";
+const makeEightLogo: string = "/icons/SplashImages/images/makeathonLogo.png";
 
 interface TimeLeftObject {
   days?: number;
