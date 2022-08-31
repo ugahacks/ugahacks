@@ -54,7 +54,7 @@ function Sponsors(): ReactElement {
   return (
     <section className="section sponsors-section" id="sponsors">
       <div className="sponsors-container">
-        <h2>Past Sponsors</h2>
+        <h2>Sponsorship</h2>
         {/* <SponsorLogo
           image={ncr}
           alt="NCR logo"

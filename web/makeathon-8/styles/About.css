@@ -8,7 +8,7 @@
 
 .about-text,
 .tool {
-  color: #8A6851;
+  color: #8a6851;
 }
 
 .tool-rack {
@@ -42,14 +42,14 @@
 
 @media only screen and (max-width: 1450px) {
   .about {
-    background-image: url("../public/icons/AboutImages/images/leafyBacksplash.png");
+    /* background-image: url("../public/icons/AboutImages/images/leafyBacksplash.png"); */
 
-    /* background-image: radial-gradient(
+    background-image: radial-gradient(
         rgba(250, 250, 250, 0.9),
         rgba(255, 255, 255, 0.9)
       ),
-      url("../public/icons/AboutImages/images/leafyBacksplash.png"); */
-    }
+      url("../public/icons/AboutImages/images/leafyBacksplash.png");
+  }
 }
 
 @media only screen and (max-width: 480px) {

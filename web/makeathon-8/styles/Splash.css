@@ -1,5 +1,5 @@
 .splash {
-  background-image: url(/icons/SplashImages/images/Website-splash.png);
+  background-image: url(/icons/SplashImages/images/Website-splash.svg);
   background-repeat: no-repeat;
   background-size: cover !important;
   min-height: 100vh;
@@ -13,7 +13,7 @@
 }
 
 .eventline {
-  color: #EBDAA8;
+  color: #ebdaa8;
 }
 
 #tagline {
@@ -22,7 +22,7 @@
 
 #eventdate {
   margin-top: 25px;
-  color: #EBDAA8;
+  color: #ebdaa8;
 }
 
 #mlh-trust-badge {
@@ -86,7 +86,7 @@ li span {
 
 @media only screen and (max-width: 1600px) {
   .splash {
-    background-image: url(/icons/SplashImages/images/Website-splash.png);
+    background-image: url(/icons/SplashImages/images/Website_splash.svg);
   }
 
   .logo {

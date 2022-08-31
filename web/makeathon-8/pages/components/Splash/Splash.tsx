@@ -3,7 +3,7 @@ import Button from "@material-ui/core/Button";
 import { withStyles } from "@material-ui/core/styles";
 //import Image from 'next/image';
 
-const eightLogo: string = "/icons/SplashImages/images/Makeathon Banner.tan (72 × 20 in).png";
+const makeEightLogo: string = "/icons/SplashImages/images/Hacks8Logo.png";
 
 interface TimeLeftObject {
   days?: number;
@@ -25,7 +25,6 @@ const CustomButton = withStyles(
       borderRadius: "50px",
       width: "320px",
     },
-    
   },
   { index: 1 }
 )(Button);
@@ -105,7 +104,11 @@ function Countdown(): ReactElement {
           </h2>
           <h2 id="eventdate">October 1-2, 2022 In Person</h2>
         </div>
-        <CustomButton variant="contained" size="large" href="/register-makeathon">
+        <CustomButton
+          variant="contained"
+          size="large"
+          href="/register-makeathon"
+        >
           Register
         </CustomButton>
       </div>
@@ -116,19 +119,8 @@ function Countdown(): ReactElement {
 function Splash(): ReactElement {
   return (
     <section className="section splash" id="splash">
-      {/* <a
-        id="mlh-trust-badge"
-        href="https://mlh.io/seasons/2023/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=white"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-white.svg"
-          alt="Major League Hacking 2022 Hackathon Season"
-        />
-      </a> */}
       <div className="headercontainer">
-        <img className="logo" src={eightLogo} alt="Makeathon Logo" />
+        <img className="logo" src={makeEightLogo} alt="Makeathon Logo" />
         <Countdown />
       </div>
     </section>
