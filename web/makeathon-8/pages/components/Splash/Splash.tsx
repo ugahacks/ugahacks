@@ -78,7 +78,7 @@ function Countdown(): ReactElement {
     return (
       <div>
         <div className="subheader">
-          <h2 id="eventdate">October 1-2, 2022 In Person</h2>
+          <h2 id="eventdate">October 1-2 2022 In Person</h2>
         </div>
         <div className="countdown-registration">
           {timerComponents}
