@@ -1,0 +1,70 @@
+.hof-section {
+  background-image: url(/icons/SplashImages/images/MapBackground.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover !important;
+  min-height: 100vh;
+  margin: auto;
+  /*display: flex;*/
+}
+
+.header {
+  color: #42885a;
+  text-align: center;
+  padding-top: 5vh;
+  font-weight: 700;
+}
+
+.subheader {
+  color: black;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.title {
+  color: black;
+  text-align: center;
+}
+
+.carousel {
+  padding-top: 1vh;
+  max-width: 90vw;
+  /*margin-left: 5vw;*/
+  margin: auto;
+}
+
+.carousel li {
+  padding: 0.2em;
+}
+
+.alice-carousel__dots {
+  margin: 10px 3px 5px !important;
+}
+
+.center {
+  margin: auto;
+}
+
+.card-container {
+  max-width: 345px;
+  text-align: center;
+}
+
+.card-pic {
+  height: 180px;
+}
+
+.card-text-container {
+  color: black;
+}
+
+.card-action-container {
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    max-width: 100%;
+  }
+}

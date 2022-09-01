@@ -1,0 +1,137 @@
+.sponsors-section {
+  background-image: url("../public/icons/AboutImages/images/leafyBacksplash.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover !important;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+}
+
+.sponsors-container {
+  text-align: center;
+  margin: auto;
+  width: 65%;
+  color: #42885a;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  color: #42885a;
+}
+
+.loft,
+.apartment,
+.penthouse,
+.doghouse,
+.mansion,
+.partner {
+  margin: 10px;
+  filter: brightness(0) invert(1);
+}
+
+#acm {
+  filter: none;
+}
+
+.penthouse {
+  width: 325px;
+  color: #42885a;
+}
+
+.apartment {
+  width: 235px;
+}
+
+.doghouse {
+  width: 200px;
+}
+
+.loft {
+  width: 125px;
+}
+
+.mansion {
+  width: 420px;
+}
+
+.partner {
+  width: 150px;
+}
+
+#ugacombologo {
+  width: 500px;
+}
+
+.packet-text p {
+  font-size: 1.3em;
+  width: 72%;
+  margin: auto;
+}
+
+.packet-text a {
+  color: black;
+  text-decoration: none;
+}
+
+.sponsors-container h2 {
+  font-weight: 700;
+  font-size: 3em;
+}
+
+.sponsors-container h2:first-of-type {
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 480px) {
+  .sponsors-container {
+    width: 90%;
+  }
+
+  .mansion {
+    width: 90%;
+  }
+
+  .penthouse {
+    width: 85%;
+  }
+
+  .apartment {
+    width: 55%;
+  }
+
+  .doghouse {
+    width: 45%;
+  }
+
+  .loft {
+    width: 35%;
+  }
+
+  .logo-container {
+    flex-direction: column;
+  }
+
+  .sponsors-container h2 {
+    font-size: 2.2em;
+  }
+
+  #ugacombologo {
+    width: 95%;
+  }
+
+  .packet-text p {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1750px) {
+  .sponsors-container {
+    width: 80%;
+  }
+}
