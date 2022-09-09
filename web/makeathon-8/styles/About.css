@@ -1,5 +1,5 @@
 .about {
-  background-image: url("../public/icons/AboutImages/images/leafyBacksplash.png");
+  background-image: url(/memes/download.jfif);
   /**background-image: url(./images/colortools-01.svg);*/
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -48,7 +48,7 @@
         rgba(250, 250, 250, 0.9),
         rgba(255, 255, 255, 0.9)
       ),
-      url("../public/icons/AboutImages/images/leafyBacksplash.png");
+      url(/memes/download.jfif);
   }
 }
 
