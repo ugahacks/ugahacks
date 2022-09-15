@@ -40,9 +40,9 @@
   font-size: 1.3em;
 }
 
-@media only screen and (max-width: 1450px) {
+/* @media only screen and (max-width: 1450px) {
   .about {
-    /* background-image: url("../public/icons/AboutImages/images/leafyBacksplash.png"); */
+    background-image: url("../public/icons/AboutImages/images/leafyBacksplash.png");
 
     background-image: radial-gradient(
         rgba(250, 250, 250, 0.9),
@@ -50,7 +50,7 @@
       ),
       url("../public/icons/AboutImages/images/leafyBacksplash.png");
   }
-}
+} */
 
 @media only screen and (max-width: 480px) {
   .tool {
