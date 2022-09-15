@@ -126,7 +126,7 @@ function Splash(): ReactElement {
       >
         <img
           src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-white.svg"
-          alt="Major League Hacking 2022 Hackathon Season"
+          alt="Major League Hacking 2023 Hackathon Season"
         />
       </a>
       <div className="headercontainer">
