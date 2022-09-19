@@ -2,7 +2,7 @@ import React, { useState, ReactElement } from "react";
 import { motion } from "framer-motion";
 import { collapseVariants, hoverVariants } from "../../../util/CommonVariants";
 
-const screw: string = "/icons/FAQImages/images/screw-01.svg";
+const acorn: string = "/icons/FAQImages/images/Icons_acorn.svg";
 
 interface QuestionsProps {
   question: string;
@@ -11,7 +11,7 @@ interface QuestionsProps {
   linktxt?: string;
 }
 
-const screwVariants = {
+const acornVariants = {
   open: { rotate: 45 },
   closed: { rotate: 0 },
 };
@@ -28,14 +28,14 @@ function Question(props: QuestionsProps): ReactElement {
         whileHover="hover"
       >
         {props.question}
-        <div className="screw-wrapper">
+        <div className="acorn-wrapper">
           <motion.img
-            className="screw"
-            src={screw}
-            alt="screw"
-            width="15"
-            height="15"
-            variants={screwVariants}
+            className="acorn"
+            src={acorn}
+            alt="acorn"
+            width="25"
+            height="25"
+            variants={acornVariants}
             animate={isOpen ? "open" : "closed"}
           />
         </div>

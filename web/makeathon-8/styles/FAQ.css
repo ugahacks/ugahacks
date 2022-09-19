@@ -180,11 +180,11 @@
   height: 65vh;
 }
 
-.screw-wrapper {
+.acorn-wrapper {
   float: right;
 }
 
-.screw img {
+.acorn img {
   float: right;
   margin: auto 0;
 }
@@ -209,7 +209,7 @@
     min-width: 350px;
     margin: 0 auto 30px;
   }
-  .screw {
+  .acorn{
     height: 12px;
   }
 }
