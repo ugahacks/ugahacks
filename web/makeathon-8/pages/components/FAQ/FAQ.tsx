@@ -13,7 +13,7 @@ function FAQ(): ReactElement {
           <div className="faq-question-wrapper">
             <Question
               question="Where will it be held this year?"
-              answer="UGA Hacks 8 will be a hybrid event where participants can attend in-person at MLC Building on UGA Campus or online!"
+              answer="UGA Hacks 8 will be a hybrid event where participants can attend in-person at Driftmier Engineering Center on UGA Campus or online!"
             />
 
             <Question
