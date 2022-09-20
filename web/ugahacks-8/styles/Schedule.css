@@ -123,11 +123,6 @@ td:last-child {
   display: none;
 }
 
-div {
-  font-weight: 400;
-  color: #42885a;
-}
-
 #schedule h1,
 #schedule h2 {
   text-transform: uppercase;
