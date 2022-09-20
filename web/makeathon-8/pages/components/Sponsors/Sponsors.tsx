@@ -30,7 +30,7 @@ import { withStyles } from "@material-ui/core/styles";
 const CustomButton = withStyles(
   {
     root: {
-      backgroundColor: "#42885a",
+      backgroundColor: "#A6BDA4",
       paddingLeft: "55px",
       paddingRight: "55px",
       fontWeight: 600,
