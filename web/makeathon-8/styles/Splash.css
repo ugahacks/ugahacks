@@ -25,6 +25,11 @@
   color: #ebdaa8;
 }
 
+#green {
+  color: #a6bda4;
+  stroke: #a6bda4;
+}
+
 #mlh-trust-badge {
   display: block;
   max-width: 100px;

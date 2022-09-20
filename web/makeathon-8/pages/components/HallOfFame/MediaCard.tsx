@@ -26,7 +26,7 @@ const CardButton = withStyles(
       fontFamily: "Poppins",
       borderRadius: "50px",
       textAlign: "center",
-      color: "#42885a",
+      color: "#A6BDA4",
     },
   },
   { index: 1 }
