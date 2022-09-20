@@ -1,6 +1,6 @@
 .faq-section {
   /* background-image: url(/icons/SplashImages/images/makeathonWoodbacksplash.png); */
-  background-image: url(/icons/FAQImages/images/crumpledPaper.png);
+  background-image: url(/icons/FAQImages/images/leaves_background.svg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover !important;
@@ -180,11 +180,11 @@
   height: 65vh;
 }
 
-.screw-wrapper {
+.acorn-wrapper {
   float: right;
 }
 
-.screw img {
+.acorn img {
   float: right;
   margin: auto 0;
 }
@@ -209,7 +209,7 @@
     min-width: 350px;
     margin: 0 auto 30px;
   }
-  .screw {
+  .acorn{
     height: 12px;
   }
 }
@@ -220,7 +220,7 @@
         rgba(250, 250, 250, 0.9),
         rgba(255, 255, 255, 0.9)
       ),
-      url(/icons/FAQImages/images/AboutBackground1.png);
+      url(/icons/FAQImages/images/Full_leaves_background.svg);
     /* background-image: url(/icons/FAQImages/images/crumpledPaper.png); */
   }
 
