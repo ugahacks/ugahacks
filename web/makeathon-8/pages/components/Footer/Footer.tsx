@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import BugReportIcon from "@material-ui/icons/BugReport";
+import BugReportIcon from "@mui/icons-material/BugReport";
 // import Image from 'next/image';
 
 const facebook: string = "/icons/FooterImages/images/facebook.svg";
