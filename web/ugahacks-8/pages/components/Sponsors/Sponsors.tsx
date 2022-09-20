@@ -1,8 +1,8 @@
 import React, { ReactElement } from "react";
 import SponsorLogo from "./SponsorLogo";
 
-import Button from "@material-ui/core/Button";
-import { withStyles } from "@material-ui/core/styles";
+import Button from "@mui/material/Button";
+import withStyles from '@mui/styles/withStyles';
 
 const ncr: string = "/icons/SponsorsImages/images/sponsorlogos/NCR.png";
 const digitalOcean: string =

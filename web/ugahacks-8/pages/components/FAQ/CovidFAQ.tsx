@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import Button from "@material-ui/core/Button";
+import Button from "@mui/material/Button";
 import Question from "./Questions";
 // import Image from 'next/image'
 

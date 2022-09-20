@@ -1,6 +1,6 @@
 import React, { useEffect, useState, ReactElement } from "react";
-import Button from "@material-ui/core/Button";
-import { withStyles } from "@material-ui/core/styles";
+import Button from "@mui/material/Button";
+import withStyles from '@mui/styles/withStyles';
 //import Image from 'next/image';
 
 const eightLogo: string = "/icons/SplashImages/images/Hacks8Logo.png";
