@@ -1,5 +1,5 @@
 .splash {
-  background-image: url(/icons/SplashImages/images/splash.svg);
+  background-image: url(/icons/SplashImages/images/Background.svg);
   background-repeat: no-repeat;
   background-size: cover !important;
   min-height: 100vh;
@@ -86,7 +86,7 @@ li span {
 
 @media only screen and (max-width: 1600px) {
   .splash {
-    background-image: url(/icons/SplashImages/images/Background.png);
+    background-image: url(/icons/SplashImages/images/Background.svg);
   }
 
   .logo {

@@ -25,7 +25,7 @@ const deloitte: string =
   "/icons/SponsorsImages/images/sponsorlogos/deloitte.svg";
 const figma: string = "/icons/SponsorsImages/images/sponsorlogos/figma.svg";
 const aws: string = "/icons/SponsorsImages/images/sponsorlogos/aws.png";
-const acm: string = "/icons/SponsorsImages/images/sponsorlogos/acm.png";
+const acm: string = "/icons/SponsorsImages/images/sponsorlogos/acm.svg";
 
 const CustomButton = withStyles(
   {
