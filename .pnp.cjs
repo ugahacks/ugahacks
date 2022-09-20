@@ -65,7 +65,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
-            ["@mui/icons-material", "virtual:f24c1a02a7ffd50fa31f27a3205295b28bf329069839d045a5627eed06bb19ea1cc6c2f74ae0d525330624c893187287d9ab0d264bf30b207edda26b4782dfd3#npm:5.10.6"],
             ["husky", "npm:7.0.1"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
@@ -840,24 +839,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mui__material", null],
             ["@types/react", "npm:17.0.15"],
             ["react", "npm:17.0.2"]
-          ],
-          "packagePeers": [
-            "@mui/material",
-            "@types/mui__material",
-            "@types/react",
-            "react"
-          ],
-          "linkType": "HARD",
-        }],
-        ["virtual:f24c1a02a7ffd50fa31f27a3205295b28bf329069839d045a5627eed06bb19ea1cc6c2f74ae0d525330624c893187287d9ab0d264bf30b207edda26b4782dfd3#npm:5.10.6", {
-          "packageLocation": "./.yarn/__virtual__/@mui-icons-material-virtual-786e3f684d/0/cache/@mui-icons-material-npm-5.10.6-161f1269de-c8577b5252.zip/node_modules/@mui/icons-material/",
-          "packageDependencies": [
-            ["@mui/icons-material", "virtual:f24c1a02a7ffd50fa31f27a3205295b28bf329069839d045a5627eed06bb19ea1cc6c2f74ae0d525330624c893187287d9ab0d264bf30b207edda26b4782dfd3#npm:5.10.6"],
-            ["@babel/runtime", "npm:7.19.0"],
-            ["@mui/material", null],
-            ["@types/mui__material", null],
-            ["@types/react", null],
-            ["react", null]
           ],
           "packagePeers": [
             "@mui/material",
@@ -9315,7 +9296,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["ugahacks", "workspace:."],
-            ["@mui/icons-material", "virtual:f24c1a02a7ffd50fa31f27a3205295b28bf329069839d045a5627eed06bb19ea1cc6c2f74ae0d525330624c893187287d9ab0d264bf30b207edda26b4782dfd3#npm:5.10.6"],
             ["husky", "npm:7.0.1"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
@@ -9374,8 +9354,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ugahacks-8", "workspace:web/ugahacks-8"],
             ["@emotion/react", "virtual:157a67d5e7cb08adfeb0d8666c246303aec86b712aee21b950cd46ab94d551a982d48e63745ea864f7904e251a50af8ad7327f797bad152d03ebfdb424a79075#npm:11.10.4"],
             ["@emotion/styled", "virtual:157a67d5e7cb08adfeb0d8666c246303aec86b712aee21b950cd46ab94d551a982d48e63745ea864f7904e251a50af8ad7327f797bad152d03ebfdb424a79075#npm:11.10.4"],
-            ["@material-ui/core", "virtual:d20ae7b0d66957141e7f94d9a8c27ff88a9aa8c716e7e6e02e42152d9e1afb388e27e64b126ad17c4853aaf7dc19c48a5541ecf955a4fafe40bed51fa9895fe9#npm:4.12.3"],
-            ["@material-ui/icons", "virtual:d20ae7b0d66957141e7f94d9a8c27ff88a9aa8c716e7e6e02e42152d9e1afb388e27e64b126ad17c4853aaf7dc19c48a5541ecf955a4fafe40bed51fa9895fe9#npm:4.11.2"],
             ["@mui/icons-material", "virtual:157a67d5e7cb08adfeb0d8666c246303aec86b712aee21b950cd46ab94d551a982d48e63745ea864f7904e251a50af8ad7327f797bad152d03ebfdb424a79075#npm:5.10.6"],
             ["@mui/lab", "virtual:157a67d5e7cb08adfeb0d8666c246303aec86b712aee21b950cd46ab94d551a982d48e63745ea864f7904e251a50af8ad7327f797bad152d03ebfdb424a79075#npm:5.0.0-alpha.100"],
             ["@mui/material", "virtual:157a67d5e7cb08adfeb0d8666c246303aec86b712aee21b950cd46ab94d551a982d48e63745ea864f7904e251a50af8ad7327f797bad152d03ebfdb424a79075#npm:5.10.6"],
