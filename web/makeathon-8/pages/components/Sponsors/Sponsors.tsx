@@ -39,6 +39,10 @@ const CustomButton = withStyles(
       borderRadius: "50px",
       marginTop: "25px",
       marginBottom: "20px",
+      "&:hover": {
+        backgroundColor: "#ebdaa8",
+        color: "#8A6851",
+      },
       "@media (max-width:480px)": {
         width: "100%",
         fontSize: "1em",
