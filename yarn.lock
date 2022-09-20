@@ -7694,8 +7694,14 @@ resolve@^2.0.0-next.3:
   version: 0.0.0-use.local
   resolution: "ugahacks-8@workspace:web/ugahacks-8"
   dependencies:
+    "@emotion/react": ^11.10.4
+    "@emotion/styled": ^11.10.4
     "@material-ui/core": ^4.12.3
     "@material-ui/icons": ^4.11.2
+    "@mui/icons-material": ^5.10.6
+    "@mui/lab": ^5.0.0-alpha.100
+    "@mui/material": ^5.10.6
+    "@mui/styles": ^5.10.6
     "@types/node": ^16.4.10
     "@types/react": 17.0.15
     autoprefixer: ^10.4.11
@@ -7734,6 +7740,7 @@ resolve@^2.0.0-next.3:
   version: 0.0.0-use.local
   resolution: "ugahacks@workspace:."
   dependencies:
+    "@mui/icons-material": ^5.10.6
     husky: ^7.0.0
     typescript: ^4.3.5
   languageName: unknown
