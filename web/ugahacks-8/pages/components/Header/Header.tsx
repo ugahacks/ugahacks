@@ -67,7 +67,7 @@ export default function Header() {
         <div className="h-24 w-24 right-5 absolute top-20">
           <img
             src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-white.svg"
-            alt="Major League Hacking 2022 Hackathon Season"
+            alt="Major League Hacking 2023 Hackathon Season"
           />
         </div>
       </div>
