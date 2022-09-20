@@ -27,7 +27,7 @@ import { withStyles } from "@material-ui/core/styles";
 // const aws: string = "/icons/SponsorsImages/images/sponsorlogos/aws.png";
 // const acm: string = "/icons/SponsorsImages/images/sponsorlogos/acm.svg";
 
-const CustomButton = withStyles(
+const SponsorshipButton = withStyles(
   {
     root: {
       backgroundColor: "#A6BDA4",
@@ -155,13 +155,13 @@ function Sponsors(): ReactElement {
             through the generous gifts of University of Georgia donors.
           </i>
         </p> */}
-        <CustomButton
+        <SponsorshipButton
           variant="contained"
           size="large"
           href="/sponsorship-packet-makeathon"
         >
           Sponsorship Packet
-        </CustomButton>
+        </SponsorshipButton>
       </div>
     </section>
   );
