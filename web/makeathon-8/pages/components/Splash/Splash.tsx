@@ -24,6 +24,10 @@ const CustomButton = withStyles(
       fontFamily: "Poppins",
       borderRadius: "50px",
       width: "320px",
+      "&:hover": {
+        backgroundColor: "#ebdaa8",
+        color: "#8A6851",
+      },
     },
   },
   { index: 1 }
@@ -99,10 +103,13 @@ function Countdown(): ReactElement {
         <div className="subheader">
           <h2 id="tagline">
             <b>
-              <span className="eventline">THINK GREEN BUILD THE UNSEEN</span>
+              <span className="eventline">
+                THINK <span id="green">GREEN</span> BUILD THE UNSEEN
+              </span>
             </b>
           </h2>
           <h2 id="eventdate">October 1-2, 2022 In Person</h2>
+          <h2 id="eventdate">Driftmier Engineering Center</h2>
         </div>
         <CustomButton
           variant="contained"
