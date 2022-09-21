@@ -177,10 +177,6 @@ a {
   background-color: transparent;
 }
 
-a:hover {
-  color: #0056b3;
-  text-decoration: underline;
-}
 
 a:not([href]):not([class]) {
   color: inherit;
@@ -7201,9 +7197,7 @@ button.bg-dark:focus {
   background-color: #1d2124 !important;
 }
 
-.bg-white {
-  background-color: #fff !important;
-}
+
 
 .bg-transparent {
   background-color: transparent !important;
@@ -10610,9 +10604,7 @@ a.text-dark:focus {
     text-shadow: none !important;
     box-shadow: none !important;
   }
-  a:not(.btn) {
-    text-decoration: underline;
-  }
+
   abbr[title]::after {
     content: " (" attr(title) ")";
   }

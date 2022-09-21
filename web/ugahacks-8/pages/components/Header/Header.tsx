@@ -6,7 +6,7 @@ import { ppid } from "node:process";
 
 const NavLink = (props: HeaderLinkProps) => (
   <Link href={props.href}>
-    <a>{props.name}</a>
+    <a className="custom_hover">{props.name}</a>
   </Link>
 );
 
@@ -21,7 +21,9 @@ interface HeaderReactIconProps {
 }
 
 const NavIcon = (props: HeaderReactIconProps) => (
-  <a href={props.href}>{props.image}</a>
+  <a className="custom_hover" href={props.href}>
+    {props.image}
+  </a>
 );
 export default function Header() {
   return (
@@ -64,12 +66,12 @@ export default function Header() {
             image={<BsFacebook size={40} />}
           />
         </div>
-        <div className="h-24 w-24 right-5 absolute top-20">
-          <img
-            src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-white.svg"
-            alt="Major League Hacking 2023 Hackathon Season"
-          />
-        </div>
+      </div>
+      <div className="h-24 w-24 right-5 absolute top-20 shadow-none">
+        <img
+          src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-white.svg"
+          alt="Major League Hacking 2023 Hackathon Season"
+        />
       </div>
     </>
   );
