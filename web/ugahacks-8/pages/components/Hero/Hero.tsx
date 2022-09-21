@@ -6,7 +6,7 @@ export default function Hero() {
       <section className="min-h-fit w-full bg-gradient-to-b from-goblin-500 to-celery-500  ">
         <div className="mx-auto flex flex-col items-center text-center">
           <Image
-            src="/icons/SplashImages/images/Hacks8Logo.png"
+            src="/icons/HeroImages/images/byte_banner.png"
             width={2000}
             height={600}
           />
