@@ -66,6 +66,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["husky", "npm:7.0.1"],
+            ["tailwindcss-animate", "virtual:f24c1a02a7ffd50fa31f27a3205295b28bf329069839d045a5627eed06bb19ea1cc6c2f74ae0d525330624c893187287d9ab0d264bf30b207edda26b4782dfd3#npm:1.0.5"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
           "linkType": "SOFT",
@@ -8894,6 +8895,41 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["tailwindcss-animate", [
+        ["npm:1.0.5", {
+          "packageLocation": "./.yarn/cache/tailwindcss-animate-npm-1.0.5-09217b9bce-6b558f85a6.zip/node_modules/tailwindcss-animate/",
+          "packageDependencies": [
+            ["tailwindcss-animate", "npm:1.0.5"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:3553dde412c2831262d4492ecfe7593471ed3694ce2f6f0bb22207174e847afe92f851cd2e759239f10514dda988008eb18e073eb9120fb4f8f757ee3c6e6cee#npm:1.0.5", {
+          "packageLocation": "./.yarn/__virtual__/tailwindcss-animate-virtual-8d9e93131b/0/cache/tailwindcss-animate-npm-1.0.5-09217b9bce-6b558f85a6.zip/node_modules/tailwindcss-animate/",
+          "packageDependencies": [
+            ["tailwindcss-animate", "virtual:3553dde412c2831262d4492ecfe7593471ed3694ce2f6f0bb22207174e847afe92f851cd2e759239f10514dda988008eb18e073eb9120fb4f8f757ee3c6e6cee#npm:1.0.5"],
+            ["@types/tailwindcss", null],
+            ["tailwindcss", "virtual:3553dde412c2831262d4492ecfe7593471ed3694ce2f6f0bb22207174e847afe92f851cd2e759239f10514dda988008eb18e073eb9120fb4f8f757ee3c6e6cee#npm:3.1.8"]
+          ],
+          "packagePeers": [
+            "@types/tailwindcss",
+            "tailwindcss"
+          ],
+          "linkType": "HARD",
+        }],
+        ["virtual:f24c1a02a7ffd50fa31f27a3205295b28bf329069839d045a5627eed06bb19ea1cc6c2f74ae0d525330624c893187287d9ab0d264bf30b207edda26b4782dfd3#npm:1.0.5", {
+          "packageLocation": "./.yarn/__virtual__/tailwindcss-animate-virtual-2fc0138486/0/cache/tailwindcss-animate-npm-1.0.5-09217b9bce-6b558f85a6.zip/node_modules/tailwindcss-animate/",
+          "packageDependencies": [
+            ["tailwindcss-animate", "virtual:f24c1a02a7ffd50fa31f27a3205295b28bf329069839d045a5627eed06bb19ea1cc6c2f74ae0d525330624c893187287d9ab0d264bf30b207edda26b4782dfd3#npm:1.0.5"],
+            ["@types/tailwindcss", null],
+            ["tailwindcss", null]
+          ],
+          "packagePeers": [
+            "@types/tailwindcss",
+            "tailwindcss"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["tar", [
         ["npm:2.2.2", {
           "packageLocation": "./.yarn/cache/tar-npm-2.2.2-0ce6504da4-c0c3727d52.zip/node_modules/tar/",
@@ -9297,6 +9333,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["ugahacks", "workspace:."],
             ["husky", "npm:7.0.1"],
+            ["tailwindcss-animate", "virtual:f24c1a02a7ffd50fa31f27a3205295b28bf329069839d045a5627eed06bb19ea1cc6c2f74ae0d525330624c893187287d9ab0d264bf30b207edda26b4782dfd3#npm:1.0.5"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
           "linkType": "SOFT",
@@ -9369,6 +9406,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:157a67d5e7cb08adfeb0d8666c246303aec86b712aee21b950cd46ab94d551a982d48e63745ea864f7904e251a50af8ad7327f797bad152d03ebfdb424a79075#npm:17.0.2"],
             ["react-icons", "virtual:3553dde412c2831262d4492ecfe7593471ed3694ce2f6f0bb22207174e847afe92f851cd2e759239f10514dda988008eb18e073eb9120fb4f8f757ee3c6e6cee#npm:4.4.0"],
             ["tailwindcss", "virtual:3553dde412c2831262d4492ecfe7593471ed3694ce2f6f0bb22207174e847afe92f851cd2e759239f10514dda988008eb18e073eb9120fb4f8f757ee3c6e6cee#npm:3.1.8"],
+            ["tailwindcss-animate", "virtual:3553dde412c2831262d4492ecfe7593471ed3694ce2f6f0bb22207174e847afe92f851cd2e759239f10514dda988008eb18e073eb9120fb4f8f757ee3c6e6cee#npm:1.0.5"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
           "linkType": "SOFT",

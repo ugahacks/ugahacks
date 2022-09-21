@@ -37,6 +37,7 @@ export default function Header() {
                 src={"/icons/HeaderImages/images/byte_mini.png"}
                 width={48}
                 height={50}
+                alt={"Byte Mini"}
               />
             </div>
             <div className="pl-10 flex gap-5 text-lg text-white text-center font-extralight">

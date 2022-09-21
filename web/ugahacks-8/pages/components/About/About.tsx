@@ -19,10 +19,11 @@ export default function About() {
                   sleepover.
                 </p>
                 <p>
-                  Even though submitting a project is the main objective, that's
-                  not all there is. We'll have mentors, free food, video game
-                  competitions, workshops and more. There's even a workshop at
-                  the event for anyone that still needs to find some teammates!
+                  Even though submitting a project is the main objective,
+                  that&apos;s not all there is. We&apos;ll have mentors, free
+                  food, video game competitions, workshops and more.
+                  There&apos;s even a workshop at the event for anyone that
+                  still needs to find some teammates!
                 </p>
                 <p>So come and join us to build the future!</p>
               </div>
@@ -31,14 +32,23 @@ export default function About() {
 
           <div className="relative w-full z-0 top-0 left-0">
             <div className="w-fit h-fit absolute right-[30rem] -top-60 scale-125 -rotate-3 z-10">
-              <img src="/icons/AboutImages/images/Rolled_Map[1].png" />
+              <img
+                src="/icons/AboutImages/images/Rolled_Map[1].png"
+                alt="Rolled_Map"
+              />
             </div>
             <div className=" w-fit h-fit rotate-12 absolute -right-28 -top-12 scale-100 z-20">
-              <img src="/icons/AboutImages/images/Compass[1].png" />
+              <img
+                src="/icons/AboutImages/images/Compass[1].png"
+                alt="Compass"
+              />
             </div>
 
             <div className="w-fit h-fit absolute scale-100 -right-[25rem] top-[25rem] z-10">
-              <img src="/icons/AboutImages/images/Passport[1].png" />
+              <img
+                src="/icons/AboutImages/images/Passport[1].png"
+                alt="Passport"
+              />
             </div>
           </div>
         </div>
