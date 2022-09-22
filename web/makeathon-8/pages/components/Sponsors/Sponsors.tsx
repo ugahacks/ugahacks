@@ -32,6 +32,7 @@ const mckenneys: string =
 const devfest: string =
   "/icons/SplashImages/images/DevFest-Logo-2022-LightBackground.png";
 
+const CustomButton = withStyles(
   {
     root: {
       backgroundColor: "#A6BDA4",
