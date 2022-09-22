@@ -64,24 +64,27 @@ function Sponsors(): ReactElement {
     <section className="section sponsors-section" id="sponsors">
       <div className="sponsors-container">
         <h2 id="sponsorship-title">Sponsorship</h2>
-        {
-          <div className="logo-container">
-            <SponsorLogo
-              id="mckenneys"
-              image={mckenneys}
-              alt="mckenneys"
-              tier="partner"
-              link="https://www.mckenneys.com/"
-            />
-            <SponsorLogo
-              id="devfest"
-              image={devfest}
-              alt="devfest"
-              tier="partner"
-              link="https://gdg.community.dev/gdg-athens-1/"
-            />
-          </div>
-        }
+        <SponsorLogo
+          id="mckenneys"
+          image={mckenneys}
+          alt="mckenneys"
+          tier="mansion"
+          link="https://www.mckenneys.com/"
+        />
+        <SponsorLogo
+          id="devfest"
+          image={devfest}
+          alt="devfest"
+          tier="mansion"
+          link="https://gdg.community.dev/gdg-athens-1/"
+        />
+        <CustomButton
+          variant="contained"
+          size="large"
+          href="/sponsorship-packet-makeathon"
+        >
+          Sponsorship Packet
+        </CustomButton>
       </div>
     </section>
   );
