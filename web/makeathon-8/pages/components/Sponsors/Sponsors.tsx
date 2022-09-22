@@ -27,8 +27,10 @@ import { withStyles } from "@material-ui/core/styles";
 // const aws: string = "/icons/SponsorsImages/images/sponsorlogos/aws.png";
 // const acm: string = "/icons/SponsorsImages/images/sponsorlogos/acm.svg";
 
-const mckenneys: string = "/icons/SplashImages/images/McK_Black_Logo_Horiz-Lg.svg";
-const devfest: string = "/icons/SplashImages/images/DevFest-Logo-2022-LightBackground.png";
+const mckenneys: string =
+  "/icons/SplashImages/images/McK_Black_Logo_Horiz-Lg.svg";
+const devfest: string =
+  "/icons/SplashImages/images/DevFest-Logo-2022-LightBackground.png";
 
 const CustomButton = withStyles(
   {
@@ -62,126 +64,24 @@ function Sponsors(): ReactElement {
     <section className="section sponsors-section" id="sponsors">
       <div className="sponsors-container">
         <h2 id="sponsorship-title">Sponsorship</h2>
-        {/* <SponsorLogo
-          image={ncr}
-          alt="NCR logo"
-          tier="mansion"
-          link="https://www.ncr.com/"
-        />
-        <div className="logo-container">
-          <SponsorLogo
-            image={blackRock}
-            alt="BlackRock"
-            tier="penthouse"
-            link="https://www.blackrock.com/corporate/about-us"
-          />
-          <SponsorLogo
-            image={tsys}
-            alt="TSYS"
-            tier="apartment"
-            link="https://www.tsys.com/"
-          />
-          <SponsorLogo
-            image={statefarm}
-            alt="StateFarm"
-            tier="doghouse"
-            link="https://www.statefarm.com/about-us"
-          />
-          <SponsorLogo
-            image={capitalone}
-            alt="Capital One"
-            tier="doghouse"
-            link="https://campus.capitalone.com/"
-          />
-          <SponsorLogo
-            id="ugacombologo"
-            image={uga}
-            alt="UGA Department of Computer Science, Parents Leadership Council, Resident Hall Association, Student Government Association"
-            tier="apartment"
-            link="https://www.cs.uga.edu/"
-          />
-          <SponsorLogo
-            image={credera}
-            alt="Credera"
-            tier="loft"
-            link="https://www.credera.com/"
-          />
-          <SponsorLogo
-            image={deloitte}
-            alt="Deloitte"
-            tier="loft"
-            link="https://www2.deloitte.com/us/en.html"
-          />
-          <SponsorLogo
-            image={figma}
-            alt="Figma"
-            tier="loft"
-            link="https://www.figma.com/education/students/"
-          />
-        </div>
-        <div className="logo-container">
-          <SponsorLogo
-            image={digitalOcean}
-            alt="Digital Ocean logo"
-            tier="partner"
-            link="https://www.digitalocean.com/"
-          />
-          <SponsorLogo
-            image={echoAR}
-            alt="echoAR Logo"
-            tier="partner"
-            link="https://www.echoar.xyz/"
-          />
-          <SponsorLogo
-            image={stickerMule}
-            alt="StickerMule"
-            tier="partner"
-            link="https://hackp.ac/mlh-stickermule-hackathons"
-          />
-          <SponsorLogo
-            image={aws}
-            alt="AWS"
-            tier="partner"
-            link="https://aws.amazon.com/"
-          />
-          <SponsorLogo
-            id="acm"
-            image={acm}
-            alt="ACM"
-            tier="partner"
-            link="https://uga.campuslabs.com/engage/organization/acm"
-          />
-        </div>
-        <p>
-          <i>
-            This event is supported in part by the President&apos;s Venture Fund
-            through the generous gifts of University of Georgia donors.
-          </i>
-        </p> */
-        <SponsorLogo
-            id="mckenneys"
-            image={mckenneys}
-            alt="mckenneys"
-            tier="partner"
-            link="https://www.mckenneys.com/"
-          />
-        <SponsorLogo
-            id="devfest"
-            image={devfest}
-            alt="devfest"
-            tier="partner"
-            link="https://gdg.community.dev/gdg-athens-1/"
-          />
+        {
+          <div className="logo-container">
+            <SponsorLogo
+              id="mckenneys"
+              image={mckenneys}
+              alt="mckenneys"
+              tier="partner"
+              link="https://www.mckenneys.com/"
+            />
+            <SponsorLogo
+              id="devfest"
+              image={devfest}
+              alt="devfest"
+              tier="partner"
+              link="https://gdg.community.dev/gdg-athens-1/"
+            />
+          </div>
         }
-        /*
-        <CustomButton
-          variant="contained"
-          size="large"
-          href="/sponsorship-packet-makeathon"
-        >
-          Sponsorship Packet
-        </CustomButton>
-        */
       </div>
     </section>
   );

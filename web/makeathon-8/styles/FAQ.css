@@ -16,7 +16,7 @@
 }
 
 .covid-faq-section {
-  background-image: url(/icons/FAQImages/images/yellowbg-02.svg);
+  background-image: url("../public/icons/SplashImages/images/1.svg");
   /*background-repeat: no-repeat;*/
   background-size: cover !important;
   /*background-position: center;*/
@@ -84,7 +84,7 @@
   font-weight: 700;
   text-align: center;
   font-size: 64px;
-  color: #ebdaa8;
+  color: #8a6851;
   order: -1;
 }
 
@@ -199,7 +199,7 @@
     justify-content: space-evenly;
   }
   .covid-faq-section {
-    background-image: url(/icons/FAQImages/images/yellowbg-02-mobile.svg);
+    background-image: url("../public/icons/SplashImages/images/1.svg");
     /*background-position: center;*/
   }
   .covid-byte {
@@ -216,12 +216,9 @@
 
 @media only screen and (max-width: 1450px) {
   .faq-section {
-    background-image: radial-gradient(
-        rgba(250, 250, 250, 0.9),
-        rgba(255, 255, 255, 0.9)
-      ),
-      url(/icons/FAQImages/images/Full_leaves_background.svg);
-    /* background-image: url(/icons/FAQImages/images/crumpledPaper.png); */
+    background-image: 
+      url("../public/icons/SplashImages/images/1.svg");
+      /* background-image: url(/icons/FAQImages/images/crumpledPaper.png); */
   }
 
   .faq-container {
