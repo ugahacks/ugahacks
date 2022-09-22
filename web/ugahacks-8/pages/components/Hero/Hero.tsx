@@ -3,10 +3,13 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <>
-      <section className="min-h-fit w-full bg-gradient-to-b from-goblin-500 to-celery-500  ">
+      <section
+        className="min-h-fit w-full bg-gradient-to-b to-goblin-500 from-celery-500"
+        id="Hero"
+      >
         <div className="mx-auto flex flex-col items-center text-center">
           <Image
-            src="/icons/SplashImages/images/Hacks8Logo.png"
+            src="/icons/HeroImages/images/byte_banner.png"
             width={2000}
             height={600}
           />
@@ -21,10 +24,10 @@ export default function Hero() {
               <span className="no-underline">Register Now!</span>
             </a>
           </div>
-          <div className="w-full pt-24">
+          <div className="w-full pt-24 z-0 opacity-90">
             <img
               src="/icons/HeroImages/images/grid_texture.svg"
-              className=" w-full z-30"
+              className=" w-full "
             />
           </div>
         </div>

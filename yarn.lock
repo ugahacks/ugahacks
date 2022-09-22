@@ -7277,6 +7277,15 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"tailwindcss-animate@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "tailwindcss-animate@npm:1.0.5"
+  peerDependencies:
+    tailwindcss: "*"
+  checksum: 6b558f85a6af0780f018e1d23736d56dd59795f051df413bc2cf2fc2a021d6b1a3b78066f93e1045f3a39c11ee191c728db79e606d9a1def07fdf6a10f045312
+  languageName: node
+  linkType: hard
+
 "tailwindcss@npm:^3.1.8":
   version: 3.1.8
   resolution: "tailwindcss@npm:3.1.8"
@@ -7711,6 +7720,7 @@ resolve@^2.0.0-next.3:
     react-dom: 17.0.2
     react-icons: ^4.4.0
     tailwindcss: ^3.1.8
+    tailwindcss-animate: ^1.0.5
     typescript: 4.3.5
   languageName: unknown
   linkType: soft
@@ -7735,6 +7745,7 @@ resolve@^2.0.0-next.3:
   resolution: "ugahacks@workspace:."
   dependencies:
     husky: ^7.0.0
+    tailwindcss-animate: ^1.0.5
     typescript: ^4.3.5
   languageName: unknown
   linkType: soft
