@@ -1,6 +1,5 @@
 .about {
-  background-image: url("../public/icons/AboutImages/images/leafyBacksplash.png");
-  /**background-image: url(./images/colortools-01.svg);*/
+  background-image: url("../public/icons/SplashImages/images/Woodbg2_w_hat.svg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover !important;
@@ -8,7 +7,7 @@
 
 .about-text,
 .tool {
-  color: #8a6851;
+  color: #ebdaa8;
 }
 
 .tool-rack {
