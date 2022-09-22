@@ -1,8 +1,8 @@
 import React, { ReactElement } from "react";
 import SponsorLogo from "./SponsorLogo";
 
-import Button from "@mui/material/Button";
-import withStyles from '@mui/styles/withStyles';
+import Button from "@material-ui/core/Button";
+import { withStyles } from "@material-ui/core/styles";
 
 // const ncr: string = "/icons/SponsorsImages/images/sponsorlogos/NCR.png";
 // const digitalOcean: string =
@@ -32,6 +32,7 @@ const mckenneys: string =
 const devfest: string =
   "/icons/SplashImages/images/DevFest-Logo-2022-LightBackground.png";
 
+const CustomButton = withStyles(
   {
     root: {
       backgroundColor: "#A6BDA4",
@@ -81,7 +82,6 @@ function Sponsors(): ReactElement {
             />
           </div>
         }
-
       </div>
     </section>
   );
