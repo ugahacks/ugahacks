@@ -27,6 +27,9 @@ import { withStyles } from "@material-ui/core/styles";
 // const aws: string = "/icons/SponsorsImages/images/sponsorlogos/aws.png";
 // const acm: string = "/icons/SponsorsImages/images/sponsorlogos/acm.svg";
 
+const mckenneys: string = "/icons/SplashImages/images/McK_Black_Logo_Horiz-Lg.svg";
+const devfest: string = "/icons/SplashImages/images/DevFest-Logo-2022-LightBackground.png";
+
 const CustomButton = withStyles(
   {
     root: {
@@ -154,7 +157,23 @@ function Sponsors(): ReactElement {
             This event is supported in part by the President&apos;s Venture Fund
             through the generous gifts of University of Georgia donors.
           </i>
-        </p> */}
+        </p> */
+        <SponsorLogo
+            id="mckenneys"
+            image={mckenneys}
+            alt="mckenneys"
+            tier="partner"
+            link="https://www.mckenneys.com/"
+          />
+        <SponsorLogo
+            id="devfest"
+            image={devfest}
+            alt="devfest"
+            tier="partner"
+            link="https://gdg.community.dev/gdg-athens-1/"
+          />
+        }
+        /*
         <CustomButton
           variant="contained"
           size="large"
@@ -162,6 +181,7 @@ function Sponsors(): ReactElement {
         >
           Sponsorship Packet
         </CustomButton>
+        */
       </div>
     </section>
   );
