@@ -1,9 +1,9 @@
 import React, { ReactElement } from "react";
 import { motion } from "framer-motion";
 
-const laptop: string = "/icons/AboutImages/images/laptop.svg";
-const charger: string = "/icons/AboutImages/images/charger.svg";
-const phone: string = "/icons/AboutImages/images/phone.svg";
+const laptop: string = "/icons/AboutImages/images/icon.comp.etching.svg";
+const charger: string = "/icons/AboutImages/images/icon.charger.etching.svg";
+const phone: string = "/icons/AboutImages/images/icon.phone.etching.svg";
 const slack: string = "/icons/AboutImages/images/slack.svg";
 
 interface AboutProps {
@@ -51,7 +51,6 @@ function About(): ReactElement {
           <div className="tool-rack">
             <Tool image={laptop} tool="Laptop" alt="Laptop" />
             <Tool image={phone} tool="Phone" alt="A Phone" />
-            <Tool image={slack} tool="Slack" alt="Slack" />
             <Tool image={charger} tool="Chargers" alt="Chargers" />
           </div>
         </div>
