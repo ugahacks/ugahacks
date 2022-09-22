@@ -78,13 +78,13 @@ function Sponsors(): ReactElement {
           tier="mansion"
           link="https://gdg.community.dev/gdg-athens-1/"
         />
-        {/* <CustomButton
+        <CustomButton
           variant="contained"
           size="large"
           href="/sponsorship-packet-makeathon"
         >
           Sponsorship Packet
-        </CustomButton> */}
+        </CustomButton>
       </div>
     </section>
   );

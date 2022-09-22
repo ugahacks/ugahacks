@@ -52,6 +52,7 @@ function About(): ReactElement {
             <Tool image={laptop} tool="Laptop" alt="Laptop" />
             <Tool image={phone} tool="Phone" alt="A Phone" />
             <Tool image={charger} tool="Chargers" alt="Chargers" />
+            <Tool image={slack} tool="Slack" alt="Slack" />
           </div>
         </div>
       </section>
