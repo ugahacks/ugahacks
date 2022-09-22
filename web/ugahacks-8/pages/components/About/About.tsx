@@ -3,7 +3,10 @@ import Image from "next/image";
 export default function About() {
   return (
     <>
-      <div className="min-h-screen w-full bg-celery-500 overflow-clip">
+      <div
+        className="min-h-screen w-full bg-goblin-500 overflow-clip"
+        id="About"
+      >
         <div className="text-center relative ">
           <div className="z-30 absolute pt-16 xl:pr-5 w-full xl:w-[48rem]">
             <div className="xl:w-[700px] w-fit xl:text-left text-center xl:bg-inherit bg-goblin-800 ease-in-out duration-150 transition-all mx-24 py-3">
