@@ -6,7 +6,7 @@ function FAQ(): ReactElement {
 
   return (
     <>
-      <section className="section faq-section" id="faq">
+      <section className="section faq-section" id="FAQ">
         <div className="faq-container">
           <h1 className="title-text">FAQ</h1>
 
@@ -69,8 +69,3 @@ function FAQ(): ReactElement {
 }
 
 export default FAQ;
-
-/*
-            <button className="show-more" onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? 'Show Less' : 'Show More'}
-            </button>*/
