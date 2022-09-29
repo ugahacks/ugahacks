@@ -6,9 +6,9 @@ import MediaCard from "./MediaCard";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
-import IconButton from "@mui/material/IconButton";
-import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import IconButton from "@material-ui/core/IconButton";
+import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
+import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 
 const lightswitch: string = "/icons/HallOfFameImages/media/lightswitch.jpg";
 const esports: string = "/icons/HallOfFameImages/media/esports.png";
@@ -245,7 +245,7 @@ interface disabledProps {
 
 const PrevButton = ({ isDisabled }: disabledProps) => {
   return (
-    <IconButton disabled={isDisabled} color="inherit" size="large">
+    <IconButton disabled={isDisabled} color="inherit">
       <NavigateBeforeIcon fontSize="large" aria-label="Previous" />
     </IconButton>
   );
@@ -253,7 +253,7 @@ const PrevButton = ({ isDisabled }: disabledProps) => {
 
 const NextButton = ({ isDisabled }: disabledProps) => {
   return (
-    <IconButton disabled={isDisabled} color="inherit" size="large">
+    <IconButton disabled={isDisabled} color="inherit">
       <NavigateNextIcon fontSize="large" aria-label="Next" />
     </IconButton>
   );

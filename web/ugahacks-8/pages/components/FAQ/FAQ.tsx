@@ -6,7 +6,7 @@ function FAQ(): ReactElement {
 
   return (
     <>
-      <section className="section faq-section" id="FAQ">
+      <section className="section faq-section" id="faq">
         <div className="faq-container">
           <h1 className="title-text">FAQ</h1>
 
