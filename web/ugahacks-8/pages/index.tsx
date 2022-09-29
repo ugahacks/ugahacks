@@ -6,6 +6,7 @@ import Schedule from "./components/Schedule";
 import FAQ from "./components/FAQ";
 import Sponsors from "./components/Sponsors";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 import Header from "./components/Header";
 
 export default function Home() {
@@ -20,7 +21,8 @@ export default function Home() {
         <link rel="icon" href="/icons/byteGoggleDown.png" />
       </Head>
       <Header />
-      <Splash />
+      <Hero />
+
       <HallOfFame />
       <About />
       {/* <Schedule /> */}

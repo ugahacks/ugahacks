@@ -14,7 +14,7 @@ export default function Hero() {
             height={600}
           />
           <h1 className="text-5xl text-white pb-16">
-            University of Georgia <span>&#183;</span> Feburary 3-5 , 2022
+            University of Georgia <span>&#183;</span> Feburary 3-5, 2022
           </h1>
           <div className="register_button ring-0">
             <a
