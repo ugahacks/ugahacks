@@ -1,7 +1,7 @@
 .about {
   background-image: url("../public/icons/SplashImages/images/Woodbg2_w_hat.svg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-repeat: repeat;
+  /* background-attachment: fixed; */
   background-size: cover !important;
 }
 
