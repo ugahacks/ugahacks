@@ -56,8 +56,8 @@ function DayImg(props: ScheduleProps): ReactElement {
 function Schedule(): ReactElement {
   // eslint-disable-next-line
   const dayMapping = {
-    0: "friday",
-    1: "saturday"
+    0: "saturday",
+    1: "sunday"
   };
 
   const [day, setDay] = useState<number>(getDay());
