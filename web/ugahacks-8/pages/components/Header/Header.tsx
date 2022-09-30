@@ -21,7 +21,7 @@ interface HeaderReactIconProps {
 }
 
 const NavIcon = (props: HeaderReactIconProps) => (
-  <a className="custom_hover" href={props.href}>
+  <a className="custom_hover_icon" href={props.href}>
     {props.image}
   </a>
 );
