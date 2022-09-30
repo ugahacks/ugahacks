@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 
 const day1: string = "/icons/ScheduleImages/images/day1.svg";
 const day2: string = "/icons/ScheduleImages/images/day2.svg";
-const day3: string = "/icons/ScheduleImages/images/day3.svg";
 
 interface ScheduleProps {
   image: string;
@@ -21,6 +20,35 @@ const buttonVariants = {
   },
 };
 
+const eventsDay1: string[][] = [
+  ["Event Check in", "9:00am-9:30pm", "East Commons"],
+  ["Opening Ceremony", "9:00am - 10:30am", "Room 1453"],
+  ["Sponsors Introduce Challenges", "10:30am - 11:00am", "Room 1453"],
+  ["First Time Maker Workshop", "11:00am - 12:00pm", "Room 1401"],
+  ["Lunch", "12:00pm - 1:00pm", "East Commons"],
+  ["Chill Space", "1:00pm - 9:00pm", "Room 1405"],
+  ["McKenny's Presentation", "1:00pm - 1:30pm", "Room 1456"],
+  ["Devfest #1: Google Cloud", "2:30pm - 3:30pm", "Room 1456"],
+  ["Sustainable Code Workshop", "3:30pm - 4:30pm", "Room 1401"],
+  ["Devfest #2: Flutter/Firebase", "5:00pm - 6:00pm", "Room 1456"],
+  ["Dinner", "6:00pm - 7:00pm", "East Commons"],
+  ["End of Day", "9:00pm", ""],
+];
+
+const eventsDay2: string[][] = [
+  ["Breakfeast", "9:00am-10:00am", "East Commons"],
+  ["Roller Coaster w/Recycles", "10:00am - 11:00am", "Room 1290"],
+  ["Devfest #3: ML", "11:00am - 12:00am", "Room 1456"],
+  ["Lunch", "12:00pm - 1:00pm", "East Commons"],
+  ["Sponsor \"Career Fair\"", "2:00pm - 4:00pm", "East Commons"],
+  ["Egg Drop Challenge", "3:00pm - 4:00pm", "Room 1290"],
+  ["Recycled Knowledge Kahoot", "5:00pm - 6:00pm", "Room 1456"],
+  ["Projects Due", "6:00pm", ""],
+  ["Dinner", "6:00pm - 7:00pm", "East Commons"],
+  ["Judging/Expo", "6:00pm - 8:00pm", "East Commons"],
+  ["Closing Ceremony", "8:00pm-9:00pm", "East Commons"],
+];
+
 function DayImg(props: ScheduleProps): ReactElement {
   return <img src={props.image} alt={props.alt} />;
 }
@@ -29,8 +57,7 @@ function Schedule(): ReactElement {
   // eslint-disable-next-line
   const dayMapping = {
     0: "friday",
-    1: "saturday",
-    2: "sunday",
+    1: "saturday"
   };
 
   const [day, setDay] = useState<number>(getDay());
@@ -46,11 +73,22 @@ function Schedule(): ReactElement {
 
     if (dateDay === 6) {
       return 1;
-    } else if (dateDay === 0) {
-      return 2;
     } else {
       return 0;
     }
+  }
+
+  function getEvents(events: string[][]): ReactElement {
+    return (
+      <>
+        {
+          events.map((event, idRow) => (
+          <tr key={idRow}>
+            {event.map((item, id) => (<td key={id}>{item}</td>))}
+          </tr>))
+        }
+      </>
+    );
   }
 
   // eslint-disable-next-line
@@ -59,23 +97,10 @@ function Schedule(): ReactElement {
       return (
         <>
           <DayImg image={day1} alt="Day 1 banner" />
-          <div>
+          <div className="day-wrapper">
             <table>
               <tbody>
-                <tr>COMING SOON NEXT YEAR!</tr>
-              </tbody>
-            </table>
-          </div>
-        </>
-      );
-    } else if (day === 1) {
-      return (
-        <>
-          <DayImg image={day2} alt="Day 2 banner" />
-          <div className="daytwo-wrapper">
-            <table className="daytwo">
-              <tbody>
-                <tr>COMING SOON NEXT YEAR!</tr>
+                {getEvents(eventsDay1)}
               </tbody>
             </table>
           </div>
@@ -84,11 +109,11 @@ function Schedule(): ReactElement {
     } else {
       return (
         <>
-          <DayImg image={day3} alt="Day 3 banner" />
-          <div>
-            <table>
+          <DayImg image={day2} alt="Day 2 banner" />
+          <div className="day-wrapper">
+            <table className="daytwo">
               <tbody>
-                <tr>COMING SOON NEXT YEAR!</tr>
+                {getEvents(eventsDay2)}
               </tbody>
             </table>
           </div>
@@ -103,7 +128,7 @@ function Schedule(): ReactElement {
       throw Error("Invalid Number Key");
     }
 
-    if (day + increment >= 0 && day + increment <= 2) {
+    if (day + increment >= 0 && day + increment <= 1) {
       setDay(day + increment);
     }
   }
