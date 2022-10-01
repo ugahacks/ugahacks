@@ -1,6 +1,6 @@
 .about {
   background-image: url("../public/icons/SplashImages/images/Woodbg2_w_hat.svg");
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   /* background-attachment: fixed; */
   background-size: cover !important;
 }
@@ -37,6 +37,10 @@
   margin: 0 0 0 10vw;
   width: 50%;
   font-size: 1.3em;
+}
+
+.text-background {
+  background-color: #8a6851;
 }
 
 /* @media only screen and (max-width: 1450px) {
