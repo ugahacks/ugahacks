@@ -1,6 +1,6 @@
 .splash {
-  background-image: url(/icons/SplashImages/images/Website_splash.svg);
-  background-repeat: no-repeat;
+  background-image: url(/icons/SplashImages/images/Woodbg1_w_etchings.svg);
+  background-repeat: repeat;
   background-size: cover !important;
   min-height: 100vh;
   width: 100%;
@@ -91,7 +91,7 @@ li span {
 
 @media only screen and (max-width: 1600px) {
   .splash {
-    background-image: url(/icons/SplashImages/images/Website_splash.svg);
+    background-image: url(/icons/SplashImages/images/Woodbg1_w_etchings.svg);
   }
 
   .logo {
