@@ -2,7 +2,6 @@
   /* background-image: url(/icons/SplashImages/images/makeathonWoodbacksplash.png); */
   background-image: url("../public/icons/SplashImages/images/1.svg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover !important;
   /*min-height: 200vh;*/
 }
@@ -209,16 +208,15 @@
     min-width: 350px;
     margin: 0 auto 30px;
   }
-  .acorn{
+  .acorn {
     height: 12px;
   }
 }
 
 @media only screen and (max-width: 1450px) {
   .faq-section {
-    background-image: 
-      url("../public/icons/SplashImages/images/1.svg");
-      /* background-image: url(/icons/FAQImages/images/crumpledPaper.png); */
+    background-image: url("../public/icons/SplashImages/images/1.svg");
+    /* background-image: url(/icons/FAQImages/images/crumpledPaper.png); */
   }
 
   .faq-container {
