@@ -17,11 +17,8 @@ export default function Hero() {
             University of Georgia <span>&#183;</span> Feburary 3-5, 2022
           </h1>
           <div className="register_button ring-0">
-            <a
-              href="https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_8x05NF3a2OkoMeh"
-              className=""
-            >
-              <span className="no-underline">Register Now!</span>
+            <a href="/pre-register-8" className="" target="_blank">
+              <span className="no-underline">Pre-register Here!</span>
             </a>
           </div>
           <div className="w-full pt-24 z-0 opacity-90">

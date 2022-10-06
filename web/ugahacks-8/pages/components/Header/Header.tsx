@@ -71,7 +71,7 @@ export default function Header() {
               <NavLink href={"/#FAQ"} name={"FAQ"} />
               <NavLink href={"/#Out_Team"} name={"Our Team"} />
               <NavLink href={"/#Sponsors"} name={"Sponsors"} />
-              <NavLink href={"/#Register"} name={"Register"} />
+              {/* <NavLink href={"/pre-register-8"} name={"Pre-register"} /> */}
             </div>
             <div className="flex ml-auto pr-4">
               <div className=" right-0 flex flex-row-reverse gap-4">
