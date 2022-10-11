@@ -6,8 +6,8 @@ import Schedule from "./components/Schedule";
 import FAQ from "./components/FAQ";
 import Sponsors from "./components/Sponsors";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Header from "./components/Header";
 
 export default function Home() {
   return (
@@ -22,8 +22,8 @@ export default function Home() {
       </Head>
       <Header />
       <Hero />
-      {/* <Splash /> */}
-      {/* <HallOfFame /> */}
+
+      <HallOfFame />
       <About />
       {/* <Schedule /> */}
       <FAQ />

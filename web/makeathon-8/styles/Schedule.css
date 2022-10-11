@@ -1,5 +1,5 @@
 #schedule {
-  background-image: url(/icons/SplashImages/images/Background.svg);
+  background-image: url(/icons/ScheduleImages/images/Plain_wood_background.svg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover !important;
@@ -74,29 +74,29 @@ td {
   font-size: 1.2em;
 }
 
-/* .daytwo-wrapper {
+.day-wrapper {
   overflow-y: scroll;
   height: 70vh;
 }
 
-.daytwo-wrapper::-webkit-scrollbar {
+.day-wrapper::-webkit-scrollbar {
   width: 0.5em;
 }
 
-.daytwo-wrapper::-webkit-scrollbar-track {
+.day-wrapper::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
 }
 
-.daytwo-wrapper::-webkit-scrollbar-thumb {
-  background-color: #ffe401;
-} */
+.day-wrapper::-webkit-scrollbar-thumb {
+  background-color: #a6bda4;
+}
 
 /* FIREFOX: */
 
-.daytwo-wrapper {
+/*.day-wrapper {
   scrollbar-width: thin;
-  scrollbar-color: #ffe401;
-}
+  scrollbar-color: #a6bda4 rbga(0, 0, 0, 0);
+}*/
 
 td:last-child {
   color: #ffe401;
@@ -126,6 +126,10 @@ td:last-child {
 div {
   font-weight: 400;
   color: #a6bda4;
+}
+
+button:focus {
+  outline-color: #a6bda4;
 }
 
 #schedule h1,

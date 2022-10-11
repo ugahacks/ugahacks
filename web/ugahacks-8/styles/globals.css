@@ -25,7 +25,6 @@ h2 {
   box-sizing: border-box;
 }
 
-
 .custom_hover {
   @apply  ease-in-out hover:scale-110  duration-300 no-underline
 }

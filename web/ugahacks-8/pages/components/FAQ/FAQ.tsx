@@ -69,8 +69,3 @@ function FAQ(): ReactElement {
 }
 
 export default FAQ;
-
-/*
-            <button className="show-more" onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? 'Show Less' : 'Show More'}
-            </button>*/

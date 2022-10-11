@@ -1,7 +1,6 @@
 .sponsors-section {
-  background-image: url("../public/icons/AboutImages/images/leafyBacksplash.png");
+  background-image: url("../public/icons/SplashImages/images/2.svg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover !important;
   min-height: 100vh;
   margin: auto;
@@ -21,7 +20,7 @@
   justify-content: space-evenly;
   justify-items: center;
   align-items: center;
-  color: #a6bda4;
+  /*color: #a6bda4;*/
 }
 
 .loft,
@@ -31,7 +30,7 @@
 .mansion,
 .partner {
   margin: 10px;
-  filter: brightness(0) invert(1);
+  /*filter: brightness(0) invert(1);*/
 }
 
 #acm {
@@ -39,7 +38,7 @@
 }
 
 #sponsorship-title {
-  color: #ebdaa8;
+  color: #8a6851;
 }
 
 .penthouse {

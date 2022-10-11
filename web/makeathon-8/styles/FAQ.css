@@ -1,8 +1,7 @@
 .faq-section {
   /* background-image: url(/icons/SplashImages/images/makeathonWoodbacksplash.png); */
-  background-image: url(/icons/FAQImages/images/leaves_background.svg);
+  background-image: url("../public/icons/SplashImages/images/1.svg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover !important;
   /*min-height: 200vh;*/
 }
@@ -16,7 +15,7 @@
 }
 
 .covid-faq-section {
-  background-image: url(/icons/FAQImages/images/yellowbg-02.svg);
+  background-image: url("../public/icons/SplashImages/images/1.svg");
   /*background-repeat: no-repeat;*/
   background-size: cover !important;
   /*background-position: center;*/
@@ -52,7 +51,7 @@
 }
 
 .faq-question-wrapper::-webkit-scrollbar-thumb {
-  background-color: #3a4146;
+  background-color: #8a6851;
 }
 
 /* FIREFOX: */
@@ -84,15 +83,15 @@
   font-weight: 700;
   text-align: center;
   font-size: 64px;
-  color: #ebdaa8;
+  color: #8a6851;
   order: -1;
 }
 
 .faq-question {
   font-family: "Poppins", sans-serif;
   margin-top: 15px;
-  background-color: #eee;
-  color: #444;
+  background-color: #8a6851;
+  color: #ebdaa8;
   cursor: pointer;
   padding: 18px;
   width: 98.5%;
@@ -131,8 +130,8 @@
 .faq-answer {
   width: 98.5%;
   overflow: hidden;
-  background-color: #f5f5f5;
-  color: #444;
+  background-color: #8a6851;
+  color: #ebdaa8;
   order: -1;
 }
 
@@ -199,7 +198,7 @@
     justify-content: space-evenly;
   }
   .covid-faq-section {
-    background-image: url(/icons/FAQImages/images/yellowbg-02-mobile.svg);
+    background-image: url("../public/icons/SplashImages/images/1.svg");
     /*background-position: center;*/
   }
   .covid-byte {
@@ -209,18 +208,14 @@
     min-width: 350px;
     margin: 0 auto 30px;
   }
-  .acorn{
+  .acorn {
     height: 12px;
   }
 }
 
 @media only screen and (max-width: 1450px) {
   .faq-section {
-    background-image: radial-gradient(
-        rgba(250, 250, 250, 0.9),
-        rgba(255, 255, 255, 0.9)
-      ),
-      url(/icons/FAQImages/images/Full_leaves_background.svg);
+    background-image: url("../public/icons/SplashImages/images/1.svg");
     /* background-image: url(/icons/FAQImages/images/crumpledPaper.png); */
   }
 
