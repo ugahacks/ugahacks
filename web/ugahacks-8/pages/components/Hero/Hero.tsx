@@ -10,8 +10,8 @@ export default function Hero() {
         <div className="mx-auto flex flex-col items-center text-center">
           <Image
             src="/icons/HeroImages/images/byte_banner.png"
-            width={2000}
-            height={600}
+            width={1600}
+            height={500}
           />
           <h1 className="text-5xl text-white pb-16">
             University of Georgia <span>&#183;</span> Feburary 3-5, 2022

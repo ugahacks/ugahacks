@@ -10482,35 +10482,19 @@ button.bg-dark:focus {
   font-style: italic !important;
 }
 
-.text-white {
-  color: #fff !important;
-}
-
 .text-primary {
   color: #007bff !important;
 }
 
-a.text-primary:hover,
-a.text-primary:focus {
-  color: #0056b3 !important;
-}
+
 
 .text-secondary {
   color: #6c757d !important;
 }
 
-a.text-secondary:hover,
-a.text-secondary:focus {
-  color: #494f54 !important;
-}
 
 .text-success {
   color: #28a745 !important;
-}
-
-a.text-success:hover,
-a.text-success:focus {
-  color: #19692c !important;
 }
 
 .text-info {
@@ -10526,19 +10510,13 @@ a.text-info:focus {
   color: #ffc107 !important;
 }
 
-a.text-warning:hover,
-a.text-warning:focus {
-  color: #ba8b00 !important;
-}
+
 
 .text-danger {
   color: #dc3545 !important;
 }
 
-a.text-danger:hover,
-a.text-danger:focus {
-  color: #a71d2a !important;
-}
+
 
 .text-light {
   color: #f8f9fa !important;
