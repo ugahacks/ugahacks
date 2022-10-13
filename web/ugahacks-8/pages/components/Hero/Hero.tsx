@@ -11,7 +11,7 @@ export default function Hero() {
         <div className="mx-auto flex flex-col items-center text-center">
           <Image src={byteBanner} width={1600} height={500} />
           <h1 className="text-5xl text-white pb-16">
-            University of Georgia <span>&#183;</span> Feburary 3-5, 2022
+            University of Georgia <span>&#183;</span> Feburary 3-5, 2023
           </h1>
           <div className="register_button ring-0">
             <a
