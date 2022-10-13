@@ -39,11 +39,11 @@ function About(): ReactElement {
         <div className="section-text about-text">
           <h2>What is a Makeathon?</h2>
           <p>
-            The UGAHacks Makeathon is a brand new event from our team. 
-            This year we are focusing on encouraging sustainability initiatives 
-            from our hackers with a product-focused event. With various workshops, 
-            challenges, and talks we hope to inspire hackers to create projects 
-            that are designed to solve the world’s most pressing sustainability 
+            The UGAHacks Makeathon is a brand new event from our team. This year
+            we are focusing on encouraging sustainability initiatives from our
+            hackers with a product-focused event. With various workshops,
+            challenges, and talks we hope to inspire hackers to create projects
+            that are designed to solve the world’s most pressing sustainability
             needs in just 24 hours!
           </p>
           <p>Come make, create, all while being sustainable!</p>
@@ -51,8 +51,8 @@ function About(): ReactElement {
           <div className="tool-rack">
             <Tool image={laptop} tool="Laptop" alt="Laptop" />
             <Tool image={phone} tool="Phone" alt="A Phone" />
-            <Tool image={slack} tool="Slack" alt="Slack" />
             <Tool image={charger} tool="Chargers" alt="Chargers" />
+            <Tool image={slack} tool="Slack" alt="Slack" />
           </div>
         </div>
       </section>
