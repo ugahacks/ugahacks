@@ -82,6 +82,7 @@ export default function Header() {
               <a
                 href={"/pre-register-8"}
                 target="_blank"
+                rel="noreferrer"
                 style={{ color: "white" }}
               >
                 Pre-Register
