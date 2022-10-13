@@ -55,12 +55,14 @@ function Sponsors(): ReactElement {
     <section className="section sponsors-section" id="sponsors">
       <div className="sponsors-container">
         <h2>Past Sponsors</h2>
-        <SponsorLogo
-          image={ncr}
-          alt="NCR logo"
-          tier="mansion"
-          link="https://www.ncr.com/"
-        />
+        <div className="mansion-container">
+          <SponsorLogo
+            image={ncr}
+            alt="NCR logo"
+            tier="mansion"
+            link="https://www.ncr.com/"
+          />
+        </div>
         <div className="logo-container">
           <SponsorLogo
             image={blackRock}
@@ -151,13 +153,11 @@ function Sponsors(): ReactElement {
             through the generous gifts of University of Georgia donors.
           </i>
         </p>
-        <CustomButton
-          variant="contained"
-          size="large"
-          href="/sponsorship-packet-8"
-        >
-          Sponsorship Packet
-        </CustomButton>
+        <div className="sponsorship_packet_button ring-0">
+          <a href="/sponsorship-packet-8" className="" target="_blank">
+            <span className="no-underline">Sponsorship Packet</span>
+          </a>
+        </div>
       </div>
     </section>
   );
