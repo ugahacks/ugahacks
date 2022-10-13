@@ -8,9 +8,7 @@ const NavLink = (props: HeaderLinkProps) => {
   const scrollPos = useScrollPosition();
   return (
     <Link href={props.href}>
-      <a className={scrollPos > 0 ? "NavTop" : "NavPostTop"} target="_blank">
-        {props.name}
-      </a>
+      <a className={scrollPos > 0 ? "NavTop" : "NavPostTop"}>{props.name}</a>
     </Link>
   );
 };
@@ -81,7 +79,14 @@ export default function Header() {
               <NavLink href={"/#FAQ"} name={"FAQ"} />
               <NavLink href={"/#Out_Team"} name={"Our Team"} />
               <NavLink href={"/#Sponsors"} name={"Sponsors"} />
-              <NavLink href={"/pre-register-8"} name={"Pre-Register"} />
+              <a
+                href={"/pre-register-8"}
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: "white" }}
+              >
+                Pre-Register
+              </a>
             </div>
             <div className="flex ml-auto pr-4">
               <div className=" right-0 flex flex-row-reverse gap-4">

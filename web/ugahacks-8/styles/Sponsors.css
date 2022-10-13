@@ -15,6 +15,11 @@
   color: #42885a;
 }
 
+.mansion-container {
+  display: flex;
+  justify-content: center;
+}
+
 .logo-container {
   display: flex;
   flex-direction: row;
