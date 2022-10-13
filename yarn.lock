@@ -213,6 +213,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@material-ui/core@npm:^4.12.4":
+  version: 4.12.4
+  resolution: "@material-ui/core@npm:4.12.4"
+  dependencies:
+    "@babel/runtime": ^7.4.4
+    "@material-ui/styles": ^4.11.5
+    "@material-ui/system": ^4.12.2
+    "@material-ui/types": 5.1.0
+    "@material-ui/utils": ^4.11.3
+    "@types/react-transition-group": ^4.2.0
+    clsx: ^1.0.4
+    hoist-non-react-statics: ^3.3.2
+    popper.js: 1.16.1-lts
+    prop-types: ^15.7.2
+    react-is: ^16.8.0 || ^17.0.0
+    react-transition-group: ^4.4.0
+  peerDependencies:
+    "@types/react": ^16.8.6 || ^17.0.0
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 96b48deccda87ced841b1db45bed2be6d2b6d1b4eae72cd5c9b931201cb72026330688e0fead54e715bcead40b267ea88bde781c9f1563b1a71a5c51bf187289
+  languageName: node
+  linkType: hard
+
 "@material-ui/icons@npm:^4.11.2":
   version: 4.11.2
   resolution: "@material-ui/icons@npm:4.11.2"
@@ -261,6 +288,37 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@material-ui/styles@npm:^4.11.5":
+  version: 4.11.5
+  resolution: "@material-ui/styles@npm:4.11.5"
+  dependencies:
+    "@babel/runtime": ^7.4.4
+    "@emotion/hash": ^0.8.0
+    "@material-ui/types": 5.1.0
+    "@material-ui/utils": ^4.11.3
+    clsx: ^1.0.4
+    csstype: ^2.5.2
+    hoist-non-react-statics: ^3.3.2
+    jss: ^10.5.1
+    jss-plugin-camel-case: ^10.5.1
+    jss-plugin-default-unit: ^10.5.1
+    jss-plugin-global: ^10.5.1
+    jss-plugin-nested: ^10.5.1
+    jss-plugin-props-sort: ^10.5.1
+    jss-plugin-rule-value-function: ^10.5.1
+    jss-plugin-vendor-prefixer: ^10.5.1
+    prop-types: ^15.7.2
+  peerDependencies:
+    "@types/react": ^16.8.6 || ^17.0.0
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: dbf3985ef57c1b7dae3fd916d5bfd61f2097afb93c9e1f64832cfcb8fc9bbf38a504c9632ed7b76eb5d235670083d9e66d35942bc976b7cd148c71d75b808e82
+  languageName: node
+  linkType: hard
+
 "@material-ui/system@npm:^4.12.1":
   version: 4.12.1
   resolution: "@material-ui/system@npm:4.12.1"
@@ -277,6 +335,25 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 2acf20b43090c381530899e2fa85b0a774fc4dfe08aa97a55c8fd58f833175fd1cb17374ecc403f722c2db3b3caffd1fadd5dffe146a08d036bc6031d676659b
+  languageName: node
+  linkType: hard
+
+"@material-ui/system@npm:^4.12.2":
+  version: 4.12.2
+  resolution: "@material-ui/system@npm:4.12.2"
+  dependencies:
+    "@babel/runtime": ^7.4.4
+    "@material-ui/utils": ^4.11.3
+    csstype: ^2.5.2
+    prop-types: ^15.7.2
+  peerDependencies:
+    "@types/react": ^16.8.6 || ^17.0.0
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: ebe6b3cc5f111034eacd763014f3260f7647b5e0cd132870f2ee18855cf3d51a996b4633035fe6f5f8965489944db4ac0cb3b71b84a765faa35a6861532ac9f6
   languageName: node
   linkType: hard
 
@@ -303,6 +380,20 @@ __metadata:
     react: ^16.8.0 || ^17.0.0
     react-dom: ^16.8.0 || ^17.0.0
   checksum: 30e15b197c52bb607ba2f00293acbda66388427560e30f5dd82714dee69f565cf0896baa98f869b191a881e14e0df08155fd9d598b356ac2262b8e60e43a5499
+  languageName: node
+  linkType: hard
+
+"@material-ui/utils@npm:^4.11.3":
+  version: 4.11.3
+  resolution: "@material-ui/utils@npm:4.11.3"
+  dependencies:
+    "@babel/runtime": ^7.4.4
+    prop-types: ^15.7.2
+    react-is: ^16.8.0 || ^17.0.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0
+  checksum: 05ff67c982b33d3b4260cfaeaf566f3ccaecaebb231907ed626bcc30322d89d705bfe79b8805c0dda2f1dc2cfa98ca9d731ec8ae12868da7a98568a41c7dc231
   languageName: node
   linkType: hard
 
@@ -4022,7 +4113,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "makeathon-8@workspace:web/makeathon-8"
   dependencies:
-    "@material-ui/core": ^4.12.3
+    "@material-ui/core": ^4.12.4
     "@material-ui/icons": ^4.11.2
     "@types/node": ^16.4.10
     "@types/react": 17.0.15
@@ -6553,6 +6644,15 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"tailwindcss-animate@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "tailwindcss-animate@npm:1.0.5"
+  peerDependencies:
+    tailwindcss: "*"
+  checksum: 6b558f85a6af0780f018e1d23736d56dd59795f051df413bc2cf2fc2a021d6b1a3b78066f93e1045f3a39c11ee191c728db79e606d9a1def07fdf6a10f045312
+  languageName: node
+  linkType: hard
+
 "tailwindcss@npm:^3.1.8":
   version: 3.1.8
   resolution: "tailwindcss@npm:3.1.8"
@@ -6987,6 +7087,7 @@ resolve@^2.0.0-next.3:
     react-dom: 17.0.2
     react-icons: ^4.4.0
     tailwindcss: ^3.1.8
+    tailwindcss-animate: ^1.0.5
     typescript: 4.3.5
   languageName: unknown
   linkType: soft
@@ -7011,6 +7112,7 @@ resolve@^2.0.0-next.3:
   resolution: "ugahacks@workspace:."
   dependencies:
     husky: ^7.0.0
+    tailwindcss-animate: ^1.0.5
     typescript: ^4.3.5
   languageName: unknown
   linkType: soft

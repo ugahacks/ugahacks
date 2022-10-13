@@ -4,11 +4,14 @@ import Image from "next/image";
 import { BsFacebook, BsGithub, BsTwitter, BsInstagram } from "react-icons/bs";
 import { ppid } from "node:process";
 
-const NavLink = (props: HeaderLinkProps) => (
-  <Link href={props.href}>
-    <a className="custom_hover">{props.name}</a>
-  </Link>
-);
+const NavLink = (props: HeaderLinkProps) => {
+  const scrollPos = useScrollPosition();
+  return (
+    <Link href={props.href}>
+      <a className={scrollPos > 0 ? "NavTop" : "NavPostTop"}>{props.name}</a>
+    </Link>
+  );
+};
 
 interface HeaderLinkProps {
   href: string;
@@ -20,11 +23,14 @@ interface HeaderReactIconProps {
   href: string;
 }
 
-const NavIcon = (props: HeaderReactIconProps) => (
-  <a className="custom_hover" href={props.href}>
-    {props.image}
-  </a>
-);
+const NavIcon = (props: HeaderReactIconProps) => {
+  const scrollPos = useScrollPosition();
+  return (
+    <a className={scrollPos > 0 ? "NavTop" : "NavPostTop"} href={props.href}>
+      {props.image}
+    </a>
+  );
+};
 
 import { useEffect, useState } from "react";
 
@@ -49,7 +55,7 @@ export default function Header() {
   const scrollPos = useScrollPosition();
   return (
     <>
-      <div className="sticky top-0 z-50 justify-items-center">
+      <div className="sticky top-0 z-50 items-center" id="HEADER">
         <div
           className={
             scrollPos > 0
@@ -57,21 +63,30 @@ export default function Header() {
               : "w-full h-20  font-bold  bg-celery-500 duration-500 ease-in-out"
           }
         >
-          <div className="pl-4 pt-[7px] flex flex-row md:flex-col md:flex-wrap items-center">
-            <Link href="#Hero">
+          <div className="pl-[1.25rem] pt-[1rem] pb-[1rem] flex flex-row md:flex-col md:flex-wrap items-center">
+            <Link href="/#Hero">
               <Image
                 src={"/icons/HeaderImages/images/byte_mini.png"}
                 width={48}
                 height={50}
                 alt={"Byte Mini"}
+                className="ease-in-out duration-300 hover:scale-110"
               />
             </Link>
-            <div className="pl-10 flex gap-5 md:text-base text-xs text-white text-center font-extralight">
+
+            <div className="pl-10 flex gap-5 md:text-base text-xs text-center font-extralight">
               <NavLink href={"/#About"} name={"About"} />
               <NavLink href={"/#FAQ"} name={"FAQ"} />
               <NavLink href={"/#Out_Team"} name={"Our Team"} />
               <NavLink href={"/#Sponsors"} name={"Sponsors"} />
-              <NavLink href={"/#Register"} name={"Register"} />
+              <a
+                href={"/pre-register-8"}
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: "white" }}
+              >
+                Pre-Register
+              </a>
             </div>
             <div className="flex ml-auto pr-4">
               <div className=" right-0 flex flex-row-reverse gap-4">
