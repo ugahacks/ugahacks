@@ -77,8 +77,8 @@ export default function Header() {
             <div className="pl-10 flex gap-5 md:text-base text-xs text-center font-extralight">
               <NavLink href={"/#About"} name={"About"} />
               <NavLink href={"/#FAQ"} name={"FAQ"} />
-              <NavLink href={"/#Out_Team"} name={"Our Team"} />
-              <NavLink href={"/#Sponsors"} name={"Sponsors"} />
+              <NavLink href={"https://ugahacks.com/"} name={"Our Team"} />
+              <NavLink href={"/#sponsors"} name={"Sponsors"} />
               <a
                 href={"/pre-register-8"}
                 target="_blank"
