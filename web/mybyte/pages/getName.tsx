@@ -1,4 +1,3 @@
-import { StringLike } from "@firebase/util";
 import React, {useEffect, useState} from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthContext";
@@ -29,8 +28,9 @@ const RegisterNamePage = () => {
       // }
 
       // get_user_information();
+      console.log(userInfo)
+      if (userInfo.first_name != null) {
 
-      if (userInfo.first_name !== "") {
         router.push("/dashboard")
       }
 
@@ -44,12 +44,12 @@ const RegisterNamePage = () => {
       //   console.log("ENTERED GET NAME IF STATEMENT");
       //   router.push("/dashboard");
       // }
-    }, [])
+    }, [router, userInfo])
 
     const onSubmit = async (data: RegisterNameType) => {
         try {
             console.log(user);
-            hasFirstAndLastName();
+            //await hasFirstAndLastName();
             storeFirstAndLastName(data.first_name, data.last_name);
             router.push("/dashboard");
         } catch (error: any) {

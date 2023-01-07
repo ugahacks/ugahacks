@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function emailVerification() {
+export default function EmailVerification() {
   return (
     <div>
         <h1>We have sent an email to verify your account</h1>

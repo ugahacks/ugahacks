@@ -72,8 +72,7 @@ export const AuthContextProvider = ({ children }: { children: React.ReactNode })
   const [resumeLink, setResumeLink] = useState<string>("");
   const [currEvent, setCurrEvent] = useState<Events>();
 
-  const userRef = collection(db, "users");
-  const registrationRef = collection(db, "registration");
+  const userRef = collection(db, "users-stage");
 
   const router = useRouter()
 
@@ -122,7 +121,7 @@ export const AuthContextProvider = ({ children }: { children: React.ReactNode })
       },
       async () => {
         await getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-          setDoc(doc(db, "registration", user.uid ? user.uid : ""), {
+          setDoc(doc(db, "registration-stage", user.uid ? user.uid : ""), {
             uid: user.uid,
             firstName: data.firstName,
             lastName: data.lastName,
@@ -155,6 +154,9 @@ export const AuthContextProvider = ({ children }: { children: React.ReactNode })
       "registered.HACKS8": true
     })
 
+    // Update userInfo
+    setUserInformation(user.uid)
+
   }
 
   const signUp = async (first_name: string, last_name: string, email: string, password: string) => {
@@ -180,18 +182,6 @@ export const AuthContextProvider = ({ children }: { children: React.ReactNode })
 
     } catch (err: any) {
       throw err;
-      
-      if (err instanceof FirebaseError) {
-        console.log(err.code)
-        console.log(err.name)
-        if (err.code == "auth/email-already-in-use") {
-          alert("This email is already registered with us, please login using that email")
-          router.push('/login')
-        } else if (err.code == "auth/weak-password") {
-          // at least 6 characters long
-        }
-      }
-        console.error(err);
     }
   };
 
@@ -199,9 +189,7 @@ export const AuthContextProvider = ({ children }: { children: React.ReactNode })
     const res = await signInWithEmailAndPassword(auth, email, password);
     const user = res.user;
 
-    console.log("Check for email verification")
     if (!user.emailVerified) {
-      console.log("Not verified")
       setUser({ uid: null, email: null})
       signOut(auth)
       return false
@@ -221,7 +209,7 @@ export const AuthContextProvider = ({ children }: { children: React.ReactNode })
         // const q = query(collection(db, "users"), where("uid", "==", user.uid));
         // const docs = await getDocs(q);
 
-        const docRef = doc(db, "users", google_user.uid);
+        const docRef = doc(db, "users-stage", google_user.uid);
         const docSnap = await getDoc(docRef);
 
         if (!docSnap.exists()) {
@@ -233,9 +221,7 @@ export const AuthContextProvider = ({ children }: { children: React.ReactNode })
                 authProvider: "google",
                 email: google_user.email,
                 points: 0,
-                registered: {
-                  [Events.hacks8]: true,
-                },
+                registered: {},
                 added_time: serverTimestamp(),
             });
         }
@@ -246,32 +232,24 @@ export const AuthContextProvider = ({ children }: { children: React.ReactNode })
 
   const storeFirstAndLastName = async (first_name: string, last_name: string) => {
     try {
-        const docRef = doc(db, "users", user.uid ? user.uid : "");
+        console.log(user.uid)
+        const docRef = doc(db, "users-stage", user.uid ? user.uid : "");
+        console.log(docRef)
         await updateDoc(docRef, {
             first_name: first_name,
             last_name: last_name,
         });
-        setFirstName(first_name)
-        setLastName(last_name)
+        setUserInformation(user.uid)
     } catch (err: any) {
         console.log(err);
     }
   };
 
   const hasFirstAndLastName = async () => {
-      console.log("HAS FIRST AND LAST?");
-      console.log(user);
-      const docRef = doc(db, "users", user.uid ? user.uid : "1");
+      const docRef = doc(db, "users-stage", user.uid ? user.uid : "1");
       const docSnap = await getDoc(docRef);
-      console.log(docSnap.data());
-      console.log(docSnap.exists() ? docSnap.data().first_name : null);
-      console.log("CHECK");
-      if (docSnap.exists()) {
-        console.log(docSnap.data().first_name === "");
-        console.log(docSnap.data().first_name)
-      }
+
       if (docSnap.exists() && (docSnap.data().first_name === "" || docSnap.data().last_name === "")) {
-        console.log("ENTERED THE IF STATEMENT");
           return false;
       }
 
@@ -279,19 +257,18 @@ export const AuthContextProvider = ({ children }: { children: React.ReactNode })
   };
 
   const getFirstName = async () => {
-    const docRef = doc(db, "users", user.uid ? user.uid : "0");
+    const docRef = doc(db, "users-stage", user.uid ? user.uid : "0");
     const docSnap = await getDoc(docRef);
 
     if (!docSnap.exists()) {
       return null;
     }
-    console.log("DOCSNAP")
-    console.log(docSnap.data())
+
     return docSnap.data().first_name;
   }
 
   const getRegisteredEvents = async () => {
-    const docRef = doc(db, "users", user.uid ? user.uid : "0");
+    const docRef = doc(db, "users-stage", user.uid ? user.uid : "0");
     const docSnap = await getDoc(docRef);
 
     if (!docSnap.exists()) {
@@ -302,14 +279,14 @@ export const AuthContextProvider = ({ children }: { children: React.ReactNode })
   }
 
   const setUserInformation = async (uid: string | null) => {
-    console.log("Setting user information");
-    const docRef = doc(db, "users", uid ? uid : "");
+    console.log("Setting up usre info")
+    const docRef = doc(db, "users-stage", uid ? uid : "");
     const docSnap = await getDoc(docRef);
 
     if (!docSnap.exists()) {
       return null;
     }
-
+    console.log(docSnap.data().first_name)
     setUserInfo({
       first_name: docSnap.data().first_name,
       last_name: docSnap.data().last_name,

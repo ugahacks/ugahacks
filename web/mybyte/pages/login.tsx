@@ -28,7 +28,7 @@ const LoginPage = () => {
     if (user.uid != null) {
       router.push('/dashboard')
     }
-  }, [user]);
+  }, [router, user]);
 
   const onSubmit = async (data: LoginType) => {
     try {

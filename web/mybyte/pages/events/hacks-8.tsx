@@ -19,7 +19,7 @@ const Hacks8 = () => {
 
     useEffect(() => {
       setCurrEvent(Events.hacks8)
-    }, [])
+    }, [setCurrEvent])
 
     // useEffect(() => {
     //   async function get_first_name() {

@@ -7,11 +7,10 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { user, userInfo } = useAuth();
 
   useEffect(() => {
-    console.log(user.uid)
     if (user.uid == null) {
       router.push("/login");
     } 
-  }, [user]);
+  }, [router, user]);
   return <div className="h-screen min-h-full overflow-auto">{user ? children : null}</div>;
 };
 

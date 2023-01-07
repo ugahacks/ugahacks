@@ -12,7 +12,7 @@ const Hacks8: EventDetail = {
   description: "lorem ipsum",
   page: "/events/hacks-8",
 }
-const events = [{e: <Event {...Hacks8}/>}]
+const events = [{event: <Event {...Hacks8}/>}]
 
 const DashboardPage = () => {
     const { userInfo, setUserInformation } = useAuth();
@@ -38,7 +38,7 @@ const DashboardPage = () => {
           <h2 className="text-2x1 font-semibold">Pick an event from below!</h2>
 
             {events.map(data => (
-              <button>{data.e}</button>
+              <button key={data.event.key}>{data.event}</button>
             ))}
 
         </div>

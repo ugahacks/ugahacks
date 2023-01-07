@@ -3,7 +3,7 @@ import { useAuth } from '../context/AuthContext'
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useRouter } from 'next/router';
 
-export default function resetPassword() {
+export default function ResetPassword() {
   interface resetPasswordForm {
     email: string
   }

@@ -4,7 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import { Events } from "../enums/events";
 
 const Navbar = ({ children }: { children: React.ReactNode }) => {
-  const { user, logOut, currEvent } = useAuth();
+  const { user, logOut, currEvent, userInfo } = useAuth();
   const router = useRouter();
 
   const menuItems = [
@@ -40,7 +40,7 @@ const Navbar = ({ children }: { children: React.ReactNode }) => {
         <div className="flex items-center text-blue-900 hover:text-blue-800 cursor-pointer transition duration-150 ">
           <Link href="/">
             <span className="font-semibold text-lg font-sans">
-              MyByte - UGA Hacks's Portal
+              MyByte - UGA Hacks Portal
             </span>
           </Link>
         </div>
@@ -64,11 +64,13 @@ const Navbar = ({ children }: { children: React.ReactNode }) => {
               ) : (
                 <>
                   <li className="my-3 md:my-0 items-center mr-4 md:inline-block block ">
+                    {userInfo.first_name != null ? (
                     <Link href="/dashboard">
                       <span className="text-blue-800 hover:text-blue-900 transition">
                         Dashboard
                       </span>
                     </Link>
+                    ) : null}
                   </li>
                   <li className="my-3 md:my-0 items-center mr-4 md:inline-block block ">
                     <a

@@ -16,10 +16,9 @@ import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/
 import "react-phone-number-input/style.css";
 import ProtectedRoute from '../components/ProtectedRoute';
 
-export default function register() {
+export default function Register() {
   const router = useRouter();
   const { storeUserRegistrationInformation, getRegisteredEvents, userInfo } = useAuth();
-  const [registeredEvents, setRegisteredEvents] = useState({});
   const { control, resetField, watch, register, handleSubmit, formState: { errors } } = useForm<RegisterForm>({
     defaultValues: {
         phoneNumber: "",
@@ -28,14 +27,10 @@ export default function register() {
     }
   });
 
-//   useEffect(() => {
-//     if (Events.hacks8 in userInfo.registered) {
-//         console.log("REGISTERED")
-//         router.push("/dashboard");
-//     }
-//   }, []);
-
-  const onSubmit: SubmitHandler<RegisterForm> = data => storeUserRegistrationInformation(data);
+  const onSubmit: SubmitHandler<RegisterForm> = data => {
+    storeUserRegistrationInformation(data);
+    router.push('/registrationSuccess')
+  }
   //const onSubmit: SubmitHandler<RegisterForm> = data => console.log(data);
 
   const watchers = watch(["major", "school"]); // Watching major and school input fields in case user selects "other" option
@@ -357,7 +352,7 @@ export default function register() {
                                     rules={{ required: "Please indicate you have read and agreed to the MLH code of conduct" }}
                                     render={({ field: { onChange, value } }) => (
                                         <>
-                                        <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' htmlFor='grid-text-1'><em>MLH Code of Conduct: </em>"I have read and agree to the <Link href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank" className="text-blue-600">MLH Code of Conduct</Link>."<span className="text-red-600">*</span></label>
+                                        <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' htmlFor='grid-text-1'><em>MLH Code of Conduct: </em>&quot;I have read and agree to the <Link href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank" className="text-blue-600">MLH Code of Conduct</Link>.&quot;<span className="text-red-600">*</span></label>
                                         <label>Yes <input className="mr-10" id='grid-text-1' type='radio' onChange={() => onChange(true)} checked={value === true} /></label>
                                         </>
                                     )}
@@ -387,7 +382,7 @@ export default function register() {
                                     rules={{ required: "You must select Yes before proceeding" }}
                                     render={({ field: { onChange, value } }) => (
                                         <>
-                                        <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' htmlFor='grid-text-1'><em>Communication from MLH: </em>“I authorize MLH to send me an email where I can further opt into the MLH Hacker, Events, or Organizer Newsletters and other communications from MLH."<span className="text-red-600">*</span></label>
+                                        <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' htmlFor='grid-text-1'><em>Communication from MLH: </em>“I authorize MLH to send me an email where I can further opt into the MLH Hacker, Events, or Organizer Newsletters and other communications from MLH.&quot;<span className="text-red-600">*</span></label>
                                         <label>Yes <input className="mr-10" id='grid-text-1' type='radio' onChange={() => onChange(true)} checked={value === true} /></label>
                                         </>
                                     )}
