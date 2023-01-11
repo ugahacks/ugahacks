@@ -1,8 +1,6 @@
 import "../styles/bootstrap.css";
 import "../styles/globals.css";
 import "../styles/Splash.css";
-import "../styles/HallOfFame.css";
-
 import "../styles/FAQ.css";
 import "../styles/Schedule.css";
 import "../styles/Sponsors.css";
