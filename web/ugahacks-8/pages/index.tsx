@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Splash from "./components/Splash";
-import HallOfFame from "./components/HallOfFame";
 import About from "./components/About";
 import Schedule from "./components/Schedule";
 import FAQ from "./components/FAQ";
@@ -23,7 +22,6 @@ export default function Home() {
       <Header />
       <Hero />
       {/* <Splash /> */}
-      {/* <HallOfFame /> */}
       <About />
       {/* <Schedule /> */}
       <FAQ />
