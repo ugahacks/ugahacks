@@ -59,7 +59,7 @@ function Sponsors(): ReactElement {
           <SponsorLogo
             image={ncr}
             alt="NCR logo"
-            tier="mansion"
+            tier="mansion sponsors-color"
             link="https://www.ncr.com/"
           />
         </div>
@@ -67,50 +67,50 @@ function Sponsors(): ReactElement {
           <SponsorLogo
             image={blackRock}
             alt="BlackRock"
-            tier="penthouse"
+            tier="penthouse sponsors-color"
             link="https://www.blackrock.com/corporate/about-us"
           />
           <SponsorLogo
             image={tsys}
             alt="TSYS"
-            tier="apartment"
+            tier="apartment sponsors-color"
             link="https://www.tsys.com/"
           />
           <SponsorLogo
             image={statefarm}
             alt="StateFarm"
-            tier="doghouse"
+            tier="doghouse sponsors-color"
             link="https://www.statefarm.com/about-us"
           />
           <SponsorLogo
             image={capitalone}
             alt="Capital One"
-            tier="doghouse"
+            tier="doghouse sponsors-color"
             link="https://campus.capitalone.com/"
           />
           <SponsorLogo
             id="ugacombologo"
             image={uga}
             alt="UGA Department of Computer Science, Parents Leadership Council, Resident Hall Association, Student Government Association"
-            tier="apartment"
+            tier="apartment sponsors-color"
             link="https://www.cs.uga.edu/"
           />
           <SponsorLogo
             image={credera}
             alt="Credera"
-            tier="loft"
+            tier="loft sponsors-color"
             link="https://www.credera.com/"
           />
           <SponsorLogo
             image={deloitte}
             alt="Deloitte"
-            tier="loft"
+            tier="loft sponsors-color"
             link="https://www2.deloitte.com/us/en.html"
           />
           <SponsorLogo
             image={figma}
             alt="Figma"
-            tier="loft"
+            tier="loft sponsors-color"
             link="https://www.figma.com/education/students/"
           />
         </div>
@@ -118,32 +118,32 @@ function Sponsors(): ReactElement {
           <SponsorLogo
             image={digitalOcean}
             alt="Digital Ocean logo"
-            tier="partner"
+            tier="partner sponsors-color"
             link="https://www.digitalocean.com/"
           />
           <SponsorLogo
             image={echoAR}
             alt="echoAR Logo"
-            tier="partner"
+            tier="partner sponsors-color"
             link="https://www.echoar.xyz/"
           />
           <SponsorLogo
             image={stickerMule}
             alt="StickerMule"
-            tier="partner"
+            tier="partner sponsors-color"
             link="https://hackp.ac/mlh-stickermule-hackathons"
           />
           <SponsorLogo
             image={aws}
             alt="AWS"
-            tier="partner"
+            tier="partner sponsors-color"
             link="https://aws.amazon.com/"
           />
           <SponsorLogo
             id="acm"
             image={acm}
             alt="ACM"
-            tier="partner"
+            tier="partner sponsors-color"
             link="https://uga.campuslabs.com/engage/organization/acm"
           />
         </div>
@@ -153,7 +153,7 @@ function Sponsors(): ReactElement {
             through the generous gifts of University of Georgia donors.
           </i>
         </p>
-        <div className="sponsorship_packet_button ring-0">
+        <div className="sponsorship_packet_button ring-0 mt-2 mb-4">
           <a href="/sponsorship-packet-8" className="" target="_blank">
             <span className="no-underline">Sponsorship Packet</span>
           </a>

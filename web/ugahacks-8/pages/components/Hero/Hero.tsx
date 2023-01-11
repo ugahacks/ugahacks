@@ -9,9 +9,11 @@ export default function Hero() {
         id="Hero"
       >
         <div className="mx-auto flex flex-col items-center text-center">
-          <Image src={byteBanner} width={1600} height={500} />
+          <img src="/icons/HeroImages/images/byte_banner.png" 
+            width={1600} height={500} className="px-24"
+          />
           <h1 className="text-5xl text-white pb-16">
-            University of Georgia <span>&#183;</span> Feburary 3-5, 2023
+            University of Georgia <span>&#183;</span> February 3-5, 2023
           </h1>
           <div className="register_button ring-0">
             <a href="/pre-register-8" className="" target="_blank">
