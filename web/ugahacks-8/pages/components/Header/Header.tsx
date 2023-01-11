@@ -55,7 +55,7 @@ export default function Header() {
   const scrollPos = useScrollPosition();
   return (
     <>
-      <div className="sticky top-0 z-50 items-center" id="HEADER">
+      <div className="sticky top-0 z-50 items-center overflow-hidden" id="HEADER">
         <div
           className={
             scrollPos > 0
@@ -74,7 +74,7 @@ export default function Header() {
               />
             </Link>
 
-            <div className="pl-10 flex gap-5 md:text-base text-xs text-center font-extralight">
+            <div className="pl-10 flex gap-2 md:gap-5 md:text-base text-xs text-center font-extralight shrink">
               <NavLink href={"/#About"} name={"About"} />
               <NavLink href={"/#FAQ"} name={"FAQ"} />
               <NavLink href={"https://ugahacks.com/"} name={"Our Team"} />
@@ -88,7 +88,7 @@ export default function Header() {
                 Pre-Register
               </a>
             </div>
-            <div className="flex ml-auto pr-4">
+            <div className="flex ml-auto pr-4 [visibility:hidden] md:visible">
               <div className=" right-0 flex flex-row-reverse gap-4">
                 <NavIcon
                   href={"https://www.instagram.com/ugahacks/?hl=en"}

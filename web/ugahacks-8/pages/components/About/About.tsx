@@ -9,7 +9,7 @@ export default function About() {
       >{/*bg-goblin-500*/}
         <div className="text-center relative">
           <div className="relative z-30 pt-16 xl:pr-5 w-full xl:w-[48rem]">
-            <div className="xl:w-[700px] w-fit xl:text-left text-center bg-goblin-500 bg-opacity-80 ease-in-out duration-150 transition-all mx-24 py-3 z-30"> {/* xl:bg-inherit*/}
+            <div className="xl:w-[700px] w-fit xl:text-left text-center bg-goblin-500 bg-opacity-80 ease-in-out duration-150 transition-all md:mx-24 py-3 z-30"> {/* xl:bg-inherit*/}
               <h1 className="text-[3.25rem] text-white font-semibold xl:pr-[14rem] z-30">
                 Create your own adventure.
               </h1>
