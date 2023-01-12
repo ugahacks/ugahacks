@@ -55,7 +55,7 @@ export default function Header() {
   const scrollPos = useScrollPosition();
   return (
     <>
-      <div className="sticky top-0 z-50 items-center overflow-hidden" id="HEADER">
+      <div className="sticky top-0 z-50 items-center overflow-x-clip" id="HEADER">
         <div
           className={
             scrollPos > 0
