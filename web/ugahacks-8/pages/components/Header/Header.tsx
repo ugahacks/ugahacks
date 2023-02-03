@@ -64,7 +64,7 @@ export default function Header() {
           }
         >
           <div className="pl-[1.25rem] pt-[1rem] pb-[1rem] flex flex-row md:flex-col md:flex-wrap items-center">
-            <Link href="/#Hero">
+            <Link href="/#Hero" passHref>
               <Image
                 src={"/icons/HeaderImages/images/byte_mini.png"}
                 width={48}
