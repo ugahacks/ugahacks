@@ -12,6 +12,8 @@ const stickerMule: string =
 const blackRock: string =
   "/icons/SponsorsImages/images/sponsorlogos/blackrock.svg";
 const echoAR: string = "/icons/SponsorsImages/images/sponsorlogos/echoAR.png";
+const hpcc: string =
+  "/icons/SponsorsImages/images/sponsorlogos/HPCC_Logo_0.png";
 const entreProg: string = "/icons/SponsorsImages/images/sponsorlogos/ENTR.png";
 const equifax: string = "/icons/SponsorsImages/images/sponsorlogos/equifax.png";
 const statefarm: string =
@@ -26,6 +28,11 @@ const deloitte: string =
 const figma: string = "/icons/SponsorsImages/images/sponsorlogos/figma.svg";
 const aws: string = "/icons/SponsorsImages/images/sponsorlogos/aws.png";
 const acm: string = "/icons/SponsorsImages/images/sponsorlogos/acm.svg";
+
+const honeywell: string =
+  "/icons/SponsorsImages/images/sponsorlogos/Honeywell_logo.svg.png";
+const brook_source: string =
+  "/icons/SponsorsImages/images/sponsorlogos/brook_source_logo.png";
 
 const CustomButton = withStyles(
   {
@@ -54,21 +61,41 @@ function Sponsors(): ReactElement {
   return (
     <section className="section sponsors-section" id="sponsors">
       <div className="sponsors-container">
-        <h2>Past Sponsors</h2>
+        <h2>Sponsors</h2>
         <div className="mansion-container">
-          <SponsorLogo
-            image={ncr}
-            alt="NCR logo"
-            tier="mansion sponsors-color"
-            link="https://www.ncr.com/"
-          />
+          <div className="scale-125">
+            <SponsorLogo
+              image={blackRock}
+              alt="BlackRock"
+              tier="mansion sponsors-color"
+              link="https://www.blackrock.com/corporate/about-us"
+            />
+          </div>
         </div>
         <div className="logo-container">
           <SponsorLogo
-            image={blackRock}
-            alt="BlackRock"
-            tier="penthouse sponsors-color"
-            link="https://www.blackrock.com/corporate/about-us"
+            image={brook_source}
+            alt="Brooksource Logo"
+            tier="apartment sponsors-color"
+            link="https://support.brooksource.com/hc/en-us"
+          />
+          <SponsorLogo
+            image={echoAR}
+            alt="echo AR logo"
+            tier="apartment sponsors-color"
+            link="https://www.echo3d.com/"
+          />
+          <SponsorLogo
+            image={honeywell}
+            alt="Honeywell logo"
+            tier="apartment sponsors-color"
+            link="https://www.honeywell.com/us/en"
+          />
+          <SponsorLogo
+            image={hpcc}
+            alt="HPCC Systems"
+            tier="apartment sponsors-color"
+            link="https://hpccsystems.com/"
           />
           <SponsorLogo
             image={tsys}
@@ -82,69 +109,13 @@ function Sponsors(): ReactElement {
             tier="doghouse sponsors-color"
             link="https://www.statefarm.com/about-us"
           />
-          <SponsorLogo
-            image={capitalone}
-            alt="Capital One"
-            tier="doghouse sponsors-color"
-            link="https://campus.capitalone.com/"
-          />
+
           <SponsorLogo
             id="ugacombologo"
             image={uga}
             alt="UGA Department of Computer Science, Parents Leadership Council, Resident Hall Association, Student Government Association"
             tier="apartment sponsors-color"
             link="https://www.cs.uga.edu/"
-          />
-          <SponsorLogo
-            image={credera}
-            alt="Credera"
-            tier="loft sponsors-color"
-            link="https://www.credera.com/"
-          />
-          <SponsorLogo
-            image={deloitte}
-            alt="Deloitte"
-            tier="loft sponsors-color"
-            link="https://www2.deloitte.com/us/en.html"
-          />
-          <SponsorLogo
-            image={figma}
-            alt="Figma"
-            tier="loft sponsors-color"
-            link="https://www.figma.com/education/students/"
-          />
-        </div>
-        <div className="logo-container">
-          <SponsorLogo
-            image={digitalOcean}
-            alt="Digital Ocean logo"
-            tier="partner sponsors-color"
-            link="https://www.digitalocean.com/"
-          />
-          <SponsorLogo
-            image={echoAR}
-            alt="echoAR Logo"
-            tier="partner sponsors-color"
-            link="https://www.echoar.xyz/"
-          />
-          <SponsorLogo
-            image={stickerMule}
-            alt="StickerMule"
-            tier="partner sponsors-color"
-            link="https://hackp.ac/mlh-stickermule-hackathons"
-          />
-          <SponsorLogo
-            image={aws}
-            alt="AWS"
-            tier="partner sponsors-color"
-            link="https://aws.amazon.com/"
-          />
-          <SponsorLogo
-            id="acm"
-            image={acm}
-            alt="ACM"
-            tier="partner sponsors-color"
-            link="https://uga.campuslabs.com/engage/organization/acm"
           />
         </div>
         <p>
