@@ -13,7 +13,7 @@ const blackRock: string =
   "/icons/SponsorsImages/images/sponsorlogos/blackrock.svg";
 const echoAR: string = "/icons/SponsorsImages/images/sponsorlogos/echoAR.png";
 const hpcc: string =
-  "/icons/SponsorsImages/images/sponsorlogos/HPCC_Logo_0.png";
+  "/icons/SponsorsImages/images/sponsorlogos/hpcc-all-transparent.svg";
 const entreProg: string = "/icons/SponsorsImages/images/sponsorlogos/ENTR.png";
 const equifax: string = "/icons/SponsorsImages/images/sponsorlogos/equifax.png";
 const statefarm: string =
@@ -108,6 +108,12 @@ function Sponsors(): ReactElement {
             alt="StateFarm"
             tier="doghouse sponsors-color"
             link="https://www.statefarm.com/about-us"
+          />
+          <SponsorLogo
+            image={digitalOcean}
+            alt="Digital Ocean"
+            tier="doghouse sponsors-color"
+            link="https://www.digitalocean.com/"
           />
 
           <SponsorLogo
