@@ -5,7 +5,7 @@
   "repository": "",
   "license": "MIT",
   "workspaces": [
-    "web/*"
+    "web/**"
   ],
   "scripts": {
     "husky-init": "husky install"

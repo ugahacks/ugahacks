@@ -43,7 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:web/ugahacks-8"
       },
       {
-        "name": "ugahacks-9-b05604",
+        "name": "ugahacks-9",
         "reference": "workspace:web/ugahacks-9"
       },
       {
@@ -60,7 +60,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["ugahacks-6", ["workspace:web/ugahacks-6"]],
       ["ugahacks-7", ["workspace:web/ugahacks-7"]],
       ["ugahacks-8", ["workspace:web/ugahacks-8"]],
-      ["ugahacks-9-b05604", ["workspace:web/ugahacks-9"]],
+      ["ugahacks-9", ["workspace:web/ugahacks-9"]],
       ["ugahacks-org", ["workspace:web/ugahacks-org"]]
     ],
     "fallbackPool": [
@@ -5727,10 +5727,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["virtual:ffbb9dfb1351821a805c3eadc32d6e1396d959c8e723ce0dd6d33111c4a262528db829a8797f325021e05b369801ab767f23d16a2077b07ebdc66156032b4e1e#npm:13.4.4", {
-          "packageLocation": "./.yarn/__virtual__/next-virtual-bd2b912377/0/cache/next-npm-13.4.4-eea4a310b2-d84686f3ca.zip/node_modules/next/",
+        ["virtual:93c3fac9ca00d9cb4b4db31f3c17822e16c78bf60739a89f532e05c248c95ae608880d96df80854c07d1771a1f429828fe9c7750cfaec63df5c9c373166a7cc2#npm:13.4.4", {
+          "packageLocation": "./.yarn/__virtual__/next-virtual-ab122680a0/0/cache/next-npm-13.4.4-eea4a310b2-d84686f3ca.zip/node_modules/next/",
           "packageDependencies": [
-            ["next", "virtual:ffbb9dfb1351821a805c3eadc32d6e1396d959c8e723ce0dd6d33111c4a262528db829a8797f325021e05b369801ab767f23d16a2077b07ebdc66156032b4e1e#npm:13.4.4"],
+            ["next", "virtual:93c3fac9ca00d9cb4b4db31f3c17822e16c78bf60739a89f532e05c248c95ae608880d96df80854c07d1771a1f429828fe9c7750cfaec63df5c9c373166a7cc2#npm:13.4.4"],
             ["@next/env", "npm:13.4.4"],
             ["@next/swc-darwin-arm64", "npm:13.4.4"],
             ["@next/swc-darwin-x64", "npm:13.4.4"],
@@ -5753,9 +5753,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fibers", null],
             ["postcss", "npm:8.4.14"],
             ["react", "npm:18.2.0"],
-            ["react-dom", "virtual:ffbb9dfb1351821a805c3eadc32d6e1396d959c8e723ce0dd6d33111c4a262528db829a8797f325021e05b369801ab767f23d16a2077b07ebdc66156032b4e1e#npm:18.2.0"],
+            ["react-dom", "virtual:93c3fac9ca00d9cb4b4db31f3c17822e16c78bf60739a89f532e05c248c95ae608880d96df80854c07d1771a1f429828fe9c7750cfaec63df5c9c373166a7cc2#npm:18.2.0"],
             ["sass", null],
-            ["styled-jsx", "virtual:bd2b9123770ad1c18793b11801f030fe40f3b9f13b42a75001bbd5dd5be7c83139feac95389b1e7b31d1951ba9976d1913012260a18a3dcb3852f15ba11c9ab8#npm:5.1.1"],
+            ["styled-jsx", "virtual:ab122680a0a8b69fc78c522f9875fde98ed7834ebb3f3d8c09fc713a1b9c13e6ff0675c12dd1b991c3f3cde9e49c0a790d0952b379c8797f93073796be505da0#npm:5.1.1"],
             ["zod", "npm:3.21.4"]
           ],
           "packagePeers": [
@@ -7166,10 +7166,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["virtual:ffbb9dfb1351821a805c3eadc32d6e1396d959c8e723ce0dd6d33111c4a262528db829a8797f325021e05b369801ab767f23d16a2077b07ebdc66156032b4e1e#npm:18.2.0", {
-          "packageLocation": "./.yarn/__virtual__/react-dom-virtual-30c92a6832/0/cache/react-dom-npm-18.2.0-dd675bca1c-7d323310be.zip/node_modules/react-dom/",
+        ["virtual:93c3fac9ca00d9cb4b4db31f3c17822e16c78bf60739a89f532e05c248c95ae608880d96df80854c07d1771a1f429828fe9c7750cfaec63df5c9c373166a7cc2#npm:18.2.0", {
+          "packageLocation": "./.yarn/__virtual__/react-dom-virtual-22ce0f866d/0/cache/react-dom-npm-18.2.0-dd675bca1c-7d323310be.zip/node_modules/react-dom/",
           "packageDependencies": [
-            ["react-dom", "virtual:ffbb9dfb1351821a805c3eadc32d6e1396d959c8e723ce0dd6d33111c4a262528db829a8797f325021e05b369801ab767f23d16a2077b07ebdc66156032b4e1e#npm:18.2.0"],
+            ["react-dom", "virtual:93c3fac9ca00d9cb4b4db31f3c17822e16c78bf60739a89f532e05c248c95ae608880d96df80854c07d1771a1f429828fe9c7750cfaec63df5c9c373166a7cc2#npm:18.2.0"],
             ["@types/react", null],
             ["loose-envify", "npm:1.4.0"],
             ["react", "npm:18.2.0"],
@@ -8237,10 +8237,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["virtual:bd2b9123770ad1c18793b11801f030fe40f3b9f13b42a75001bbd5dd5be7c83139feac95389b1e7b31d1951ba9976d1913012260a18a3dcb3852f15ba11c9ab8#npm:5.1.1", {
-          "packageLocation": "./.yarn/__virtual__/styled-jsx-virtual-73a5f48f29/0/cache/styled-jsx-npm-5.1.1-2557a209ba-523a33b386.zip/node_modules/styled-jsx/",
+        ["virtual:ab122680a0a8b69fc78c522f9875fde98ed7834ebb3f3d8c09fc713a1b9c13e6ff0675c12dd1b991c3f3cde9e49c0a790d0952b379c8797f93073796be505da0#npm:5.1.1", {
+          "packageLocation": "./.yarn/__virtual__/styled-jsx-virtual-d17667ebf2/0/cache/styled-jsx-npm-5.1.1-2557a209ba-523a33b386.zip/node_modules/styled-jsx/",
           "packageDependencies": [
-            ["styled-jsx", "virtual:bd2b9123770ad1c18793b11801f030fe40f3b9f13b42a75001bbd5dd5be7c83139feac95389b1e7b31d1951ba9976d1913012260a18a3dcb3852f15ba11c9ab8#npm:5.1.1"],
+            ["styled-jsx", "virtual:ab122680a0a8b69fc78c522f9875fde98ed7834ebb3f3d8c09fc713a1b9c13e6ff0675c12dd1b991c3f3cde9e49c0a790d0952b379c8797f93073796be505da0#npm:5.1.1"],
             ["@babel/core", null],
             ["@types/react", null],
             ["babel-plugin-macros", null],
@@ -8911,14 +8911,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }]
       ]],
-      ["ugahacks-9-b05604", [
+      ["ugahacks-9", [
         ["workspace:web/ugahacks-9", {
           "packageLocation": "./web/ugahacks-9/",
           "packageDependencies": [
-            ["ugahacks-9-b05604", "workspace:web/ugahacks-9"],
-            ["next", "virtual:ffbb9dfb1351821a805c3eadc32d6e1396d959c8e723ce0dd6d33111c4a262528db829a8797f325021e05b369801ab767f23d16a2077b07ebdc66156032b4e1e#npm:13.4.4"],
+            ["ugahacks-9", "workspace:web/ugahacks-9"],
+            ["next", "virtual:93c3fac9ca00d9cb4b4db31f3c17822e16c78bf60739a89f532e05c248c95ae608880d96df80854c07d1771a1f429828fe9c7750cfaec63df5c9c373166a7cc2#npm:13.4.4"],
             ["react", "npm:18.2.0"],
-            ["react-dom", "virtual:ffbb9dfb1351821a805c3eadc32d6e1396d959c8e723ce0dd6d33111c4a262528db829a8797f325021e05b369801ab767f23d16a2077b07ebdc66156032b4e1e#npm:18.2.0"]
+            ["react-dom", "virtual:93c3fac9ca00d9cb4b4db31f3c17822e16c78bf60739a89f532e05c248c95ae608880d96df80854c07d1771a1f429828fe9c7750cfaec63df5c9c373166a7cc2#npm:18.2.0"]
           ],
           "linkType": "SOFT",
         }]
