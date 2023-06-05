@@ -55,7 +55,10 @@ export default function Header() {
   const scrollPos = useScrollPosition();
   return (
     <>
-      <div className="sticky top-0 z-50 items-center overflow-x-clip" id="HEADER">
+      <div
+        className="sticky top-0 z-50 items-center overflow-x-clip"
+        id="HEADER"
+      >
         <div
           className={
             scrollPos > 0
@@ -79,14 +82,6 @@ export default function Header() {
               <NavLink href={"/#FAQ"} name={"FAQ"} />
               <NavLink href={"https://ugahacks.com/"} name={"Our Team"} />
               <NavLink href={"/#sponsors"} name={"Sponsors"} />
-              <a
-                href={"/pre-register-8"}
-                target="_blank"
-                rel="noreferrer"
-                style={{ color: "white" }}
-              >
-                Pre-Register
-              </a>
             </div>
             <div className="flex ml-auto pr-4 [visibility:hidden] md:visible">
               <div className=" right-0 flex flex-row-reverse gap-4">
