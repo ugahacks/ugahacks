@@ -1066,6 +1066,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:16.4.10"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:20.2.5", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-20.2.5-0014d2d9ce-38ce7c7e9d.zip/node_modules/@types/node/",
+          "packageDependencies": [
+            ["@types/node", "npm:20.2.5"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["@types/prop-types", [
@@ -1082,6 +1089,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-react-npm-17.0.15-d716ab592f-4ee41e0c8d.zip/node_modules/@types/react/",
           "packageDependencies": [
             ["@types/react", "npm:17.0.15"],
+            ["@types/prop-types", "npm:15.7.4"],
+            ["@types/scheduler", "npm:0.16.2"],
+            ["csstype", "npm:3.0.8"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:18.2.7", {
+          "packageLocation": "./.yarn/cache/@types-react-npm-18.2.7-1d4a6858d6-caa5da4cf9.zip/node_modules/@types/react/",
+          "packageDependencies": [
+            ["@types/react", "npm:18.2.7"],
             ["@types/prop-types", "npm:15.7.4"],
             ["@types/scheduler", "npm:0.16.2"],
             ["csstype", "npm:3.0.8"]
@@ -5745,7 +5762,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@swc/helpers", "npm:0.5.1"],
             ["@types/fibers", null],
             ["@types/opentelemetry__api", null],
-            ["@types/react", null],
+            ["@types/react", "npm:18.2.7"],
             ["@types/react-dom", null],
             ["@types/sass", null],
             ["busboy", "npm:1.6.0"],
@@ -7170,7 +7187,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/react-dom-virtual-22ce0f866d/0/cache/react-dom-npm-18.2.0-dd675bca1c-7d323310be.zip/node_modules/react-dom/",
           "packageDependencies": [
             ["react-dom", "virtual:93c3fac9ca00d9cb4b4db31f3c17822e16c78bf60739a89f532e05c248c95ae608880d96df80854c07d1771a1f429828fe9c7750cfaec63df5c9c373166a7cc2#npm:18.2.0"],
-            ["@types/react", null],
+            ["@types/react", "npm:18.2.7"],
             ["loose-envify", "npm:1.4.0"],
             ["react", "npm:18.2.0"],
             ["scheduler", "npm:0.23.0"]
@@ -8242,7 +8259,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["styled-jsx", "virtual:ab122680a0a8b69fc78c522f9875fde98ed7834ebb3f3d8c09fc713a1b9c13e6ff0675c12dd1b991c3f3cde9e49c0a790d0952b379c8797f93073796be505da0#npm:5.1.1"],
             ["@babel/core", null],
-            ["@types/react", null],
+            ["@types/react", "npm:18.2.7"],
             ["babel-plugin-macros", null],
             ["client-only", "npm:0.0.1"],
             ["react", "npm:18.2.0"]
@@ -8808,6 +8825,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=32657b"]
           ],
           "linkType": "HARD",
+        }],
+        ["patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=32657b", {
+          "packageLocation": "./.yarn/cache/typescript-patch-af47dd8982-eef93a07f8.zip/node_modules/typescript/",
+          "packageDependencies": [
+            ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=32657b"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["ua-parser-js", [
@@ -8916,9 +8940,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./web/ugahacks-9/",
           "packageDependencies": [
             ["ugahacks-9", "workspace:web/ugahacks-9"],
+            ["@types/node", "npm:20.2.5"],
+            ["@types/react", "npm:18.2.7"],
             ["next", "virtual:93c3fac9ca00d9cb4b4db31f3c17822e16c78bf60739a89f532e05c248c95ae608880d96df80854c07d1771a1f429828fe9c7750cfaec63df5c9c373166a7cc2#npm:13.4.4"],
             ["react", "npm:18.2.0"],
-            ["react-dom", "virtual:93c3fac9ca00d9cb4b4db31f3c17822e16c78bf60739a89f532e05c248c95ae608880d96df80854c07d1771a1f429828fe9c7750cfaec63df5c9c373166a7cc2#npm:18.2.0"]
+            ["react-dom", "virtual:93c3fac9ca00d9cb4b4db31f3c17822e16c78bf60739a89f532e05c248c95ae608880d96df80854c07d1771a1f429828fe9c7750cfaec63df5c9c373166a7cc2#npm:18.2.0"],
+            ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=32657b"]
           ],
           "linkType": "SOFT",
         }]
