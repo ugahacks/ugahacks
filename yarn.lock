@@ -5111,7 +5111,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:13.4.10":
+"next@npm:*, next@npm:13.4.10":
   version: 13.4.10
   resolution: "next@npm:13.4.10"
   dependencies:

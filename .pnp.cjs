@@ -3503,6 +3503,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-jsx-a11y", "virtual:a73c5d8a2bcd918703f047150f6174b3403d64e43dbd052ec6e4aec49b625d610e1549fce1d657487f62eac951bbd4b76965f451d7a02023e11735963ac056ff#npm:6.7.1"],\
             ["eslint-plugin-react", "virtual:a73c5d8a2bcd918703f047150f6174b3403d64e43dbd052ec6e4aec49b625d610e1549fce1d657487f62eac951bbd4b76965f451d7a02023e11735963ac056ff#npm:7.32.2"],\
             ["eslint-plugin-react-hooks", "virtual:a73c5d8a2bcd918703f047150f6174b3403d64e43dbd052ec6e4aec49b625d610e1549fce1d657487f62eac951bbd4b76965f451d7a02023e11735963ac056ff#npm:5.0.0-canary-7118f5dd7-20230705"],\
+            ["next", "virtual:a73c5d8a2bcd918703f047150f6174b3403d64e43dbd052ec6e4aec49b625d610e1549fce1d657487f62eac951bbd4b76965f451d7a02023e11735963ac056ff#npm:13.4.10"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
           ],\
           "packagePeers": [\
@@ -6534,6 +6535,52 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "sass"\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["virtual:a73c5d8a2bcd918703f047150f6174b3403d64e43dbd052ec6e4aec49b625d610e1549fce1d657487f62eac951bbd4b76965f451d7a02023e11735963ac056ff#npm:13.4.10", {\
+          "packageLocation": "./.yarn/__virtual__/next-virtual-c2e020840a/0/cache/next-npm-13.4.10-c27de5c63a-823ec02325.zip/node_modules/next/",\
+          "packageDependencies": [\
+            ["next", "virtual:a73c5d8a2bcd918703f047150f6174b3403d64e43dbd052ec6e4aec49b625d610e1549fce1d657487f62eac951bbd4b76965f451d7a02023e11735963ac056ff#npm:13.4.10"],\
+            ["@next/env", "npm:13.4.10"],\
+            ["@next/swc-darwin-arm64", "npm:13.4.10"],\
+            ["@next/swc-darwin-x64", "npm:13.4.10"],\
+            ["@next/swc-linux-arm64-gnu", "npm:13.4.10"],\
+            ["@next/swc-linux-arm64-musl", "npm:13.4.10"],\
+            ["@next/swc-linux-x64-gnu", "npm:13.4.10"],\
+            ["@next/swc-linux-x64-musl", "npm:13.4.10"],\
+            ["@next/swc-win32-arm64-msvc", "npm:13.4.10"],\
+            ["@next/swc-win32-ia32-msvc", "npm:13.4.10"],\
+            ["@next/swc-win32-x64-msvc", "npm:13.4.10"],\
+            ["@opentelemetry/api", null],\
+            ["@swc/helpers", "npm:0.5.1"],\
+            ["@types/fibers", null],\
+            ["@types/opentelemetry__api", null],\
+            ["@types/react", null],\
+            ["@types/react-dom", null],\
+            ["@types/sass", null],\
+            ["busboy", "npm:1.6.0"],\
+            ["caniuse-lite", "npm:1.0.30001516"],\
+            ["fibers", null],\
+            ["postcss", "npm:8.4.14"],\
+            ["react", null],\
+            ["react-dom", null],\
+            ["sass", null],\
+            ["styled-jsx", "virtual:c2e020840accbafa978e76516fa1bfc6bcc048dae6edc74cc7ad13c78d0c9ce5ec64785e490f4536da5029f7d40e220785f0a0e100fb293d08400dc2d3bc498d#npm:5.1.1"],\
+            ["watchpack", "npm:2.4.0"],\
+            ["zod", "npm:3.21.4"]\
+          ],\
+          "packagePeers": [\
+            "@opentelemetry/api",\
+            "@types/fibers",\
+            "@types/opentelemetry__api",\
+            "@types/react-dom",\
+            "@types/react",\
+            "@types/sass",\
+            "fibers",\
+            "react-dom",\
+            "react",\
+            "sass"\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["next-auth", [\
@@ -8884,6 +8931,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-plugin-macros", null],\
             ["client-only", "npm:0.0.1"],\
             ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@babel/core",\
+            "@types/babel-plugin-macros",\
+            "@types/babel__core",\
+            "@types/react",\
+            "babel-plugin-macros",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:c2e020840accbafa978e76516fa1bfc6bcc048dae6edc74cc7ad13c78d0c9ce5ec64785e490f4536da5029f7d40e220785f0a0e100fb293d08400dc2d3bc498d#npm:5.1.1", {\
+          "packageLocation": "./.yarn/__virtual__/styled-jsx-virtual-6b8eb00e9e/0/cache/styled-jsx-npm-5.1.1-2557a209ba-523a33b386.zip/node_modules/styled-jsx/",\
+          "packageDependencies": [\
+            ["styled-jsx", "virtual:c2e020840accbafa978e76516fa1bfc6bcc048dae6edc74cc7ad13c78d0c9ce5ec64785e490f4536da5029f7d40e220785f0a0e100fb293d08400dc2d3bc498d#npm:5.1.1"],\
+            ["@babel/core", null],\
+            ["@types/babel-plugin-macros", null],\
+            ["@types/babel__core", null],\
+            ["@types/react", null],\
+            ["babel-plugin-macros", null],\
+            ["client-only", "npm:0.0.1"],\
+            ["react", null]\
           ],\
           "packagePeers": [\
             "@babel/core",\
