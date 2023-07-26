@@ -10778,6 +10778,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./web/ugahacks-9/",\
           "packageDependencies": [\
             ["ugahacks-9", "workspace:web/ugahacks-9"],\
+            ["@next/eslint-plugin-next", "npm:13.4.12"],\
             ["@types/node", "npm:20.4.5"],\
             ["@types/react", "npm:18.2.16"],\
             ["@types/react-dom", "npm:18.2.7"],\
