@@ -20,8 +20,20 @@ jobs:
   eslint:
     runs-on: ubuntu-latest
     steps:
+      - name: Update Yarn
+        run: yarn set version berry
+
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
+      - name: Cache
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+          cache: "yarn"
+
+      - name: Install project dependencies
+        run: yarn install
 
       - name: Lint
         run: |
