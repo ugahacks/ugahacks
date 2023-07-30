@@ -66,7 +66,7 @@ export default function Home() {
           <h2>
             UGAHacks 8<span>-&gt;</span>
           </h2>
-          <p>Check out our previous year's hackathon!</p>
+          <p>Check out our previous year&apos;s hackathon!</p>
         </a>
 
         <a
