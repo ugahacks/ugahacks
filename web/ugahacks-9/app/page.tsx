@@ -76,7 +76,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2>
-            Makeathon 2022 <span>-&gt;</span>
+            Makeathon 2022<span>-&gt;</span>
           </h2>
           <p>Check out our first makeathon last year!</p>
         </a>
