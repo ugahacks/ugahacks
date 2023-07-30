@@ -6,7 +6,7 @@ USER node
 WORKDIR /home/node
 
 # yarn 2 codename
-RUN yarn set version stable
+RUN yarn set version berry
 
 COPY --chown=node:node package.json /home/node
 

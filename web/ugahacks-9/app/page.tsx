@@ -1,24 +1,27 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Image from 'next/image'
+import styles from './page.module.css'
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <div></div>
+        <p>
+          Get started by editing&nbsp;
+          <code className={styles.code}>app/page.tsx</code>
+        </p>
         <div>
           <a
-            href="https://ugahacks.com/"
+            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
-            By UGAHacks Team{" "}
+            By{' '}
             <Image
-              src="/hacks9Byte.svg"
-              alt="Byte Logo"
+              src="/vercel.svg"
+              alt="Vercel Logo"
               className={styles.vercelLogo}
               width={100}
-              height={48}
+              height={24}
               priority
             />
           </a>
@@ -28,71 +31,65 @@ export default function Home() {
       <div className={styles.center}>
         <Image
           className={styles.logo}
-          src="/hacks9FlyingByte.svg"
-          alt="Byte Logo"
+          src="/next.svg"
+          alt="Next.js Logo"
           width={180}
-          height={270}
+          height={37}
           priority
         />
-      </div>
-      <div>
-        <p>
-          <code className={styles.title}>UGAHacks 9</code>
-        </p>
-        <p>
-          <code className={styles.subtitle}>Coming soon in 2024! 👀</code>
-        </p>
       </div>
 
       <div className={styles.grid}>
         <a
-          href="https://ugahacks.com/"
+          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
-            Our Team <span>-&gt;</span>
+            Docs <span>-&gt;</span>
           </h2>
-          <p>SHAWN IS AWESOME 😘🥰</p>
+          <p>Find in-depth information about Next.js features and API.</p>
         </a>
 
         <a
-          href="https://8.ugahacks.com/"
+          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
-            UGAHacks 8<span>-&gt;</span>
+            Learn <span>-&gt;</span>
           </h2>
-          <p>Check out our previous year&apos;s hackathon!</p>
+          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
         </a>
 
         <a
-          href="https://make8.ugahacks.com/"
+          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
-            Makeathon 2022 <span>-&gt;</span>
+            Templates <span>-&gt;</span>
           </h2>
-          <p>Check out our first makeathon last year!</p>
+          <p>Explore the Next.js 13 playground.</p>
         </a>
 
         <a
-          href="https://mybyte.ugahacks.com/"
+          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
-            Register! <span>-&gt;</span>
+            Deploy <span>-&gt;</span>
           </h2>
-          <p>Registration will open soon!</p>
+          <p>
+            Instantly deploy your Next.js site to a shareable URL with Vercel.
+          </p>
         </a>
       </div>
     </main>
-  );
+  )
 }
