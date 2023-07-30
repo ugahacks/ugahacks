@@ -20,8 +20,20 @@ jobs:
   eslint:
     runs-on: ubuntu-latest
     steps:
+      - name: Update Yarn
+        run: yarn set version latest
+
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
+      - name: Cache
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          cache: "yarn"
+
+      - name: Install project dependencies
+        run: yarn install
 
       - name: Lint
         run: |
@@ -71,6 +83,29 @@ jobs:
         run: |
           echo "Changed Files (~/files.csv):"
           cat $HOME/files.csv
+
+      # UGAHacks 9
+      - name: Build and Push ugahacks-9 Container
+        run: |-
+          echo "ugahacks-9 changed, building ..."
+          docker build -t gcr.io/${{ env.PROJECT_ID }}/ugahacks-9-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/ugahacks-9
+          docker push gcr.io/${{ env.PROJECT_ID }}/ugahacks-9-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-9')
+
+      - name: Deploy ugahacks-9 to Cloud Run
+        id: deploy_ugahacks_9
+        uses: google-github-actions/deploy-cloudrun@v0.4.0
+        with:
+          service: ugahacks-9-${{ env.DEPLOY_ENV }}
+          image: gcr.io/${{ env.PROJECT_ID }}/ugahacks-9-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+          region: ${{ env.REGION }}
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-9')
+
+      - name: ugahacks-9 Post Deployment
+        run: |-
+          echo "Active URL:"
+          echo ${{ steps.deploy_ugahacks_8.outputs.url }}
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-9')
 
       # UGAHacks 8
       - name: Build and Push ugahacks-8 Container
