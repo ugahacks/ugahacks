@@ -7,23 +7,6 @@
   min-height: 100vh;
 }
 
-.title {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 0.5em;
-}
-
-.subtitle {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-  margin-bottom: 0.25em;
-}
-
 .description {
   display: inherit;
   justify-content: inherit;
@@ -114,7 +97,7 @@
 
 .center::before,
 .center::after {
-  content: "";
+  content: '';
   left: 50%;
   position: absolute;
   filter: blur(45px);
