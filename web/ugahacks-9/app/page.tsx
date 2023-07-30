@@ -88,7 +88,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2>
-            Register! <span>-&gt;</span>
+            Register <span>-&gt;</span>
           </h2>
           <p>Registration will open soon!</p>
         </a>
