@@ -38,7 +38,7 @@ jobs:
       - name: Lint
         run: |
           echo "yarn version: $(yarn --version)"
-          yarn workspace mybyte run lint
+          yarn workspaces foreach run lint
 
   pytest:
     needs: flake8
