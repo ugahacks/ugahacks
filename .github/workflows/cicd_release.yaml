@@ -104,7 +104,7 @@ jobs:
       - name: ugahacks-9 Post Deployment
         run: |-
           echo "Active URL:"
-          echo ${{ steps.deploy_ugahacks_8.outputs.url }}
+          echo ${{ steps.deploy_ugahacks_9.outputs.url }}
         if: contains(steps.file_changes.outputs.files , 'ugahacks-9')
 
       # UGAHacks 8
