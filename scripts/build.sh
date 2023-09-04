@@ -5,4 +5,4 @@ NODE_OPTIONS=--openssl-legacy-provider
 yarn next build
 
 # Display a message to confirm that the variable is set
-echo "NODE_OPTIONS is set to: $NODE_OPTIONS"
+echo -e "\nNODE_OPTIONS was set to: $NODE_OPTIONS"
