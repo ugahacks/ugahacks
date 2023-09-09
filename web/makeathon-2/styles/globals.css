@@ -105,3 +105,7 @@ a {
     color-scheme: dark;
   }
 } */
+
+body {
+  margin: 0;
+}
