@@ -1,0 +1,15 @@
+.body {
+  border: 1px solid red;
+  background-image: linear-gradient(
+    180deg,
+    hsl(227deg 83% 16%) 0%,
+    hsl(235deg 67% 17%) 3%,
+    hsl(244deg 62% 17%) 8%,
+    hsl(251deg 66% 16%) 14%,
+    hsl(258deg 71% 15%) 24%,
+    hsl(265deg 78% 14%) 40%,
+    hsl(271deg 87% 12%) 73%,
+    hsl(277deg 96% 11%) 100%
+  );
+  height: 100vh;
+}
