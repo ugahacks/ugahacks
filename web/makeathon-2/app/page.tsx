@@ -1,0 +1,19 @@
+import Splash from "../components/Spalsh";
+import About from "../components/About";
+import Schedule from "../components/Schedule";
+import FAQ from "../components/FAQ";
+import Sponsors from "../components/Sponsors";
+import Footer from "../components/Footer";
+
+export default function Home() {
+  return (
+    <>
+      <Splash />
+      <About />
+      <Schedule />
+      <FAQ />
+      <Sponsors />
+      <Footer />
+    </>
+  );
+}
