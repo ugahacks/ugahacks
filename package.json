@@ -17,6 +17,7 @@
   "depedencies": {},
   "packageManager": "yarn@3.6.3",
   "dependencies": {
+    "mini-css-extract-plugin": "1.0.0",
     "tailwindcss-animate": "^1.0.5"
   }
 }
