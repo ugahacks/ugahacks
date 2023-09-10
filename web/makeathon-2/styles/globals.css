@@ -110,6 +110,7 @@ body {
   margin: 0;
   color: white;
   overscroll-behavior: none;
+  overflow-x: hidden;
 }
 
 section {

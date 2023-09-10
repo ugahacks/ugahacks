@@ -26,9 +26,9 @@ function About() {
             y2="159.127"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#1196D9" />
-            <stop offset="0.331593" stop-color="#54C6FF" />
-            <stop offset="1" stop-color="#42EDDE" />
+            <stop stopColor="#1196D9" />
+            <stop offset="0.331593" stopColor="#54C6FF" />
+            <stop offset="1" stopColor="#42EDDE" />
           </linearGradient>
         </svg>
       </div>

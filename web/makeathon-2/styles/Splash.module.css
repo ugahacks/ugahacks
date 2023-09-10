@@ -17,13 +17,37 @@
   height: 90vh;
 }
 
-.ocean_surface {
+/* .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 50%; /* Place the element vertically in the middle of the viewport */
-  left: 0; /* Align the element to the left side of the viewport */
-  width: 100%; /* Make the element span the entire width of the viewport */
-  transform: translateY(
-    20vh
-  ); /* Center the element precisely between sections */
-  z-index: 999; /* Adjust the z-index as needed to ensure it appears above other content */
+  top: 20%;
 }
+
+.row {
+  text-align: center;
+}
+
+.logo {
+  position: relative;
+  width: 50%;
+  transform: translateX(50px);
+}
+
+.button {
+  background-color: #0070f3;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+} */
+
+/* .island {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateX(10vw) translateY(5vh);
+  z-index: 999;
+} */

@@ -1,5 +1,5 @@
 .body {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   background-image: linear-gradient(
     180deg,
     hsl(227deg 83% 16%) 0%,
@@ -12,4 +12,25 @@
     hsl(277deg 96% 11%) 100%
   );
   height: 100vh;
+}
+
+.custom_shape_divider_bottom_1694379347 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom_shape_divider_bottom_1694379347 svg {
+  position: relative;
+  display: block;
+  width: calc(274% + 1.3px);
+  height: 127px;
+}
+
+.custom_shape_divider_bottom_1694379347 .shape_fill {
+  fill: #111111;
 }
