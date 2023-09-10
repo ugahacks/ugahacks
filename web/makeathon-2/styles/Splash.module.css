@@ -1,5 +1,5 @@
 .body {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   background-image: linear-gradient(
     180deg,
     hsl(200deg 85% 46%) 0%,
@@ -14,5 +14,16 @@
     hsl(187deg 96% 83%) 90%,
     hsl(182deg 100% 88%) 100%
   );
-  height: 100vh;
+  height: 90vh;
+}
+
+.ocean_surface {
+  position: absolute;
+  top: 50%; /* Place the element vertically in the middle of the viewport */
+  left: 0; /* Align the element to the left side of the viewport */
+  width: 100%; /* Make the element span the entire width of the viewport */
+  transform: translateY(
+    20vh
+  ); /* Center the element precisely between sections */
+  z-index: 999; /* Adjust the z-index as needed to ensure it appears above other content */
 }

@@ -111,3 +111,7 @@ body {
   color: white;
   overscroll-behavior: none;
 }
+
+section {
+  position: relative;
+}
