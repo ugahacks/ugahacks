@@ -12,5 +12,44 @@
     hsl(344deg 0% 1%) 89%,
     hsl(0deg 0% 0%) 100%
   );
-  height: 25vh;
+  height: 20vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 30px;
+}
+
+.icon_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon > a:hover {
+  opacity: 0.8;
+}
+
+.subtitle > p {
+  margin: 3px;
+}
+
+.mail > a {
+  text-decoration: none;
+  color: rgb(236, 236, 142);
+}
+
+.mail > a:hover {
+  opacity: 0.8;
 }
