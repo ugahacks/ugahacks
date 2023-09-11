@@ -33,7 +33,10 @@ function Footer() {
           </div>
         </div>
         <div className={styles.subtitle}>
-          <p>designed and coded by ugahacks 9 team</p>
+          <p>
+            designed and coded by{" "}
+            <span className={styles.uh9_rainbow}>ugahacks 9 team</span>
+          </p>
         </div>
         <div className={styles.subtitle}>
           <p>

@@ -53,3 +53,31 @@
 .mail > a:hover {
   opacity: 0.8;
 }
+
+.uh9_rainbow {
+  animation: rainbow 8s infinite alternate;
+}
+
+@keyframes rainbow {
+  0% {
+    color: IndianRed;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: lime;
+  }
+  66% {
+    color: teal;
+  }
+  80% {
+    color: CornflowerBlue;
+  }
+  100% {
+    color: violet;
+  }
+}
