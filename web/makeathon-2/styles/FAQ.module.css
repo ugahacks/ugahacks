@@ -15,3 +15,24 @@
   );
   height: 100vh;
 }
+
+.custom_shape_divider_top_1694481505 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom_shape_divider_top_1694481505 svg {
+  position: relative;
+  display: block;
+  width: calc(109% + 1.3px);
+  height: 90px;
+  transform: rotateY(180deg);
+}
+
+.custom_shape_divider_top_1694481505 .shape_fill {
+  fill: #0a184d;
+}
