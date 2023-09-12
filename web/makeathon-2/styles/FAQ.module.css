@@ -1,15 +1,38 @@
 .body {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   background-image: linear-gradient(
     180deg,
-    hsl(227deg 87% 24%) 0%,
-    hsl(227deg 87% 23%) 14%,
-    hsl(227deg 87% 21%) 29%,
-    hsl(227deg 87% 20%) 43%,
-    hsl(227deg 87% 19%) 57%,
-    hsl(227deg 86% 18%) 71%,
-    hsl(227deg 85% 17%) 86%,
-    hsl(227deg 83% 16%) 100%
+    hsl(227deg 51% 13%) 0%,
+    hsl(227deg 50% 12%) 11%,
+    hsl(227deg 49% 12%) 22%,
+    hsl(227deg 47% 11%) 33%,
+    hsl(227deg 45% 11%) 44%,
+    hsl(227deg 43% 10%) 56%,
+    hsl(228deg 41% 10%) 67%,
+    hsl(228deg 39% 9%) 78%,
+    hsl(228deg 38% 9%) 89%,
+    hsl(228deg 37% 8%) 100%
   );
   height: 100vh;
+}
+
+.custom_shape_divider_top_1694481505 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom_shape_divider_top_1694481505 svg {
+  position: relative;
+  display: block;
+  width: calc(109% + 1.3px);
+  height: 90px;
+  transform: rotateY(180deg);
+}
+
+.custom_shape_divider_top_1694481505 .shape_fill {
+  fill: #0a184d;
 }
