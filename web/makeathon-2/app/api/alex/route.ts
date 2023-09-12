@@ -10,7 +10,7 @@ export async function GET(request: Request) {
         name: "Alex",
         role: "Keyboard Jockey",
         age: 21,
-        funFact: "i'm stuck in a borked commit",
+        funFact: "i pay for gpt4",
     };
 
     const jsonResponse = new Response(JSON.stringify(user));
