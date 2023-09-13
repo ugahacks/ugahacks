@@ -32,7 +32,7 @@ function About() {
           </linearGradient>
         </svg>
       </div>
-
+      About
       <div className={styles.custom_shape_divider_bottom_1694366369}>
         <svg
           data-name="Layer 1"
