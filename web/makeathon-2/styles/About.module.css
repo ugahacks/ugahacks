@@ -23,6 +23,7 @@
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
+  z-index: -1;
 }
 
 .custom_shape_divider_top_1694365385 svg {
