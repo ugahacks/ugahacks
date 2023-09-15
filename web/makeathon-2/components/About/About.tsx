@@ -47,10 +47,10 @@ function About() {
           we are focusing on encouraging sustainability initiatives from our
           hackers with a product-focused event. With various workshops,
           challenges, and talks we hope to inspire hackers to create projects
-          that are designed to solve the world's most pressing sustainability
-          needs in just 24 hours!
+          that are designed to solve the world&apos;s most pressing
+          sustainability needs in just 24 hours!
         </p>
-        <h2 className={styles.tool_header}>The tools you'll need:</h2>
+        <h2 className={styles.tool_header}>The tools you&apos;ll need:</h2>
         <div className={styles.tool_rack}>
           <figure className={styles.tool}>
             <img src="icons/aboutIcons/laptop.svg" alt="Laptop" height="150" />
