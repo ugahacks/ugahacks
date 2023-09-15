@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@700&display=swap');
+
 .body {
   /* border: 1px solid red; */
   background-image: linear-gradient(
@@ -13,17 +15,18 @@
   );
 
   height: 120vh;
+  overflow-x: hidden;
 }
 
 .custom_shape_divider_top_1694365385 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% + 5px);
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
-  z-index: -1;
+  z-index: 1;
 }
 
 .custom_shape_divider_top_1694365385 svg {
@@ -51,4 +54,116 @@
 
 .custom_shape_divider_bottom_1694366369 .shape_fill {
   fill: #1b588d;
+}
+
+.sb1, .sb2, .sb3, .sb4, .sb5, .sb6, .sb7, .sb8 {
+  position: absolute;
+  background: linear-gradient(rgba(191, 253, 255, 1), rgba(191, 253, 255, 0));
+  height: 350px;
+  top: 60px;
+  z-index: 0;
+  transform: rotate(21.2deg);
+}
+
+.sb1 {
+  width: 60px;
+  left: 1700px;
+  top: 60px;
+}
+
+.sb2 {
+  height: 300px;
+  width: 100px;
+  left: 1450px;
+  top: 20px;
+}
+
+.sb3 {
+  width: 170px;
+  left: 1300px;
+  top: 40px;
+}
+
+.sb4 {
+  width: 60px;
+  left: 900px;
+  top: 40px;
+}
+
+.sb5 {
+  width: 100px;
+  left: 600px;
+  top: 40px;
+}
+
+.sb6 {
+  width: 170px;
+  left: 470px;
+  top: 20px;
+}
+
+.sb7 {
+  width: 60px;
+  left: 300px;
+  top: 40px;
+}
+
+.sb8 {
+  width: 80px;
+  left: 70px;
+  top: 60px;
+}
+
+.about_text {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px 0;
+  margin: 0 0 0 10vw;
+  width: 50%;
+  font-size: 1.3em;
+}
+
+.about_header {
+  font-family: "Quicksand", "Alata", sans-serif;
+  font-size: 1.75em;
+  margin: 0 0 2% 0;
+}
+
+.about_text p {
+  margin: 0 0 6% 0;
+}
+
+.tool_header {
+  margin: 0 0 2% 0;
+}
+
+.tool_rack {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+}
+
+.tool {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0 0 0 0;
+  text-align: center;
+}
+
+.tool img {
+  display: block;
+  max-height: 8vw;
+}
+
+@media only screen and (max-width: 1230px) {
+  .about_text {
+    width: 80%;
+  }
+
+  .tool img {
+    max-height: 12vw;
+  }
 }
