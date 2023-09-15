@@ -66,7 +66,7 @@ function About() {
               alt="Charger"
               height="150"
             />
-            <figcaption>Charger</figcaption>
+            <figcaption>Chargers</figcaption>
           </figure>
           <figure className={styles.tool}>
             <img src="icons/aboutIcons/slack.svg" alt="Slack" height="150" />

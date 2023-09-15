@@ -15,6 +15,7 @@
   );
 
   height: 120vh;
+  overflow-x: hidden;
 }
 
 .custom_shape_divider_top_1694365385 {
