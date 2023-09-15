@@ -8,8 +8,14 @@ body {
   color: white;
   overscroll-behavior: none;
   overflow-x: hidden;
+  position: relative;
 }
 
 section {
   position: relative;
+  z-index: 2;
+}
+
+svg {
+  z-index: 1;
 }

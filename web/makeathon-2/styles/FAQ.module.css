@@ -23,6 +23,7 @@
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  z-index: -1;
 }
 
 .custom_shape_divider_top_1694481505 svg {

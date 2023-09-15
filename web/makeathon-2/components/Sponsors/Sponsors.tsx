@@ -4,6 +4,7 @@ import styles from "../../styles/Sponsors.module.css";
 function Sponsors() {
   return (
     <section className={styles.body}>
+      Sponsor
       <div className={styles.custom_shape_divider_top_1694381642}>
         <svg
           data-name="Layer 1"
@@ -17,7 +18,6 @@ function Sponsors() {
           ></path>
         </svg>
       </div>
-      Sponsors
       <div className={styles.custom_shape_divider_bottom_1694379347}>
         <svg
           data-name="Layer 1"
