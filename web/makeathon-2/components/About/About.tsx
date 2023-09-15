@@ -32,7 +32,48 @@ function About() {
           </linearGradient>
         </svg>
       </div>
-
+      <div className={styles.sb1}></div>
+      <div className={styles.sb2}></div>
+      <div className={styles.sb3}></div>
+      <div className={styles.sb4}></div>
+      <div className={styles.sb5}></div>
+      <div className={styles.sb6}></div>
+      <div className={styles.sb7}></div>
+      <div className={styles.sb8}></div>
+      <div className={styles.about_text}>
+        <h2 className={styles.about_header}>What is a Makeathon?</h2>
+        <p>
+          The UGAHacks Makeathon is a brand new event from our team. This year
+          we are focusing on encouraging sustainability initiatives from our
+          hackers with a product-focused event. With various workshops,
+          challenges, and talks we hope to inspire hackers to create projects
+          that are designed to solve the world's most pressing sustainability
+          needs in just 24 hours!
+        </p>
+        <h2 className={styles.tool_header}>The tools you'll need:</h2>
+        <div className={styles.tool_rack}>
+          <figure className={styles.tool}>
+            <img src="icons/aboutIcons/laptop.svg" alt="Laptop" height="150" />
+            <figcaption>Laptop</figcaption>
+          </figure>
+          <figure className={styles.tool}>
+            <img src="icons/aboutIcons/phone.svg" alt="Phone" height="150" />
+            <figcaption>Phone</figcaption>
+          </figure>
+          <figure className={styles.tool}>
+            <img
+              src="icons/aboutIcons/charger.svg"
+              alt="Charger"
+              height="150"
+            />
+            <figcaption>Charger</figcaption>
+          </figure>
+          <figure className={styles.tool}>
+            <img src="icons/aboutIcons/slack.svg" alt="Slack" height="150" />
+            <figcaption>Slack</figcaption>
+          </figure>
+        </div>
+      </div>
       <div className={styles.custom_shape_divider_bottom_1694366369}>
         <svg
           data-name="Layer 1"
