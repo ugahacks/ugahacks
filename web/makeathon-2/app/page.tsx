@@ -1,4 +1,4 @@
-import Splash from "../components/Spalsh";
+import Splash from "../components/Splash";
 import About from "../components/About";
 import Schedule from "../components/Schedule";
 import FAQ from "../components/FAQ";
