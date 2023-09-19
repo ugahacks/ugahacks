@@ -1,18 +1,23 @@
 .body {
-  /* border: 1px solid red; */
-  background-image: linear-gradient(
-    180deg,
-    hsl(200deg 85% 46%) 0%,
-    hsl(201deg 76% 51%) 10%,
-    hsl(201deg 80% 55%) 20%,
-    hsl(201deg 86% 59%) 30%,
-    hsl(200deg 92% 63%) 40%,
-    hsl(200deg 100% 66%) 50%,
-    hsl(197deg 99% 70%) 60%,
-    hsl(194deg 98% 74%) 70%,
-    hsl(191deg 96% 78%) 80%,
-    hsl(187deg 96% 83%) 90%,
-    hsl(182deg 100% 88%) 100%
-  );
-  height: 90vh;
+    /* border: 1px solid red; */
+    background-image: linear-gradient(
+        180deg,
+        hsl(200deg 85% 46%) 0%,
+        hsl(201deg 76% 51%) 10%,
+        hsl(201deg 80% 55%) 20%,
+        hsl(201deg 86% 59%) 30%,
+        hsl(200deg 92% 63%) 40%,
+        hsl(200deg 100% 66%) 50%,
+        hsl(197deg 99% 70%) 60%,
+        hsl(194deg 98% 74%) 70%,
+        hsl(191deg 96% 78%) 80%,
+        hsl(187deg 96% 83%) 90%,
+        hsl(182deg 100% 88%) 100%
+    );
+    height: 90vh;
+}
+
+.cloud {
+    position: absolute;
+    background: linear-gradient(180deg, white, lightgrey);
 }
