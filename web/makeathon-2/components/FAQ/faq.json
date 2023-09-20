@@ -1,0 +1,30 @@
+[
+  {
+    "question": "Where will the makeathon be held?",
+    "answer": "Our second annual Makeathon will be held in-person at the Driftmier Engineering Center, 597 DW Brooks Drive Athens, GA, 30602!"
+  },
+  {
+    "question": "How much will the event cost?",
+    "answer": "Nothing! The Makeathon is completely free for the first 300 applicants!"
+  },
+  {
+    "question": "Can I start working on my project before the event?",
+    "answer": "No. You can think about possible approaches, but you aren't allowed to make anything before the event."
+  },
+  {
+    "question": "What if I don't have a team or idea?",
+    "answer": "It's perfectly OK! The Makeathon is a perfect opportunity to make friends and learn new concepts."
+  },
+  {
+    "question": "What are the rules all attendees must abide by?",
+    "answer": "There are no special rules in place, just make sure to treat each other well."
+  },
+  {
+    "question": "How many people can I have on my team?",
+    "answer": "You can have up to 4 members."
+  },
+  {
+    "question": "Who do I reach out to if I have more questions?",
+    "answer": "You can reach out to hello@ugahacks.com!"
+  }
+]
