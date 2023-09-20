@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "../../styles/Splash.module.css";
 import Cloud from "./Cloud";
-import MakeathonLogo from "./MakeathonLogo";
+import MakeathonLogo from "../../public/graphics/Makeathon Transparent Logo resize.png";
 
 // You may not know this, but I didn't pass geometry in highschool.
 // Anyway, here's how to make an overly complex circle in CSS
@@ -28,10 +28,23 @@ function Splash() {
         <Cloud key={i} left={pos.left + 5} top={pos.top + 5} />
     ));
     return (
-        <>
-            <section className={styles.body}>{clouds}</section>
-            <MakeathonLogo />
-        </>
+        <div className={styles.body}>
+            <section>{clouds}</section>
+            <span
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "80vh",
+                }}
+            >
+                <Image
+                    src={MakeathonLogo}
+                    alt="Makeathon Logo"
+                    style={{ maxWidth: "33.33vw", height: "auto" }}
+                />
+            </span>
+        </div>
     );
 }
 
