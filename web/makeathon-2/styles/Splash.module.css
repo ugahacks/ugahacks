@@ -19,5 +19,5 @@
 
 .cloud {
     position: absolute;
-    background: linear-gradient(180deg, white, lightgrey);
+    background: linear-gradient(180deg, white 35%, grey, black);
 }
