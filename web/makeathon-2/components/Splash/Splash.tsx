@@ -8,7 +8,7 @@ import MakeathonLogo from "./MakeathonLogo";
 // Anyway, here's how to make an overly complex circle in CSS
 
 function Splash() {
-    const numClouds = Math.floor(Math.random() * 7) + 1; // Random number between 1 and 4
+    const numClouds = Math.floor(Math.random() * 5) + 3; // Random number between 1 and 4
     const cloudPositions = [];
     for (let i = 0; i < numClouds; i++) {
         let left, top;
