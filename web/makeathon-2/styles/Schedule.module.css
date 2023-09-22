@@ -132,14 +132,14 @@
   }
 }
 
-@media (max-device-width: 700px) {
+@media (max-device-width: 750px) {
   .body {
-    height: 1000px;
+    height: 1200px;
   }
 }
 
 @media (max-device-width: 520px) {
   .body {
-    height: 1200px;
+    height: 1300px;
   }
 }
