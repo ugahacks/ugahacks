@@ -46,7 +46,7 @@ function Schedule() {
                 <tbody>
                   <tr>
                     <td>Event Check In</td>
-                    <td>9:00am - 10:00am</td>
+                    <td>9:00am - 10:30am</td>
                     <td>TBD</td>
                   </tr>
                   <tr>
@@ -56,23 +56,13 @@ function Schedule() {
                   </tr>
                   <tr>
                     <td>Opening Ceremony</td>
-                    <td>10:00am - 11:00am</td>
+                    <td>10:30am - 11:00am</td>
                     <td>Room A</td>
                   </tr>
                   <tr>
                     <td>First Time Makers</td>
                     <td>11:00am - 12:00pm</td>
                     <td>Room B</td>
-                  </tr>
-                  <tr>
-                    <td>Chill Space (Games)</td>
-                    <td>1:00pm - 8:30pm</td>
-                    <td>TBD</td>
-                  </tr>
-                  <tr>
-                    <td>Painting Workshop</td>
-                    <td>1:00pm - 8:30pm</td>
-                    <td>TBD</td>
                   </tr>
                   <tr>
                     <td>Lunch</td>
@@ -83,6 +73,16 @@ function Schedule() {
                     <td>Arduino Workshop</td>
                     <td>12:00pm - 1:00pm</td>
                     <td>Room C</td>
+                  </tr>
+                  <tr>
+                    <td>Chill Space (Games)</td>
+                    <td>1:00pm - 8:30pm</td>
+                    <td>TBD</td>
+                  </tr>
+                  <tr>
+                    <td>Painting Workshop</td>
+                    <td>1:00pm - 8:30pm</td>
+                    <td>TBD</td>
                   </tr>
                   <tr>
                     <td>3D Modeling Workshop</td>
@@ -102,6 +102,11 @@ function Schedule() {
                   <tr>
                     <td>Dinner</td>
                     <td>6:00pm 7:00pm</td>
+                    <td>East Commons</td>
+                  </tr>
+                  <tr>
+                    <td>End of day</td>
+                    <td>9:00pm</td>
                     <td>East Commons</td>
                   </tr>
                 </tbody>
@@ -185,7 +190,7 @@ function Schedule() {
                   </tr>
                   <tr>
                     <td>Closing Ceremony</td>
-                    <td>4:00pm - 5:00pm</td>
+                    <td>8:00pm - 9:00pm</td>
                     <td>Room G</td>
                   </tr>
                 </tbody>
