@@ -4,6 +4,7 @@ import Schedule from "../components/Schedule";
 import FAQ from "../components/FAQ";
 import Sponsors from "../components/Sponsors";
 import Footer from "../components/Footer";
+import Bubbles from "@/components/Bubbles/Bubbles";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Schedule />
       <FAQ />
       <Sponsors />
+      <Bubbles />
       <Footer />
     </>
   );
