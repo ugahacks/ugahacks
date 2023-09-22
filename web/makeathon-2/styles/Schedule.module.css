@@ -17,7 +17,8 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  height: 75vh;
+  height: 1000px;
+  overflow-x: hidden;
 }
 
 .schedule_header {
@@ -25,7 +26,7 @@
   font-size: 3.5em;
   margin: 0 0 2% 1vw;
   margin-bottom: 20px;
-  color: white;  /* you can adjust this if you have a specific color in mind */
+  color: white; /* you can adjust this if you have a specific color in mind */
 }
 
 .slider {
@@ -83,11 +84,11 @@
   margin-top: 20px;
 }
 
-
 .tableContainer {
   width: 100%;
   margin-top: 20px;
   overflow-x: auto; /* For responsiveness, especially if more columns or larger text are added */
+  display: flex;
 }
 
 .tableContainer table {
@@ -95,13 +96,16 @@
   border-collapse: collapse;
 }
 
-.tableContainer th, .tableContainer td {
+.tableContainer th,
+.tableContainer td {
   padding: 10px 20px;
   text-align: left;
 }
 
 /* Making borders transparent */
-.tableContainer th, .tableContainer td, .tableContainer tr {
+.tableContainer th,
+.tableContainer td,
+.tableContainer tr {
   border: none;
 }
 
@@ -110,4 +114,32 @@
   background-color: rgba(0, 0, 0, 0.05);
 } */
 
+.longTerm {
+  text-align: left;
+  padding: 5px 20px;
+}
 
+.dayContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 30px;
+}
+
+@media (max-device-width: 1229px) {
+  .dayContainer img {
+    display: none;
+  }
+}
+
+@media (max-device-width: 700px) {
+  .body {
+    height: 1000px;
+  }
+}
+
+@media (max-device-width: 520px) {
+  .body {
+    height: 1200px;
+  }
+}
