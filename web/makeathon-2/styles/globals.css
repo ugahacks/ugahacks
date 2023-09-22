@@ -19,3 +19,13 @@ section {
 svg {
   z-index: 2;
 }
+
+.foot {
+  position: relative;
+  z-index: 5;
+}
+
+.content {
+  position: absolute;
+  z-index: 0;
+}

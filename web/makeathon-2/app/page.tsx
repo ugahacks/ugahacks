@@ -15,7 +15,9 @@ export default function Home() {
       <FAQ />
       <Sponsors />
       <Bubbles />
-      <Footer />
+      <div className="foot">
+        <Footer />
+      </div>
     </>
   );
 }
