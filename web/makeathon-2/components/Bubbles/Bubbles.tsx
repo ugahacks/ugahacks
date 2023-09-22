@@ -71,7 +71,7 @@ const BubblesAnimation = () => {
             },
             resize: {
               delay: 0.5,
-              enable: true,
+              enable: false,
             },
           },
           modes: {
@@ -398,7 +398,7 @@ const BubblesAnimation = () => {
               enable: true,
               minimumValue: 3,
             },
-            value: 3,
+            value: 8,
             animation: {
               count: 0,
               enable: false,
