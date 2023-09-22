@@ -39,7 +39,7 @@
   padding-left: 20px; /* Adjust as needed */
 }
 
-.flex_box {
+.sponsor_logo_container {
   display: flex;
   justify-content: center;
   gap: 20px; /* Adjust as needed */
@@ -56,10 +56,11 @@
   transition: transform 0.1s;
 }
 
-.sponsorshipLink {
+.button > a {
   color: white;
   text-decoration: none;
 }
+
 .button:hover {
   color: white;
   text-decoration: underline;

@@ -22,7 +22,7 @@ function Sponsors() {
 
       <div className={styles.container}>
         <h1 className={styles.heading}>Sponsors</h1>
-        <div className={styles.flex_box}>
+        <div className={styles.sponsor_logo_container}>
           <img
             className={styles.sponsor}
             src="/graphics/sponsorAssets/DevFest-Logo-2022-LightBackground.png"
@@ -30,7 +30,15 @@ function Sponsors() {
           />
         </div>
         <div className={styles.flex_box}>
-          <button className={styles.button}>Sponsorship Packet</button>
+          <div className={styles.button}>
+            {" "}
+            <a
+              href="/packets/UGAMakeathonSponsorshipPacket.pdf"
+              target="_blank"
+            >
+              Sponsorship Packet
+            </a>
+          </div>
         </div>
       </div>
 
