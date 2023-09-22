@@ -16,6 +16,9 @@
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-tsparticles": "^2.12.2",
+    "tsparticles": "latest",
+    "tsparticles-engine": "^2.12.0",
     "react-icons": "^4.11.0",
     "typescript": "5.2.2"
   },

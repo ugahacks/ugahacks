@@ -4837,6 +4837,9 @@ __metadata:
     next: 13.4.19
     react: 18.2.0
     react-dom: 18.2.0
+    react-tsparticles: ^2.12.2
+    tsparticles: latest
+    tsparticles-engine: ^2.12.0
     react-icons: ^4.11.0
     typescript: 5.2.2
   languageName: unknown
@@ -6427,6 +6430,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-tsparticles@npm:^2.12.2":
+  version: 2.12.2
+  resolution: "react-tsparticles@npm:2.12.2"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  peerDependencies:
+    react: ">=16"
+  checksum: 66339ed80dbb0aa7cede31635101bf84f90743b67b3becdf410a6d52bd41441a449d23722f10204b9641e28bcad51682b8468bbad2524505eef429eea3c2501d
+  languageName: node
+  linkType: hard
+
 "react@npm:17.0.2, react@npm:^17.0.2":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
@@ -7579,6 +7593,438 @@ __metadata:
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: 329ea56123005922f39642318e3d1f0f8265d1e7fcb92c633e0809521da75eeaca28d2cf96d7248229deb40e5c19adf408259f4b9640afd20d13aecc1430f3ad
+  languageName: node
+  linkType: hard
+
+"tsparticles-basic@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-basic@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+    tsparticles-move-base: ^2.12.0
+    tsparticles-shape-circle: ^2.12.0
+    tsparticles-updater-color: ^2.12.0
+    tsparticles-updater-opacity: ^2.12.0
+    tsparticles-updater-out-modes: ^2.12.0
+    tsparticles-updater-size: ^2.12.0
+  checksum: f25b5c2afa8a613b35668967388e652d16b08ca6e07f7629f708752be3a11f3d829e015457626a890d3071527ef395fbd1794a13bc4805b36e80a96ed37367a0
+  languageName: node
+  linkType: hard
+
+"tsparticles-engine@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-engine@npm:2.12.0"
+  checksum: 6d15d71e3b7d73b64b9cb5df18d1987898536a798e14242ddd9a03478d01d6c94713c8d823800a6b0a47b72804a16acc0742f090bc8fcc2afe57c648c8fae492
+  languageName: node
+  linkType: hard
+
+"tsparticles-interaction-external-attract@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-interaction-external-attract@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 3e0d8752cccbed69400428c18b8b3ed4d56d47336e6f1e7f77d367a6b27ad2dd8f1c0c6c5b3001da494e92f12e2f7001b19a9a3e41072615635d270b72f9a1fb
+  languageName: node
+  linkType: hard
+
+"tsparticles-interaction-external-bounce@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-interaction-external-bounce@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 51194309ba345de223f31cfceb45e1d2eba8a4f34b524892fce9c9a85f3758d6cb6d63034efb85ef8716df172da9131a80db8afa100d04d642d22c95aed2e442
+  languageName: node
+  linkType: hard
+
+"tsparticles-interaction-external-bubble@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-interaction-external-bubble@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 6b566c19ec845925a70e482ab434b9ce03ed3dd68a1f6a9c08822ae5edad442e9ff326b5a6d8ed4178a3952fcd298e2c71e33b16742993f23f055ab6cf1d902a
+  languageName: node
+  linkType: hard
+
+"tsparticles-interaction-external-connect@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-interaction-external-connect@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: b32b15d472b214833447574c6598c45b50f2c26eb0dc51e8d14ca6eec2816e10961c048b2c2a3a384e7ffc4b4478392821edab488fab44f96a5be61cddabacda
+  languageName: node
+  linkType: hard
+
+"tsparticles-interaction-external-grab@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-interaction-external-grab@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 1213ead070d5561b532c53d2be82145c2418143cf6940b15b4b3b99d475f99b4628c048a249df5eb333d41684afa017f64355ab727a32fd657b636d35a44a705
+  languageName: node
+  linkType: hard
+
+"tsparticles-interaction-external-pause@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-interaction-external-pause@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: d121c1ec59b724d50c49ebd6c83affca91754ea87e40465b1c1dbccb8a70238ba4109dbebaeab3c3de59f29f0f84c389d62daf22c3651f26aae87d1d764e8fe6
+  languageName: node
+  linkType: hard
+
+"tsparticles-interaction-external-push@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-interaction-external-push@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 4f1de90784974109cb9a3c25458c2a01287f39d38ddb701f35d76d4e5022f2a4a278cceb2c645813839aa1c5d4cf597015eac0318edabbec4c109a129147f57b
+  languageName: node
+  linkType: hard
+
+"tsparticles-interaction-external-remove@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-interaction-external-remove@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 8325cf69d2293c9da9ae99f9191bc316f06ad36119ad0734fd708327ba783ef586ba978d097422457648e51b7271b9a9b2414b977c81faedeb06febd0612b904
+  languageName: node
+  linkType: hard
+
+"tsparticles-interaction-external-repulse@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-interaction-external-repulse@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: ec5b3fdbf5e4bebb106f3f1ada6f5363c4254b458b27bd1cc75bbd43cc4034f5568172577db82c97058e7144d85d2f8f030c873e3299f4f23d8731380a476422
+  languageName: node
+  linkType: hard
+
+"tsparticles-interaction-external-slow@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-interaction-external-slow@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 66db40294add887423060a293bef8082483e637999e9fd90dfca02a47c8a1ddd082a40ab86a7fc5b59756b056e7f2e1d604c49ace0d941ae37ba82bcc49fcbef
+  languageName: node
+  linkType: hard
+
+"tsparticles-interaction-external-trail@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-interaction-external-trail@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 944fbbcbda888f558180a6e0f03d22ffa43c2e8c20aaa8db36d639009177c2d91a8232bb09e6989806b3fd56e71b0e2ab0c8a0f30ab5ca391b2642ac00f91c06
+  languageName: node
+  linkType: hard
+
+"tsparticles-interaction-particles-attract@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-interaction-particles-attract@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 7908289348672bf5d64e47856359f916d427ba386e0f2ace2b9c7078351125a139f97fa1969750145f28b71bd0b96cd4f2b5664d6b90157277f04f291408e8d7
+  languageName: node
+  linkType: hard
+
+"tsparticles-interaction-particles-collisions@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-interaction-particles-collisions@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 33473269d7f26b0dc84d902353e4b826f53fa366050886f7698e62d1d4311dd188a0c8208b240810cd9abc4ff300e6449d677d10800fc6b70ef43ca046fd620e
+  languageName: node
+  linkType: hard
+
+"tsparticles-interaction-particles-links@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-interaction-particles-links@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: f2c50d4db06d141651d8fdd1999cc5b32758170af4a5e8a8bc248058912febed28bc2dd48801791e374c9d7a6ab0d6eca141d952badb13957a97da255b335b37
+  languageName: node
+  linkType: hard
+
+"tsparticles-move-base@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-move-base@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: e60f6486b0e3c3a5e060d0a325d1388e3c629a2fc3a55f7517a352f77bb373d4ee5c3d32951ba231cbbc9bb03c569eec42fed60e17e028ce27d4c58319d930fe
+  languageName: node
+  linkType: hard
+
+"tsparticles-move-parallax@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-move-parallax@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 02d605fbf81f93dad66ec03e88297070c40c1b710acd3759c3af25cddc3244a9f8a702daa760819697d57a51fda1c5428fe48308651f296bbcf0b901cf44533c
+  languageName: node
+  linkType: hard
+
+"tsparticles-particles.js@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-particles.js@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: b756b98b8ac8453490f39d89dbe7a7471c54ee2d67a21bc273fe5d33f0ae59bfdad1a68337565c0e2cad636ec6166f4463d5cec3624ed8b9e56572176bf50213
+  languageName: node
+  linkType: hard
+
+"tsparticles-plugin-absorbers@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-plugin-absorbers@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 226fd02e15419aa67f2eb917961eb76a84747659177794787539ee095e276b51e6e67bdb0887f9da0539918bea97c80e62a17e990f15c70c31083ec58ea3659f
+  languageName: node
+  linkType: hard
+
+"tsparticles-plugin-easing-quad@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-plugin-easing-quad@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 23b491a928fa8a9c57d103a27863d34be9b0a51e806eae9a778d535b658afe2b0bfa5407bd79cd391792550c50af62be5a7ac20ccf501658ed5e5de296fd404a
+  languageName: node
+  linkType: hard
+
+"tsparticles-plugin-emitters@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-plugin-emitters@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 5db4c7767314fa91eafb1f26c1364f3a4f5f7b55a2ecd3dc5154a849de4c7b3def6bbb31ca989e7e5adb39c2f952b3effbaf79d885bf9ecda08a3c9b14f46eaa
+  languageName: node
+  linkType: hard
+
+"tsparticles-shape-circle@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-shape-circle@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 4cfcb380caefb6755f444b9ce3bce11d2dd0e8a436576ac0825668449abcfe22bb7dc23f574eb557b10bcb6cadb4fb1ae8ff58d5ea7df0ce38d13cef2fcdb804
+  languageName: node
+  linkType: hard
+
+"tsparticles-shape-image@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-shape-image@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 52cff5775dc6617859d2995d59134bd65fbe378a1c60c66beeccea2c5dd09241af50babe7b14b943404daeda5ce4a7a5f2d283b8cf28306e12cf5022d39089c8
+  languageName: node
+  linkType: hard
+
+"tsparticles-shape-line@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-shape-line@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 7206565e1725dbcecf7f61699844d0028a459cf1e750bbce74834a4884b111dd31d6203e6f20117d3b1a074200484a4ec6b74c31e409a1159f4ee97373791d5c
+  languageName: node
+  linkType: hard
+
+"tsparticles-shape-polygon@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-shape-polygon@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 4808415ea79dd547c7f6116f444e09a8333b9cac9ea5b70a9f7b96d0b57ed4b02cdd5b4d2338cdd3d68b4613de6a3abcc500fceeabfe4c3ad143c9605567a394
+  languageName: node
+  linkType: hard
+
+"tsparticles-shape-square@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-shape-square@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 553fc02f58596c51530b710c923d5ad4cadfee58901a55cb8f16208a4cd36d900664b64d966dca7e419262fa833905c137cdd7434b2a99a78dc2dd64a0d4c97a
+  languageName: node
+  linkType: hard
+
+"tsparticles-shape-star@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-shape-star@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 530957253ae8a8f7807d2a4d6d4c6e6dceb9e7f38accd863ed82be1c511685b7429b690c90ece2038ad58ef459cfad853003ddd0728ff7b6d69bd1c7e93bfbc3
+  languageName: node
+  linkType: hard
+
+"tsparticles-shape-text@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-shape-text@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 820dc54e972e79f674773965337a967d21092bb7f77bf2b070fac69055876e828d060db1043754cff3d7feb890e8a71f8558d21a43fe316911adf8763fe22287
+  languageName: node
+  linkType: hard
+
+"tsparticles-slim@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-slim@npm:2.12.0"
+  dependencies:
+    tsparticles-basic: ^2.12.0
+    tsparticles-engine: ^2.12.0
+    tsparticles-interaction-external-attract: ^2.12.0
+    tsparticles-interaction-external-bounce: ^2.12.0
+    tsparticles-interaction-external-bubble: ^2.12.0
+    tsparticles-interaction-external-connect: ^2.12.0
+    tsparticles-interaction-external-grab: ^2.12.0
+    tsparticles-interaction-external-pause: ^2.12.0
+    tsparticles-interaction-external-push: ^2.12.0
+    tsparticles-interaction-external-remove: ^2.12.0
+    tsparticles-interaction-external-repulse: ^2.12.0
+    tsparticles-interaction-external-slow: ^2.12.0
+    tsparticles-interaction-particles-attract: ^2.12.0
+    tsparticles-interaction-particles-collisions: ^2.12.0
+    tsparticles-interaction-particles-links: ^2.12.0
+    tsparticles-move-base: ^2.12.0
+    tsparticles-move-parallax: ^2.12.0
+    tsparticles-particles.js: ^2.12.0
+    tsparticles-plugin-easing-quad: ^2.12.0
+    tsparticles-shape-circle: ^2.12.0
+    tsparticles-shape-image: ^2.12.0
+    tsparticles-shape-line: ^2.12.0
+    tsparticles-shape-polygon: ^2.12.0
+    tsparticles-shape-square: ^2.12.0
+    tsparticles-shape-star: ^2.12.0
+    tsparticles-shape-text: ^2.12.0
+    tsparticles-updater-color: ^2.12.0
+    tsparticles-updater-life: ^2.12.0
+    tsparticles-updater-opacity: ^2.12.0
+    tsparticles-updater-out-modes: ^2.12.0
+    tsparticles-updater-rotate: ^2.12.0
+    tsparticles-updater-size: ^2.12.0
+    tsparticles-updater-stroke-color: ^2.12.0
+  checksum: 00178eb86ba31a70a7623b5b28ab415f4c0214b128eeada638c56a1fc4546390b4dc3bd9d3baee56f30e0565c1a64a07f753ba1dd11d1cee54a5d7094beca56a
+  languageName: node
+  linkType: hard
+
+"tsparticles-updater-color@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-updater-color@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 6d677ead9772982f1ea38c21d611d9464bb693f320de2d27ebfe7965969c37c8d3ba98a643273844d45fd7c4e0093f2ac4241ca5027870bcc86d44a3c6fd1281
+  languageName: node
+  linkType: hard
+
+"tsparticles-updater-destroy@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-updater-destroy@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: ab52049c7846c7ecc74e59332094a0a4ebe41d51aed6dae6dcbc9ef61c9fdee72b619a96a0918f3c2f936330ad813b357d30542473e0a6daf15923acdf645fec
+  languageName: node
+  linkType: hard
+
+"tsparticles-updater-life@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-updater-life@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: e65106a807cd99eccd3538e84f1324472add709ee7a9bb35850336bf7c2a5dbcdca9cfe863687756f6cba9ffdb539d6134c5659fca72229e1951664a6d2c07fb
+  languageName: node
+  linkType: hard
+
+"tsparticles-updater-opacity@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-updater-opacity@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: f4ec41754f2de91ad40e93a0483565c7f58a343ddcf9128da0e2a0fc3c3e5a89636e822f6ac31f97a7569d5339c4aafab00da94bd3da49c61aba6dcd661e049b
+  languageName: node
+  linkType: hard
+
+"tsparticles-updater-out-modes@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-updater-out-modes@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 98c36e007ccb3b47c53732de2d776b7ad2a32ce428b88df8447d31f9126499d77564ca2087f9839ebf1a59aca24b9a5670de0cd88ea413ed1bcd7c8efb0df3c9
+  languageName: node
+  linkType: hard
+
+"tsparticles-updater-roll@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-updater-roll@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: f3664bbf9dde83d46cb1ee847ab479d76ab48bf4f5f1fc06bb282484728c2b6e3f562419cbd7633e420746fa1018e50625ccd6afbf06eb3c85e900e8d75b606a
+  languageName: node
+  linkType: hard
+
+"tsparticles-updater-rotate@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-updater-rotate@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: f9475d949ef285073b027e35e66b120f7690b4d05d3066bd8545917d532942427304ebc37f966abdb8b62966ece283d5e432984ce69381099f6edc9791075ad4
+  languageName: node
+  linkType: hard
+
+"tsparticles-updater-size@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-updater-size@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: e8c9e18f347493fbd555458932a567bd6506b8149add4e3b41f043d56173d6103afe85e233a1e1e51addd2ec726bfb7f8d768cb5e6c8f34d4d08886535864a96
+  languageName: node
+  linkType: hard
+
+"tsparticles-updater-stroke-color@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-updater-stroke-color@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: ddfb310cb965bf7345f21d0d6fd265936dd097b4a04c76bd7c312221dc98647f2befb3e4b502fd71437ecb2d75c7d3f1bcabc0d6f690b75791ffe4eb26b9c838
+  languageName: node
+  linkType: hard
+
+"tsparticles-updater-tilt@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-updater-tilt@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 14cb1881ed465e8812be2d86f29ef3987824388a22068a57fae4037ed9d734fac11184077f816e89d93d80912c8edf5ba9726853d1ab01029598ffc9b91214c4
+  languageName: node
+  linkType: hard
+
+"tsparticles-updater-twinkle@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-updater-twinkle@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: d8c9e976d76a2387dc9e935fc7e84c106b6b3760732b54ad8b5a4c0a7e0fd0d3657bb483bd28b7540eafd057f522b6bfafaa30ae1ab63de2a4ecc45f10b32763
+  languageName: node
+  linkType: hard
+
+"tsparticles-updater-wobble@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "tsparticles-updater-wobble@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+  checksum: 0c066baa602fdd0fea59e871aa7734f96118775e1e806a4fc7dca71525b0bd6f0164593502f3005a06c99b5b351a89ea70d51b8c1b66d6b6ea9bb8c9959ac699
+  languageName: node
+  linkType: hard
+
+"tsparticles@npm:latest":
+  version: 2.12.0
+  resolution: "tsparticles@npm:2.12.0"
+  dependencies:
+    tsparticles-engine: ^2.12.0
+    tsparticles-interaction-external-trail: ^2.12.0
+    tsparticles-plugin-absorbers: ^2.12.0
+    tsparticles-plugin-emitters: ^2.12.0
+    tsparticles-slim: ^2.12.0
+    tsparticles-updater-destroy: ^2.12.0
+    tsparticles-updater-roll: ^2.12.0
+    tsparticles-updater-tilt: ^2.12.0
+    tsparticles-updater-twinkle: ^2.12.0
+    tsparticles-updater-wobble: ^2.12.0
+  checksum: 926795c97bd9ca8f56d29809ebd9cdc4e6c72dcba841f2be0eed5375ed454d5ae6dd8bbfc506514a3082ba301ac654b1de956a2c46c31253f482239cec757028
   languageName: node
   linkType: hard
 
