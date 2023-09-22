@@ -14,7 +14,62 @@
     hsl(275deg 26% 8%) 94%,
     hsl(0deg 0% 7%) 100%
   );
-  height: 1080px;
+  
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 90vw;
+}
+
+.heading {
+  font-family: "Quicksand", "Alata", sans-serif;
+  font-size: 3.5em;
+  text-align: left;
+  width: 100%;
+  padding-left: 20px; /* Adjust as needed */
+}
+
+.sponsor_logo_container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust as needed */
+}
+
+.button {
+  margin-top: 50px;
+  border-radius: 20px;
+  color: white;
+  font-size: 20px;
+  border: 4px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 25px;
+  transition: transform 0.1s;
+}
+
+.button > a {
+  color: white;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: white;
+  text-decoration: underline;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.sponsor {
+  width: 500px;
 }
 
 .custom_shape_divider_bottom_1694379347 {
