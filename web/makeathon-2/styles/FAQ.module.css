@@ -13,8 +13,8 @@
     hsl(228deg 38% 9%) 89%,
     hsl(228deg 37% 8%) 100%
   );
-  height: 100vh;
-
+  
+  height: 900px;
   padding-top: 100px;
 }
 
@@ -43,7 +43,7 @@
 .section_header {
   margin: 0;
   margin-right: 50px;
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   font-size: 52px;
   display: flex;
   flex-direction: row-reverse;
@@ -51,13 +51,13 @@
 }
 
 .faq_content {
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-    flex-grow: unset;
-    flex-wrap: wrap;
-    height: 100vh;
-    max-width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  flex-grow: unset;
+  flex-wrap: wrap;
+  height: 100vh;
+  max-width: 100vw;
 }
 
 .faq_content img {
@@ -68,13 +68,12 @@
 }
 
 .questions {
-  font-family: 'Alata';
+  font-family: "Alata";
   margin-top: 0;
   display: flex;
   flex-direction: column;
   gap: 25px;
   height: 100vh;
-
 }
 
 .question {
@@ -90,13 +89,13 @@
   overflow: hidden;
 
   background-color: rgba(255, 255, 255, 0.1);
-  transition: all 0.5s; 
+  transition: all 0.5s;
 }
 
 .question_top {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .question h1 {
@@ -105,42 +104,37 @@
   font-weight: normal;
 }
 
-
 .question p {
   font-size: 16px;
   margin: 0;
 }
 
 .expand_button div svg {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .expand_button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .expanded {
-    height: 100px;
+  height: 100px;
 }
 
 @media (max-device-width: 1229px) {
-    .faq_content img {
-        display: none;
-    }
+  .faq_content img {
+    display: none;
+  }
 
-    .question h1 {
-        font-size: 18px;
-    }
+  .question h1 {
+    font-size: 18px;
+  }
 }
 
 @media (max-device-width: 521px) {
-    .question h1 {
-        font-size: 15px;
-    }
+  .question h1 {
+    font-size: 15px;
+  }
 }
-
-
-
-
 

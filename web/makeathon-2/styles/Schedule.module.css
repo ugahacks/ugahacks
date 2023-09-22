@@ -13,5 +13,133 @@
     hsl(223deg 76% 19%) 87%,
     hsl(227deg 77% 17%) 100%
   );
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 1000px;
+  overflow-x: hidden;
+}
+
+.schedule_header {
+  font-family: "Quicksand", "Alata", sans-serif;
+  font-size: 3.5em;
+  margin: 0 0 2% 1vw;
+  margin-bottom: 20px;
+  color: white; /* you can adjust this if you have a specific color in mind */
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px; /* Adjust for spacing */
+}
+
+.scheduleContent {
+  margin: 0 20px;
+  min-width: 150px; /* Adjust according to your needs */
+  text-align: center;
+}
+
+.sliderButton {
+  background: none;
+  border: none;
+  color: white; /* Adjust according to your needs */
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+.sliderButton:hover {
+  color: #666; /* Adjust according to your needs */
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40px; /* space between the dots */
+}
+
+.activeDot,
+.inactiveDot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.activeDot {
+  background-color: white;
+}
+
+.inactiveDot {
+  background-color: grey;
+}
+
+.content {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.tableContainer {
+  width: 100%;
+  margin-top: 20px;
+  overflow-x: auto; /* For responsiveness, especially if more columns or larger text are added */
+  display: flex;
+}
+
+.tableContainer table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableContainer th,
+.tableContainer td {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+/* Making borders transparent */
+.tableContainer th,
+.tableContainer td,
+.tableContainer tr {
+  border: none;
+}
+
+/* Optional: if you want to give a visual hint for rows */
+/* .tableContainer tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+} */
+
+.longTerm {
+  text-align: left;
+  padding: 5px 20px;
+}
+
+.dayContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 30px;
+}
+
+@media (max-device-width: 1229px) {
+  .dayContainer img {
+    display: none;
+  }
+}
+
+@media (max-device-width: 750px) {
+  .body {
+    height: 1200px;
+  }
+}
+
+@media (max-device-width: 520px) {
+  .body {
+    height: 1300px;
+  }
 }
