@@ -60,6 +60,9 @@ function Question({
   return (
     <div
       id={"questionBox-" + questionId}
+      onClick={() => {
+        expanded ? expandQuestion(-1) : expandQuestion(questionId);
+      }}
       className={
         expanded ? styles.question + " " + styles.expanded : styles.question
       }
