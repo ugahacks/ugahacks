@@ -117,3 +117,26 @@
 .custom_shape_divider_top_1694381642 .shape_fill {
   fill: #0d101c;
 }
+
+.jellyfish {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  transform: translate(10%, 100%);
+}
+
+.cliff {
+  position: absolute;
+  bottom: 0;
+  width: 900px;
+  right: 0;
+  transform: translate(50%, 0%);
+}
+
+@media only screen and (max-width: 1230px) {
+  .cliff,
+  .jellyfish {
+    display: none;
+  }
+}

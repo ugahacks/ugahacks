@@ -85,7 +85,7 @@
   top: 0;
 }
 
-@media only screen and (max-width: 1230px) {
+@media only screen and (max-width: 700px) {
   .row > img {
     width: 300px;
   }
