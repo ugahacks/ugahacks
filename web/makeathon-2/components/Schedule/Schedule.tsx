@@ -17,6 +17,17 @@ function Schedule() {
 
   return (
     <section className={styles.body}>
+      <img
+        className={styles.cliff_left}
+        src="/graphics/cliff_left.png"
+        alt="ocean cliff"
+      ></img>
+      <img
+        className={styles.cliff_right}
+        src="/graphics/cliff_right.png"
+        alt="ocean cliff"
+      ></img>
+
       <h2 className={styles.schedule_header}>Schedule</h2>
       <div className={styles.content}>
         {currentDay === 0 ? (

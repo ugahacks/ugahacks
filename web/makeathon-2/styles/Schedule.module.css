@@ -126,6 +126,18 @@
   padding-right: 30px;
 }
 
+.cliff_left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.cliff_right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
 @media (max-device-width: 1229px) {
   .dayContainer img {
     display: none;
