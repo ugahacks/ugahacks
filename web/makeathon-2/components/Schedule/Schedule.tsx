@@ -112,7 +112,7 @@ function Schedule() {
                   </tr>
                   <tr>
                     <td>Dinner</td>
-                    <td>6:00pm 7:00pm</td>
+                    <td>6:00pm - 7:00pm</td>
                     <td>East Commons</td>
                   </tr>
                   <tr>
