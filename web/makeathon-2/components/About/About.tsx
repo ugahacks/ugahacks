@@ -4,6 +4,16 @@ import styles from "../../styles/About.module.css";
 function About() {
   return (
     <section className={styles.body}>
+      <img
+        className={styles.flatCoral_right1}
+        src="/graphics/flatCoral_right.png"
+        alt="flag coral ocean"
+      ></img>
+      <img
+        className={styles.flatCoral_right2}
+        src="/graphics/flatCoral_right.png"
+        alt="flag coral ocean"
+      ></img>
       <div className={styles.custom_shape_divider_top_1694365385}>
         <svg
           data-name="Layer 1"

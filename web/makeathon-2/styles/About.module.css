@@ -167,6 +167,20 @@
   max-height: 8vw;
 }
 
+.flatCoral_right1 {
+  position: absolute;
+  right: 0;
+  transform: translateY(40%);
+  width: 500px;
+}
+
+.flatCoral_right2 {
+  position: absolute;
+  right: 0;
+  transform: translateY(75%);
+  width: 400px;
+}
+
 @media only screen and (max-width: 1230px) {
   .about_text {
     width: 80%;
