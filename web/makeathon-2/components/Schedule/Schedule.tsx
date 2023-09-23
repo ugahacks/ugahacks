@@ -18,15 +18,22 @@ function Schedule() {
   return (
     <section className={styles.body}>
       <img
+        className={styles.dolphin1}
+        src="/graphics/dolphin1.png"
+        alt="fish"
+      />
+      <img className={styles.fish1} src="/graphics/fish 1.png" alt="fish" />
+      <img className={styles.fish2} src="/graphics/fish 2.png" alt="fish" />
+      <img
         className={styles.cliff_left}
         src="/graphics/cliff_left.png"
         alt="ocean cliff"
-      ></img>
+      />
       <img
         className={styles.cliff_right}
         src="/graphics/cliff_right.png"
         alt="ocean cliff"
-      ></img>
+      />
 
       <h2 className={styles.schedule_header}>Schedule</h2>
       <div className={styles.content}>

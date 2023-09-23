@@ -395,10 +395,10 @@ const BubblesAnimation = () => {
           },
           size: {
             random: {
-              enable: true,
+              enable: false,
               minimumValue: 3,
             },
-            value: 8,
+            value: 7,
             animation: {
               count: 0,
               enable: false,

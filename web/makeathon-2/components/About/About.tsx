@@ -5,15 +5,25 @@ function About() {
   return (
     <section className={styles.body}>
       <img
+        className={styles.guppies}
+        src="/graphics/guppies.png"
+        alt="fish in ocean"
+      />
+      <img
+        className={styles.flatCoral_left}
+        src="/graphics/flatCoral_left.png"
+        alt="flat coral ocean"
+      />
+      <img
         className={styles.flatCoral_right1}
         src="/graphics/flatCoral_right.png"
-        alt="flag coral ocean"
-      ></img>
+        alt="flat coral ocean"
+      />
       <img
         className={styles.flatCoral_right2}
         src="/graphics/flatCoral_right.png"
-        alt="flag coral ocean"
-      ></img>
+        alt="flat coral ocean"
+      />
       <div className={styles.custom_shape_divider_top_1694365385}>
         <svg
           data-name="Layer 1"
