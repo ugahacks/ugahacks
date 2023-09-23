@@ -4,6 +4,26 @@ import styles from "../../styles/About.module.css";
 function About() {
   return (
     <section className={styles.body}>
+      <img
+        className={styles.guppies}
+        src="/graphics/aboutAssets/guppies.png"
+        alt="fish in ocean"
+      />
+      <img
+        className={styles.flatCoral_left}
+        src="/graphics/aboutAssets/flatCoral_left.png"
+        alt="flat coral ocean"
+      />
+      <img
+        className={styles.flatCoral_right1}
+        src="/graphics/aboutAssets/flatCoral_right.png"
+        alt="flat coral ocean"
+      />
+      <img
+        className={styles.flatCoral_right2}
+        src="/graphics/aboutAssets/flatCoral_right.png"
+        alt="flat coral ocean"
+      />
       <div className={styles.custom_shape_divider_top_1694365385}>
         <svg
           data-name="Layer 1"
@@ -53,24 +73,44 @@ function About() {
         <h2 className={styles.tool_header}>The tools you&apos;ll need:</h2>
         <div className={styles.tool_rack}>
           <figure className={styles.tool}>
-            <img src="icons/aboutIcons/laptop.svg" alt="Laptop" height="150" />
+            <img src="icons/aboutIcons/laptop.svg" alt="Laptop" height="100" />
             <figcaption>Laptop</figcaption>
           </figure>
           <figure className={styles.tool}>
-            <img src="icons/aboutIcons/phone.svg" alt="Phone" height="150" />
+            <img src="icons/aboutIcons/phone.svg" alt="Phone" height="100" />
             <figcaption>Phone</figcaption>
           </figure>
           <figure className={styles.tool}>
             <img
               src="icons/aboutIcons/charger.svg"
               alt="Charger"
-              height="150"
+              height="100"
             />
             <figcaption>Chargers</figcaption>
           </figure>
           <figure className={styles.tool}>
-            <img src="icons/aboutIcons/slack.svg" alt="Slack" height="150" />
+            <a
+              href="https://join.slack.com/t/ugamakes2/shared_invite/zt-22ojl9eg1-8f1Fao8s2VrQfcPKbRi1pg"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="icons/aboutIcons/slack.svg" alt="Slack" height="100" />
+            </a>
             <figcaption>Slack</figcaption>
+          </figure>
+          <figure className={styles.tool}>
+            <a
+              href="https://ugahacks-makeathon-2.devpost.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="icons/aboutIcons/devpost.svg"
+                alt="Devpost"
+                height="100"
+              />
+            </a>
+            <figcaption>Devpost</figcaption>
           </figure>
         </div>
       </div>

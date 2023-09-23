@@ -160,11 +160,43 @@
   height: auto;
   margin: 0 0 0 0;
   text-align: center;
+  transition: transform 0.1s;
+}
+
+.tool:hover {
+  transform: scale(1.1);
 }
 
 .tool img {
   display: block;
   max-height: 8vw;
+}
+
+.flatCoral_left {
+  position: absolute;
+  left: 0;
+  transform: translateY(125%);
+  width: 300px;
+}
+
+.flatCoral_right1 {
+  position: absolute;
+  right: 0;
+  transform: translateY(80%);
+  width: 400px;
+}
+
+.flatCoral_right2 {
+  position: absolute;
+  right: 0;
+  transform: translateY(140%);
+  width: 300px;
+}
+
+.guppies {
+  position: absolute;
+  right: 0;
+  transform: translate(-90%, 80%);
 }
 
 @media only screen and (max-width: 1230px) {
@@ -174,5 +206,12 @@
 
   .tool img {
     max-height: 12vw;
+  }
+
+  .flatCoral_left,
+  .flatCoral_right1,
+  .flatCoral_right2,
+  .guppies {
+    display: none;
   }
 }

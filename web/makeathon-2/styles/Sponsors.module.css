@@ -14,13 +14,14 @@
     hsl(275deg 26% 8%) 94%,
     hsl(0deg 0% 7%) 100%
   );
-  
+
   height: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 .container {
@@ -43,6 +44,7 @@
   display: flex;
   justify-content: center;
   gap: 20px; /* Adjust as needed */
+  width: 100vw;
 }
 
 .button {
@@ -69,7 +71,7 @@
 }
 
 .sponsor {
-  width: 500px;
+  max-width: 100%;
 }
 
 .custom_shape_divider_bottom_1694379347 {
@@ -114,4 +116,27 @@
 
 .custom_shape_divider_top_1694381642 .shape_fill {
   fill: #0d101c;
+}
+
+.jellyfish {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  transform: translate(10%, 100%);
+}
+
+.cliff {
+  position: absolute;
+  bottom: 0;
+  width: 900px;
+  right: 0;
+  transform: translate(50%, 0%);
+}
+
+@media only screen and (max-width: 1230px) {
+  .cliff,
+  .jellyfish {
+    display: none;
+  }
 }

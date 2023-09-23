@@ -15,4 +15,91 @@
     hsl(182deg 100% 88%) 100%
   );
   height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateY(-5%);
+}
+
+.row {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid #ccc; */
+  text-align: center;
+}
+
+.row > img {
+  margin-left: 50px;
+  width: 700px;
+}
+
+.tagline {
+  margin-top: 10px;
+  color: #07164d;
+  font-size: 34px;
+  height: 10px;
+}
+
+.loc {
+  color: #07164d;
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.register {
+  margin-top: 30px;
+  color: white;
+  background-color: #07164d;
+  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 40px;
+  border: 2px solid rgb(38, 52, 65);
+  transition: transform 0.1s;
+  font-size: large;
+}
+
+.register:hover {
+  transform: scale(1.1);
+}
+
+.cloud_left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(30%);
+}
+
+.cloud_right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .row > img {
+    width: 300px;
+  }
+
+  .tagline {
+    font-size: 24px;
+  }
+
+  .loc {
+    font-size: 20px;
+  }
+
+  .cloud_left,
+  .cloud_right {
+    display: none;
+  }
 }
