@@ -19,19 +19,27 @@ function Schedule() {
     <section className={styles.body}>
       <img
         className={styles.dolphin1}
-        src="/graphics/dolphin1.png"
+        src="/graphics/scheduleAssets/dolphin1.png"
         alt="fish"
       />
-      <img className={styles.fish1} src="/graphics/fish 1.png" alt="fish" />
-      <img className={styles.fish2} src="/graphics/fish 2.png" alt="fish" />
+      <img
+        className={styles.fish1}
+        src="/graphics/scheduleAssets/fish 1.png"
+        alt="fish"
+      />
+      <img
+        className={styles.fish2}
+        src="/graphics/scheduleAssets/fish 2.png"
+        alt="fish"
+      />
       <img
         className={styles.cliff_left}
-        src="/graphics/cliff_left.png"
+        src="/graphics/scheduleAssets/cliff_left.png"
         alt="ocean cliff"
       />
       <img
         className={styles.cliff_right}
-        src="/graphics/cliff_right.png"
+        src="/graphics/scheduleAssets/cliff_right.png"
         alt="ocean cliff"
       />
 
@@ -51,7 +59,7 @@ function Schedule() {
 
             <div className={styles.tableContainer}>
               <div className={styles.dayContainer}>
-                <img src="/graphics/day1.png" alt="day 1"></img>
+                <img src="/graphics/scheduleAssets/day1.png" alt="day 1"></img>
               </div>
               <table>
                 <thead>
@@ -145,7 +153,7 @@ function Schedule() {
 
             <div className={styles.tableContainer}>
               <div className={styles.dayContainer}>
-                <img src="/graphics/day2.png" alt="day 1"></img>
+                <img src="/graphics/scheduleAssets/day2.png" alt="day 1"></img>
               </div>
               <table>
                 <thead>

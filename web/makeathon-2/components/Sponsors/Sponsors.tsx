@@ -6,6 +6,11 @@ import Image from "next/image";
 function Sponsors() {
   return (
     <section className={styles.body}>
+      <img
+        className={styles.jellyfish}
+        src="./graphics/sponsorAssets/jellyfish.png"
+        alt="jellyfish"
+      />
       <div className={styles.custom_shape_divider_top_1694381642}>
         <svg
           data-name="Layer 1"

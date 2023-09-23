@@ -7,18 +7,18 @@ function Splash() {
     <section className={styles.body}>
       <img
         className={styles.cloud_left}
-        src="/graphics/cloud_left.png"
+        src="/graphics/splashAssets/cloud_left.png"
         alt="cloud"
       />
       <img
         className={styles.cloud_right}
-        src="/graphics/cloud_right.png"
+        src="/graphics/splashAssets/cloud_right.png"
         alt="cloud"
       />
       <div className={styles.container}>
         <div className={styles.row}>
           <img
-            src="/graphics/Makeathon Transparent Logo resize.png"
+            src="/graphics/splashAssets/Makeathon Transparent Logo.png"
             alt="makeathon logo"
           />
         </div>

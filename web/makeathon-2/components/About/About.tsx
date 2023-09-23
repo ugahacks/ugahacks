@@ -6,22 +6,22 @@ function About() {
     <section className={styles.body}>
       <img
         className={styles.guppies}
-        src="/graphics/guppies.png"
+        src="/graphics/aboutAssets/guppies.png"
         alt="fish in ocean"
       />
       <img
         className={styles.flatCoral_left}
-        src="/graphics/flatCoral_left.png"
+        src="/graphics/aboutAssets/flatCoral_left.png"
         alt="flat coral ocean"
       />
       <img
         className={styles.flatCoral_right1}
-        src="/graphics/flatCoral_right.png"
+        src="/graphics/aboutAssets/flatCoral_right.png"
         alt="flat coral ocean"
       />
       <img
         className={styles.flatCoral_right2}
-        src="/graphics/flatCoral_right.png"
+        src="/graphics/aboutAssets/flatCoral_right.png"
         alt="flat coral ocean"
       />
       <div className={styles.custom_shape_divider_top_1694365385}>
