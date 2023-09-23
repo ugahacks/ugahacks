@@ -33,6 +33,7 @@ function Splash() {
           <a
             href="https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_2t26cNywzPGm9bE"
             target="_blank"
+            rel="noreferrer"
           >
             <div className={styles.register}>REGISTER</div>
           </a>

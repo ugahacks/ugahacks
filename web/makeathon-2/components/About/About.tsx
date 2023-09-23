@@ -92,13 +92,18 @@ function About() {
             <a
               href="https://join.slack.com/t/ugamakes2/shared_invite/zt-22ojl9eg1-8f1Fao8s2VrQfcPKbRi1pg"
               target="_blank"
+              rel="noreferrer"
             >
               <img src="icons/aboutIcons/slack.svg" alt="Slack" height="100" />
             </a>
             <figcaption>Slack</figcaption>
           </figure>
           <figure className={styles.tool}>
-            <a href="https://ugahacks-makeathon-2.devpost.com/" target="_blank">
+            <a
+              href="https://ugahacks-makeathon-2.devpost.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src="icons/aboutIcons/devpost.svg"
                 alt="Devpost"
