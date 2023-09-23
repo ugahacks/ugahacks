@@ -48,7 +48,7 @@
 }
 
 .button {
-  margin-top: 50px;
+  margin-top: 10px;
   border-radius: 20px;
   color: white;
   font-size: 20px;
@@ -71,6 +71,7 @@
 }
 
 .sponsor {
+  width: 400px;
   max-width: 100%;
 }
 

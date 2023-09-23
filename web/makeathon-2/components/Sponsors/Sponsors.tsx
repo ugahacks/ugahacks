@@ -35,7 +35,7 @@ function Sponsors() {
         <div className={styles.sponsor_logo_container}>
           <img
             className={styles.sponsor}
-            src="/graphics/sponsorAssets/DevFest-Logo-2022-LightBackground.png"
+            src="/graphics/sponsorAssets/devfest-2023.png"
             alt="gdg-athens"
           />
         </div>
