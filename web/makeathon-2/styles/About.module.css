@@ -160,6 +160,11 @@
   height: auto;
   margin: 0 0 0 0;
   text-align: center;
+  transition: transform 0.1s;
+}
+
+.tool:hover {
+  transform: scale(1.1);
 }
 
 .tool img {

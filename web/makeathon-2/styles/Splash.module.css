@@ -65,6 +65,7 @@
   border-radius: 40px;
   border: 2px solid rgb(38, 52, 65);
   transition: transform 0.1s;
+  font-size: large;
 }
 
 .register:hover {

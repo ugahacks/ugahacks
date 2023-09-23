@@ -73,24 +73,39 @@ function About() {
         <h2 className={styles.tool_header}>The tools you&apos;ll need:</h2>
         <div className={styles.tool_rack}>
           <figure className={styles.tool}>
-            <img src="icons/aboutIcons/laptop.svg" alt="Laptop" height="150" />
+            <img src="icons/aboutIcons/laptop.svg" alt="Laptop" height="100" />
             <figcaption>Laptop</figcaption>
           </figure>
           <figure className={styles.tool}>
-            <img src="icons/aboutIcons/phone.svg" alt="Phone" height="150" />
+            <img src="icons/aboutIcons/phone.svg" alt="Phone" height="100" />
             <figcaption>Phone</figcaption>
           </figure>
           <figure className={styles.tool}>
             <img
               src="icons/aboutIcons/charger.svg"
               alt="Charger"
-              height="150"
+              height="100"
             />
             <figcaption>Chargers</figcaption>
           </figure>
           <figure className={styles.tool}>
-            <img src="icons/aboutIcons/slack.svg" alt="Slack" height="150" />
+            <a
+              href="https://join.slack.com/t/ugamakes2/shared_invite/zt-22ojl9eg1-8f1Fao8s2VrQfcPKbRi1pg"
+              target="_blank"
+            >
+              <img src="icons/aboutIcons/slack.svg" alt="Slack" height="100" />
+            </a>
             <figcaption>Slack</figcaption>
+          </figure>
+          <figure className={styles.tool}>
+            <a href="https://ugahacks-makeathon-2.devpost.com/" target="_blank">
+              <img
+                src="icons/aboutIcons/devpost.svg"
+                alt="Devpost"
+                height="100"
+              />
+            </a>
+            <figcaption>Devpost</figcaption>
           </figure>
         </div>
       </div>
