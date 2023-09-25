@@ -1,4 +1,4 @@
-FROM node:16.14.0-alpine
+FROM node:18.17.0
 
 EXPOSE 3000
 
@@ -6,7 +6,7 @@ USER node
 WORKDIR /home/node
 
 # yarn 2 codename
-RUN yarn set version berry
+RUN yarn set version stable
 
 COPY --chown=node:node package.json /home/node
 
