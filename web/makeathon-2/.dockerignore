@@ -1,7 +1,0 @@
-Dockerfile
-.dockerignore
-node_modules
-npm-debug.log
-.next
-.yarn/cache
-.yarn/install-state.gz
