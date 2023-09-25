@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../styles/About.module.css";
-
+// Cool stuff!
 function About() {
   return (
     <section className={styles.body}>
