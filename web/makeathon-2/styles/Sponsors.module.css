@@ -1,0 +1,143 @@
+.body {
+  /* border: 1px solid red; */
+  background-image: linear-gradient(
+    180deg,
+    hsl(227deg 83% 16%) 0%,
+    hsl(234deg 67% 17%) 0%,
+    hsl(243deg 61% 17%) 1%,
+    hsl(251deg 65% 16%) 4%,
+    hsl(258deg 71% 15%) 10%,
+    hsl(265deg 78% 14%) 18%,
+    hsl(266deg 66% 13%) 31%,
+    hsl(268deg 55% 11%) 51%,
+    hsl(271deg 42% 10%) 76%,
+    hsl(275deg 26% 8%) 94%,
+    hsl(0deg 0% 7%) 100%
+  );
+
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 90vw;
+}
+
+.heading {
+  font-family: "Quicksand", "Alata", sans-serif;
+  font-size: 3.5em;
+  text-align: left;
+  width: 100%;
+  padding-left: 20px; /* Adjust as needed */
+}
+
+.sponsor_logo_container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust as needed */
+  width: 100vw;
+}
+
+.button {
+  margin-top: 10px;
+  border-radius: 20px;
+  color: white;
+  font-size: 20px;
+  border: 4px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 25px;
+  transition: transform 0.1s;
+}
+
+.button > a {
+  color: white;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: white;
+  text-decoration: underline;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.sponsor {
+  width: 400px;
+  max-width: 100%;
+}
+
+.custom_shape_divider_bottom_1694379347 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: -1;
+}
+
+.custom_shape_divider_bottom_1694379347 svg {
+  position: relative;
+  display: block;
+  width: calc(274% + 1.3px);
+  height: 127px;
+}
+
+.custom_shape_divider_bottom_1694379347 .shape_fill {
+  fill: #111111;
+}
+
+.custom_shape_divider_top_1694381642 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
+}
+
+.custom_shape_divider_top_1694381642 svg {
+  position: relative;
+  display: block;
+  width: calc(173% + 1.3px);
+  height: 153px;
+  transform: rotateY(180deg);
+}
+
+.custom_shape_divider_top_1694381642 .shape_fill {
+  fill: #0d101c;
+}
+
+.jellyfish {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  transform: translate(10%, 100%);
+}
+
+.cliff {
+  position: absolute;
+  bottom: 0;
+  width: 900px;
+  right: 0;
+  transform: translate(50%, 0%);
+}
+
+@media only screen and (max-width: 1230px) {
+  .cliff,
+  .jellyfish {
+    display: none;
+  }
+}

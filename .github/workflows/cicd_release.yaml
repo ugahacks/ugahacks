@@ -94,7 +94,7 @@ jobs:
 
       - name: Deploy ugahacks-9 to Cloud Run
         id: deploy_ugahacks_9
-        uses: google-github-actions/deploy-cloudrun@v0.4.0
+        uses: google-github-actions/deploy-cloudrun@v1
         with:
           service: ugahacks-9-${{ env.DEPLOY_ENV }}
           image: gcr.io/${{ env.PROJECT_ID }}/ugahacks-9-${{ env.DEPLOY_ENV }}:${{ github.sha }}
@@ -104,7 +104,7 @@ jobs:
       - name: ugahacks-9 Post Deployment
         run: |-
           echo "Active URL:"
-          echo ${{ steps.deploy_ugahacks_8.outputs.url }}
+          echo ${{ steps.deploy_ugahacks_9.outputs.url }}
         if: contains(steps.file_changes.outputs.files , 'ugahacks-9')
 
       # UGAHacks 8
@@ -244,3 +244,26 @@ jobs:
           echo "Active URL:"
           echo ${{ steps.deploy_makeathon_8.outputs.url }}
         if: contains(steps.file_changes.outputs.files , 'makeathon-8')
+
+      # Makeathon 2
+      - name: Build and Push makeathon-2 Container
+        run: |-
+          echo "makeathon-2 changed, building ..."
+          docker build -t gcr.io/${{ env.PROJECT_ID }}/makeathon-2-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/makeathon-2
+          docker push gcr.io/${{ env.PROJECT_ID }}/makeathon-2-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+        if: contains(steps.file_changes.outputs.files , 'makeathon-2')
+
+      - name: Deploy makeathon-2 to Cloud Run
+        id: deploy_makeathon_2
+        uses: google-github-actions/deploy-cloudrun@v0.4.0
+        with:
+          service: makeathon-2-${{ env.DEPLOY_ENV }}
+          image: gcr.io/${{ env.PROJECT_ID }}/makeathon-2-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+          region: ${{ env.REGION }}
+        if: contains(steps.file_changes.outputs.files , 'makeathon-2')
+
+      - name: makeathon-2 Post Deployment
+        run: |-
+          echo "Active URL:"
+          echo ${{ steps.deploy_makeathon_2.outputs.url }}
+        if: contains(steps.file_changes.outputs.files , 'makeathon-2')

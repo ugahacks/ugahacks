@@ -1,0 +1,83 @@
+.body {
+  background-image: linear-gradient(
+    180deg,
+    hsl(0deg 0% 7%) 0%,
+    hsl(344deg 0% 6%) 11%,
+    hsl(344deg 0% 5%) 22%,
+    hsl(344deg 0% 5%) 33%,
+    hsl(344deg 0% 4%) 44%,
+    hsl(344deg 0% 3%) 56%,
+    hsl(344deg 0% 2%) 67%,
+    hsl(344deg 0% 2%) 78%,
+    hsl(344deg 0% 1%) 89%,
+    hsl(0deg 0% 0%) 100%
+  );
+  height: 150px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 30px;
+}
+
+.icon_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon > a:hover {
+  opacity: 0.8;
+}
+
+.subtitle > p {
+  margin: 3px;
+}
+
+.mail > a {
+  text-decoration: none;
+  color: rgb(236, 236, 142);
+}
+
+.mail > a:hover {
+  opacity: 0.8;
+}
+
+.uh9_rainbow {
+  animation: rainbow 8s infinite alternate;
+}
+
+@keyframes rainbow {
+  0% {
+    color: IndianRed;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: lime;
+  }
+  66% {
+    color: teal;
+  }
+  80% {
+    color: CornflowerBlue;
+  }
+  100% {
+    color: violet;
+  }
+}

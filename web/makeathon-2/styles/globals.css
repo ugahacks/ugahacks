@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+* {
+  font-family: "Alata", sans-serif;
+}
+
+body {
+  margin: 0;
+  color: white;
+  overscroll-behavior: none;
+  overflow-x: hidden;
+  position: relative;
+}
+
+section {
+  position: relative;
+  z-index: 0;
+}
+
+svg {
+  z-index: 2;
+}
+
+.foot {
+  position: relative;
+  z-index: 5;
+}
+
+.content {
+  position: absolute;
+  z-index: 0;
+}

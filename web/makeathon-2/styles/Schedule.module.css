@@ -1,0 +1,183 @@
+.body {
+  background-image: linear-gradient(
+    180deg,
+    hsl(208deg 68% 33%) 0%,
+    hsl(208deg 68% 32%) 3%,
+    hsl(209deg 69% 31%) 7%,
+    hsl(210deg 69% 30%) 12%,
+    hsl(211deg 70% 28%) 18%,
+    hsl(212deg 70% 27%) 26%,
+    hsl(215deg 72% 25%) 36%,
+    hsl(217deg 74% 23%) 49%,
+    hsl(220deg 75% 21%) 67%,
+    hsl(223deg 76% 19%) 87%,
+    hsl(227deg 77% 17%) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 1000px;
+  overflow-x: hidden;
+}
+
+.schedule_header {
+  font-family: "Quicksand", "Alata", sans-serif;
+  font-size: 3.5em;
+  margin: 0 0 2% 1vw;
+  margin-bottom: 20px;
+  color: white; /* you can adjust this if you have a specific color in mind */
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px; /* Adjust for spacing */
+}
+
+.scheduleContent {
+  margin: 0 20px;
+  min-width: 150px; /* Adjust according to your needs */
+  text-align: center;
+}
+
+.sliderButton {
+  background: none;
+  border: none;
+  color: white; /* Adjust according to your needs */
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+.sliderButton:hover {
+  color: #666; /* Adjust according to your needs */
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40px; /* space between the dots */
+}
+
+.activeDot,
+.inactiveDot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.activeDot {
+  background-color: white;
+}
+
+.inactiveDot {
+  background-color: grey;
+}
+
+.content {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.tableContainer {
+  width: 100%;
+  margin-top: 20px;
+  overflow-x: auto; /* For responsiveness, especially if more columns or larger text are added */
+  display: flex;
+}
+
+.tableContainer table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableContainer th,
+.tableContainer td {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+/* Making borders transparent */
+.tableContainer th,
+.tableContainer td,
+.tableContainer tr {
+  border: none;
+}
+
+/* Optional: if you want to give a visual hint for rows */
+/* .tableContainer tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+} */
+
+.longTerm {
+  text-align: left;
+  padding: 5px 20px;
+}
+
+.dayContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 30px;
+}
+
+.cliff_left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.cliff_right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.fish1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-80%, -100%);
+}
+
+.fish2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-150%, -350%);
+}
+
+.dolphin1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(20%, 20%);
+}
+
+@media (max-device-width: 1229px) {
+  .dayContainer img {
+    display: none;
+  }
+
+  .cliff_left,
+  .cliff_right {
+    display: none;
+  }
+}
+
+@media (max-device-width: 750px) {
+  .body {
+    height: 1200px;
+  }
+}
+
+@media (max-device-width: 520px) {
+  .body {
+    height: 1400px;
+  }
+}
