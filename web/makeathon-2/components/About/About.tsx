@@ -90,7 +90,7 @@ function About() {
           </figure>
           <figure className={styles.tool}>
             <a
-              href="https://join.slack.com/t/ugamakes2/shared_invite/zt-22ojl9eg1-8f1Fao8s2VrQfcPKbRi1pg"
+              href="https://ugamakes2.slack.com/"
               target="_blank"
               rel="noreferrer"
             >
