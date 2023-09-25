@@ -6,7 +6,7 @@ import { loadFull } from "tsparticles";
 import { Engine } from "tsparticles-engine";
 import styles from "../../styles/Bubbles.module.css";
 import config from "./particles.json";
-
+// I like bubbles
 const BubblesAnimation = () => {
   const init = useCallback(async (engine: Engine) => {
     await loadFull(engine);
