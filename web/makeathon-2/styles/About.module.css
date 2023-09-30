@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@700&display=swap");
 
 .body {
   /* border: 1px solid red; */
@@ -9,12 +9,12 @@
     hsl(183deg 100% 41%) 29%,
     hsl(186deg 100% 41%) 43%,
     hsl(189deg 100% 41%) 57%,
-    hsl(192deg 100% 40%) 71%,
+    hsl(192, 100%, 40%) 71%,
     hsl(194deg 100% 39%) 86%,
-    hsl(200deg 64% 46%) 100%
+    hsl(200, 64%, 46%) 100%
   );
 
-  height: 120vh;
+  height: 1080px;
   overflow-x: hidden;
 }
 
@@ -56,7 +56,14 @@
   fill: #1b588d;
 }
 
-.sb1, .sb2, .sb3, .sb4, .sb5, .sb6, .sb7, .sb8 {
+.sb1,
+.sb2,
+.sb3,
+.sb4,
+.sb5,
+.sb6,
+.sb7,
+.sb8 {
   position: absolute;
   background: linear-gradient(rgba(191, 253, 255, 1), rgba(191, 253, 255, 0));
   height: 350px;
@@ -115,7 +122,8 @@
 }
 
 .about_text {
-  min-height: 100vh;
+  position: relative;
+  min-height: 900px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -123,6 +131,7 @@
   margin: 0 0 0 10vw;
   width: 50%;
   font-size: 1.3em;
+  z-index: 1;
 }
 
 .about_header {
@@ -151,11 +160,43 @@
   height: auto;
   margin: 0 0 0 0;
   text-align: center;
+  transition: transform 0.1s;
+}
+
+.tool:hover {
+  transform: scale(1.1);
 }
 
 .tool img {
   display: block;
   max-height: 8vw;
+}
+
+.flatCoral_left {
+  position: absolute;
+  left: 0;
+  transform: translateY(125%);
+  width: 300px;
+}
+
+.flatCoral_right1 {
+  position: absolute;
+  right: 0;
+  transform: translateY(80%);
+  width: 400px;
+}
+
+.flatCoral_right2 {
+  position: absolute;
+  right: 0;
+  transform: translateY(140%);
+  width: 300px;
+}
+
+.guppies {
+  position: absolute;
+  right: 0;
+  transform: translate(-90%, 80%);
 }
 
 @media only screen and (max-width: 1230px) {
@@ -165,5 +206,12 @@
 
   .tool img {
     max-height: 12vw;
+  }
+
+  .flatCoral_left,
+  .flatCoral_right1,
+  .flatCoral_right2,
+  .guppies {
+    display: none;
   }
 }

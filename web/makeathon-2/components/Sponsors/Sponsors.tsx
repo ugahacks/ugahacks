@@ -1,10 +1,21 @@
 import React from "react";
 import styles from "../../styles/Sponsors.module.css";
+import Image from "next/image";
+// import packet from "../../public/packets/UGAMakeathonSponsorshipPacket.pdf";
 
 function Sponsors() {
   return (
     <section className={styles.body}>
-      Sponsor
+      <img
+        className={styles.jellyfish}
+        src="./graphics/sponsorAssets/jellyfish.png"
+        alt="jellyfish"
+      />
+      <img
+        className={styles.cliff}
+        src="./graphics/sponsorAssets/sponsors cliff.png"
+        alt="cliff"
+      />
       <div className={styles.custom_shape_divider_top_1694381642}>
         <svg
           data-name="Layer 1"
@@ -18,6 +29,29 @@ function Sponsors() {
           ></path>
         </svg>
       </div>
+
+      <div className={styles.container}>
+        <h1 className={styles.heading}>Sponsors</h1>
+        <div className={styles.sponsor_logo_container}>
+          <img
+            className={styles.sponsor}
+            src="/graphics/sponsorAssets/devfest-2023.png"
+            alt="gdg-athens"
+          />
+        </div>
+        <div className={styles.flex_box}>
+          <div className={styles.button}>
+            {" "}
+            <a
+              href="/packets/UGAMakeathonSponsorshipPacket.pdf"
+              target="_blank"
+            >
+              Sponsorship Packet
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div className={styles.custom_shape_divider_bottom_1694379347}>
         <svg
           data-name="Layer 1"

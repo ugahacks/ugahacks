@@ -1,0 +1,10 @@
+.body {
+  background-color: rgba(0, 0, 0, 0);
+  height: 70%;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  overflow-y: hidden;
+  pointer-events: none;
+}

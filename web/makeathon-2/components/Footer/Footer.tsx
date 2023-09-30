@@ -50,7 +50,7 @@ function Footer() {
         </div>
         <div className={styles.subtitle}>
           <p>
-            designed and coded by{" "}
+            designed and coded by the{" "}
             <span className={styles.uh9_rainbow}>ugahacks 9 team</span>
           </p>
         </div>
