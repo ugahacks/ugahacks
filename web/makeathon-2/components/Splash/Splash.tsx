@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "../../styles/Splash.module.css";
 import Cloud from "./Cloud";
-import MakeathonLogo from "../../public/graphics/Makeathon Transparent Logo resize.png";
+import MakeathonLogo from "../../public/graphics/splashAssets/Makeathon Transparent Logo.png";
 
 // You may not know this, but I didn't pass geometry in highschool.
 // Anyway, here's how to make an overly complex circle in CSS
