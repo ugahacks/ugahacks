@@ -36,6 +36,7 @@ function Sponsors() {
           <a
             href="https://developers.google.com/community/devfest"
             target="_blank"
+            rel="noreferrer"
           >
             <img
               className={styles.sponsor}
@@ -44,7 +45,11 @@ function Sponsors() {
             />
           </a>
 
-          <a href="https://www.oreillyauto.com/" target="_blank">
+          <a
+            href="https://www.oreillyauto.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               className={styles.sponsor}
               src="/graphics/sponsorAssets/sponsors/oreilly.png"
