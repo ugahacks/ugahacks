@@ -4,17 +4,16 @@ import styles from "../../styles/Splash.module.css";
 import Cloud from "./Cloud";
 import MakeathonLogo from "../../public/graphics/splashAssets/Makeathon Transparent Logo.png";
 
-// You may not know this, but I didn't pass geometry in highschool.
-// Anyway, here's how to make an overly complex circle in CSS
-
 function Splash() {
-    const numClouds = Math.floor(Math.random() * 5) + 3; // Random number between 1 and 4
+    const numClouds = Math.floor(Math.random() * 3) + 3; // Random number between 1 and 4
     const cloudPositions = [];
     for (let i = 0; i < numClouds; i++) {
         let left, top;
+        left = (i / numClouds) * 70; // Position from left based on the number of clouds
         do {
-            left = Math.random() * 70; // Random position from left with 5% padding
-            top = Math.random() * 20; // Random position in the top quarter
+            //left = Math.random() * 70; // Random position from left with 5% padding
+            //top = Math.random() * 20; // Random position in the top quarter
+            top = Math.sin(4) * 10; // Random position in the top quarter with sine wave applied
         } while (
             cloudPositions.some(
                 (pos) =>
@@ -25,11 +24,11 @@ function Splash() {
         cloudPositions.push({ left, top });
     }
     const clouds = cloudPositions.map((pos, i) => (
-        <Cloud key={i} left={pos.left + 5} top={pos.top + 5} />
+        <Cloud key={i} left={pos.left + 10} top={pos.top + 5} />
     ));
     return (
         <section className={styles.body}>
-            <section>{clouds}</section>
+            {clouds}
             <div className={styles.container}>
                 <div className={styles.row}>
                     <img

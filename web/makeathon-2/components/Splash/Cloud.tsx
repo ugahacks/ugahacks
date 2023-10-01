@@ -1,5 +1,8 @@
 import React from "react";
 import styles from "../../styles/Splash.module.css";
+
+// You may not know this, but I didn't pass geometry in highschool.
+// Anyway, here's how to make an overly complex circle in CSS
 function Cloud({ left, top }) {
     const cloudSize = Math.random() * 100 + 50; // Random size between 50 and 150
     const cloudPosition = Math.random() * 20; // Random position in the top quarter

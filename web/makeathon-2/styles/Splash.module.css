@@ -85,6 +85,10 @@
   top: 0;
 }
 
+.cloud {
+  position: absolute;
+  background: linear-gradient(180deg, white 35%, grey, black);
+}
 @media only screen and (max-width: 700px) {
   .row > img {
     width: 300px;
