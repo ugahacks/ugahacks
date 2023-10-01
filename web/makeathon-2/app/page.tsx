@@ -7,17 +7,17 @@ import Footer from "../components/Footer";
 import Bubbles from "@/components/Bubbles/Bubbles";
 
 export default function Home() {
-  return (
-    <>
-      <Splash />
-      <About />
-      <Schedule />
-      <FAQ />
-      <Sponsors />
-      <Bubbles />
-      <div className="foot">
-        <Footer />
-      </div>
-    </>
-  );
+    return (
+        <>
+            <Splash />
+            <About />
+            <Schedule />
+            <FAQ />
+            <Sponsors />
+            <Bubbles />
+            <div className="foot">
+                <Footer />
+            </div>
+        </>
+    );
 }

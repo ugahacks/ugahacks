@@ -28,23 +28,33 @@ function Splash() {
         <Cloud key={i} left={pos.left + 5} top={pos.top + 5} />
     ));
     return (
-        <div className={styles.body}>
+        <section className={styles.body}>
             <section>{clouds}</section>
-            <span
-                style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "80vh",
-                }}
-            >
-                <Image
-                    src={MakeathonLogo}
-                    alt="Makeathon Logo"
-                    style={{ maxWidth: "33.33vw", height: "auto" }}
-                />
-            </span>
-        </div>
+            <div className={styles.container}>
+                <div className={styles.row}>
+                    <img
+                        src="/graphics/splashAssets/Makeathon Transparent Logo.png"
+                        alt="makeathon logo"
+                    />
+                </div>
+                <div className={styles.row + " " + styles.tagline}>
+                    Dive into a sea of possibilities
+                </div>
+                <div className={styles.row + " " + styles.loc}>
+                    Driftmier Engineering Center <br />
+                    October 21st-22nd
+                </div>
+                <div className={styles.row}>
+                    <a
+                        href="https://ugeorgia.ca1.qualtrics.com/jfe/form/SV_2t26cNywzPGm9bE"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <div className={styles.register}>REGISTER</div>
+                    </a>
+                </div>
+            </div>
+        </section>
     );
 }
 
