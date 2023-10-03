@@ -16,9 +16,9 @@
   );
   height: 1080px;
 }
-.contentBody {
-  max-height: 90vh;
-}
+/* .contentBody {
+  max-height: 400vh;
+} */
 .headingSponsor {
   margin: 40px;
   padding: 10px;
@@ -51,12 +51,14 @@
   justify-content: center;
 }
 .sponsorPacketButton {
+  position: relative;
   padding: 25px;
   border-radius: 20px;
   color: white;
   font-size: 20px;
   border: 4px solid white;
   background-color: rgba(255, 255, 255, 0.2);
+  z-index: 1;
 }
 .sponsorshipLink {
   color:white;
@@ -68,13 +70,14 @@
 }
 .coralContainer {
   position: absolute;
-  display: flex;
+  z-index: 6;
+  transform: translateY(820px);
+  /* display: flex; */
   overflow: hidden;
 }
 .coral1 {
   max-width: 200px;
   height: 100%;
-
 }
 .coral2 {
   max-width: 150px;
@@ -96,14 +99,14 @@
     max-width: 200px;
     height: 100%;
     margin-left: 550px;
-    z-index: 1;
+    /* z-index: 1; */
 }
-.cliff {
+/* .cliff {
   transform: translate(950px, -380px);
   max-width: 700px;
   height: 100%;
   z-index: 0;
-}
+} */
 .custom_shape_divider_bottom_1694379347 {
   position: absolute;
   bottom: 0;

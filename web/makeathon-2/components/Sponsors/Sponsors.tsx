@@ -45,13 +45,16 @@ function Sponsors() {
           <div className={styles.parentButtonContainer}>
             <button className={styles.sponsorPacketButton}>
               <a className={styles.sponsorshipLink}
-                href="../../public/packets/UGAMakeathonSponsorshipPacket.pdf"
-              >
+                href="../../public/packets/UGAMakeathonSponsorshipPacket.pdf">
                 Sponsorship Packet
               </a>
             </button>
           </div>
-          <div className={styles.coralContainer}>
+        
+          {/* <Image className={styles.cliff} src={CliffIcon} alt="Cliff Icon" /> */}
+        </div>
+      </div>
+      <div className={styles.coralContainer}>
             <Image className={styles.coral1} src={coral1} alt="coral1" />
             <Image className={styles.coral2} src={coral2} alt="coral2" />
             <Image className={styles.coral3} src={coral3} alt="coral3" />
@@ -59,10 +62,8 @@ function Sponsors() {
             <Image className={styles.coral5} src={coral5} alt="coral5" />
             <Image className={styles.coral6} src={coral6} alt="coral6" />
           </div>
-          <Image className={styles.cliff} src={CliffIcon} alt="Cliff Icon" />
-        </div>
-      </div>
       <div className={styles.custom_shape_divider_bottom_1694379347}>
+           
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
