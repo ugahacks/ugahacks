@@ -10,10 +10,12 @@ function Splash() {
     for (let i = 0; i < numClouds; i++) {
         let left, top;
         left = (i / numClouds) * 70; // Position from left based on the number of clouds
+        let flip: number = 1;
         do {
             //left = Math.random() * 70; // Random position from left with 5% padding
             //top = Math.random() * 20; // Random position in the top quarter
-            top = Math.sin(4) * 10; // Random position in the top quarter with sine wave applied
+            top = flip * (Math.sin(1) * 25 - 10); // Random position in the top quarter with sine wave applied
+            flip = flip * -1;
         } while (
             cloudPositions.some(
                 (pos) =>
