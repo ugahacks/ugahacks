@@ -46,6 +46,26 @@ function Sponsors() {
           </a>
 
           <a
+            href="https://engineering.uga.edu/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              className={styles.sponsor}
+              src="/graphics/sponsorAssets/sponsors/ugaengineering.png"
+              alt="uga engineering"
+            />
+          </a>
+
+          <a href="https://www.echo3d.com/" target="_blank" rel="noreferrer">
+            <img
+              className={styles.sponsor}
+              src="/graphics/sponsorAssets/sponsors/echo3d.png"
+              alt="echo 3d"
+            />
+          </a>
+
+          <a
             href="https://www.oreillyauto.com/"
             target="_blank"
             rel="noreferrer"

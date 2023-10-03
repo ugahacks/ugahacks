@@ -15,7 +15,7 @@
     hsl(0deg 0% 7%) 100%
   );
 
-  height: 900px;
+  height: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,7 +51,7 @@
   justify-content: center;
   align-items: center;
   gap: 60px;
-  width: 90vw;
+  width: 50vw;
   z-index: 1;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .button {
-  margin-top: 50px;
+  margin-top: 90px;
   border-radius: 20px;
   color: white;
   font-size: 20px;
@@ -87,8 +87,8 @@
 }
 
 .sponsor {
-  width: 400px;
-  max-width: 100%;
+  width: 300px;
+  /* max-width: 100%; */
 }
 
 .custom_shape_divider_bottom_1694379347 {
