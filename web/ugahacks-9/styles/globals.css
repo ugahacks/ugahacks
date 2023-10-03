@@ -1,0 +1,20 @@
+html {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(
+    248,
+    179,
+    46
+  ); /* Set the background color for the body */
+  overscroll-behavior: none;
+  background-image: url("/dots.svg"),
+    linear-gradient(
+      180deg,
+      rgba(248, 179, 46, 1) 0%,
+      rgba(255, 221, 156, 1) 100%
+    ); /* Set the background image for the body */
+}
