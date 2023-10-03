@@ -205,8 +205,12 @@
     width: 80%;
   }
 
+  .tool {
+    font-size: 1rem;
+  }
+
   .tool img {
-    max-height: 12vw;
+    max-height: 10vw;
   }
 
   .flatCoral_left,
