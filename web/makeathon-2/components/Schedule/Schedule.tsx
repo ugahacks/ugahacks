@@ -185,7 +185,7 @@ function Schedule() {
                     <td>1456</td>
                   </tr>
                   <tr>
-                    <td>Optional Expo</td>
+                    <td>Optional Exposition</td>
                     <td>6:00pm - 7:00pm</td>
                     <td>1350</td>
                   </tr>
