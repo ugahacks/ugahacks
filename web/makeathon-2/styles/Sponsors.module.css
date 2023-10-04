@@ -14,32 +14,39 @@
     hsl(275deg 26% 8%) 94%,
     hsl(0deg 0% 7%) 100%
   );
-  height: 1080px;
+    height: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    justify-content: center;
+    overflow-x: hidden;
+}
+.wholeContainer {
+  height: 1000px;
 }
 .contentBody {
-  transform: translateY(-120px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .pic {
   position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
 }
 .cliff {
   position: absolute;
-  transform: translate(1000px, 150px);
+    left: 100%;
+    top: 0;
   max-width: 900px;
-  height: 100%;
-  z-index: -3;
+  width: auto;
+  z-index: -1;
 }
-.coral6 {
+/* .coral6 {
   position: absolute;
   width: 220px;
   height: 166px;
-  transform: translate(1180px, 880px);
+  transform: translate(1180px, 900px);
   z-index: -1;
 } 
 .coralContainer {
@@ -54,34 +61,34 @@
 .coral1 {
   max-width: 220px;
   height: 100%;
-  transform: translateY(15px);
+  transform: translateY(25px);
 }
 
 .coral2 {
   max-width: 170px;
   height: 100%;
-  transform: translateY(-4px);
+  transform: translateY(14px);
 }
 
 .coral3 {
   max-width: 160px;
   height: 100%;
-  transform: translateY(5px);
+  transform: translateY(15px);
 }
 
 .coral4 {
   max-width: 115px;
   height: 100%;
-  transform: translateY(-16px);
+  transform: translateY(6px);
   overflow-x: hidden;
 }
 
 .coral5 {
   width: 140px;
   height: 100%;
-  transform: translateY(-20px);
+  transform: translateY(-10px);
   overflow-x: hidden;
-}
+} */
 .headingSponsor {
   margin: 40px;
   padding: 10px;
@@ -94,13 +101,16 @@
   z-index: -1;
 }
 .anglerfish {
-  max-width: 230px;
-  height: 100%;
-  margin-left: 40px;
-  transform: translate(800px, -200px);
+  position:absolute;
+  max-width: 350px;
+  max-height: 350px;
+  height: auto;
+  right: 5%;
+  transform: translateY(-50%);
   z-index: -1;
 }
 .sponsors_container {
+  /* transform: translateY(-120px); */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -126,6 +136,7 @@
 }
 
 .parentButtonContainer {
+  /* transform: translateY(-120px); */
   display: flex;
   justify-content: center;
 }
@@ -137,6 +148,7 @@
   font-size: 20px;
   border: 4px solid white;
   background-color: rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s;
 }
 .sponsorshipLink {
   color:white;
@@ -145,6 +157,10 @@
 .sponsorshipLink:hover  {
   color: white;
   text-decoration: underline;
+}
+.sponsorPacketButton:hover {
+    transform: scale(1.05);
+    transition: transform 0.1s;
 }
 
 .custom_shape_divider_bottom_1694379347 {
@@ -166,7 +182,7 @@
 }
 
 .custom_shape_divider_bottom_1694379347 .shape_fill {
-  fill: #111111;
+  fill: #000000;
 }
 
 .custom_shape_divider_top_1694381642 {
@@ -190,7 +206,7 @@
 .custom_shape_divider_top_1694381642 .shape_fill {
   fill: #0d101c;
 }
-
+/* 
 @media only screen and (max-width: 1230px) {
   .cliff,
   .jellyfish {
@@ -202,4 +218,4 @@
   .body {
     height: 1500px;
   }
-}
+} */
