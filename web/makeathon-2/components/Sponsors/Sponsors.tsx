@@ -32,12 +32,30 @@ function Sponsors() {
 
       <div className={styles.container}>
         <h1 className={styles.heading}>Sponsors</h1>
-        <div className={styles.sponsor_logo_container}>
-          <img
-            className={styles.sponsor}
-            src="/graphics/sponsorAssets/devfest-2023.png"
-            alt="gdg-athens"
-          />
+        <div className={styles.sponsor_container}>
+          <a
+            href="https://developers.google.com/community/devfest"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              className={styles.sponsor}
+              src="/graphics/sponsorAssets/sponsors/devfest.png"
+              alt="gdg-athens"
+            />
+          </a>
+
+          <a
+            href="https://www.oreillyauto.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              className={styles.sponsor}
+              src="/graphics/sponsorAssets/sponsors/oreilly.png"
+              alt="oreilly"
+            />
+          </a>
         </div>
         <div className={styles.flex_box}>
           <div className={styles.button}>
