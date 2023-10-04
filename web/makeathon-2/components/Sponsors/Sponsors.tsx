@@ -13,6 +13,10 @@ import coral3 from "../../public/graphics/sponsorAssets/sponsors coral 3.png";
 import coral4 from "../../public/graphics/sponsorAssets/sponsors coral 4.png";
 import coral5 from "../../public/graphics/sponsorAssets/sponsors coral 5.png";
 import coral6 from "../../public/graphics/sponsorAssets/sponsors coral 6.png";
+import devfest from "../../public/graphics/sponsorAssets/sponsors/devfest.png";
+import ugaEngineering from "../../public/graphics/sponsorAssets/sponsors/ugaengineering.png";
+import echo3d from "../../public/graphics/sponsorAssets/sponsors/echo3d.png";
+import oreilly from "../../public/graphics/sponsorAssets/sponsors/oreilly.png";
 
 function Sponsors() {
   return (
@@ -58,11 +62,7 @@ function Sponsors() {
               target="_blank"
               rel="noreferrer"
             >
-              <img
-                className={styles.sponsor_logo}
-                src="/graphics/sponsorAssets/sponsors/devfest.png"
-                alt="gdg-athens"
-              />
+              <Image className={styles.sponsor_logo} src={devfest} alt="devfest" />
             </a>
           </div>
           <div className={styles.sponsor_container}>
@@ -71,20 +71,12 @@ function Sponsors() {
               target="_blank"
               rel="noreferrer"
             >
-              <img
-                className={styles.sponsor_logo}
-                src="/graphics/sponsorAssets/sponsors/ugaengineering.png"
-                alt="uga engineering"
-              />
+               <Image className={styles.sponsor_logo} src={ugaEngineering} alt="ugaengineering" />
             </a>
           </div>
           <div className={styles.sponsor_container}>
             <a href="https://www.echo3d.com/" target="_blank" rel="noreferrer">
-              <img
-                className={styles.sponsor_logo}
-                src="/graphics/sponsorAssets/sponsors/echo3d.png"
-                alt="echo 3d"
-              />
+              <Image className={styles.sponsor_logo} src={echo3d} alt="echo3d" />
             </a>
           </div>
           <div className={styles.sponsor_container}>
@@ -93,11 +85,7 @@ function Sponsors() {
               target="_blank"
               rel="noreferrer"
             >
-              <img
-                className={styles.sponsor_logo}
-                src="/graphics/sponsorAssets/sponsors/oreilly.png"
-                alt="oreilly"
-              />
+              <Image className={styles.sponsor_logo} src={oreilly} alt="oreilly" />
             </a>
           </div>
         </div>
