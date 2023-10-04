@@ -51,9 +51,55 @@ function Sponsors() {
           alt="anglerfish"
         />
        
-        <div className={styles.sponsorsContainer}>
-          {/* add sponsors here */}
-          <Image className={styles.gdgSponsor} src={gdg} alt="gdg sponsor" />
+     <div className={styles.sponsors_container}>
+          <div className={styles.sponsor_container}>
+            <a
+              href="https://gdg.community.dev/events/details/google-gdg-athens-presents-gdg-athens-devfest-2023-x-ugahacks-makeathon-2-1/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className={styles.sponsor_logo}
+                src="/graphics/sponsorAssets/sponsors/devfest.png"
+                alt="gdg-athens"
+              />
+            </a>
+          </div>
+          <div className={styles.sponsor_container}>
+            <a
+              href="https://engineering.uga.edu/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className={styles.sponsor_logo}
+                src="/graphics/sponsorAssets/sponsors/ugaengineering.png"
+                alt="uga engineering"
+              />
+            </a>
+          </div>
+          <div className={styles.sponsor_container}>
+            <a href="https://www.echo3d.com/" target="_blank" rel="noreferrer">
+              <img
+                className={styles.sponsor_logo}
+                src="/graphics/sponsorAssets/sponsors/echo3d.png"
+                alt="echo 3d"
+              />
+            </a>
+          </div>
+          <div className={styles.sponsor_container}>
+            <a
+              href="https://www.oreillyauto.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className={styles.sponsor_logo}
+                src="/graphics/sponsorAssets/sponsors/oreilly.png"
+                alt="oreilly"
+              />
+            </a>
+          </div>
         </div>
         <div className={styles.parentButtonContainer}>
           <button className={styles.sponsorPacketButton}>

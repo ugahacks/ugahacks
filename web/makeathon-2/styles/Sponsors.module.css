@@ -93,9 +93,27 @@
   margin-left: 40px;
   transform: translate(800px, -200px);
 }
-.sponsorsContainer {
+.sponsors_container {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
+  flex-direction: row;
+  gap: 40px;
+  width: 70vw;
+}
+
+.sponsor_container>* {
+  flex: 1 1 350px;
+}
+
+.sponsor_logo {
+  width: 350px;
+  transition: transform 0.3s;
+}
+
+.sponsor_logo:hover {
+  transform: scale(1.15);
 }
 .gdgSponsor {
   max-width: 200px;
