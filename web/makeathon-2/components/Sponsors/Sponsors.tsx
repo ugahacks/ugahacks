@@ -17,6 +17,19 @@ import coral6 from "../../public/graphics/sponsorAssets/sponsors coral 6.png";
 function Sponsors() {
   return (
     <section className={styles.body}>
+      <div className={styles.pic}>
+        <Image className={styles.cliff} src={CliffIcon} alt="Cliff Icon" />
+          <Image className={styles.coral6} src={coral6} alt="coral6" />
+         <div className={styles.coralContainer}>
+            <Image className={styles.coral4} src={coral4} alt="coral4" />
+            <Image className={styles.coral2} src={coral2} alt="coral2" />
+            <Image className={styles.coral5} src={coral5} alt="coral5" />
+            <Image className={styles.coral3} src={coral3} alt="coral3" />
+            <Image className={styles.coral1} src={coral1} alt="coral1" />
+            
+          </div>
+      </div>
+      
       <div className={styles.custom_shape_divider_top_1694381642}>
         <svg
           data-name="Layer 1"
@@ -29,41 +42,32 @@ function Sponsors() {
             className={styles.shape_fill}
           ></path>
         </svg>
-        {/* where i put my work */}
-        <div className={styles.contentBody}>
-          <h2 className={styles.headingSponsor}>Sponsors</h2>
-          <Image className={styles.jellyfish} src={Jellyfish} alt="Jellyfish" />
-          <Image
-            className={styles.anglerfish}
-            src={anglerfish}
-            alt="anglerfish"
-          />
-          <div className={styles.sponsorsContainer}>
-            {/* add sponsors here */}
-            <Image className={styles.gdgSponsor} src={gdg} alt="gdg sponsor" />
-          </div>
-          <div className={styles.parentButtonContainer}>
-            <button className={styles.sponsorPacketButton}>
-              <a className={styles.sponsorshipLink}
-                href="../../public/packets/UGAMakeathonSponsorshipPacket.pdf">
-                Sponsorship Packet
-              </a>
-            </button>
-          </div>
         
-          {/* <Image className={styles.cliff} src={CliffIcon} alt="Cliff Icon" /> */}
+        <h2 className={styles.headingSponsor}>Sponsors</h2>
+        <Image className={styles.jellyfish} src={Jellyfish} alt="Jellyfish" />
+        <Image
+          className={styles.anglerfish}
+          src={anglerfish}
+          alt="anglerfish"
+        />
+       
+        <div className={styles.sponsorsContainer}>
+          {/* add sponsors here */}
+          <Image className={styles.gdgSponsor} src={gdg} alt="gdg sponsor" />
+        </div>
+        <div className={styles.parentButtonContainer}>
+          <button className={styles.sponsorPacketButton}>
+            <a
+              className={styles.sponsorshipLink}
+              href="../../public/packets/UGAMakeathonSponsorshipPacket.pdf"
+            >
+              Sponsorship Packet
+            </a>
+          </button>
         </div>
       </div>
-      <div className={styles.coralContainer}>
-            <Image className={styles.coral1} src={coral1} alt="coral1" />
-            <Image className={styles.coral2} src={coral2} alt="coral2" />
-            <Image className={styles.coral3} src={coral3} alt="coral3" />
-            <Image className={styles.coral4} src={coral4} alt="coral4" />
-            <Image className={styles.coral5} src={coral5} alt="coral5" />
-            <Image className={styles.coral6} src={coral6} alt="coral6" />
-          </div>
+     
       <div className={styles.custom_shape_divider_bottom_1694379347}>
-           
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
