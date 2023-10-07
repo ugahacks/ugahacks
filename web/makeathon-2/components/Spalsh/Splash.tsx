@@ -15,6 +15,17 @@ function Splash() {
         src="/graphics/splashAssets/cloud_right.png"
         alt="cloud"
       />
+      <img
+        className={styles.cloud_island}
+        src="/graphics/splashAssets/cloud_right.png"
+        alt="cloud"
+      />
+      <img
+        className={styles.island}
+        src="/graphics/splashAssets/island.png"
+        alt="island"
+      />
+
       <div className={styles.container}>
         <div className={styles.row}>
           <img
