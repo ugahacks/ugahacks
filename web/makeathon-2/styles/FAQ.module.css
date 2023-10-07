@@ -123,7 +123,7 @@
   padding-bottom: 30px;
 }
 
-@media (max-device-width: 1229px) {
+@media (max-width: 1229px) {
   .faq_content img {
     display: none;
   }
@@ -137,7 +137,7 @@
   }
 }
 
-@media (max-device-width: 521px) {
+@media (max-width: 521px) {
   .question h1 {
     font-size: 15px;
   }
