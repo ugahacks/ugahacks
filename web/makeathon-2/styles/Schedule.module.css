@@ -157,6 +157,7 @@
   top: 0;
   left: 0;
   transform: translate(20%, 20%);
+  z-index: -1;
 }
 
 @media (max-device-width: 1229px) {
@@ -173,6 +174,10 @@
 @media (max-device-width: 750px) {
   .body {
     height: 1200px;
+  }
+
+  .dayContainer {
+    display: none;
   }
 }
 
