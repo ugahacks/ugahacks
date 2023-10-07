@@ -71,24 +71,24 @@ function Schedule() {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Event Check In</td>
+                    <td>Event Check-in</td>
                     <td>9:00am - 10:30am</td>
-                    <td>TBD</td>
+                    <td>East Commons</td>
                   </tr>
                   <tr>
                     <td>Breakfast</td>
-                    <td>9:00am - 10:00am</td>
+                    <td>9:00am - 10:30am</td>
                     <td>East Commons</td>
                   </tr>
                   <tr>
                     <td>Opening Ceremony</td>
                     <td>10:30am - 11:00am</td>
-                    <td>Room A</td>
+                    <td>1453</td>
                   </tr>
                   <tr>
                     <td>First Time Makers</td>
                     <td>11:00am - 12:00pm</td>
-                    <td>Room B</td>
+                    <td>1456</td>
                   </tr>
                   <tr>
                     <td>Lunch</td>
@@ -96,34 +96,39 @@ function Schedule() {
                     <td>East Commons</td>
                   </tr>
                   <tr>
-                    <td>Arduino Workshop</td>
-                    <td>12:00pm - 1:00pm</td>
-                    <td>Room C</td>
-                  </tr>
-                  <tr>
-                    <td>Chill Space (Games)</td>
-                    <td>1:00pm - 8:30pm</td>
-                    <td>TBD</td>
+                    <td>Chill Space</td>
+                    <td>1:00pm - 8:00pm</td>
+                    <td>1401</td>
                   </tr>
                   <tr>
                     <td>Painting Workshop</td>
-                    <td>1:00pm - 8:30pm</td>
-                    <td>TBD</td>
+                    <td>1:00pm - 8:00pm</td>
+                    <td>1350</td>
                   </tr>
                   <tr>
-                    <td>3D Modeling Workshop</td>
+                    <td>Arduino</td>
                     <td>1:00pm - 2:00pm</td>
-                    <td>Room D</td>
+                    <td>1456</td>
                   </tr>
                   <tr>
-                    <td>Sustainable Making Workshop</td>
+                    <td>3D Printing</td>
                     <td>2:00pm - 3:00pm</td>
-                    <td>Room E</td>
+                    <td>1405</td>
                   </tr>
                   <tr>
-                    <td>GDG Workshop #1 - Internet of Things</td>
+                    <td>Sustainable Making Workshop + GDG</td>
                     <td>3:00pm - 4:00pm</td>
-                    <td>Room F</td>
+                    <td>1456</td>
+                  </tr>
+                  <tr>
+                    <td>GDG Workshop #1- Internet of Things</td>
+                    <td>4:00pm - 5:00pm</td>
+                    <td>1405</td>
+                  </tr>
+                  <tr>
+                    <td>SASE</td>
+                    <td>5:00pm - 6:00pm</td>
+                    <td>1456</td>
                   </tr>
                   <tr>
                     <td>Dinner</td>
@@ -131,7 +136,7 @@ function Schedule() {
                     <td>East Commons</td>
                   </tr>
                   <tr>
-                    <td>End of day</td>
+                    <td>End of Day</td>
                     <td>9:00pm</td>
                     <td>East Commons</td>
                   </tr>
@@ -170,14 +175,14 @@ function Schedule() {
                     <td>East Commons</td>
                   </tr>
                   <tr>
-                    <td>GDG Workshop #2 - Sustainability with AI</td>
+                    <td>GDG Workshop #2 - Intro to GCP</td>
                     <td>10:00am - 11:00am</td>
-                    <td>Room A</td>
+                    <td>1456</td>
                   </tr>
                   <tr>
                     <td>Recycled Roller Coaster</td>
-                    <td>11:00am - 12:00pm</td>
-                    <td>Room B</td>
+                    <td>11:00am - 12:00am</td>
+                    <td>1290</td>
                   </tr>
                   <tr>
                     <td>Lunch</td>
@@ -185,39 +190,44 @@ function Schedule() {
                     <td>East Commons</td>
                   </tr>
                   <tr>
+                    <td>Chill Space</td>
+                    <td>1:00pm - 6:00pm</td>
+                    <td>1401</td>
+                  </tr>
+                  <tr>
                     <td>Egg Drop</td>
-                    <td>12:00pm - 1:00pm</td>
-                    <td>Room C</td>
+                    <td>1:00pm - 2:00pm</td>
+                    <td>1290</td>
                   </tr>
                   <tr>
-                    <td>Chill Space (Games)</td>
-                    <td>1:00pm - 8:30pm</td>
-                    <td>TBD</td>
-                  </tr>
-                  <tr>
-                    <td>Painting Workshop</td>
-                    <td>1:00pm - 8:30pm</td>
-                    <td>TBD</td>
+                    <td>SSRL: Antenna Workshop</td>
+                    <td>2:00pm - 3:00pm</td>
+                    <td>1456</td>
                   </tr>
                   <tr>
                     <td>Recycled Sailboat</td>
-                    <td>1:00pm - 2:00pm</td>
-                    <td>Room D</td>
-                  </tr>
-                  <tr>
-                    <td>Beyond the Makeathon Workshop</td>
-                    <td>2:00pm - 3:00pm</td>
-                    <td>Room E</td>
-                  </tr>
-                  <tr>
-                    <td>Optional Expo</td>
                     <td>3:00pm - 4:00pm</td>
-                    <td>Room F</td>
+                    <td>1290</td>
+                  </tr>
+                  <tr>
+                    <td>Beyond the Makeathon</td>
+                    <td>5:00pm - 6:00pm</td>
+                    <td>1456</td>
+                  </tr>
+                  <tr>
+                    <td>Judging + Submission Deadline</td>
+                    <td>6:00pm</td>
+                    <td>Devpost</td>
+                  </tr>
+                  <tr>
+                    <td>Project Expo</td>
+                    <td>6:30pm - 8:00pm</td>
+                    <td>East Commons</td>
                   </tr>
                   <tr>
                     <td>Closing Ceremony</td>
                     <td>8:00pm - 9:00pm</td>
-                    <td>Room G</td>
+                    <td>1453</td>
                   </tr>
                 </tbody>
               </table>

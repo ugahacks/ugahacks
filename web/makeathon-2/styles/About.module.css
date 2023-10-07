@@ -34,6 +34,7 @@
   display: block;
   width: calc(149% + 1.3px);
   height: 190px;
+  margin-bottom: -5px;
 }
 
 .custom_shape_divider_bottom_1694366369 {
@@ -204,8 +205,12 @@
     width: 80%;
   }
 
+  .tool {
+    font-size: 1rem;
+  }
+
   .tool img {
-    max-height: 12vw;
+    max-height: 10vw;
   }
 
   .flatCoral_left,
