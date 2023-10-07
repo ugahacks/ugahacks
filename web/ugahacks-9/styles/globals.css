@@ -1,20 +1,46 @@
 html {
-  min-height: 100%;
   padding: 0;
   margin: 0;
 }
 
 body {
-  background-color: rgb(
-    248,
-    179,
-    46
-  ); /* Set the background color for the body */
+  background-color: rgb(248, 179, 46);
   overscroll-behavior: none;
-  background-image: url("/dots.svg"),
+  background: url("/panel1.png") 4vw 4vh no-repeat,
+    url("/panel0.png") 1vw 1vh no-repeat,
     linear-gradient(
       180deg,
       rgba(248, 179, 46, 1) 0%,
       rgba(255, 221, 156, 1) 100%
-    ); /* Set the background image for the body */
+    );
+  background-size: 95vw 95vh, 95vw 90vh, 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  /* Houses the main content of each page (i.e. navbar, text, etc.) */
+  background-image: linear-gradient(
+    180deg,
+    hsl(0deg 0% 0%) 0%,
+    hsl(274deg 100% 11%) 9%,
+    hsl(275deg 100% 12%) 18%,
+    hsl(277deg 97% 14%) 27%,
+    hsl(278deg 87% 16%) 36%,
+    hsl(278deg 87% 16%) 45%,
+    hsl(278deg 87% 16%) 55%,
+    hsl(278deg 87% 16%) 64%,
+    hsl(304deg 100% 16%) 73%,
+    hsl(326deg 100% 25%) 82%,
+    hsl(339deg 93% 32%) 91%,
+    hsl(5deg 65% 43%) 100%
+  );
+
+  width: 93vw;
+  height: 92vh;
+  border: 5px black solid;
+  margin-top: 2vh;
+  color: white;
 }
