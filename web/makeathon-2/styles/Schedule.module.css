@@ -143,6 +143,7 @@
   bottom: 0;
   right: 0;
   transform: translate(-80%, -100%);
+  z-index: -1;
 }
 
 .fish2 {
@@ -150,6 +151,7 @@
   bottom: 0;
   right: 0;
   transform: translate(-150%, -350%);
+  z-index: -1;
 }
 
 .dolphin1 {
@@ -160,7 +162,7 @@
   z-index: -1;
 }
 
-@media (max-device-width: 1229px) {
+@media screen and (max-width: 1229px) {
   .dayContainer img {
     display: none;
   }
@@ -171,9 +173,9 @@
   }
 }
 
-@media (max-device-width: 750px) {
+@media screen and (max-width: 750px) {
   .body {
-    height: 1200px;
+    height: 1300px;
   }
 
   .dayContainer {
@@ -181,7 +183,7 @@
   }
 }
 
-@media (max-device-width: 520px) {
+@media screen and (max-width: 520px) {
   .body {
     height: 1400px;
   }
