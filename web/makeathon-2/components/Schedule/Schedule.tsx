@@ -71,8 +71,18 @@ function Schedule() {
                 </thead>
                 <tbody>
                   <tr>
+                    <td>Event Check-in</td>
+                    <td>9:00am - 10:30am</td>
+                    <td>East Commons</td>
+                  </tr>
+                  <tr>
+                    <td>Breakfast</td>
+                    <td>9:00am - 10:30am</td>
+                    <td>East Commons</td>
+                  </tr>
+                  <tr>
                     <td>Opening Ceremony</td>
-                    <td>9:00am - 11:00am</td>
+                    <td>10:30am - 11:00am</td>
                     <td>1453</td>
                   </tr>
                   <tr>
@@ -86,39 +96,49 @@ function Schedule() {
                     <td>East Commons</td>
                   </tr>
                   <tr>
-                    <td>Chill Space (Games)</td>
-                    <td>1:00pm - 8:30pm</td>
+                    <td>Chill Space</td>
+                    <td>1:00pm - 8:00pm</td>
                     <td>1401</td>
                   </tr>
                   <tr>
                     <td>Painting Workshop</td>
-                    <td>1:00pm - 8:30pm</td>
+                    <td>1:00pm - 8:00pm</td>
                     <td>1350</td>
                   </tr>
                   <tr>
-                    <td>Arduino Workshop</td>
+                    <td>Arduino</td>
                     <td>1:00pm - 2:00pm</td>
                     <td>1456</td>
                   </tr>
                   <tr>
-                    <td>3D Modeling Workshop</td>
+                    <td>3D Printing</td>
                     <td>2:00pm - 3:00pm</td>
                     <td>1405</td>
                   </tr>
                   <tr>
-                    <td>Sustainable Making Workshop</td>
-                    <td>4:00pm - 5:00pm</td>
+                    <td>Sustainable Making Workshop + GDG</td>
+                    <td>3:00pm - 4:00pm</td>
                     <td>1456</td>
                   </tr>
                   <tr>
-                    <td>GDG Workshop #1 - Internet of Things</td>
+                    <td>GDG Workshop #1- Internet of Things</td>
+                    <td>4:00pm - 5:00pm</td>
+                    <td>1405</td>
+                  </tr>
+                  <tr>
+                    <td>SASE</td>
                     <td>5:00pm - 6:00pm</td>
                     <td>1456</td>
                   </tr>
                   <tr>
-                    <td>GDG Workshop #2 - Sustainability with AI</td>
-                    <td>7:00pm - 8:00pm</td>
-                    <td>1456</td>
+                    <td>Dinner</td>
+                    <td>6:00pm - 7:00pm</td>
+                    <td>East Commons</td>
+                  </tr>
+                  <tr>
+                    <td>End of Day</td>
+                    <td>9:00pm</td>
+                    <td>East Commons</td>
                   </tr>
                 </tbody>
               </table>
@@ -150,24 +170,29 @@ function Schedule() {
                 </thead>
                 <tbody>
                   <tr>
+                    <td>Breakfast</td>
+                    <td>9:00am - 10:00am</td>
+                    <td>East Commons</td>
+                  </tr>
+                  <tr>
+                    <td>GDG Workshop #2 - Intro to GCP</td>
+                    <td>10:00am - 11:00am</td>
+                    <td>1456</td>
+                  </tr>
+                  <tr>
                     <td>Recycled Roller Coaster</td>
-                    <td>10:00am - 11:00pm</td>
+                    <td>11:00am - 12:00am</td>
                     <td>1290</td>
                   </tr>
                   <tr>
                     <td>Lunch</td>
-                    <td>11:00pm - 1:00pm</td>
+                    <td>12:00pm - 1:00pm</td>
                     <td>East Commons</td>
                   </tr>
                   <tr>
-                    <td>Chill Space (Games)</td>
-                    <td>1:00pm - 8:30pm</td>
+                    <td>Chill Space</td>
+                    <td>1:00pm - 6:00pm</td>
                     <td>1401</td>
-                  </tr>
-                  <tr>
-                    <td>Painting Workshop</td>
-                    <td>1:00pm - 8:30pm</td>
-                    <td>1350</td>
                   </tr>
                   <tr>
                     <td>Egg Drop</td>
@@ -175,19 +200,29 @@ function Schedule() {
                     <td>1290</td>
                   </tr>
                   <tr>
+                    <td>SSRL: Antenna Workshop</td>
+                    <td>2:00pm - 3:00pm</td>
+                    <td>1456</td>
+                  </tr>
+                  <tr>
                     <td>Recycled Sailboat</td>
                     <td>3:00pm - 4:00pm</td>
                     <td>1290</td>
                   </tr>
                   <tr>
-                    <td>Beyond the Makeathon Workshop and Guest Speakers</td>
+                    <td>Beyond the Makeathon</td>
                     <td>5:00pm - 6:00pm</td>
                     <td>1456</td>
                   </tr>
                   <tr>
-                    <td>Optional Exposition</td>
-                    <td>6:00pm - 7:00pm</td>
-                    <td>1350</td>
+                    <td>Judging + Submission Deadline</td>
+                    <td>6:00pm</td>
+                    <td>Devpost</td>
+                  </tr>
+                  <tr>
+                    <td>Project Expo</td>
+                    <td>6:30pm - 8:00pm</td>
+                    <td>East Commons</td>
                   </tr>
                   <tr>
                     <td>Closing Ceremony</td>
