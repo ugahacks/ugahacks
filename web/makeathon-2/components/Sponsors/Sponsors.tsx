@@ -60,6 +60,15 @@ function Sponsors() {
             </a>
           </div>
           <div className={styles.sponsor_container}>
+            <a href="https://www.echo3d.com/" target="_blank" rel="noreferrer">
+              <img
+                className={styles.sponsor_logo}
+                src="/graphics/sponsorAssets/sponsors/echo3d.png"
+                alt="echo 3d"
+              />
+            </a>
+          </div>
+          <div className={styles.sponsor_container}>
             <a
               href="https://www.oreillyauto.com/"
               target="_blank"
