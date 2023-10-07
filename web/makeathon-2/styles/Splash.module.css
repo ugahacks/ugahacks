@@ -77,12 +77,30 @@
   left: 0;
   top: 0;
   transform: translateY(30%);
+  width: 50vw;
 }
 
 .cloud_right {
   position: absolute;
   right: 0;
   top: 0;
+  width: 50vw;
+}
+
+.cloud_island {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(25%, -45%);
+  width: 50vw;
+}
+
+.island {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateX(25%);
+  width: 50vw;
 }
 
 @media only screen and (max-width: 700px) {
@@ -100,6 +118,6 @@
 
   .cloud_left,
   .cloud_right {
-    display: none;
+    /* display: none; */
   }
 }
