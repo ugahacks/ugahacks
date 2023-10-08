@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../styles/Sponsors.module.css";
 import Image from "next/image";
-// import packet from "../../public/packets/UGAMakeathonSponsorshipPacket.pdf";
+// import packet from "../../public/packets/UGAMakeathonSponsorshipPacket";
 
 import CliffIcon from "../../public/graphics/sponsorAssets/sponsors cliff.png";
 import Jellyfish from "../../public/graphics/sponsorAssets/jellyfish.png";
@@ -114,7 +114,7 @@ function Sponsors() {
               <button className={styles.sponsorPacketButton}>
                 <a
                   className={styles.sponsorshipLink}
-                  href="../../public/packets/UGAMakeathonSponsorshipPacket.pdf"
+                  href="/packets/UGAMakeathonSponsorshipPacket.pdf"
                 >
                   Sponsorship Packet
                 </a>
