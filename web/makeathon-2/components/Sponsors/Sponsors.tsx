@@ -22,17 +22,17 @@ function Sponsors() {
   return (
     <section className={styles.body}>
       <div className={styles.pic}>
-          <Image className={styles.cliff} src={CliffIcon} alt="Cliff Icon" />
-             <Image className={styles.coral6} src={coral6} alt="coral6" />
+        <Image className={styles.cliff} src={CliffIcon} alt="Cliff Icon" />
+        <Image className={styles.coral6} src={coral6} alt="coral6" />
         <div className={styles.coralContainer}>
-              <Image className={styles.coral3} src={coral3} alt="coral3" />
-        
+          <Image className={styles.coral3} src={coral3} alt="coral3" />
+
           <Image className={styles.coral5} src={coral5} alt="coral5" />
-        <Image className={styles.coral2} src={coral2} alt="coral2" />
-           <Image className={styles.coral4} src={coral4} alt="coral4" />
+          <Image className={styles.coral2} src={coral2} alt="coral2" />
+          <Image className={styles.coral4} src={coral4} alt="coral4" />
           <Image className={styles.coral1} src={coral1} alt="coral1" />
         </div>
-          </div>
+      </div>
       <div className={styles.custom_shape_divider_top_1694381642}>
         <svg
           data-name="Layer 1"
@@ -47,7 +47,6 @@ function Sponsors() {
           ></path>
         </svg>
         <div className={styles.Wholecontainer}>
-          
           <h2 className={styles.headingSponsor}>Sponsors</h2>
           <Image className={styles.jellyfish} src={Jellyfish} alt="Jellyfish" />
           <Image

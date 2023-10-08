@@ -14,13 +14,13 @@
     hsl(275deg 26% 8%) 94%,
     hsl(0deg 0% 7%) 100%
   );
-    height: 1100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    justify-content: center;
-    overflow: hidden;
+  height: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  justify-content: center;
+  overflow: hidden;
 }
 .wholeContainer {
   height: 1000px;
@@ -48,7 +48,7 @@
   height: auto;
   transform: translate(180%, 210%);
   z-index: 1;
-} 
+}
 .coralContainer {
   position: absolute;
   /* top: 0; */
@@ -102,7 +102,7 @@
   z-index: -1;
 }
 .anglerfish {
-  position:absolute;
+  position: absolute;
   max-width: 350px;
   max-height: 350px;
   height: auto;
@@ -122,7 +122,7 @@
   margin-bottom: 60px;
 }
 
-.sponsor_container>* {
+.sponsor_container > * {
   flex: 1 1 350px;
 }
 
@@ -152,16 +152,16 @@
   transition: transform 0.3s;
 }
 .sponsorshipLink {
-  color:white;
+  color: white;
   text-decoration: none;
 }
-.sponsorshipLink:hover  {
+.sponsorshipLink:hover {
   color: white;
   text-decoration: underline;
 }
 .sponsorPacketButton:hover {
-    transform: scale(1.05);
-    transition: transform 0.1s;
+  transform: scale(1.05);
+  transition: transform 0.1s;
 }
 
 .custom_shape_divider_bottom_1694379347 {
