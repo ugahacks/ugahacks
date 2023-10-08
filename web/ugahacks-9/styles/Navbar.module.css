@@ -1,0 +1,64 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 48px;
+  height: 50px;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.icon:hover,
+.icon:focus {
+  transform: scale(1.15);
+}
+
+.navlink {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  cursor: pointer;
+  /* transition: transform 0.3s; */
+  transition: all 0.3s;
+}
+
+.navlink:hover,
+.navlink:focus,
+.social_icon:hover,
+.social_icon:focus {
+  transform: scale(1.15);
+  color: #e6685d;
+}
+
+.middle {
+  flex: 1;
+  text-align: center;
+}
+
+.logo {
+  width: 250px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.social_icon {
+  margin-left: 10px;
+  color: white;
+  transition: all 0.3s;
+}

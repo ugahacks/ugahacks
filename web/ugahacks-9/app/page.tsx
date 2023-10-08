@@ -1,9 +1,11 @@
-import Hello from "@/components/Hello";
+// import Hello from "@/components/Hello";
+
+import Navbar from "@/components/Navbar/Navbar";
 
 export default function Home() {
   return (
-    <>
-      <Hello />
-    </>
+    <div className="main">
+      <Navbar />
+    </div>
   );
 }
