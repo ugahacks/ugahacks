@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../../styles/Sponsors.module.css";
 import Image from "next/image";
-// import packet from "../../public/packets/UGAMakeathonSponsorshipPacket";
 
 import CliffIcon from "../../public/graphics/sponsorAssets/sponsors cliff.png";
 import Jellyfish from "../../public/graphics/sponsorAssets/jellyfish.png";
