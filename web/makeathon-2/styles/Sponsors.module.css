@@ -20,7 +20,7 @@
     align-items: center;
     margin: 0;
     justify-content: center;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .wholeContainer {
   height: 1000px;
@@ -36,25 +36,26 @@
 }
 .cliff {
   position: absolute;
-    left: 100%;
-    top: 0;
-  max-width: 900px;
-  width: auto;
+  max-width: 850px;
   z-index: -1;
+  height: auto;
+  transform: translate(25%, -15%);
 }
-/* .coral6 {
+
+.coral6 {
   position: absolute;
-  width: 220px;
-  height: 166px;
-  transform: translate(1180px, 900px);
-  z-index: -1;
+  max-width: 220px;
+  height: auto;
+  transform: translate(180%, 210%);
+  z-index: 1;
 } 
 .coralContainer {
   position: absolute;
-  z-index: 3;
-  transform: translateY(840px);
-  width: 820px;
+  /* top: 0; */
+  right: 0;
+  width: 860px;
   overflow: hidden;
+  transform: translate(10%, 120%);
   z-index: -1;
 }
 
@@ -65,7 +66,7 @@
 }
 
 .coral2 {
-  max-width: 170px;
+  max-width: 180px;
   height: 100%;
   transform: translateY(14px);
 }
@@ -73,22 +74,22 @@
 .coral3 {
   max-width: 160px;
   height: 100%;
-  transform: translateY(15px);
+  transform: translateY(40px);
 }
 
 .coral4 {
-  max-width: 115px;
+  max-width: 130px;
   height: 100%;
-  transform: translateY(6px);
+  transform: translateY(-10px);
   overflow-x: hidden;
 }
 
 .coral5 {
-  width: 140px;
+  width: 150px;
   height: 100%;
-  transform: translateY(-10px);
+  transform: translateY(10px);
   overflow-x: hidden;
-} */
+}
 .headingSponsor {
   margin: 40px;
   padding: 10px;
@@ -110,7 +111,7 @@
   z-index: -1;
 }
 .sponsors_container {
-  /* transform: translateY(-120px); */
+  transform: translateY(-100px);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -136,7 +137,7 @@
 }
 
 .parentButtonContainer {
-  /* transform: translateY(-120px); */
+  transform: translateY(-100px);
   display: flex;
   justify-content: center;
 }
