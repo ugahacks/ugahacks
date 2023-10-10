@@ -212,7 +212,8 @@
   .tool img {
     max-height: 10vw;
   }
-
+}
+@media only screen and (max-width: 768px) {
   .flatCoral_left,
   .flatCoral_right1,
   .flatCoral_right2,
