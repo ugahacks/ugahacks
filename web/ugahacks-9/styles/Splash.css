@@ -1,0 +1,15 @@
+/* Splash.css */
+.splash-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh; /* taking the full viewport height */
+}
+
+.splash-image {
+  max-width: 100%; /* making sure image doesn’t overflow */
+  height: auto;
+  width: auto; /* maintaining aspect ratio */
+  height: 82.5%
+
+}
