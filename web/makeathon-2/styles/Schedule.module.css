@@ -107,6 +107,8 @@
 .tableContainer td,
 .tableContainer tr {
   border: none;
+  position: relative;
+  z-index: 2;
 }
 
 /* Optional: if you want to give a visual hint for rows */
@@ -130,12 +132,14 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  z-index: 1;
 }
 
 .cliff_right {
   position: absolute;
   right: 0;
   bottom: 0;
+  z-index: 1;
 }
 
 .fish1 {
