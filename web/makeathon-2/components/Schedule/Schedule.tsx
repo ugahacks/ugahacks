@@ -126,11 +126,6 @@ function Schedule() {
                     <td>1405</td>
                   </tr>
                   <tr>
-                    <td>SASE</td>
-                    <td>5:00pm - 6:00pm</td>
-                    <td>1456</td>
-                  </tr>
-                  <tr>
                     <td>Dinner</td>
                     <td>6:00pm - 7:00pm</td>
                     <td>East Commons</td>
