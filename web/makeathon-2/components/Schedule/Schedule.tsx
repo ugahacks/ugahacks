@@ -103,7 +103,7 @@ function Schedule() {
                   <tr>
                     <td>Painting Workshop</td>
                     <td>1:00pm - 8:00pm</td>
-                    <td>1350</td>
+                    <td>1460</td>
                   </tr>
                   <tr>
                     <td>Arduino</td>
