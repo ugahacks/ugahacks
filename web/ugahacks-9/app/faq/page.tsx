@@ -1,11 +1,12 @@
-// import Hello from "@/components/Hello";
-
+import React from "react";
 import Navbar from "@/components/Navbar/Navbar";
 
-export default function Home() {
+function FAQ() {
   return (
     <div className="main">
       <Navbar />
     </div>
   );
 }
+
+export default FAQ;
