@@ -32,8 +32,8 @@
   text-decoration: none;
   margin-left: 20px;
   cursor: pointer;
-  /* transition: transform 0.3s; */
   transition: all 0.3s;
+  white-space: nowrap; /* Add this line */
 }
 
 .navlink:hover,
@@ -62,4 +62,25 @@
   margin-left: 10px;
   color: white;
   transition: all 0.1s;
+}
+@media (max-width: 980px) {
+  .logo {
+    display: none;
+  }
+}
+@media (max-width: 980px) {
+  .navbar {
+    justify-content: center;
+  }
+  .middle {
+    flex: 0;
+  }
+  .logo {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .right {
+    display: none;
+  }
 }
