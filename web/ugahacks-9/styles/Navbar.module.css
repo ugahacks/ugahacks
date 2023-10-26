@@ -25,8 +25,15 @@
 .icon:focus {
   transform: scale(1.15);
 }
-
-.navlink {
+.activeLink {
+  color: #e6685d;
+  text-decoration: none;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap; /* Add this line */
+}
+.navLink {
   color: white;
   text-decoration: none;
   margin-left: 20px;
@@ -35,8 +42,8 @@
   white-space: nowrap; /* Add this line */
 }
 
-.navlink:hover,
-.navlink:focus,
+.navLink:hover,
+.navLink:focus,
 .social_icon:hover,
 .social_icon:focus {
   transform: scale(1.15);
