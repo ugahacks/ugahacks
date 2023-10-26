@@ -1,6 +1,7 @@
 /* Navbar.css */
 .navbar {
   display: flex;
+  font-size: 18px;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -26,12 +27,17 @@
   transform: scale(1.15);
 }
 .activeLink {
-  color: #e6685d;
+  color: white;
   text-decoration: none;
   margin-left: 20px;
   cursor: pointer;
   transition: all 0.3s;
   white-space: nowrap; /* Add this line */
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #B63427;
+  transition: background-color 0.3s;
 }
 .navLink {
   color: white;
@@ -77,6 +83,7 @@
 @media (max-width: 980px) {
   .navbar {
     justify-content: center;
+    font-size: 14px;
   }
   .middle {
     flex: 0;
