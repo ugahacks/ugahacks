@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/Navbar.module.css";
+import { usePathname } from "next/navigation";
 
 import {
   BsFacebook,
@@ -22,8 +24,13 @@ interface NavReactIconProps {
 }
 
 const NavLink = (props: NavLinkProps) => {
+  const pathname = usePathname();
+  const isActive = pathname === props.href;
   return (
-    <Link className={styles.navlink} href={props.href}>
+    <Link
+      className={isActive ? styles.activeLink : styles.navLink}
+      href={props.href}
+    >
       {props.name}
     </Link>
   );
