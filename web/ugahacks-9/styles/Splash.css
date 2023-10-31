@@ -1,15 +1,49 @@
 /* Splash.css */
+@font-face {
+  font-family: 'Action Comics Black';
+  src: url('../public/fonts/Action\ Comics\ Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 .splash-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  height: 100vh; /* taking the full viewport height */
+  position: relative;
+  height: 100vh;
+}
+
+.banner-container {
+  width: 100%;
+  height: 82vh;
 }
 
 .splash-image {
-  max-width: 100%; /* making sure image doesn’t overflow */
-  height: auto;
-  width: auto; /* maintaining aspect ratio */
-  height: 82.5%
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 
+.images-row {
+  position: absolute;
+  top: 70%; /* adjust based on how much overlay you want on the banner */
+  width: 100%;
+  display: flex;
+  margin-bottom: 80px;
+  justify-content: space-around; /* distributes the space between the images */
+}
+
+.image-container {
+  width: 15%; /* adjust the width of the individual images containers */
+}
+
+.placeholder-image {
+  width: 100%; /* make the placeholder images fill their containers */
+  height: auto;
+}
+
+.image-text {
+  font-family: 'Action Comics Black', sans-serif;
+  text-align: center; /* Center the text */
+  margin-top: 10px; /* Add some space between the image and the text */
+  font-size: 1em; /* Adjust the font size as needed */
+  font-weight: bold; /* Making the text bold */
+  color: #000; /* Setting the text color. Change as needed */
 }
