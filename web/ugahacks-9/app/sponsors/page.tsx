@@ -54,7 +54,13 @@ function Sponsors() {
          </div>
         <div className={styles.buttonContainer}>
           <p className={styles.buttonHeading}>This event is supported in part by the President's Venture Fund through the generous gifts of University of Georgia donors.</p>
-         <button className={styles.sponsorshipPacketButton}>Sponsorship Packet</button>
+         <button className={styles.sponsorshipPacketButton}>
+           <a
+                  className={styles.sponsorshipLink}
+                  href=""
+                >
+                  Sponsorship Packet
+                </a></button>
         </div>
       </div>
     </div>

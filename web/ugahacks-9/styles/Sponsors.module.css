@@ -39,3 +39,17 @@
 .sponsor_logo:hover {
     transform: scale(1.15);
 }
+.sponsorshipLink {
+    color: white;
+    text-decoration: none;
+}
+
+.sponsorshipLink:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.sponsorshipPacketButton:hover {
+    transform: scale(1.05);
+    transition: transform 0.1s;
+}
