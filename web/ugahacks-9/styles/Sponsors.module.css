@@ -14,3 +14,28 @@
     background-color: rgba(255, 255, 255, 0.2);
     transition: transform 0.3s;
 }
+.sponsorsContainer {
+    display: flex;
+    padding: 150px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 70px;
+    /* width: 70vw;
+    margin-bottom: 60px; */
+}
+
+.sponsor_container>* {
+    flex: 1 1 350px;
+}
+
+.sponsor_logo {
+    max-width: 350px;
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.sponsor_logo:hover {
+    transform: scale(1.15);
+}

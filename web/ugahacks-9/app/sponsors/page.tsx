@@ -2,8 +2,9 @@ import React from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import styles from "../../styles/Sponsors.module.css";
 import Image from "next/image";
-import echo3d from "../../sponsors/echo3d.png";
+import echo3d from "../../public/sponsors/echo3d.png"
 import oreilly from "../../public/sponsors/oreilly.png";
+import statefarm from "../../public/sponsors/statefarm.png";
 
 function Sponsors() {
   return (
@@ -21,6 +22,19 @@ function Sponsors() {
                     className={styles.sponsor_logo}
                     src={echo3d}
                     alt="echo3d"
+                  />
+                </a>
+              </div>
+              <div className={styles.sponsor_container}>
+                <a
+                  href="https://www.statefarm.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image
+                    className={styles.sponsor_logo}
+                    src={statefarm}
+                    alt="statefarm"
                   />
                 </a>
               </div>
