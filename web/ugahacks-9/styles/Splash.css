@@ -12,38 +12,50 @@
 
 .banner-container {
   width: 100%;
-  height: 82vh;
+  height: 100vh;
+  background-image: url('../public//banner.png'); /* Adjust path as needed */
+  background-size: 100% 100%; 
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .splash-image {
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   height: 100%;
+
 }
 
 .images-row {
   position: absolute;
-  top: 70%; /* adjust based on how much overlay you want on the banner */
-  width: 100%;
+  top: 65%; /* adjust based on how much overlay you want on the banner */
+  width: 90%;
   display: flex;
   margin-bottom: 80px;
-  justify-content: space-around; /* distributes the space between the images */
+  justify-content: center; /* Center the child elements horizontally */
+  flex-wrap: wrap; /* Optional: allows items to wrap to the next line if needed */
+  right: 65px
 }
 
 .image-container {
-  width: 15%; /* adjust the width of the individual images containers */
+  width: 15%; /* Adjust the width of the individual images containers */
+  margin: 0 50px; /* Margin for spacing between containers */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .placeholder-image {
-  width: 100%; /* make the placeholder images fill their containers */
-  height: auto;
+  width: 80%; /* make the placeholder images fill their containers */
+  height: 200px
 }
 
 .image-text {
   font-family: 'Action Comics Black', sans-serif;
   text-align: center; /* Center the text */
-  margin-top: 10px; /* Add some space between the image and the text */
+  margin-top: 30px; /* Add some space between the image and the text */
   font-size: 1em; /* Adjust the font size as needed */
   font-weight: bold; /* Making the text bold */
-  color: #000; /* Setting the text color. Change as needed */
+  color: #ffffff; /* Setting the text color */
+  /* Other styles if needed */
 }
