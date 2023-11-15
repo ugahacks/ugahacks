@@ -12,7 +12,7 @@ html {
 body {
   background-color: rgb(248, 179, 46);
   overscroll-behavior: none;
-  background: url("/panel1.png") 4vw 4vh no-repeat,
+  background: url("/panel1.png") 4vw 6vh no-repeat,
     url("/panel0.png") 1vw 1vh no-repeat,
     linear-gradient(
       180deg,
