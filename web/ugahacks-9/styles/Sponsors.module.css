@@ -1,55 +1,85 @@
 .buttonContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .sponsorshipPacketButton {
-    position: relative;
-    padding: 25px;
-    border-radius: 20px;
-    color: white;
-    font-size: 20px;
-    border: 4px solid white;
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s;
+  position: relative;
+  padding: 25px;
+  border-radius: 20px;
+  color: white;
+  font-size: 20px;
+  border: 4px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s;
 }
-.sponsorsContainer {
-    display: flex;
-    padding: 150px;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 70px;
-    /* width: 70vw;
-    margin-bottom: 60px; */
+.sponsorsParentContainer {
+  display: flex;
+  padding: 3%;
+  justify-content: center;
 }
-
-.sponsor_container>* {
-    flex: 1 1 350px;
+.top_sponsor {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 70px;
+  padding: 2%;
+}
+.mid_sponsor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 2%;
+  gap: 70px;
+}
+.bot_sponsor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 70px;
+  padding: 2%;
+}
+.sponsor_container > * {
+  flex: 1 1 350px;
 }
 
 .sponsor_logo {
-    max-width: 350px;
-    height: 100%;
-    transition: transform 0.3s;
+  max-width: 350px;
+  height: 100%;
+  transition: transform 0.3s;
 }
-
+.big_sponsor_logo {
+  max-width: 600px;
+  height: 100%;
+  transition: transform 0.3s;
+}
+.mid_sponsor_logo {
+  max-width: 450px;
+  height: 100%;
+  transition: transform 0.3s;
+}
+.bot_sponsor_logo {
+  max-width: 200px;
+  height: 100%;
+  transition: transform 0.3s;
+}
 .sponsor_logo:hover {
-    transform: scale(1.15);
+  transform: scale(1.15);
 }
 .sponsorshipLink {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .sponsorshipLink:hover {
-    color: white;
-    text-decoration: underline;
+  color: white;
+  text-decoration: underline;
 }
 
 .sponsorshipPacketButton:hover {
-    transform: scale(1.05);
-    transition: transform 0.1s;
+  transform: scale(1.05);
+  transition: transform 0.1s;
 }
