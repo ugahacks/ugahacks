@@ -13,7 +13,6 @@ function Sponsors() {
       <Navbar />
       <div className={styles.mainContainer}>
         <div className={styles.sponsorsParentContainer}>
-          <div className={styles.sponsor_container}>
             <div className={styles.top_sponsor}>
               <div className={styles.sponsor_container}>
                 <a
@@ -73,7 +72,6 @@ function Sponsors() {
               </a>
             </div>
             </div>
-          </div>
         </div>
         <div className={styles.buttonContainer}>
           <p className={styles.buttonHeading}>
