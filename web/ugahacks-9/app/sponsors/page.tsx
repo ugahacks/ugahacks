@@ -83,7 +83,7 @@ function Sponsors() {
           <button className={styles.sponsorshipPacketButton}>
             <a
               className={styles.sponsorshipLink}
-              href="../../public/sponsors/UGAHacks9SponsorshipPacket.pdf"
+              href="/UGAHacks9SponsorshipPacket.pdf"
             >
               Sponsorship Packet
             </a>
