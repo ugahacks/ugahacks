@@ -1,7 +1,7 @@
 /* Navbar.css */
 .navbar {
   display: flex;
-  font-size: 18px;
+  font-size: 14px;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -37,7 +37,7 @@
   display: inline-block;
   padding: 10px 20px;
   border-radius: 50px;
-  background-color: #B63427;
+  background-color: #b63427;
   transition: background-color 0.3s;
 }
 .navLink {
@@ -76,24 +76,24 @@
   color: white;
   transition: all 0.1s;
 }
-@media (max-width: 980px) {
-  .logo {
-    display: none;
-  }
-}
-@media (max-width: 980px) {
+
+@media (max-width: 1000px) {
   .navbar {
     justify-content: center;
     font-size: 14px;
   }
   .middle {
-    flex: 0;
-  }
-  .logo {
     display: none;
+  }
+
+  .left {
+    flex: 1;
   }
 }
 @media (max-width: 640px) {
+  .left {
+    flex: 0;
+  }
   .right {
     display: none;
   }
