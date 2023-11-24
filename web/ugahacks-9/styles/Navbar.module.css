@@ -1,6 +1,7 @@
 /* Navbar.css */
 .navbar {
   display: flex;
+  font-size: 14px;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -25,18 +26,30 @@
 .icon:focus {
   transform: scale(1.15);
 }
-
-.navlink {
+.activeLink {
   color: white;
   text-decoration: none;
   margin-left: 20px;
   cursor: pointer;
-  /* transition: transform 0.3s; */
   transition: all 0.3s;
+  white-space: nowrap; /* Add this line */
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #b63427;
+  transition: background-color 0.3s;
+}
+.navLink {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap; /* Add this line */
 }
 
-.navlink:hover,
-.navlink:focus,
+.navLink:hover,
+.navLink:focus,
 .social_icon:hover,
 .social_icon:focus {
   transform: scale(1.15);
@@ -61,4 +74,26 @@
   margin-left: 10px;
   color: white;
   transition: all 0.1s;
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    justify-content: center;
+    font-size: 14px;
+  }
+  .middle {
+    display: none;
+  }
+
+  .left {
+    flex: 1;
+  }
+}
+@media (max-width: 640px) {
+  .left {
+    flex: 0;
+  }
+  .right {
+    display: none;
+  }
 }
