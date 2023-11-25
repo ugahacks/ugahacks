@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "ActionComics";
+  src: url("/web/ugahacks-9/public/fonts/Action Comics Black.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.banner {
+  z-index: 0;
+  width: 100%;
+  margin-top: -35px;
+}
+
+.comic_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 50%;
+}
+
+.comic_nav > * {
+  font-family: "ActionComics";
+}
+
+.speech_bubble1 {
+  position: absolute;
+  width: min-content;
+  bottom: 150px;
+  right: 0;
+}
+
+.speech_bubble2 {
+  position: absolute;
+  width: min-content;
+  bottom: 75px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.caption {
+  color: black;
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  font-size: small;
+  padding-bottom: 20px;
+}

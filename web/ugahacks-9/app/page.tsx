@@ -6,10 +6,8 @@ import Splash from "./splash/Splash";
 export default function Home() {
   return (
     <div className="main">
-      
       <Navbar />
       <Splash />
-      
     </div>
   );
 }
