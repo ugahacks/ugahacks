@@ -1,27 +1,43 @@
-import React from 'react';
-import bannerImage from '../../public/banner.png';
-import img1 from '../../public/img1.png';
-import img2 from '../../public/img2.png'
-import img3 from '../../public/img3.png'
-import img4 from '../../public/img4.png'
-
-import '../../styles/Splash.css';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
+import styles from "../../styles/Splash.module.css";
 
 function Splash() {
-  const images = [img1, img2, img3, img4];
-
   return (
-    <div className="splash-container">
-      <div className="banner-container">
+    <div>
+      <div className={styles.banner}>
+        <Image
+          src="/splash_artwork.png"
+          alt="uh9 banner"
+          layout="responsive"
+          width={1920}
+          height={1080}
+        />
       </div>
-      <div className="images-row">
-        {['ABOUT', 'FAQ', 'OUR TEAM', 'SPONSORS'].map((text, index) => (
-          <div key={index} className="image-container">
-            <Image src={images[index]} alt={`Image ${index + 1}`} className='placeholder-image' />
-            <div className="image-text">{text}</div>
-          </div>
-        ))}
+      <div className={styles.comic_nav}>
+        <div className={styles.about}>ABOUT</div>
+        <div className={styles.faq}>FAQ</div>
+        <div className={styles.our_team}>OUT TEAM</div>
+        <div className={styles.sponsors}>SPONSORS</div>
+      </div>
+
+      {/** speech bubbles: */}
+      <div className={styles.speech_bubble1}>
+        <Image
+          src="/speech_bubble1.png"
+          alt="speech bubble"
+          width={355}
+          height={227}
+        />
+      </div>
+      <div className={styles.speech_bubble2}>
+        <div className={styles.caption}>Be the hero of your own story.</div>
+        <Image
+          src="/speech_bubble2.png"
+          alt="speech bubble"
+          width={197}
+          height={165}
+        />
       </div>
     </div>
   );

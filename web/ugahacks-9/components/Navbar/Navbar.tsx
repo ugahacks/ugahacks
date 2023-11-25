@@ -49,7 +49,7 @@ function Navbar() {
     <div className={styles.navbar}>
       <div className={styles.left}>
         <Image
-          src="/byte_icon.png"
+          src="/byte.png"
           alt="byte"
           className={styles.icon}
           width={48}
@@ -89,6 +89,18 @@ function Navbar() {
         />
         <NavIcon href={"https://ugahacks.com/"} image={<BsGlobe size={25} />} />
       </div>
+      <a
+        id="mlh-trust-badge"
+        className="mlh_banner"
+        href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white"
+        target="_blank"
+      >
+        <img
+          src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-white.svg"
+          alt="Major League Hacking 2024 Hackathon Season"
+          style={{ width: 100 }}
+        />
+      </a>
     </div>
   );
 }

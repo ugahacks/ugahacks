@@ -12,20 +12,18 @@ html {
 body {
   background-color: rgb(248, 179, 46);
   overscroll-behavior: none;
-  background: url("/panel1.png") 4vw 6vh no-repeat,
+  background: url("/panel1.png") 4vw 4vh no-repeat,
     url("/panel0.png") 1vw 1vh no-repeat,
     linear-gradient(
       180deg,
       rgba(248, 179, 46, 1) 0%,
       rgba(255, 221, 156, 1) 100%
     );
-  background-size: 95vw 113vh, 93vw 110vh, 100vw 150vh;
+  background-size: 95vw 95vh, 95vw 90vh, 100vw 100vh;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  
 }
 
 .main {
@@ -47,8 +45,19 @@ body {
   );
 
   width: 93vw;
-  height: 110vh;
+  height: 92vh;
   border: 5px black solid;
   margin-top: 2vh;
   color: white;
+}
+
+.mlh_banner {
+  display: block;
+  max-width: 100px;
+  min-width: 60px;
+  position: absolute;
+  right: 100px;
+  top: 100px;
+  width: 10%;
+  z-index: 10000;
 }
