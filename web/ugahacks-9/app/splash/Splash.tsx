@@ -15,14 +15,15 @@ function Splash() {
         />
       </div>
       <div className={styles.comic_nav}>
-        <div className={styles.about}>ABOUT</div>
-        <div className={styles.faq}>FAQ</div>
-        <div className={styles.our_team}>OUT TEAM</div>
-        <div className={styles.sponsors}>SPONSORS</div>
+        <div className={styles.imageText}>ABOUT</div>
+        <div className={styles.imageText}>FAQ</div>
+        <div className={styles.imageText}>OUT TEAM</div>
+        <div className={styles.imageText}>SPONSORS</div>
       </div>
 
       {/** speech bubbles: */}
       <div className={styles.speech_bubble1}>
+        <div className={styles.caption2}>UGA Miller Learning Center Feb 9 - 11</div>
         <Image
           src="/speech_bubble1.png"
           alt="speech bubble"
