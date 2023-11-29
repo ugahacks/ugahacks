@@ -55,7 +55,7 @@ function About() {
           </div>
         </div>
         <div className={styles.hackathonImage}>
-          <img src="aboutGraphics/Hackathon.png" alt="hackathon" />
+          <img src="aboutGraphics/Hackathon2.JPG" alt="hackathon" />
         </div>
       </div>
     </section>
