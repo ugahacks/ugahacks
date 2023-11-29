@@ -112,6 +112,10 @@
     overflow: hidden;
 }
 
+.hackathonImage img {
+    height: 100%;
+}
+
 @media only screen and (max-width: 1230px) {
     .content {
         flex-direction: column;
