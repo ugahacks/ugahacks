@@ -33,7 +33,7 @@ function About() {
               <div className={styles.byteContainer}>
                 <img
                   className={styles.byte}
-                  src="aboutGraphics/byte.png"
+                  src="aboutGraphics/byte_flying.png"
                   alt="image"
                 />
               </div>
