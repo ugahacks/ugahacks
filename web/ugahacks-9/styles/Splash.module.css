@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Action Comics Black';
-  src: url('../public/fonts/Action\ Comics\ Black.ttf') format('truetype');
+  font-family: "Action Comics Black";
+  src: url("../public/fonts/Action\ Comics\ Black.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,15 +16,32 @@
 .banner {
   z-index: 0;
   width: 100%;
-  margin-top: -35px;
+  margin-top: -30px;
 }
 
+.byte_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.byte {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
 
 .comic_nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 50%;
 }
 
@@ -32,49 +49,137 @@
   font-family: "ActionComics";
 }
 
+.imageText {
+  padding: 15px 10px 15px 10px;
+}
+
+.button_container {
+  display: flex;
+  transition: all 0.3s;
+  width: 150px;
+}
+
+.button_container > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button_container:hover {
+  transform: scale(1.15);
+}
+
+.button_text {
+  font-family: "ActionComics";
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+}
+
 .speech_bubble1 {
   position: absolute;
-  width: min-content;
-  bottom: 150px;
+  bottom: 25vh;
   right: 0;
+  width: 250px;
 }
 
 .speech_bubble2 {
   position: absolute;
-  width: min-content;
-  bottom: 75px;
+  bottom: 15vh;
   left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 250px;
 }
 
-.caption {
-  color: black;
-  font-family: 'ActionComics';
+.exclamation {
   position: absolute;
-  text-align: center;
-  width: 100px;
-  font-size: small;
-  padding-bottom: 20px;
-}
-
-.caption2 {
-  color: black;
-  font-family: 'ActionComics';
-  position: absolute;
-  text-align: center;
-  width: 180px;
-  font-size: 24px;
-  left: 80px;
-  top: 60px
+  width: min-content;
+  bottom: 0;
+  right: 0;
 }
 
 .imageText {
-  font-family: 'Action Comics Black', sans-serif;
-  text-align: center; /* Center the text */
-  margin-top: 10px; /* Add some space between the image and the text */
-  font-size: 1em; /* Adjust the font size as needed */
-  font-weight: bold; /* Making the text bold */
-  color: #fff; /* Setting the text color. Change as needed */
+  font-family: "Action Comics Black", sans-serif;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.register_button {
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.register_button:hover {
+  transform: scale(1.15);
+}
+
+.register_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.register_button {
+  position: absolute;
+  top: 45%;
+  width: 400px;
+}
+
+@media (max-width: 440px) {
+  .banner {
+    width: 1000px;
+    margin-left: -75%;
+  }
+  .register_button {
+    top: 40%;
+    width: 400px;
+  }
+  .comic_nav {
+    flex-wrap: wrap;
+    bottom: 8%;
+    width: 250px;
+    gap: 15px;
+  }
+
+  .button_container {
+    width: 100px;
+  }
+
+  .button_text {
+    font-size: 10px;
+  }
+
+  .speech_bubble1,
+  .speech_bubble2 {
+    width: 100px;
+    /* bottom: 60vh; */
+  }
+
+  .speech_bubble1 {
+    bottom: 65vh;
+  }
+
+  .speech_bubble2 {
+    bottom: 60vh;
+  }
+
+  .exclamation {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .banner {
+    margin-left: -85%;
+  }
+  .register_button {
+    width: 300px;
+  }
+}
+
+@media (max-width: 640px) {
 }
