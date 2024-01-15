@@ -50,7 +50,7 @@ function Navbar() {
       <div className={styles.left}>
         <Link href={"/"}>
           <Image
-            src="/byte.png"
+            src="/icons/byteIcon.png"
             alt="byte"
             className={styles.icon}
             width={48}
