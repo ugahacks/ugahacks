@@ -47,10 +47,11 @@ function About() {
               something amazing in an epic 48-hour programming sleepover.
             </p>
             <p>
-              Even though submitting a project is the main objective, that's not
-              all there is. We'll have mentors, free food, video game
-              competitions, workshops and more. There's even a workshop at the
-              event for anyone that still needs to find some teammates!
+              Even though submitting a project is the main objective,
+              that&apos;s not all there is. We&apos;ll have mentors, free food,
+              video game competitions, workshops and more. There&apos;s even a
+              workshop at the event for anyone that still needs to find some
+              teammates!
             </p>
           </div>
         </div>
