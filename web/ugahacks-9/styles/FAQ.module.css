@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "action_comics_black";
+    src: url("../public/fonts/Action\ Comics\ Black.ttf");
+  }
+.content {
+    display: flex;
+    justify-content: space-around;
+    height: 85%;
+}
+
+.left_images {
+    display: flex;
+    width: 22%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.left_images > *, .right_images > * {
+    border: 4px solid black;
+}
+
+.left_images > img {
+    height: 20%;
+}
+
+.faq_title {
+    background-color: #2A8EC0;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.faq_title > h1 {
+    font-family: "action_comics_black";
+}
+
+.questions {
+    border: 1px solid white;
+    width: 50%;
+}
+
+.right_images {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.normal_image2 {
+    height: 35%;
+}
+
+.byte_image {
+    height: 60%;
+}
