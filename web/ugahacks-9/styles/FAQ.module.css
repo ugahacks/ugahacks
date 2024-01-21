@@ -8,6 +8,17 @@
     height: 85%;
 }
 
+.faqs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.faqs > * {
+    width: 100%;
+}
+
 .left_images {
     display: flex;
     width: 22%;
@@ -37,9 +48,11 @@
 }
 
 .questions {
+    padding: 2%;
     border: 1px solid white;
     width: 50%;
 }
+
 
 .right_images {
     width: 22%;

@@ -1,0 +1,31 @@
+.faq_question {
+    border: 2px solid white;
+    border-radius: 100px;
+    display: flex;
+    padding-left: 5%;
+    width: 90%;
+    background-color: rgba(100, 0, 200, 0.1);
+}
+
+.faq_question> * {
+}
+
+.faq_question:hover {
+    cursor: pointer;
+}
+
+.faq_question>p {
+    padding-top: 3px;
+}
+
+.faq_answer {
+    margin-top: 10px;
+    margin-left: 30px;
+    height: 10vh;
+    display: flex;
+    padding: 10px;
+    padding-left: 50px;
+    border: 2px solid white;
+    width: 70%;
+    border-radius: 40px;
+}
