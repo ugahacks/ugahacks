@@ -6,6 +6,7 @@ import echo3d from "../../public/sponsors/echo3d.png";
 import oreilly from "../../public/sponsors/oreilly.png";
 import statefarm from "../../public/sponsors/statefarm.png";
 import hpcc from "../../public/sponsors/hpcc.png";
+import aifutures from "../../public/sponsors/AI_Futures.png";
 
 function Sponsors() {
   return (
@@ -42,6 +43,15 @@ function Sponsors() {
                 />
               </a>
             </div>
+            <div className={`${styles.sponsor_container} ${styles.ai_futures_logo}`}>
+            <a href="https://aifutures.us/" target="_blank" rel="noreferrer">
+              <Image
+                src={aifutures}
+                alt="AI Futures logo"
+                layout="intrinsic" // This tells Next.js to use the image dimensions as defined by the image file
+              />
+            </a>
+          </div>
             </div>
             <div className={styles.bot_sponsor}>
             <div className={styles.sponsor_container}>
@@ -74,19 +84,21 @@ function Sponsors() {
             </div>
         </div>
         <div className={styles.buttonContainer}>
-          <p className={styles.buttonHeading}>
-            This event is supported in part by the President's Venture Fund
-            through the generous gifts of University of Georgia donors.
-          </p>
           <button className={styles.sponsorshipPacketButton}>
             <a
               className={styles.sponsorshipLink}
               href="/UGAHacks9SponsorshipPacket.pdf"
+              target="_blank" // Open in new tab
+              rel="noopener noreferrer" // For security
             >
               Sponsorship Packet
             </a>
           </button>
+          <p className={styles.buttonHeading}>
+            This event is supported in part by the President's Venture Fund through the generous gifts of University of Georgia donors.
+          </p>
         </div>
+
       </div>
     </div>
   );

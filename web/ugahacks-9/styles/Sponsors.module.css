@@ -1,88 +1,78 @@
-.buttonContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.sponsorshipPacketButton {
-  position: relative;
-  padding: 25px;
-  border-radius: 20px;
-  color: white;
-  font-size: 20px;
-  border: 4px solid white;
-  background-color: rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s;
+.mainContainer {
+  padding: 2vh 2vw;
 }
 .sponsorsParentContainer {
   display: flex;
-  padding: 3%;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-}
-.sponsor_container > * {
-  flex: 1 1 700px;
-}
-.top_sponsor {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  gap: 70px;
-padding: 1%;
-}
-.mid_sponsor {
-  display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  gap: 70px;
-padding: 1%;
-}
-.bot_sponsor {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 70px;
-padding: 1%;
 }
 
-.big_sponsor_logo {
-  max-width: 600px;
-  height: 100%;
-  transition: transform 0.3s;
+.top_sponsor, .mid_sponsor, .bot_sponsor {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; 
+  margin: 1px 0; 
 }
-.mid_sponsor_logo {
-  max-width: 450px;
-  height: 100%;
-  transition: transform 0.3s;
+
+.sponsor_container {
+  margin: 0.2vh 1vw; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.bot_sponsor_logo {
-  max-width: 200px;
-  height: 100%;
-  transition: transform 0.3s;
+
+.ai_futures_logo {
+  flex: none; /* Do not grow or shrink */
+  margin: 1vw;
+  max-width: 40vw; /* Adjust this to be larger than other logos but not too large */
+  max-height: 40vh; /* Keep the aspect ratio in mind */
 }
-.big_sponsor_logo:hover {
-  transform: scale(1.15);
+.big_sponsor_logo, .mid_sponsor_logo, .bot_sponsor_logo {
+  max-width: 35vw; /* Adjust based on your preference */
+  width: auto;
+  height: auto;
 }
-.mid_sponsor_logo:hover {
-    transform: scale(1.15);
-}
-.bot_sponsor_logo:hover {
-    transform: scale(1.15);
+
+.buttonHeading {
+  margin-top: 30px;
+  font-size: 1.2em; /* Increase the size of the font */
 }
 .sponsorshipLink {
-  color: white;
-  text-decoration: none;
+  text-decoration: none; /* Removes underline from the link */
+  color: inherit; /* Inherits color from the parent element */
 }
 
-.sponsorshipLink:hover {
-  color: white;
-  text-decoration: underline;
+.sponsorshipPacketButton {
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  border: 2px solid white; /* White border to make it stand out */
+  color: #000; /* Text color */
+  padding: 15px 30px; /* Padding inside the button */
+  text-decoration: none; /* Removes underline from the link */
+  font-weight: bold; /* Makes the font bold */
+  border-radius: 5px; /* Rounded corners for the button */
+  display: inline-block; /* Allows the button to be centered */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  font-size: 1.1em; /* Increase the font size inside the button */
+
 }
 
 .sponsorshipPacketButton:hover {
-  transform: scale(1.05);
-  transition: transform 0.1s;
+  background: rgba(255, 255, 255, 0.7); /* Slightly more opaque on hover */
+  cursor: pointer; /* Changes cursor to indicate it's clickable */
+}
+
+.buttonContainer {
+
+  text-align: center; /* This centers the button in the container */
+  margin-top: 60px; /* Add more margin as needed */
+}
+
+@media (min-width: 768px) {
+  .ai_futures_logo {
+    margin: 0.5vh 1vw; /* Ensure the reduced vertical margin applies on larger screens too */
+    max-width: 25vw; /* Larger than other logos, but consistent with layout */
+    max-height: 25vh;
+  }
 }
