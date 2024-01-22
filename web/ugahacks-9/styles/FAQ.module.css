@@ -49,9 +49,10 @@
 
 .questions {
     padding: 2%;
-    border: 1px solid white;
+    border: 5px solid white;
     width: 50%;
 }
+
 
 
 .right_images {
@@ -60,6 +61,10 @@
     flex-direction: column;
     justify-content: space-between;
 
+}
+
+.right_images>img {
+    width: 100%;
 }
 
 .normal_image2 {
