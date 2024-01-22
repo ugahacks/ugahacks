@@ -91,16 +91,16 @@ function Sponsors() {
           </div>
         </div>
         <div className={styles.buttonContainer}>
-          <button className={styles.sponsorshipPacketButton}>
-            <a
-              className={styles.sponsorshipLink}
-              href="/UGAHacks9SponsorshipPacket.pdf"
-              target="_blank" // Open in new tab
-              rel="noopener noreferrer" // For security
-            >
+          <a
+            className={styles.sponsorshipLink}
+            href="/UGAHacks9SponsorshipPacket.pdf"
+            target="_blank" // Open in new tab
+            rel="noopener noreferrer" // For security
+          >
+            <button className={styles.sponsorshipPacketButton}>
               Sponsorship Packet
-            </a>
-          </button>
+            </button>
+          </a>
           <p className={styles.buttonHeading}>
             This event is supported in part by the President's Venture Fund
             through the generous gifts of University of Georgia donors.
