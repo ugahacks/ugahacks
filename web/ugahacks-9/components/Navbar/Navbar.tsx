@@ -61,11 +61,7 @@ function Navbar() {
         </Link>
         <NavLink href={"/about"} name={"About"} />
         <NavLink href={"/faq"} name={"FAQ"} />
-        <NavLink
-          href={"https://ugahacks.com/"}
-          name={"Our Team"}
-          target={"_blank"}
-        />
+        <NavLink href={"/team"} name={"Our Team"} />
         <NavLink href={"/sponsors"} name={"Sponsors"} />
       </div>
       <div className={styles.middle}>
