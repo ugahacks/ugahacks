@@ -76,7 +76,7 @@ function Sponsors() {
 
             <div className={styles.sponsor_container}>
               <a
-                href="https://www.oreillyauto.com/"
+                href="https://www.oreilly.com/"
                 target="_blank"
                 rel="noreferrer"
               >
