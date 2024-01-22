@@ -8,26 +8,9 @@ import normal_image1_3 from "@/public/faq_normal_image1-3.png";
 import normal_image2_1 from "@/public/faq_normal_image2-1.png";
 import byte_image from "@/public/byte faq 1.png";
 import FaqQuestion from "@/components/Faqquestion/Faqquestion";
-
+import questions from "@/app/faq/questions.json"
 function FAQ() {
-  const [faqs, setFaqs] = useState([
-    {
-      question: "QUESTION 1",
-      answer:
-        "Answer to question 1...",
-      open: false,
-    },
-    {
-      question: "QUESTION 2",
-      answer: "Answer to question 2...",
-      open: false,
-    },
-    {
-      question: "QUESTION 3",
-      answer: "Answer to question 3...",
-      open: false,
-    },
-  ]);
+  const [faqs, setFaqs] = useState(questions);
 
   // Function to toggle the open/close state of a specific FAQ item
   const toggleFAQ = (index: number) => {
