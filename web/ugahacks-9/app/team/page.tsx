@@ -24,22 +24,22 @@ import helium from "../../public/pfp/HeliumYang.jpg";
 import khushi from "../../public/pfp/KhushiBhatamrekar.png";
 import ethan from "../../public/pfp/EthanOgle.jpg";
 import catherine from "../../public/pfp/CatherineChu.jpg";
-import batu from "../../public/pfp/BatuOzdener.jpg"
+import batu from "../../public/pfp/BatuOzdener.jpg";
 import kevin from "../../public/pfp/KevinDo.jpg";
-import angel from "../../public/pfp/AngelHoang.jpeg"
-import hemant from "../../public/pfp/HemantGautam.jpeg"
-import kellen from "../../public/pfp/KellenBrown.png"
-import codey from "../../public/pfp/CodeyBorrelli.jpg"
-import elaine from "../../public/pfp/ElaineChow.png"
+import angel from "../../public/pfp/AngelHoang.jpeg";
+import hemant from "../../public/pfp/HemantGautam.jpeg";
+import kellen from "../../public/pfp/KellenBrown.png";
+import codey from "../../public/pfp/CodeyBorrelli.jpg";
+import elaine from "../../public/pfp/ElaineChow.png";
 //techteam
 import shawn from "../../public/pfp/ShawnPradeep.jpeg";
-import vansh from "../../public/pfp/VanshArora.jpg"
-import kasra from "../../public/pfp/KasraGhaffari.jpeg"
-import nikita from "../../public/pfp/NikitaJha.jpg"
-import max from "../../public/pfp/MaxPelot.jpg"
-import hannah from "../../public/pfp/HannieKwak.jpeg"
-import dhruv from "../../public/pfp/DhruvPatel.jpeg"
-import alex from "../../public/pfp/AlexTeal.jpg"
+import vansh from "../../public/pfp/VanshArora.jpg";
+import kasra from "../../public/pfp/KasraGhaffari.jpeg";
+import nikita from "../../public/pfp/NikitaJha.jpg";
+import max from "../../public/pfp/MaxPelot.jpg";
+import hannah from "../../public/pfp/HannieKwak.jpeg";
+import dhruv from "../../public/pfp/DhruvPatel.jpeg";
+import alex from "../../public/pfp/AlexTeal.jpg";
 function Team() {
   return (
     <div className="main">
@@ -131,31 +131,25 @@ function Team() {
               <h5 className={styles.heading}>Logistics Director</h5>
             </div>
             <div className={styles.column}>
-              <div className={styles.column1}>
-                <div className={styles.pfpWrapper}>
-                  <Image className={styles.pfp} src={khushi} alt="khushi" />
-                  <p className={styles.name}>Khushi Bhatamrekar </p>
-                </div>
-                <div className={styles.pfpWrapper}>
-                  <Image
-                    className={styles.pfp}
-                    src={catherine}
-                    alt="catherine"
-                  />
-                  <p className={styles.name}>Catherine Chu</p>
-                </div>
-                <div className={styles.pfpWrapper}>
-                  <Image className={styles.pfp} src={ethan} alt="ethan" />
-                  <p className={styles.name}> Ethan Ogle</p>
-                </div>
-                <div className={styles.pfpWrapper}>
-                  <Image className={styles.pfp} src={batu} alt="batu" />
-                  <p className={styles.name}>Batu Ozdener</p>
-                </div>
-                <div className={styles.pfpWrapper}>
-                  <Image className={styles.pfp} src={kevin} alt="kevin" />
-                  <p className={styles.name}>Kevin Do</p>
-                </div>
+              <div className={styles.pfpWrapper}>
+                <Image className={styles.pfp} src={khushi} alt="khushi" />
+                <p className={styles.name}>Khushi Bhatamrekar</p>
+              </div>
+              <div className={styles.pfpWrapper}>
+                <Image className={styles.pfp} src={catherine} alt="catherine" />
+                <p className={styles.name}>Catherine Chu</p>
+              </div>
+              <div className={styles.pfpWrapper}>
+                <Image className={styles.pfp} src={ethan} alt="ethan" />
+                <p className={styles.name}> Ethan Ogle</p>
+              </div>
+              <div className={styles.pfpWrapper}>
+                <Image className={styles.pfp} src={batu} alt="batu" />
+                <p className={styles.name}>Batu Ozdener</p>
+              </div>
+              <div className={styles.pfpWrapper}>
+                <Image className={styles.pfp} src={kevin} alt="kevin" />
+                <p className={styles.name}>Kevin Do</p>
               </div>
               <div className={styles.column2}>
                 <div className={styles.pfpWrapper}>
@@ -189,36 +183,33 @@ function Team() {
               <h5 className={styles.heading}>Tech Director</h5>
             </div>
             <div className={styles.column}>
-              <div className={styles.column1}>
-                <div className={styles.pfpWrapper}>
-                  <Image className={styles.pfp} src={nikita} alt="nikita" />
-                  <p className={styles.name}>Nikita Jha</p>
-                </div>
-                <div className={styles.pfpWrapper}>
-                  <Image className={styles.pfp} src={vansh} alt="vansh" />
-                  <p className={styles.name}>Vansh Arora</p></div> 
-                <div className={styles.pfpWrapper}>
-                  <Image className={styles.pfp} src={kasra} alt="kasra" />
-                  <p className={styles.name}>Kasra Ghaffari</p>
-                </div>
-                <div className={styles.pfpWrapper}>
-                  <Image className={styles.pfp} src={max} alt="max" />
-                  <p className={styles.name}>Max Pelot</p>
-                </div>
-                <div className={styles.pfpWrapper}>
-                  <Image className={styles.pfp} src={hannah} alt="hannah" />
-                <p className={styles.name}>Hannah Kwak</p>
-                </div>
+              <div className={styles.pfpWrapper}>
+                <Image className={styles.pfp} src={nikita} alt="nikita" />
+                <p className={styles.name}>Nikita Jha</p>
               </div>
-              <div className={styles.column2}>
-                <div className={styles.pfpWrapper}>
-                  <Image className={styles.pfp} src={dhruv} alt="dhruv" />
-                   <p className={styles.name}>Dhruv Patel</p>
-                </div>
-                <div className={styles.pfpWrapper}>
-                  <Image className={styles.pfp} src={alex} alt="alex" />
-                   <p className={styles.name}>Alex Teal</p>
-                </div>
+              <div className={styles.pfpWrapper}>
+                <Image className={styles.pfp} src={vansh} alt="vansh" />
+                <p className={styles.name}>Vansh Arora</p>
+              </div>
+              <div className={styles.pfpWrapper}>
+                <Image className={styles.pfp} src={kasra} alt="kasra" />
+                <p className={styles.name}>Kasra Ghaffari</p>
+              </div>
+              <div className={styles.pfpWrapper}>
+                <Image className={styles.pfp} src={max} alt="max" />
+                <p className={styles.name}>Max Pelot</p>
+              </div>
+              <div className={styles.pfpWrapper}>
+                <Image className={styles.pfp} src={hannah} alt="hannah" />
+                <p className={styles.name}>Hannah Kwak</p>
+              </div>
+              <div className={styles.pfpWrapper}>
+                <Image className={styles.pfp} src={dhruv} alt="dhruv" />
+                <p className={styles.name}>Dhruv Patel</p>
+              </div>
+              <div className={styles.pfpWrapper}>
+                <Image className={styles.pfp} src={alex} alt="alex" />
+                <p className={styles.name}>Alex Teal</p>
               </div>
             </div>
           </div>
