@@ -2,13 +2,44 @@
     border: 2px solid white;
     border-radius: 100px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding-left: 5%;
+    padding-right: 5%;
     width: 90%;
+    height: 10%;
     background-color: rgba(100, 0, 200, 0.1);
 }
 
-.faq_question> * {
+.dropdown {
+    display: flex;
+    gap: 3px;
 }
+
+.dropdown>div {
+    width: 5px;
+    height: 15px;
+    background-color: white;
+}
+
+.dropdown1 {
+    transform: rotate(-45deg);
+}
+
+.dropdown2 {
+    transform: rotate(45deg);
+}
+
+.x1 {
+    height: 30px;
+    transform: rotate(-45deg);
+}
+
+.x2 {
+    height: 30px;
+    transform: rotate(45deg);
+}
+
 
 .faq_question:hover {
     cursor: pointer;
