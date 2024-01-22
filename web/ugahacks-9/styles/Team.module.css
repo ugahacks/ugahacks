@@ -1,0 +1,31 @@
+.ParentContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.leadContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.directorContainer {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 10%;
+    justify-content: center;
+    width: 100%;
+}
+
+.heading {
+    padding: 0;
+    margin: 0;
+}
+
+/* .sponsorContainer {
+    align-items: center;
+    flex-direction: column;
+} */
