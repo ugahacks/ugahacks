@@ -14,21 +14,22 @@ function Sponsors() {
       <Navbar />
       <div className={styles.mainContainer}>
         <div className={styles.sponsorsParentContainer}>
-            <div className={styles.top_sponsor}>
-              <div className={styles.sponsor_container}>
-                <a
-                  href="https://hpccsystems.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image
-                    className={styles.big_sponsor_logo}
-                    src={hpcc}
-                    alt="hpcc"
-                  />
-                </a>
-              </div>
+          <div className={styles.top_sponsor}>
+            <div className={styles.sponsor_container}>
+              <a
+                href="https://hpccsystems.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  className={styles.big_sponsor_logo}
+                  src={hpcc}
+                  alt="hpcc"
+                  id={styles.hpcc}
+                />
+              </a>
             </div>
+          </div>
           <div className={styles.mid_sponsor}>
             <div className={styles.sponsor_container}>
               <a
@@ -40,20 +41,24 @@ function Sponsors() {
                   className={styles.mid_sponsor_logo}
                   src={statefarm}
                   alt="statefarm"
+                  id={styles.statefarm}
                 />
               </a>
             </div>
-            <div className={`${styles.sponsor_container} ${styles.ai_futures_logo}`}>
-            <a href="https://aifutures.us/" target="_blank" rel="noreferrer">
-              <Image
-                src={aifutures}
-                alt="AI Futures logo"
-                layout="intrinsic" // This tells Next.js to use the image dimensions as defined by the image file
-              />
-            </a>
-          </div>
+            <div
+              className={`${styles.sponsor_container} ${styles.ai_futures_logo}`}
+            >
+              <a href="https://aifutures.us/" target="_blank" rel="noreferrer">
+                <Image
+                  src={aifutures}
+                  alt="AI Futures logo"
+                  layout="intrinsic" // This tells Next.js to use the image dimensions as defined by the image file
+                  id={styles.aifutures}
+                />
+              </a>
             </div>
-            <div className={styles.bot_sponsor}>
+          </div>
+          <div className={styles.bot_sponsor}>
             <div className={styles.sponsor_container}>
               <a
                 href="https://www.echo3d.com/"
@@ -64,6 +69,7 @@ function Sponsors() {
                   className={styles.bot_sponsor_logo}
                   src={echo3d}
                   alt="echo3d"
+                  id={styles.echo3d}
                 />
               </a>
             </div>
@@ -78,10 +84,11 @@ function Sponsors() {
                   className={styles.bot_sponsor_logo}
                   src={oreilly}
                   alt="oreilly"
+                  id={styles.oreilly}
                 />
               </a>
             </div>
-            </div>
+          </div>
         </div>
         <div className={styles.buttonContainer}>
           <button className={styles.sponsorshipPacketButton}>
@@ -95,10 +102,10 @@ function Sponsors() {
             </a>
           </button>
           <p className={styles.buttonHeading}>
-            This event is supported in part by the President's Venture Fund through the generous gifts of University of Georgia donors.
+            This event is supported in part by the President's Venture Fund
+            through the generous gifts of University of Georgia donors.
           </p>
         </div>
-
       </div>
     </div>
   );

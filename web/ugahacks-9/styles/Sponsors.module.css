@@ -1,23 +1,43 @@
 .mainContainer {
   padding: 2vh 2vw;
+  transition: all 0.3s;
 }
 .sponsorsParentContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 4vh;
 }
 
-.top_sponsor, .mid_sponsor, .bot_sponsor {
+.top_sponsor,
+.mid_sponsor,
+.bot_sponsor {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap; 
-  margin: 1px 0; 
+  flex-wrap: wrap;
+  margin: 1px 0;
+}
+
+#hpcc,
+#aifutures,
+#statefarm,
+#echo3d,
+#oreilly {
+  transition: all 0.3s;
+}
+
+#hpcc:hover,
+#aifutures:hover,
+#statefarm:hover,
+#echo3d:hover,
+#oreilly:hover {
+  transform: scale(1.15);
 }
 
 .sponsor_container {
-  margin: 0.2vh 1vw; 
+  margin: 0.2vh 1vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,7 +49,9 @@
   max-width: 40vw; /* Adjust this to be larger than other logos but not too large */
   max-height: 40vh; /* Keep the aspect ratio in mind */
 }
-.big_sponsor_logo, .mid_sponsor_logo, .bot_sponsor_logo {
+.big_sponsor_logo,
+.mid_sponsor_logo,
+.bot_sponsor_logo {
   max-width: 35vw; /* Adjust based on your preference */
   width: auto;
   height: auto;
@@ -37,7 +59,7 @@
 
 .buttonHeading {
   margin-top: 30px;
-  font-size: 1.2em; /* Increase the size of the font */
+  font-size: 1em;
 }
 .sponsorshipLink {
   text-decoration: none; /* Removes underline from the link */
@@ -45,34 +67,37 @@
 }
 
 .sponsorshipPacketButton {
-  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
-  border: 2px solid white; /* White border to make it stand out */
-  color: #000; /* Text color */
-  padding: 15px 30px; /* Padding inside the button */
-  text-decoration: none; /* Removes underline from the link */
-  font-weight: bold; /* Makes the font bold */
-  border-radius: 5px; /* Rounded corners for the button */
-  display: inline-block; /* Allows the button to be centered */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
-  font-size: 1.1em; /* Increase the font size inside the button */
-
+  background: rgba(255, 255, 255, 0.158);
+  border: 2px solid white;
+  color: #000;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-size: 1.1em;
+  color: white;
 }
 
 .sponsorshipPacketButton:hover {
-  background: rgba(255, 255, 255, 0.7); /* Slightly more opaque on hover */
-  cursor: pointer; /* Changes cursor to indicate it's clickable */
+  background: rgba(255, 255, 255, 0.259);
+  cursor: pointer;
 }
 
 .buttonContainer {
-
-  text-align: center; /* This centers the button in the container */
-  margin-top: 60px; /* Add more margin as needed */
+  text-align: center;
+  margin-top: 60px;
 }
 
 @media (min-width: 768px) {
   .ai_futures_logo {
-    margin: 0.5vh 1vw; /* Ensure the reduced vertical margin applies on larger screens too */
-    max-width: 25vw; /* Larger than other logos, but consistent with layout */
+    margin: 0.5vh 1vw;
+    max-width: 25vw;
     max-height: 25vh;
+  }
+
+  .sponsorsParentContainer {
+    gap: 2vh;
   }
 }
