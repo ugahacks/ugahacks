@@ -4,8 +4,6 @@ import styles from "../../styles/Team.module.css";
 
 function Team() {
   return (
-    <div>
-      <Navbar />
       <div className="main">
       <Navbar />
       <div className={styles.ParentContainer}>
@@ -68,7 +66,7 @@ function Team() {
 
       </div>
     </div>
-    </div>
+   
   );
 }
 
