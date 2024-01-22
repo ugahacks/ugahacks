@@ -102,7 +102,7 @@ function Sponsors() {
             </button>
           </a>
           <p className={styles.buttonHeading}>
-            This event is supported in part by the President's Venture Fund
+            This event is supported in part by the President&apos;s Venture Fund
             through the generous gifts of University of Georgia donors.
           </p>
         </div>
