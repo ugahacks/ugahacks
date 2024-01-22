@@ -51,14 +51,18 @@
     padding-top: 3px;
 }
 
+
+
 .faq_answer {
     margin-top: 10px;
     margin-left: 30px;
-    height: 10vh;
+    max-height: 50vh; /* Set a maximum height for the answer */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
     display: flex;
     padding: 10px;
     padding-left: 50px;
     border: 2px solid white;
     width: 70%;
     border-radius: 40px;
+ 
 }
