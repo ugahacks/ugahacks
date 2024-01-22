@@ -20,6 +20,8 @@
     width: 5px;
     height: 15px;
     background-color: white;
+    transition: all;
+    transition-duration: .5s;
 }
 
 .dropdown1 {
@@ -31,13 +33,13 @@
 }
 
 .x1 {
-    height: 30px;
-    transform: rotate(-45deg);
+    
+    transform: rotate(45deg);
 }
 
 .x2 {
-    height: 30px;
-    transform: rotate(45deg);
+   
+    transform: rotate(-45deg);
 }
 
 
