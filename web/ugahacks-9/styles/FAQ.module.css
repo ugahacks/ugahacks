@@ -2,7 +2,7 @@
     font-family: "action_comics_black";
     src: url("../public/fonts/Action\ Comics\ Black.ttf");
   }
-.content {
+  .content {
     display: flex;
     justify-content: space-around;
     height: 85%;
@@ -48,10 +48,18 @@
 }
 
 .questions {
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 400px;
     padding: 2%;
     border: 5px solid white;
     width: 50%;
 }
+
+.questions::-webkit-scrollbar {
+    display: none;
+} 
 
 
 
@@ -74,3 +82,4 @@
 .byte_image {
     height: 60%;
 }
+
