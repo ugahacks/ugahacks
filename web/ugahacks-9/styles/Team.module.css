@@ -68,40 +68,40 @@
 }
 
 @media (max-width: 540px) {
-    .pfp {
-            width: 4rem;
-            height: 4rem;
-        }
+  .pfp {
+    width: 4rem;
+    height: 4rem;
+  }
   .directorContainer {
     flex-direction: column;
     width: 100%;
     align-items: center;
   }
   .directorpfp {
-      width: 5rem;
-      height: 5rem;
+    width: 5rem;
+    height: 5rem;
   }
 }
 @media (max-width: 820px) {
-    .pfp {
-        width: 4rem;
-        height: 4rem;
-    }
+  .pfp {
+    width: 4rem;
+    height: 4rem;
+  }
   .directorContainer {
     flex-direction: column;
     width: 100%;
     align-items: center;
   }
   .directorpfp {
-      width: 5rem;
-      height: 5rem;
+    width: 5rem;
+    height: 5rem;
   }
 }
 @media (max-width: 1024px) {
-    .pfp {
-            width: 4rem;
-            height: 4rem;
-        }
+  .pfp {
+    width: 4rem;
+    height: 4rem;
+  }
   .directorContainer {
     flex-direction: row;
     gap: 5%;
@@ -110,24 +110,24 @@
     align-items: center;
   }
   .directorpfp {
-      width: 5rem;
-      height: 5rem;
+    width: 5rem;
+    height: 5rem;
   }
 }
 @media (max-width: 1280px) {
-    .pfp {
-            width: 4rem;
-            height: 4rem;
-        }
-    .directorpfp {
-        width: 5rem;
-        height: 5rem;
-    }
+  .pfp {
+    width: 4rem;
+    height: 4rem;
+  }
+  .directorpfp {
+    width: 5rem;
+    height: 5rem;
+  }
   .directorContainer {
     flex-direction: row;
     gap: 5%;
     flex-wrap: wrap;
     width: 100%;
-    align-items: center;
+    align-items:flex-start;
   }
 }
