@@ -1,0 +1,52 @@
+[
+    {
+      "question": "Where will it be held?",
+      "answer": "UGAHacks 9 will be an in-person event held at Miller Learning Center on the University of Georgia campus.",
+      "open": false
+    },
+    {
+      "question": "How much will the event cost?",
+      "answer": "Nothing! The entire event and its amazing perks are free for all participants, including meals and snacks to keep you powered throughout the weekend, as well as workshops to help you get started and sharpen your hacking skills.",
+      "open": false
+    },
+    {
+      "question": "Can I apply for travel reimbursements?",
+      "answer": "Unfortunately, we do not provide travel reimbursements at this time; but this can change in the future!",
+      "open": false
+    },
+    {
+      "question": "Can I start working on my project before the event?",
+      "answer": "No. All UGAHacks projects must begin at the hackathon. You are not permitted to begin a hackathon project before this event. Feel free to bring ideas, but no code!",
+      "open": false
+    },
+    {
+      "question": "Who can sign up?",
+      "answer": "All university students! We welcome all undergraduates and graduate students of all skill levels to attend. Professionals and other guests are welcome to attend as mentors or volunteers.",
+      "open": false
+    },
+    {
+      "question": "How do I receive EL Credit?",
+      "answer": "Students who attend UGAHacks 9 are eligible to receive EL Credit. To receive credit, please follow the instructions outlined on el.ugahacks.com.",
+      "open": false
+    },
+    {
+      "question": "What if I don't have a team or idea?",
+      "answer": "Don't sweat it! You're free to join any existing team or form a new one when you get there. We'll also provide ample opportunities for hackers to meet each other and brainstorm some amazing ideas.",
+      "open": false
+    },
+    {
+      "question": "What are the rules all attendees must abide by?",
+      "answer": "UGAHacks will be following the MLH Code of Conduct. By participating in UGAHacks, you are agreeing to follow the Code of Conduct throughout the duration of the event. Check out the MLH Code of Conduct",
+      "open": false
+    },
+    {
+      "question": "How many people can I have on my team?",
+      "answer": "You can have up to 4 members.",
+      "open": false
+    },
+    {
+      "question": "Who do I reach out to if I have more questions?",
+      "answer": "You can reach out to hello@ugahacks.com!",
+      "open": false
+    }
+]

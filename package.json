@@ -16,7 +16,7 @@
     "typescript": "^5.2.2"
   },
   "depedencies": {},
-  "packageManager": "yarn@3.6.3",
+  "packageManager": "yarn@4.0.2",
   "dependencies": {
     "@types/react-icons": "^3.0.0",
     "mini-css-extract-plugin": "1.0.0",

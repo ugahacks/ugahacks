@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "action_comics_black";
+  src: url("../public/fonts/Action\ Comics\ Black.ttf");
+}
+.content {
+  display: flex;
+  justify-content: space-around;
+  height: 85%;
+}
+
+.faqs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.faqs > * {
+  width: 100%;
+}
+
+.left_images {
+  display: flex;
+  width: 22%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.left_images > *,
+.right_images > * {
+  border: 4px solid black;
+}
+
+.left_images > img {
+  height: 20%;
+}
+
+.faq_title {
+  background-color: #2a8ec0;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.faq_title > h1 {
+  font-family: "action_comics_black";
+}
+
+.questions {
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 88%;
+  padding: 2%;
+  border: 5px solid white;
+  width: 50%;
+}
+
+.questions::-webkit-scrollbar {
+  display: none;
+}
+
+.right_images {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right_images > img {
+  width: 100%;
+}
+
+.normal_image2 {
+  height: 35%;
+}
+
+.byte_image {
+  height: 60%;
+}
+
+@media (max-width: 900px) {
+  .left_images,
+  .right_images {
+    display: none;
+  }
+
+  .questions {
+    width: 90%;
+    height: 100%;
+    border: none;
+  }
+}
