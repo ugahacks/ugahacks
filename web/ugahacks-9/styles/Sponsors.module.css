@@ -1,0 +1,103 @@
+.mainContainer {
+  padding: 2vh 2vw;
+  transition: all 0.3s;
+}
+.sponsorsParentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4vh;
+}
+
+.top_sponsor,
+.mid_sponsor,
+.bot_sponsor {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1px 0;
+}
+
+#hpcc,
+#aifutures,
+#statefarm,
+#echo3d,
+#oreilly {
+  transition: all 0.3s;
+}
+
+#hpcc:hover,
+#aifutures:hover,
+#statefarm:hover,
+#echo3d:hover,
+#oreilly:hover {
+  transform: scale(1.15);
+}
+
+.sponsor_container {
+  margin: 0.2vh 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai_futures_logo {
+  flex: none; /* Do not grow or shrink */
+  margin: 1vw;
+  max-width: 40vw; /* Adjust this to be larger than other logos but not too large */
+  max-height: 40vh; /* Keep the aspect ratio in mind */
+}
+.big_sponsor_logo,
+.mid_sponsor_logo,
+.bot_sponsor_logo {
+  max-width: 35vw; /* Adjust based on your preference */
+  width: auto;
+  height: auto;
+}
+
+.buttonHeading {
+  margin-top: 30px;
+  font-size: 1em;
+}
+.sponsorshipLink {
+  text-decoration: none; /* Removes underline from the link */
+  color: inherit; /* Inherits color from the parent element */
+}
+
+.sponsorshipPacketButton {
+  background: rgba(255, 255, 255, 0.158);
+  border: 2px solid white;
+  color: #000;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-size: 1.1em;
+  color: white;
+}
+
+.sponsorshipPacketButton:hover {
+  background: rgba(255, 255, 255, 0.259);
+  cursor: pointer;
+}
+
+.buttonContainer {
+  text-align: center;
+  margin-top: 60px;
+}
+
+@media (min-width: 768px) {
+  .ai_futures_logo {
+    margin: 0.5vh 1vw;
+    max-width: 25vw;
+    max-height: 25vh;
+  }
+
+  .sponsorsParentContainer {
+    gap: 2vh;
+  }
+}

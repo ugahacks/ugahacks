@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/Navbar.module.css";
+import { usePathname } from "next/navigation";
 
 import {
   BsFacebook,
@@ -22,8 +24,13 @@ interface NavReactIconProps {
 }
 
 const NavLink = (props: NavLinkProps) => {
+  const pathname = usePathname();
+  const isActive = pathname === props.href;
   return (
-    <Link className={styles.navlink} href={props.href}>
+    <Link
+      className={isActive ? styles.activeLink : styles.navLink}
+      href={props.href}
+    >
       {props.name}
     </Link>
   );
@@ -41,13 +48,15 @@ function Navbar() {
   return (
     <div className={styles.navbar}>
       <div className={styles.left}>
-        <Image
-          src="/byte.png"
-          alt="byte"
-          className={styles.icon}
-          width={48}
-          height={50}
-        />
+        <Link href={"/"}>
+          <Image
+            src="/icons/byteIcon.png"
+            alt="byte"
+            className={styles.icon}
+            width={48}
+            height={50}
+          />
+        </Link>
         <NavLink href={"/about"} name={"About"} />
         <NavLink href={"/faq"} name={"FAQ"} />
         <NavLink href={"https://ugahacks.com/"} name={"Our Team"} />
@@ -82,6 +91,19 @@ function Navbar() {
         />
         <NavIcon href={"https://ugahacks.com/"} image={<BsGlobe size={25} />} />
       </div>
+      <a
+        id="mlh-trust-badge"
+        className="mlh_banner"
+        href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-white.svg"
+          alt="Major League Hacking 2024 Hackathon Season"
+          style={{ width: 100 }}
+        />
+      </a>
     </div>
   );
 }
