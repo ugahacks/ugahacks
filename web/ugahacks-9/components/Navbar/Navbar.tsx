@@ -65,7 +65,7 @@ function Navbar() {
       <div className={styles.middle}>
         <img
           src="/logo.png"
-          alt="ugahacks 9"
+          alt="ugahacks 9 logo"
           className={styles.logo}
           //   width={100}
           //   height={40}
