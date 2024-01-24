@@ -39,10 +39,11 @@
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  bottom: 10%;
+  bottom: 8%;
   left: 50%;
   transform: translateX(-50%);
   width: 50%;
+  gap: 30px;
 }
 
 .comic_nav > * {
@@ -56,7 +57,7 @@
 .button_container {
   display: flex;
   transition: all 0.3s;
-  width: 150px;
+  width: 300px;
 }
 
 .button_container > a {
@@ -72,7 +73,7 @@
 
 .button_text {
   font-family: "ActionComics";
-  font-size: 14px;
+  font-size: 1vw;
   margin-top: 20px;
   text-align: center;
   color: white;
@@ -111,6 +112,9 @@
 .register_button {
   position: absolute;
   transition: all 0.3s;
+  position: absolute;
+  top: 47%;
+  width: 400px;
 }
 
 .register_button:hover {
@@ -123,21 +127,7 @@
   align-items: flex-end;
 }
 
-.register_button {
-  position: absolute;
-  top: 45%;
-  width: 400px;
-}
-
-@media (max-width: 440px) {
-  .banner {
-    width: 1000px;
-    margin-left: -75%;
-  }
-  .register_button {
-    top: 40%;
-    width: 400px;
-  }
+@media (max-width: 955px) {
   .comic_nav {
     flex-wrap: wrap;
     bottom: 8%;
@@ -149,18 +139,44 @@
     width: 100px;
   }
 
-  .button_text {
-    font-size: 10px;
+  .register_button {
+    top: 40%;
+    width: 400px;
   }
 
   .speech_bubble1,
   .speech_bubble2 {
-    width: 100px;
-    /* bottom: 60vh; */
+    width: 200px;
   }
 
   .speech_bubble1 {
-    bottom: 65vh;
+    bottom: 30vh;
+  }
+
+  .speech_bubble2 {
+    bottom: 33vh;
+  }
+
+  .banner {
+    z-index: 0;
+    width: 150%;
+    transform: translate(-15%, 0%);
+  }
+
+  .register_button {
+    top: 35%;
+    width: 300px;
+  }
+}
+
+@media (max-width: 690px) {
+  .speech_bubble1,
+  .speech_bubble2 {
+    width: 125px;
+  }
+
+  .speech_bubble1 {
+    bottom: 56vh;
   }
 
   .speech_bubble2 {
@@ -170,16 +186,29 @@
   .exclamation {
     display: none;
   }
+
+  .button_text {
+    font-size: 8px;
+  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 440px) {
   .banner {
-    margin-left: -85%;
+    z-index: 0;
+    width: 200%;
+    transform: translate(-22.5%, 0%);
   }
+
+  .speech_bubble1 {
+    bottom: 63vh;
+  }
+
+  .speech_bubble2 {
+    bottom: 62vh;
+  }
+
   .register_button {
+    top: 35%;
     width: 300px;
   }
-}
-
-@media (max-width: 640px) {
 }
