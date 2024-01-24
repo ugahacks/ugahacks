@@ -16,6 +16,7 @@ import {
 interface NavLinkProps {
   href: string;
   name: string;
+  target?: string;
 }
 
 interface NavReactIconProps {
@@ -30,6 +31,7 @@ const NavLink = (props: NavLinkProps) => {
     <Link
       className={isActive ? styles.activeLink : styles.navLink}
       href={props.href}
+      target={props.target}
     >
       {props.name}
     </Link>
@@ -59,7 +61,11 @@ function Navbar() {
         </Link>
         <NavLink href={"/about"} name={"About"} />
         <NavLink href={"/faq"} name={"FAQ"} />
-        <NavLink href={"https://ugahacks.com/"} name={"Our Team"} />
+        <NavLink
+          href={"https://ugahacks.com/"}
+          name={"Our Team"}
+          target={"_blank"}
+        />
         <NavLink href={"/sponsors"} name={"Sponsors"} />
       </div>
       <div className={styles.middle}>
