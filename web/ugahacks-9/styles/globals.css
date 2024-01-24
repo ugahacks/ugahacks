@@ -63,7 +63,7 @@ body {
   z-index: 10000;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 690px) {
   .mlh_banner {
     display: none;
   }
