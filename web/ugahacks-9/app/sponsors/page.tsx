@@ -7,6 +7,8 @@ import oreilly from "../../public/sponsors/oreilly.png";
 import statefarm from "../../public/sponsors/statefarm.png";
 import hpcc from "../../public/sponsors/hpcc.png";
 import aifutures from "../../public/sponsors/AI_Futures.png";
+import capitalOne from "../../public/sponsors/capOne.png";
+import ugaLogo from "../../public/sponsors/uga_logo.png";
 
 function Sponsors() {
   return (
@@ -57,6 +59,34 @@ function Sponsors() {
                 />
               </a>
             </div>
+            
+          </div>
+          <div className={styles.mid_sponsor}>
+          <div
+              className={`${styles.sponsor_container} ${styles.uga_logo}`}
+            >
+              <a href="https://www.uga.edu/" target="_blank" rel="noreferrer">
+                <Image
+                  src={ugaLogo}
+                  alt="The University of Georgia"
+                  layout="intrinsic" // This tells Next.js to use the image dimensions as defined by the image file
+                  id={styles.uga}
+                />
+              </a>
+            </div>
+            <div
+              className={`${styles.sponsor_container} ${styles.uga_logo}`}
+            >
+              <a href="https://www.capitalone.com/" target="_blank" rel="noreferrer">
+                <Image
+                  src={capitalOne}
+                  alt="Capital One"
+                  layout="intrinsic" // This tells Next.js to use the image dimensions as defined by the image file
+                  id={styles.capitalone}
+                />
+              </a>
+            </div>
+            
           </div>
           <div className={styles.bot_sponsor}>
             <div className={styles.sponsor_container}>
