@@ -7,8 +7,8 @@ import oreilly from "../../public/sponsors/oreilly.png";
 import statefarm from "../../public/sponsors/statefarm.png";
 import hpcc from "../../public/sponsors/hpcc.png";
 import aifutures from "../../public/sponsors/AI_Futures.png";
-import capitalOne from "../../public/sponsors/capOne.png";
-import ugaLogo from "../../public/sponsors/uga_logo.png";
+import capitalOne from "../../public/sponsors/capone_white.png";
+import ugaLogo from "../../public/sponsors/uga_white.png";
 
 function Sponsors() {
   return (
@@ -59,12 +59,9 @@ function Sponsors() {
                 />
               </a>
             </div>
-            
           </div>
           <div className={styles.mid_sponsor}>
-          <div
-              className={`${styles.sponsor_container} ${styles.uga_logo}`}
-            >
+            <div className={`${styles.sponsor_container} ${styles.uga_logo}`}>
               <a href="https://www.uga.edu/" target="_blank" rel="noreferrer">
                 <Image
                   src={ugaLogo}
@@ -74,10 +71,12 @@ function Sponsors() {
                 />
               </a>
             </div>
-            <div
-              className={`${styles.sponsor_container} ${styles.uga_logo}`}
-            >
-              <a href="https://www.capitalone.com/" target="_blank" rel="noreferrer">
+            <div className={`${styles.sponsor_container} ${styles.uga_logo}`}>
+              <a
+                href="https://www.capitalone.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Image
                   src={capitalOne}
                   alt="Capital One"
@@ -86,7 +85,6 @@ function Sponsors() {
                 />
               </a>
             </div>
-            
           </div>
           <div className={styles.bot_sponsor}>
             <div className={styles.sponsor_container}>
@@ -132,7 +130,7 @@ function Sponsors() {
             </a>
           </button>
           <p className={styles.buttonHeading}>
-            This event is supported in part by the President's Venture Fund
+            This event is supported in part by the President&apos;s Venture Fund
             through the generous gifts of University of Georgia donors.
           </p>
         </div>
