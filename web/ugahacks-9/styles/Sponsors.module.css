@@ -7,12 +7,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4vh;
+  gap: 2vh;
 }
 
 .top_sponsor,
-.mid_sponsor,
-.bot_sponsor {
+.mid_sponsor {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -20,11 +19,22 @@
   margin: 1px 0;
 }
 
+.bot_sponsor {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 5vh;
+  margin: 1px 0;
+}
+
 #hpcc,
 #aifutures,
 #statefarm,
 #echo3d,
-#oreilly {
+#oreilly,
+#uga, 
+#capitalone {
   transition: all 0.3s;
 }
 
@@ -32,7 +42,9 @@
 #aifutures:hover,
 #statefarm:hover,
 #echo3d:hover,
-#oreilly:hover {
+#oreilly:hover,
+#uga:hover, 
+#capitalone:hover {
   transform: scale(1.15);
 }
 
@@ -45,9 +57,15 @@
 
 .ai_futures_logo {
   flex: none; /* Do not grow or shrink */
+  max-width: 20vw; /* Adjust this to be larger than other logos but not too large */
+  max-height: 20vh; /* Keep the aspect ratio in mind */
+}
+
+.uga_logo {
+  flex: none; /* Do not grow or shrink */
   margin: 1vw;
-  max-width: 40vw; /* Adjust this to be larger than other logos but not too large */
-  max-height: 40vh; /* Keep the aspect ratio in mind */
+  max-width: 20vw; /* Adjust this to be larger than other logos but not too large */
+  max-height: 10vh; /* Keep the aspect ratio in mind */
 }
 .big_sponsor_logo,
 .mid_sponsor_logo,
@@ -87,17 +105,7 @@
 
 .buttonContainer {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
-@media (min-width: 768px) {
-  .ai_futures_logo {
-    margin: 0.5vh 1vw;
-    max-width: 25vw;
-    max-height: 25vh;
-  }
 
-  .sponsorsParentContainer {
-    gap: 2vh;
-  }
-}
