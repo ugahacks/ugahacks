@@ -67,14 +67,21 @@
   max-width: 20vw; /* Adjust this to be larger than other logos but not too large */
   max-height: 10vh; /* Keep the aspect ratio in mind */
 }
-.big_sponsor_logo,
+.big_sponsor_logo {
+  max-height: 15vh;
+  max-width: 85vw;
+  width: auto;
+  height: auto;
+}
 .mid_sponsor_logo {
-  max-width: 15vw; /* Adjust based on your preference */
+  max-height: 10vh; /* Adjust based on your preference */
+  max-width: 85vw;
   width: auto;
   height: auto;
 }
 .bot_sponsor_logo {
-  max-width: 10vw;
+  max-height: 3vh;
+  max-width: 85vw;
   width: auto;
   height: auto;
 }
