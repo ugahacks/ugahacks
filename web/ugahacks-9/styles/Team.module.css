@@ -5,6 +5,7 @@
   overflow-y: scroll;
   width: 93vw;
   height: 80vh;
+  overflow-x: hidden;
 }
 
 .leadContainer {

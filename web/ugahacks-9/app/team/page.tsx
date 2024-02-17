@@ -48,11 +48,7 @@ function Team() {
       <div className={styles.ParentContainer}>
         <div className={styles.leadContainer}>
           {/* bani lead director here */}
-          <Image
-            className={styles.directorpfp}
-            src={bani}
-            alt="Banibe"
-          />
+          <Image className={styles.directorpfp} src={bani} alt="Banibe" />
           <h3 className={styles.heading}>Banibe Ebegbodi</h3>
           <h4 className={styles.heading}>Lead Director</h4>
         </div>

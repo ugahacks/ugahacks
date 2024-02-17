@@ -1,62 +1,112 @@
 import React from "react";
 import Navbar from "@/components/Navbar/Navbar";
-import styles from "../../styles/Team.module.css";
+import styles from "../../styles/Sponsors.module.css";
 import Image from "next/image";
-import bani from "../../public/pfp/BanibeEbegbodi.png";
-//sponsorteam
-import siddhi from "../../public/pfp/SiddhiChitgopkar.jpg";
-import jiya from "../../public/pfp/JiyaPatel.jpeg";
-import matthewC from "../../public/pfp/MatthewChambers.jpeg";
-import raegan from "../../public/pfp/RaeganGirdley.jpeg";
-import matthewJ from "../../public/pfp/MatthewJue.jpeg";
-import samee from "../../public/pfp/SameeLalani.jpeg";
-//marketingteam
-import gargee from "../../public/pfp/GargeeJamadagni.png";
-import siri from "../../public/pfp/SiriAlla.jpeg";
-import ryan from "../../public/pfp/RyanMajd.jpeg";
-import sophia from "../../public/pfp/SophiaRhoads.jpg";
-import hailey from "../../public/pfp/HaileyHubbard.jpg";
-import siya from "../../public/pfp/SiyaSharma.jpg";
-import kaytie from "../../public/pfp/KaytieLin.jpg";
-import sarah from "../../public/pfp/SarahOrji.jpg";
-//logisticteam
-import helium from "../../public/pfp/HeliumYang.jpg";
-import khushi from "../../public/pfp/KhushiBhatamrekar.png";
-import ethan from "../../public/pfp/EthanOgle.jpg";
-import catherine from "../../public/pfp/CatherineChu.jpg";
-import batu from "../../public/pfp/BatuOzdener.jpg";
-import batu from "../../public/pfp/BatuOzdener.jpg";
-import kevin from "../../public/pfp/KevinDo.jpg";
-import angel from "../../public/pfp/AngelHoang.jpeg";
-import hemant from "../../public/pfp/HemantGautam.jpeg";
-import kellen from "../../public/pfp/KellenBrown.png";
-import codey from "../../public/pfp/CodeyBorrelli.jpg";
-import elaine from "../../public/pfp/ElaineChow.png";
-import angel from "../../public/pfp/AngelHoang.jpeg";
-import hemant from "../../public/pfp/HemantGautam.jpeg";
-import kellen from "../../public/pfp/KellenBrown.png";
-import codey from "../../public/pfp/CodeyBorrelli.jpg";
-import elaine from "../../public/pfp/ElaineChow.png";
-//techteam
-import shawn from "../../public/pfp/ShawnPradeep.jpeg";
-import vansh from "../../public/pfp/VanshArora.jpg";
-import kasra from "../../public/pfp/KasraGhaffari.jpeg";
-import nikita from "../../public/pfp/NikitaJha.jpg";
-import max from "../../public/pfp/MaxPelot.jpg";
-import hannah from "../../public/pfp/HannieKwak.jpeg";
-import dhruv from "../../public/pfp/DhruvPatel.jpeg";
-import alex from "../../public/pfp/AlexTeal.jpg";
-import vansh from "../../public/pfp/VanshArora.jpg";
-import kasra from "../../public/pfp/KasraGhaffari.jpeg";
-import nikita from "../../public/pfp/NikitaJha.jpg";
-import max from "../../public/pfp/MaxPelot.jpg";
-import hannah from "../../public/pfp/HannieKwak.jpeg";
-import dhruv from "../../public/pfp/DhruvPatel.jpeg";
-import alex from "../../public/pfp/AlexTeal.jpg";
+import echo3d from "../../public/sponsors/echo3d.png";
+import oreilly from "../../public/sponsors/oreilly.png";
+import statefarm from "../../public/sponsors/statefarm.png";
+import hpcc from "../../public/sponsors/hpcc.png";
+import aifutures from "../../public/sponsors/AI_Futures.png";
+
 function Sponsors() {
   return (
     <div className="main">
       <Navbar />
+      <div className={styles.mainContainer}>
+        <div className={styles.sponsorsParentContainer}>
+          <div className={styles.top_sponsor}>
+            <div className={styles.sponsor_container}>
+              <a
+                href="https://hpccsystems.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  className={styles.big_sponsor_logo}
+                  src={hpcc}
+                  alt="hpcc"
+                  id={styles.hpcc}
+                />
+              </a>
+            </div>
+          </div>
+          <div className={styles.mid_sponsor}>
+            <div className={styles.sponsor_container}>
+              <a
+                href="https://www.statefarm.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  className={styles.mid_sponsor_logo}
+                  src={statefarm}
+                  alt="statefarm"
+                  id={styles.statefarm}
+                />
+              </a>
+            </div>
+            <div
+              className={`${styles.sponsor_container} ${styles.ai_futures_logo}`}
+            >
+              <a href="https://aifutures.us/" target="_blank" rel="noreferrer">
+                <Image
+                  src={aifutures}
+                  alt="AI Futures logo"
+                  layout="intrinsic" // This tells Next.js to use the image dimensions as defined by the image file
+                  id={styles.aifutures}
+                />
+              </a>
+            </div>
+          </div>
+          <div className={styles.bot_sponsor}>
+            <div className={styles.sponsor_container}>
+              <a
+                href="https://www.echo3d.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  className={styles.bot_sponsor_logo}
+                  src={echo3d}
+                  alt="echo3d"
+                  id={styles.echo3d}
+                />
+              </a>
+            </div>
+
+            <div className={styles.sponsor_container}>
+              <a
+                href="https://www.oreilly.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  className={styles.bot_sponsor_logo}
+                  src={oreilly}
+                  alt="oreilly"
+                  id={styles.oreilly}
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className={styles.buttonContainer}>
+          <a
+            className={styles.sponsorshipLink}
+            href="/UGAHacks9SponsorshipPacket.pdf"
+            target="_blank" // Open in new tab
+            rel="noopener noreferrer" // For security
+          >
+            <button className={styles.sponsorshipPacketButton}>
+              Sponsorship Packet
+            </button>
+          </a>
+          <p className={styles.buttonHeading}>
+            This event is supported in part by the President&apos;s Venture Fund
+            through the generous gifts of University of Georgia donors.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
