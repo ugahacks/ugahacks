@@ -84,6 +84,29 @@ jobs:
           echo "Changed Files (~/files.csv):"
           cat $HOME/files.csv
 
+      # UGAHacks X
+      - name: Build and Push ugahacks-x Container
+        run: |-
+          echo "ugahacks-x changed, building ..."
+          docker build -t gcr.io/${{ env.PROJECT_ID }}/ugahacks-x-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/ugahacks-x
+          docker push gcr.io/${{ env.PROJECT_ID }}/ugahacks-x-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-x')
+
+      - name: Deploy ugahacks-x to Cloud Run
+        id: deploy_ugahacks_x
+        uses: google-github-actions/deploy-cloudrun@v1
+        with:
+          service: ugahacks-x-${{ env.DEPLOY_ENV }}
+          image: gcr.io/${{ env.PROJECT_ID }}/ugahacks-x-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+          region: ${{ env.REGION }}
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-x')
+
+      - name: ugahacks-x Post Deployment
+        run: |-
+          echo "Active URL:"
+          echo ${{ steps.deploy_ugahacks_x.outputs.url }}
+        if: contains(steps.file_changes.outputs.files , 'ugahacks-x')
+
       # UGAHacks 9
       - name: Build and Push ugahacks-9 Container
         run: |-
