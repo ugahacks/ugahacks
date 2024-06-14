@@ -290,3 +290,26 @@ jobs:
           echo "Active URL:"
           echo ${{ steps.deploy_makeathon_2.outputs.url }}
         if: contains(steps.file_changes.outputs.files , 'makeathon-2')
+
+      # Makeathon 3
+      - name: Build and Push makeathon-3 Container
+        run: |-
+          echo "makeathon-3 changed, building ..."
+          docker build -t gcr.io/${{ env.PROJECT_ID }}/makeathon-3-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/makeathon-3
+          docker push gcr.io/${{ env.PROJECT_ID }}/makeathon-3-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+        if: contains(steps.file_changes.outputs.files , 'makeathon-3')
+
+      - name: Deploy makeathon-3 to Cloud Run
+        id: deploy_makeathon_3
+        uses: google-github-actions/deploy-cloudrun@v0.4.0
+        with:
+          service: makeathon-3-${{ env.DEPLOY_ENV }}
+          image: gcr.io/${{ env.PROJECT_ID }}/makeathon-3-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+          region: ${{ env.REGION }}
+        if: contains(steps.file_changes.outputs.files , 'makeathon-3')
+
+      - name: makeathon-3 Post Deployment
+        run: |-
+          echo "Active URL:"
+          echo ${{ steps.deploy_makeathon_2.outputs.url }}
+        if: contains(steps.file_changes.outputs.files , 'makeathon-3')
