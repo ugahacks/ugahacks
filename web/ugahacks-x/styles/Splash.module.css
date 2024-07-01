@@ -1,0 +1,79 @@
+.splashContainer {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/UHX_Background_No_Text 1.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logoContainer {
+    padding-top: 2em;
+  }
+  
+  .mainLogo {
+    width: 700px;
+    height: 300px;
+  }
+
+  .rockstarText {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .locationAndDateText {
+    padding-top:"3em";
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+  }
+
+
+  .registerButton {
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold; 
+
+  }
+
+
+  .placeholdersContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+  }
+  
+  .placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+  }
+  
+  .placeholderBox {
+    width: 150px;
+    height: 200px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .placeholderText {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+  }

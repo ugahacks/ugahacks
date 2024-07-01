@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    position: absolute; /* Ensure navbar is positioned at the top */
+  }
+  
+  .logo {
+    height: 50px;
+    margin-right: 20px;
+  }
+  
+  .navLinks {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navLinks a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .navLinks a:hover {
+    text-decoration: underline;
+  }
+  
