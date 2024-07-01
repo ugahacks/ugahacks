@@ -1,0 +1,51 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .navLeft {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 90px;
+    margin-right: 10px;
+  }
+  
+  .navLinks {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navLinks a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .navLinks a:hover {
+    text-decoration: underline;
+  }
+  
+  .socialMedia {
+    display: flex;
+    align-items: center;
+  }
+  
+  .socialMedia a {
+    margin: 0 5px;
+  }
+  
+  .socialMedia img {
+    width: 30px;
+    height: 30px;
+  }
+  
