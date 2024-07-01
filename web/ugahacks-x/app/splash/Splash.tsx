@@ -19,7 +19,9 @@ const Splash = () => {
         <p>02/07/25 - 02/09/25</p>
         <p>Zell B. Miller Learning Center Athens, GA</p>
       </div>
-      <button className={styles.registerButton}>REGISTER NOW</button>
+      <a href="https://mybyte.ugahacks.com/" target="_blank" rel="noopener noreferrer" className={styles.registerButton}>
+          REGISTER NOW
+        </a>
       <div className={styles.placeholdersContainer}>
         <div className={styles.placeholder}>
           <div className={styles.placeholderBox}>
