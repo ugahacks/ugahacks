@@ -1,14 +1,21 @@
 .navbar {
     display: flex;
+    justify-content: space-between; 
     align-items: center;
     padding: 10px 20px;
-    background-color: black;
-    position: absolute; /* Ensure navbar is positioned at the top */
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .navLeft {
+    display: flex;
+    align-items: center;
   }
   
   .logo {
-    height: 50px;
-    margin-right: 20px;
+    height: 90px;
+    margin-right: 10px;
   }
   
   .navLinks {
@@ -26,5 +33,19 @@
   
   .navLinks a:hover {
     text-decoration: underline;
+  }
+  
+  .socialMedia {
+    display: flex;
+    align-items: center;
+  }
+  
+  .socialMedia a {
+    margin: 0 5px;
+  }
+  
+  .socialMedia img {
+    width: 30px;
+    height: 30px;
   }
   

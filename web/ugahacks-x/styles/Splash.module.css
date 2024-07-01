@@ -23,6 +23,10 @@
     margin-top: 20px;
     color: white;
     font-weight: bold;
+    font-size: 1.5em; 
+    letter-spacing: 1px; 
+    font-family: 'Vidaloka', serif; 
+
   }
 
   .locationAndDateText {
