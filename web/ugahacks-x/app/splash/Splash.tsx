@@ -25,6 +25,9 @@ const Splash = () => {
           REGISTER NOW
         </a>
       </button>
+      <button style={{fontWeight: "bold",  backgroundColor: "#f472b6", padding: "5px", borderRadius: "5px", marginTop: "10px"}}>
+      <a target="blank" href="http://hackp.ac/coc">MLH Code of Conduct</a>
+      </button>
     </div>
   );
 };
