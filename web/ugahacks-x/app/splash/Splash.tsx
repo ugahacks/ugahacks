@@ -19,35 +19,11 @@ const Splash = () => {
         <p>02/07/25 - 02/09/25</p>
         <p>Zell B. Miller Learning Center Athens, GA</p>
       </div>
+      <button style={{backgroundColor: "#f472b6", borderRadius: "5px", marginTop: "5px"}}>
       <a href="https://mybyte.ugahacks.com/" target="_blank" rel="noopener noreferrer" className={styles.registerButton}>
           REGISTER NOW
         </a>
-      <div className={styles.placeholdersContainer}>
-        <div className={styles.placeholder}>
-          <div className={styles.placeholderBox}>
-            <p>Place holder</p>
-          </div>
-          <h3 className={styles.placeholderText}>About</h3>
-        </div>
-        <div className={styles.placeholder}>
-          <div className={styles.placeholderBox}>
-            <p>Place holder</p>
-          </div>
-          <h3 className={styles.placeholderText}>FAQ</h3>
-        </div>
-        <div className={styles.placeholder}>
-          <div className={styles.placeholderBox}>
-            <p>Place holder</p>
-          </div>
-          <h3 className={styles.placeholderText}>Our Team</h3>
-        </div>
-        <div className={styles.placeholder}>
-          <div className={styles.placeholderBox}>
-            <p>Place holder</p>
-          </div>
-          <h3 className={styles.placeholderText}>Sponsors</h3>
-        </div>
-      </div>
+      </button>
     </div>
   );
 };
