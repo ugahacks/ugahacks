@@ -5,6 +5,7 @@ import styles from "../../styles/Splash.module.css";
 const Splash = () => {
   return (
     <div className={styles.splashContainer}>
+      <a style={{alignSelf: "end", marginRight: "50px"}} target="blank" href="http://hackp.ac/coc"><img style={{height: "200px", }}src="/2025Badges/mlh-trust-badge-2025-white.png"></img></a>
       <div className={styles.logoContainer}>
         <img
           className={styles.mainLogo}
