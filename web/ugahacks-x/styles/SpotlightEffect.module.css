@@ -1,0 +1,46 @@
+/* spotlight.module.css */
+.spotlightOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background:red;
+    pointer-events: none;
+    z-index: 9999;
+    transition: background-position 0.1s ease-out;
+  }
+  
+  .spotlight {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.1s ease;
+    z-index: 9999;
+  }
+  
+  .cursorDot {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: transparent; /* Clear background */
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .cursorOutline {
+    position: absolute;
+    width: 2400px; /* Large circle to cover the screen */
+    height: 2400px;
+    border: 1000px solid rgba(0, 0, 0, 0.88); /* Solid black outline */
+    border-radius: 100%;
+    pointer-events: none;
+    z-index: 9998;
+    transition: transform 0.1s ease-out;
+  }
+  
+  
