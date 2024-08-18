@@ -1,31 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Audiowide&display=swap');
+
 .splashContainer {
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("/UHX_Background_No_Text 1.png");
+    background-image: url("/UHX_Background_Drums.png");
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
   .logoContainer {
-    padding-top: 2em;
+    position: relative;
+    margin-top: -30px;
   }
   
   .mainLogo {
-    width: 700px;
+    width: 850px;
     height: 300px;
   }
 
   .rockstarText {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 35px;
     color: white;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 1.5em; 
-    letter-spacing: 1px; 
-    font-family: 'Vidaloka', serif; 
+    letter-spacing: 5px; 
+    font-family: 'Audiowide';
 
   }
 
@@ -37,16 +43,32 @@
   }
 
 
-  .registerButton {
+  .registerLink {
     border: none;
+    background-color: transparent;
     padding: 10px 20px;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     margin-top: 10px;
-    font-weight: bold; 
+    /* font-weight: bold;  */
+    font-family: 'Anton';
+    letter-spacing: 5px;
 
   }
+  .registerButton {
+    margin-top: 30px;
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 5px solid white;
+    border-radius: 35px 0 35px 0;
+    color: white; 
+    cursor: pointer; 
+    font-size: 16px;
+    width: 300px;
+    height: 75px;
+  }
+
 
 
   .placeholdersContainer {
