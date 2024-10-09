@@ -7,15 +7,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
   }
   
   .logoContainer {
-    padding-top: 2em;
+    padding-top: 0;
+    z-index: 50;
   }
   
   .mainLogo {
-    width: 700px;
-    height: 300px;
+    width: auto;
+    height: 20vw;
   }
 
   .rockstarText {
@@ -45,6 +47,12 @@
     cursor: pointer;
     margin-top: 10px;
     font-weight: bold; 
+
+    padding: 17px 55px 17px 55px;
+    gap: 10px;
+    border-radius: 25px 0px 25px 0px;
+    border: 4px 0px 0px 0px;
+    opacity: 0px;
 
   }
 
