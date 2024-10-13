@@ -1,5 +1,3 @@
-import Image from "next/image";
-import react from 'react';
 import logo from "../../public/bytelogo.png";
 import fb from "../../public/social_logos/fb_logo.png";
 import gh from "../../public/social_logos/gh_logo.png";
@@ -10,7 +8,7 @@ import styles from "../../styles/Splash.module.css";
 const Splash = () => {
   return (
     <div>
-      <header className="top-0 px-4 md:px-6 lg:px-8 h-16 flex items-center text-white z-50">
+      <header className="top-0 px-4 md:px-6 lg:px-8 h-16 flex items-center text-white z-50" style={{ fontFamily: "'Distortion Dos Analogue', sans-serif" }}>
         <a className="flex items-center justify-center" href="#">
           <img src={logo.src} alt="Logo" className="h-12 md:h-14 lg:h-16" />
         </a>
@@ -56,27 +54,27 @@ const Splash = () => {
         </div>
 
         <div className={styles.locationAndDateText}>
-          <div className="grid md:grid-cols-2 gap-4 items-center">
-            <p className="text-lg md:text-2xl font-bold">UGA MILLER <br />LEARNING CENTER</p>
+          <div className="grid md:grid-cols-2 gap-4 items-center" style={{ fontFamily: "'Distortion Dos Analogue', sans-serif" }}>
+            <p
+              className="text-lg md:text-2xl font-bold">
+              UGA MILLER <br /> LEARNING CENTER
+            </p>
             <p className="text-lg md:text-2xl font-bold">FEBRUARY<br />9-11,<br />2025</p>
           </div>
         </div>
-        <div className="inline-block my-4 py-4 px-6 py-2 border-4 border-white text-white font-bold uppercase text-lg tracking-wider rounded-ee-3xl rounded-ss-3xl hover:animate-pulse hover:text-black transition duration-300">
-          {/* style={{ backgroundColor: "#f472b6", borderRadius: "5px", marginTop: "5px" }} */}
+        <div className="inline-block my-4 py-2 px-2 py-1 border-4 border-white text-white font-bold text-lg tracking-wider rounded-ee-3xl rounded-ss-3xl hover:animate-pulse hover:text-black transition duration-300">
           <button >
             <a href="https://mybyte.ugahacks.com/" target="_blank" rel="noopener noreferrer" className={styles.registerButton}>
               REGISTER NOW
             </a>
           </button>
+
         </div>
-        <button className="inline-block my-2 py-4 px-6 py-2 border-4 border-white text-white font-bold uppercase text-lg tracking-wider rounded-es-3xl rounded-se-3xl hover:text-white hover:animate-pulse hover:text-black transition duration-300">
-          <a target="blank" href="http://hackp.ac/coc">MLH Code of Conduct</a>
-        </button>
-
-
       </div>
+      {/* EVERYTHING OUTSIDE HERE IS OUTSIDE OF THE BACKGROUND IMAGE */}
 
-    </div >
+
+    </div>
   );
 };
 

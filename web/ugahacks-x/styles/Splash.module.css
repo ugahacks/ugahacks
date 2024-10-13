@@ -1,9 +1,22 @@
+@font-face {
+  font-family: 'Distortion Dos Analogue';
+  src: url('../public/fonts/Distortion-Dos-Analogue.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.red {
+  color: red;
+  
+}
 .splashContainer {
+/* height needs to be edited when adding more sections from Navbar */
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("/UHX_Background_No_Text 1.png");
+    /* background-image: url("/UHX_Background_No_Text 1.png"); */
+    background-image: url("/bg_new.jpg");
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +41,6 @@
     font-size: 1.5em; 
     letter-spacing: 1px; 
     font-family: 'Vidaloka', serif; 
-
   }
 
   .locationAndDateText {
@@ -36,6 +48,7 @@
     text-align: center;
     margin-top: 20px;
     color: white;
+    font-family: 'DDA', sans-serif;
   }
 
 
@@ -52,7 +65,7 @@
     gap: 10px;
     border-radius: 25px 0px 25px 0px;
     border: 4px 0px 0px 0px;
-    opacity: 0px;
+    opacity: 1px;
 
   }
 
