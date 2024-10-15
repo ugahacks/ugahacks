@@ -12,7 +12,7 @@
 .splashContainer {
 /* height needs to be edited when adding more sections from Navbar */
     width: 100vw;
-    height: 90vh;
+    height: 280vh; 
     background-repeat: no-repeat;
     background-size: cover;
     /* background-image: url("/UHX_Background_No_Text 1.png"); */
