@@ -3,7 +3,7 @@ import Toplandingpage from "./components/Toplandingpage/Toplandingpage";
 
 export default function Home() {
   return (
-    <div style={{ backgroundColor: '#C4DB94', minHeight: '100vh' }}>
+    <div className="bg-[#C4DB94] min-h-screen">
       <Toplandingpage />
     </div>
   );
