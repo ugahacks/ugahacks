@@ -25,3 +25,61 @@ body {
     text-wrap: balance;
   }
 }
+
+/* NAVBAR */
+
+@font-face {
+  font-family: 'Handy Casual';
+  src: url('./fonts/HandyCasual.ttf') format('truetype'); /* Ensure the path is correct */
+}
+
+
+.testNav {
+  position: absolute;
+  width: 783px;
+  height: 123px;
+  left: 311px;
+  top: 30px;
+  box-sizing: border-box;
+  background: url('./assets/NavLog.png');
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.navLink a {
+  font-family: 'Handy Casual', sans-serif;
+  text-decoration: none;
+  color: #48301D;
+  font-size: 45px;
+  transition: font-size 0.3s ease;
+}
+
+.navLink a:hover {
+  font-size: 55px;
+}
+
+.grassR {
+  width: 51px;
+  height: 75px;
+  margin-right: 8px;
+  background: url('./assets/navgrass\ R.png');
+}
+
+.grassL {
+  width: 51px;
+  height: 75px;
+  margin-left: 18px;
+  background: url('./assets/navgrass\ L.png');
+}
