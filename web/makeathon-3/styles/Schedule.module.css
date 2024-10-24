@@ -1,0 +1,16 @@
+/* Schedule.module.css */
+
+.schedule-container {
+    width: 100%;         /* Align with the footer's width */
+    height: auto;
+    display: flex;
+    justify-content: center;  /* Horizontally align the image */
+    margin-top: -85px;   /* Adjust spacing as needed */
+    padding: 0;          /* Ensure no extra padding */
+  }
+  
+  .schedule-image {
+    width: 95%;            /* Optional: Adjust to match layout */
+    object-fit: contain;   /* Maintain aspect ratio within the container */
+  }
+  
