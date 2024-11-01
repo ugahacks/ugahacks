@@ -5,7 +5,7 @@ import Dropdown from './Dropdown';
 
 const Faq = () => {
     return (
-        <section className="flex flex-col items-center">
+        <section className="flex flex-col items-center pb-5">
             <Image
                 height={103}
                 width={260}

@@ -2,6 +2,7 @@
 import { useState } from 'react';
 
 interface DropdownProps {
+    title: string,
     content: string;
 }
 
