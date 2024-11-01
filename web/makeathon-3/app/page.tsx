@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <div className="bg-[#C4DB94] min-h-screen">
       <Toplandingpage />
-      <Faq />
       <SchedulePage />
+      <Faq />
       <Footer />
     </div>
   );
