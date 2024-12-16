@@ -1,0 +1,55 @@
+.team {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+.team-image {
+  width: 100%;
+  height: auto;
+}
+
+.team-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 55%; 
+  left: 17.6%; 
+  transform: translate(-50%, -50%); 
+  color: transparent;
+  border-radius: 20px;
+  width: 23%;
+  height: 15.0%;
+  color: black;
+  cursor: pointer;
+}
+
+.image-container {
+  position: relative;
+  width: 100%; 
+  height: 100%; 
+}
+
+.image-container img {
+  object-fit: contain;
+}
+
+.cool-image-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 43.1%; 
+  left: 75.6%; 
+  transform: translate(-50%, -50%); 
+  background-color: transparent;
+  width: 40%;
+  height: 60%;
+}
+
+.cool-image-container img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
