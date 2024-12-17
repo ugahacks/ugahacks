@@ -73,7 +73,6 @@ const Splash = () => {
       </div>
       {/* EVERYTHING OUTSIDE HERE IS OUTSIDE OF THE BACKGROUND IMAGE */}
 
-
     </div>
   );
 };

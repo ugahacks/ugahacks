@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'Distortion Dos Analogue';
   src: url('../public/fonts/Distortion-Dos-Analogue.otf') format('otf');
@@ -9,14 +10,17 @@
   color: red;
   
 }
+
 .splashContainer {
 /* height needs to be edited when adding more sections from Navbar */
     width: 100vw;
     height: 280vh; 
     background-repeat: no-repeat;
     background-size: cover;
+
     /* background-image: url("/UHX_Background_No_Text 1.png"); */
     background-image: url("/bg_new.jpg");
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,16 +35,18 @@
   .mainLogo {
     width: auto;
     height: 20vw;
+
   }
 
   .rockstarText {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 35px;
     color: white;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 1.5em; 
     letter-spacing: 1px; 
     font-family: 'Vidaloka', serif; 
+
   }
 
   .locationAndDateText {
@@ -52,14 +58,17 @@
   }
 
 
-  .registerButton {
+  .registerLink {
     border: none;
+    background-color: transparent;
     padding: 10px 20px;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     margin-top: 10px;
-    font-weight: bold; 
+    /* font-weight: bold;  */
+    font-family: 'Anton';
+    letter-spacing: 5px;
 
     padding: 17px 55px 17px 55px;
     gap: 10px;
@@ -68,6 +77,19 @@
     opacity: 1px;
 
   }
+  .registerButton {
+    margin-top: 30px;
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 5px solid white;
+    border-radius: 35px 0 35px 0;
+    color: white; 
+    cursor: pointer; 
+    font-size: 16px;
+    width: 300px;
+    height: 75px;
+  }
+
 
 
   .placeholdersContainer {
