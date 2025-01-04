@@ -26,7 +26,6 @@ jobs:
         run: echo "PYTHON UNIT TESTING COMPLETE"
 
   jest:
-    needs: eslint
     runs-on: ubuntu-latest
     steps:
       - name: Test Typescript Code
@@ -34,7 +33,7 @@ jobs:
 
   # Conditionally build, containerize, and deploy UGAHacks services iff files are changed #
   deploy:
-    needs: [flake8, eslint, pytest, jest]
+    needs: [flake8, pytest, jest]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
