@@ -7,6 +7,7 @@ import styles from "../../styles/Team.module.css";
 export default function Team() {
   return (
     <div
+    id="team"
       className={styles.team}
     >
       <Image

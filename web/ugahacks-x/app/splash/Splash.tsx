@@ -70,6 +70,7 @@ const Splash = () => {
           </button>
 
         </div>
+        <div className="mt-100" id="about"></div>
       </div>
       {/* EVERYTHING OUTSIDE HERE IS OUTSIDE OF THE BACKGROUND IMAGE */}
 

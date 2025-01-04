@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="main">
       <Splash />
-      <Team />
+      <Team/>
     </div>
   );
 }
