@@ -1,0 +1,39 @@
+.footer {
+  position: relative;
+  height: auto;
+  width: 103.5%;
+}
+
+.footer-image {
+  width: 100%;
+  height: auto;
+}
+
+.footer-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 92.3%; /* Adjust this value to position the button vertically */
+  left: 49.7%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the button */
+  background-color: #eec983;
+  color: transparent;
+  border-radius: 20px;
+  padding: 10px;
+  gap: 10px;
+  width: 17.01%;
+  height: 5.0%;
+  color: black;
+  cursor: pointer;
+}
+
+.image-container {
+  position: relative;
+  width: 95%; /* Set width based on percentage (50% of the button's container) */
+  height: 95%; /* Set height based on percentage */
+}
+
+.image-container img {
+  object-fit: contain;
+}
