@@ -7,7 +7,6 @@ import Footer from "./components/Footer/Footer";
 export default function Home() {
   return (
     <div className="bg-[#C4DB94] min-h-screen">
-      {/* <div className="bg-[#C4DB94] min-h-screen"> */}
       <Toplandingpage />
       <SchedulePage />
       <Faq />
