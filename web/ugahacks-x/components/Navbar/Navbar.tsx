@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../public/bytelogo.png";
+import logo from "../../public/byte_uhx.png";
 import fb from "../../public/social_logos/fb_logo.png";
 import gh from "../../public/social_logos/gh_logo.png";
 import ig from "../../public/social_logos/ig_logo.png";
@@ -12,7 +12,7 @@ const Navbar = () => {
       style={{ fontFamily: "'Distortion Dos Analogue', sans-serif" }}
     >
       <a className="flex items-center justify-center" href="#">
-        {/* <img src={logo.src} alt="Logo" className="h-12 md:h-14 lg:h-16" /> */}
+        <img src={logo.src} alt="Logo" className="h-12 md:h-14 lg:h-16" />
       </a>
       <nav className="ml-4 md:ml-6 lg:ml-10 flex gap-4 sm:gap-6 md:gap-8 tracking-wider font-bold uppercase">
         <a
