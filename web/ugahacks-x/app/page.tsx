@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Splash from "./splash/Splash"
 import Navbar from "../components/Navbar/Navbar";
+import Splash from "./splash/Splash";
 import Team from "@/components/team/Team";
 
 
