@@ -78,10 +78,11 @@ const Splash = () => {
         <div className="mt-100" id="about"></div>
       </div>
       {/* EVERYTHING OUTSIDE HERE IS OUTSIDE OF THE BACKGROUND IMAGE */}
-      <FAQ questions={questions} />
+      <section id="faq" className={styles.headerTitle}>
+        <h1 className="text-6xl p-8" style={{ fontFamily: "'Distortion Dos Analogue', sans-serif" }}>FAQ</h1>
+        <FAQ questions={questions} />
+      </section>
     </div>
-
-    //FAQ component tag
 
   );
 };
