@@ -1,27 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Audiowide&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Audiowide&display=swap');
+
+@font-face {
+  font-family: 'Distortion Dos Analogue';
+  src: url('../public/fonts/Distortion-Dos-Analogue.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.red {
+  color: red;
+  
+}
 
 .splashContainer {
+/* height needs to be edited when adding more sections from Navbar */
     width: 100vw;
-    height: 100vh;
+    height: 280vh; 
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("/UHX_Background_Drums.png");
-    background-color: rgba(0, 0, 0, 0.6);
-    background-blend-mode: darken;
+
+    /* background-image: url("/UHX_Background_No_Text 1.png"); */
+    background-image: url("/bg_new.jpg");
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
   }
   
   .logoContainer {
-    position: relative;
-    margin-top: -30px;
+    padding-top: 0;
+    z-index: 50;
   }
   
   .mainLogo {
-    width: 850px;
-    height: 300px;
+    width: auto;
+    height: 20vw;
+
   }
 
   .rockstarText {
@@ -30,8 +44,8 @@
     color: white;
     /* font-weight: bold; */
     font-size: 1.5em; 
-    letter-spacing: 5px; 
-    font-family: 'Audiowide';
+    letter-spacing: 1px; 
+    font-family: 'Vidaloka', serif; 
 
   }
 
@@ -40,6 +54,7 @@
     text-align: center;
     margin-top: 20px;
     color: white;
+    font-family: 'DDA', sans-serif;
   }
 
 
@@ -54,6 +69,12 @@
     /* font-weight: bold;  */
     font-family: 'Anton';
     letter-spacing: 5px;
+
+    padding: 17px 55px 17px 55px;
+    gap: 10px;
+    border-radius: 25px 0px 25px 0px;
+    border: 4px 0px 0px 0px;
+    opacity: 1px;
 
   }
   .registerButton {
