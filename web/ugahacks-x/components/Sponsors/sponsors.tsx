@@ -67,7 +67,7 @@ export default function Sponsors() {
             >
               <Link href={logo.url} target="_blank" rel="noopener noreferrer">
                 {logo ? (
-                  <Image
+                  <img
                     src={logo.src}
                     alt={logo.alt}
                     width={150} // Adjust logo size
