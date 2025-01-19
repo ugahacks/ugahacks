@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -30,4 +31,80 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* FAQ */
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq-item {
+  margin: 50px;
+  text-align: center;
+  width: 85%;
+}
+
+.faq-question {
+  border-radius: 48px;
+  background-color: #522072;
+  width: 1072px;
+  height: 59px;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vector {
+  margin-right: 40px;
+}
+
+.question-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 73px;
+  margin-left: 70px;
+}
+
+.faq-question.active .vector {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  position: relative;
+  width: 1072px;
+  height: 160px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  z-index: 1;
+  top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cutout-image {
+  position: absolute;
+  z-index: 1;
+}
+
+.faq-answer p {
+  width: auto;
+  color: black;
+  position: absolute;
+  z-index: 2;
+  margin-left: 80px;
+  margin-right: 80px;
+  top: 55px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
 }
