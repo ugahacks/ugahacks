@@ -11,6 +11,19 @@
   
 }
 
+.sponsorContainer {
+  width: 100vw; 
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* background-image: url("/UHX_Background_No_Text 1.png"); */
+  background-image: url("/bg_new.jpg");
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
 .splashContainer {
 /* height needs to be edited when adding more sections from Navbar */
     width: 100vw;

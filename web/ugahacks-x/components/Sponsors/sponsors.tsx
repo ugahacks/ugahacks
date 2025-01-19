@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import styles from "../../styles/Splash.module.css";
@@ -24,13 +23,10 @@ export default function Sponsors() {
         overflow: "hidden",
       }}
     >
-      <Image
+      <img
+        className={styles.sponsorContainer}
         src="/SponsorsBackground.png"
         alt="Sponsors Background"
-        layout="fill"
-        objectFit="cover"
-        style={{ zIndex: -1 }}
-
       />
       <div id="sponsors"
         style={{
