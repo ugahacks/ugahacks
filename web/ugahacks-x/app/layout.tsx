@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "UGAHacks X",
   description:
-    "UGAHacks X will be held in UGA's Miller Learning Center on Febuary 7-9th, 2025.",
+    "UGAHacks X will be held in University of Georgia's Miller Learning Center on Febuary 7-9th, 2025.",
 };
 
 export default function RootLayout({
