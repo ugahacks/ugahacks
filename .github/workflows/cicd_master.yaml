@@ -17,7 +17,6 @@ jobs:
       - name: Lint Python Code
         run: python -V
 
-
   pytest:
     needs: flake8
     runs-on: ubuntu-latest
@@ -26,7 +25,7 @@ jobs:
         run: echo "PYTHON UNIT TESTING COMPLETE"
 
   jest:
-    needs: eslint
+    # needs: eslint
     runs-on: ubuntu-latest
     steps:
       - name: Test Typescript Code
