@@ -30,10 +30,10 @@ jobs:
       - name: Install project dependencies
         run: yarn install
 
-      # - name: Lint
-      #   run: |
-      #     echo "yarn version: $(yarn --version)"
-      #     yarn workspaces foreach -A run lint
+      - name: Lint
+        run: |
+          echo "yarn version: $(yarn --version)"
+          yarn workspaces foreach -A run lint
 
   pytest:
     needs: flake8
