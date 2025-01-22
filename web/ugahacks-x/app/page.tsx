@@ -1,8 +1,10 @@
 'use client'
 import Image from "next/image";
-import Splash from "./splash/Splash";
 import Navbar from "../components/Navbar/Navbar";
-import Countdown from "../components/Countdown"
+import Splash from "./splash/Splash";
+import Team from "@/components/team/Team";
+import Sponsors from "@/components/Sponsors/sponsors";
+import Countdown from "@/components/Countdown/Countdown";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <Navbar />
       <Splash />
       <Countdown />
+      <Team/>
+      <Sponsors/>
     </div>
   );
 }
