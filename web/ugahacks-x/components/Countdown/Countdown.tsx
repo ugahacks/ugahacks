@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 const Countdown: React.FC = () => {
-  const targetDate = new Date("February 7, 2025 08:00:00").getTime();
+  const targetDate = new Date("February 7, 2025 17:00:00").getTime();
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   function calculateTimeLeft() {

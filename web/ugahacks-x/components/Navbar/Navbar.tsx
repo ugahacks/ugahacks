@@ -113,7 +113,7 @@ const Navbar = () => {
         className="absolute top-16 left-0 w-full p-4"
         style={{
           visibility: isAtTop ? "visible" : "hidden",
-          transition: "visibility 0.4s ease", 
+          transition: "visibility 0.1s ease", 
         }}
       >
         <Countdown />
