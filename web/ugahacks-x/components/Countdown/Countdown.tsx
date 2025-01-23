@@ -1,10 +1,9 @@
-"use client"
-import React, { useEffect, useState } from 'react';
+"use client";
+import React, { useEffect, useState } from "react";
 
 const Countdown: React.FC = () => {
-  const targetDate = new Date('February 7, 2025 08:00:00').getTime();
+  const targetDate = new Date("February 7, 2025 08:00:00").getTime();
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  const [isMounted, setIsMounted] = useState(false);
 
   function calculateTimeLeft() {
     const now = new Date().getTime();
@@ -23,30 +22,34 @@ const Countdown: React.FC = () => {
   }
 
   useEffect(() => {
-    setIsMounted(true); // Indicate that the component has mounted
-
-    if (!isMounted) return;
-
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [isMounted]);
-
-  // Prevent rendering mismatched content during SSR
-  if (!isMounted) {
-    return null; 
-  }
+  }, []);
 
   return (
-    <div className="countdown">
-      <h1>Countdown to UGAHACKS-X</h1>
-      <div className="time-display">
-        <span>{timeLeft.days}d</span>
-        <span>{timeLeft.hours}h</span>
-        <span>{timeLeft.minutes}m</span>
-        <span>{timeLeft.seconds}s</span>
+    <div
+      className="countdown text-white text-center p-4 rounded-md shadow-lg"
+      style={{ fontFamily: "'Distortion Dos Analogue', sans-serif", backgroundColor: "transparent" }}
+    >
+      <h1 className="text-sm md:text-xl lg:text-2xl font-bold mb-4 text-pink-500 uppercase tracking-wider">
+        Countdown to UGAHACKS-X
+      </h1>
+      <div className="time-display flex justify-center gap-2 md:gap-4 lg:gap-6 text-base md:text-lg lg:text-xl font-bold">
+        <span className="bg-gray-900 px-3 py-1 rounded hover:bg-pink-500 transition-colors duration-300">
+          {timeLeft.days}d
+        </span>
+        <span className="bg-gray-900 px-3 py-1 rounded hover:bg-pink-500 transition-colors duration-300">
+          {timeLeft.hours}h
+        </span>
+        <span className="bg-gray-900 px-3 py-1 rounded hover:bg-pink-500 transition-colors duration-300">
+          {timeLeft.minutes}m
+        </span>
+        <span className="bg-gray-900 px-3 py-1 rounded hover:bg-pink-500 transition-colors duration-300">
+          {timeLeft.seconds}s
+        </span>
       </div>
     </div>
   );

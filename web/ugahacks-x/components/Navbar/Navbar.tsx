@@ -4,7 +4,7 @@ import fb from "../../public/social_logos/fb_logo.png";
 import gh from "../../public/social_logos/gh_logo.png";
 import ig from "../../public/social_logos/ig_logo.png";
 import x from "../../public/social_logos/x_logo.png";
-
+import Countdown from "../Countdown/Countdown";
 const Navbar = () => {
   return (
     <header
@@ -87,6 +87,10 @@ const Navbar = () => {
           />
         </a>
       </nav>
+      {/* Place Countdown below the navbar */}
+      <div className="absolute top-10 left-0 w-full p-4">
+        <Countdown />
+      </div>
     </header>
   );
 };
