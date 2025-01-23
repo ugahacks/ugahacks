@@ -1,11 +1,33 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import logo from "../../public/byte_uhx.png";
 import fb from "../../public/social_logos/fb_logo.png";
 import gh from "../../public/social_logos/gh_logo.png";
 import ig from "../../public/social_logos/ig_logo.png";
 import x from "../../public/social_logos/x_logo.png";
+import Countdown from "../Countdown/Countdown";
 
 const Navbar = () => {
+  const [isAtTop, setIsAtTop] = useState(true); 
+
+  useEffect(() => {
+    // Event listener for scroll event
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsAtTop(true);  
+      } else {
+        setIsAtTop(false); 
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header
       className="sticky top-0 px-4 md:px-6 lg:px-8 h-16 flex items-center text-white z-50"
@@ -87,6 +109,15 @@ const Navbar = () => {
           />
         </a>
       </nav>
+      <div
+        className="absolute top-16 left-0 w-full p-4"
+        style={{
+          visibility: isAtTop ? "visible" : "hidden",
+          transition: "visibility 0.1s ease", 
+        }}
+      >
+        <Countdown />
+      </div>
     </header>
   );
 };
