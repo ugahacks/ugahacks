@@ -51,7 +51,7 @@ body {
 .faq-question {
   border-radius: 48px;
   background-color: #522072;
-  width: 1072px;
+  width: 60%;
   height: 59px;
   position: absolute;
   z-index: 2;
@@ -79,12 +79,9 @@ body {
 
 .faq-answer {
   position: relative;
-  width: 1072px;
+  width: 70%;
   height: 160px;
   gap: 0px;
-  border: 1px 0px 0px 0px;
-  opacity: 0px;
-  z-index: 1;
   top: 20px;
   display: flex;
   justify-content: flex-start;
@@ -92,7 +89,7 @@ body {
 }
 
 .cutout-image {
-  position: absolute;
+  width: 100%;
   z-index: 1;
 }
 
