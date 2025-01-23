@@ -5,18 +5,18 @@ import fb from "../../public/social_logos/fb_logo.png";
 import gh from "../../public/social_logos/gh_logo.png";
 import ig from "../../public/social_logos/ig_logo.png";
 import x from "../../public/social_logos/x_logo.png";
-import Countdown from "../Countdown/Countdown";  // Import Countdown component
+import Countdown from "../Countdown/Countdown";
 
 const Navbar = () => {
-  const [isAtTop, setIsAtTop] = useState(true);  // State to track if we're at the top
+  const [isAtTop, setIsAtTop] = useState(true); 
 
   useEffect(() => {
     // Event listener for scroll event
     const handleScroll = () => {
       if (window.scrollY === 0) {
-        setIsAtTop(true);  // Show countdown if scrolled to top
+        setIsAtTop(true);  
       } else {
-        setIsAtTop(false);  // Hide countdown if scrolled down
+        setIsAtTop(false); 
       }
     };
 
@@ -109,13 +109,11 @@ const Navbar = () => {
           />
         </a>
       </nav>
-
-      {/* Countdown visibility based on scroll position */}
       <div
         className="absolute top-16 left-0 w-full p-4"
         style={{
-          visibility: isAtTop ? "visible" : "hidden", // Hide or show based on scroll position
-          transition: "visibility 0.3s ease", // Optional: smooth transition
+          visibility: isAtTop ? "visible" : "hidden",
+          transition: "visibility 0.4s ease", 
         }}
       >
         <Countdown />
