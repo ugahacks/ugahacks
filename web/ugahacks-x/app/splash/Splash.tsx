@@ -101,8 +101,10 @@ const Splash = () => {
       </div>
       {/* EVERYTHING OUTSIDE HERE IS OUTSIDE OF THE BACKGROUND IMAGE */}
       <p className={mobile ? "top-full text-black transform translate-x-1/4 translate-y-1 absolute text-4xl font-distortion" : "hidden"}>What Is <br></br>UGA Hacks?</p>
-      <p className={mobile ? "top-full text-black transform bg-pink-300 translate-x-2 translate-y-20 absolute text-xl " : "hidden"}>UGAHacks is an annual hackathon organized by fellow students at the University of Georgia in Athens, Georgia. Hackathons are all about groups of dedicated people coming together to create something amazing in an epic 48-hour programming sleepover.
-        Even though submitting a project is the main objective, that's not all there is. We'll have mentors, free food, video game competitions, workshops and more. There's even a workshop at the event for anyone that still needs to find some teammates!</p>
+      <p className={mobile ? "top-full text-black transform bg-pink-300 translate-x-2 translate-y-20 p-2 absolute text-xl " : "hidden"}>
+        UGAHacks is an annual hackathon organized by fellow students at the University of Georgia in Athens, Georgia. Hackathons are all about groups of
+        dedicated people coming together to create something amazing in an epic 48-hour programming sleepover. <br></br><br></br>
+        Even though submitting a project is the main objective, that&apos;s not all there is. We&apos;ll have mentors, free food, video game competitions, workshops and more. There&apos;s even a workshop at the event for anyone that still needs to find some teammates!</p>
 
       <section id="faq" className={styles.headerTitle}>
         <h1 className="text-6xl p-8" style={{ fontFamily: "'Distortion Dos Analogue', sans-serif" }}>FAQ</h1>
