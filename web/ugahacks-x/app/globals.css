@@ -48,17 +48,21 @@ body {
   width: 85%;
 }
 
+
+
 .faq-question {
   border-radius: 48px;
   background-color: #522072;
   width: 60%;
-  height: 59px;
+  height: 5vw;
   position: absolute;
   z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+
 
 .vector {
   margin-right: 40px;
@@ -82,7 +86,7 @@ body {
   width: 70%;
   height: 160px;
   gap: 0px;
-  top: 20px;
+  top: 5vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -104,4 +108,54 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 14px;
+}
+
+
+
+/* 1,642px width */
+@media screen and (max-width: 1140px) {
+  .faq-answer {
+    top: 0px;
+  }
+  .faq-question {
+height: 50px;
+  }
+  .cutout-image {
+    width: 100%;
+    height: 15vw;
+    z-index: 1;
+  }
+}
+
+
+@media screen and (max-width: 890px) { 
+  .cutout-image {
+     height: 25vw; 
+  }
+}
+@media screen and (max-width: 768px) {
+  .question-text {
+    font-size: 12px;
+  }
+  .faq-answer p {
+    font-size: 10px;
+  }
+  .cutout-image {
+    height: 22vw;
+  }
+
+}
+@media screen and (max-width: 588px) {
+  .question-text {
+    font-size: 8px;
+    margin-left: 10px;
+  }
+  .faq-answer p {
+    font-size: 8px;
+margin-left: 10px;
+margin-right: 10px;
+  }
+  .cutout-image {
+    height: 35vw;
+  }
 }

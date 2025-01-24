@@ -15,14 +15,14 @@
   width: 100vw; 
   background-repeat: no-repeat;
   background-size: cover;
-
+  position: absolute;
   /* background-image: url("/UHX_Background_No_Text 1.png"); */
   background-image: url("/bg_new.jpg");
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 1;
+  z-index: 0;
 }
 .splashContainer {
 /* height needs to be edited when adding more sections from Navbar */
@@ -42,7 +42,7 @@
   
   .logoContainer {
     padding-top: 0;
-    z-index: 50;
+    z-index: 1;
   }
   
   .mainLogo {
@@ -143,4 +143,78 @@
     color: white;
     margin-top: 25px;
     
+  }
+
+  .sponsorSection {
+    position: relative;
+    margin-top: -12rem; /*// Adjust for overlap with the Team section*/
+    height: 125vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 4px;
+    /* z-index: -1; */
+  }
+
+  .sponsorGrid {
+    position: relative;
+    top: 25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    textAlign: center;
+    width: 80%;
+    z-index: 1;
+  }
+
+  .sponsorshipButton {
+    display: inline-block;
+    background-color: pink;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .sponsorshipButton:hover {
+    transform: scale(1.05); /* Add hover effect */
+  }
+  
+  
+  @media screen and (max-width: 1050px) {
+    .sponsorGrid {
+      top: 20rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+   
+    .sponsorContainer {
+      align-items: center; /* Center alignment for smaller screens */
+      z-index: 0;
+
+    }
+    .sponsorshipButton {
+      
+    }
+
+    .sponsorSection {
+      position: relative;
+      margin-top: -2rem; /*// Adjust for overlap with the Team section*/
+      scale: 2,1;
+    }
+    .sponsorGrid {
+      top: 13rem;
+    }
+
+  }
+
+  @media screen and (max-width: 600px) {
+    .sponsorGrid {
+      background-repeat:repeat-x;
+      top: 9rem;
+    }
   }

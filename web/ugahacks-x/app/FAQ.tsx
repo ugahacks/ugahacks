@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from 'react';
 import Image from 'next/image';
+import React, { useState } from 'react';
 import './globals.css';
 
 interface Question {
@@ -33,7 +33,7 @@ const FAQ: React.FC<FAQProps> = ({ questions = [] }) => {
             </div>
             {activeIndex === index && (
               <div className="faq-answer">
-                <img src="/papercutout.png" alt="cutout" className="cutout-image" />
+                <img src="/papercutout.png" alt="cutout" className="cutout-image sm:translate-y-10 md:translate-y-5" />
                 <p>{question.answer}</p>
               </div>
             )}

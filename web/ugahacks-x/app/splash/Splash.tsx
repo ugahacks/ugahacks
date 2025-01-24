@@ -1,4 +1,5 @@
-import React from "react";
+'use client'
+import { React, useEffect, useState } from "react";
 import styles from "../../styles/Splash.module.css";
 import FAQ from "../FAQ";
 
@@ -14,10 +15,10 @@ const questions = [
   },
   {
     question: 'Can I apply for travel reimbursements?',
-    answer: 'Currently we do not provide travel reimbursements but this can change in the future!',
+    answer: 'Currently we do not provide travel reimbursements.',
   },
   {
-    question: 'Can I start working on my project before the event?',
+    question: 'Can I start on my project before the event?',
     answer: 'No. All UGAHacks projects must begin at the hackathon. You are not permitted to begin a hackathon project before this event. Feel free to bring ideas, but no code!',
   },
   {
@@ -34,19 +35,39 @@ const questions = [
   },
   {
     question: 'What are the rules all attendees much abide by?',
-    answer: 'UGAHacks will be following the MLH Code of Conduct. By participating in UGAHacks, you are agreeing to follow the Code of Conduct throughout the duration of the event. Check out the MLH Code of Conduct.',
+    answer: 'UGAHacks will be following the MLH Code of Conduct. By participating in UGAHacks, you are agreeing to follow the Code of Conduct throughout the duration of the event.',
   },
   {
     question: 'How many people can I have on my team?',
     answer: 'You can have up to 4 members.',
   },
   {
-    question: 'Who do I reach out to if I have more questions?',
+    question: 'If I have more questions?',
     answer: 'Reach out to hello@ugahacks.com and we\'ll be happy to answer it!',
   }
 ];
 
+
+
 const Splash = () => {
+  const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMobile(window.innerWidth <= 798);
+    };
+
+    // Run once on mount
+    handleResize();
+
+    // Listen for resize events
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup listener on unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
   return (
     <div className="">
       <div className={styles.splashContainer}>
@@ -75,14 +96,19 @@ const Splash = () => {
           </button>
 
         </div>
-        <div className="mt-100" id="about"></div>
+        <div className="mt-100" id="about">
+        </div>
       </div>
       {/* EVERYTHING OUTSIDE HERE IS OUTSIDE OF THE BACKGROUND IMAGE */}
+      <p className={mobile ? "top-full text-black transform translate-x-1/4 translate-y-1 absolute text-4xl font-distortion" : "hidden"}>What Is <br></br>UGA Hacks?</p>
+      <p className={mobile ? "top-full text-black transform bg-pink-300 translate-x-2 translate-y-20 absolute text-xl " : "hidden"}>UGAHacks is an annual hackathon organized by fellow students at the University of Georgia in Athens, Georgia. Hackathons are all about groups of dedicated people coming together to create something amazing in an epic 48-hour programming sleepover.
+        Even though submitting a project is the main objective, that's not all there is. We'll have mentors, free food, video game competitions, workshops and more. There's even a workshop at the event for anyone that still needs to find some teammates!</p>
+
       <section id="faq" className={styles.headerTitle}>
         <h1 className="text-6xl p-8" style={{ fontFamily: "'Distortion Dos Analogue', sans-serif" }}>FAQ</h1>
         <FAQ questions={questions} />
       </section>
-    </div>
+    </div >
 
   );
 };

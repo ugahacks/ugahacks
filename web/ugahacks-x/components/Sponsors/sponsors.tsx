@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/Splash.module.css";
 export default function Sponsors() {
   const sponsorLogos = [
@@ -15,32 +15,33 @@ export default function Sponsors() {
     { src: "/ugaResearchLogo.png", alt: "UGA Office of Research", url: "https://research.uga.edu/" },
     { src: "/UGA.png", alt: "UGA", url: "https://uga.edu" },
   ];
+  const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMobile(window.innerWidth <= 798);
+    };
+
+    // Run once on mount
+    handleResize();
+
+    // Listen for resize events
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup listener on unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
-    <div
-      style={{
-        position: "relative",
-        marginTop: "-13rem", // Adjust for overlap with the Team section
-        height: "125vh",
-        width: "100%",
-        overflow: "hidden",
-        padding: "4px",
-      }}
+    <div className={styles.sponsorSection}
     >
       <img
         className={styles.sponsorContainer}
-        src="/SponsorsBackground.png"
+        src={mobile ? "/SponsorsBackground_mobile.png" : "/SponsorsBackground.png"}
         alt="Sponsors Background"
       />
       <div id="sponsors"
-        style={{
-          position: "absolute",
-          top: "28rem", // Move the grid lower
-          left: "50%",
-          transform: "translateX(-50%)",
-          textAlign: "center",
-          width: "80%", // Center the content
-        }}
+        className={styles.sponsorGrid}
       >
         <div
           style={{
@@ -91,10 +92,11 @@ export default function Sponsors() {
         {/* Supporting Text */}
         <p
           style={{
-            marginTop: "3rem",
+            marginTop: "1rem",
             fontSize: "1rem",
             color: "#ffffff",
             fontWeight: "normal",
+            textAlign: "center",
           }}
         >
           This event is supported in part by the President&apos;s Venture Fund through
@@ -103,34 +105,14 @@ export default function Sponsors() {
       </div>
       {/* Sponsorship Packet Button */}
       <div
-        style={{
-          position: "absolute",
-          bottom: "2rem", // Position the button at the bottom
-          left: "50%",
-          transform: "translateX(-50%)",
-          textAlign: "center",
-        }}
+        className="absolute bottom-2 sm:bottom-48 md:bottom-2 left-1/2 transform -translate-x-1/2 text-center"
       >
         <div>
           <Link
             href="https://drive.google.com/file/d/1h_PVP-FCZ9dhL4ltjxBT2w7JFe-zN2c0/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              display: 'inline-block',
-              backgroundColor: 'pink',
-              color: 'white',
-              padding: '10px 20px',
-              borderRadius: '30px',
-              textDecoration: 'none',
-              textAlign: 'center',
-              fontSize: '16px',
-              fontWeight: 'bold',
-              boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',
-              transition: 'transform 0.2s ease-in-out',
-            }}
-            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            className={styles.sponsorshipButton}
           >
             Sponsorship Packet
           </Link>
