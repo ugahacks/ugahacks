@@ -10,6 +10,9 @@ export default function Sponsors() {
     { src: "/Truist.png", alt: "Truist", url: "https://truist.com" },
     { src: "/statefarm.png", alt: "Statefarm", url: "https://www.statefarm.com/" },
     { src: "/JPMorgan.png", alt: "JPMorgan", url: "https://www.jpmorgan.com/global" },
+    { src: "/github-logo.png", alt: "Github", url: "https://www.github.com" },
+    { src: "/stand-out-stickers-logo.png", alt: "Stand Out Stickers", url: "https://www.standoutstickers.com/" },
+    { src: "/ugaResearchLogo.png", alt: "UGA Office of Research", url: "https://research.uga.edu/" },
     { src: "/UGA.png", alt: "UGA", url: "https://uga.edu" },
   ];
 
@@ -21,6 +24,7 @@ export default function Sponsors() {
         height: "125vh",
         width: "100%",
         overflow: "hidden",
+        padding: "4px",
       }}
     >
       <img
@@ -94,15 +98,14 @@ export default function Sponsors() {
           }}
         >
           This event is supported in part by the President&apos;s Venture Fund through
-          the generous gifts of University of Georgia donors as well as The University&apos;s <Link className="text-red-500" target="_Blank" href="https://research.uga.edu/">Office of Research</Link>.
+          the generous gifts of University of Georgia donors.
         </p>
       </div>
-
       {/* Sponsorship Packet Button */}
       <div
         style={{
           position: "absolute",
-          bottom: "1rem", // Position the button at the bottom
+          bottom: "2rem", // Position the button at the bottom
           left: "50%",
           transform: "translateX(-50%)",
           textAlign: "center",
