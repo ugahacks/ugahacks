@@ -27,7 +27,7 @@ const questions = [
   },
   {
     question: 'How do I receive EL credit?',
-    answer: 'Students who attend UGAHacks 9 are eligible to receive EL Credit. To receive credit, please follow the instructions outlined on el.ugahacks.com.',
+    answer: 'Students who attend UGAHacks X are eligible to receive EL Credit. To receive credit, please follow the instructions outlined on el.ugahacks.com.',
   },
   {
     question: 'What if I don\'t have a team or idea?',
@@ -36,6 +36,7 @@ const questions = [
   {
     question: 'What are the rules all attendees much abide by?',
     answer: 'UGAHacks will be following the MLH Code of Conduct. By participating in UGAHacks, you are agreeing to follow the Code of Conduct throughout the duration of the event.',
+    coc: true,
   },
   {
     question: 'How many people can I have on my team?',
