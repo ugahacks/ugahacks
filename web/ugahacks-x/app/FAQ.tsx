@@ -38,7 +38,7 @@ const FAQ: React.FC<FAQProps> = ({ questions = [] }) => {
                 <img src="/papercutout.png" alt="cutout" className="cutout-image sm:translate-y-10 md:translate-y-5" />
                 {question.coc && (
                   <Link href="https://hackp.ac/coc" className="text-pink-300 mt-2 ml-4 inline items-center animate-bounce" target="_blank" rel="noopener noreferrer">
-                    <Image src="/2025Badges/mlh-trust-badge-2025-white.png" className="mr-2" width="75" height='75' />Code of Conduct
+                    <Image alt="MLH Hacks Trust Badge Banner Logo" src="/2025Badges/mlh-trust-badge-2025-white.png" className="mr-2" width="75" height='75' />Code of Conduct
                   </Link>
                 )}
                 <p>{question.answer}</p>
