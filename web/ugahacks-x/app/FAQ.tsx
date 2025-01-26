@@ -7,6 +7,7 @@ import './globals.css';
 interface Question {
   question: string;
   answer: string;
+  coc?: boolean;
 }
 
 interface FAQProps {
