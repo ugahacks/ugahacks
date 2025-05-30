@@ -1,23 +1,18 @@
 ### Description
+<!-- 1-3 sentences. Summarize _what_ and _why_. -->
+Fixes Issue #123 (paste it in, if applicable)
 
-Enter a short 1-3 sentence description about your PR.
-
-Typically this will be a summary of your ticket.
-
-### What are you changing?
-
-- Bullet a list of high-level changes
-- Include some reasoning behind why you did something a certain way
-- Maybe talk about how this change is better?
+### Changes
+- …
+- …
 
 ### Did you increase testing or code coverage?
+- [ ] Increased testing coverage
+<!-- If yes, explain below with 1-3 sentences, otherwise No = don't add anything -->
 
-A simple YES or NO will suffice. If yes, elaborate in 1-3 sentences.
+### New Dependencies
+<!-- If yes, write 1-line purpose, otherwise No = don't add anything -->
+- [ ] Added new dependency
 
-### Did you add any dependencies to the project?
-
-A simple YES or NO will suffice. If yes, give one phrase or sentence to outline its purpose.
-
-### Did you update the relevant documentation?
-
-A simple YES or NO will suffice. If no, give a reason as to why you did not update documentation.
+#### Screenshots / GIF (UI/Frontend only)
+<!-- Drag-and-drop screenshots -->
