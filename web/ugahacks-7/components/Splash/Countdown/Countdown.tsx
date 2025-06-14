@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ReactElement } from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 import styles from "../../../styles/countdown.module.css";
 
 const Countdown = (): ReactElement => {
@@ -11,7 +11,7 @@ const Countdown = (): ReactElement => {
     minutes: 0,
     seconds: 0,
   });
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     setInterval(() => updateCountdown(), 1000);
   }, []);

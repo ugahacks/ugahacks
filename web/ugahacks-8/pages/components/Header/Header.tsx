@@ -1,8 +1,8 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
-import { BsFacebook, BsGithub, BsTwitter, BsInstagram } from "react-icons/bs";
 import { ppid } from "node:process";
+import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 
 const NavLink = (props: HeaderLinkProps) => {
   const scrollPos = useScrollPosition();
@@ -67,7 +67,7 @@ export default function Header() {
           }
         >
           <div className="pl-[1.25rem] pt-[1rem] pb-[1rem] flex flex-row md:flex-col md:flex-wrap items-center">
-            <Link href="/#Hero">
+            <Link href="/#Hero" passHref>
               <Image
                 src={"/icons/HeaderImages/images/byte_mini.png"}
                 width={48}

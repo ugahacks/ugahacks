@@ -14,6 +14,7 @@ export default function Hero() {
             width={1600}
             height={500}
             className="px-24"
+            alt="Byte Banner"
           />
           <h1 className="text-5xl text-white pb-16">
             University of Georgia <span>&#183;</span> February 3-5, 2023
@@ -27,6 +28,7 @@ export default function Hero() {
             <img
               src="/icons/HeroImages/images/grid_texture.svg"
               className=" w-full "
+              alt="Grid Texture for Stylistic Purposes"
             />
           </div>
         </div>

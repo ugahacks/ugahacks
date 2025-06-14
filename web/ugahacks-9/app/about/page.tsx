@@ -1,5 +1,5 @@
-import React from "react";
 import Navbar from "@/components/Navbar/Navbar";
+import React from "react";
 import styles from "../../styles/About.module.css";
 
 function About() {
