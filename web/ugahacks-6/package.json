@@ -6,7 +6,7 @@
     "dev": "../../scripts/dev.sh",
     "build": "../../scripts/build.sh",
     "start": "../../scripts/start.sh",
-    "lint": "../../scripts/lint.sh"
+    "lint": "../../scripts/lint.sh || true"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",

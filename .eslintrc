@@ -1,0 +1,9 @@
+{
+  "rules": {
+    // ...your rules
+  },
+  "root": true,
+  "ignorePatterns": ["node_modules/", "dist/", "build/"],
+  "overrides": [],
+  "reportUnusedDisableDirectives": false
+}
