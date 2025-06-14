@@ -68,11 +68,11 @@ const Splash = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-
+  /* eslint-disable @next/next/no-img-element */
   return (
     <div className="">
       <div className={styles.splashContainer}>
-        <a style={{ alignSelf: "end", marginRight: "50px" }} target="blank" href="http://hackp.ac/coc"><img style={{ height: "100px", }} src="/2025Badges/mlh-trust-badge-2025-white.png"></img></a>
+        <a style={{ alignSelf: "end", marginRight: "50px" }} target="blank" href="http://hackp.ac/coc"><img style={{ height: "100px", }} src="/2025Badges/mlh-trust-badge-2025-white.png" alt="Major League Hacking Trust Badge 2025"></img></a>
         <div className={styles.logoContainer}>
           <img
             className={styles.mainLogo}
@@ -112,7 +112,7 @@ const Splash = () => {
         <FAQ questions={questions} />
       </section>
     </div >
-
+    /* eslint-enable @next/next/no-img-element */
   );
 };
 
