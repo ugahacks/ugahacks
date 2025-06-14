@@ -20,7 +20,7 @@ const FAQ: React.FC<FAQProps> = ({ questions = [] }) => {
   const toggleQuestion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
+  /* eslint-disable @next/next/no-img-element */
   return (
     <div className="faq-container">
       {questions.length > 0 ? (
@@ -53,5 +53,5 @@ const FAQ: React.FC<FAQProps> = ({ questions = [] }) => {
     </div>
   );
 };
-
+/* eslint-enable @next/next/no-img-element */
 export default FAQ;

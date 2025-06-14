@@ -14,6 +14,7 @@ const Countdown = (): ReactElement => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     setInterval(() => updateCountdown(), 1000);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const updateCountdown = (): void => {

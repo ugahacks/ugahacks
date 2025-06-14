@@ -116,7 +116,7 @@ function FAQ() {
             />
           ))}
         </ul>
-        <img src="./graphics/faqAssets/diving_byte.png" />
+        <img src="./graphics/faqAssets/diving_byte.png" alt="Byte Diving" />
       </div>
     </section>
   );
