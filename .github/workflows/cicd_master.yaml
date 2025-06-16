@@ -65,8 +65,11 @@ jobs:
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true # Set to true to authenticate the Cloud Run action
 
-      - name: Authorize Docker push
+      - name: Authorize Docker push (Container Registry)
         run: gcloud auth configure-docker
+
+      - name: Authorize Docker push (Artifact Registry)
+        run: gcloud auth configure-docker us-east1-docker.pkg.dev
 
       - id: file_changes
         name: Get Changed Files
@@ -91,8 +94,8 @@ jobs:
       - name: Build and Push ugahacks-11 Container
         run: |-
           echo "ugahacks-11 changed, building ..."
-          docker build -t us-central1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/ugahacks-11:${{ github.sha }} web/ugahacks-11
-          docker push us-central1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/ugahacks-11:${{ github.sha }}
+          docker build -t us-east1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/ugahacks-11:${{ github.sha }} web/ugahacks-11
+          docker push us-east1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/ugahacks-11:${{ github.sha }}
         if: contains(steps.file_changes.outputs.files , 'ugahacks-11')
 
       - name: Deploy ugahacks-11 to Cloud Run
@@ -100,8 +103,8 @@ jobs:
         uses: google-github-actions/deploy-cloudrun@v0.4.0
         with:
           service: ugahacks-11-${{ env.DEPLOY_ENV }}
-          image: us-central1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/ugahacks-11:${{ github.sha }}
-          region: ${{ env.REGION }}
+          image: us-east1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/ugahacks-11:${{ github.sha }}
+          region: us-east1
         if: contains(steps.file_changes.outputs.files , 'ugahacks-11')
 
       - name: ugahacks-11 Post Deployment
