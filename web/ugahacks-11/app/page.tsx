@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 import img from "../public/generic_byte.png"; // Placeholder for the logo image
-export default function Home(): JSX.Element {
+export default function Home() {
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-violet-800 via-fuchsia-900 to-indigo-950 px-4 py-2 text-white">
       {/* Decorative blurred spotlight */}
@@ -16,26 +17,21 @@ export default function Home(): JSX.Element {
         priority
         className="mb-2 drop-shadow-2xl"
       />
-
-      {/* Headline */}
       <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
         <span className="block">Code the Future</span>
         <span className="block bg-gradient-to-r from-pink-300 via-purple-400 to-indigo-500 bg-clip-text text-transparent">
-          at UGAHacks 11
+          at UGAHacks 11
         </span>
       </h1>
 
-      {/* Sub copy */}
       <p className="mt-6 max-w-xl text-center text-lg text-purple-200 sm:text-xl">
-        48 hours of innovation, community, and creativity at the University of Georgia.
+        48 hours of innovation, community, and creativity at the University of Georgia.
         <br className="hidden sm:block" />
         Build • Learn • Connect • Compete
       </p>
 
-      {/* Call to action */}
       <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
         <Link
-          disabled
           href="/"
           className="rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-600 to-indigo-600 px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:via-pink-500 hover:to-purple-500 opacity-10"
         >
@@ -50,9 +46,8 @@ export default function Home(): JSX.Element {
         </Link>
       </div>
 
-      {/* Event details */}
       <footer className="mt-4 text-center text-sm text-purple-300">
-        TBD  ·  Athens, GA  ·  Free to attend  ·  Food, swag & prizes
+        TBD ·  Athens, GA · Free to attend · Food, swag & prizes
       </footer>
     </main>
   );
