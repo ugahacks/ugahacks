@@ -2339,7 +2339,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^19":
+"@types/react@npm:^19.1.8":
   version: 19.1.8
   resolution: "@types/react@npm:19.1.8"
   dependencies:
@@ -11675,7 +11675,7 @@ __metadata:
     "@next/eslint-plugin-next": "npm:^15.3.3"
     "@tailwindcss/postcss": "npm:^4"
     "@types/node": "npm:^20"
-    "@types/react": "npm:^19"
+    "@types/react": "npm:^19.1.8"
     "@types/react-dom": "npm:^19"
     eslint: "npm:^9"
     eslint-config-next: "npm:15.3.3"
