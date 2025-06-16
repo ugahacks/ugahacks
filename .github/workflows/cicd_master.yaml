@@ -81,6 +81,13 @@ jobs:
           cat $HOME/files.csv
 
       # UGAHacks 11
+      - name: Authenticate to Artifact Registry
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: "${{ secrets.GCP_SA_KEY }}"
+      - name: Configure Docker for Artifact Registry
+        run: gcloud auth configure-docker us-central1-docker.pkg.dev
+
       - name: Build and Push ugahacks-11 Container
         run: |-
           echo "ugahacks-11 changed, building ..."

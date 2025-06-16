@@ -47,7 +47,7 @@ export default function Home() {
       </div>
 
       <footer className="mt-4 text-center text-sm text-purple-300">
-        TBD ·  Athens, GA · Free to Attend · Food, Swag & Prizes!
+        TBD ·  Athens, GA · Free to Attend · Food, Swag & Prizes 😸
       </footer>
     </main>
   );
