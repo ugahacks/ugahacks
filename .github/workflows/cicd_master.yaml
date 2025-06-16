@@ -84,8 +84,8 @@ jobs:
       - name: Build and Push ugahacks-11 Container
         run: |-
           echo "ugahacks-11 changed, building ..."
-          docker build -t gcr.io/${{ env.PROJECT_ID }}/ugahacks-11-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/ugahacks-11
-          docker push gcr.io/${{ env.PROJECT_ID }}/ugahacks-11-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+          docker build -t us-central1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/ugahacks-11:${{ github.sha }} web/ugahacks-11
+          docker push us-central1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/ugahacks-11:${{ github.sha }}
         if: contains(steps.file_changes.outputs.files , 'ugahacks-11')
 
       - name: Deploy ugahacks-11 to Cloud Run
@@ -93,7 +93,7 @@ jobs:
         uses: google-github-actions/deploy-cloudrun@v0.4.0
         with:
           service: ugahacks-11-${{ env.DEPLOY_ENV }}
-          image: gcr.io/${{ env.PROJECT_ID }}/ugahacks-11-${{ env.DEPLOY_ENV }}:${{ github.sha }}
+          image: us-central1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/ugahacks-11:${{ github.sha }}
           region: ${{ env.REGION }}
         if: contains(steps.file_changes.outputs.files , 'ugahacks-11')
 
