@@ -42,7 +42,7 @@ export default function Home() {
           href="https://ugahacks.com"
           className="rounded-full border border-white/30 px-8 py-3 text-base font-medium text-purple-100 transition hover:bg-white/10"
         >
-          Learn More
+          Learn More!
         </Link>
       </div>
 
