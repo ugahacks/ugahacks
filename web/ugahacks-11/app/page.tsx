@@ -1,22 +1,36 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import img from "../public/generic_byte.png"; // Placeholder for the logo image
+import Lanyard from "./components/Lanyard";
 export default function Home() {
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-violet-800 via-fuchsia-900 to-indigo-950 px-4 py-2 text-white">
+
+      {/* ——————————————————————————————— */}
+      {/* 1) Overlay the lanyard absolutely… */}
+      <div className="pointer-events-none absolute inset-0 z-10  ">
+        {/* 2) …and move it closer (lower Z) so it hovers over the page */}
+        <Lanyard position={[5, 0, 15]} gravity={[0, -40, 0]} fov={20} />
+      </div>
+      {/* ——————————————————————————————— */}
+
       {/* Decorative blurred spotlight */}
-      <span className="pointer-events-none absolute -inset-32 h-[150vh] w-[150vw] animate-pulse rounded-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-purple-600/30 via-fuchsia-700/10 to-transparent blur-3xl" />
+      <span className="pointer-events-none absolute -inset-32 h-[150vh] w-[150vw] animate-pulse rounded-full 
+                       bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] 
+                       from-purple-600/30 via-fuchsia-700/10 to-transparent blur-3xl" />
 
       {/* Logo */}
       <Image
-        src={img} // swap with the real logo when available
+        src={img}
         alt="UGAHacks 11 Logo"
         width={320}
         height={320}
         priority
         className="mb-2 drop-shadow-2xl"
       />
+
       <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
         <span className="block">Code the Future</span>
         <span className="block bg-gradient-to-r from-pink-300 via-purple-400 to-indigo-500 bg-clip-text text-transparent">
@@ -47,7 +61,7 @@ export default function Home() {
       </div>
 
       <footer className="mt-4 text-center text-sm text-purple-300">
-        February 6th - 8th · Athens, GA · Free to Attend · Food, Swag & Prizes
+        TBD · Athens, GA · Free to Attend · Food, Swag & Prizes
       </footer>
     </main>
   );
