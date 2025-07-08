@@ -5,3 +5,4 @@
 ## Welcome
 
 This is repository hosts all code for all things UGAHacks. If you're viewing us right now, we're still in the process of converting our infrastructure.
+![image](./docs/diagram.drawio.svg)
