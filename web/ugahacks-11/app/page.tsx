@@ -55,10 +55,11 @@ export default function Home() {
 
       <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
         <Link
-          href="/"
-          className="rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-600 to-indigo-600 px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:via-pink-500 hover:to-purple-500 opacity-10"
+          target="_blank"
+          href="https://mybyte.ugahacks.com"
+          className="rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-600 to-indigo-600 px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:via-pink-500 hover:to-purple-500 opacity-85"
         >
-          Pre‑Register
+          Register
         </Link>
         <Link
           target="_blank"
@@ -70,7 +71,7 @@ export default function Home() {
       </div>
 
       <footer className="mt-4 text-center text-sm text-purple-300">
-        February 6th - 8th · Athens, GA · Free to Attend · Food, Swag & Prizes
+        February 6th - 8th · Miller Learning Center · Athens, GA · Free to Attend · Food, Swag & Prizes
       </footer>
     </main>
   );
