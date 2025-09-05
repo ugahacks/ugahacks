@@ -68,6 +68,13 @@ export default function Home() {
         >
           Learn More
         </Link>
+        <Link
+          target="_blank"
+          href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
+          className="rounded-full border border-white/30 px-8 py-3 text-base font-medium text-purple-100 transition hover:bg-white/10"
+        >
+          MLH Code of Conduct
+        </Link>
       </div>
 
       <footer className="mt-4 text-center text-sm text-purple-300">
