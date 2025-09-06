@@ -28,14 +28,19 @@ const Hero: React.FC = () => {
           <br />
           UGA Miller Learning Center
         </p>
-
-        <button
-          type="button"
-          className="px-12 py-4 text-base font-medium border-none rounded-2xl cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 shadow-lg text-[#3e4c8a] bg-[#faf3e0] font-encode"
-          aria-label="Register for UGAHacks 11"
+        <a
+          href="https://mybyte.ugahacks.com/register"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Register Now
-        </button>
+          <button
+            type="button"
+            className="px-12 py-4 text-base font-medium border-none rounded-2xl cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 shadow-lg text-[#3e4c8a] bg-[#faf3e0] font-encode"
+            aria-label="Register for UGAHacks 11"
+          >
+            Register Now
+          </button>
+        </a>
       </div>
     </section>
   );
