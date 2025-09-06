@@ -6,9 +6,7 @@ const Hero: React.FC = () => {
     <section
       className="
         bg-contain bg-center bg-no-repeat flex justify-center items-center w-full min-h-screen
-        md:bg-contain
-        max-md:bg-cover max-md:bg-center max-md:h-screen
-        max-sm:bg-cover max-sm:bg-center
+        max-md:bg-cover max-md:h-screen
       "
       id="hero"
       style={{
@@ -34,7 +32,11 @@ const Hero: React.FC = () => {
           <br />
           UGA Miller Learning Center
         </p>
-        <button className="px-12 py-4 text-base font-medium border-none rounded-2xl cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 shadow-lg text-[#3e4c8a] bg-[#faf3e0] font-encode">
+        <button 
+          type="button"
+          className="px-12 py-4 text-base font-medium border-none rounded-2xl cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 shadow-lg text-[#3e4c8a] bg-[#faf3e0] font-encode"
+          aria-label="Register for UGAHacks 11"
+        >
           Register Now
         </button>
       </div>
