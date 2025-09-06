@@ -2,6 +2,10 @@ import Image from "next/image";
 // import Link from "next/link";
 import React from "react";
 // import img from "../public/generic_byte.png"; // Placeholder for the logo image
+import WhatIsUGAHacks from "./components/WhatIsUGAHacks";
+// import About from "./components/about";  
+import OurTeam from "./components/OurTeam";
+// import ourteam from "./components/ourteam";
 export default function Home() {
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-violet-800 via-fuchsia-900 to-indigo-950 px-4 py-2 text-white">
@@ -33,7 +37,9 @@ export default function Home() {
         {/* 
         <Navbar/>
         <Hero/>
+        */}
         <WhatIsUGAHacks/>
+        {/*
         <Tracks/>
         <SponsorTracks/>
         <Schedule/>
