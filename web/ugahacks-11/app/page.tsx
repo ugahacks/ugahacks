@@ -29,16 +29,45 @@ export default function Home() {
       </a>
 
       <span className="pointer-events-none absolute -inset-32 h-[150vh] w-[150vw] animate-pulse rounded-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-purple-600/30 via-fuchsia-700/10 to-transparent blur-3xl" />
+      <div className="grid grid-cols-2 items-center gap-6">
+        {/* Left column: Logo */}
+        <div className="flex justify-center">
 
-      {/* Logo */}
-      <Image
-        src={img} // swap with the real logo when available
-        alt="UGAHacks 11 Logo"
-        width={320}
-        height={320}
-        priority
-        className="mb-2 drop-shadow-2xl"
-      />
+          <Image
+            src={img}
+            alt="UGAHacks 11 Logo"
+            width={320}
+            height={320}
+            priority
+            className="mb-2 drop-shadow-2xl"
+          />
+        </div>
+        {/* Right column: Sponsors */}
+        <div className="flex flex-col items-center gap-4">
+          <h2 className="text-lg font-semibold text-purple-200">Confirmed Sponsors</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link className="hover:animate-pulse" href="https://research.uga.edu/" target="_blank">
+              <Image
+                src="/UGA_OFR_logo.png"
+                alt="Sponsor 1"
+                width={120}
+                height={60}
+                className="object-contain"
+              />
+            </Link>
+
+            <Link className="hover:animate-pulse" href="https://GitHub.com" target="_blank">
+              <Image
+                src="/Github_logo.png"
+                alt="Sponsor 2"
+                width={80}
+                height={60}
+                className="object-contain"
+              />
+            </Link>
+          </div>
+        </div>
+      </div>
       <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
         <span className="block">Code the Future</span>
         <span className="block bg-gradient-to-r from-pink-300 via-purple-400 to-indigo-500 bg-clip-text text-transparent">
@@ -52,7 +81,6 @@ export default function Home() {
         <br className="hidden sm:block" />
         Build • Learn • Connect • Compete
       </p>
-
       <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
         <Link
           target="_blank"
@@ -77,9 +105,10 @@ export default function Home() {
         </Link>
       </div>
 
+
       <footer className="mt-4 text-center text-sm text-purple-300">
         February 6th - 8th · Miller Learning Center · Athens, GA · Free to Attend · Food, Swag & Prizes
       </footer>
-    </main>
+    </main >
   );
 }
