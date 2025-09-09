@@ -1,7 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
     <header
       className="sticky top-0 px-4 md:px-6 lg:px-8 h-20 flex items-center text-white z-50"
@@ -34,6 +36,12 @@ const Navbar = () => {
           href="#faq"
         >
           FAQ
+        </a>
+        <a
+          className="text-xs md:text-sm lg:text-base hover:text-pink-300 transition-colors duration-300"
+          href="#schedule"
+        >
+          Schedule
         </a>
         <a
           className="text-xs md:text-sm lg:text-base hover:text-pink-300 transition-colors duration-300"

@@ -1,11 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import Hero from "./components/Hero";
+import Schedule from "./components/Schedule";
 
 export default function Home() {
   return (
     <main className="relative">
       <Hero />
+      <Schedule />
 
       <section className="h-screen bg-gray-100 flex items-center justify-center">
         <div className="text-center">
