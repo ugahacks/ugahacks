@@ -42,3 +42,7 @@ body {
     }
   }
 }
+
+* {
+  cursor: none;
+}
