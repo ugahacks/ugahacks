@@ -4,7 +4,7 @@ import React from "react";
 // import img from "../public/generic_byte.png"; // Placeholder for the logo image
 import WhatIsUGAHacks from "./components/WhatIsUGAHacks";
 // import About from "./components/about";  
-import OurTeam from "./components/OurTeam";
+// import OurTeam from "./components/OurTeam";
 // import ourteam from "./components/ourteam";
 export default function Home() {
   return (
@@ -38,7 +38,7 @@ export default function Home() {
         <Navbar/>
         <Hero/>
         */}
-        <WhatIsUGAHacks/>
+        <WhatIsUGAHacks />
         {/*
         <Tracks/>
         <SponsorTracks/>
