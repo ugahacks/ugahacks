@@ -154,7 +154,7 @@ const Navbar: React.FC = () => {
             
 
             {/* Navigation Links */}
-            <nav className="flex flex-col px-4 py-1 space-y-2 text-sm font-medium">
+            <nav className="flex flex-col px-4 py-1 space-y-2 text-sm font-bold uppercase tracking-wider">
               <a
                 href="#about"
                 className="hover:text-pink-300 transition-colors duration-300 py-1"
