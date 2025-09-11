@@ -1,12 +1,12 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
+import React from "react";
 
 const Schedule: React.FC = () => {
   return (
-    <section 
-      id="schedule" 
+    <section
+      id="schedule"
       className="min-h-screen w-full flex flex-col items-center pt-12"
       style={{
         background: "#A7B7D9",
