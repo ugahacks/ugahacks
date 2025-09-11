@@ -6,6 +6,10 @@
   --foreground: #171717;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -43,6 +47,8 @@ body {
   }
 }
 
-* {
-  cursor: none;
+@media (min-width: 766px) {
+  * {
+    cursor: none;
+  }
 }
