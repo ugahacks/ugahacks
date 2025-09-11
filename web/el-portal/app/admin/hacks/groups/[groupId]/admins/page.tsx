@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input'
 import { ArrowLeft, Plus, Search, Trash2, User } from 'lucide-react'
 import { useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 
 interface GroupAdmin {
@@ -32,11 +32,7 @@ export default function GroupAdminsPage({ params }: { params: { groupId: string 
     const [isAdding, setIsAdding] = useState(false)
     const router = useRouter()
 
-    useEffect(() => {
-        loadGroupAdmins()
-    }, [params.groupId])
-
-    const loadGroupAdmins = async () => {
+    const loadGroupAdmins = useCallback(async () => {
         try {
             const token = localStorage.getItem('token')
             const response = await fetch(`/api/admin/groups/${params.groupId}/admins`, {
@@ -55,7 +51,11 @@ export default function GroupAdminsPage({ params }: { params: { groupId: string 
         } finally {
             setIsLoading(false)
         }
-    }
+    }, [params.groupId])
+
+    useEffect(() => {
+        loadGroupAdmins()
+    }, [loadGroupAdmins])
 
     const searchUsers = async () => {
         if (searchQuery.length < 2) return

@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { ArrowLeft, Building, Save } from 'lucide-react'
 import { useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 
 interface Group {
@@ -28,11 +28,7 @@ export default function EditGroupPage({ params }: { params: { groupId: string } 
     const [isSubmitting, setIsSubmitting] = useState(false)
     const router = useRouter()
 
-    useEffect(() => {
-        loadGroup()
-    }, [params.groupId])
-
-    const loadGroup = async () => {
+    const loadGroup = useCallback(async () => {
         try {
             const token = localStorage.getItem('token')
             const response = await fetch(`/api/admin/hacks/groups/${params.groupId}`, {
@@ -57,7 +53,11 @@ export default function EditGroupPage({ params }: { params: { groupId: string } 
         } finally {
             setIsLoading(false)
         }
-    }
+    }, [params.groupId, router])
+
+    useEffect(() => {
+        loadGroup()
+    }, [loadGroup])
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target

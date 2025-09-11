@@ -13,11 +13,22 @@ export default function CreateGroupPage() {
     const [formData, setFormData] = useState({
         name: '',
         description: '',
+        organization: '',
     })
     const [isSubmitting, setIsSubmitting] = useState(false)
     const router = useRouter()
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const organizations = [
+        'UGAHacks',
+        'ACM',
+        'ACMW + Girls.Code()',
+        'Kappa Theta Pi',
+        'DevDogs',
+        'Society for Cybersecurity',
+        'Other'
+    ]
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target
         setFormData(prev => ({
             ...prev,
@@ -106,6 +117,28 @@ export default function CreateGroupPage() {
                                     required
                                     disabled={isSubmitting}
                                 />
+                            </div>
+
+                            <div>
+                                <label htmlFor="organization" className="block text-sm font-medium text-gray-700 mb-2">
+                                    Organization *
+                                </label>
+                                <select
+                                    id="organization"
+                                    name="organization"
+                                    value={formData.organization}
+                                    onChange={handleChange}
+                                    required
+                                    disabled={isSubmitting}
+                                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+                                >
+                                    <option value="">Select organization</option>
+                                    {organizations.map((org) => (
+                                        <option key={org} value={org}>
+                                            {org}
+                                        </option>
+                                    ))}
+                                </select>
                             </div>
 
                             <div>

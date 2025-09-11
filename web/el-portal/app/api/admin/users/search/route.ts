@@ -1,21 +1,20 @@
-import { adminDb } from '@/lib/firebase-admin';
-import { NextRequest, NextResponse } from 'next/server';
+import { db } from '@/lib/firebase-admin'
+import { NextRequest, NextResponse } from 'next/server'
 
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
-    const query = searchParams.get('q');
-    const limit = parseInt(searchParams.get('limit') || '10');
+    const { searchParams } = new URL(request.url)
+    const query = searchParams.get('q')
+    const limit = parseInt(searchParams.get('limit') || '10')
 
     if (!query || query.length < 2) {
-      return NextResponse.json({ error: 'Query must be at least 2 characters' }, { status: 400 });
+      return NextResponse.json({ error: 'Query must be at least 2 characters' }, { status: 400 })
     }
 
-    // Search users by name, email, or MyID
-    const usersQuery = await adminDb.collection('el-portal')
+    // Get all admin users and filter client-side for better search
+    const usersQuery = await db.collection('el-portal')
       .where('isAdmin', '==', true)
-      .limit(limit)
-      .get();
+      .get()
 
     const users = usersQuery.docs
       .map(doc => ({
@@ -32,14 +31,14 @@ export async function GET(request: NextRequest) {
         user.email.toLowerCase().includes(query.toLowerCase()) ||
         user.myId.toLowerCase().includes(query.toLowerCase())
       )
-      .slice(0, limit);
+      .slice(0, limit)
 
     return NextResponse.json({
       success: true,
       data: users
-    });
+    })
   } catch (error) {
-    console.error('Error searching users:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    console.error('Error searching users:', error)
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
