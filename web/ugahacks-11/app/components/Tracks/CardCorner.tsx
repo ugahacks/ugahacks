@@ -37,12 +37,12 @@ const CardCorner: React.FC<CardCornerProps> = React.memo(
         style={containerStyle}
       >
         <span
-          className="text-2xl font-bold font-amarante"
+          className="text-5xl font-bold font-amarante"
           style={{ color: characterColor }}
         >
           {character}
         </span>
-        <span className="text-xl font-amarante" style={{ color: shapeColor }}>
+        <span className="text-4xl font-amarante" style={{ color: shapeColor }}>
           {SUIT_SYMBOLS[shape]}
         </span>
       </div>
