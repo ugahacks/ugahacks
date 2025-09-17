@@ -1,15 +1,32 @@
 'use client'
 // src/components/CustomCursor.tsx
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const CustomCursor = () => {
     const cursorRef = useRef<HTMLDivElement | null>(null);
     const particlesLayerRef = useRef<HTMLDivElement | null>(null);
     const lastPosRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
+    const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setIsLargeScreen(window.innerWidth >= 766);
+        };
+
+        // Check initial screen size
+        checkScreenSize();
+
+        // Listen for resize events
+        window.addEventListener('resize', checkScreenSize);
+
+        return () => {
+            window.removeEventListener('resize', checkScreenSize);
+        };
+    }, []);
 
     useEffect(() => {
         const cursor = cursorRef.current;
-        if (!cursor) return;
+        if (!cursor || !isLargeScreen) return;
 
         const moveCursor = (e: MouseEvent) => {
             lastPosRef.current = { x: e.clientX, y: e.clientY };
@@ -29,7 +46,7 @@ const CustomCursor = () => {
             window.removeEventListener('mousemove', moveCursor);
             window.removeEventListener('mousedown', handleMouseDown);
         };
-    }, []);
+    }, [isLargeScreen]);
 
     const spawnParticles = (x: number, y: number) => {
         const layer = particlesLayerRef.current;
@@ -63,6 +80,11 @@ const CustomCursor = () => {
             layer.appendChild(p);
         }
     };
+
+    // Don't render anything if screen is too small
+    if (!isLargeScreen) {
+        return null;
+    }
 
     return (
         <>

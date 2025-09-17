@@ -14,6 +14,9 @@
   font-weight: 400 !important;
   font-style: normal !important;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -50,7 +53,11 @@ body {
     }
   }
 }
-
 * {
   cursor: none;
+}
+@media (min-width: 766px) {
+  * {
+    cursor: none;
+  }
 }
