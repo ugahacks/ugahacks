@@ -12,3 +12,4 @@
 # Build files
 web/*/*build*
 web/*/.next
+.env
