@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+/* eslint-disable @next/next/no-page-custom-font */
 import { Geist, Geist_Mono } from "next/font/google";
 import CustomCursor from './components/CustomCursor';
 import Navbar from "./components/Navbar/Navbar";
