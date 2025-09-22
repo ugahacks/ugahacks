@@ -16,7 +16,7 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-20 pb-12 md:pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Left: text */}
-          <div className="text-center">
+          <div className="flex flex-col justify-center text-center h-full">
             <h2 className="font-encode text-[34px] md:text-5xl font-bold mb-6 text-[#3E4C8A]">
               What is UGAHacks?
             </h2>
