@@ -21,14 +21,14 @@ export default function About() {
               What is UGAHacks?
             </h2>
 
-            <p className="text-[15px] md:text-lg leading-relaxed mb-4 text-[#9B6798]">
+            <p className="text-[15px] md:text-lg leading-relaxed mb-4 text-[#9B6798] font-semibold">
               UGAHacks is an annual hackathon organized by students at the
               University of Georgia in Athens, Georgia. Hackathons are all about
               dedicated people coming together to create something amazing in an
               epic 48-hour programming sleepover.
             </p>
 
-            <p className="text-[15px] md:text-lg leading-relaxed text-[#9B6798]">
+            <p className="text-[15px] md:text-lg leading-relaxed text-[#9B6798] font-semibold">
               Even though submitting a project is the main objective, that’s not
               all there is. We’ll have mentors, free food, video game
               competitions, workshops, and more. There’s even a workshop for
@@ -37,23 +37,13 @@ export default function About() {
           </div>
 
           {/* Right: mascot image */}
-          <div className="relative flex justify-center">
-            {/* decorative double frame */}
-            <div
-              className="absolute -inset-2 -rotate-2 border-2 border-[#3E4C8A] rounded-xl"
-              aria-hidden
-            />
-            <div
-              className="absolute -inset-6 rotate-2 border-2 border-[#3E4C8A] rounded-xl"
-              aria-hidden
-            />
-
+          <div className="flex justify-center">
             <Image
               src="/byteabout.png"
               alt="Byte the wizard mascot"
               width={520}
               height={520}
-              className="relative z-[1] w-[78%] md:w-[86%] h-auto"
+              className="w-[78%] md:w-[86%] h-auto"
               priority
             />
           </div>
