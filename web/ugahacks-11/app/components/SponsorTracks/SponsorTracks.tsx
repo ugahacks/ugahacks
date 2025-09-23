@@ -1,5 +1,5 @@
 import React from "react";
-import SponsorLogo from "./SponsorLogo";
+// import SponsorLogo from "./SponsorLogo";
 import SponsorTrackCard from "./SponsorTrackCard";
 
 // Array of track data for dynamic rendering
@@ -31,7 +31,7 @@ const SponsorTracks: React.FC = () => {
       className="relative w-full py-16 px-4 md:px-8 lg:px-16 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: 'url("/sponsorTracks.png")' }}
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto ">
         {/* Title */}
         <h1 className="font-amarante text-5xl sm:text-6xl md:text-7xl font-bold text-center mb-16 text-[#3e4c8a] font-encode max-w-full mx-auto">
           Sponsor Tracks

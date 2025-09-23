@@ -1,5 +1,5 @@
+import Image from "next/image";
 import React from "react";
-
 interface SponsorLogoProps {
   imagePath: string;
   alt?: string;
@@ -27,14 +27,12 @@ const SponsorLogo: React.FC<SponsorLogoProps> = ({
           height: size * 0.6,
         }}
       >
-        <img
+        <Image
           src={imagePath}
           alt={alt}
-          className="rounded-full bg-white object-contain"
-          style={{
-            width: "80%",
-            height: "80%",
-          }}
+          className="rounded-full bg-white object-contain w-full h-full p-2"
+          width={80}
+          height={80}
         />
       </div>
     </div>
