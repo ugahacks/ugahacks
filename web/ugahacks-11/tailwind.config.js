@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'encode': ['Encode Sans', 'sans-serif'],
+        'amarante':["Amarante", "ui-serif"],
       },
       colors: {
         'cream': '#faf3e0',
