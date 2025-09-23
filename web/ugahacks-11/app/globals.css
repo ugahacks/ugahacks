@@ -1,9 +1,7 @@
 @import "tailwindcss";
-
 /* Font imports */
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amarante&display=swap");
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,11 +21,22 @@ html {
   scroll-behavior: smooth;
 }
 
+/* .amarante-regular {
+  font-family: "Amarante", monospace;
+  font-weight: 400;
+  font-style: normal;
+} */
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-encode: "Encode Sans", ui-sans-serif, system-ui, -apple-system,
+                 "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji",
+                 "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --font-amarante: "Amarante", ui-serif, Georgia, Cambria, "Times New Roman";
 }
 
 @media (prefers-color-scheme: dark) {

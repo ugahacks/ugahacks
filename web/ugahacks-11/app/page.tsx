@@ -1,13 +1,16 @@
 import React from "react";
+import About from "./components/About/About";
 import Hero from "./components/Hero";
-import Tracks from "./components/Tracks/Tracks";
 import Schedule from "./components/Schedule";
 import SponsorTracks from "./components/SponsorTracks/SponsorTracks";
+import Tracks from "./components/Tracks/Tracks";
 
 export default function Home() {
   return (
     <main className="relative">
       <Hero />
+      <About />
+      <Tracks />
       <SponsorTracks />
       <Schedule />
 
@@ -19,7 +22,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <Tracks />
+      
     </main>
   );
 }
