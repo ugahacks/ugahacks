@@ -10,6 +10,7 @@ module.exports = {
       fontFamily: {
         'amarante': ['Amarante', 'serif'],
         'encode': ['Encode Sans', 'sans-serif'],
+        'amarante':["Amarante", "ui-serif"],
       },
       colors: {
         track: {
