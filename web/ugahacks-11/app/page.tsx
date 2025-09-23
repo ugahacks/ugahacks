@@ -2,11 +2,13 @@ import React from "react";
 import Hero from "./components/Hero";
 import Tracks from "./components/Tracks/Tracks";
 import Schedule from "./components/Schedule";
+import SponsorTracks from "./components/SponsorTracks/SponsorTracks";
 
 export default function Home() {
   return (
     <main className="relative">
       <Hero />
+      <SponsorTracks />
       <Schedule />
 
       <section className="h-screen bg-gray-100 flex items-center justify-center">
