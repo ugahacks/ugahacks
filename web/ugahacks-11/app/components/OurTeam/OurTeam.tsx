@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function OurTeam() {
   return (
     <section
-      id="our-team"
+      id="team"
       className="relative w-full py-20 md:py-28 overflow-hidden bg-[#6E8B79]"
     >
       {/* ===== MAGICAL SWIRL OVERLAY  ===== */}
@@ -28,7 +28,7 @@ export default function OurTeam() {
                 alt=""
                 width={55}
                 height={55}
-                quality={100}
+
                 className="drop-shadow-sm scale-90 md:scale-100"
                 priority
                 draggable={false}
@@ -39,7 +39,7 @@ export default function OurTeam() {
                   alt=""
                   width={22}
                   height={22}
-                  quality={100}
+
                   className="opacity-95"
                   priority
                   draggable={false}
@@ -74,7 +74,7 @@ export default function OurTeam() {
                 alt=""
                 width={55}
                 height={55}
-                quality={100}
+
                 className="drop-shadow-sm scale-90 md:scale-100"
                 priority
                 draggable={false}
@@ -85,7 +85,7 @@ export default function OurTeam() {
                   alt=""
                   width={24}
                   height={24}
-                  quality={100}
+
                   className="opacity-95"
                   priority
                   draggable={false}

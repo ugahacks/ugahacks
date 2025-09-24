@@ -7,7 +7,7 @@ const Schedule: React.FC = () => {
   return (
     <section
       id="schedule"
-      className="min-h-screen w-full flex flex-col items-center pt-12"
+      className="min-h-screen w-full flex flex-col items-center pt-15"
       style={{
         background: "#A7B7D9",
       }}
