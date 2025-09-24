@@ -54,8 +54,12 @@ export default function OurTeam() {
                 alt="Our Team book"
                 width={540}
                 height={680}
-                quality={100}
-                className="relative z-[1] max-w-[440px] md:max-w-[520px] h-auto rotate-[-6deg] drop-shadow-2xl"
+                className="
+      relative z-[1] 
+      w-full h-auto
+      max-w-[280px] sm:max-w-[360px] md:max-w-[440px] lg:max-w-[520px]
+      rotate-[-6deg] drop-shadow-2xl
+    "
                 priority
               />
             </div>
@@ -92,28 +96,27 @@ export default function OurTeam() {
             {/* Framed team image (border clearly outside image) */}
             <div className="relative w-[88vw] max-w-[520px] rotate-2">
               {/* Border frame */}
-              <div className="absolute inset-0 rounded-xl border-[6px] md:border-8 border-[#3E4C8A]/80 pointer-events-none" />
+              <div className="absolute inset-1 rounded-xl border-[6px] md:border-8 border-[#3E4C8A] pointer-events-none" />
               {/* Team image inset slightly so border is visible */}
-              <div className="relative z-[1] rounded-md overflow-hidden m-2 md:m-3">
+              <div className="relative  rounded-md overflow-hidden m-2 md:m-3">
                 <Image
                   src="/TeamIMG_PNG.png"
-                  alt="Our Team"
+                  alt="Our Team Book"
                   width={520}
                   height={360}
                   quality={100}
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-cover z-[100]"
                   priority
                 />
               </div>
             </div>
 
-            {/* CTA */}
             <Link
               href="https://ugahacks.com/#team"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit Team Page"
-              className="self-center"
+              className="self-center z-[100]"
             >
               <button
                 type="button"
