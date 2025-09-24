@@ -5,16 +5,24 @@ export default function OurTeam() {
   return (
     <section
       id="our-team"
-      className="relative w-full py-20 md:py-28 overflow-hidden"
-      style={{ backgroundColor: "#6E8B79" }} // replace with exact figma green if you have it
+      className="relative w-full py-20 md:py-28 overflow-hidden bg-[#6E8B79]"
     >
+      {/* ===== MAGICAL SWIRL OVERLAY  ===== */}
+      <div
+        className="
+          pointer-events-none absolute inset-0 z-0
+          bg-[url('/magicSwirll.png')] bg-no-repeat bg-top bg-cover
+        "
+        aria-hidden
+      />
+      {/* ===================================================== */}
+
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-          {/* LEFT COLUMN: Book + bottom-left cluster (anchored to this column) */}
+          {/* LEFT COLUMN: Book + bottom-left cluster */}
           <div className="relative flex justify-center md:justify-start">
             {/* Bottom-left cluster */}
             <div className="pointer-events-none absolute bottom-0 left-0 translate-y-6 -translate-x-2 md:translate-y-8 md:-translate-x-3 z-10">
-              {/* Large yellow (Star 55) */}
               <Image
                 src="/Star 55.png"
                 alt=""
@@ -25,7 +33,6 @@ export default function OurTeam() {
                 priority
                 draggable={false}
               />
-              {/* Small purple (Star 56) slightly up/right of the yellow */}
               <div className="-translate-y-3 translate-x-3 md:-translate-y-4 md:translate-x-4">
                 <Image
                   src="/Star 56.png"
@@ -54,11 +61,10 @@ export default function OurTeam() {
             </div>
           </div>
 
-          {/* RIGHT COLUMN: Team image + centered CTA + top-right cluster (anchored to this column) */}
+          {/* RIGHT COLUMN: Team image + CTA + top-right cluster */}
           <div className="relative flex flex-col items-center gap-8">
             {/* Top-right cluster */}
             <div className="pointer-events-none absolute top-0 right-0 -translate-y-6 translate-x-2 md:-translate-y-8 md:translate-x-3 z-10">
-              {/* Large yellow (Star 47) */}
               <Image
                 src="/Star 47.png"
                 alt=""
@@ -69,7 +75,6 @@ export default function OurTeam() {
                 priority
                 draggable={false}
               />
-              {/* Small purple (Star 52) slightly up/left of the yellow */}
               <div className="-translate-y-3 -translate-x-3 md:-translate-y-4 md:-translate-x-4">
                 <Image
                   src="/Star 52.png"
@@ -84,23 +89,25 @@ export default function OurTeam() {
               </div>
             </div>
 
-            {/* Framed team image */}
-            <div className="relative">
-              {/* Hand-drawn border frame */}
-              <div className="absolute -inset-3 md:-inset-4 rotate-2 rounded-xl border-[6px] md:border-8 border-[#3E4C8A]/80" />
-              {/* Your team photo inside the frame */}
-              <Image
-                src="/TeamIMG_PNG.png"
-                alt="Our Team"
-                width={520}
-                height={360}
-                quality={100}
-                className="relative z-[1] w-[88vw] max-w-[520px] h-auto rounded-md object-cover"
-                priority
-              />
+            {/* Framed team image (border clearly outside image) */}
+            <div className="relative w-[88vw] max-w-[520px] rotate-2">
+              {/* Border frame */}
+              <div className="absolute inset-0 rounded-xl border-[6px] md:border-8 border-[#3E4C8A]/80 pointer-events-none" />
+              {/* Team image inset slightly so border is visible */}
+              <div className="relative z-[1] rounded-md overflow-hidden m-2 md:m-3">
+                <Image
+                  src="/TeamIMG_PNG.png"
+                  alt="Our Team"
+                  width={520}
+                  height={360}
+                  quality={100}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+              </div>
             </div>
 
-            {/* CTA centered below the rectangle on all breakpoints */}
+            {/* CTA */}
             <Link
               href="https://ugahacks.com/#team"
               target="_blank"
