@@ -38,6 +38,7 @@ export default function Home() {
             <p className="text-white  text-sm">
               Follow Us
             </p>
+            
             <div className="flex justify-center space-x-6 py-2">
               {/* Facebook */}
               <a href="https://facebook.com/UGAHacks" target="_blank" rel="noopener noreferrer">

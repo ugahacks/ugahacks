@@ -20,22 +20,22 @@ const faqData = [
 export default function FaqAccordion() {
   return (
     <div className="w-full flex justify-end">
-      <div className="w-full max-w-2xl pr-0 sm:pr-4 md:pr-8 flex flex-col items-end">
+    <div className="w-full max-w-2xl pr-0 sm:pr-4 md:pr-8 flex flex-col items-end">
         {faqData.map((faq, index) => (
-          <Accordion key={index} style={{ borderRadius: 0 }} className="w-full mb-2">
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} className="min-h-[56px]">
-              <Typography className="w-full text-center text-base sm:text-lg md:text-xl font-semibold">
+        <Accordion key={index} style={{ borderRadius: 0 }} className="w-full mb-2">
+            <AccordionSummary expandIcon={<ExpandMoreIcon />} className="min-h-[72px]">
+              <Typography className="w-full text-start text-lg sm:text-xl md:text-2xl font-amarante font-bold">
                 {faq.question}
               </Typography>
             </AccordionSummary>
-            <AccordionDetails className="min-h-[48px]">
-              <Typography className="w-full text-center text-sm sm:text-base md:text-lg">
+        <AccordionDetails className="min-h-[48px]">
+              <Typography className="w-full text-start text-base sm:text-lg md:text-xl font-amarante">
                 {faq.answer}
               </Typography>
             </AccordionDetails>
           </Accordion>
         ))}
-      </div>
+    </div>
     </div>
   );
 }
