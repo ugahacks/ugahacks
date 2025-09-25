@@ -38,7 +38,7 @@ export default function About() {
           {/* Right: mascot image */}
           <div className="flex justify-center">
             <Image
-              src="/byteabout.png"
+              src="/byteAbout.png"
               alt="Byte the wizard mascot"
               width={520}
               height={520}

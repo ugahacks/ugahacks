@@ -13,7 +13,7 @@ const Schedule: React.FC = () => {
       }}
     >
       <Image
-        src="/textschedule.png"
+        src="/Textschedule.png"
         alt="Schedule"
         width={800}
         height={200}
