@@ -5,6 +5,7 @@ import OurTeam from "./components/OurTeam/OurTeam";
 import Schedule from "./components/Schedule";
 import SponsorTracks from "./components/SponsorTracks/SponsorTracks";
 import Tracks from "./components/Tracks/Tracks";
+import FAQ from "./components/FAQ/Faq";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <Tracks />
       <SponsorTracks />
       <Schedule />
-      {/* <!--    <FAQ goes here/>    --> */}
+      <FAQ />
       <OurTeam />
       {/* <!-- <Sponsors Goes here/>  --> */}
       {/* <section className="h-screen bg-gray-100 flex items-center justify-center">
