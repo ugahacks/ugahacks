@@ -1,13 +1,13 @@
 import React from "react";
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import About from "./components/About/About";
+import FAQ from "./components/FAQ/Faq";
 import Hero from "./components/Hero";
 import OurTeam from "./components/OurTeam/OurTeam";
 import Schedule from "./components/Schedule";
 import SponsorTracks from "./components/SponsorTracks/SponsorTracks";
 import Sponsors from "./components/Sponsors";
 import Tracks from "./components/Tracks/Tracks";
-import FAQ from "./components/FAQ/Faq";
 
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
             <p className="text-white  text-sm">
               Follow Us
             </p>
-            
+
             <div className="flex justify-center space-x-6 py-2">
               {/* Facebook */}
               <a href="https://facebook.com/UGAHacks" target="_blank" rel="noopener noreferrer">
