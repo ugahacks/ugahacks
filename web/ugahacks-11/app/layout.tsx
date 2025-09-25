@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
+/* eslint-disable @next/next/no-page-custom-font */
 import { Geist, Geist_Mono } from "next/font/google";
+import CustomCursor from './components/CustomCursor';
+import Navbar from "./components/Navbar/Navbar";
 import "./globals.css";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,11 +28,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Encode+Sans:wght@400;700&display=swap" rel="stylesheet" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
-      </body>
+        <Navbar />
+        <CustomCursor />{children}</body>
     </html>
   );
 }

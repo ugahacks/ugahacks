@@ -3,6 +3,8 @@
 # Yarn 2
 .pnp.*
 .yarn/*
+.idea/*
+.vscode/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
