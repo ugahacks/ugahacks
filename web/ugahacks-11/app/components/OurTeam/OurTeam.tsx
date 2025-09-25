@@ -100,7 +100,7 @@ export default function OurTeam() {
               {/* Team image inset slightly so border is visible */}
               <div className="relative  rounded-md overflow-hidden m-2 md:m-3">
                 <Image
-                  src="/TeamIMG_PNG.png"
+                  src="/TeamImg_PNG.png"
                   alt="Our Team Book"
                   width={520}
                   height={360}

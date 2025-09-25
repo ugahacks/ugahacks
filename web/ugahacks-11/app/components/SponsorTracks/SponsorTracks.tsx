@@ -29,7 +29,7 @@ const SponsorTracks: React.FC = () => {
     <section
       id="sponsor-tracks"
       className="relative w-full py-16 px-4 md:px-8 lg:px-16 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: 'url("/sponsorTracks.png")' }}
+      style={{ backgroundImage: 'url("/SponsorTracks.png")' }}
     >
       <div className="max-w-6xl mx-auto ">
         {/* Title */}

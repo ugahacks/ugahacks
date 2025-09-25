@@ -53,7 +53,7 @@ export default function Faq() {
                     width={100}
                     alt="FAQ animation"
                     className="w-[40vh] h-auto rounded-xl"
-
+                    unoptimized
                   />
                 </div>
               </div>
