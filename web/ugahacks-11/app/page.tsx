@@ -9,7 +9,6 @@ import SponsorTracks from "./components/SponsorTracks/SponsorTracks";
 import Sponsors from "./components/Sponsors";
 import Tracks from "./components/Tracks/Tracks";
 
-
 export default function Home() {
   return (
     <main className="relative">
@@ -63,6 +62,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </main>
+    </main >
   );
 }
