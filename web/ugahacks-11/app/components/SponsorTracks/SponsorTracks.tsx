@@ -8,19 +8,19 @@ const sponsorTracks = [
     logo: "/generic_byte.png",
     title: "Sponsorship Track #1",
     description:
-      "This track focuses on building applications that leverage GitHub's platform and services. Participants will have the opportunity to create innovative solutions that enhance collaboration, code management, and developer productivity using GitHub's APIs and tools.",
+      "???",
   },
   {
     logo: "/generic_byte.png",
     title: "Sponsorship Track #2",
     description:
-      "Build solutions using Google Cloud, AI, or Firebase. This track encourages projects that utilize Google's ecosystem to solve real-world problems and push the boundaries of what's possible with cloud technology.",
+      "???",
   },
   {
     logo: "/generic_byte.png",
     title: "Sponsorship Track #3",
     description:
-      "Innovate with Microsoft Azure, Teams, or GitHub Copilot. Participants can create tools or integrations that enhance productivity, collaboration, or leverage AI capabilities within the Microsoft ecosystem.",
+      "???",
   },
 ];
 
