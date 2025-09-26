@@ -48,7 +48,7 @@ export default function Faq() {
                 {/* Replace src with your actual .gif when ready */}
                 <div className="w-full max-w-xl">
                   <Image
-                    src="/fairybytegif.gif"
+                    src="/fairybyte.gif"
                     height={100}
                     width={100}
                     alt="FAQ animation"
