@@ -16,8 +16,8 @@ export default function Sponsors() {
           Sponsors
         </h2>
         <div className="w-full max-w-4xl grid grid-cols-3 gap-2 md:gap-6">
-          <SponsorCard imageUrl="/Collegeofengineering.png" href="https://ugahacks.com" />
-          <SponsorCard imageUrl="/githubsponsor.png" href="https://ugahacks.com" />
+          <SponsorCard imageUrl="/ugaresearch.png" href="https://research.uga.edu/" />
+          <SponsorCard imageUrl="/githubsponsor.png" href="https://github.com/" />
           <SponsorCard imageUrl="https://www.shutterstock.com/shutterstock/videos/1072439945/thumb/6.jpg?ip=x480" href="https://ugahacks.com" />
 
         </div>
