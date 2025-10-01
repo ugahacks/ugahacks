@@ -1,6 +1,6 @@
 // import Image from "next/image";
+import Link from "next/link";
 import SponsorCard from "./SponsorCard";
-
 
 export default function Sponsors() {
   return (
@@ -18,11 +18,15 @@ export default function Sponsors() {
           <SponsorCard imageUrl="https://www.shutterstock.com/shutterstock/videos/1072439945/thumb/6.jpg?ip=x480" href="https://ugahacks.com" />
 
         </div>
-        <button
-          className="mt-6 md:mt-12 px-6 md:px-12 py-1.5 md:py-3 bg-[#E8DCC8] text-[#4A5C8C] font-encode-sans text-sm md:text-lg rounded-full hover:scale-105 transition-transform duration-200"
-        >
-          Sponsorship Packet
-        </button>
+        <Link
+          href="https://drive.google.com/file/d/1Z2wJ8JBNY99TbEUve9kWX_e6I-flhKX4/view?usp=sharing">
+
+          <button
+            className="mt-6 md:mt-12 px-6 md:px-12 py-1.5 md:py-3 bg-[#E8DCC8] text-[#4A5C8C] font-encode-sans text-sm md:text-lg rounded-full hover:scale-105 transition-transform duration-200"
+          >
+            Sponsorship Packet
+          </button>
+        </Link>
       </div>
     </section>
   );
