@@ -3,21 +3,9 @@ import Link from "next/link";
 
 export default function OurTeam() {
   return (
-    <section
-      id="team"
-      className="relative w-full py-20 md:py-28 overflow-hidden bg-[#6E8B79]"
-    >
-      {/* ===== MAGICAL SWIRL OVERLAY  ===== */}
-      <div
-        className="
-          pointer-events-none absolute inset-0 z-0
-          bg-[url('/magicSwirll.png')] bg-no-repeat bg-top bg-cover
-        "
-        aria-hidden
-      />
-      {/* ===================================================== */}
+    <section id="team" className="relative w-full py-20 md:py-28 overflow-hidden">
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12 lg:px-20">
+      <div className="relative z-10 mx-auto max-w-7xl pt-[10vh] md:pt-[20vh] px-6 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* LEFT COLUMN: Book + bottom-left cluster */}
           <div className="relative flex justify-center md:justify-start">
