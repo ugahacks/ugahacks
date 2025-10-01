@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SponsorCard from "./SponsorCard";
 
 
@@ -5,13 +6,9 @@ export default function Sponsors() {
   return (
     <section
       id="sponsors"
-      className="relative w-full min-h-screen md:aspect-[10/9] overflow-hidden"
+      className="relative w-full min-h-screen md:aspect-[10/9] overflow-visible"
     >
-      <div
-        className="absolute inset-0 w-full h-full bg-no-repeat bg-[length:100%_59%] bg-top md:bg-[length:100%_100%] md:bg-top"
-        style={{ backgroundImage: "url('/Sponsor_bg.png')" }}
-      />
-      <div className="relative z-10 w-full flex flex-col items-center pt-6 md:pt-16 px-4 md:px-20 pb-8 md:pb-32">
+      <div className="relative z-10 w-full flex flex-col items-center pt-[35vh] md:pt-[45vh] px-4 md:px-20 pb-8 md:pb-32">
         <h2 className="font-amarante text-4xl md:text-7xl mb-4 md:mb-12 text-center text-white">
           Sponsors
         </h2>

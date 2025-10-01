@@ -18,8 +18,22 @@ export default function Home() {
       <SponsorTracks />
       <Schedule />
       <FAQ />
-      <OurTeam />
-      <Sponsors />
+      {/* Shared background wrapper for OurTeam + Sponsors */}
+      <div className="relative w-full bg-[#6E8B79]">
+        {/* full-size decorative swirl overlay */}
+        <div
+          className="pointer-events-none absolute inset-0 z-0 bg-no-repeat bg-top bg-cover"
+          style={{ backgroundImage: "url('/magicSwirll.png')" }}
+          aria-hidden
+        />
+  <div className="relative z-10 pb-28 md:pb-40">
+          <OurTeam />
+          <Sponsors />
+          <div className="w-full mt-0 md:mt-0 mb-0 md: mb-0 relative z-30 flex justify-center">
+            <img src="/Book.png" alt="Decorative book" className="w-[110%] max-w-[1400px] md:w-[115%] h-auto block translate-y-29 md:translate-y-45" />
+          </div>
+        </div>
+      </div>
       {/* <section className="h-screen bg-gray-100 flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-4">More Content Below</h2>
@@ -28,7 +42,7 @@ export default function Home() {
           </p>
         </div>
       </section> */}
-      <footer>
+      <footer className="relative z-10">
         <div className="w-full bg-[#3E4C8A] text-white text-center py-6">
           <div className="border-t border-b border-white/75 y-2 p-1" >
             <p className="text-sm">
