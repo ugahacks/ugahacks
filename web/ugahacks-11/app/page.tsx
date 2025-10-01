@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import About from "./components/About/About";
@@ -8,6 +9,7 @@ import Schedule from "./components/Schedule";
 import SponsorTracks from "./components/SponsorTracks/SponsorTracks";
 import Sponsors from "./components/Sponsors";
 import Tracks from "./components/Tracks/Tracks";
+
 
 export default function Home() {
   return (
@@ -26,11 +28,19 @@ export default function Home() {
           style={{ backgroundImage: "url('/magicSwirll.png')" }}
           aria-hidden
         />
-  <div className="relative z-10 pb-28 md:pb-40">
+        <div className="relative z-10 pb-28 md:pb-40">
           <OurTeam />
           <Sponsors />
           <div className="w-full mt-0 md:mt-0 mb-0 md: mb-0 relative z-30 flex justify-center">
-            <img src="/Book.png" alt="Decorative book" className="w-[110%] max-w-[1400px] md:w-[115%] h-auto block translate-y-29 md:translate-y-45" />
+            <Image
+              src="/Book.png"
+              alt="Decorative book"
+              width={1400} // give a large max width (acts like intrinsic size)
+              height={0}   // can be 0 if you’re relying on CSS aspect ratio
+              unoptimized  // disables Next.js transformations (acts like <img>)
+              className="w-[110%] max-w-[1400px] md:w-[115%] h-auto block translate-y-29 md:translate-y-45"
+              priority // optional: preload like <img>
+            />
           </div>
         </div>
       </div>
