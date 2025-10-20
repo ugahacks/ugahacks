@@ -1,15 +1,16 @@
-
 // Faq.tsx
 import Image from "next/image";
+import SectionEdge from "../SectionEdge/SectionEdge";
 import FaqAccordion from "./FaqAccordion";
+
 export default function Faq() {
   return (
     <main>
       {/* Top black bar */}
       <div className="w-full bg-black" />
 
-      <section id="faq" className="">
-        <div className="w-full bg-[url('/FAQ.jpg')] bg-cover bg-center bg-no-repeat font-amarante p-12">
+      <section id="faq" className="relative pb-24 md:pb-32">
+        <div className="w-full bg-[url('/FAQ.jpg')] bg-cover bg-center bg-no-repeat font-amarante p-12 pb-24 md:pb-28">
           {/* 2-column layout on md+, stacked on small screens */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             {/* LEFT: Title + GIF placeholder (stacked) */}
@@ -53,7 +54,6 @@ export default function Faq() {
                     width={100}
                     alt="FAQ animation"
                     className="w-[40vh] h-auto rounded-xl"
-
                   />
                 </div>
               </div>
@@ -65,6 +65,12 @@ export default function Faq() {
             </div>
           </div>
         </div>
+        <SectionEdge
+          src="/edges/faq-bottom.svg"
+          height={180}
+          overlap={28}
+          alt="FAQ section torn divider"
+        />
       </section>
     </main>
   );

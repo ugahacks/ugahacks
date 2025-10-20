@@ -1,6 +1,7 @@
 import React from "react";
 // import SponsorLogo from "./SponsorLogo";
 import SponsorTrackCard from "./SponsorTrackCard";
+import SectionEdge from "../SectionEdge/SectionEdge";
 
 // Array of track data for dynamic rendering
 const sponsorTracks = [
@@ -28,7 +29,7 @@ const SponsorTracks: React.FC = () => {
   return (
     <section
       id="sponsor-tracks"
-      className="relative w-full py-16 px-4 md:px-8 lg:px-16 bg-cover bg-center bg-no-repeat"
+      className="relative w-full pt-16 pb-24 md:pb-32 px-4 md:px-8 lg:px-16 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: 'url("/sponsorTracks.png")' }}
     >
       <div className="max-w-6xl mx-auto ">
@@ -47,6 +48,12 @@ const SponsorTracks: React.FC = () => {
           ))}
         </div>
       </div>
+      <SectionEdge
+        src="/edges/sponsor-tracks-bottom.svg"
+        height={180}
+        overlap={28}
+        alt="Sponsorship tracks torn divider"
+      />
     </section>
   );
 };

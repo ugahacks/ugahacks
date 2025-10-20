@@ -1,0 +1,20 @@
+<svg width="1440" height="200" viewBox="0 0 1440 200" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <path
+    d="M0 70C60 10 120 130 180 70C240 10 300 130 360 70C420 10 480 130 540 70C600 10 660 130 720 70C780 10 840 130 900 70C960 10 1020 130 1080 70C1140 10 1200 130 1260 70C1320 10 1380 130 1440 70V200H0V70Z"
+    fill="#2F2D4C"
+    stroke="#1F1D36"
+    stroke-width="3"
+  />
+  <path
+    d="M0 70C60 10 120 130 180 70C240 10 300 130 360 70C420 10 480 130 540 70C600 10 660 130 720 70C780 10 840 130 900 70C960 10 1020 130 1080 70C1140 10 1200 130 1260 70C1320 10 1380 130 1440 70"
+    stroke="url(#ourTeamShadow)"
+    stroke-width="12"
+    stroke-linecap="round"
+  />
+  <defs>
+    <linearGradient id="ourTeamShadow" x1="720" y1="60" x2="720" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#000000" stop-opacity="0.4" />
+      <stop offset="1" stop-color="#000000" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+</svg>

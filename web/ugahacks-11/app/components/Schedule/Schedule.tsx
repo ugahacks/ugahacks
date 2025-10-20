@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import React from "react";
+import SectionEdge from "../SectionEdge/SectionEdge";
 
 const Schedule: React.FC = () => {
   return (
     <section
       id="schedule"
-      className="min-h-screen w-full flex flex-col items-center pt-15"
+      className="relative min-h-screen w-full flex flex-col items-center pt-15 pb-24"
       style={{
         background: "#A7B7D9",
       }}
@@ -25,6 +26,12 @@ const Schedule: React.FC = () => {
         width={400}
         height={400}
         className="object-contain"
+      />
+      <SectionEdge
+        src="/edges/schedule-bottom.svg"
+        height={180}
+        overlap={36}
+        alt="Schedule section torn transition"
       />
     </section>
   );

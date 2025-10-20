@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import SectionEdge from "../SectionEdge/SectionEdge";
 
 export default function OurTeam() {
   return (
     <section
       id="team"
-      className="relative w-full py-20 md:py-28 overflow-hidden bg-[#6E8B79]"
+      className="relative w-full pt-20 md:pt-28 pb-24 md:pb-32 overflow-visible bg-[#6E8B79]"
     >
       {/* ===== MAGICAL SWIRL OVERLAY  ===== */}
       <div
@@ -128,6 +129,12 @@ export default function OurTeam() {
           </div>
         </div>
       </div>
+      <SectionEdge
+        src="/edges/our-team-bottom.svg"
+        height={180}
+        overlap={24}
+        alt="Our team torn divider before sponsors"
+      />
     </section>
   );
 }

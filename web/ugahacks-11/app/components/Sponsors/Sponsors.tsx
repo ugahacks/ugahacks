@@ -1,11 +1,11 @@
 import SponsorCard from "./SponsorCard";
-
+import SectionEdge from "../SectionEdge/SectionEdge";
 
 export default function Sponsors() {
   return (
     <section
       id="sponsors"
-      className="relative w-full min-h-screen md:aspect-[10/9] overflow-hidden"
+      className="relative w-full min-h-screen md:aspect-[10/9] overflow-visible pb-24 md:pb-32"
     >
       <div
         className="absolute inset-0 w-full h-full bg-no-repeat bg-[length:100%_59%] bg-top md:bg-[length:100%_100%] md:bg-top"
@@ -27,6 +27,12 @@ export default function Sponsors() {
           Sponsorship Packet
         </button>
       </div>
+      <SectionEdge
+        src="/edges/sponsors-bottom.svg"
+        height={180}
+        overlap={32}
+        alt="Sponsors section torn divider above footer"
+      />
     </section>
   );
 }

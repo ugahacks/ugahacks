@@ -3,11 +3,12 @@ import React from "react";
 import TrackCard from "./TrackCard";
 import { CARD_POSITIONS } from "./trackConstants";
 import { tracksData } from "./tracksData";
+import SectionEdge from "../SectionEdge/SectionEdge";
 
 const Tracks: React.FC = () => {
   return (
     <section
-      className="relative w-full overflow-y-auto"
+      className="relative w-full overflow-y-auto pb-[160px]"
       style={{ height: "75vw" }}
     >
       {/* Background Image Container */}
@@ -39,6 +40,13 @@ const Tracks: React.FC = () => {
           </div>
         ))}
       </div>
+      <SectionEdge
+        src="/edges/tracks-bottom.svg"
+        height={190}
+        overlap={32}
+        zIndex={35}
+        alt="Textured transition towards sponsor tracks"
+      />
     </section>
   );
 };

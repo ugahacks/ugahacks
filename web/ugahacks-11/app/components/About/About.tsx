@@ -1,9 +1,10 @@
 import Image from "next/image";
+import SectionEdge from "../SectionEdge/SectionEdge";
 export default function About() {
   return (
     <section
       id="about"
-      className="relative w-full py-16 md:py-24"
+      className="relative w-full pt-16 md:pt-24 pb-24 md:pb-32"
       style={{
         backgroundImage: 'url("/paperbackground.png")',
         backgroundRepeat: "no-repeat",
@@ -48,6 +49,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <SectionEdge src="/edges/about-bottom.svg" height={170} overlap={32} alt="Torn transition towards the tracks section" />
     </section>
   );
 }

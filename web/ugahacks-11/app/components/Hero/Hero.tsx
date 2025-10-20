@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import SectionEdge from "../SectionEdge/SectionEdge";
 
 const Hero: React.FC = () => {
   return (
@@ -42,6 +43,7 @@ const Hero: React.FC = () => {
           </button>
         </a>
       </div>
+      <SectionEdge src="/edges/hero-bottom.svg" height={180} overlap={48} alt="Hero section torn edge" />
     </section>
   );
 };
