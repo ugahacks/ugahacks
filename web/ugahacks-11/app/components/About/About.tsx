@@ -5,10 +5,10 @@ export default function About() {
       id="about"
       className="relative w-full py-16 md:py-24"
       style={{
-        backgroundImage: 'url("/paperbackground.png")',
+        backgroundImage: 'url("/about.png")',
         backgroundRepeat: "no-repeat",
         backgroundPosition: "top center",
-        backgroundSize: "100% auto", // full width, no cropping
+        backgroundSize: "100% 100%", // full width, no cropping
         backgroundColor: "#F6EFE2",
       }}
     >

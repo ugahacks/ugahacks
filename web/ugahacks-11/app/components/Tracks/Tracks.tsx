@@ -13,7 +13,7 @@ const Tracks: React.FC = () => {
       {/* Background Image Container */}
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat pt-10"
-        style={{ backgroundImage: "url('/Tracks.png')" }}
+        style={{ backgroundImage: "url('/Tracks.png')", backgroundSize: "100% 100%" }}
       />
 
       {/* Content Container */}
