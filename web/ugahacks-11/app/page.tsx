@@ -15,9 +15,32 @@ export default function Home() {
   return (
     <main className="relative">
       <Hero />
+      {/* Transition section between Hero and About */}
+      <section
+         className="w-full h-20 md:h-35 bg-no-repeat -mt-1 -mb-2"
+        style={{
+          backgroundImage: 'url("/heroabout.png")',
+          backgroundSize: '102% 100%',
+          backgroundPosition: 'center top',
+          backgroundColor: '#F6EFE2'
+        }}
+        aria-hidden="true"
+      />
       <About />
       <Tracks />
+      {/* Transition section between Tracks and Sponsor Tracks */}
+      <section
+        className="w-full h-32 md:h-38 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url("/trackssponsors.png")' }}
+        aria-hidden="true"
+      />
       <SponsorTracks />
+      {/* Transition section between Sponsor Tracks and Schedule */}
+      <section
+        className="w-full h-32 md:h-18 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url("/sponsorschedule.png")' }}
+        aria-hidden="true"
+      />
       <Schedule />
       <FAQ />
       {/* Shared background wrapper for OurTeam + Sponsors */}

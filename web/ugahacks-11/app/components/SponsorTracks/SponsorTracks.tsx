@@ -28,10 +28,26 @@ const SponsorTracks: React.FC = () => {
   return (
     <section
       id="sponsor-tracks"
-      className="relative w-full py-16 px-4 md:px-8 lg:px-16 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: 'url("/SponsorT.png")', backgroundSize: "100% 100%" }}
+      className="relative w-full py-16 px-4 md:px-8 lg:px-16 overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto ">
+      {/* Mobile background - cropped to hide wavy lines */}
+      <div
+        className="absolute inset-0 bg-no-repeat md:hidden"
+        style={{
+          backgroundImage: 'url("/Sponsorback.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 5%',
+        }}
+      />
+      {/* Desktop background - normal */}
+      <div
+        className="absolute inset-0 bg-no-repeat bg-cover bg-center hidden md:block"
+        style={{
+          backgroundImage: 'url("/SponsorT.png")',
+        }}
+      />
+
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Title */}
         <h1 className="font-amarante text-5xl sm:text-6xl md:text-7xl font-bold text-center mb-16 text-[#3e4c8a] font-encode max-w-full mx-auto">
           Sponsor Tracks
