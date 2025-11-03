@@ -15,9 +15,32 @@ export default function Home() {
   return (
     <main className="relative">
       <Hero />
+      {/* Transition section between Hero and About */}
+      <section
+        className="w-full h-20 md:h-35 bg-no-repeat -mt-1 -mb-2"
+        style={{
+          backgroundImage: 'url("/heroabout.png")',
+          backgroundSize: '102% 100%',
+          backgroundPosition: 'center top',
+          backgroundColor: '#F6EFE2'
+        }}
+        aria-hidden="true"
+      />
       <About />
       <Tracks />
+      {/* Transition section between Tracks and Sponsor Tracks */}
+      <section
+        className="w-full h-32 md:h-38 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url("/trackssponsors.png")' }}
+        aria-hidden="true"
+      />
       <SponsorTracks />
+      {/* Transition section between Sponsor Tracks and Schedule */}
+      <section
+        className="w-full h-32 md:h-18 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url("/sponsorschedule.png")' }}
+        aria-hidden="true"
+      />
       <Schedule />
       <FAQ />
       {/* Shared background wrapper for OurTeam + Sponsors */}
@@ -28,7 +51,7 @@ export default function Home() {
           style={{ backgroundImage: "url('/magicSwirll.png')" }}
           aria-hidden
         />
-        <div className="relative z-10 pb-28 md:pb-40">
+        <div className="relative z-10">
           <OurTeam />
           <Sponsors />
           <div className="w-full mt-0 md:mt-0 mb-0 md: mb-0 relative z-30 flex justify-center">
@@ -38,20 +61,12 @@ export default function Home() {
               width={1400} // give a large max width (acts like intrinsic size)
               height={0}   // can be 0 if you’re relying on CSS aspect ratio
               unoptimized  // disables Next.js transformations (acts like <img>)
-              className="w-[110%] max-w-[1400px] md:w-[115%] h-auto block translate-y-29 md:translate-y-45"
+              className="w-[100%] max-w-[1400px] md:w-[115%] h-auto block translate-y-3"
               priority // optional: preload like <img>
             />
           </div>
         </div>
       </div>
-      {/* <section className="h-screen bg-gray-100 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-4">More Content Below</h2>
-          <p className="text-lg">
-            This section demonstrates scrolling functionality
-          </p>
-        </div>
-      </section> */}
       <footer className="relative z-10">
         <div className="w-full bg-[#3E4C8A] text-white text-center py-6">
           <div className="border-t border-b border-white/75 y-2 p-1" >

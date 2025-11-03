@@ -5,10 +5,10 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative grid place-items-center w-full h-dvh bg-cover bg-center bg-no-repeat"
-
-
-      style={{ backgroundImage: 'url("/Hero-bg.png")' }}
+      className="relative grid place-items-center w-full h-[140dvh] bg-no-repeat bg-center bg-[length:150%_100%] md:bg-[length:100%_100%]"
+      style={{
+        backgroundImage: 'url("/Hero-bg.png")',
+      }}
     >
       <div className="flex flex-col items-center text-center px-4 md:px-8 lg:px-16 gap-8">
         <Image
