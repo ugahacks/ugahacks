@@ -17,7 +17,7 @@ export default function Home() {
       <Hero />
       {/* Transition section between Hero and About */}
       <section
-        className="w-full h-20 md:h-35 bg-no-repeat -mt-1 -mb-2"
+        className="w-full h-20 md:h-35 bg-no-repeat -mt-21 -mb-2"
         style={{
           backgroundImage: 'url("/heroabout.png")',
           backgroundSize: '102% 100%',

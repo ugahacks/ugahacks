@@ -5,12 +5,13 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative grid place-items-center w-full h-[140dvh] bg-no-repeat bg-center bg-[length:150%_100%] md:bg-[length:100%_100%]"
+      className="relative grid place-items-center w-full h-[140dvh] bg-no-repeat bg-[length:155%_100%] md:bg-[length:100%_100%]"
       style={{
         backgroundImage: 'url("/Hero-bg.png")',
+        backgroundPosition: 'center -80px',
       }}
     >
-      <div className="flex flex-col items-center text-center px-4 md:px-8 lg:px-16 gap-8">
+      <div className="flex flex-col items-center text-center px-4 md:px-8 lg:px-16 gap-8 -mt-35">
         <Image
           src="/Logo-with-byte 1.svg"
           alt="UGA Hacks 11 Logo"
