@@ -38,7 +38,7 @@ const CardCorner: React.FC<CardCornerProps> = React.memo(
         style={containerStyle}
       >
         <span
-          className="relative text-lg sm:text-xl md:text-2xl lg:text-5xl font-bold font-amarante sm:-mb-4"
+          className="relative text-md sm:text-xl md:text-2xl lg:text-5xl font-bold font-amarante -mb-2 sm:-mb-0"
           style={{ color: characterColor }}
         >
           {character}
