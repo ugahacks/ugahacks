@@ -16,7 +16,8 @@ export default function Sponsors() {
           <SponsorCard imageUrl="/ugaresearch.png" href="https://research.uga.edu/" />
           <SponsorCard imageUrl="/githubsponsor.png" href="https://github.com/" />
           <SponsorCard imageUrl="/statefarm.png" href="https://www.statefarm.com/" />
-
+          <div></div>
+          <SponsorCard imageUrl="/ncrvoyixlogo.png" href="https://www.ncrvoyix.com/" />
         </div>
         <Link
           href="https://drive.google.com/file/d/1Z2wJ8JBNY99TbEUve9kWX_e6I-flhKX4/view?usp=sharing">
