@@ -18,7 +18,7 @@ interface CardCornerProps {
 function getCornerPosition(position: "top-left" | "bottom-right") {
   if (position === "bottom-right") {
     return {
-      positionClasses: "absolute bottom-[1vw] right-[1.2vw]",
+      positionClasses: "absolute bottom-[1vw] right-[1.2vw] ",
       containerStyle: { transform: "rotate(180deg)" },
     };
   }
@@ -34,16 +34,19 @@ const CardCorner: React.FC<CardCornerProps> = React.memo(
 
     return (
       <div
-        className={`${positionClasses} flex flex-col items-center leading-none`}
+        className={`${positionClasses} flex flex-col items-center leading-none sm:leading-tight`}
         style={containerStyle}
       >
         <span
-          className="text-5xl font-bold font-amarante"
+          className="relative text-md sm:text-xl md:text-2xl lg:text-5xl font-bold font-amarante -mb-2 sm:-mb-0"
           style={{ color: characterColor }}
         >
           {character}
         </span>
-        <span className="text-4xl font-amarante" style={{ color: shapeColor }}>
+        <span
+          className="relative text-base sm:text-lg md:text-xl lg:text-4xl font-amarante"
+          style={{ color: shapeColor }}
+        >
           {SUIT_SYMBOLS[shape]}
         </span>
       </div>

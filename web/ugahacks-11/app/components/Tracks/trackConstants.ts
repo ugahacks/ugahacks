@@ -27,7 +27,7 @@ export const CARD_STYLES = {
   cornerCharacter: "text-[3.2vw] font-normal leading-none",
   suitSymbol: "text-[1.4vw] leading-none mt-[-0.2vw]",
   centerText: "text-[1.6vw] font-normal text-[#714d22] text-center leading-tight capitalize",
-  backText: "text-[1vw] text-center leading-normal text-white font-bold",
+  backText: "text-[1.2vw] sm:text-[1vw] text-center leading-normal text-white font-bold ",
   
   // Layout
   flipContainer: "relative w-full h-full transition-transform duration-600 ease-in-out",
