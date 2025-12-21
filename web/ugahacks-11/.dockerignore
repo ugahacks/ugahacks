@@ -5,3 +5,9 @@ npm-debug.log
 .next
 .yarn/cache
 .yarn/install-state.gz
+.git
+.gitignore
+README.md
+npm-debug.log*
+yarn-error.log*
+.env*

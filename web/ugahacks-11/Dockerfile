@@ -1,21 +1,34 @@
-FROM node:20
+# ---- deps ----
+FROM node:20-alpine AS deps
+WORKDIR /app
 
-EXPOSE 8080
-ENV PORT=8080
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
 
-USER node
-WORKDIR /home/node
 
-# yarn 2 codename
-RUN yarn set version stable
+# ---- build ----
+FROM node:20-alpine AS build
+WORKDIR /app
 
-COPY --chown=node:node package.json /home/node
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
 
-RUN yarn install 
-#RUN yarn bootstrap
-
-COPY --chown=node:node . /home/node
-
+ENV NODE_ENV=production
 RUN yarn build
 
-CMD ["yarn", "start"]
+
+# ---- runtime ----
+FROM node:20-alpine AS runner
+WORKDIR /app
+
+ENV NODE_ENV=production
+ENV PORT=8080
+ENV HOSTNAME=0.0.0.0
+
+# Copy the minimal standalone output
+COPY --from=build /app/.next/standalone ./
+COPY --from=build /app/.next/static ./.next/static
+COPY --from=build /app/public ./public
+
+EXPOSE 8080
+CMD ["node", "server.js"]
