@@ -1,9 +1,8 @@
-# ---- deps ----
 FROM node:20-alpine AS deps
 WORKDIR /app
+COPY package.json ./
+RUN yarn install
 
-COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile
 
 
 # ---- build ----
