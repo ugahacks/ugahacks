@@ -11,7 +11,7 @@
   "dependencies": {
     "eslint-config-next": "12.1.7-canary.35",
     "next": "14.2.4",
-    "react": "^18",
+    "react": "^19",
     "react-dom": "^18"
   },
   "devDependencies": {
