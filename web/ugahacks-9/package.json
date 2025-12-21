@@ -13,7 +13,7 @@
     "@types/react": "18.2.17",
     "@types/react-dom": "18.2.7",
     "eslint-config-next": "12.1.7-canary.35",
-    "next": "13.4.12",
+    "next": "^16.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
