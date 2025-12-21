@@ -10,11 +10,11 @@
   },
   "dependencies": {
     "@types/node": "20.5.9",
-    "@types/react": "18.2.21",
+    "@types/react": "19.2.7",
     "@types/react-dom": "18.2.7",
     "eslint-config-next": "12.1.7-canary.35",
     "next": "13.4.19",
-    "react": "18.2.0",
+    "react": "19.2.3",
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
     "react-tsparticles": "^2.12.2",
