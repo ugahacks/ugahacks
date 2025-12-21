@@ -2616,7 +2616,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:17.0.15, @types/react@npm:^17, @types/react@npm:^17.0.11":
+"@types/react@npm:*, @types/react@npm:^17":
   version: 17.0.15
   resolution: "@types/react@npm:17.0.15"
   dependencies:
@@ -2627,44 +2627,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.2.17":
-  version: 18.2.17
-  resolution: "@types/react@npm:18.2.17"
+"@types/react@npm:19.2.7, @types/react@npm:^19, @types/react@npm:^19.2.7":
+  version: 19.2.7
+  resolution: "@types/react@npm:19.2.7"
   dependencies:
-    "@types/prop-types": "npm:*"
-    "@types/scheduler": "npm:*"
-    csstype: "npm:^3.0.2"
-  checksum: 10/13a74aebf0a7224ab3e1557aa6cfa5b93d6e11bb94f55d9ca88bd6873cd93e54c7cfcb3b495a777e987a7f8a59dc714860ae5cb5fd832ee8d9bde7e9a0b52b7e
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:18.2.21":
-  version: 18.2.21
-  resolution: "@types/react@npm:18.2.21"
-  dependencies:
-    "@types/prop-types": "npm:*"
-    "@types/scheduler": "npm:*"
-    csstype: "npm:^3.0.2"
-  checksum: 10/7b315e2b14da1cd895719ba957fd71a0a8a35300fd76689d0268ed9afd8065a56b4fdcd1306871e3e16706dd3ecd706a846af74caca8fcad88052469cf0d83a1
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:^18":
-  version: 18.3.11
-  resolution: "@types/react@npm:18.3.11"
-  dependencies:
-    "@types/prop-types": "npm:*"
-    csstype: "npm:^3.0.2"
-  checksum: 10/a36f0707fdfe9fe19cbe5892bcdab0f042ecadb501ea4e1c39519943f3e74cffbd31e892d3860f5c87cf33f5f223552b246a552bed0087b95954f2cb39d5cf65
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:^19.1.12":
-  version: 19.1.12
-  resolution: "@types/react@npm:19.1.12"
-  dependencies:
-    csstype: "npm:^3.0.2"
-  checksum: 10/c03d595b84faecb15079757555c96871e84ea6eef9a5eddb13ec1f648f718f9624bebc4199e86267edb825b23df97758324ea39ff840d9ad328386f96971f588
+    csstype: "npm:^3.2.2"
+  checksum: 10/dc0b756eee2c9782d282ae47eaa8d537b2a569eb889a6808c4b172d70fb690b2b1d8fe6239db451aa1c90d2a947cc21c9b537ce177ba9e6121468e403e4079c5
   languageName: node
   linkType: hard
 
@@ -4312,6 +4280,13 @@ __metadata:
   version: 3.1.3
   resolution: "csstype@npm:3.1.3"
   checksum: 10/f593cce41ff5ade23f44e77521e3a1bcc2c64107041e1bf6c3c32adc5187d0d60983292fda326154d20b01079e24931aa5b08e4467cc488b60bb1e7f6d478ade
+  languageName: node
+  linkType: hard
+
+"csstype@npm:^3.2.2":
+  version: 3.2.3
+  resolution: "csstype@npm:3.2.3"
+  checksum: 10/ad41baf7e2ffac65ab544d79107bf7cd1a4bb9bab9ac3302f59ab4ba655d5e30942a8ae46e10ba160c6f4ecea464cc95b975ca2fefbdeeacd6ac63f12f99fe1f
   languageName: node
   linkType: hard
 
@@ -7307,12 +7282,12 @@ __metadata:
   resolution: "makeathon-2@workspace:web/makeathon-2"
   dependencies:
     "@types/node": "npm:20.5.9"
-    "@types/react": "npm:18.2.21"
+    "@types/react": "npm:19.2.7"
     "@types/react-dom": "npm:18.2.7"
     eslint: "npm:^8.48.0"
     eslint-config-next: "npm:12.1.7-canary.35"
     next: "npm:13.4.19"
-    react: "npm:18.2.0"
+    react: "npm:19.2.3"
     react-dom: "npm:18.2.0"
     react-icons: "npm:^4.11.0"
     react-tsparticles: "npm:^2.12.2"
@@ -7327,13 +7302,13 @@ __metadata:
   resolution: "makeathon-3@workspace:web/makeathon-3"
   dependencies:
     "@types/node": "npm:^20"
-    "@types/react": "npm:^18"
+    "@types/react": "npm:^19"
     "@types/react-dom": "npm:^18"
     eslint: "npm:^8"
     eslint-config-next: "npm:12.1.7-canary.35"
     next: "npm:14.2.4"
     postcss: "npm:^8"
-    react: "npm:^18"
+    react: "npm:^19"
     react-dom: "npm:^18"
     tailwindcss: "npm:^3.4.1"
     typescript: "npm:^5"
@@ -7347,13 +7322,13 @@ __metadata:
     "@material-ui/core": "npm:^4.12.4"
     "@material-ui/icons": "npm:^4.11.2"
     "@types/node": "npm:^16.4.10"
-    "@types/react": "npm:17.0.15"
+    "@types/react": "npm:19.2.7"
     eslint: "npm:7.32.0"
     eslint-config-next: "npm:11.0.1"
     framer-motion: "npm:^4.1.17"
     lodash: "npm:^4.17.21"
     next: "npm:^11.1.2"
-    react: "npm:17.0.2"
+    react: "npm:19.2.3"
     react-alice-carousel: "npm:^2.5.1"
     react-device-detect: "npm:^1.17.0"
     react-dom: "npm:17.0.2"
@@ -7640,13 +7615,13 @@ __metadata:
   resolution: "myugahacks@workspace:web/myugahacks"
   dependencies:
     "@types/node": "npm:^15.12.4"
-    "@types/react": "npm:^17.0.11"
+    "@types/react": "npm:^19.2.7"
     "@types/react-dom": "npm:^17.0.8"
     eslint: "npm:7.32.0"
     eslint-config-next: "npm:11.0.1"
     next: "npm:^11.1.2"
     next-auth: "npm:^3.27.3"
-    react: "npm:^17.0.2"
+    react: "npm:^19.2.3"
     react-dom: "npm:^17.0.2"
     sqlite3: "npm:^5.0.2"
     typescript: "npm:4.3.5"
@@ -9256,29 +9231,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:17.0.2, react@npm:^17.0.2":
-  version: 17.0.2
-  resolution: "react@npm:17.0.2"
-  dependencies:
-    loose-envify: "npm:^1.1.0"
-    object-assign: "npm:^4.1.1"
-  checksum: 10/ece60c31c1d266d132783aaaffa185d2e4c9b4db144f853933ec690cee1e0600c8929a1dd0a9e79323eea8e2df636c9a06d40f6cfdc9f797f65225433e67f707
-  languageName: node
-  linkType: hard
-
-"react@npm:18.2.0, react@npm:^18":
-  version: 18.2.0
-  resolution: "react@npm:18.2.0"
-  dependencies:
-    loose-envify: "npm:^1.1.0"
-  checksum: 10/b9214a9bd79e99d08de55f8bef2b7fc8c39630be97c4e29d7be173d14a9a10670b5325e94485f74cd8bff4966ef3c78ee53c79a7b0b9b70cba20aa8973acc694
-  languageName: node
-  linkType: hard
-
-"react@npm:^19.1.0":
-  version: 19.1.1
-  resolution: "react@npm:19.1.1"
-  checksum: 10/9801530fdc939e1a7a499422e930515b2400809cb39c2872984e99f832d233f61659a693871183dac3155c2f9b2c9dcf4440a56bd18983277ae92860e38c3a61
+"react@npm:19.2.3, react@npm:^19, react@npm:^19.2.3":
+  version: 19.2.3
+  resolution: "react@npm:19.2.3"
+  checksum: 10/d16b7f35c0d35a56f63d9d1693819762e4abc479c57dd6310298920bed3820fcec7e17a99d44983416d8f5049143ea45b8005d3ab8324bae8973224400502b08
   languageName: node
   linkType: hard
 
@@ -11037,13 +10993,13 @@ __metadata:
     "@next/eslint-plugin-next": "npm:^15.3.3"
     "@tailwindcss/postcss": "npm:^4"
     "@types/node": "npm:^20"
-    "@types/react": "npm:^19.1.12"
+    "@types/react": "npm:^19.2.7"
     "@types/react-dom": "npm:^19.1.9"
     eslint: "npm:^9"
     eslint-config-next: "npm:15.3.3"
     eslint-plugin-react-hooks: "npm:^5.2.0"
     next: "npm:^15.3.3"
-    react: "npm:^19.1.0"
+    react: "npm:^19.2.3"
     react-dom: "npm:^19.1.0"
     react-icons: "npm:^5.5.0"
     tailwindcss: "npm:^4"
@@ -11058,13 +11014,13 @@ __metadata:
     "@material-ui/core": "npm:^4.12.3"
     "@material-ui/icons": "npm:^4.11.2"
     "@types/node": "npm:^16.4.10"
-    "@types/react": "npm:17.0.15"
+    "@types/react": "npm:19.2.7"
     eslint: "npm:7.32.0"
     eslint-config-next: "npm:11.0.1"
     framer-motion: "npm:^4.1.17"
     lodash: "npm:^4.17.21"
     next: "npm:^11.1.2"
-    react: "npm:17.0.2"
+    react: "npm:19.2.3"
     react-alice-carousel: "npm:^2.5.1"
     react-device-detect: "npm:^1.17.0"
     react-dom: "npm:17.0.2"
@@ -11078,12 +11034,12 @@ __metadata:
   dependencies:
     98.css: "npm:^0.1.17"
     "@types/node": "npm:^16.4.10"
-    "@types/react": "npm:17.0.15"
+    "@types/react": "npm:19.2.7"
     eslint: "npm:7.32.0"
     eslint-config-next: "npm:11.0.1"
     framer-motion: "npm:^6.2.6"
     next: "npm:^11.1.2"
-    react: "npm:17.0.2"
+    react: "npm:19.2.3"
     react-device-detect: "npm:^2.1.2"
     react-dom: "npm:17.0.2"
     react-draggable: "npm:^4.4.4"
@@ -11099,7 +11055,7 @@ __metadata:
     "@material-ui/core": "npm:^4.12.3"
     "@material-ui/icons": "npm:^4.11.2"
     "@types/node": "npm:^16.4.10"
-    "@types/react": "npm:17.0.15"
+    "@types/react": "npm:19.2.7"
     autoprefixer: "npm:^10.4.11"
     eslint: "npm:7.32.0"
     eslint-config-next: "npm:11.0.1"
@@ -11107,7 +11063,7 @@ __metadata:
     lodash: "npm:^4.17.21"
     next: "npm:^11.1.2"
     postcss: "npm:^8.4.16"
-    react: "npm:17.0.2"
+    react: "npm:19.2.3"
     react-alice-carousel: "npm:^2.5.1"
     react-device-detect: "npm:^1.17.0"
     react-dom: "npm:17.0.2"
@@ -11123,12 +11079,12 @@ __metadata:
   resolution: "ugahacks-9@workspace:web/ugahacks-9"
   dependencies:
     "@types/node": "npm:20.4.5"
-    "@types/react": "npm:18.2.17"
+    "@types/react": "npm:19.2.7"
     "@types/react-dom": "npm:18.2.7"
     eslint: "npm:^8.46.0"
     eslint-config-next: "npm:12.1.7-canary.35"
     next: "npm:^16.1.0"
-    react: "npm:18.2.0"
+    react: "npm:19.2.3"
     react-dom: "npm:18.2.0"
     react-icons: "npm:^4.11.0"
     typescript: "npm:5.1.6"
@@ -11140,11 +11096,11 @@ __metadata:
   resolution: "ugahacks-org@workspace:web/ugahacks-org"
   dependencies:
     "@types/node": "npm:^16.4.10"
-    "@types/react": "npm:17.0.15"
+    "@types/react": "npm:19.2.7"
     eslint: "npm:7.32.0"
     eslint-config-next: "npm:11.0.1"
     next: "npm:^11.1.2"
-    react: "npm:17.0.2"
+    react: "npm:19.2.3"
     react-dom: "npm:17.0.2"
     typescript: "npm:4.3.5"
   languageName: unknown
@@ -11155,13 +11111,13 @@ __metadata:
   resolution: "ugahacks-x@workspace:web/ugahacks-x"
   dependencies:
     "@types/node": "npm:^20"
-    "@types/react": "npm:^18"
+    "@types/react": "npm:^19"
     "@types/react-dom": "npm:^18"
     eslint: "npm:^8"
     eslint-config-next: "npm:12.1.7-canary.35"
     next: "npm:14.2.4"
     postcss: "npm:^8"
-    react: "npm:^18"
+    react: "npm:^19"
     react-dom: "npm:^18"
     tailwindcss: "npm:^3.4.1"
     typescript: "npm:^5"

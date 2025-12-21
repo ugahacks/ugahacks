@@ -11,12 +11,12 @@
   "dependencies": {
     "eslint-config-next": "12.1.7-canary.35",
     "next": "14.2.4",
-    "react": "^18",
+    "react": "^19",
     "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/react": "^19",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "postcss": "^8",
