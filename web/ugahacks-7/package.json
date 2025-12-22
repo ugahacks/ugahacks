@@ -11,7 +11,7 @@
   "dependencies": {
     "98.css": "^0.1.21",
     "@types/node": "^25.0.3",
-    "framer-motion": "^6.2.6",
+    "framer-motion": "^12.23.26",
     "next": "^16.1.0",
     "react": "19.2.3",
     "react-device-detect": "^2.1.2",
