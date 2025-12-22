@@ -17,8 +17,8 @@
   "devDependencies": {
     "@types/node": "^25",
     "@types/react": "^19",
-    "@types/react-dom": "^18",
-    "eslint": "^9",
+    "@types/react-dom": "^19",
+    "eslint": "^8",
     "postcss": "^8",
     "tailwindcss": "^4.1.18",
     "typescript": "^5"
