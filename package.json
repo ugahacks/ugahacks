@@ -12,15 +12,15 @@
   },
   "devDependencies": {
     "eslint": "8.49.0",
-    "husky": "^9.0.11",
-    "typescript": "^5.2.2"
+    "husky": "^9.1.7",
+    "typescript": "^5.9.3"
   },
   "depedencies": {},
   "packageManager": "yarn@4.3.0",
   "dependencies": {
     "@types/react-icons": "^3.0.0",
     "mini-css-extract-plugin": "1.0.0",
-    "next": "^14.2.15",
+    "next": "^16.1.0",
     "react-icons": "^4.11.0",
     "tailwindcss-animate": "^1.0.5"
   }
