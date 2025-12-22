@@ -16,8 +16,8 @@
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/react-dom": "^19",
     "@types/react": "^19",
-    "@types/react-dom": "^18",
     "eslint": "^8",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
