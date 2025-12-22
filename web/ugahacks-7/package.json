@@ -9,7 +9,7 @@
     "lint": "next lint || true"
   },
   "dependencies": {
-    "98.css": "^0.1.17",
+    "98.css": "^0.1.21",
     "@types/node": "^16.4.10",
     "framer-motion": "^6.2.6",
     "next": "^11.1.2",
