@@ -11,8 +11,8 @@
     "types": "tsc --noEmit"
   },
   "dependencies": {
-    "next": "^11.1.2",
-    "next-auth": "^3.27.3",
+    "next": "^16.1.0",
+    "next-auth": "^4.24.12",
     "react": "^19.2.3",
     "react-dom": "^17.0.2",
     "sqlite3": "^5.0.2"
@@ -20,9 +20,9 @@
   "devDependencies": {
     "@types/node": "^25.0.3",
     "@types/react": "^19.2.7",
-    "@types/react-dom": "^17.0.8",
+    "@types/react-dom": "^19.2.3",
     "eslint": "7.32.0",
     "eslint-config-next": "11.0.1",
-    "typescript": "4.3.5"
+    "typescript": "5.9.3"
   }
 }
