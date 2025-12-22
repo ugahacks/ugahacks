@@ -4,5 +4,6 @@
 
 ## Welcome
 
-This is repository hosts all code for all things UGAHacks. If you're viewing us right now, we're still in the process of converting our infrastructure.
+This is repository hosts most website related code for UGAHacks.
+For a deep dive into the repo, check out [DeepWiki](https://deepwiki.com/ugahacks/ugahacks)
 ![image](./docs/diagram.drawio.svg)
