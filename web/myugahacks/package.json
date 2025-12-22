@@ -13,13 +13,13 @@
   "dependencies": {
     "next": "^11.1.2",
     "next-auth": "^3.27.3",
-    "react": "^17.0.2",
+    "react": "^19.2.3",
     "react-dom": "^17.0.2",
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {
     "@types/node": "^15.12.4",
-    "@types/react": "^17.0.11",
+    "@types/react": "^19.2.7",
     "@types/react-dom": "^17.0.8",
     "eslint": "7.32.0",
     "eslint-config-next": "11.0.1",
