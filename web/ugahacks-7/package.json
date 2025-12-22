@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "98.css": "^0.1.21",
-    "@types/node": "^16.4.10",
+    "@types/node": "^25.0.3",
     "framer-motion": "^6.2.6",
     "next": "^11.1.2",
     "react": "19.2.3",
