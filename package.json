@@ -1,20 +1,27 @@
 {
   "name": "ugahacks",
+  "private": true,
   "version": "1.0.0",
+  "repository": "",
+  "license": "MIT",
   "workspaces": [
     "web/*"
   ],
-  "resolutions": {
-    "@types/react": "^19.1.12",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "eslint": "^9"
+  "scripts": {
+    "husky-init": "husky install"
   },
-  "peerDependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "tailwindcss": "^4",
-    "webpack": "^5"
+  "devDependencies": {
+    "eslint": "8.49.0",
+    "husky": "^9.0.11",
+    "typescript": "^5.2.2"
   },
-  "packageManager": "yarn@4.3.0"
+  "depedencies": {},
+  "packageManager": "yarn@4.3.0",
+  "dependencies": {
+    "@types/react-icons": "^3.0.0",
+    "mini-css-extract-plugin": "1.0.0",
+    "next": "^14.2.15",
+    "react-icons": "^4.11.0",
+    "tailwindcss-animate": "^1.0.5"
+  }
 }
