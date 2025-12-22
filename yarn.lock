@@ -6702,7 +6702,7 @@ __metadata:
     react-tsparticles: "npm:^2.12.2"
     tsparticles: "npm:latest"
     tsparticles-engine: "npm:^2.12.0"
-    typescript: "npm:5.2.2"
+    typescript: "npm:5.9.3"
   languageName: unknown
   linkType: soft
 
@@ -6741,7 +6741,7 @@ __metadata:
     react-alice-carousel: "npm:^2.5.1"
     react-device-detect: "npm:^1.17.0"
     react-dom: "npm:17.0.2"
-    typescript: "npm:4.3.5"
+    typescript: "npm:5.9.3"
   languageName: unknown
   linkType: soft
 
@@ -6973,7 +6973,7 @@ __metadata:
     react: "npm:^19.2.3"
     react-dom: "npm:^17.0.2"
     sqlite3: "npm:^5.0.2"
-    typescript: "npm:4.3.5"
+    typescript: "npm:5.9.3"
   languageName: unknown
   linkType: soft
 
@@ -9309,42 +9309,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-eslint@npm:^8.46.0":
-  version: 8.50.0
-  resolution: "typescript-eslint@npm:8.50.0"
-  dependencies:
-    "@typescript-eslint/eslint-plugin": "npm:8.50.0"
-    "@typescript-eslint/parser": "npm:8.50.0"
-    "@typescript-eslint/typescript-estree": "npm:8.50.0"
-    "@typescript-eslint/utils": "npm:8.50.0"
-  peerDependencies:
-    eslint: ^8.57.0 || ^9.0.0
-    typescript: ">=4.8.4 <6.0.0"
-  checksum: 10/85708f0a930c8992e8f70e4e143aabf3a2b9bd981a323a7f6e7ea405f2456f6d1af182264f877ff1fa00db68768fe935f668f4346173a2fbd6d828d7113d8653
-  languageName: node
-  linkType: hard
-
-"typescript@npm:4.3.5":
-  version: 4.3.5
-  resolution: "typescript@npm:4.3.5"
+"typescript@npm:5.9.3, typescript@npm:^5.9.3":
+  version: 5.9.3
+  resolution: "typescript@npm:5.9.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10/59845af105af9f9be0ff029bcd5ba10df24025bb987f4d48be1c7c269c17a93f1d461a209815f669eda9ac4287d404c9453ed892198bcee7eac090501d9f4aae
+  checksum: 10/c089d9d3da2729fd4ac517f9b0e0485914c4b3c26f80dc0cffcb5de1719a17951e92425d55db59515c1a7ddab65808466debb864d0d56dcf43f27007d0709594
   languageName: node
   linkType: hard
 
-"typescript@npm:5.1.6":
-  version: 5.1.6
-  resolution: "typescript@npm:5.1.6"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 10/f347cde665cf43dc4c1c7d9821c7d9bbec3c3914f4bdd82ee490e9fb9f6d99036ed8666463b6a192dd005eeef333c5087d5931bdd51ec853436ff9a670a7417e
-  languageName: node
-  linkType: hard
-
-"typescript@npm:5.2.2, typescript@npm:^5, typescript@npm:^5.2.2":
+"typescript@npm:^5":
   version: 5.2.2
   resolution: "typescript@npm:5.2.2"
   bin:
@@ -9354,53 +9329,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.9.2":
-  version: 5.9.2
-  resolution: "typescript@npm:5.9.2"
+"typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.9.3#optional!builtin<compat/typescript>":
+  version: 5.9.3
+  resolution: "typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=b45daf"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10/cc2fe6c822819de5d453fa25aa9f32096bf70dde215d481faa1ad84a283dfb264e33988ed8f6d36bc803dd0b16dbe943efa311a798ef76d5b3892a05dfbfd628
+  checksum: 10/5d416ad4f2ea564f515a3f919e901edbfa4b497cc17dd325c5726046c3eef7ed22d1f59c787267d478311f6f0a265ff790f8a6c7e9df3ea3471458f5ec81e8b7
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A4.3.5#optional!builtin<compat/typescript>":
-  version: 4.3.5
-  resolution: "typescript@patch:typescript@npm%3A4.3.5#optional!builtin<compat/typescript>::version=4.3.5&hash=dba6d9"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 10/100e3f4aff0090089f657ee730f059e0fc4de7637ef6574b2fe8632218f1c5882dd5fbfd0cbde3c7fc4fa501955bc93841f540bb6cbb678f655a0f7880cb7881
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>":
-  version: 5.1.6
-  resolution: "typescript@patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 10/f5481fa3ba0eee8970f46708d13c05650a865ad093b586fc9573f425c64c57ca97e3308e110bb528deb3ccebe83f6fd7b5a8ac90018038da96326a9ccdf8e77c
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.2.2#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A^5#optional!builtin<compat/typescript>":
   version: 5.2.2
   resolution: "typescript@patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 10/f79cc2ba802c94c2b78dbb00d767a10adb67368ae764709737dc277273ec148aa4558033a03ce901406b35fddf4eac46dabc94a1e1d12d2587e2b9cfe5707b4a
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@npm%3A^5.9.2#optional!builtin<compat/typescript>":
-  version: 5.9.2
-  resolution: "typescript@patch:typescript@npm%3A5.9.2#optional!builtin<compat/typescript>::version=5.9.2&hash=b45daf"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 10/a8606016982f2f46ed085e9b4b84d8a5251b42ff0560c995c20f3c3ab9543e37c1015d92ab2f1cc7b2af2b499d12bac57e11789da271fb3225af8ec0b24e5b64
   languageName: node
   linkType: hard
 
@@ -9440,7 +9385,7 @@ __metadata:
     react-dom: "npm:^19.1.0"
     react-icons: "npm:^5.5.0"
     tailwindcss: "npm:^4"
-    typescript: "npm:^5.9.2"
+    typescript: "npm:^5.9.3"
   languageName: unknown
   linkType: soft
 
@@ -9461,7 +9406,7 @@ __metadata:
     react-alice-carousel: "npm:^2.5.1"
     react-device-detect: "npm:^1.17.0"
     react-dom: "npm:17.0.2"
-    typescript: "npm:4.3.5"
+    typescript: "npm:5.9.3"
   languageName: unknown
   linkType: soft
 
@@ -9481,7 +9426,7 @@ __metadata:
     react-dom: "npm:17.0.2"
     react-draggable: "npm:^4.4.4"
     react-scroll: "npm:^1.8.4"
-    typescript: "npm:4.3.5"
+    typescript: "npm:5.9.3"
   languageName: unknown
   linkType: soft
 
@@ -9507,7 +9452,7 @@ __metadata:
     react-icons: "npm:^4.4.0"
     tailwindcss: "npm:^3.1.8"
     tailwindcss-animate: "npm:^1.0.5"
-    typescript: "npm:4.3.5"
+    typescript: "npm:5.9.3"
   languageName: unknown
   linkType: soft
 
@@ -9524,7 +9469,7 @@ __metadata:
     react: "npm:19.2.3"
     react-dom: "npm:18.2.0"
     react-icons: "npm:^4.11.0"
-    typescript: "npm:5.1.6"
+    typescript: "npm:5.9.3"
   languageName: unknown
   linkType: soft
 
@@ -9539,7 +9484,7 @@ __metadata:
     next: "npm:^16.1.0"
     react: "npm:19.2.3"
     react-dom: "npm:17.0.2"
-    typescript: "npm:4.3.5"
+    typescript: "npm:5.9.3"
   languageName: unknown
   linkType: soft
 
@@ -9572,7 +9517,7 @@ __metadata:
     next: "npm:^16.1.0"
     react-icons: "npm:^4.11.0"
     tailwindcss-animate: "npm:^1.0.5"
-    typescript: "npm:^5.2.2"
+    typescript: "npm:^5.9.3"
   languageName: unknown
   linkType: soft
 
