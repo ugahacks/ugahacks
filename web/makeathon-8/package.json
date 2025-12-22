@@ -12,7 +12,7 @@
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.2",
     "@types/node": "^25.0.3",
-    "framer-motion": "^4.1.17",
+    "framer-motion": "^12.23.26",
     "lodash": "^4.17.21",
     "next": "^16.1.0",
     "react": "19.2.3",
