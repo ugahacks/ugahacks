@@ -22,7 +22,7 @@
     "@eslint/eslintrc": "^3",
     "@next/eslint-plugin-next": "^16.1.0",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^25",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.1.9",
     "eslint": "^9",

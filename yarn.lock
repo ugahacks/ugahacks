@@ -2612,40 +2612,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^16.4.10":
+"@types/node@npm:*":
   version: 16.18.58
   resolution: "@types/node@npm:16.18.58"
   checksum: 10/57c5618eb3c8ac0e14adf665811980f4780d2b7bed6f830438d199147279949e1395fd9019b77346935257a9700c2afff60d357f67d373a4f8dcff4319d769ab
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.4.5":
-  version: 20.4.5
-  resolution: "@types/node@npm:20.4.5"
-  checksum: 10/aa31081f82a2d377f00cfd7ced73925753db1f542fca19e6b0442585a7322b8eacd957fdccaaff65d9976454d213af0980c12390c59a975cf8a368e3f872717a
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:20.5.9":
-  version: 20.5.9
-  resolution: "@types/node@npm:20.5.9"
-  checksum: 10/bb3bf17d7583cfe6b0fca796d20e6b70513fedbe5ed7801789ab39d3f75f8783900595471cedc26eb8989cb54a8026506004764ed2c180f77ecac84c60e0075f
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^15.12.4":
-  version: 15.14.9
-  resolution: "@types/node@npm:15.14.9"
-  checksum: 10/5c9cc5346ca0c565e02f11ae605911aa0892134099a5c730f49b4662635e5fbbbbeb24b2b56752ee14f092d1ca90837a35de428b9e243d7ab63c5907bfb07d89
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^20":
-  version: 20.16.13
-  resolution: "@types/node@npm:20.16.13"
+"@types/node@npm:25.0.3, @types/node@npm:^25, @types/node@npm:^25.0.3":
+  version: 25.0.3
+  resolution: "@types/node@npm:25.0.3"
   dependencies:
-    undici-types: "npm:~6.19.2"
-  checksum: 10/6e7b82119372cc12d28fcc1b0c10d1b8fa560bbb500f87a4c68bc446a0986d42c92e0f583040167841a0c598131979c3399b17c736c9fb8ba4f0dcf2b2048a84
+    undici-types: "npm:~7.16.0"
+  checksum: 10/5889b00f398eff4d4af28c3e5e97976f65c39a63fa3d7011f35cbf8640675fa6835e5dd47dce94d6ba48667711ddcd1f5c9bc5d93233e6a8e9ea1e502e8aa5a4
   languageName: node
   linkType: hard
 
@@ -7441,7 +7420,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "makeathon-2@workspace:web/makeathon-2"
   dependencies:
-    "@types/node": "npm:20.5.9"
+    "@types/node": "npm:25.0.3"
     "@types/react": "npm:19.2.7"
     "@types/react-dom": "npm:18.2.7"
     eslint: "npm:^8.48.0"
@@ -7461,7 +7440,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "makeathon-3@workspace:web/makeathon-3"
   dependencies:
-    "@types/node": "npm:^20"
+    "@types/node": "npm:^25"
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^18"
     eslint: "npm:^8"
@@ -7481,13 +7460,13 @@ __metadata:
   dependencies:
     "@material-ui/core": "npm:^4.12.4"
     "@material-ui/icons": "npm:^4.11.2"
-    "@types/node": "npm:^16.4.10"
+    "@types/node": "npm:^25.0.3"
     "@types/react": "npm:19.2.7"
     eslint: "npm:7.32.0"
     eslint-config-next: "npm:11.0.1"
     framer-motion: "npm:^4.1.17"
     lodash: "npm:^4.17.21"
-    next: "npm:^11.1.2"
+    next: "npm:^16.1.0"
     react: "npm:19.2.3"
     react-alice-carousel: "npm:^2.5.1"
     react-device-detect: "npm:^1.17.0"
@@ -7765,7 +7744,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "myugahacks@workspace:web/myugahacks"
   dependencies:
-    "@types/node": "npm:^15.12.4"
+    "@types/node": "npm:^25.0.3"
     "@types/react": "npm:^19.2.7"
     "@types/react-dom": "npm:^17.0.8"
     eslint: "npm:7.32.0"
@@ -11136,7 +11115,7 @@ __metadata:
     "@mui/material": "npm:^7.3.2"
     "@next/eslint-plugin-next": "npm:^16.1.0"
     "@tailwindcss/postcss": "npm:^4"
-    "@types/node": "npm:^20"
+    "@types/node": "npm:^25"
     "@types/react": "npm:^19.2.7"
     "@types/react-dom": "npm:^19.1.9"
     eslint: "npm:^9"
@@ -11157,7 +11136,7 @@ __metadata:
   dependencies:
     "@material-ui/core": "npm:^4.12.3"
     "@material-ui/icons": "npm:^4.11.2"
-    "@types/node": "npm:^16.4.10"
+    "@types/node": "npm:^25.0.3"
     "@types/react": "npm:19.2.7"
     eslint: "npm:9.39.2"
     eslint-config-next: "npm:11.0.1"
@@ -11177,7 +11156,7 @@ __metadata:
   resolution: "ugahacks-7@workspace:web/ugahacks-7"
   dependencies:
     98.css: "npm:^0.1.21"
-    "@types/node": "npm:^16.4.10"
+    "@types/node": "npm:^25.0.3"
     "@types/react": "npm:19.2.7"
     eslint: "npm:7.32.0"
     eslint-config-next: "npm:11.0.1"
@@ -11198,7 +11177,7 @@ __metadata:
   dependencies:
     "@material-ui/core": "npm:^4.12.3"
     "@material-ui/icons": "npm:^4.11.2"
-    "@types/node": "npm:^16.4.10"
+    "@types/node": "npm:^25.0.3"
     "@types/react": "npm:19.2.7"
     autoprefixer: "npm:^10.4.11"
     eslint: "npm:7.32.0"
@@ -11222,7 +11201,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ugahacks-9@workspace:web/ugahacks-9"
   dependencies:
-    "@types/node": "npm:20.4.5"
+    "@types/node": "npm:25.0.3"
     "@types/react": "npm:19.2.7"
     "@types/react-dom": "npm:18.2.7"
     eslint: "npm:^8.46.0"
@@ -11239,7 +11218,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ugahacks-org@workspace:web/ugahacks-org"
   dependencies:
-    "@types/node": "npm:^16.4.10"
+    "@types/node": "npm:^25.0.3"
     "@types/react": "npm:19.2.7"
     eslint: "npm:7.32.0"
     eslint-config-next: "npm:11.0.1"
@@ -11254,7 +11233,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ugahacks-x@workspace:web/ugahacks-x"
   dependencies:
-    "@types/node": "npm:^20"
+    "@types/node": "npm:^25"
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^19"
     eslint: "npm:^8"
@@ -11295,10 +11274,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~6.19.2":
-  version: 6.19.8
-  resolution: "undici-types@npm:6.19.8"
-  checksum: 10/cf0b48ed4fc99baf56584afa91aaffa5010c268b8842f62e02f752df209e3dea138b372a60a963b3b2576ed932f32329ce7ddb9cb5f27a6c83040d8cd74b7a70
+"undici-types@npm:~7.16.0":
+  version: 7.16.0
+  resolution: "undici-types@npm:7.16.0"
+  checksum: 10/db43439f69c2d94cc29f75cbfe9de86df87061d6b0c577ebe9bb3255f49b22c50162a7d7eb413b0458b6510b8ca299ac7cff38c3a29fbd31af9f504bcf7fbc0d
   languageName: node
   linkType: hard
 
