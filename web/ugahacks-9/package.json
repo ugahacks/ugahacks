@@ -20,6 +20,6 @@
     "typescript": "5.9.3"
   },
   "devDependencies": {
-    "eslint": "^8.46.0"
+    "eslint": "^9.39.2"
   }
 }
