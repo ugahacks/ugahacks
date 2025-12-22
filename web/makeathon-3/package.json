@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "eslint-config-next": "12.1.7-canary.35",
-    "next": "14.2.4",
+    "next": "16.1.0",
     "react": "^19",
     "react-dom": "^18"
   },
@@ -18,7 +18,7 @@
     "@types/node": "^25",
     "@types/react": "^19",
     "@types/react-dom": "^18",
-    "eslint": "^8",
+    "eslint": "^9",
     "postcss": "^8",
     "tailwindcss": "^4.1.18",
     "typescript": "^5"
