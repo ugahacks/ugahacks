@@ -1,6 +1,6 @@
+import { Facebook, Github, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import About from "./components/About/About";
 import FAQ from "./components/FAQ/Faq";
 import Hero from "./components/Hero";
@@ -80,22 +80,22 @@ export default function Home() {
             <div className="flex justify-center space-x-6 py-2">
               {/* Facebook */}
               <a href="https://facebook.com/UGAHacks" target="_blank" rel="noopener noreferrer">
-                <FaFacebook className="h-8 w-8 hover:opacity-80 transition" />
+                <Facebook className="h-8 w-8 hover:opacity-80 transition" />
               </a>
 
               {/* Instagram */}
               <a href="https://instagram.com/UGAHacks" target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="h-8 w-8 hover:opacity-80 transition" />
+                <Instagram className="h-8 w-8 hover:opacity-80 transition" />
               </a>
 
               {/* GitHub */}
               <a href="https://github.com/UGAHacks" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="h-8 w-8 hover:opacity-80 transition" />
+                <Github className="h-8 w-8 hover:opacity-80 transition" />
               </a>
 
               {/* LinkedIn */}
               <a href="https://linkedin.com/company/ugahacks" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="h-8 w-8 hover:opacity-80 transition" />
+                <Linkedin className="h-8 w-8 hover:opacity-80 transition" />
               </a>
             </div>
           </div>
