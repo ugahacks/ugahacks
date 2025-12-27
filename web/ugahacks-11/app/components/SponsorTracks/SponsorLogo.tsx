@@ -3,7 +3,7 @@ import React from "react";
 interface SponsorLogoProps {
   imagePath: string;
   alt?: string;
-  size?: number; // Optional: allows resizing the whole asset
+  size?: number;
 }
 
 const SponsorLogo: React.FC<SponsorLogoProps> = ({
@@ -13,7 +13,7 @@ const SponsorLogo: React.FC<SponsorLogoProps> = ({
 }) => {
   return (
     <div
-      className="relative flex items-center justify-center overflow-visible bg-center bg-cover"
+      className="relative flex items-center justify-center bg-center bg-cover"
       style={{
         width: size,
         height: size,
@@ -30,9 +30,11 @@ const SponsorLogo: React.FC<SponsorLogoProps> = ({
         <Image
           src={imagePath}
           alt={alt}
-          className="rounded-full bg-white object-contain w-full h-full p-2"
-          width={80}
-          height={80}
+          width={size * 0.6}
+          height={size * 0.6}
+          className="w-full h-full rounded-full object-contain p-2"
+          loading="lazy"
+          decoding="async"
         />
       </div>
     </div>
