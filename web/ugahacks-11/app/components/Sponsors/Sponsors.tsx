@@ -13,11 +13,11 @@ export default function Sponsors() {
           Sponsors
         </h2>
         <div className="w-full max-w-4xl grid grid-cols-3 gap-2 md:gap-6">
-          <SponsorCard imageUrl="/ncrvoyixlogo.png" href="https://www.ncrvoyix.com/" />
-          <SponsorCard imageUrl="/statefarm.png" href="https://www.statefarm.com/" />
-          <SponsorCard imageUrl="/githubsponsor.png" href="https://github.com/" />
-          <SponsorCard imageUrl="/tractian.png" href="https://tractian.com/en" />
           <SponsorCard imageUrl="/cox.png" href="https://cox.com" />
+          <SponsorCard imageUrl="/statefarm.png" href="https://www.statefarm.com/" />
+          <SponsorCard imageUrl="/ncrvoyixlogo.png" href="https://www.ncrvoyix.com/" />
+          <SponsorCard imageUrl="/tractian.png" href="https://tractian.com/en" />
+          <SponsorCard imageUrl="/githubsponsor.png" href="https://github.com/" />
           <SponsorCard imageUrl="/ugaresearch.png" href="https://research.uga.edu" />
         </div>
         <Link
