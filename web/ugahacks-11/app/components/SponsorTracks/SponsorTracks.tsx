@@ -5,10 +5,10 @@ import SponsorTrackCard from "./SponsorTrackCard";
 // Array of track data for dynamic rendering
 const sponsorTracks = [
   {
-    logo: "/generic_byte.png",
-    title: "Sponsorship Track #1",
+    logo: "/ncrvoyixlogo.png",
+    title: "Inventory Health Monitor",
     description:
-      "???",
+      "\n\nCreate a simple dashboard predicting stockouts and suggesting reorder timing for large scale restaurants.",
   },
   {
     logo: "/generic_byte.png",
@@ -41,9 +41,11 @@ const SponsorTracks: React.FC = () => {
       />
       {/* Desktop background - normal */}
       <div
-        className="absolute inset-0 bg-no-repeat bg-cover bg-center hidden md:block"
+        className="absolute inset-0 bg-no-repeat hidden md:block"
         style={{
-          backgroundImage: 'url("/SponsorT.png")',
+          backgroundImage: 'url("/Sponsorback.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
       />
 

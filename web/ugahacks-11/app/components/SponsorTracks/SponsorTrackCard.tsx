@@ -17,7 +17,7 @@ const SponsorTrackCard: React.FC<SponsorTrackCardProps> = ({
       <div className="relative mb-4">
         <SponsorLogo imagePath={logo} size={375} />
         {/* Track Title */}
-        <h3 className="text-3xl font-semibold mt-4 text-black font-amarante">
+        <h3 className="text-2xl font-semibold mt-4 text-black font-amarante">
           {title}
         </h3>
         <SponsorTrackDescription text={description} />
