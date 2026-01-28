@@ -19,6 +19,8 @@ export default function Sponsors() {
           <SponsorCard imageUrl="/tractian.png" href="https://tractian.com/en" />
           <SponsorCard imageUrl="/githubsponsor.png" href="https://github.com/" />
           <SponsorCard imageUrl="/ugaresearch.png" href="https://research.uga.edu" />
+          <SponsorCard imageUrl="/whiteKTPpfp.jpg" href="https://KTPGeorgia.com" />
+          <SponsorCard imageUrl="/pure.png" href="https://purebuttons.com" />
         </div>
         <Link
           href="https://drive.google.com/file/d/1Z2wJ8JBNY99TbEUve9kWX_e6I-flhKX4/view?usp=sharing">
