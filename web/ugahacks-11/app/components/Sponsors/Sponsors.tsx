@@ -23,7 +23,7 @@ export default function Sponsors() {
           <SponsorCard imageUrl="/cocacola.png" href="https://www.coca-cola.com/us/en" />
           <SponsorCard imageUrl="/pure.png" href="https://purebuttons.com" />
         </div>
-        <p className="text-white px-1 my-4 mx-auto bg-[#4A4A85]">This event is supported in part by the President's Venture Fund through the generous gifts of University of Georgia donors.</p>
+        <p className="text-white px-1 my-4 mx-auto bg-[#4A4A85]">This event is supported in part by the President&apos;s Venture Fund through the generous gifts of University of Georgia donors.</p>
         <Link
           href="https://drive.google.com/file/d/1Z2wJ8JBNY99TbEUve9kWX_e6I-flhKX4/view?usp=sharing">
 
