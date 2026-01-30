@@ -2,9 +2,15 @@
 
 import Image from "next/image";
 import React from "react";
-import { schedule, DaySchedule, Event } from "./scheduleData";
+import { DaySchedule, Event, schedule } from "./scheduleData";
 
 const Schedule: React.FC = () => {
+  const icsPath = "/UGAHacks_2026_Schedule.ics";
+  const icsUrl = "https://11.ugahacks.com" + icsPath;
+
+  const gcalUrl =
+    "https://calendar.google.com/calendar/u/0/r?cid=" +
+    encodeURIComponent(icsUrl);
   return (
     <section
       id="schedule"
@@ -33,24 +39,41 @@ const Schedule: React.FC = () => {
       </div>
 
       {/* Schedule Header Image */}
-      <Image
-        src="/Textschedule.png"
-        alt="Schedule"
-        width={800}
-        height={200}
-        className="object-contain mb-8 w-72 sm:w-80 md:w-96 h-20 sm:h-24 md:h-24"
-      />
+      {/* Schedule Header + Calendar Buttons */}
+      <div className="w-full max-w-5xl flex flex-col sm:flex-row items-center justify-between mb-8 px-4 sm:px-6 md:px-8 gap-4">
+        {/* Schedule Header Image */}
+        <Image
+          src="/Textschedule.png"
+          alt="Schedule"
+          width={800}
+          height={200}
+          className="object-contain w-72 sm:w-80 md:w-96 h-20 sm:h-24 md:h-24"
+        />
+
+        {/* Calendar Buttons */}
+        <div className="flex flex-col sm:flex-row gap-3">
+          <a href={gcalUrl} target="_blank" className="rounded-xl px-4 py-2 text-sm font-semibold text-white bg-[#152673] hover:opacity-90 transition shadow-md" rel="noopener noreferrer">Add to Google Calendar</a>
+
+          <a
+            href="/UGAHacks_2026_Schedule.ics"
+            download
+            className="rounded-xl px-4 py-2 text-sm font-semibold text-[#152673] border-2 border-[#152673] hover:bg-[#152673] hover:text-white transition shadow-md"
+          >
+            Download .ics
+          </a>
+        </div>
+      </div>
+
 
       {/* Schedule content */}
       <div className="schedule-container w-full max-w-5xl px-4 sm:px-6 md:px-8">
         {schedule.map((day: DaySchedule, index: number) => (
           <div
             key={index}
-            className={`day-card mb-10 ${
-              day.day === "Saturday"
-                ? "max-h-[600px] overflow-y-auto pr-2 sm:pr-4 md:pr-4"
-                : ""
-            }`}
+            className={`day-card mb-10 ${day.day === "Saturday"
+              ? "max-h-[600px] overflow-y-auto pr-2 sm:pr-4 md:pr-4"
+              : ""
+              }`}
           >
             {/* Day header */}
             <h2 className="mb-6 text-center text-2xl sm:text-3xl font-bold text-[#3E4C88]">

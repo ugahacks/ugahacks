@@ -20,13 +20,15 @@ export default function Sponsors() {
           <SponsorCard imageUrl="/githubsponsor.png" href="https://github.com/" />
           <SponsorCard imageUrl="/ugaresearch.png" href="https://research.uga.edu" />
           <SponsorCard imageUrl="/whiteKTPpfp.jpg" href="https://KTPGeorgia.com" />
+          <SponsorCard imageUrl="/cocacola.png" href="https://www.coca-cola.com/us/en" />
           <SponsorCard imageUrl="/pure.png" href="https://purebuttons.com" />
         </div>
+        <p className="text-white px-1 my-4 mx-auto bg-[#4A4A85]">This event is supported in part by the President's Venture Fund through the generous gifts of University of Georgia donors.</p>
         <Link
           href="https://drive.google.com/file/d/1Z2wJ8JBNY99TbEUve9kWX_e6I-flhKX4/view?usp=sharing">
 
           <button
-            className="mt-6 md:mt-12 px-6 md:px-12 py-1.5 md:py-3 bg-[#E8DCC8] text-[#4A5C8C] font-encode-sans text-sm md:text-lg rounded-full hover:scale-105 transition-transform duration-200"
+            className="mt-4 md:mt-3 px-6 md:px-12 py-1.5 md:py-3 bg-[#E8DCC8] text-[#4A5C8C] font-encode-sans text-sm md:text-lg rounded-full hover:scale-105 transition-transform duration-200"
           >
             Sponsorship Packet
           </button>

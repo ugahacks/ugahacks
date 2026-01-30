@@ -13,28 +13,28 @@ export default function OurTeam() {
             <div className="pointer-events-none absolute bottom-0 left-0 translate-y-6 -translate-x-2 md:translate-y-8 md:-translate-x-3 z-10">
               <Image
                 src="/Star 55.png"
-                alt=""
+                alt="background prop"
                 width={55}
                 height={55}
-
                 className="drop-shadow-sm scale-90 md:scale-100"
                 priority
+                style={{ width: "auto", height: "auto" }}
                 draggable={false}
               />
               <div className="-translate-y-3 translate-x-3 md:-translate-y-4 md:translate-x-4">
                 <Image
                   src="/Star 56.png"
-                  alt=""
+                  alt="background prop"
                   width={22}
-                  height={22}
+                  style={{ width: "auto", height: "auto" }}
 
+                  height={22}
                   className="opacity-95"
                   priority
                   draggable={false}
                 />
               </div>
             </div>
-
             {/* Book */}
             <div className="relative">
               <Image
@@ -42,6 +42,8 @@ export default function OurTeam() {
                 alt="Our Team book"
                 width={540}
                 height={680}
+                style={{ width: "auto", height: "auto" }}
+
                 className="
       relative z-[1] 
       w-full h-auto
@@ -62,6 +64,7 @@ export default function OurTeam() {
                 alt=""
                 width={55}
                 height={55}
+                style={{ width: "auto", height: "auto" }}
 
                 className="drop-shadow-sm scale-90 md:scale-100"
                 priority
@@ -73,7 +76,7 @@ export default function OurTeam() {
                   alt=""
                   width={24}
                   height={24}
-
+                  style={{ width: "auto", height: "auto" }}
                   className="opacity-95"
                   priority
                   draggable={false}
@@ -91,6 +94,8 @@ export default function OurTeam() {
                   src="/TeamImg_PNG.png"
                   alt="Our Team Book"
                   width={520}
+                  style={{ width: "auto", height: "auto" }}
+
                   height={360}
                   quality={100}
                   className="w-full h-auto object-cover z-[100]"

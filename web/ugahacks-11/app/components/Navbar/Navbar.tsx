@@ -147,11 +147,11 @@ const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden sticky top-20 z-40">
           {/* Menu Content */}
-          <div 
+          <div
             className="text-white"
             style={{ background: "#4a4a85" }}
           >
-            
+
 
             {/* Navigation Links */}
             <nav className="flex flex-col px-4 py-1 space-y-2 text-sm font-bold uppercase tracking-wider">
@@ -245,7 +245,7 @@ const Navbar: React.FC = () => {
                 className="hover:scale-110 transition-transform duration-300"
               >
                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
               </a>
             </div>
@@ -272,9 +272,10 @@ const Navbar: React.FC = () => {
         <Image
           src="/mlh-trust-badge-2026-white.svg"
           alt="Major League Hacking 2026 Hackathon Season"
+          style={{ width: "auto", height: "auto" }}
           width={100}
           height={100}
-          style={{ width: "100%" }}
+
         />
       </a>
     </>

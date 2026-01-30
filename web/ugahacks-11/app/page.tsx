@@ -63,6 +63,7 @@ export default function Home() {
               unoptimized  // disables Next.js transformations (acts like <img>)
               className="w-[100%] max-w-[1400px] md:w-[115%] h-auto block translate-y-3"
               priority // optional: preload like <img>
+
             />
           </div>
         </div>
