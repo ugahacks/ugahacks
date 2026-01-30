@@ -5,12 +5,6 @@ import React from "react";
 import { DaySchedule, Event, schedule } from "./scheduleData";
 
 const Schedule: React.FC = () => {
-  const icsPath = "/UGAHacks_2026_Schedule.ics";
-  const icsUrl = "https://11.ugahacks.com" + icsPath;
-
-  const gcalUrl =
-    "https://calendar.google.com/calendar/u/0/r?cid=" +
-    encodeURIComponent(icsUrl);
   return (
     <section
       id="schedule"
@@ -40,29 +34,35 @@ const Schedule: React.FC = () => {
 
       {/* Schedule Header Image */}
       {/* Schedule Header + Calendar Buttons */}
-      <div className="w-full max-w-5xl flex flex-col sm:flex-row items-center justify-between mb-8 px-4 sm:px-6 md:px-8 gap-4">
-        {/* Schedule Header Image */}
-        <Image
-          src="/Textschedule.png"
-          alt="Schedule"
-          width={800}
-          height={200}
-          className="object-contain w-72 sm:w-80 md:w-96 h-20 sm:h-24 md:h-24"
-        />
+      <div className="w-full max-w-5xl mb-8 px-4 sm:px-6 md:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 items-center gap-4">
+          {/* Left spacer (only needed on larger screens) */}
+          <div className="hidden sm:block" />
 
-        {/* Calendar Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3">
-          <a href={gcalUrl} target="_blank" className="rounded-xl px-4 py-2 text-sm font-semibold text-white bg-[#152673] hover:opacity-90 transition shadow-md" rel="noopener noreferrer">Add to Google Calendar</a>
+          {/* Centered title image */}
+          <div className="flex justify-center">
+            <Image
+              src="/Textschedule.png"
+              alt="Schedule"
+              width={800}
+              height={200}
+              className="object-contain w-72 sm:w-80 md:w-96 h-20 sm:h-24 md:h-24"
+            />
+          </div>
 
-          <a
-            href="/UGAHacks_2026_Schedule.ics"
-            download
-            className="rounded-xl px-4 py-2 text-sm font-semibold text-[#152673] border-2 border-[#152673] hover:bg-[#152673] hover:text-white transition shadow-md"
-          >
-            Download .ics
-          </a>
+          {/* Right-aligned button */}
+          <div className="flex justify-center sm:justify-end">
+            <a
+              href="/UGAHacks_2026_Schedule.ics"
+              download
+              className="rounded-xl px-4 py-2 text-sm font-semibold text-[#152673] border-2 border-[#152673] hover:bg-[#152673] hover:text-white transition shadow-md"
+            >
+              Download .ics
+            </a>
+          </div>
         </div>
       </div>
+
 
 
       {/* Schedule content */}
