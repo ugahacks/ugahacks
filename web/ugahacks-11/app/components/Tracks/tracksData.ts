@@ -1,4 +1,3 @@
-
 interface TrackData {
   cornerCharacter: string;
   shape: "spade" | "heart" | "diamond" | "club";
@@ -20,7 +19,8 @@ export const tracksData: TrackData[] = [
     shapeColor: "#3e4c8a",
     backSide: {
       backgroundColor: "#7a562b",
-      description: "This track is for teams consisting of primarily first-time hackers, offering a chance for them to learn, collaborate, and build their very first hackathon project.",
+      description:
+        "This track is for teams consisting of primarily first-time hackers, offering a chance for them to learn, collaborate, and build their very first hackathon project.",
     },
   },
   {
@@ -31,7 +31,8 @@ export const tracksData: TrackData[] = [
     shapeColor: "#66a865",
     backSide: {
       backgroundColor: "#9b6798",
-      description: "This track is centered on creating video games or game-related software, which could include anything from a 2D platformer to a complex game engine.",
+      description:
+        "This track is centered on creating video games or game-related software, which could include anything from a 2D platformer to a complex game engine.",
     },
   },
   {
@@ -42,18 +43,20 @@ export const tracksData: TrackData[] = [
     shapeColor: "#93642d",
     backSide: {
       backgroundColor: "#7b9a7b",
-      description: "This track challenges participants to build a new AI model from scratch, focusing on the fundamental architecture and training process rather than using pre-existing frameworks.",
+      description:
+        "This track challenges participants to build a new AI model from scratch, focusing on the fundamental architecture and training process rather than using pre-existing frameworks.",
     },
   },
   {
     cornerCharacter: "4",
     shape: "club",
-    mainText: "General AI",
+    mainText: "General AI Sponsored by Traction",
     characterColor: "#9b6798",
     shapeColor: "#9b6798",
     backSide: {
       backgroundColor: "#3e4c8a",
-      description: "This track is for projects that use AI in any capacity, whether it's for a game, a website, or a standalone application. It's the perfect track to explore any kind of AI idea.",
+      description:
+        "This track is for projects that use AI in any capacity, whether it's for a game, a website, or a standalone application. It's the perfect track to explore any kind of AI idea.",
     },
   },
   {
@@ -64,7 +67,8 @@ export const tracksData: TrackData[] = [
     shapeColor: "#9b6798",
     backSide: {
       backgroundColor: "#7a562b",
-      description: "This track is for projects that involve physical components, such as building a new device, a robot, or other form of hardware."
+      description:
+        "This track is for projects that involve physical components, such as building a new device, a robot, or other form of hardware.",
     },
   },
   {
@@ -75,7 +79,8 @@ export const tracksData: TrackData[] = [
     shapeColor: "#93642d",
     backSide: {
       backgroundColor: "#9b6798",
-      description: "Award recognizing the exceptional skill and execution of a project developed by a single. There is 'i' in Team!",
+      description:
+        "Award recognizing the exceptional skill and execution of a project developed by a single. There is 'i' in Team!",
     },
   },
   {
@@ -86,7 +91,8 @@ export const tracksData: TrackData[] = [
     shapeColor: "#66a865",
     backSide: {
       backgroundColor: "#7b9a7b",
-      description: "Award given to the project that excels in all areas, including innovation, technical difficulty, design, and presentation.",
+      description:
+        "Award given to the project that excels in all areas, including innovation, technical difficulty, design, and presentation.",
     },
   },
   {
@@ -97,7 +103,8 @@ export const tracksData: TrackData[] = [
     shapeColor: "#3e4c8a",
     backSide: {
       backgroundColor: "#3e4c8a",
-      description: "Award given to the project that most aligns with UGAHacks 11's theme, Magic!",
+      description:
+        "Award given to the project that most aligns with UGAHacks 11's theme, Magic!",
     },
   },
 ];

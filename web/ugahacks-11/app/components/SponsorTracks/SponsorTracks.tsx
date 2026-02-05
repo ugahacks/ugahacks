@@ -11,14 +11,14 @@ const sponsorTracks = [
       "\n\nCreate a simple dashboard predicting stockouts and suggesting reorder timing for large scale restaurants.",
   },
   {
-    logo: "/generic_byte.png",
-    title: "Sponsorship Track #2",
+    logo: "/cox.png",
+    title: "Web App with AI for Sustainability",
     description:
-      "???",
+      "Build a web application that leverages AI to promote sustainability. Judging is based on AI usage, workflow with AI, community impact, and clean and efficient code.",
   },
   {
-    logo: "/generic_byte.png",
-    title: "Sponsorship Track #3",
+    logo: "/statefarm.png",
+    title: "???",
     description:
       "???",
   },
