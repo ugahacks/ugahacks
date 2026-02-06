@@ -50,7 +50,7 @@ export const tracksData: TrackData[] = [
   {
     cornerCharacter: "4",
     shape: "club",
-    mainText: "General AI Sponsored by Traction",
+    mainText: "General AI Sponsored by Tractian",
     characterColor: "#9b6798",
     shapeColor: "#9b6798",
     backSide: {
