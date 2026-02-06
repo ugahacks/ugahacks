@@ -18,9 +18,9 @@ const sponsorTracks = [
   },
   {
     logo: "/statefarm.png",
-    title: "???",
+    title: "Like a Good Neighbor",
     description:
-      "???",
+      "Create a product that will benefit your community! Innovate for Impact! From safety and wellness to sustainability and connectivity. A winning project will make a positive impact on your community.",
   },
 ];
 
