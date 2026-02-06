@@ -21,7 +21,7 @@ export const schedule: DaySchedule[] = [
         { title: "EL Credit Info Session", time: "7:30-8:30 PM", location: "MLC 102" },
         { title: "Dinner", time: "8:30-9:30 PM", location: "2ND FLOOR" },
         { title: "First-Time Hackers", time: "9:30-11:30 PM", location: "MLC 171" },
-        { title: "Cox Challenge", time: "10-11:00 PM", location: "MLC 213" },
+        { title: "Cox: Kahoot and Learn", time: "10-11:00 PM", location: "MLC 213" },
         { title: "NCR Voyix Challenge", time: "10-11:00 PM", location: "MLC 214" },
         { title: "Tractian Challenge", time: "10-11:00 PM", location: "MLC 148" },
         { title: "State Farm Challenge", time: "10-11:00 PM", location: "MLC 150" }
@@ -38,7 +38,7 @@ export const schedule: DaySchedule[] = [
             { title: "Tractian Workshop", time: "10-11:00 AM", location: "MLC 148" },
             { title: "MLH: Coding with Google AI Studio Workshop", time: "10-11:00 AM", location: "MLC 147" },
             { title: "Microcontroller Workshop", time: "11-12:00 PM", location: "MLC 251" },
-            { title: "Cox Workshop", time: "11-12:00 PM", location: "MLC 213" },
+            { title: "Cox: Running with Scissors - Get Hands on with Cox Automotive Engineers", time: "11-12:00 PM", location: "MLC 213" },
             { title: "Professional Development Workshop", time: "11-11:30 AM", location: "MLC 207" },
             { title: "Lunch", time: "12-1:00 PM", location: "2ND FLOOR" },
             { title: "Esports Challenges", time: "1-7:30 PM", location: "MLC 102" },
