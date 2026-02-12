@@ -91,8 +91,8 @@ const Splash = () => {
         </div>
         <div className="inline-block my-4 py-2 px-2 py-1 border-4 border-white text-white font-bold text-lg tracking-wider rounded-ee-3xl rounded-ss-3xl hover:animate-pulse hover:text-black transition duration-300">
           <button >
-            <a href="https://mybyte.ugahacks.com/" target="_blank" rel="noopener noreferrer" className={styles.registerButton}>
-              REGISTER NOW
+            <a href="https://ugahacks.com/" target="_blank" rel="noopener noreferrer" className={styles.registerButton}>
+              Organization Page
             </a>
           </button>
 

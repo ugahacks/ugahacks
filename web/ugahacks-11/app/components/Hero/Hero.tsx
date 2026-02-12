@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
           UGA Miller Learning Center
         </p>
         <a
-          href="https://mybyte.ugahacks.com/register"
+          href="https://11.wrapped.ugahacks.com"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
             className="px-12 py-4 text-base font-medium border-none rounded-2xl cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 shadow-lg text-[#3e4c8a] bg-[#faf3e0] font-encode"
             aria-label="Register for UGAHacks 11"
           >
-            Register Now
+            Recap Page
           </button>
         </a>
       </div>
