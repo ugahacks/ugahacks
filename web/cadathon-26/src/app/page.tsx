@@ -1,4 +1,5 @@
 import Checkers from "~/components/Checkers";
+import FAQ from "~/components/FAQ";
 import Footer from "~/components/Footer";
 import Info from "~/components/Info";
 import Landing from "~/components/Landing";
@@ -15,6 +16,7 @@ export default function Home() {
 
       <Info />
       <Schedule />
+      <FAQ />
 
       <Footer />
     </>
