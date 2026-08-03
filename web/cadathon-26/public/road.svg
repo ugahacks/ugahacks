@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 700 700" width="700" height="700">
+  <defs>
+    <!--
+      Asphalt-style grain, generated entirely inside this filter (the filtered rect's own
+      fill is ignored — feTurbulence doesn't read the source graphic).
+
+      NOTE: RoadTexture.tsx consumes this file as a CSS mask-image, so only the ALPHA
+      channel matters at render time — the color of the flecks comes from the
+      component's `bg-current` fill, not from this file.
+
+      Filter-level attributes:
+      - x/y="-20%" width/height="140%": pads the filter region 20% beyond the rect so
+        primitives aren't clipped at the edges of the canvas they operate on.
+      - filterUnits="objectBoundingBox": the region percentages above are relative to the
+        filtered rect's bounding box.
+      - primitiveUnits="userSpaceOnUse": lengths inside primitives (surfaceScale, the
+        x/y/width/height subregions) are in viewport pixel units.
+      - color-interpolation-filters="linearRGB": color math runs in linear-light space,
+        giving smoother highlight falloff than gamma-encoded sRGB.
+    -->
+    <filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%"
+      filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse"
+      color-interpolation-filters="linearRGB">
+      <!--
+        Step 1 — feTurbulence: generates the raw noise field.
+        - type="fractalNoise": smooth, cloud-like noise (vs. type="turbulence", which is
+          harsher and vein-like).
+        - baseFrequency="0.06": grain size, roughly "features per pixel" — at 0.06 each
+          noise cell spans ~17px, giving large clustered blotches. Lower = bigger
+          clumps; higher = finer static.
+        - numOctaves="10": layers of progressively finer noise stacked on the base
+          frequency. This many octaves adds heavy fine-grained roughness inside each
+          large clump (octaves beyond ~6 have sub-pixel detail and little visible
+          effect, so this is effectively "maximum roughness").
+        - seed="5": picks which random pattern you get; changing it re-rolls the texture
+          without altering its character.
+        - stitchTiles="stitch": snaps the noise frequency so it wraps exactly at the
+          0-100% subregion, making the 700x700 tile perfectly seamless when repeated.
+      -->
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="10" seed="5"
+        stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="fractalNoise"></feTurbulence>
+      <!--
+        Step 2 — feSpecularLighting: treats the noise's alpha channel as a bump map and
+        renders the glints a light source would produce on that rough surface. This is
+        what turns flat noise into sparse, grain-like flecks.
+        - surfaceScale="10": height of the bumps. Higher = more dramatic relief, so
+          bigger contrast between lit and unlit grain.
+        - specularConstant="1.6": overall brightness multiplier for the reflections.
+        - specularExponent="25": shininess. Higher = tighter, sparser highlights
+          (pin-prick glints); lower = broad soft sheen.
+        - lighting-color="#7957A8": the color of the light. Since only alpha survives
+          the mask usage (alpha = the brightest color channel, here A8 ≈ 66%), this
+          effectively caps the texture's maximum opacity — set it to white for
+          full-strength flecks.
+        - feDistantLight azimuth="3" elevation="103": direction the light comes from.
+          Azimuth is the compass angle in the image plane; elevation is the angle up off
+          the surface. Together they decide which sides of the bumps catch light.
+        Unlit areas have zero alpha, which is what lets the texture overlay (and, as a
+        mask, reveal) any background.
+      -->
+      <feSpecularLighting surfaceScale="10" specularConstant="1.6" specularExponent="25"
+        lighting-color="#7957A8" x="0%" y="0%" width="100%" height="100%" in="fractalNoise"
+        result="specularLighting">
+        <feDistantLight azimuth="3" elevation="103"></feDistantLight>
+      </feSpecularLighting>
+    </filter>
+  </defs>
+  <!-- The fill here never shows: the filter replaces the rect's paint entirely. -->
+  <rect width="700" height="700" fill="white" filter="url(#nnnoise-filter)"></rect>
+</svg>
