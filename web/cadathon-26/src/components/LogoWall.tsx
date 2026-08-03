@@ -21,6 +21,8 @@ interface Props {
   className: string;
   /** Optional call to action rendered beneath the grid. */
   children?: ReactNode;
+  /** Optional <TrackAnchor> placed in the section's gutter. */
+  anchor?: ReactNode;
 }
 
 const SLOT =
@@ -65,12 +67,16 @@ export default function LogoWall({
   logos,
   className,
   children,
+  anchor,
 }: Props) {
   return (
     <div className={`relative bg-cover bg-center ${className}`}>
       <RoadTexture />
+      {anchor}
 
-      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12 sm:gap-10 sm:px-8 sm:py-16 lg:py-24">
+      {/* Each instance adds the wide gutter on whichever side its lane of the
+          track runs down; this is the narrow side. */}
+      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-8 px-8 py-12 sm:gap-10 sm:py-16 lg:px-20 lg:py-24">
         <h1 className="text-center font-heading text-3xl font-extrabold tracking-wide text-white text-border-5 text-border-black sm:text-4xl lg:text-5xl">
           {heading}
         </h1>

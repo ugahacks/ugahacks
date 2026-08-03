@@ -4,6 +4,7 @@ import * as Accordion from "@radix-ui/react-accordion";
 import { ReactNode, useState } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
 import RoadTexture from "./RoadTexture";
+import TrackAnchor from "./track/TrackAnchor";
 
 const CODE_OF_CONDUCT = "https://mlh.io/code-of-conduct";
 const INFO_SITE = "https://makepacket.ugahacks.com";
@@ -84,7 +85,13 @@ export default function FAQ() {
       <div aria-hidden className="absolute inset-0 z-0 bg-zinc-950/65" />
       <RoadTexture />
 
-      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12 sm:gap-10 sm:px-8 sm:py-16 lg:py-24">
+      {/* Wide screens only: the track crosses back to the right gutter here,
+          inside the section's bottom padding. No extra padding needed -- the
+          accordion already reserves a panel's worth of margin below itself
+          while it's collapsed. */}
+      <TrackAnchor className="absolute right-12 bottom-12 max-lg:hidden" />
+
+      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-8 py-12 pr-8 pl-16 sm:gap-10 sm:py-16 lg:px-20 lg:py-24">
         <h1 className="font-heading text-3xl font-extrabold tracking-wide text-white text-border-5 text-border-black sm:text-4xl lg:text-5xl">
           FAQ
         </h1>

@@ -16,10 +16,13 @@ const PARTNERS: Logo[] = [
 
 export default function Partners() {
   return (
+    // Mirrors Sponsors: extra top padding below lg clears the track crossing
+    // that runs along the seam between the two sections, and the road comes
+    // down this section's right below lg, its left above.
     <LogoWall
       heading="Partners"
       logos={PARTNERS}
-      className="bg-pink-500 text-pink-950/25"
+      className="bg-pink-500 text-pink-950/25 max-lg:pt-6 max-lg:pr-8"
     />
   );
 }

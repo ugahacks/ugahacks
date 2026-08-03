@@ -1,6 +1,7 @@
 import { RiCalendarEventFill, RiMapPinFill } from "react-icons/ri";
 import LinkButton from "./LinkButton";
 import RoadTexture from "./RoadTexture";
+import TrackAnchor from "./track/TrackAnchor";
 
 export default function Landing() {
   return (
@@ -10,7 +11,12 @@ export default function Landing() {
       <div aria-hidden className="absolute inset-0 z-0 bg-zinc-950/45" />
       <RoadTexture />
 
-      <header className="relative flex flex-col items-center gap-8 py-24 text-white sm:gap-10 lg:gap-12 lg:py-32">
+      {/* Start of the race track, at the very top right of the page. */}
+      <TrackAnchor className="absolute top-0 right-9 lg:right-12" />
+
+      {/* The road runs down the right here, so that side gets the wide gutter
+          and the content sits a little left of the viewport's center. */}
+      <header className="relative flex flex-col items-center gap-8 py-24 pr-16 pl-8 text-white sm:gap-10 lg:gap-12 lg:px-20 lg:py-32">
         <div className="flex flex-col items-center gap-1 lg:flex-row lg:gap-6">
           <img className="h-25 sm:h-32 lg:h-40" alt="" src="/racer-byte.png" />
 

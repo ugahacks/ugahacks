@@ -7,6 +7,7 @@ import {
   RiLinkedinFill,
 } from "react-icons/ri";
 import RoadTexture from "./RoadTexture";
+import TrackAnchor from "./track/TrackAnchor";
 
 const CONTACT_EMAIL = "hello@ugahacks.com";
 
@@ -44,7 +45,12 @@ export default function Footer() {
       <div aria-hidden className="absolute inset-0 z-0 bg-zinc-950/45" />
       <RoadTexture />
 
-      <div className="relative z-0 mx-auto flex w-full max-w-5xl flex-col items-center gap-8 px-4 py-10 text-white sm:py-12">
+      {/* End of the track. The lane it ends in is whichever one the track is
+          already running down -- the right gutter below lg, the left gutter
+          above it -- so the run into the footer stays straight. */}
+      <TrackAnchor className="absolute right-9 bottom-12 lg:right-auto lg:bottom-16 lg:left-12" />
+
+      <div className="relative z-0 mx-auto flex w-full max-w-5xl flex-col items-center gap-8 py-10 pr-16 pl-8 text-white sm:py-12 lg:px-20">
         <div className="flex flex-col items-center gap-2">
           <p className="font-heading text-xs leading-none font-bold tracking-widest uppercase text-border-3 text-border-black">
             Follow Us
