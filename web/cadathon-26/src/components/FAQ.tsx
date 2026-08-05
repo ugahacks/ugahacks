@@ -123,7 +123,13 @@ export default function FAQ() {
                 className="overflow-hidden rounded-md border-2 border-black bg-indigo-950 shadow-brutal"
               >
                 <Accordion.Header>
-                  <Accordion.Trigger className="group flex w-full items-center justify-between gap-3 bg-pink-500 px-4 py-3 text-left leading-snug font-semibold text-black data-[state=open]:border-b-2 data-[state=open]:border-black sm:py-4 sm:text-lg">
+                  {/* The rule under an open trigger is always there, just
+                      transparent until it's needed -- added only on open it
+                      would make the trigger 2px taller, which is the whole
+                      section growing by 2px as a panel opens. Backgrounds
+                      paint under the border box, so the pink runs behind it
+                      and a closed trigger looks untouched. */}
+                  <Accordion.Trigger className="group flex w-full items-center justify-between gap-3 border-b-2 border-transparent bg-pink-500 px-4 py-3 text-left leading-snug font-semibold text-black data-[state=open]:border-black sm:py-4 sm:text-lg">
                     {q}
                     <RiArrowDownSLine className="shrink-0 text-xl transition-transform duration-200 group-data-[state=open]:rotate-180" />
                   </Accordion.Trigger>
