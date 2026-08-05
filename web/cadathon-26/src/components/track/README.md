@@ -19,47 +19,67 @@ the responsive layout wherever the content moves.
 
 ## The current route
 
-Five anchors, all sitting in the page's outer gutters:
+Nine anchors, all sitting in the page's outer gutters:
 
-| Section  | Anchor                                                             | Visible |
-| -------- | ------------------------------------------------------------------ | ------- |
-| Landing  | `absolute top-0 right-9 lg:right-12`                               | always  |
-| Info     | `absolute left-9 lg:left-12` (between the two articles)            | always  |
-| FAQ      | `absolute right-12 bottom-12 max-lg:hidden`                        | lg+     |
-| Sponsors | `absolute right-9 bottom-0 lg:right-auto lg:left-12`               | always  |
-| Footer   | `absolute right-9 bottom-12 lg:right-auto lg:bottom-16 lg:left-12` | always  |
+| Section  | Anchor                                                       | Notes                           |
+| -------- | ------------------------------------------------------------ | ------------------------------- |
+| Landing  | `absolute top-0 right-11 lg:right-26.5`                      | start of the track              |
+| Landing  | `absolute right-11 lg:right-26.5` (`start`, at the wordmark) | where the car parks at scroll 0 |
+| Info     | `absolute left-11 lg:left-26.5` (between the two articles)   | crosses to the left             |
+| FAQ      | `absolute top-5 right-11 lg:top-6.5 lg:right-26.5`           | crosses right (detour in)       |
+| FAQ      | `absolute bottom-5 left-11 lg:bottom-6.5 lg:left-26.5`       | crosses back left (detour out)  |
+| Partners | `absolute top-5 right-11 lg:top-6.5 lg:right-26.5`           | crosses right (detour in)       |
+| Partners | `absolute bottom-5 left-11 lg:bottom-6.5 lg:left-26.5`       | crosses back left (detour out)  |
+| Footer   | `absolute top-10 left-11 lg:top-14 lg:left-26.5` (`finish`)  | where the car stops             |
+| Footer   | `absolute bottom-0 left-11 lg:left-26.5`                     | true end of the drawn path      |
+
+Landing's `start` anchor is a waypoint like any other, but it sits in the same
+lane as the run it's on, so `buildPolyline` collapses it as collinear and the
+route is unchanged — it contributes only its y.
 
 The track starts at the top **right** of the page and runs down the right
 gutter past the hero and "What is a CADathon?", crosses to the left in the gap
-before "Tools You Need", and runs down the left past Schedule and the FAQ. At
-`lg` it crosses back to the right at the foot of the FAQ, comes down the right
-of Sponsors, and crosses left again along the Sponsors/Partners seam for the
-rest of the page. Below `lg` the FAQ anchor drops out, so the track stays left
-until that same seam crossing takes it right for Partners and the footer —
-which is why the last two anchors switch sides at `lg`. Either way the run
-into the footer is straight.
+before "Tools You Need", and runs down the left past Schedule. It detours into
+the right gutter for the FAQ (crossing in at its own top, back out at its own
+bottom) and does the same for Partners — both are self-contained round trips,
+so Sponsors and Footer never need an anchor of their own; they just inherit
+the plain left lane from whichever detour last returned to it. Footer carries
+two more anchors past that: a `finish`-flagged one (where the car parks) and a
+plain one at its literal `bottom-0` (where the drawn road actually ends) — see
+"The car" below for why those are different points.
 
 No crossing passes over content:
 
 - **Info** — a zero-height spacer between two flex gaps, so the road gets a
   full gap's clearance above and below.
-- **FAQ** — the section's bottom padding. This one needs no extra room: the
-  accordion already reserves a panel's height of margin below itself while
-  collapsed, and the padding covers it when open.
-- **Sponsors/Partners** — the seam between the two sections, deliberately, so
-  the horizontal run reads as the divider between them. Each side adds
-  `max-lg:p{b,t}-6` for phone clearance; at `lg` the sections' own padding is
-  already wide enough.
+- **FAQ** and **Partners** — both crossings sit half a track width in from
+  the section's edge, so the road's outer edge is flush with the boundary,
+  and the section's `py-*` is then sized so its inner edge clears the content
+  by a full flex gap: `py-18 sm:py-20 lg:py-23`, from `trackWidth / 2 + gap`.
+  For the FAQ's heading that gap is also what sits below it, so it reads with
+  equal breathing room on both sides (see the `leading-none` note on its
+  `<h1>`, without which the line box would pad the lower side further).
+- **Footer** — both anchors sit in the footer's own top/bottom, past
+  Partners' return-to-left crossing, so nothing here changes lanes.
 
-Sections reserve the lane asymmetrically below `lg` — `pl-16 pr-8` where the
-road comes down the left, `pr-16 pl-8` where it comes down the right, which
-shifts content slightly off-center rather than spending the width twice.
-(`Info.tsx` needs both, so its two blocks carry their own `max-lg:p{r,l}-8`.)
-Above `lg` it's a symmetric `lg:px-20`. The road needs 56px of that on phones
-and 74px at `lg`, clearing content by 8px and 6px, and the page edge by 16px
-and 22px. Widening a road metric or moving an anchor outward means re-checking
-that padding, and re-checking the Schedule carousel arrows, which sit at the
-inner edge of the content box.
+### Gutter formula
+
+Every section reserves two different amounts of side padding below `lg`: `G`
+(24px) on the side without the road, and `2G + trackWidth` (88px, since the
+narrow track is 40px) on the side with it. This makes the gap from the page
+edge to the road equal to the gap from the road to the content — both `G` —
+rather than the two being arbitrarily different. The anchor offset from the
+edge is `G + trackWidth / 2` (44px). At `lg` the same formulas apply with `G`
+= 80px and the wide track (52px): wide padding = 212px, anchor offset =
+106px (written as the equivalent `right-26.5`/`left-26.5`, since Tailwind's
+spacing scale is quarter-rem steps).
+
+`Info.tsx` splits its `2G + track` between the section's own base padding and
+each block's extra (since the section pads both sides at once); everywhere
+else it's simple side padding on one element. Widening `NARROW`/`WIDE` in
+`RaceTrack.tsx` means recomputing both numbers everywhere they're used — they
+aren't derived from a shared constant because Tailwind needs literal class
+strings, not interpolated ones, to pick them up.
 
 ## Adding anchors
 
@@ -128,27 +148,62 @@ Anchors that are conditionally unmounted (rather than CSS-hidden) work the
 same way. Note that hiding an _anchor_ only removes a waypoint — never place
 content where the remaining segments will pass.
 
+### The `finish` anchor
+
+Passing `finish` on a `TrackAnchor` marks where the **car** stops, separately
+from where the **drawn road** ends. Without one, both are the same point (the
+last anchor). Footer uses this so the asphalt itself can run all the way to
+the literal bottom of the page (a plain anchor at `bottom-0`) while the car
+parks just past the finish-line checkered divider (the `finish` anchor,
+higher up) rather than travelling the whole extra stretch. At most one anchor
+should carry `finish`; `RaceTrack` finds it by scanning all registered
+anchors during `measure()` and computes the car's max travel distance
+(`carMaxLengthRef`) via `arcLengthAtPathY` in `geometry.ts`, which interpolates
+arc length at a given y along the _drawn_ path (as opposed to `arcLengthAtY`,
+which does the same over the rescaled _scroll_ map) — so the finish anchor
+doesn't need a dedicated knot in the path, just to fall on a straight stretch
+of it (which `finish` anchors, being plain lane continuations, always do).
+
 ## The car
 
 The car (`/racer-byte.png` placeholder — swap the `<img>` in `RaceTrack.tsx`
 when a real sprite exists) rides at a fixed screen height (`CAR_SCREEN_Y`, 40%
-of the viewport) and drives down the page with scroll. Past `CAR_PIN_TO` of
-the way down it eases from there to the bottom of the viewport, which is what
-lets it cross the finish line: a car held at a fixed screen y can never get
-closer to the end of the page than the rest of a viewport height, so it would
-otherwise park short of the last checkered divider.
+of the viewport) and drives down the page with scroll. It eases into and out
+of that height at the two ends:
+
+- Over the first `CAR_PIN_FROM` of scroll it rises from wherever the `start`
+  anchor sits (the top of the hero wordmark) up to the pinned height, so the
+  car has a deliberate parked position at scroll 0 instead of landing
+  wherever 40% of the viewport happens to fall.
+- Past `CAR_PIN_TO` it eases from the pinned height down to the bottom of the
+  viewport, which is what lets it cross the finish line: a car held at a fixed
+  screen y can never get closer to the end of the page than the rest of a
+  viewport height, so it would otherwise park short of the last divider.
+
+Both easings keep the mapping monotone, so the car never reverses. The start
+one caps its fraction at `CAR_SCREEN_Y`, which matters on a viewport short
+enough that the start anchor would otherwise sit _below_ the pinned line.
 
 Because scroll only maps to vertical motion, horizontal runs are crossed via a
 monotone scroll → arc-length map (`toScrollMap` in `geometry.ts`): the car
 smoothly drives across them while drifting briefly from its line, instead of
 teleporting. It parks at the start/finish when the scroll position runs past
-either end of the track.
+either end of the track (or the `finish` anchor, if one is set — see above).
+
+The first time the car reaches (or would overshoot) its max travel distance,
+`RaceTrack` fires a one-shot `canvas-confetti` burst from the car's current
+screen position (`finishedRef` in `RaceTrack.tsx` guards against repeat
+bursts on further scrolling).
 
 ## Stacking
 
 The overlay sits at `z-10`, above the sections (each `z-0`) but below the
 checkered dividers (`z-20` in `page.tsx`), so the road runs underneath the
-start and finish lines. The car is `z-30` and passes over everything.
+start and finish lines. The car is `z-30` and passes over everything. Landing
+is the one exception: it sits at `z-20` (not the default `z-0`) so its own
+content — the wordmark, the CD flag — renders above the road when the two are
+close together near the top of the page, the same as the checkered dividers
+do; the car (`z-30`) still passes over it.
 
 ## Tuning
 
@@ -158,4 +213,5 @@ turn radius below/above `WIDE_AT`), `CENTERLINE_WIDTH`/`CENTERLINE_DASH`,
 to add to the path tangent — 90 assumes the sprite art faces "up"), and
 `FLAT_SCROLL_RATE` in `geometry.ts` (how much scroll a horizontal run
 consumes). Grain color/intensity is the `stroke-zinc-500/60` class on the
-masked path.
+masked path. The confetti burst's look (particle count, spread, velocity) is
+inline in `placeCar`'s `confetti(...)` call.

@@ -75,8 +75,12 @@ export default function LogoWall({
       {anchor}
 
       {/* Each instance adds the wide gutter on whichever side its lane of the
-          track runs down; this is the narrow side. */}
-      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-8 px-8 py-12 sm:gap-10 sm:py-16 lg:px-20 lg:py-24">
+          track runs down; this is the narrow side. The vertical padding is
+          sized like the FAQ's -- enough that a horizontal crossing tucked
+          against the section's edge still clears the content by a full flex
+          gap. Sponsors has no crossing of its own but keeps the same figure,
+          so the two sections stay a matched pair. */}
+      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-8 px-6 py-18 sm:gap-10 sm:py-20 lg:px-20 lg:py-23">
         <h1 className="text-center font-heading text-3xl font-extrabold tracking-wide text-white text-border-5 text-border-black sm:text-4xl lg:text-5xl">
           {heading}
         </h1>

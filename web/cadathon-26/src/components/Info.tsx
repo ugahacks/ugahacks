@@ -15,14 +15,18 @@ export default function Info() {
 
       {/* Full width, so the anchor below can offset against the page gutter
           rather than the capped content column. */}
-      <section className="relative z-0 px-8 py-12 sm:py-16 lg:px-20 lg:py-24">
+      <section className="relative z-0 px-6 py-12 sm:py-16 lg:px-20 lg:py-24">
         <div className="mx-auto flex w-full max-w-5xl flex-col gap-14 sm:gap-16 lg:gap-20">
           {/* The two blocks step away from each other on wide screens: the
-              intro hangs left, the checklist hangs right. The road passes to
-              the right of this one and to the left of the next, so each keeps
-              its own side clear with extra padding below lg (above it, the
-              section's own padding is already wide enough). */}
-          <div className="flex flex-col gap-6 max-lg:pr-8 sm:gap-8 lg:mr-40 lg:self-start">
+              intro hangs left, the checklist hangs right. Below lg the road
+              passes to the right of this one and to the left of the next, so
+              each adds extra padding on that side -- the section's own px-6
+              contributes G (24px) on both sides already, so the extra here
+              (pr-16=64px) brings this side's total to 2G + track width
+              (88px), matching the gap on the other side of the road. Above
+              lg the self-start/mr-40 step already clears the road by a wide
+              margin, so no equivalent lg extra is needed. */}
+          <div className="flex flex-col gap-6 max-lg:pr-16 sm:gap-8 lg:mr-40 lg:self-start">
             <h1 className="font-heading text-3xl font-extrabold tracking-wide text-lime-400 text-border-5 text-border-black sm:text-4xl lg:text-5xl">
               What is a CADathon?
             </h1>
@@ -47,10 +51,10 @@ export default function Info() {
               from the spacer's flow position and its x from the section, which
               spans the full page width. */}
           <div className="h-0">
-            <TrackAnchor className="absolute left-9 lg:left-12" />
+            <TrackAnchor className="absolute left-11 lg:left-26.5" />
           </div>
 
-          <div className="flex flex-col gap-6 max-lg:pl-8 sm:gap-8 lg:ml-40 lg:self-end">
+          <div className="flex flex-col gap-6 max-lg:pl-16 sm:gap-8 lg:ml-40 lg:self-end">
             <h2 className="text-right font-heading text-3xl font-extrabold tracking-wide text-lime-400 text-border-5 text-border-black sm:text-4xl lg:text-5xl">
               Tools You Need
             </h2>

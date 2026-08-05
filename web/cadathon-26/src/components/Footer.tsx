@@ -45,12 +45,22 @@ export default function Footer() {
       <div aria-hidden className="absolute inset-0 z-0 bg-zinc-950/45" />
       <RoadTexture />
 
-      {/* End of the track. The lane it ends in is whichever one the track is
-          already running down -- the right gutter below lg, the left gutter
-          above it -- so the run into the footer stays straight. */}
-      <TrackAnchor className="absolute right-9 bottom-12 lg:right-auto lg:bottom-16 lg:left-12" />
+      {/* The car's actual stopping point -- Partners' exit crossing has
+          already put the road back in the plain left lane by this point, so
+          this just continues straight down, no crossing needed. Positioned
+          just past the finish-line divider above the footer. */}
+      <TrackAnchor
+        finish
+        className="absolute top-10 left-11 lg:top-14 lg:left-26.5"
+      />
 
-      <div className="relative z-0 mx-auto flex w-full max-w-5xl flex-col items-center gap-8 py-10 pr-16 pl-8 text-white sm:py-12 lg:px-20">
+      {/* The road itself keeps going past that, all the way to the literal
+          bottom of the page -- only the car stops short, at the anchor
+          above. Same lane, so this is a straight continuation, not a
+          crossing. */}
+      <TrackAnchor className="absolute bottom-0 left-11 lg:left-26.5" />
+
+      <div className="relative z-0 mx-auto flex w-full max-w-5xl flex-col items-center gap-8 py-10 pr-6 pl-22 text-white sm:py-12 lg:pr-20 lg:pl-53">
         <div className="flex flex-col items-center gap-2">
           <p className="font-heading text-xs leading-none font-bold tracking-widest uppercase text-border-3 text-border-black">
             Follow Us

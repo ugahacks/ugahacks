@@ -6,21 +6,44 @@ import TrackAnchor from "./track/TrackAnchor";
 export default function Landing() {
   return (
     <div className="relative max-h-256 bg-[url(/bg.png)] bg-cover bg-center text-zinc-950/40">
+      {/* No z-index on this wrapper: it would take the photo, the scrim, and
+          the grain up with it and hide the road behind the whole section.
+          Only the header below is lifted above the road (z-20). */}
+
       {/* Knocks the photo back so the wordmark and details stay legible. The
           FAQ uses this same treatment, only darker still. */}
       <div aria-hidden className="absolute inset-0 z-0 bg-zinc-950/45" />
       <RoadTexture />
 
-      {/* Start of the race track, at the very top right of the page. */}
-      <TrackAnchor className="absolute top-0 right-9 lg:right-12" />
+      {/* Start of the race track, at the very top right of the page. Offset
+          from the edge by G + half the (wide) track width, same formula as
+          the header's own pr-* below, so the gap from edge to track equals
+          the gap from track to content on this side. */}
+      <TrackAnchor className="absolute top-0 right-11 lg:right-26.5" />
 
       {/* The road runs down the right here, so that side gets the wide gutter
-          and the content sits a little left of the viewport's center. */}
-      <header className="relative flex flex-col items-center gap-8 py-24 pr-16 pl-8 text-white sm:gap-10 lg:gap-12 lg:px-20 lg:py-32">
+          (2G + track width) and the content sits a little left of the
+          viewport's center; the left side just gets G. z-40 lifts just the
+          content above both the road (z-10) and the car (z-30), so the car
+          passes *behind* the CD flag where the wordmark reaches into the
+          lane, while the section's photo stays below the road. It has to be
+          the header that's lifted, not the flag: the header would otherwise
+          be a stacking context of its own and paint as one unit at its own
+          level no matter what its children ask for. */}
+      <header className="relative z-40 flex flex-col items-center gap-8 py-24 pr-22 pl-6 text-white sm:gap-10 lg:gap-12 lg:py-32 lg:pr-53 lg:pl-20">
         <div className="flex flex-col items-center gap-1 lg:flex-row lg:gap-6">
           <img className="h-25 sm:h-32 lg:h-40" alt="" src="/racer-byte.png" />
 
           <div className="flex flex-col">
+            {/* Where the car parks at the top of the page. The spacer takes
+                its y from the flow -- the top of the wordmark row, just above
+                the CD flag -- while the anchor's own offset keeps it in the
+                road's lane, so it stays collinear with the run down the right
+                and doesn't bend the route. */}
+            <div className="h-0">
+              <TrackAnchor start className="absolute right-11 lg:right-26.5" />
+            </div>
+
             <div className="flex items-center gap-2 text-6xl sm:text-7xl lg:text-8xl">
               <h1 className="flex items-center gap-px font-wordmark font-black uppercase text-border-black">
                 <span className="font-heading text-[0.3em] tracking-wider text-border-4 [writing-mode:sideways-lr]">
@@ -48,12 +71,12 @@ export default function Landing() {
           </div>
         </div>
 
-        <ul className="flex flex-col items-center font-heading text-lg font-bold text-border-3 text-border-black sm:text-xl lg:text-2xl">
-          <li className="flex items-center gap-[1ch]">
+        <ul className="flex flex-col items-center font-heading text-sm font-bold text-border-3 text-border-black sm:text-lg lg:text-xl">
+          <li className="flex items-center gap-[1ch] whitespace-nowrap">
             <RiCalendarEventFill className="stroke-black stroke-3" />
             October 24&ndash;25, 2026
           </li>
-          <li className="flex items-center gap-[1ch]">
+          <li className="flex items-center gap-[1ch] whitespace-nowrap">
             <RiMapPinFill className="stroke-black stroke-3" />
             Driftmier Engineering Center
           </li>

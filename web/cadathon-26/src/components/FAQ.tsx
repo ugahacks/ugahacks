@@ -85,32 +85,36 @@ export default function FAQ() {
       <div aria-hidden className="absolute inset-0 z-0 bg-zinc-950/65" />
       <RoadTexture />
 
-      {/* Wide screens only: the track crosses back to the right gutter here,
-          inside the section's bottom padding. No extra padding needed -- the
-          accordion already reserves a panel's worth of margin below itself
-          while it's collapsed. */}
-      <TrackAnchor className="absolute right-12 bottom-12 max-lg:hidden" />
+      {/* The track crosses into the right gutter here, in the section's top
+          padding, and back out to the left in the bottom padding, so Sponsors
+          onward don't need to change lanes. Both sit half a track width in
+          from the section's edge, so the road's outer edge is flush with the
+          boundary; the section's own py-* is then set so its inner edge
+          clears the content by a full flex gap -- the same breathing room the
+          heading has below it. leading-none on the heading is what makes that
+          arithmetic hold, since the default line-height would otherwise pad
+          the below side further than the above. */}
+      <TrackAnchor className="absolute top-5 right-11 lg:top-6.5 lg:right-26.5" />
+      <TrackAnchor className="absolute bottom-5 left-11 lg:bottom-6.5 lg:left-26.5" />
 
-      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-8 py-12 pr-8 pl-16 sm:gap-10 sm:py-16 lg:px-20 lg:py-24">
-        <h1 className="font-heading text-3xl font-extrabold tracking-wide text-white text-border-5 text-border-black sm:text-4xl lg:text-5xl">
+      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-8 py-18 pr-22 pl-6 sm:gap-10 sm:py-20 lg:py-23 lg:pr-53 lg:pl-20">
+        <h1 className="font-heading text-3xl leading-none font-extrabold tracking-wide text-white text-border-5 text-border-black sm:text-4xl lg:text-5xl">
           FAQ
         </h1>
 
-        <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-12">
+        <div className="flex flex-col">
           {/* Panels snap open with no height animation: any dropped frame
               during a tween shows up as a reflow of everything below. The
-              stack instead reserves exactly one panel's height as bottom
-              margin while nothing is open, and gives that space back the
-              moment a panel takes it -- so the section's total height is
-              identical open or closed, with nothing to animate. */}
+              pit stop below instead holds exactly one panel's height while
+              nothing is open, and gives that space back the moment a panel
+              takes it -- so the section's total height is identical open or
+              closed, with nothing to animate. */}
           <Accordion.Root
             type="single"
             collapsible
             value={open}
             onValueChange={setOpen}
-            className={`flex w-full max-w-prose flex-col gap-4 sm:gap-5 ${
-              open ? "" : "lg:mb-48"
-            }`}
+            className="flex w-full max-w-prose flex-col gap-4 sm:gap-5"
           >
             {FAQS.map(({ q, a }) => (
               <Accordion.Item
@@ -141,18 +145,33 @@ export default function FAQ() {
             ))}
           </Accordion.Root>
 
-          {/* Below lg this sits in the space the open panel would occupy, and
-              collapses out of the way when a panel takes that space -- so the
-              section's height is the same either way. */}
+          {/* Holds exactly the space one open panel takes, and collapses out
+              of the way when a panel takes it -- so the section's height is
+              the same either way. No gap above it: butted straight against
+              the accordion, the image sits centered in exactly the reserved
+              swap space rather than being pushed off-center by a gap. */}
+          {/* max-w-prose matches the accordion, so justify-end lines the
+              graphic up with the right edge of the panels rather than with
+              the section's much wider content column. The padding matches the
+              accordion's own gap; it has to drop away with the height, since
+              a border-box element can't shrink below its own padding and the
+              swap space would never reach zero. */}
           <div
-            className={`flex w-full items-center justify-center max-lg:overflow-hidden lg:w-auto lg:flex-1 ${
-              open ? "max-lg:h-0" : "max-lg:h-56 sm:max-lg:h-48"
+            className={`flex w-full max-w-prose items-center justify-end overflow-hidden ${
+              open ? "h-0" : "h-56 py-4 sm:h-48 sm:py-5"
             }`}
           >
+            {/* Rotated a quarter turn, the image's *width* is what you see as
+                its height -- so these are sized to the swap space less that
+                padding (224-32, then 192-40). Rotating also leaves the visual
+                box centered on the layout box, so it would hang off the right
+                edge by half the difference between the two: the artwork is
+                442x566, making that overhang (566/442 - 1) / 2 = 14% of the
+                width, translated back to sit flush right at either size. */}
             <img
               src="/pit-stop.svg"
               alt=""
-              className="w-28 rotate-90 sm:w-32 lg:w-40 lg:rotate-0 xl:w-48"
+              className="w-48 translate-x-[-14%] -rotate-90 sm:w-38"
             />
           </div>
         </div>

@@ -270,8 +270,10 @@ export default function Schedule() {
       <RoadTexture />
 
       {/* Wider than the other sections at lg: the passes are the focal point
-          here, and w-1/2 each means every extra pixel goes into them. */}
-      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-4 py-12 pr-8 pl-16 sm:gap-5 sm:py-16 lg:max-w-7xl lg:px-20 lg:py-24">
+          here, and w-1/2 each means every extra pixel goes into them. Left
+          side carries the road (inherited from Info's crossing), so it gets
+          the wide gutter (2G + track width); the right side just gets G. */}
+      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-4 py-12 pr-6 pl-22 sm:gap-5 sm:py-16 lg:max-w-7xl lg:py-24 lg:pr-20 lg:pl-53">
         <h1 className="text-center font-heading text-3xl font-extrabold tracking-wide text-white text-border-5 text-border-black sm:text-4xl lg:text-5xl">
           Schedule
         </h1>

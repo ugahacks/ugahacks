@@ -1,4 +1,5 @@
 import LogoWall, { Logo } from "./LogoWall";
+import TrackAnchor from "./track/TrackAnchor";
 
 /**
  * Partner orgs. Logos render as named placeholder slots until each org's
@@ -15,14 +16,27 @@ const PARTNERS: Logo[] = [
 ];
 
 export default function Partners() {
+  // Same detour pattern as FAQ: the road crosses into the right gutter in
+  // this section's own top padding, runs down the right for its whole body,
+  // then crosses back to the left in the bottom padding -- so Sponsors
+  // (before) and Footer (after) both stay in the plain left lane and need no
+  // anchor of their own. This replaces the old seam crossing that used to
+  // split Sponsors and Partners down the middle.
   return (
-    // Mirrors Sponsors: extra top padding below lg clears the track crossing
-    // that runs along the seam between the two sections, and the road comes
-    // down this section's right below lg, its left above.
     <LogoWall
       heading="Partners"
       logos={PARTNERS}
-      className="bg-pink-500 text-pink-950/25 max-lg:pt-6 max-lg:pr-8"
+      // The extra vertical padding is exactly one track width (52px at lg),
+      // which is what the crossings eat out of the top and bottom. LogoWall's
+      // own py-* is then what's left between road and content -- the same
+      // clear space Sponsors has, which has no crossing to pay for.
+      className="bg-pink-500 py-10 pr-16 text-pink-950/25 lg:py-13 lg:pr-33"
+      anchor={
+        <>
+          <TrackAnchor className="absolute top-5 right-11 lg:top-6.5 lg:right-26.5" />
+          <TrackAnchor className="absolute bottom-5 left-11 lg:bottom-6.5 lg:left-26.5" />
+        </>
+      }
     />
   );
 }
