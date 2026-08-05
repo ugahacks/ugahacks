@@ -1184,6 +1184,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/canvas-confetti@npm:^1.9.0":
+  version: 1.9.0
+  resolution: "@types/canvas-confetti@npm:1.9.0"
+  checksum: 10/7c7423972465d21fc70a7842091735c51875bb7b4466bb623f11462de247272497c5e4a668aad6033e4bf5be3aaf0b57b059c9b26ac02592f4e02df423b86982
+  languageName: node
+  linkType: hard
+
 "@types/estree@npm:^1.0.6":
   version: 1.0.9
   resolution: "@types/estree@npm:1.0.9"
@@ -1810,10 +1817,12 @@ __metadata:
   dependencies:
     "@radix-ui/react-accordion": "npm:^1.2.20"
     "@tailwindcss/postcss": "npm:^4.3.3"
+    "@types/canvas-confetti": "npm:^1.9.0"
     "@types/node": "npm:^20.19.43"
     "@types/react": "npm:^19.2.17"
     "@types/react-dom": "npm:^19.2.3"
     babel-plugin-react-compiler: "npm:1.0.0"
+    canvas-confetti: "npm:^1.9.4"
     eslint: "npm:^9.39.5"
     eslint-config-next: "npm:16.2.10"
     next: "npm:16.2.10"
@@ -1870,6 +1879,13 @@ __metadata:
   version: 1.0.30001806
   resolution: "caniuse-lite@npm:1.0.30001806"
   checksum: 10/25d4ed6a2f03f51519bf302739cbe53e5522205607e47455cfcf19fdde975f2fdb890b78ead7b18961d5635ee676f03c73dea1ef30e9ef1d3fe11b9f02485f86
+  languageName: node
+  linkType: hard
+
+"canvas-confetti@npm:^1.9.4":
+  version: 1.9.4
+  resolution: "canvas-confetti@npm:1.9.4"
+  checksum: 10/98d9b8a3d5951a4a65d426e7bbcc24ccaca6a86f1a86b0f6017436c165a5e95724ca2d2c1aa4e1fc9ac2138ee107403cf1bf5a45c1e8bb34d21444a42acd503a
   languageName: node
   linkType: hard
 

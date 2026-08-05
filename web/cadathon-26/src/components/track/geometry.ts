@@ -182,3 +182,53 @@ export function arcLengthAtY(knots: ScrollKnot[], y: number): number {
   const t = (y - a.vy) / (b.vy - a.vy || 1);
   return a.s + t * (b.s - a.s);
 }
+
+/**
+ * Inverse of arcLengthAtY: the virtual scroll y at which the car reaches a
+ * given arc length. Needed to place the car on a specific point of the path
+ * (the `start` anchor), because toScrollMap rescales the y axis to pay for
+ * horizontal runs -- so asking for the anchor's own y would land the car
+ * somewhere past it, further along the more the route zigzags.
+ */
+export function scrollYAtArcLength(knots: ScrollKnot[], s: number): number {
+  if (knots.length === 0) return 0;
+  if (s <= knots[0].s) return knots[0].vy;
+  const last = knots[knots.length - 1];
+  if (s >= last.s) return last.vy;
+  let lo = 0;
+  let hi = knots.length - 1;
+  while (hi - lo > 1) {
+    const mid = (lo + hi) >> 1;
+    if (knots[mid].s <= s) lo = mid;
+    else hi = mid;
+  }
+  const a = knots[lo];
+  const b = knots[hi];
+  const t = (s - a.s) / (b.s - a.s || 1);
+  return a.vy + t * (b.vy - a.vy);
+}
+
+/**
+ * Interpolates the *drawn path's* own y → arc-length mapping (as opposed to
+ * arcLengthAtY's rescaled scroll map). Used to find how far along the track a
+ * particular anchor sits, e.g. the "finish" anchor the car stops at even
+ * though the path itself keeps going further (see RaceTrack's carMaxLength).
+ * Since the tail past that anchor is a straight, unturning run, linear
+ * interpolation between its bracketing knots is exact.
+ */
+export function arcLengthAtPathY(knots: PathKnot[], y: number): number {
+  if (knots.length === 0) return 0;
+  if (y <= knots[0].y) return knots[0].s;
+  if (y >= knots[knots.length - 1].y) return knots[knots.length - 1].s;
+  let lo = 0;
+  let hi = knots.length - 1;
+  while (hi - lo > 1) {
+    const mid = (lo + hi) >> 1;
+    if (knots[mid].y <= y) lo = mid;
+    else hi = mid;
+  }
+  const a = knots[lo];
+  const b = knots[hi];
+  const t = (y - a.y) / (b.y - a.y || 1);
+  return a.s + t * (b.s - a.s);
+}

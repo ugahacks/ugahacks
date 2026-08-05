@@ -1,5 +1,6 @@
 "use client";
 
+import confetti from "canvas-confetti";
 import {
   PropsWithChildren,
   useCallback,
@@ -8,14 +9,15 @@ import {
   useRef,
   useState,
 } from "react";
-import { TrackContext, TrackRegistry } from "./context";
+import { AnchorOptions, TrackContext, TrackRegistry } from "./context";
 import {
-  ElbowRoute,
   ScrollKnot,
   Waypoint,
+  arcLengthAtPathY,
   arcLengthAtY,
   buildPolyline,
   buildTrack,
+  scrollYAtArcLength,
   toScrollMap,
 } from "./geometry";
 
@@ -39,15 +41,29 @@ const CAR_SCREEN_Y = 0.4;
  * the finish line no matter how far the user scrolled.
  */
 const CAR_PIN_TO = 0.8;
+/**
+ * Scroll fraction over which the car eases from a `start` anchor's position up
+ * to CAR_SCREEN_Y. Without a start anchor the car simply begins at the pinned
+ * height and this does nothing.
+ */
+const CAR_PIN_FROM = 0.1;
 /** The sprite faces "up", so its heading is the path tangent rotated 90°. */
 const SPRITE_HEADING_OFFSET = 90;
 
-/** Viewport fraction the car sits at, for a 0..1 scroll progress. Monotone, so
- *  the car never travels backwards as the page scrolls. */
-function carScreenFraction(progress: number) {
-  if (progress <= CAR_PIN_TO) return CAR_SCREEN_Y;
-  const t = (progress - CAR_PIN_TO) / (1 - CAR_PIN_TO);
-  return CAR_SCREEN_Y + t * (1 - CAR_SCREEN_Y);
+/**
+ * Viewport fraction the car sits at, for a 0..1 scroll progress. Monotone
+ * (given startFraction <= CAR_SCREEN_Y), so the car never travels backwards as
+ * the page scrolls: it rises from startFraction to the pinned height, holds
+ * there, then eases to the bottom of the viewport for the finish.
+ */
+function carScreenFraction(progress: number, startFraction: number) {
+  if (progress >= CAR_PIN_TO) {
+    const t = (progress - CAR_PIN_TO) / (1 - CAR_PIN_TO);
+    return CAR_SCREEN_Y + t * (1 - CAR_SCREEN_Y);
+  }
+  if (progress >= CAR_PIN_FROM) return CAR_SCREEN_Y;
+  const t = progress / CAR_PIN_FROM;
+  return startFraction + t * (CAR_SCREEN_Y - startFraction);
 }
 
 /**
@@ -67,8 +83,15 @@ export default function RaceTrack({ children }: PropsWithChildren) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const pathRef = useRef<SVGPathElement>(null);
   const carRef = useRef<HTMLDivElement>(null);
-  const anchorsRef = useRef(new Map<HTMLElement, ElbowRoute | undefined>());
+  const anchorsRef = useRef(new Map<HTMLElement, AnchorOptions>());
   const scrollMapRef = useRef<ScrollKnot[]>([]);
+  // How far along the drawn path the car is allowed to travel -- equal to the
+  // path's full length unless a `finish` anchor cuts it short (see Footer).
+  const carMaxLengthRef = useRef(0);
+  // Scroll-map y to ask for when the page is scrolled to the top, so the car
+  // lands on the `start` anchor; null leaves it at its pinned screen height.
+  const carStartYRef = useRef<number | null>(null);
+  const finishedRef = useRef(false);
   const wrapperTopRef = useRef(0);
   const measureFrameRef = useRef(0);
   const scrollFrameRef = useRef(0);
@@ -89,12 +112,23 @@ export default function RaceTrack({ children }: PropsWithChildren) {
       document.documentElement.scrollHeight - window.innerHeight;
     const progress =
       maxScroll > 0 ? Math.min(Math.max(window.scrollY / maxScroll, 0), 1) : 1;
+    // The screen fraction that puts the car on the start anchor at scroll 0.
+    // Capped at CAR_SCREEN_Y so a short viewport (where the anchor sits below
+    // the pinned line) can't make the car drive backwards as it eases up.
+    const startY = carStartYRef.current;
+    const startFraction =
+      startY === null
+        ? CAR_SCREEN_Y
+        : Math.min(
+            (startY + wrapperTopRef.current) / window.innerHeight,
+            CAR_SCREEN_Y,
+          );
     const targetY =
       window.scrollY +
-      window.innerHeight * carScreenFraction(progress) -
+      window.innerHeight * carScreenFraction(progress, startFraction) -
       wrapperTopRef.current;
     const total = path.getTotalLength();
-    const s = Math.min(arcLengthAtY(knots, targetY), total);
+    const s = Math.min(arcLengthAtY(knots, targetY), carMaxLengthRef.current);
     const p = path.getPointAtLength(s);
     const ahead = path.getPointAtLength(Math.min(s + 1, total));
     const behind = path.getPointAtLength(Math.max(s - 1, 0));
@@ -102,6 +136,27 @@ export default function RaceTrack({ children }: PropsWithChildren) {
       (Math.atan2(ahead.y - behind.y, ahead.x - behind.x) * 180) / Math.PI;
     car.style.transform = `translate(${p.x}px, ${p.y}px) rotate(${angle + SPRITE_HEADING_OFFSET}deg)`;
     car.style.opacity = "1";
+
+    // Fires once, the first frame the car reaches (or would overshoot) the
+    // finish anchor -- from wherever it's currently on screen, since the car
+    // may still be mid-viewport rather than pinned to CAR_SCREEN_Y yet.
+    if (
+      !finishedRef.current &&
+      carMaxLengthRef.current > 0 &&
+      s >= carMaxLengthRef.current
+    ) {
+      finishedRef.current = true;
+      const rect = car.getBoundingClientRect();
+      confetti({
+        particleCount: 140,
+        spread: 90,
+        startVelocity: 45,
+        origin: {
+          x: rect.x / window.innerWidth,
+          y: rect.y / window.innerHeight,
+        },
+      });
+    }
   }, []);
 
   const measure = useCallback(() => {
@@ -117,20 +172,40 @@ export default function RaceTrack({ children }: PropsWithChildren) {
           ? -1
           : 1,
       );
+    let startY: number | null = null;
+    let finishY: number | null = null;
     const waypoints: Waypoint[] = els.map((el) => {
       const rect = el.getBoundingClientRect();
-      return {
-        x: rect.x - wrapperRect.x,
-        y: rect.y - wrapperRect.y,
-        route: anchorsRef.current.get(el),
-      };
+      const y = rect.y - wrapperRect.y;
+      const options = anchorsRef.current.get(el);
+      if (options?.start) startY = y;
+      if (options?.finish) finishY = y;
+      return { x: rect.x - wrapperRect.x, y, route: options?.route };
     });
 
     const metrics = window.innerWidth >= WIDE_AT ? WIDE : NARROW;
-    setTrackWidth(metrics.track);
     const track = buildTrack(buildPolyline(waypoints), metrics.corner);
-    scrollMapRef.current = toScrollMap(track.knots);
+
+    // Draw the road before working out anything about the car, so a fault in
+    // the car bookkeeping can only cost us the car. Set after, this state
+    // never lands and the whole overlay silently disappears with no way back
+    // short of a reload -- the road is the part that must not be fragile.
+    setTrackWidth(metrics.track);
     setD(track.d);
+
+    scrollMapRef.current = toScrollMap(track.knots);
+    carMaxLengthRef.current =
+      finishY === null ? track.length : arcLengthAtPathY(track.knots, finishY);
+    // Asked for in scroll-map coordinates, not the anchor's own y: the two
+    // differ because toScrollMap rescales the axis to pay for horizontal runs,
+    // and by the anchor's y alone the car would sit some way past it.
+    carStartYRef.current =
+      startY === null
+        ? null
+        : scrollYAtArcLength(
+            scrollMapRef.current,
+            arcLengthAtPathY(track.knots, startY),
+          );
     // If d is unchanged the effect below won't re-run, but the car may still
     // need to move (e.g. the wrapper shifted); reposition on the next frame so
     // a changed path has been committed first.
@@ -147,8 +222,8 @@ export default function RaceTrack({ children }: PropsWithChildren) {
 
   const registry = useMemo<TrackRegistry>(
     () => ({
-      register(el, route) {
-        anchorsRef.current.set(el, route);
+      register(el, options) {
+        anchorsRef.current.set(el, options);
         scheduleMeasure();
         return () => {
           anchorsRef.current.delete(el);
