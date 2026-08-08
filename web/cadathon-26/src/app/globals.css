@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-heading: var(--font-orbitron);
+  --font-tagline: var(--font-barlow-condensed);
+  --font-wordmark: var(--font-zalando-sans-expanded);
+  --font-sans: var(--font-inter);
+  --animate-checkers-marquee: checkers-marquee 12s linear infinite;
+
+  /* Hard-edged offset shadows -- no blur, no spread -- for the brutalist
+     treatment on buttons, cards, badges, and accordion items. Cast down and to
+     the left, as though the light source sits above and to the right. */
+  --shadow-brutal: -0.25rem 0.25rem 0 0 var(--color-black);
+  --shadow-brutal-lg: -0.5rem 0.5rem 0 0 var(--color-black);
+
+  /* Mirrored variants, for elements that hang off the opposite edge of the
+     layout and should throw their shadow the other way. */
+  --shadow-brutal-flipped: 0.25rem 0.25rem 0 0 var(--color-black);
+  --shadow-brutal-flipped-lg: 0.5rem 0.5rem 0 0 var(--color-black);
+}
+
+/* Honour the OS-level "reduce motion" setting everywhere at once: the
+   checkers marquee, hover scales, the accordion, and the carousel's smooth
+   scrolling all collapse to instant rather than being animated. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes checkers-marquee {
+  to {
+    /* one background tile is exactly 100cqh wide (bg-size-[auto_100%] on a
+       square image), so this shifts by exactly one period and loops seamlessly */
+    background-position-x: -100cqh;
+  }
+}
+
+@utility text-border {
+  -webkit-text-stroke-width: 1px;
+  paint-order: stroke fill;
+}
+
+@utility text-border-* {
+  -webkit-text-stroke-width: calc(--value(number) * 1px);
+  -webkit-text-stroke-width: --value([length]);
+  -webkit-text-stroke-color: --value(--color-*, [color]);
+  paint-order: stroke fill;
+}

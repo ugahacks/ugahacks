@@ -5,7 +5,8 @@
   "repository": "",
   "license": "MIT",
   "workspaces": [
-    "web/*"
+    "web/*",
+    "!web/cadathon-26"
   ],
   "scripts": {
     "husky-init": "husky install"
