@@ -320,6 +320,29 @@ jobs:
           echo ${{ steps.deploy_makeathon_2.outputs.url }}
         if: contains(steps.file_changes.outputs.files , 'makeathon-2')
 
+      # Cadathon 26
+      - name: Build and Push cadathon-26 Container
+        run: |-
+          echo "cadathon-26 changed, building ..."
+          docker build -t us-east1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/cadathon-26:${{ github.sha }} web/cadathon-26
+          docker push us-east1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/cadathon-26:${{ github.sha }}
+        if: contains(steps.file_changes.outputs.files , 'cadathon-26')
+
+      - name: Deploy cadathon-26 to Cloud Run
+        id: deploy_cadathon_26
+        uses: google-github-actions/deploy-cloudrun@v0.4.0
+        with:
+          service: cadathon-26-${{ env.DEPLOY_ENV }}
+          image: us-east1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/cadathon-26:${{ github.sha }}
+          region: us-east1
+        if: contains(steps.file_changes.outputs.files , 'cadathon-26')
+
+      - name: cadathon-26 Post Deployment
+        run: |-
+          echo "Active URL:"
+          echo ${{ steps.deploy_cadathon_26.outputs.url }}
+        if: contains(steps.file_changes.outputs.files , 'cadathon-26')
+
       # Makeathon 3
       - name: Build and Push makeathon-3 Container
         run: |-
