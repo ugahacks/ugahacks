@@ -6,6 +6,7 @@ import {
   RiInstagramFill,
   RiLinkedinFill,
 } from "react-icons/ri";
+import bg from "~/assets/bg.png";
 import RoadTexture from "./RoadTexture";
 import TrackAnchor from "./track/TrackAnchor";
 
@@ -40,7 +41,10 @@ const HOVER =
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[url(/bg.png)] bg-cover bg-center text-zinc-950/40">
+    <footer
+      className="relative bg-cover bg-center text-zinc-950/40"
+      style={{ backgroundImage: `url(${bg.src})` }}
+    >
       {/* Matches the hero's treatment so the page opens and closes the same. */}
       <div aria-hidden className="absolute inset-0 z-0 bg-zinc-950/45" />
       <RoadTexture />

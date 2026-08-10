@@ -166,7 +166,7 @@ of it (which `finish` anchors, being plain lane continuations, always do).
 
 ## The car
 
-The car (`/racer-byte.png` placeholder — swap the `<img>` in `RaceTrack.tsx`
+The car (`src/assets/racer-byte.png` placeholder — swap the `<img>` in `RaceTrack.tsx`
 when a real sprite exists) rides at a fixed screen height (`CAR_SCREEN_Y`, 40%
 of the viewport) and drives down the page with scroll. It eases into and out
 of that height at the two ends:

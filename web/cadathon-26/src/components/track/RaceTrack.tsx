@@ -9,6 +9,8 @@ import {
   useRef,
   useState,
 } from "react";
+import racerByte from "~/assets/racer-byte.png";
+import road from "~/assets/road.svg";
 import { AnchorOptions, TrackContext, TrackRegistry } from "./context";
 import {
   ScrollKnot,
@@ -68,7 +70,7 @@ function carScreenFraction(progress: number, startFraction: number) {
 
 /**
  * Wraps the page content and draws the race track overlay above it: a black
- * road with rounded 90° turns, asphalt grain (the same /road.svg alpha tile
+ * road with rounded 90° turns, asphalt grain (the same road.svg alpha tile
  * RoadTexture uses), and a dashed white centerline, routed through every
  * visible <TrackAnchor> in DOM order. Anchor positions are re-measured on
  * resize and on any layout change of the wrapper, so the track follows the
@@ -285,7 +287,7 @@ export default function RaceTrack({ children }: PropsWithChildren) {
                   width={700}
                   height={700}
                 >
-                  <image href="/road.svg" width={700} height={700} />
+                  <image href={road.src} width={700} height={700} />
                 </pattern>
                 {/* road.svg only carries alpha (see RoadTexture), so tile it
                     into an alpha mask and pick the grain color via stroke. */}
@@ -332,7 +334,7 @@ export default function RaceTrack({ children }: PropsWithChildren) {
         >
           <img
             alt=""
-            src="/racer-byte.png"
+            src={racerByte.src}
             className="absolute top-0 left-0 w-12 max-w-none -translate-x-1/2 -translate-y-1/2 lg:w-16"
           />
         </div>

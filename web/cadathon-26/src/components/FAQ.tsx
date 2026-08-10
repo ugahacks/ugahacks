@@ -3,6 +3,8 @@
 import * as Accordion from "@radix-ui/react-accordion";
 import { ReactNode, useState } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
+import bg from "~/assets/bg.png";
+import pitStop from "~/assets/pit-stop.svg";
 import RoadTexture from "./RoadTexture";
 import TrackAnchor from "./track/TrackAnchor";
 
@@ -79,7 +81,10 @@ export default function FAQ() {
   const [open, setOpen] = useState("");
 
   return (
-    <div className="relative bg-[url(/bg.png)] bg-cover bg-center text-zinc-950/40">
+    <div
+      className="relative bg-cover bg-center text-zinc-950/40"
+      style={{ backgroundImage: `url(${bg.src})` }}
+    >
       {/* Same hero photo, knocked back further than the hero and footer so the
           accordion reads clearly on top of it. */}
       <div aria-hidden className="absolute inset-0 z-0 bg-zinc-950/65" />
@@ -175,7 +180,7 @@ export default function FAQ() {
                 442x566, making that overhang (566/442 - 1) / 2 = 14% of the
                 width, translated back to sit flush right at either size. */}
             <img
-              src="/pit-stop.svg"
+              src={pitStop.src}
               alt=""
               className="w-48 translate-x-[-14%] -rotate-90 sm:w-38"
             />

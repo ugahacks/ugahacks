@@ -1,11 +1,17 @@
 import { RiCalendarEventFill, RiMapPinFill } from "react-icons/ri";
+import bg from "~/assets/bg.png";
+import cdFlag from "~/assets/cd-flag.png";
+import racerByte from "~/assets/racer-byte.png";
 import LinkButton from "./LinkButton";
 import RoadTexture from "./RoadTexture";
 import TrackAnchor from "./track/TrackAnchor";
 
 export default function Landing() {
   return (
-    <div className="relative max-h-256 bg-[url(/bg.png)] bg-cover bg-center text-zinc-950/40">
+    <div
+      className="relative max-h-256 bg-cover bg-center text-zinc-950/40"
+      style={{ backgroundImage: `url(${bg.src})` }}
+    >
       {/* No z-index on this wrapper: it would take the photo, the scrim, and
           the grain up with it and hide the road behind the whole section.
           Only the header below is lifted above the road (z-20). */}
@@ -32,7 +38,7 @@ export default function Landing() {
           level no matter what its children ask for. */}
       <header className="relative z-40 flex flex-col items-center gap-8 py-24 pr-22 pl-6 text-white sm:gap-10 lg:gap-12 lg:py-32 lg:pr-53 lg:pl-20">
         <div className="flex flex-col items-center gap-1 lg:flex-row lg:gap-6">
-          <img className="h-25 sm:h-32 lg:h-40" alt="" src="/racer-byte.png" />
+          <img className="h-25 sm:h-32 lg:h-40" alt="" src={racerByte.src} />
 
           <div className="flex flex-col">
             {/* Where the car parks at the top of the page. The spacer takes
@@ -51,7 +57,7 @@ export default function Landing() {
                 </span>
                 <span className="tracking-tighter text-border-6">Hacks</span>
               </h1>
-              <img className="h-[0.8em]" alt="" src="/cd-flag.png" />
+              <img className="h-[0.8em]" alt="" src={cdFlag.src} />
             </div>
             <p className="flex items-center font-tagline text-2xl font-bold tracking-widest text-pink-300 uppercase italic text-border-4 text-border-black sm:text-3xl lg:text-4xl">
               <span>Drive</span>
