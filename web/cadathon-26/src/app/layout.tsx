@@ -6,6 +6,7 @@ import {
   Zalando_Sans_Expanded,
 } from "next/font/google";
 import "./globals.css";
+import PageBackdrop from "~/components/PageBackdrop";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "~/lib/site";
 
 const orbitron = Orbitron({
@@ -81,6 +82,7 @@ export default function RootLayout({
       className={`${orbitron.variable} ${barlowCondensed.variable} ${zalandoSansExpanded.variable} ${inter.variable} h-full bg-black antialiased`}
     >
       <body className="mx-auto flex min-h-full max-w-360 flex-col">
+        <PageBackdrop />
         {children}
       </body>
     </html>
