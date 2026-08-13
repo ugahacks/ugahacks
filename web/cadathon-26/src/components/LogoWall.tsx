@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ReactNode } from "react";
 import RoadTexture from "./RoadTexture";
 
@@ -25,19 +26,28 @@ interface Props {
   anchor?: ReactNode;
 }
 
+// Relative: the fixed size here is what an <Image fill> logo below sizes
+// itself against.
 const SLOT =
-  "flex h-24 w-40 items-center justify-center rounded-lg sm:h-28 sm:w-48";
+  "relative flex h-24 w-40 items-center justify-center rounded-lg sm:h-28 sm:w-48";
 const PLACEHOLDER =
   "border-2 border-dashed border-white/40 bg-black/20 px-3 text-center font-heading text-xs leading-tight font-bold tracking-wide text-white/80 uppercase";
 const INTERACTIVE =
   "group transition duration-200 hover:scale-105 hover:drop-shadow-lg hover:drop-shadow-black/40";
 
 function LogoSlot({ name, abbr, src, href }: Logo) {
+  // `src` is a runtime public/ path, not a build-time import, so its
+  // intrinsic size isn't known -- `fill` (sized against SLOT's own fixed
+  // dimensions, see above) plus object-contain reproduces the same
+  // "shrink to fit, keep the logo's own aspect ratio" behavior the plain
+  // <img>'s max-h-full/max-w-full had.
   const body = src ? (
-    <img
+    <Image
       src={src}
       alt={name ?? ""}
-      className="max-h-full max-w-full object-contain grayscale transition duration-200 group-hover:grayscale-0"
+      fill
+      sizes="(min-width: 640px) 12rem, 10rem"
+      className="object-contain grayscale transition duration-200 group-hover:grayscale-0"
     />
   ) : (
     (abbr ?? name ?? "Your logo here")

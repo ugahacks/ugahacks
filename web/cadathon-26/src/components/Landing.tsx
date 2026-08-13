@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { RiCalendarEventFill, RiMapPinFill } from "react-icons/ri";
 import bg from "~/assets/bg.png";
 import cdFlag from "~/assets/cd-flag.png";
@@ -38,7 +39,7 @@ export default function Landing() {
           level no matter what its children ask for. */}
       <header className="relative z-40 flex flex-col items-center gap-8 py-24 pr-23.5 pl-6 text-white sm:gap-10 lg:gap-12 lg:py-32 lg:pr-58 lg:pl-20">
         <div className="flex flex-col items-center gap-1 lg:flex-row lg:gap-6">
-          <img className="h-25 sm:h-32 lg:h-40" alt="" src={racerByte.src} />
+          <Image className="h-25 sm:h-32 lg:h-40" alt="" src={racerByte} />
 
           <div className="flex flex-col">
             {/* Where the car parks at the top of the page. The spacer takes
@@ -57,7 +58,7 @@ export default function Landing() {
                 </span>
                 <span className="tracking-tighter text-border-6">Hacks</span>
               </h1>
-              <img className="h-[0.8em]" alt="" src={cdFlag.src} />
+              <Image className="h-[0.8em]" alt="" src={cdFlag} />
             </div>
             <p className="flex items-center font-tagline text-2xl font-bold tracking-widest text-pink-300 uppercase italic text-border-4 text-border-black sm:text-3xl lg:text-4xl">
               <span>Drive</span>
@@ -89,7 +90,9 @@ export default function Landing() {
         </ul>
 
         <p className="text-xl sm:text-2xl">
-          <LinkButton href="https://docs.google.com/forms/d/e/1FAIpQLSe7VHsEgkfyVJ9Z_MZB0ztxCNhfWL_72zP9Igy-Stq0byW41w/viewform">Pre-Register Now!</LinkButton>
+          <LinkButton href="https://docs.google.com/forms/d/e/1FAIpQLSe7VHsEgkfyVJ9Z_MZB0ztxCNhfWL_72zP9Igy-Stq0byW41w/viewform">
+            Pre-Register Now!
+          </LinkButton>
         </p>
       </header>
     </div>

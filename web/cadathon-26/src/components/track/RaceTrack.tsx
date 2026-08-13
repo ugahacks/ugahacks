@@ -1,6 +1,7 @@
 "use client";
 
 import confetti from "canvas-confetti";
+import Image from "next/image";
 import {
   PropsWithChildren,
   useCallback,
@@ -726,9 +727,9 @@ export default function RaceTrack({ children }: PropsWithChildren) {
           ref={carRef}
           className="pointer-events-none absolute top-0 left-0 z-30 size-0 opacity-0"
         >
-          <img
+          <Image
             alt=""
-            src={racecar.src}
+            src={racecar}
             className="absolute top-0 left-0 max-w-none -translate-x-1/2 -translate-y-1/2"
             style={{ height: trackWidth * CAR_SIZE_RATIO }}
           />

@@ -1,6 +1,7 @@
 "use client";
 
 import * as Accordion from "@radix-ui/react-accordion";
+import Image from "next/image";
 import { ReactNode, useState } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
 import bg from "~/assets/bg.png";
@@ -179,8 +180,8 @@ export default function FAQ() {
                 edge by half the difference between the two: the artwork is
                 442x566, making that overhang (566/442 - 1) / 2 = 14% of the
                 width, translated back to sit flush right at either size. */}
-            <img
-              src={pitStop.src}
+            <Image
+              src={pitStop}
               alt=""
               className="w-48 translate-x-[-14%] -rotate-90 sm:w-38"
             />
