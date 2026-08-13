@@ -89,7 +89,7 @@ export default function Landing() {
         </ul>
 
         <p className="text-xl sm:text-2xl">
-          <LinkButton href="/">Register Now!</LinkButton>
+          <LinkButton href="https://docs.google.com/forms/d/e/1FAIpQLSe7VHsEgkfyVJ9Z_MZB0ztxCNhfWL_72zP9Igy-Stq0byW41w/viewform">Pre-Register Now!</LinkButton>
         </p>
       </header>
     </div>
