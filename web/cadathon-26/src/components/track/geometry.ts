@@ -132,6 +132,67 @@ export function buildTrack(pts: Point[], cornerRadius: number): TrackGeometry {
 }
 
 /**
+ * Standalone arcs, one per turn in the polyline, for painting a curb along
+ * each corner -- independent of buildTrack so the main path's own geometry
+ * (and its arc-length knots) are untouched by this. Each arc is concentric
+ * with buildTrack's own fillet at that corner (same center, same angular
+ * span, radius pushed out by `offset`), which is what makes it trace the
+ * track's actual outer edge rather than an unrelated circle that happens to
+ * touch the same two tangent lines -- offsetting a circular arc at a fixed
+ * center is exact, unlike recomputing start/end from the corner point at the
+ * new radius, which shifts the center too and sends the arc cutting across
+ * the road instead of hugging it. `offset` is positive to hug the outside of
+ * the turn, negative for the inside. The result is clamped so the shifted
+ * endpoints don't reach past the adjacent waypoints (corners too tight for
+ * that, or whose radius would go non-positive, are skipped rather than drawn
+ * overshooting or inverted).
+ */
+export function buildCurbArcs(
+  pts: Point[],
+  cornerRadius: number,
+  offset: number,
+): string[] {
+  const arcs: string[] = [];
+  const segLen = (i: number) =>
+    Math.abs(pts[i + 1].x - pts[i].x) + Math.abs(pts[i + 1].y - pts[i].y);
+  const unit = (from: Point, to: Point): Point => ({
+    x: Math.sign(to.x - from.x),
+    y: Math.sign(to.y - from.y),
+  });
+  const fmt = (n: number) => Number(n.toFixed(2));
+
+  for (let i = 1; i < pts.length - 1; i++) {
+    const corner = pts[i];
+    const base = Math.min(cornerRadius, segLen(i - 1) / 2, segLen(i) / 2);
+    if (base < 0.01) continue;
+    const u = unit(pts[i - 1], corner);
+    const v = unit(corner, pts[i + 1]);
+    // Room left beyond the main fillet's own tangent point before the
+    // shifted endpoint would pass the next waypoint.
+    const room = Math.min(segLen(i - 1), segLen(i)) - base;
+    const delta = Math.min(Math.max(offset, -base + 1), Math.max(room, 0));
+    const r = base + delta;
+    if (r < 1) continue;
+    // C = corner + base*(v - u): the fillet's own center, derived from the
+    // fact that it's equidistant (base) from both tangent lines at a 90°
+    // corner. Scaling the vectors from C to the fillet's tangent points by
+    // r/base -- equivalently, -v*r and u*r from C -- gives the concentric
+    // point at radius r.
+    const center = {
+      x: corner.x + base * (v.x - u.x),
+      y: corner.y + base * (v.y - u.y),
+    };
+    const start = { x: center.x - v.x * r, y: center.y - v.y * r };
+    const end = { x: center.x + u.x * r, y: center.y + u.y * r };
+    const sweep = u.x * v.y - u.y * v.x > 0 ? 1 : 0;
+    arcs.push(
+      `M ${fmt(start.x)} ${fmt(start.y)} A ${fmt(r)} ${fmt(r)} 0 0 ${sweep} ${fmt(end.x)} ${fmt(end.y)}`,
+    );
+  }
+  return arcs;
+}
+
+/**
  * Fraction of arc length that counts as scroll progress on stretches where the
  * track doesn't descend (horizontal runs, corners, upward jogs). Higher means
  * those stretches consume more scroll (car crosses them slower but drifts

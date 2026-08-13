@@ -16,13 +16,13 @@ export default function Sponsors() {
      breakpoint -- the crossing that used to split this section from Partners
      now lives entirely inside Partners (see Partners.tsx), so Sponsors needs
      no anchor of its own, just the left-side gutter. LogoWall's own section
-     already contributes G (32px, 80px at lg) on both sides, so the extra here
+     already contributes G (24px, 80px at lg) on both sides, so the extra here
      brings the left side up to 2G + track width. */
   return (
     <LogoWall
       heading="Sponsors"
       logos={SPONSORS}
-      className="bg-lime-600 pl-16 text-lime-950/25 lg:pl-33"
+      className="bg-lime-600 pl-17.5 text-lime-950/25 lg:pl-38"
     >
       <p className="self-center text-xl sm:text-2xl">
         <LinkButton invert href={SPONSORSHIP_PACKET}>

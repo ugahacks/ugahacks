@@ -26,15 +26,15 @@ export default function Partners() {
     <LogoWall
       heading="Partners"
       logos={PARTNERS}
-      // The extra vertical padding is exactly one track width (52px at lg),
-      // which is what the crossings eat out of the top and bottom. LogoWall's
-      // own py-* is then what's left between road and content -- the same
-      // clear space Sponsors has, which has no crossing to pay for.
-      className="bg-pink-500 py-10 pr-16 text-pink-950/25 lg:py-13 lg:pr-33"
+      // The extra vertical padding is exactly one track width (46px, 72px at
+      // lg), which is what the crossings eat out of the top and bottom.
+      // LogoWall's own py-* is then what's left between road and content --
+      // the same clear space Sponsors has, which has no crossing to pay for.
+      className="bg-pink-500 py-11.5 pr-17.5 text-pink-950/25 lg:py-18 lg:pr-38"
       anchor={
         <>
-          <TrackAnchor className="absolute top-5 right-11 lg:top-6.5 lg:right-26.5" />
-          <TrackAnchor className="absolute bottom-5 left-11 lg:bottom-6.5 lg:left-26.5" />
+          <TrackAnchor className="absolute top-5.75 right-11.75 lg:top-9 lg:right-29" />
+          <TrackAnchor className="absolute bottom-5.75 left-11.75 lg:bottom-9 lg:left-29" />
         </>
       }
     />

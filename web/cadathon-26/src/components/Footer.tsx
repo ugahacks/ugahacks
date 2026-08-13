@@ -55,16 +55,16 @@ export default function Footer() {
           just past the finish-line divider above the footer. */}
       <TrackAnchor
         finish
-        className="absolute top-10 left-11 lg:top-14 lg:left-26.5"
+        className="absolute top-10 left-11.75 lg:top-14 lg:left-29"
       />
 
       {/* The road itself keeps going past that, all the way to the literal
           bottom of the page -- only the car stops short, at the anchor
           above. Same lane, so this is a straight continuation, not a
           crossing. */}
-      <TrackAnchor className="absolute bottom-0 left-11 lg:left-26.5" />
+      <TrackAnchor className="absolute bottom-0 left-11.75 lg:left-29" />
 
-      <div className="relative z-0 mx-auto flex w-full max-w-5xl flex-col items-center gap-8 py-10 pr-6 pl-22 text-white sm:py-12 lg:pr-20 lg:pl-53">
+      <div className="relative z-0 mx-auto flex w-full max-w-5xl flex-col items-center gap-8 py-10 pr-6 pl-23.5 text-white sm:py-12 lg:pr-20 lg:pl-58">
         <div className="flex flex-col items-center gap-2">
           <p className="font-heading text-xs leading-none font-bold tracking-widest uppercase text-border-3 text-border-black">
             Follow Us

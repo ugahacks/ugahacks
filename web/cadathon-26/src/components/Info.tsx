@@ -22,11 +22,11 @@ export default function Info() {
               passes to the right of this one and to the left of the next, so
               each adds extra padding on that side -- the section's own px-6
               contributes G (24px) on both sides already, so the extra here
-              (pr-16=64px) brings this side's total to 2G + track width
-              (88px), matching the gap on the other side of the road. Above
+              (pr-17.5=70px) brings this side's total to 2G + track width
+              (94px), matching the gap on the other side of the road. Above
               lg the self-start/mr-40 step already clears the road by a wide
               margin, so no equivalent lg extra is needed. */}
-          <div className="flex flex-col gap-6 max-lg:pr-16 sm:gap-8 lg:mr-40 lg:self-start">
+          <div className="flex flex-col gap-6 max-lg:pr-17.5 sm:gap-8 lg:mr-40 lg:self-start">
             <h1 className="font-heading text-3xl font-extrabold tracking-wide text-lime-400 text-border-5 text-border-black sm:text-4xl lg:text-5xl">
               What is a CADathon?
             </h1>
@@ -51,10 +51,10 @@ export default function Info() {
               from the spacer's flow position and its x from the section, which
               spans the full page width. */}
           <div className="h-0">
-            <TrackAnchor className="absolute left-11 lg:left-26.5" />
+            <TrackAnchor className="absolute left-11.75 lg:left-29" />
           </div>
 
-          <div className="flex flex-col gap-6 max-lg:pl-16 sm:gap-8 lg:ml-40 lg:self-end">
+          <div className="flex flex-col gap-6 max-lg:pl-17.5 sm:gap-8 lg:ml-40 lg:self-end">
             <h2 className="text-right font-heading text-3xl font-extrabold tracking-wide text-lime-400 text-border-5 text-border-black sm:text-4xl lg:text-5xl">
               Tools You Need
             </h2>

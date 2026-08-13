@@ -80,7 +80,7 @@ export default function LogoWall({
           against the section's edge still clears the content by a full flex
           gap. Sponsors has no crossing of its own but keeps the same figure,
           so the two sections stay a matched pair. */}
-      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-8 px-6 py-18 sm:gap-10 sm:py-20 lg:px-20 lg:py-23">
+      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-8 px-6 py-18.75 sm:gap-10 sm:py-20.75 lg:px-20 lg:py-24.5">
         <h1 className="text-center font-heading text-3xl font-extrabold tracking-wide text-white text-border-5 text-border-black sm:text-4xl lg:text-5xl">
           {heading}
         </h1>

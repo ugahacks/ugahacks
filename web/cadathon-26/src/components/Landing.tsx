@@ -25,7 +25,7 @@ export default function Landing() {
           from the edge by G + half the (wide) track width, same formula as
           the header's own pr-* below, so the gap from edge to track equals
           the gap from track to content on this side. */}
-      <TrackAnchor className="absolute top-0 right-11 lg:right-26.5" />
+      <TrackAnchor className="absolute top-0 right-11.75 lg:right-29" />
 
       {/* The road runs down the right here, so that side gets the wide gutter
           (2G + track width) and the content sits a little left of the
@@ -36,7 +36,7 @@ export default function Landing() {
           the header that's lifted, not the flag: the header would otherwise
           be a stacking context of its own and paint as one unit at its own
           level no matter what its children ask for. */}
-      <header className="relative z-40 flex flex-col items-center gap-8 py-24 pr-22 pl-6 text-white sm:gap-10 lg:gap-12 lg:py-32 lg:pr-53 lg:pl-20">
+      <header className="relative z-40 flex flex-col items-center gap-8 py-24 pr-23.5 pl-6 text-white sm:gap-10 lg:gap-12 lg:py-32 lg:pr-58 lg:pl-20">
         <div className="flex flex-col items-center gap-1 lg:flex-row lg:gap-6">
           <img className="h-25 sm:h-32 lg:h-40" alt="" src={racerByte.src} />
 
@@ -47,7 +47,7 @@ export default function Landing() {
                 road's lane, so it stays collinear with the run down the right
                 and doesn't bend the route. */}
             <div className="h-0">
-              <TrackAnchor start className="absolute right-11 lg:right-26.5" />
+              <TrackAnchor start className="absolute right-11.75 lg:right-29" />
             </div>
 
             <div className="flex items-center gap-2 text-6xl sm:text-7xl lg:text-8xl">

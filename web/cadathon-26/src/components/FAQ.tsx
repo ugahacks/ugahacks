@@ -99,10 +99,10 @@ export default function FAQ() {
           heading has below it. leading-none on the heading is what makes that
           arithmetic hold, since the default line-height would otherwise pad
           the below side further than the above. */}
-      <TrackAnchor className="absolute top-5 right-11 lg:top-6.5 lg:right-26.5" />
-      <TrackAnchor className="absolute bottom-5 left-11 lg:bottom-6.5 lg:left-26.5" />
+      <TrackAnchor className="absolute top-5.75 right-11.75 lg:top-9 lg:right-29" />
+      <TrackAnchor className="absolute bottom-5.75 left-11.75 lg:bottom-9 lg:left-29" />
 
-      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-8 py-18 pr-22 pl-6 sm:gap-10 sm:py-20 lg:py-23 lg:pr-53 lg:pl-20">
+      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-8 py-18.75 pr-23.5 pl-6 sm:gap-10 sm:py-20.75 lg:py-24.5 lg:pr-58 lg:pl-20">
         <h1 className="font-heading text-3xl leading-none font-extrabold tracking-wide text-white text-border-5 text-border-black sm:text-4xl lg:text-5xl">
           FAQ
         </h1>
