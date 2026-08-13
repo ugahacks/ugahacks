@@ -315,10 +315,29 @@ export default function Schedule() {
               ))}
             </div>
 
+            {/* `disabled` here is a pure function of `day` (a plain useState(0)),
+                so it can't actually differ between the server render and the
+                client's first hydration pass -- there's nothing async or
+                environment-dependent in that computation. It still shows up
+                as a hydration-mismatch warning on this exact attribute
+                sometimes, matching the class of cause React's own warning
+                text calls out: something mutating the DOM before hydration
+                (a browser extension that auto-enables disabled buttons is
+                the common case; a stale dev-server cache serving one
+                compiled chunk's HTML against a different chunk's client
+                bundle is another, dev-only one). Either way it's an
+                external mutation of this one boolean attribute, not a real
+                divergence in what the app itself renders, and `disabled`
+                gates only cosmetic behavior (`disabled:hidden` swaps this
+                redundant nav arrow for the scroll-snap track and the dots
+                below, both of which still work regardless) -- so it's
+                suppressed at the two elements it's actually been seen on
+                rather than left to warn on every load. */}
             <button
               type="button"
               onClick={() => go(day - 1)}
               disabled={day === 0}
+              suppressHydrationWarning
               aria-label="Previous day"
               className="absolute top-1/2 left-0 z-30 flex size-9 -translate-y-1/2 items-center justify-center rounded-full border-2 border-black bg-white text-xl text-pink-950 shadow-brutal-flipped transition disabled:hidden sm:size-11 sm:text-2xl lg:hidden"
             >
@@ -329,6 +348,7 @@ export default function Schedule() {
               type="button"
               onClick={() => go(day + 1)}
               disabled={day === SCHEDULE.length - 1}
+              suppressHydrationWarning
               aria-label="Next day"
               className="absolute top-1/2 right-0 z-30 flex size-9 -translate-y-1/2 items-center justify-center rounded-full border-2 border-black bg-white text-xl text-pink-950 shadow-brutal transition disabled:hidden sm:size-11 sm:text-2xl lg:hidden"
             >
