@@ -1,11 +1,11 @@
 import { getImageProps } from "next/image";
 import type { CSSProperties } from "react";
-import bg from "~/assets/bg.png";
+import bg from "~/assets/bg.webp";
 
 /**
  * The asphalt photo painted behind Landing, FAQ, and Footer. As a CSS
- * background it can't be an <Image>, which is how the raw 2.4MB PNG ended
- * up shipping unoptimized -- so this routes the same file through the
+ * background it can't be an <Image>, which is how it once shipped as an
+ * unoptimized 2.4MB PNG -- so this routes the same file through the
  * optimizer by hand: getImageProps yields the exact srcSet <Image> would
  * have rendered, remapped below into a CSS image-set(). Quality sits well
  * under the default 75 because the photo is always behind a dark scrim and
