@@ -183,7 +183,7 @@ export default function FAQ() {
             <Image
               src={pitStop}
               alt=""
-              className="w-48 translate-x-[-14%] -rotate-90 sm:w-38"
+              className="h-auto w-48 translate-x-[-14%] -rotate-90 sm:w-38"
             />
           </div>
         </div>

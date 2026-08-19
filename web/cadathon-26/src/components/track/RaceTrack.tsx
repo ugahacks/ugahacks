@@ -730,7 +730,7 @@ export default function RaceTrack({ children }: PropsWithChildren) {
           <Image
             alt=""
             src={racecar}
-            className="absolute top-0 left-0 max-w-none -translate-x-1/2 -translate-y-1/2"
+            className="absolute top-0 left-0 w-auto max-w-none -translate-x-1/2 -translate-y-1/2"
             style={{ height: trackWidth * CAR_SIZE_RATIO }}
           />
         </div>
