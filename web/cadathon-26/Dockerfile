@@ -25,7 +25,6 @@ ENV HOSTNAME=0.0.0.0
 # Requires output: "standalone" in next.config.ts
 COPY --from=build /app/.next/standalone ./
 COPY --from=build /app/.next/static ./.next/static
-COPY --from=build /app/public ./public
 
 EXPOSE 8080
 CMD ["node", "server.js"]
