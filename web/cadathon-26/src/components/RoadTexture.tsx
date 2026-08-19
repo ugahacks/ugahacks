@@ -1,3 +1,5 @@
+import road from "~/assets/road.svg";
+
 /**
  * Fills the containing element with a rough, asphalt-like grain texture that is
  * faint in the center and strongest at the left and right edges. The grain tile
@@ -13,7 +15,8 @@ export default function RoadTexture() {
   return (
     <div
       aria-hidden
-      className="pointer-events-none absolute inset-0 z-0 size-full bg-current mask-[url(/road.svg)] mask-intersect"
+      className="pointer-events-none absolute inset-0 z-0 size-full bg-current mask-intersect"
+      style={{ maskImage: `url(${road.src})` }}
     />
   );
 }

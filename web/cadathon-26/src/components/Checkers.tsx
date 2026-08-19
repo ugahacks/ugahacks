@@ -1,3 +1,5 @@
+import checkers from "~/assets/checkers.svg";
+
 interface Props {
   /**
    * Scrolls the checkerboard sideways like a marquee, looping forever.
@@ -13,7 +15,8 @@ interface Props {
 export default function Checkers({ marquee }: Props) {
   return (
     <div
-      className="@container-size size-full bg-[url(/checkers.svg)] bg-size-[auto_100%] data-marquee:animate-checkers-marquee"
+      className="@container-size size-full bg-size-[auto_100%] data-marquee:animate-checkers-marquee"
+      style={{ backgroundImage: `url(${checkers.src})` }}
       data-marquee={marquee || undefined}
       aria-hidden
     />

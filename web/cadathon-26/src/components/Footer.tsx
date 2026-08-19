@@ -6,7 +6,9 @@ import {
   RiInstagramFill,
   RiLinkedinFill,
 } from "react-icons/ri";
+import { PHOTO_BACKDROP_STYLE } from "~/lib/photo-backdrop";
 import RoadTexture from "./RoadTexture";
+import TrackAnchor from "./track/TrackAnchor";
 
 const CONTACT_EMAIL = "hello@ugahacks.com";
 
@@ -39,12 +41,30 @@ const HOVER =
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[url(/bg.png)] bg-cover bg-center text-zinc-950/40">
+    <footer
+      className="relative bg-cover bg-center text-zinc-950/40"
+      style={PHOTO_BACKDROP_STYLE}
+    >
       {/* Matches the hero's treatment so the page opens and closes the same. */}
       <div aria-hidden className="absolute inset-0 z-0 bg-zinc-950/45" />
       <RoadTexture />
 
-      <div className="relative z-0 mx-auto flex w-full max-w-5xl flex-col items-center gap-8 px-4 py-10 text-white sm:py-12">
+      {/* The car's actual stopping point -- Partners' exit crossing has
+          already put the road back in the plain left lane by this point, so
+          this just continues straight down, no crossing needed. Positioned
+          just past the finish-line divider above the footer. */}
+      <TrackAnchor
+        finish
+        className="absolute top-10 left-11.75 lg:top-14 lg:left-29"
+      />
+
+      {/* The road itself keeps going past that, all the way to the literal
+          bottom of the page -- only the car stops short, at the anchor
+          above. Same lane, so this is a straight continuation, not a
+          crossing. */}
+      <TrackAnchor className="absolute bottom-0 left-11.75 lg:left-29" />
+
+      <div className="relative z-0 mx-auto flex w-full max-w-5xl flex-col items-center gap-8 py-10 pr-6 pl-23.5 text-white sm:py-12 lg:pr-20 lg:pl-58">
         <div className="flex flex-col items-center gap-2">
           <p className="font-heading text-xs leading-none font-bold tracking-widest uppercase text-border-3 text-border-black">
             Follow Us

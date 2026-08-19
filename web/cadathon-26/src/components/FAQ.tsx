@@ -1,9 +1,13 @@
 "use client";
 
 import * as Accordion from "@radix-ui/react-accordion";
+import Image from "next/image";
 import { ReactNode, useState } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
+import pitStop from "~/assets/pit-stop.svg";
+import { PHOTO_BACKDROP_STYLE } from "~/lib/photo-backdrop";
 import RoadTexture from "./RoadTexture";
+import TrackAnchor from "./track/TrackAnchor";
 
 const CODE_OF_CONDUCT = "https://mlh.io/code-of-conduct";
 const INFO_SITE = "https://makepacket.ugahacks.com";
@@ -78,32 +82,45 @@ export default function FAQ() {
   const [open, setOpen] = useState("");
 
   return (
-    <div className="relative bg-[url(/bg.png)] bg-cover bg-center text-zinc-950/40">
+    <div
+      className="relative bg-cover bg-center text-zinc-950/40"
+      style={PHOTO_BACKDROP_STYLE}
+    >
       {/* Same hero photo, knocked back further than the hero and footer so the
           accordion reads clearly on top of it. */}
       <div aria-hidden className="absolute inset-0 z-0 bg-zinc-950/65" />
       <RoadTexture />
 
-      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12 sm:gap-10 sm:px-8 sm:py-16 lg:py-24">
-        <h1 className="font-heading text-3xl font-extrabold tracking-wide text-white text-border-5 text-border-black sm:text-4xl lg:text-5xl">
+      {/* The track crosses into the right gutter here, in the section's top
+          padding, and back out to the left in the bottom padding, so Sponsors
+          onward don't need to change lanes. Both sit half a track width in
+          from the section's edge, so the road's outer edge is flush with the
+          boundary; the section's own py-* is then set so its inner edge
+          clears the content by a full flex gap -- the same breathing room the
+          heading has below it. leading-none on the heading is what makes that
+          arithmetic hold, since the default line-height would otherwise pad
+          the below side further than the above. */}
+      <TrackAnchor className="absolute top-5.75 right-11.75 lg:top-9 lg:right-29" />
+      <TrackAnchor className="absolute bottom-5.75 left-11.75 lg:bottom-9 lg:left-29" />
+
+      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-8 py-18.75 pr-23.5 pl-6 sm:gap-10 sm:py-20.75 lg:py-24.5 lg:pr-58 lg:pl-20">
+        <h1 className="font-heading text-3xl leading-none font-extrabold tracking-wide text-white text-border-5 text-border-black sm:text-4xl lg:text-5xl">
           FAQ
         </h1>
 
-        <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-12">
+        <div className="flex flex-col">
           {/* Panels snap open with no height animation: any dropped frame
               during a tween shows up as a reflow of everything below. The
-              stack instead reserves exactly one panel's height as bottom
-              margin while nothing is open, and gives that space back the
-              moment a panel takes it -- so the section's total height is
-              identical open or closed, with nothing to animate. */}
+              pit stop below instead holds exactly one panel's height while
+              nothing is open, and gives that space back the moment a panel
+              takes it -- so the section's total height is identical open or
+              closed, with nothing to animate. */}
           <Accordion.Root
             type="single"
             collapsible
             value={open}
             onValueChange={setOpen}
-            className={`flex w-full max-w-prose flex-col gap-4 sm:gap-5 ${
-              open ? "" : "lg:mb-48"
-            }`}
+            className="flex w-full max-w-prose flex-col gap-4 sm:gap-5"
           >
             {FAQS.map(({ q, a }) => (
               <Accordion.Item
@@ -112,7 +129,13 @@ export default function FAQ() {
                 className="overflow-hidden rounded-md border-2 border-black bg-indigo-950 shadow-brutal"
               >
                 <Accordion.Header>
-                  <Accordion.Trigger className="group flex w-full items-center justify-between gap-3 bg-pink-500 px-4 py-3 text-left leading-snug font-semibold text-black data-[state=open]:border-b-2 data-[state=open]:border-black sm:py-4 sm:text-lg">
+                  {/* The rule under an open trigger is always there, just
+                      transparent until it's needed -- added only on open it
+                      would make the trigger 2px taller, which is the whole
+                      section growing by 2px as a panel opens. Backgrounds
+                      paint under the border box, so the pink runs behind it
+                      and a closed trigger looks untouched. */}
+                  <Accordion.Trigger className="group flex w-full items-center justify-between gap-3 border-b-2 border-transparent bg-pink-500 px-4 py-3 text-left leading-snug font-semibold text-black data-[state=open]:border-black sm:py-4 sm:text-lg">
                     {q}
                     <RiArrowDownSLine className="shrink-0 text-xl transition-transform duration-200 group-data-[state=open]:rotate-180" />
                   </Accordion.Trigger>
@@ -134,18 +157,33 @@ export default function FAQ() {
             ))}
           </Accordion.Root>
 
-          {/* Below lg this sits in the space the open panel would occupy, and
-              collapses out of the way when a panel takes that space -- so the
-              section's height is the same either way. */}
+          {/* Holds exactly the space one open panel takes, and collapses out
+              of the way when a panel takes it -- so the section's height is
+              the same either way. No gap above it: butted straight against
+              the accordion, the image sits centered in exactly the reserved
+              swap space rather than being pushed off-center by a gap. */}
+          {/* max-w-prose matches the accordion, so justify-end lines the
+              graphic up with the right edge of the panels rather than with
+              the section's much wider content column. The padding matches the
+              accordion's own gap; it has to drop away with the height, since
+              a border-box element can't shrink below its own padding and the
+              swap space would never reach zero. */}
           <div
-            className={`flex w-full items-center justify-center max-lg:overflow-hidden lg:w-auto lg:flex-1 ${
-              open ? "max-lg:h-0" : "max-lg:h-56 sm:max-lg:h-48"
+            className={`flex w-full max-w-prose items-center justify-end overflow-hidden ${
+              open ? "h-0" : "h-56 py-4 sm:h-48 sm:py-5"
             }`}
           >
-            <img
-              src="/pit-stop.svg"
+            {/* Rotated a quarter turn, the image's *width* is what you see as
+                its height -- so these are sized to the swap space less that
+                padding (224-32, then 192-40). Rotating also leaves the visual
+                box centered on the layout box, so it would hang off the right
+                edge by half the difference between the two: the artwork is
+                442x566, making that overhang (566/442 - 1) / 2 = 14% of the
+                width, translated back to sit flush right at either size. */}
+            <Image
+              src={pitStop}
               alt=""
-              className="w-28 rotate-90 sm:w-32 lg:w-40 lg:rotate-0 xl:w-48"
+              className="h-auto w-48 translate-x-[-14%] -rotate-90 sm:w-38"
             />
           </div>
         </div>

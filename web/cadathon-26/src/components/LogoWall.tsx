@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ReactNode } from "react";
 import RoadTexture from "./RoadTexture";
 
@@ -21,21 +22,32 @@ interface Props {
   className: string;
   /** Optional call to action rendered beneath the grid. */
   children?: ReactNode;
+  /** Optional <TrackAnchor> placed in the section's gutter. */
+  anchor?: ReactNode;
 }
 
+// Relative: the fixed size here is what an <Image fill> logo below sizes
+// itself against.
 const SLOT =
-  "flex h-24 w-40 items-center justify-center rounded-lg sm:h-28 sm:w-48";
+  "relative flex h-24 w-40 items-center justify-center rounded-lg sm:h-28 sm:w-48";
 const PLACEHOLDER =
   "border-2 border-dashed border-white/40 bg-black/20 px-3 text-center font-heading text-xs leading-tight font-bold tracking-wide text-white/80 uppercase";
 const INTERACTIVE =
   "group transition duration-200 hover:scale-105 hover:drop-shadow-lg hover:drop-shadow-black/40";
 
 function LogoSlot({ name, abbr, src, href }: Logo) {
+  // `src` is a runtime public/ path, not a build-time import, so its
+  // intrinsic size isn't known -- `fill` (sized against SLOT's own fixed
+  // dimensions, see above) plus object-contain reproduces the same
+  // "shrink to fit, keep the logo's own aspect ratio" behavior the plain
+  // <img>'s max-h-full/max-w-full had.
   const body = src ? (
-    <img
+    <Image
       src={src}
       alt={name ?? ""}
-      className="max-h-full max-w-full object-contain grayscale transition duration-200 group-hover:grayscale-0"
+      fill
+      sizes="(min-width: 640px) 12rem, 10rem"
+      className="object-contain grayscale transition duration-200 group-hover:grayscale-0"
     />
   ) : (
     (abbr ?? name ?? "Your logo here")
@@ -65,12 +77,20 @@ export default function LogoWall({
   logos,
   className,
   children,
+  anchor,
 }: Props) {
   return (
     <div className={`relative bg-cover bg-center ${className}`}>
       <RoadTexture />
+      {anchor}
 
-      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12 sm:gap-10 sm:px-8 sm:py-16 lg:py-24">
+      {/* Each instance adds the wide gutter on whichever side its lane of the
+          track runs down; this is the narrow side. The vertical padding is
+          sized like the FAQ's -- enough that a horizontal crossing tucked
+          against the section's edge still clears the content by a full flex
+          gap. Sponsors has no crossing of its own but keeps the same figure,
+          so the two sections stay a matched pair. */}
+      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-8 px-6 py-18.75 sm:gap-10 sm:py-20.75 lg:px-20 lg:py-24.5">
         <h1 className="text-center font-heading text-3xl font-extrabold tracking-wide text-white text-border-5 text-border-black sm:text-4xl lg:text-5xl">
           {heading}
         </h1>

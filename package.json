@@ -6,7 +6,8 @@
   "license": "MIT",
   "workspaces": [
     "web/*",
-    "!web/cadathon-26"
+    "!web/cadathon-26",
+    "!web/ugahacks-12"
   ],
   "scripts": {
     "husky-init": "husky install"

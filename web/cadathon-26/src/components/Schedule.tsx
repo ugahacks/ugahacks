@@ -143,8 +143,19 @@ function PitPass({
               {day.date}
             </p>
 
-            <table className="mt-3 w-full border-collapse text-left">
-              <thead>
+            {/* Three columns don't fit a phone -- "what" ends up a couple of
+                characters wide and every row wraps. Below sm each row lays
+                itself out instead as the event over its time and place, via
+                display overrides on the table elements. The roles are spelled
+                out because those overrides drop the implicit table semantics;
+                at sm and up they simply restate what the elements already
+                mean. */}
+            <table
+              role="table"
+              className="mt-3 w-full border-collapse text-left max-sm:block"
+            >
+              {/* Nothing to head the columns with once they're stacked. */}
+              <thead className="max-sm:hidden">
                 <tr className="border-b-2 border-red-600">
                   <th className="py-1 pr-2 font-heading text-[0.6rem] font-bold tracking-widest text-red-600 uppercase sm:text-xs">
                     What
@@ -157,19 +168,29 @@ function PitPass({
                   </th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody role="rowgroup" className="max-sm:block">
                 {day.events.map((e) => (
                   <tr
                     key={e.what}
-                    className="border-b border-zinc-200 last:border-0"
+                    role="row"
+                    className="border-b border-zinc-200 last:border-0 max-sm:grid max-sm:grid-cols-[1fr_auto] max-sm:gap-x-3 max-sm:py-1.5"
                   >
-                    <td className="py-1.5 pr-2 text-xs font-semibold text-zinc-900 sm:text-sm">
+                    <td
+                      role="cell"
+                      className="py-1.5 pr-2 text-xs font-semibold text-zinc-900 max-sm:col-span-2 max-sm:py-0 max-sm:pr-0 sm:text-sm"
+                    >
                       {e.what}
                     </td>
-                    <td className="py-1.5 pr-2 text-xs whitespace-nowrap text-zinc-600 sm:text-sm">
+                    <td
+                      role="cell"
+                      className="py-1.5 pr-2 text-xs whitespace-nowrap text-zinc-600 max-sm:py-0 max-sm:pr-0 sm:text-sm"
+                    >
                       {e.when}
                     </td>
-                    <td className="py-1.5 text-xs text-zinc-600 sm:text-sm">
+                    <td
+                      role="cell"
+                      className="py-1.5 text-xs text-zinc-600 max-sm:py-0 max-sm:text-right sm:text-sm"
+                    >
                       {e.where}
                     </td>
                   </tr>
@@ -248,7 +269,11 @@ export default function Schedule() {
     <div className="relative bg-pink-500 bg-cover bg-center text-pink-950/25">
       <RoadTexture />
 
-      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-12 sm:gap-10 sm:px-8 sm:py-16 lg:py-24">
+      {/* Wider than the other sections at lg: the passes are the focal point
+          here, and w-1/2 each means every extra pixel goes into them. Left
+          side carries the road (inherited from Info's crossing), so it gets
+          the wide gutter (2G + track width); the right side just gets G. */}
+      <section className="relative z-0 mx-auto flex w-full max-w-5xl flex-col gap-4 py-12 pr-6 pl-22 sm:gap-5 sm:py-16 lg:max-w-7xl lg:py-24 lg:pr-20 lg:pl-55">
         <h1 className="text-center font-heading text-3xl font-extrabold tracking-wide text-white text-border-5 text-border-black sm:text-4xl lg:text-5xl">
           Schedule
         </h1>
@@ -258,8 +283,13 @@ export default function Schedule() {
             <div
               ref={trackRef}
               onScroll={syncActive}
-              className="flex w-full snap-x snap-mandatory [scrollbar-width:none] overflow-x-auto overflow-y-hidden scroll-smooth py-12 lg:snap-none lg:items-stretch lg:justify-center lg:overflow-visible"
+              className="flex w-full snap-x snap-mandatory [scrollbar-width:none] overflow-x-auto overflow-y-hidden scroll-smooth pt-6 pb-12 lg:snap-none lg:items-stretch lg:justify-center lg:overflow-visible"
             >
+              {/* The horizontal padding has to cover what the tilt and the
+                  offset shadow throw sideways -- roughly (height / 2) * sin
+                  (tilt) plus the shadow's 0.5rem -- or the scroll container
+                  clips the leading pass, whose overflow sits before the scroll
+                  origin and so can't be scrolled into view. */}
               {SCHEDULE.map((d, i) => (
                 <div
                   key={d.label}
@@ -274,19 +304,42 @@ export default function Schedule() {
                 >
                   <PitPass
                     day={d}
-                    tilt={i === 0 ? "-rotate-4" : "rotate-4"}
+                    tilt={
+                      i === 0
+                        ? "-rotate-2 lg:-rotate-4"
+                        : "rotate-2 lg:rotate-4"
+                    }
                     shadow={PASS_SHADOW[i === 0 ? 0 : 1]}
                   />
                 </div>
               ))}
             </div>
 
+            {/* `disabled` here is a pure function of `day` (a plain useState(0)),
+                so it can't actually differ between the server render and the
+                client's first hydration pass -- there's nothing async or
+                environment-dependent in that computation. It still shows up
+                as a hydration-mismatch warning on this exact attribute
+                sometimes, matching the class of cause React's own warning
+                text calls out: something mutating the DOM before hydration
+                (a browser extension that auto-enables disabled buttons is
+                the common case; a stale dev-server cache serving one
+                compiled chunk's HTML against a different chunk's client
+                bundle is another, dev-only one). Either way it's an
+                external mutation of this one boolean attribute, not a real
+                divergence in what the app itself renders, and `disabled`
+                gates only cosmetic behavior (`disabled:hidden` swaps this
+                redundant nav arrow for the scroll-snap track and the dots
+                below, both of which still work regardless) -- so it's
+                suppressed at the two elements it's actually been seen on
+                rather than left to warn on every load. */}
             <button
               type="button"
               onClick={() => go(day - 1)}
               disabled={day === 0}
+              suppressHydrationWarning
               aria-label="Previous day"
-              className="absolute top-1/2 -left-1 z-30 flex size-9 -translate-y-1/2 items-center justify-center rounded-full border-2 border-black bg-white text-xl text-pink-950 shadow-brutal-flipped transition disabled:hidden sm:-left-3 sm:size-11 sm:text-2xl lg:hidden"
+              className="absolute top-1/2 left-0 z-30 flex size-9 -translate-y-1/2 items-center justify-center rounded-full border-2 border-black bg-white text-xl text-pink-950 shadow-brutal-flipped transition disabled:hidden sm:size-11 sm:text-2xl lg:hidden"
             >
               <RiArrowLeftSLine />
             </button>
@@ -295,8 +348,9 @@ export default function Schedule() {
               type="button"
               onClick={() => go(day + 1)}
               disabled={day === SCHEDULE.length - 1}
+              suppressHydrationWarning
               aria-label="Next day"
-              className="absolute top-1/2 -right-1 z-30 flex size-9 -translate-y-1/2 items-center justify-center rounded-full border-2 border-black bg-white text-xl text-pink-950 shadow-brutal transition disabled:hidden sm:-right-3 sm:size-11 sm:text-2xl lg:hidden"
+              className="absolute top-1/2 right-0 z-30 flex size-9 -translate-y-1/2 items-center justify-center rounded-full border-2 border-black bg-white text-xl text-pink-950 shadow-brutal transition disabled:hidden sm:size-11 sm:text-2xl lg:hidden"
             >
               <RiArrowRightSLine />
             </button>
