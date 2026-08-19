@@ -1,6 +1,6 @@
 "use client";
 
-import confetti from "canvas-confetti";
+import type confetti from "canvas-confetti";
 import Image from "next/image";
 import {
   PropsWithChildren,
@@ -288,13 +288,25 @@ export default function RaceTrack({ children }: PropsWithChildren) {
   useEffect(() => {
     const canvas = confettiCanvasRef.current;
     if (!canvas) return;
-    confettiRef.current = confetti.create(canvas, { resize: true });
-    const cloudShape = confetti.shapeFromText({
-      text: "☁️",
-    }) as confetti.BitmapShape;
-    cloudShapeRef.current = {
-      ...cloudShape,
-      bitmap: fadeBitmap(cloudShape.bitmap, EXHAUST_CLOUD_OPACITY),
+    // canvas-confetti is loaded here rather than statically so its 28KB
+    // stays out of the initial bundle: nothing needs it until the car emits
+    // its first exhaust puff, which can't happen before this effect has run
+    // anyway. Every call site already tolerates the refs being briefly null
+    // while the chunk loads.
+    let cancelled = false;
+    void import("canvas-confetti").then(({ default: confetti }) => {
+      if (cancelled) return;
+      confettiRef.current = confetti.create(canvas, { resize: true });
+      const cloudShape = confetti.shapeFromText({
+        text: "☁️",
+      }) as confetti.BitmapShape;
+      cloudShapeRef.current = {
+        ...cloudShape,
+        bitmap: fadeBitmap(cloudShape.bitmap, EXHAUST_CLOUD_OPACITY),
+      };
+    });
+    return () => {
+      cancelled = true;
     };
   }, []);
 
