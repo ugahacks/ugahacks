@@ -19,6 +19,10 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // 50 is the asphalt-photo backdrop (see lib/photo-backdrop.ts), which
+    // hides its compression artifacts behind a dark scrim; 75 is the default
+    // every other image uses. Next only serves qualities listed here.
+    qualities: [50, 75],
   },
 };
 

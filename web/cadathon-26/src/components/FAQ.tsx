@@ -4,8 +4,8 @@ import * as Accordion from "@radix-ui/react-accordion";
 import Image from "next/image";
 import { ReactNode, useState } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
-import bg from "~/assets/bg.png";
 import pitStop from "~/assets/pit-stop.svg";
+import { PHOTO_BACKDROP_STYLE } from "~/lib/photo-backdrop";
 import RoadTexture from "./RoadTexture";
 import TrackAnchor from "./track/TrackAnchor";
 
@@ -84,7 +84,7 @@ export default function FAQ() {
   return (
     <div
       className="relative bg-cover bg-center text-zinc-950/40"
-      style={{ backgroundImage: `url(${bg.src})` }}
+      style={PHOTO_BACKDROP_STYLE}
     >
       {/* Same hero photo, knocked back further than the hero and footer so the
           accordion reads clearly on top of it. */}

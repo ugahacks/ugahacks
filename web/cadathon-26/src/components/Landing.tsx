@@ -1,17 +1,32 @@
 import Image from "next/image";
+import { preload } from "react-dom";
 import { RiCalendarEventFill, RiMapPinFill } from "react-icons/ri";
-import bg from "~/assets/bg.png";
 import cdFlag from "~/assets/cd-flag.png";
 import racerByte from "~/assets/racer-byte.png";
+import {
+  PHOTO_BACKDROP_PRELOAD,
+  PHOTO_BACKDROP_STYLE,
+} from "~/lib/photo-backdrop";
 import LinkButton from "./LinkButton";
 import RoadTexture from "./RoadTexture";
 import TrackAnchor from "./track/TrackAnchor";
 
 export default function Landing() {
+  // The backdrop is the page's LCP element, but as a CSS background the
+  // browser only discovers it once styles resolve and can't be told it's
+  // urgent. This emits a <link rel="preload"> in the document head with the
+  // same DPR candidates the image-set() resolves from, so the fetch starts
+  // immediately and at high priority.
+  preload(PHOTO_BACKDROP_PRELOAD.href, {
+    as: "image",
+    imageSrcSet: PHOTO_BACKDROP_PRELOAD.imageSrcSet,
+    fetchPriority: "high",
+  });
+
   return (
     <div
       className="relative max-h-256 bg-cover bg-center text-zinc-950/40"
-      style={{ backgroundImage: `url(${bg.src})` }}
+      style={PHOTO_BACKDROP_STYLE}
     >
       {/* No z-index on this wrapper: it would take the photo, the scrim, and
           the grain up with it and hide the road behind the whole section.

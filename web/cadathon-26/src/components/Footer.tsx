@@ -6,7 +6,7 @@ import {
   RiInstagramFill,
   RiLinkedinFill,
 } from "react-icons/ri";
-import bg from "~/assets/bg.png";
+import { PHOTO_BACKDROP_STYLE } from "~/lib/photo-backdrop";
 import RoadTexture from "./RoadTexture";
 import TrackAnchor from "./track/TrackAnchor";
 
@@ -43,7 +43,7 @@ export default function Footer() {
   return (
     <footer
       className="relative bg-cover bg-center text-zinc-950/40"
-      style={{ backgroundImage: `url(${bg.src})` }}
+      style={PHOTO_BACKDROP_STYLE}
     >
       {/* Matches the hero's treatment so the page opens and closes the same. */}
       <div aria-hidden className="absolute inset-0 z-0 bg-zinc-950/45" />
