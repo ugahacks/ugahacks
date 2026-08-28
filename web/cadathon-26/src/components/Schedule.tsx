@@ -65,9 +65,9 @@ const SCHEDULE = [
       { what: "Chill Space", when: "1:00pm - 6:00pm", where: "1401" },
       { what: "Egg Drop", when: "1:00pm - 2:00pm", where: "1290" },
       {
-        what: "TBD",
+        what: "TBA",
         when: "2:00pm - 3:00pm",
-        where: "TBD",
+        where: "TBA",
       },
       { what: "Recycled Sailboat", when: "3:00pm - 4:00pm", where: "1290" },
       { what: "Beyond the Makeathon", when: "5:00pm - 6:00pm", where: "1456" },
