@@ -21,7 +21,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="scroll-mt-nav bg-argyle px-6 py-16 sm:px-10 md:py-24 lg:px-20"
+      className="scroll-mt-nav flex min-h-svh items-center bg-argyle px-6 py-10 sm:px-10 md:py-16 lg:px-20"
     >
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-14">
         {/* Text card */}
@@ -30,7 +30,7 @@ export default function About() {
             {ABOUT_BADGE}
           </span>
 
-          <h2 className="mt-6 font-heading text-4xl font-bold tracking-case text-sepia sm:text-6xl lg:text-heading-lg">
+          <h2 className="mt-6 font-heading text-4xl font-bold tracking-case text-sepia sm:text-6xl lg:text-[clamp(3rem,4vw,5rem)]">
             {ABOUT_HEADING}
           </h2>
 
