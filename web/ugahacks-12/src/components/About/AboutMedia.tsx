@@ -23,11 +23,11 @@ export default function AboutMedia({ videoUrl }: { videoUrl: string | null }) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="relative mx-auto w-full max-w-[480px] md:max-w-none">
+    <div className="relative mx-auto w-full max-w-195.5">
       {/* Outer brick mat -- the reveal around the inner frame */}
-      <div className="bg-brick p-4 sm:p-5">
+      <div className="bg-brick p-4.5">
         {/* Inner board-green frame, 7px sepia border, per the layer CSS */}
-        <div className="aspect-video overflow-hidden border-[7px] border-sepia bg-board-green">
+        <div className="aspect-744/471 overflow-hidden border-[7px] border-sepia bg-board-green">
           {isPlaying && videoUrl ? (
             <iframe
               src={videoUrl}
@@ -60,7 +60,7 @@ export default function AboutMedia({ videoUrl }: { videoUrl: string | null }) {
         className="absolute -top-6 -right-4 hidden w-[34%] rotate-[27.3deg] border-4 border-white bg-plaster shadow-[0_4px_4px_rgba(0,0,0,0.25)] md:block"
         aria-hidden="true"
       >
-        <div className="flex aspect-[3/2] w-full items-center justify-center">
+        <div className="flex aspect-3/2 w-full items-center justify-center">
           <RiImageLine className="h-1/3 w-1/3 text-wall-brown/40" />
         </div>
       </div>

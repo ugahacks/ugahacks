@@ -4,6 +4,7 @@ import {
   ABOUT_HEADING,
   ABOUT_VIDEO_URL,
 } from "~/config/about";
+import Image from "next/image";
 import AboutMedia from "./AboutMedia";
 
 /**
@@ -21,24 +22,41 @@ export default function About() {
   return (
     <section
       id="about"
-      className="scroll-mt-nav flex min-h-svh items-center bg-argyle px-6 py-10 sm:px-10 md:py-16 lg:px-20"
+      className="scroll-mt-nav relative flex min-h-svh items-center overflow-hidden bg-paper px-6 py-10 sm:px-10 md:py-16 lg:px-6"
     >
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-14">
-        {/* Text card */}
-        <div className="bg-paper px-6 py-10 text-center sm:px-10">
-          <span className="rounded-card inline-block bg-white px-4 py-1.5 text-sm font-bold tracking-case text-ink/80 md:text-label">
+      <Image
+        src="/TopVector.png"
+        alt=""
+        width={1439}
+        height={52}
+        priority
+        className="pointer-events-none absolute inset-x-0 top-0 z-10 h-auto w-full"
+        aria-hidden="true"
+      />
+      <Image
+        src="/BottomVector.png"
+        alt=""
+        width={1440}
+        height={52}
+        priority
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-auto w-full"
+        aria-hidden="true"
+      />
+      <div className="relative z-10 mx-auto grid w-full max-w-[1388px] grid-cols-1 items-center gap-10 md:grid-cols-[minmax(0,600px)_minmax(0,782px)] md:justify-between md:gap-8">
+        <div className="text-center md:text-left">
+          <span className="rounded-card inline-block bg-white px-2 py-0.5 text-sm font-bold tracking-case text-ink/80 md:w-[416px] md:px-2 md:text-[32px] md:leading-[1.5]">
             {ABOUT_BADGE}
           </span>
 
-          <h2 className="mt-6 font-heading text-4xl font-bold tracking-case text-sepia sm:text-6xl lg:text-[clamp(3rem,4vw,5rem)]">
+          <h2 className="mt-6 font-heading text-4xl font-bold tracking-case text-sepia sm:text-5xl md:text-[49.4545px] md:leading-[1.5]">
             {ABOUT_HEADING}
           </h2>
 
-          <div className="mt-6 space-y-4">
+          <div className="mt-6 space-y-4 md:max-w-[600px]">
             {ABOUT_BODY.map((paragraph) => (
               <p
                 key={paragraph}
-                className="text-xl font-bold tracking-case text-tape-teal sm:text-2xl lg:text-body-lg"
+                className="text-xl font-bold tracking-case text-tape-teal sm:text-2xl md:text-[25px] md:leading-[1.5]"
               >
                 {paragraph}
               </p>
