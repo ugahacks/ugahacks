@@ -14,8 +14,8 @@ import { ReactNode } from "react";
  * The design spells the product name two ways: "UGAHacks 12" in the
  * questions and "UGA Hacks 12" in the venue answer. Questions are
  * transcribed as drawn. The venue answer is normalized to "UGAHacks 12" to
- * match every other answer, because PLAN.md §5.2 already rules that "UGA
- * Hacks" is a typo. Flagged for copy review.
+ * match every other answer, treating "UGA Hacks" as a typo. Flagged for
+ * copy review.
  */
 
 const CODE_OF_CONDUCT = "https://mlh.io/code-of-conduct";

@@ -1,36 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  /* ---- 2.1 Verified by the Figma extraction (TAILWIND.md §2.1) ----
-     Re-verified against Page 2 of the file on 2026-08-13 (TAILWIND.md §7.4).
-     `brick` and `plum` are the one place Page 2 disagrees with itself: both
-     #9c3d34/#9b3d35 and #732455/#732454 are genuinely painted in the file.
-     Human ruling: take the ORIGINAL draft's hexes, which are also the ones
-     Page 2 uses on its LARGEST flat surfaces (navbar ribbon, Schedule
-     ground, REGISTER HERE panel). The 1-digit-off siblings (FAQ chevron,
-     FAQ "state B" row, Team clothesline) are absorbed into the same token. */
+  /* Figma-verified palette. `brick` and `plum` each have two near-identical
+     hexes painted in the file (#9c3d34/#9b3d35, #732455/#732454); we keep
+     the ones used on the largest flat surfaces (navbar ribbon, Schedule
+     ground, REGISTER HERE panel) and fold the 1-digit-off siblings (FAQ
+     chevron, FAQ "state B" row, Team clothesline) into the same token. */
   --color-brick: #9c3d34;
   --color-gold: #f8c62c;
   --color-board-green: #1e502a;
   --color-plum: #732455;
   --color-tape-teal: #52959e;
   --color-paper: #f7f4e5;
-  /* Vector-verified on Page 2 (FAQ badge text); supersedes Page 1's
-     #0d1e2e. A second, darker near-black #091623 appears once (the "RECAP
-     VIDEO!" heading) and is deliberately NOT tokenized -- one ink. */
+  /* Vector-verified (FAQ badge text). A second, darker near-black #091623
+     appears once (the "RECAP VIDEO!" heading) and is deliberately not
+     tokenized -- one ink. */
   --color-ink: #0c1e2f;
   --color-sepia: #653215;
   --color-hairline: #d8cfb8;
 
-  /* ---- 2.2 Pinned by the plan, no Figma counterpart (TAILWIND.md §2.2) ----
-     plaster/wall-brown are eyedropper-approximate pins from the ORIGINAL
-     draft. Page 2's raster samples read #dfced7 (hero tile grout) and
-     #543d35 (Recap ground) -- both inside the drift you get sampling a
-     lossy PNG, so the draft's digits stand and the samples are recorded as
-     corroboration, not correction.
-     thread/case-red/case-blue remain proposals flagged for design review;
-     `frost` was REMOVED on 2026-08-13 (Page 2 draws the About body in
-     tape-teal, so the token collapsed -- TAILWIND.md §7.4). */
+  /* No Figma counterpart. plaster/wall-brown are eyedropper pins; Page 2's
+     raster samples (#dfced7 hero tile grout, #543d35 Recap ground) are
+     within lossy-PNG drift, so they corroborate rather than correct.
+     thread/case-red/case-blue remain proposals pending design review. */
   --color-plaster: #e0d1dc;
   --color-wall-brown: #543d33;
   /* Kept per the ORIGINAL draft, which explicitly says "red thread" joining
@@ -44,13 +36,10 @@
   --color-case-red: #643d40;
   --color-case-blue: #0c1e2f;
 
-  /* ---- 2.5 Page-2 artwork colors (TAILWIND.md §2.5 / §7.4) ----
-     Added 2026-08-13 from the Page-2 re-extraction. These are the
-     UI-relevant subset of the colors Page 2 introduces; each names a
-     surface a component actually has to paint today because the real raster
-     asset has not shipped. When an asset lands, its token here dies with the
-     placeholder. All values below are RASTER-SAMPLED (+/-1 per channel)
-     unless marked vector-verified. */
+  /* Page-2 artwork colors: the UI-relevant subset introduced by Page 2, each
+     naming a surface a component paints today because its raster asset
+     hasn't shipped. Retire the token when the asset lands. Values are
+     raster-sampled (+/-1 per channel) unless marked vector-verified. */
   --color-tile-yellow: #d3a213; /* hero wall tiles (darker than `gold`) */
   --color-heading-cream: #fcf2dc; /* FAQ heading text (warmer than `paper`) */
   --color-room-teal: #4f9099; /* FAQ interrogation-room gradient, top */
@@ -69,16 +58,13 @@
   --color-argyle-dot: #0c2d12; /* About argyle: dotted diagonals */
 }
 
-/* Shade ramps for interaction states + derived surfaces only (TAILWIND.md
-   §2.4) -- fed exclusively the nine §2.1 anchors; §2.2 eyedropper/proposal
-   colors and the §2.5 Page-2 artwork colors get no ramp (artwork colors are
-   placeholders for raster assets, so a derived ramp would be meaningless).
-   Verified on install (see globals.css.smoke-test notes
-   in the PR description): the plugin's `-500` step and its unnumbered
-   `DEFAULT` both reproduce the input hex byte-for-byte, and the bare
-   `--color-*` token it writes carries that same exact verified value, so the
-   `@theme` declaration above and the plugin's generated `:root` declaration
-   below never disagree even where cascade-layer order decides the winner. */
+/* Shade ramps for interaction states + derived surfaces, generated only from
+   the nine core-palette anchors above -- eyedropper/proposal colors and the
+   Page-2 artwork colors get no ramp (they're raster placeholders, so a
+   derived ramp would be meaningless). The plugin's `-500`/`DEFAULT` steps
+   and the bare `--color-*` token it writes all reproduce the input hex
+   byte-for-byte, so this `@theme` block and the plugin's generated `:root`
+   below never disagree regardless of cascade-layer order. */
 @plugin "tailwindcss-palette-generator" {
   brick: #9c3d34;
   gold: #f8c62c;
@@ -94,32 +80,26 @@
 @theme inline {
   /* Courier Prime is the primary face (400/700 only -- not variable). */
   --font-sans: var(--font-courier-prime);
-  /* Headings stay Courier Prime Bold -- Page 2 confirms every heading in the
-     file is Courier Prime. The alias is kept per PLAN.md §2.2 so a future
-     heading face is still a one-line swap. */
+  /* Headings stay Courier Prime Bold -- Page 2 confirms every heading uses
+     it. Aliased so a future heading face is still a one-line swap. */
   --font-heading: var(--font-secondary, var(--font-courier-prime));
-  /* Secondary display face -- Page 2's answer to PLAN.md open question #3.
-     The design calls for *Post No Bills Colombo ExtraBold* (Sponsor Tracks
-     folder titles + "TOP SECRET" stamps, hence `stamp`). That family is a
-     Google Fonts early-access face and is NOT in `next/font/google`'s
-     manifest, so layout.tsx currently loads the closest available stand-in
-     under the same `--font-post-no-bills` variable -- see the comment there.
-     Swapping in the real face is a one-line change in layout.tsx; nothing
-     here or in components moves. */
+  /* Secondary display face for Sponsor Tracks folder titles + "TOP SECRET"
+     stamps (hence `stamp`). The design calls for *Post No Bills Colombo
+     ExtraBold*, a Google Fonts early-access face not in
+     `next/font/google`'s manifest, so layout.tsx loads a stand-in under the
+     same `--font-post-no-bills` variable -- see the comment there. Swapping
+     in the real face is a one-line change in layout.tsx. */
   --font-stamp: var(--font-post-no-bills, var(--font-courier-prime));
 }
 
 @theme {
-  /* ---- 3.1 Extracted type scale (verified), 1440px design width ----
-     Re-measured against Page 2 on 2026-08-13 (TAILWIND.md §7.4); every size
-     below is vector-verified via get_design_context unless marked
-     old-column. Page 2's headings are roughly 2x what Page 1 drew, so this
-     scale moved a long way -- treat the sizes as the desktop end of a
-     responsive ramp (components step down at small breakpoints).
-     Line-height is 1.5 on everything; only the wordmark uses `normal`.
-     Letter-spacing is a separate token (--tracking-case below) since
-     Tailwind's text-* size utility only carries size + line-height -- pair
-     it manually. Page 2 confirms -1.1% at EVERY measured size. */
+  /* Type scale at the 1440px design width; every size below is
+     vector-verified unless marked old-column. Treat the sizes as the
+     desktop end of a responsive ramp (components step down at small
+     breakpoints). Line-height is 1.5 on everything except the wordmark
+     (`normal`). Letter-spacing is a separate token (--tracking-case below,
+     -1.1% at every measured size) since Tailwind's text-* utility only
+     carries size + line-height. */
   --text-heading-lg: 110px; /* About "What is UGAHacks?" -- the one oversized
      heading; every other section heading is --text-heading */
   --text-heading-lg--line-height: 1.5;
@@ -127,14 +107,8 @@
      INDIVIDUAL DONORS, RECAP VIDEO!, Sponsor Tracks). The FAQ heading is
      drawn 91.174px -- close enough that it uses this token too. */
   --text-heading--line-height: 1.5;
-  /* (--text-display, 85px, DELETED 2026-08-13: Page 2 has no 85px text and
-     no "THE CASE REOPENS" heading at all. Its one consumer, the hero band's
-     sub-heading, moved to Tailwind's `lg:text-5xl` -- 48px, the size
-     `--text-heading` used to be -- which keeps it subordinate to the new
-     96px section headings.) */
-  /* Interim only: Page 2's navbar carries a RASTER Byte logo, not a text
-     wordmark. This is the size of the text-logo placeholder standing in for
-     that asset -- retire the token when the logo image ships. */
+  /* Interim: Page 2's navbar carries a raster logo, not a text wordmark.
+     This sizes the placeholder; retire the token when the logo ships. */
   --text-wordmark: 60px;
   --text-wordmark--line-height: normal;
   --text-cta: 48px; /* "REGISTER HERE" -- 48px *Regular* (not Bold) gold on
@@ -176,25 +150,20 @@
   --text-shadow-stamp: 0 4px 4px rgb(0 0 0 / 0.25);
 
   /* ---- 4.1 Shadows, radii ---- */
-  /* (old-column only) Flat offset "paper" shadow -- extracted from the
-     painted shadow rects behind the Open Cases folder rows. Page 2 paints NO
-     offset shadows anywhere; this token now survives only via those
-     old-column folder rows (the file's one drawing of that treatment) plus
-     the plan, which still specs the folder language. Keep, but do not reach
-     for it on new Page-2 surfaces -- Page 2's shadow language is the soft
-     --text-shadow-stamp above. */
+  /* (old-column only) Flat offset "paper" shadow, extracted from the
+     painted shadow rects behind the Open Cases folder rows. Page 2 paints no
+     offset shadows anywhere; keep for those folder rows, but reach for the
+     soft --text-shadow-stamp above on new Page-2 surfaces. */
   --shadow-card: 3px 3px 0 0 rgb(0 0 0 / 0.15);
-  /* (proposal) Overflowing hero tiles (PLAN.md §3.4) -- same flat language,
-     slightly heavier; no Figma source, flag for design review. */
+  /* (proposal) Overflowing hero tiles -- same flat language, slightly
+     heavier; no Figma source, flag for design review. */
   --shadow-tile: 4px 4px 0 0 rgb(0 0 0 / 0.25);
 
   --radius-card: 6px; /* (Page-2 consistent) FAQ rows, badge, register panel
      all read ~6-10px in render; no vector radius contradicts 6px */
   --radius-tab: 20px; /* (old-column only) folder-row + FILE-tab top corners
-     (bottoms square) -- Page 2 draws no folder tabs; survives via the
-     old-column rows + the plan, same as --shadow-card */
+     (bottoms square); Page 2 draws no folder tabs */
 
-  /* ---- 4.2 Motion (plan-explicit) ---- */
   /* Police tape: content is duplicated once inside the strip, so one period
      is exactly -50%; reverse gives the counter-scrolling second strip. */
   --animate-tape: tape-marquee 18s linear infinite;
@@ -243,8 +212,8 @@
 
 /* Honour the OS-level "reduce motion" setting everywhere at once: the tape
    marquee, chalk jostle, and accordion all collapse to instant rather than
-   being animated. (JS-driven motion, e.g. the Team tilt-card, additionally
-   checks matchMedia itself -- see PLAN.md §1.) */
+   animated. JS-driven motion (e.g. the Team tilt-card) additionally checks
+   matchMedia itself. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -262,40 +231,12 @@
   scroll-margin-top: var(--nav-h);
 }
 
-/* Argyle ground for About (PLAN.md §5.3). RECOLOURED 2026-08-13 against
-   Page 2, which confirms the plan's argyle but paints it the other way round
-   from the first guess: a CREAM field (`argyle-cream`) with solid RED
-   diamonds (`argyle-red`) and near-black dotted diagonals (`argyle-dot`) --
-   not white outlines over brick.
-
-   Still a CSS PLACEHOLDER: on Page 2 the argyle is raster artwork, so this
-   only has to hold the right colour and rhythm until the image ships (then
-   this utility is deleted, and the three --color-argyle-* tokens with it).
-
-   Geometry: one 100x100 tile holding a single filled diamond whose vertices
-   sit at the tile's edge midpoints, so tiling produces an unbroken
-   red/cream lattice; over it a dotted "X" corner to corner (round caps on a
-   near-zero dash = dots) bisecting every diamond. The hexes are inlined in
-   the data URI because an SVG data URI cannot read CSS custom properties --
-   keep them in sync with the §2.5 tokens by hand. */
 @utility bg-argyle {
   background-color: var(--color-argyle-cream);
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAnIGhlaWdodD0nMTAwJyB2aWV3Qm94PScwIDAgMTAwIDEwMCc+PHJlY3Qgd2lkdGg9JzEwMCcgaGVpZ2h0PScxMDAnIGZpbGw9JyNlZWUxY2QnLz48cGF0aCBkPSdNNTAgMCBMMTAwIDUwIEw1MCAxMDAgTDAgNTAgWicgZmlsbD0nIzk1MGYxNicvPjxwYXRoIGQ9J00wIDAgTDEwMCAxMDAgTTEwMCAwIEwwIDEwMCcgc3Ryb2tlPScjMGMyZDEyJyBzdHJva2Utd2lkdGg9JzIuNScgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJyBzdHJva2UtZGFzaGFycmF5PScwLjEgMTAnLz48L3N2Zz4K");
   background-size: 6rem 6rem;
 }
 
-/* Brick-wall ground for Open Cases (PLAN.md §5.5). Structure unchanged --
-   but note Page 2 grounds Open Cases in a RASTER brick-wall illustration
-   (bricks ~#8e3a2d/#913b2f, mortar ~#86655e), not a CSS pattern, so this
-   utility is a placeholder until that asset ships. Its `brick` ground is
-   within a couple of units of the raster's brick tone, so the swap is
-   cosmetic rather than structural.
-
-   Geometry: a 160x80 tile encoding two stacked courses
-   (0-40 / 40-80). The top course's brick joints sit at x=0/80, the bottom
-   course's sit at x=40/120 -- offset by half a brick width so the pattern
-   reads as a running bond, not a grid, once tiled. Mortar lines are drawn
-   in `paper` at low opacity over the brick ground. */
 @utility bg-bricks {
   background-color: var(--color-brick);
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxNjAnIGhlaWdodD0nODAnIHZpZXdCb3g9JzAgMCAxNjAgODAnPjxsaW5lIHgxPScwJyB5MT0nMCcgeDI9JzE2MCcgeTI9JzAnIHN0cm9rZT0nI2Y3ZjRlNScgc3Ryb2tlLW9wYWNpdHk9Jy4xNicgc3Ryb2tlLXdpZHRoPScxJy8+PGxpbmUgeDE9JzAnIHkxPSc0MCcgeDI9JzE2MCcgeTI9JzQwJyBzdHJva2U9JyNmN2Y0ZTUnIHN0cm9rZS1vcGFjaXR5PScuMTYnIHN0cm9rZS13aWR0aD0nMScvPjxsaW5lIHgxPScwJyB5MT0nMCcgeDI9JzAnIHkyPSc0MCcgc3Ryb2tlPScjZjdmNGU1JyBzdHJva2Utb3BhY2l0eT0nLjE2JyBzdHJva2Utd2lkdGg9JzEnLz48bGluZSB4MT0nODAnIHkxPScwJyB4Mj0nODAnIHkyPSc0MCcgc3Ryb2tlPScjZjdmNGU1JyBzdHJva2Utb3BhY2l0eT0nLjE2JyBzdHJva2Utd2lkdGg9JzEnLz48bGluZSB4MT0nNDAnIHkxPSc0MCcgeDI9JzQwJyB5Mj0nODAnIHN0cm9rZT0nI2Y3ZjRlNScgc3Ryb2tlLW9wYWNpdHk9Jy4xNicgc3Ryb2tlLXdpZHRoPScxJy8+PGxpbmUgeDE9JzEyMCcgeTE9JzQwJyB4Mj0nMTIwJyB5Mj0nODAnIHN0cm9rZT0nI2Y3ZjRlNScgc3Ryb2tlLW9wYWNpdHk9Jy4xNicgc3Ryb2tlLXdpZHRoPScxJy8+PC9zdmc+Cg==");
@@ -303,30 +244,7 @@
 }
 
 :root {
-  /* Navbar height. No longer an implementation choice: Page 2's navbar is a
-     full-bleed ribbon whose vector mask measures 1440x118.182 at the 1440px
-     design width => 118px => 7.375rem. Read by both the sticky navbar and
-     scroll-mt-nav above, so the two can never drift apart. */
   --nav-h: 7.375rem;
-
-  /* Re-pin the nine §2.1 bare color tokens outside of any cascade layer.
-     Verified during install (TAILWIND.md §2.4's required checks): the
-     palette plugin's `addBase` call writes its own unnumbered `:root {
-     --color-brick: ... }` into Tailwind's `base` layer, and `base` is
-     always ordered after `theme` (where our @theme colors above land) in
-     Tailwind's fixed layer stack -- so on layer precedence alone the
-     plugin's copy would win the bare token, not ours. Today that's
-     invisible (the plugin is fed the same literal hexes, so its `DEFAULT`
-     step reproduces them byte-for-byte -- see the @plugin block's comment),
-     but it's a silent trap: edit a hex only in @theme and the plugin's
-     base-layer copy keeps winning. Unlayered rules always beat every
-     cascade layer regardless of order, so this block is the one place a
-     hex change is guaranteed to actually take effect for `bg-brick` and
-     friends. Keep it byte-identical to the @theme block and the @plugin
-     config above -- all three must move together.
-     Only the nine §2.1 anchors belong here: §2.2 and the §2.5 Page-2
-     artwork colors are never fed to the plugin, so nothing shadows them and
-     their @theme declaration is already the winner. */
   --color-brick: #9c3d34;
   --color-gold: #f8c62c;
   --color-board-green: #1e502a;
@@ -342,8 +260,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Explicit ground so overscroll/rubber-banding shows paper instead of
-   flashing the browser's default white/black. */
 body {
   background-color: var(--color-paper);
 }
