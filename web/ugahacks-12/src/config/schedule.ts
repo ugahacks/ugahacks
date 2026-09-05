@@ -1,16 +1,15 @@
 /**
- * Schedule (§5.7), transcribed from the Figma day frames on 2026-08-27
- * (Friday `637:5440`, Saturday `637:6357`, Sunday `637:10121`). The design
- * now carries real programming, including sponsor-run sessions, so this
+ * Schedule, transcribed from the Figma day frames on 2026-08-27 (Friday
+ * `637:5440`, Saturday `637:6357`, Sunday `637:10121`). The design now
+ * carries real programming, including sponsor-run sessions, so this
  * replaces the filler that stood here before.
  *
- * The event runs three days, Friday to Sunday, which settles the day count
- * PLAN.md §7 item 2 left open. Dates are Feb 5-7 2027. Feb 5 2027 is a
- * Friday, and three days starting Friday is the only reading consistent with
- * the Sunday frame. The hero chalkboard says "February 5-8" and the stat bar
- * says "Feb 6-8", so those two disagree with each other and with this. The
- * conflict stays open in PLAN.md §7. It is a copy question rather than a
- * schedule question, because the day frames name no calendar dates at all.
+ * The event runs three days, Friday to Sunday. Dates are Feb 5-7 2027. Feb 5
+ * 2027 is a Friday, and three days starting Friday is the only reading
+ * consistent with the Sunday frame. The hero chalkboard says "February 5-8"
+ * and the stat bar says "Feb 6-8", so those two disagree with each other and
+ * with this -- an open copy question rather than a schedule question,
+ * because the day frames name no calendar dates at all.
  *
  * The programming also argues for 36 hours over 48. Hacking runs from Friday
  * evening to the Sunday 8:00 AM submission deadline, which is about 36 hours.
