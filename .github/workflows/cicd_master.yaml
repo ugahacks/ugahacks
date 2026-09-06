@@ -6,7 +6,7 @@ on:
       - master
     paths:
       - "web/**"
-      - ".github/deploy-projects.json"
+      - ".github/cicd_deploy_matrix.json"
       - ".github/workflows/cicd_master.yaml"
 
 permissions:
@@ -24,30 +24,41 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - id: matrix
+
+      - name: Build deployment matrix
+        id: matrix
         env:
           BASE: ${{ github.event.before }}
           HEAD: ${{ github.sha }}
         run: |
-          changed=$(git diff --name-only "$BASE" "$HEAD" | jq -Rsc 'split("\n") | map(select(length > 0))')
-          force_all=$(jq -nr --argjson changed "$changed" '
-            $changed | any(
-              . == ".github/deploy-projects.json" or
-              . == ".github/workflows/cicd_master.yaml"
-            )
-          ')
+          # Files touched by this push (one path per line).
+          changed=$(git diff --name-only "$BASE" "$HEAD")
+
+          # A change to the workflow or the project registry can affect every
+          # project, so redeploy all of them rather than trying to diff intent.
+          if grep -qE '^\.github/(cicd_deploy_matrix\.json|workflows/cicd_master\.yaml)$' <<< "$changed"; then
+            force_all=true
+          else
+            force_all=false
+          fi
+
+          # Build the deploy matrix: keep each production project whose directory
+          # contains a changed file (or keep all of them when force_all is set).
           matrix=$(jq -c \
-            --argjson changed "$changed" \
-            --argjson force_all "$force_all" '
-              {include: [
-                .[]
+            --arg changed "$changed" \
+            --argjson force_all "$force_all" \
+            '{
+              include: [
+                .include[]
                 | select(.production)
+                | . as $project
                 | select(
                     $force_all or
-                    (.path as $path | $changed | any(startswith($path + "/")))
+                    ($changed | split("\n") | any(startswith($project.path + "/")))
                   )
-              ]}
-            ' .github/deploy-projects.json)
+              ]
+            }' .github/cicd_deploy_matrix.json)
+
           echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
 
   deploy:
@@ -92,12 +103,15 @@ jobs:
             gcloud auth configure-docker --quiet
           fi
 
-      - name: Build and push container
+      - name: Build container
         env:
           IMAGE: ${{ steps.image.outputs.image }}
-        run: |
-          docker build --tag "$IMAGE" "${{ matrix.path }}"
-          docker push "$IMAGE"
+        run: docker build --tag "$IMAGE" "${{ matrix.path }}"
+
+      - name: Push container
+        env:
+          IMAGE: ${{ steps.image.outputs.image }}
+        run: docker push "$IMAGE"
 
       - name: Deploy to Cloud Run
         id: deploy
