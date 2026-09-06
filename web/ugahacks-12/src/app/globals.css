@@ -24,7 +24,7 @@
      within lossy-PNG drift, so they corroborate rather than correct.
      thread/case-red/case-blue remain proposals pending design review. */
   --color-plaster: #e0d1dc;
-  --color-wall-brown: #543d33;
+  --color-wall-brown: #49332b;
   /* Kept per the ORIGINAL draft, which explicitly says "red thread" joining
      the hero info chalkboards. Page 2 draws the *Team clothesline* in brick,
      but that is a different object -- the draft feature is unopposed. */
@@ -50,6 +50,11 @@
   --color-manila-tab: #d7d4c7; /* Sponsor Tracks folder tab flaps */
   --color-folder-ink: #884339; /* folder titles + "TOP SECRET" stamp */
   --color-card-taupe: #b6ac9e; /* Recap Video heading banner */
+  --color-tape-reinforcement: color-mix(
+    in oklab,
+    var(--color-ink),
+    transparent 80%
+  );
   --color-slot-green: #729477; /* Sponsor Tracks placeholder folder-backs */
   --color-slot-mauve: #aa7592;
   --color-slot-blue: #798b9d;
@@ -166,8 +171,8 @@
 
   /* Police tape: content is duplicated once inside the strip, so one period
      is exactly -50%; reverse gives the counter-scrolling second strip. */
-  --animate-tape: tape-marquee 18s linear infinite;
-  --animate-tape-reverse: tape-marquee 18s linear infinite reverse;
+  --animate-tape: tape-marquee 45s linear infinite;
+  --animate-tape-reverse: tape-marquee 45s linear infinite reverse;
 
   /* Chalk sticks jostling in the register tray on hover/focus. */
   --animate-chalk-jostle: chalk-jostle 0.45s ease-in-out;
