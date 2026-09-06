@@ -228,7 +228,7 @@ const category_items: ReactElement[] = [
 ];
 
 interface disabledProps {
-  isDisabled: boolean;
+  isDisabled?: boolean;
 }
 
 const PrevButton = ({ isDisabled }: disabledProps) => {

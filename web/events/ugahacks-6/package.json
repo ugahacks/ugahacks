@@ -5,9 +5,9 @@
   "packageManager": "yarn@1.22.22",
   "scripts": {
     "dev": "../../../scripts/dev.sh",
-    "build": "../../../scripts/build.sh",
+    "build": "next build",
     "start": "../../../scripts/start.sh",
-    "lint": "../../../scripts/lint.sh || true"
+    "lint": "next lint || true"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
