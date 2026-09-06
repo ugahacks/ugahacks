@@ -85,7 +85,7 @@ export default function YouTubeEmbed({
         onStateChange: handlePlayerStateChange,
       },
     });
-  }, [iframeId]);
+  }, [handlePlayerStateChange, iframeId]);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -117,7 +117,7 @@ export default function YouTubeEmbed({
       playerRef.current?.destroy();
       playerRef.current = null;
     };
-  }, [iframeId, videoId]);
+  }, [attachPlayer, iframeId, videoId]);
 
   return (
     <div
