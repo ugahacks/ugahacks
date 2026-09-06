@@ -1,3 +1,5 @@
+import RecapVideo from "~/components/RecapVideo";
+import TapeMarquee from "~/components/TapeMarquee";
 import { SITE_NAME } from "~/lib/site";
 
 export default function Home() {
@@ -7,6 +9,8 @@ export default function Home() {
         <h1 className="text-4xl font-bold">{SITE_NAME}</h1>
         <p className="text-lg">Coming soon.</p>
       </div>
+      <RecapVideo />
+      <TapeMarquee />
     </main>
   );
 }

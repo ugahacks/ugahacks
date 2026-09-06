@@ -44,8 +44,11 @@ function Folder({
   index,
   open,
 }: {
+  /** Track data displayed on the folder. */
   track: Track;
+  /** Position used for the folder stack styling. */
   index: number;
+  /** Whether this folder's description is expanded. */
   open: boolean;
 }) {
   const backgroundColor = PILL_COLORS[index % PILL_COLORS.length];
@@ -59,15 +62,15 @@ function Folder({
     >
       <div className="flex origin-center -rotate-x-20 transform-gpu flex-col shadow-[0_-12px_16px_-8px_rgb(0_0_0/0.5)] transition-transform duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:-translate-y-1.5 group-hover:-rotate-x-16 group-data-[state=open]:rotate-x-0 group-data-[state=open]:group-hover:translate-y-0">
         <Accordion.Trigger
-          className={`relative cursor-pointer group rounded-t-xl border border-b-0 border-folder-ink bg-manila px-5 pt-5 duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] outline-none focus-visible:*:ring-4 focus-visible:*:ring-gold`}
+          className={`group relative cursor-pointer rounded-t-xl border border-b-0 border-folder-ink bg-manila px-5 pt-5 duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] outline-none focus-visible:*:ring-4 focus-visible:*:ring-gold`}
         >
-          <span className="@container grid w-full grid-cols-[repeat(var(--cols),1fr)] rounded-t-md bg-folder-ink px-3 md:px-4 gap-3 md:gap-4 pt-4 pb-5 shadow-sm [--cols:1] sm:[--cols:2] lg:[--cols:3] min-[80.5rem]:[--cols:4]">
+          <span className="@container grid w-full grid-cols-[repeat(var(--cols),1fr)] gap-3 rounded-t-md bg-folder-ink px-3 pt-4 pb-5 shadow-sm [--cols:1] sm:[--cols:2] md:gap-4 md:px-4 lg:[--cols:3] min-[80.5rem]:[--cols:4]">
             <span className="relative col-start-[calc(mod(var(--stack)-1,var(--cols))+1)]">
               <span className="absolute -top-8.75 left-0 z-10 block w-fit -translate-y-full rounded-t-xl border border-b-0 border-folder-ink bg-manila px-3 py-0.5 text-sm font-bold tracking-case text-folder-ink uppercase sm:px-5 sm:py-1 sm:text-base">
                 File {track.file}
               </span>
               <span
-                className={`block rounded-md border border-ink px-2 py-1 w-max mx-auto sm:w-auto text-center font-bold tracking-case text-ink uppercase shadow-sm md:text-lg group-data-[state=open]:rotate-0! group-data-[state=open]:scale-120 sm:group-data-[state=open]:translate-x-[calc(mod(var(--stack)-1,var(--cols))*(-100cqw/var(--cols))+50cqw-50%)] transition-[rotate,scale,translate]`}
+                className={`mx-auto block w-max rounded-md border border-ink px-2 py-1 text-center font-bold tracking-case text-ink uppercase shadow-sm transition-[rotate,scale,translate] group-data-[state=open]:scale-120 group-data-[state=open]:rotate-0! sm:w-auto sm:group-data-[state=open]:translate-x-[calc(mod(var(--stack)-1,var(--cols))*(-100cqw/var(--cols))+50cqw-50%)] md:text-lg`}
                 style={{ rotate, backgroundColor }}
               >
                 {track.name}
@@ -78,10 +81,10 @@ function Folder({
         <Accordion.Content className="group" forceMount inert={!open}>
           <div className="grid grid-rows-[0fr] transition-[grid-template-rows] group-data-[state=open]:grid-rows-[1fr]">
             <div className="overflow-hidden border-x border-folder-ink bg-manila px-5">
-              <div className="bg-folder-ink px-3 md:px-4 pb-8">
+              <div className="bg-folder-ink px-3 pb-8 md:px-4">
                 <div className="rounded-xs border border-hairline bg-paper px-3 py-4 text-ink shadow-xs sm:px-8 sm:py-7">
-                  <div className="mx-auto max-w-prose leading-relaxed tracking-case text-sm sm:text-base md:text-lg">
-                    <p className="font-bold pb-[1lh]">Case {track.file}.</p>
+                  <div className="mx-auto max-w-prose text-sm leading-relaxed tracking-case sm:text-base md:text-lg">
+                    <p className="pb-[1lh] font-bold">Case {track.file}.</p>
 
                     <p>{track.description ?? PENDING_BLURB}</p>
                   </div>
@@ -100,7 +103,7 @@ export default function FilingCabinet() {
   const files = [...TRACKS].reverse();
 
   return (
-    <div className="relative mx-auto px-3 sm:px-4 md:px-8 lg:px-10 min-[80.5rem]:px-10.5 max-w-7xl">
+    <div className="relative mx-auto max-w-7xl px-3 sm:px-4 md:px-8 lg:px-10 min-[80.5rem]:px-10.5">
       <div className="rounded-t-md border border-b-0 border-white/10 bg-ink bg-linear-to-b from-white/10 via-white/0 to-black/40 px-2 pt-2 shadow-[inset_0_2px_0_rgb(255_255_255/0.12)] sm:px-4 sm:pt-3">
         {/* The drawer cavity, seen from above: dark interior with the
             hanging-folder rails down each side. */}
