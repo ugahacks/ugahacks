@@ -1,6 +1,6 @@
 # UGAHacks
 
-[![master](https://github.com/ugahacks/ugahacks/actions/workflows/cicd_master.yaml/badge.svg)](https://github.com/ugahacks/ugahacks/actions/workflows/cicd_master.yaml) [![release](https://github.com/ugahacks/ugahacks/actions/workflows/cicd_release.yaml/badge.svg?branch=release)](https://github.com/ugahacks/ugahacks/actions/workflows/cicd_release.yaml)
+[![master](https://github.com/ugahacks/ugahacks/actions/workflows/cicd_master.yaml/badge.svg)](https://github.com/ugahacks/ugahacks/actions/workflows/cicd_master.yaml)
 
 ## Welcome
 

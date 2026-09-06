@@ -1,321 +1,104 @@
-name: Master Branch CI/CD
+name: Deploy production
+
 on:
   push:
     branches:
-      - "master"
+      - master
+    paths:
+      - "web/**"
+      - ".github/deploy-projects.json"
+      - ".github/project-paths.yaml"
+      - ".github/workflows/cicd_master.yaml"
+
+permissions:
+  contents: read
 
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-  REGION: us-central1
-  DEPLOY_ENV: prod
-  CI: true # silences "yarn install"
 
 jobs:
-  flake8:
+  changes:
     runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.matrix.outputs.result }}
     steps:
-      - name: Lint Python Code
-        run: python -V
-
-  eslint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Update Yarn
-        run: yarn set version latest
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Cache
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v4
+        id: filter
         with:
-          node-version: "18"
-          cache: "yarn"
-      - name: Install project dependencies
-        run: yarn install
-      - name: Lint
+          filters: .github/project-paths.yaml
+      - id: matrix
+        env:
+          CHANGED: ${{ steps.filter.outputs.changes }}
         run: |
-          echo "yarn version: $(yarn --version)"
-          yarn workspaces foreach -A run lint
+          if jq -e 'index("all")' <<< "$CHANGED" >/dev/null; then
+            result=$(jq -c '{include: [.[] | select(.production)]}' .github/deploy-projects.json)
+          else
+            result=$(jq -c --argjson changed "$CHANGED" \
+              '{include: [.[] | select(.production and (.id as $id | $changed | index($id)))]}' \
+              .github/deploy-projects.json)
+          fi
+          echo "result=$result" >> "$GITHUB_OUTPUT"
+        shell: bash
 
-  pytest:
-    needs: flake8
-    runs-on: ubuntu-latest
-    steps:
-      - name: Test Python Code
-        run: echo "PYTHON UNIT TESTING COMPLETE"
-
-  jest:
-    needs: eslint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Test Typescript Code
-        run: echo "TYPESCRIPT UNIT TESTING COMPLETE"
-
-  # Conditionally build, containerize, and deploy UGAHacks services iff files are changed #
   deploy:
-    needs: [flake8, eslint, pytest, jest]
+    needs: changes
+    if: needs.changes.outputs.matrix != '{"include":[]}'
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.changes.outputs.matrix) }}
+    name: Deploy ${{ matrix.id }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - name: Setup Cloud SDK
-        uses: google-github-actions/setup-gcloud@v0.2.0
+      - uses: google-github-actions/auth@v2
         with:
-          project_id: ${{ env.PROJECT_ID }}
-          service_account_key: ${{ secrets.GCP_SA_KEY }}
-          export_default_credentials: true # Set to true to authenticate the Cloud Run action
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
 
-      - name: Authorize Docker push (Container Registry)
-        run: gcloud auth configure-docker
+      - uses: google-github-actions/setup-gcloud@v2
 
-      - name: Authorize Docker push (Artifact Registry)
-        run: gcloud auth configure-docker us-east1-docker.pkg.dev
-
-      - id: file_changes
-        name: Get Changed Files
-        uses: trilom/file-changes-action@v1.2.4
-        with:
-          output: ","
-          fileOutput: ","
-
-      - name: Output Changed Files
+      - name: Select image
+        id: image
+        env:
+          GCP_PROJECT: ${{ env.PROJECT_ID }}
+          PROJECT: ${{ matrix.id }}
+          REGISTRY: ${{ matrix.registry }}
+          REVISION: ${{ github.sha }}
         run: |
-          echo "Changed Files (~/files.csv):"
-          cat $HOME/files.csv
+          if [[ "$REGISTRY" == "artifact" ]]; then
+            image="us-east1-docker.pkg.dev/$GCP_PROJECT/ugahacks/$PROJECT:$REVISION"
+          else
+            image="gcr.io/$GCP_PROJECT/$PROJECT-prod:$REVISION"
+          fi
+          echo "image=$image" >> "$GITHUB_OUTPUT"
 
-      # UGAHacks 11
-      - name: Authenticate to Artifact Registry
-        uses: google-github-actions/auth@v1
+      - name: Authorize Docker push
+        env:
+          REGISTRY: ${{ matrix.registry }}
+        run: |
+          if [[ "$REGISTRY" == "artifact" ]]; then
+            gcloud auth configure-docker us-east1-docker.pkg.dev --quiet
+          else
+            gcloud auth configure-docker --quiet
+          fi
+
+      - name: Build and push container
+        env:
+          IMAGE: ${{ steps.image.outputs.image }}
+        run: |
+          docker build --tag "$IMAGE" "${{ matrix.path }}"
+          docker push "$IMAGE"
+
+      - name: Deploy to Cloud Run
+        id: deploy
+        uses: google-github-actions/deploy-cloudrun@v2
         with:
-          credentials_json: "${{ secrets.GCP_SA_KEY }}"
-      - name: Configure Docker for Artifact Registry
-        run: gcloud auth configure-docker us-central1-docker.pkg.dev
+          service: ${{ matrix.id }}-prod
+          image: ${{ steps.image.outputs.image }}
+          region: ${{ matrix.region }}
 
-      - name: Build and Push ugahacks-11 Container
-        run: |-
-          echo "ugahacks-11 changed, building ..."
-          docker build -t us-east1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/ugahacks-11:${{ github.sha }} web/events/ugahacks-11
-          docker push us-east1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/ugahacks-11:${{ github.sha }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-11')
-
-      - name: Deploy ugahacks-11 to Cloud Run
-        id: deploy_ugahacks_11
-        uses: google-github-actions/deploy-cloudrun@v0.4.0
-        with:
-          service: ugahacks-11-${{ env.DEPLOY_ENV }}
-          image: us-east1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/ugahacks-11:${{ github.sha }}
-          region: us-east1
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-11')
-
-      - name: ugahacks-11 Post Deployment
-        run: |-
-          echo "Active URL:"
-          echo ${{ steps.deploy_ugahacks_11.outputs.url }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-11')
-
-      # UGAHacks X
-      - name: Build and Push ugahacks-x Container
-        run: |-
-          echo "ugahacks-x changed, building ..."
-          docker build -t gcr.io/${{ env.PROJECT_ID }}/ugahacks-x-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/events/ugahacks-x
-          docker push gcr.io/${{ env.PROJECT_ID }}/ugahacks-x-${{ env.DEPLOY_ENV }}:${{ github.sha }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-x')
-
-      - name: Deploy ugahacks-x to Cloud Run
-        id: deploy_ugahacks_x
-        uses: google-github-actions/deploy-cloudrun@v0.4.0
-        with:
-          service: ugahacks-x-${{ env.DEPLOY_ENV }}
-          image: gcr.io/${{ env.PROJECT_ID }}/ugahacks-x-${{ env.DEPLOY_ENV }}:${{ github.sha }}
-          region: ${{ env.REGION }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-x')
-
-      - name: ugahacks-x Post Deployment
-        run: |-
-          echo "Active URL:"
-          echo ${{ steps.deploy_ugahacks_x.outputs.url }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-x')
-
-      # UGAHacks 9
-      - name: Build and Push ugahacks-9 Container
-        run: |-
-          echo "ugahacks-9 changed, building ..."
-          docker build -t gcr.io/${{ env.PROJECT_ID }}/ugahacks-9-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/events/ugahacks-9
-          docker push gcr.io/${{ env.PROJECT_ID }}/ugahacks-9-${{ env.DEPLOY_ENV }}:${{ github.sha }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-9')
-
-      - name: Deploy ugahacks-9 to Cloud Run
-        id: deploy_ugahacks_9
-        uses: google-github-actions/deploy-cloudrun@v0.4.0
-        with:
-          service: ugahacks-9-${{ env.DEPLOY_ENV }}
-          image: gcr.io/${{ env.PROJECT_ID }}/ugahacks-9-${{ env.DEPLOY_ENV }}:${{ github.sha }}
-          region: ${{ env.REGION }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-9')
-
-      - name: ugahacks-9 Post Deployment
-        run: |-
-          echo "Active URL:"
-          echo ${{ steps.deploy_ugahacks_9.outputs.url }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-9')
-
-      # UGAHacks 8
-      - name: Build and Push ugahacks-8 Container
-        run: |-
-          echo "ugahacks-8 changed, building ..."
-          docker build -t gcr.io/${{ env.PROJECT_ID }}/ugahacks-8-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/events/ugahacks-8
-          docker push gcr.io/${{ env.PROJECT_ID }}/ugahacks-8-${{ env.DEPLOY_ENV }}:${{ github.sha }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-8')
-
-      - name: Deploy ugahacks-8 to Cloud Run
-        id: deploy_ugahacks_8
-        uses: google-github-actions/deploy-cloudrun@v0.4.0
-        with:
-          service: ugahacks-8-${{ env.DEPLOY_ENV }}
-          image: gcr.io/${{ env.PROJECT_ID }}/ugahacks-8-${{ env.DEPLOY_ENV }}:${{ github.sha }}
-          region: ${{ env.REGION }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-8')
-
-      - name: ugahacks-8 Post Deployment
-        run: |-
-          echo "Active URL:"
-          echo ${{ steps.deploy_ugahacks_8.outputs.url }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-8')
-
-      # Hacks 8 Makeathon
-      - name: Build and Push makeathon-8 Container
-        run: |-
-          echo "makeathon-8 changed, building ..."
-          docker build -t gcr.io/${{ env.PROJECT_ID }}/makeathon-8-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/events/makeathon-8
-          docker push gcr.io/${{ env.PROJECT_ID }}/makeathon-8-${{ env.DEPLOY_ENV }}:${{ github.sha }}
-        if: contains(steps.file_changes.outputs.files , 'makeathon-8')
-
-      - name: Deploy makeathon-8 to Cloud Run
-        id: deploy_makeathon_8
-        uses: google-github-actions/deploy-cloudrun@v0.4.0
-        with:
-          service: makeathon-8-${{ env.DEPLOY_ENV }}
-          image: gcr.io/${{ env.PROJECT_ID }}/makeathon-8-${{ env.DEPLOY_ENV }}:${{ github.sha }}
-          region: ${{ env.REGION }}
-        if: contains(steps.file_changes.outputs.files , 'makeathon-8')
-
-      - name: makeathon-8 Post Deployment
-        run: |-
-          echo "Active URL:"
-          echo ${{ steps.deploy_makeathon_8.outputs.url }}
-        if: contains(steps.file_changes.outputs.files , 'makeathon-8')
-
-      # UGAHacks 7
-      - name: Build and Push ugahacks-7 Container
-        run: |-
-          echo "ugahacks-7 changed, building ..."
-          docker build -t gcr.io/${{ env.PROJECT_ID }}/ugahacks-7-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/events/ugahacks-7
-          docker push gcr.io/${{ env.PROJECT_ID }}/ugahacks-7-${{ env.DEPLOY_ENV }}:${{ github.sha }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-7')
-
-      - name: Deploy ugahacks-7 to Cloud Run
-        id: deploy_ugahacks_7
-        uses: google-github-actions/deploy-cloudrun@v0.4.0
-        with:
-          service: ugahacks-7-${{ env.DEPLOY_ENV }}
-          image: gcr.io/${{ env.PROJECT_ID }}/ugahacks-7-${{ env.DEPLOY_ENV }}:${{ github.sha }}
-          region: ${{ env.REGION }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-7')
-
-      - name: ugahacks-7 Post Deployment
-        run: |-
-          echo "Active URL:"
-          echo ${{ steps.deploy_ugahacks_7.outputs.url }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-7')
-
-      # UGAHacks 6
-      - name: Build and Push ugahacks-6 Container
-        run: |-
-          echo "ugahacks-6 changed, building ..."
-          docker build -t gcr.io/${{ env.PROJECT_ID }}/ugahacks-6-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/events/ugahacks-6
-          docker push gcr.io/${{ env.PROJECT_ID }}/ugahacks-6-${{ env.DEPLOY_ENV }}:${{ github.sha }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-6')
-
-      - name: Deploy ugahacks-6 to Cloud Run
-        id: deploy_ugahacks_6
-        uses: google-github-actions/deploy-cloudrun@v0.4.0
-        with:
-          service: ugahacks-6-${{ env.DEPLOY_ENV }}
-          image: gcr.io/${{ env.PROJECT_ID }}/ugahacks-6-${{ env.DEPLOY_ENV }}:${{ github.sha }}
-          region: ${{ env.REGION }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-6')
-
-      - name: ugahacks-6 Post Deployment
-        run: |-
-          echo "Active URL:"
-          echo ${{ steps.deploy_ugahacks_6.outputs.url }}
-        if: contains(steps.file_changes.outputs.files , 'ugahacks-6')
-
-      # Makeathon 2
-      - name: Build and Push makeathon-2 Container
-        run: |-
-          echo "makeathon-2 changed, building ..."
-          docker build -t gcr.io/${{ env.PROJECT_ID }}/makeathon-2-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/events/makeathon-2
-          docker push gcr.io/${{ env.PROJECT_ID }}/makeathon-2-${{ env.DEPLOY_ENV }}:${{ github.sha }}
-        if: contains(steps.file_changes.outputs.files , 'makeathon-2')
-
-      - name: Deploy makeathon-2 to Cloud Run
-        id: deploy_makeathon_2
-        uses: google-github-actions/deploy-cloudrun@v0.4.0
-        with:
-          service: makeathon-2-${{ env.DEPLOY_ENV }}
-          image: gcr.io/${{ env.PROJECT_ID }}/makeathon-2-${{ env.DEPLOY_ENV }}:${{ github.sha }}
-          region: ${{ env.REGION }}
-        if: contains(steps.file_changes.outputs.files , 'makeathon-2')
-
-      - name: makeathon-2 Post Deployment
-        run: |-
-          echo "Active URL:"
-          echo ${{ steps.deploy_makeathon_2.outputs.url }}
-        if: contains(steps.file_changes.outputs.files , 'makeathon-2')
-
-      # Cadathon 26
-      - name: Build and Push cadathon-26 Container
-        run: |-
-          echo "cadathon-26 changed, building ..."
-          docker build -t us-east1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/cadathon-26:${{ github.sha }} web/events/cadathon-26
-          docker push us-east1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/cadathon-26:${{ github.sha }}
-        if: contains(steps.file_changes.outputs.files , 'cadathon-26')
-
-      - name: Deploy cadathon-26 to Cloud Run
-        id: deploy_cadathon_26
-        uses: google-github-actions/deploy-cloudrun@v0.4.0
-        with:
-          service: cadathon-26-${{ env.DEPLOY_ENV }}
-          image: us-east1-docker.pkg.dev/${{ env.PROJECT_ID }}/ugahacks/cadathon-26:${{ github.sha }}
-          region: us-east1
-        if: contains(steps.file_changes.outputs.files , 'cadathon-26')
-
-      - name: cadathon-26 Post Deployment
-        run: |-
-          echo "Active URL:"
-          echo ${{ steps.deploy_cadathon_26.outputs.url }}
-        if: contains(steps.file_changes.outputs.files , 'cadathon-26')
-
-      # Makeathon 3
-      - name: Build and Push makeathon-3 Container
-        run: |-
-          echo "makeathon-3 changed, building ..."
-          docker build -t gcr.io/${{ env.PROJECT_ID }}/makeathon-3-${{ env.DEPLOY_ENV }}:${{ github.sha }} web/events/makeathon-3
-          docker push gcr.io/${{ env.PROJECT_ID }}/makeathon-3-${{ env.DEPLOY_ENV }}:${{ github.sha }}
-        if: contains(steps.file_changes.outputs.files , 'makeathon-3')
-
-      - name: Deploy makeathon-3 to Cloud Run
-        id: deploy_makeathon_3
-        uses: google-github-actions/deploy-cloudrun@v0.4.0
-        with:
-          service: makeathon-3-${{ env.DEPLOY_ENV }}
-          image: gcr.io/${{ env.PROJECT_ID }}/makeathon-3-${{ env.DEPLOY_ENV }}:${{ github.sha }}
-          region: ${{ env.REGION }}
-        if: contains(steps.file_changes.outputs.files , 'makeathon-3')
-
-      - name: makeathon-3 Post Deployment
-        run: |-
-          echo "Active URL:"
-          echo ${{ steps.deploy_makeathon_2.outputs.url }}
-        if: contains(steps.file_changes.outputs.files , 'makeathon-3')
+      - name: Report deployment URL
+        env:
+          URL: ${{ steps.deploy.outputs.url }}
+        run: echo "$URL"
