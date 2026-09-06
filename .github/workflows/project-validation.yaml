@@ -5,7 +5,7 @@ on:
     paths:
       - "web/**"
       - ".github/deploy-projects.json"
-      - ".github/project-paths.yaml"
+      - ".github/scripts/project-matrix.sh"
       - ".github/workflows/cicd_master.yaml"
       - ".github/workflows/project-validation.yaml"
   workflow_dispatch:
@@ -17,26 +17,16 @@ jobs:
   changes:
     runs-on: ubuntu-latest
     outputs:
-      matrix: ${{ steps.matrix.outputs.result }}
+      matrix: ${{ steps.matrix.outputs.matrix }}
     steps:
       - uses: actions/checkout@v4
-      - uses: dorny/paths-filter@v4
-        id: filter
         with:
-          filters: .github/project-paths.yaml
+          fetch-depth: 0
       - id: matrix
         env:
-          CHANGED: ${{ steps.filter.outputs.changes }}
-        run: |
-          if jq -e 'index("all")' <<< "$CHANGED" >/dev/null; then
-            result=$(jq -c '{include: .}' .github/deploy-projects.json)
-          else
-            result=$(jq -c --argjson changed "$CHANGED" \
-              '{include: [.[] | select(.id as $id | $changed | index($id))]}' \
-              .github/deploy-projects.json)
-          fi
-          echo "result=$result" >> "$GITHUB_OUTPUT"
-        shell: bash
+          BASE: ${{ github.event.pull_request.base.sha || format('{0}^', github.sha) }}
+          HEAD: ${{ github.sha }}
+        run: echo "matrix=$(bash .github/scripts/project-matrix.sh "$BASE" "$HEAD")" >> "$GITHUB_OUTPUT"
 
   validate:
     needs: changes
