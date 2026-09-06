@@ -7,7 +7,6 @@ on:
     paths:
       - "web/**"
       - ".github/deploy-projects.json"
-      - ".github/scripts/project-matrix.sh"
       - ".github/workflows/cicd_master.yaml"
 
 permissions:
@@ -29,7 +28,27 @@ jobs:
         env:
           BASE: ${{ github.event.before }}
           HEAD: ${{ github.sha }}
-        run: echo "matrix=$(bash .github/scripts/project-matrix.sh "$BASE" "$HEAD" production)" >> "$GITHUB_OUTPUT"
+        run: |
+          changed=$(git diff --name-only "$BASE" "$HEAD" | jq -Rsc 'split("\n") | map(select(length > 0))')
+          force_all=$(jq -nr --argjson changed "$changed" '
+            $changed | any(
+              . == ".github/deploy-projects.json" or
+              . == ".github/workflows/cicd_master.yaml"
+            )
+          ')
+          matrix=$(jq -c \
+            --argjson changed "$changed" \
+            --argjson force_all "$force_all" '
+              {include: [
+                .[]
+                | select(.production)
+                | select(
+                    $force_all or
+                    (.path as $path | $changed | any(startswith($path + "/")))
+                  )
+              ]}
+            ' .github/deploy-projects.json)
+          echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
 
   deploy:
     needs: changes
