@@ -6,7 +6,7 @@ on:
       - master
     paths:
       - "web/**"
-      - ".github/cicd_deploy_matrix.json"
+      - ".github/deploy_matrix.json"
       - ".github/workflows/cicd_master.yaml"
 
 permissions:
@@ -36,7 +36,7 @@ jobs:
 
           # A change to the workflow or the project registry can affect every
           # project, so redeploy all of them rather than trying to diff intent.
-          if grep -qE '^\.github/(cicd_deploy_matrix\.json|workflows/cicd_master\.yaml)$' <<< "$changed"; then
+          if grep -qE '^\.github/(deploy_matrix\.json|workflows/cicd_master\.yaml)$' <<< "$changed"; then
             force_all=true
           else
             force_all=false
@@ -57,7 +57,7 @@ jobs:
                     ($changed | split("\n") | any(startswith($project.path + "/")))
                   )
               ]
-            }' .github/cicd_deploy_matrix.json)
+            }' .github/deploy_matrix.json)
 
           echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
 
