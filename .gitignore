@@ -3,6 +3,8 @@
 # Yarn 2
 .pnp.*
 .yarn/*
+web/**/.yarn/cache
+web/**/.yarn/install-state.gz
 .idea/*
 .vscode/*
 !.yarn/patches
@@ -12,6 +14,6 @@
 !.yarn/versions
 
 # Build files
-web/*/*build*
-web/*/.next
+web/**/*build*
+web/**/.next
 .env

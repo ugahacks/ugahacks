@@ -1,0 +1,26 @@
+{
+  "name": "ugahacks-9",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "yarn@4.18.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint || true"
+  },
+  "dependencies": {
+    "@types/node": "20.4.5",
+    "@types/react": "18.2.17",
+    "@types/react-dom": "18.2.7",
+    "eslint-config-next": "12.1.7-canary.35",
+    "next": "13.4.12",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.11.0",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.46.0"
+  }
+}
