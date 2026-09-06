@@ -74,6 +74,10 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node }}
+          # Corepack (enabled below) manages Yarn; setup-node's built-in
+          # cache runs `yarn cache dir` before corepack is enabled, which
+          # fails against the yarn@4 packageManager pin under global yarn 1.x.
+          package-manager-cache: false
       - run: corepack enable
       - name: Install dependencies
         run: |
