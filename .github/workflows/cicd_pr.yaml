@@ -1,0 +1,99 @@
+name: Validate PR
+
+on:
+  pull_request:
+    paths:
+      - "web/**"
+      - ".github/deploy_matrix.json"
+      - ".github/workflows/cicd_master.yaml"
+      - ".github/workflows/cicd_pr.yaml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Collect changed files
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || format('{0}^', github.sha) }}
+          HEAD: ${{ github.sha }}
+        run: |
+          # Files touched by this PR (one path per line).
+          git diff --name-only "$BASE" "$HEAD" > "$RUNNER_TEMP/changed-files.txt"
+
+      - name: Determine validation scope
+        id: scope
+        run: |
+          # A change to the workflows or the deploy matrix can affect every
+          # project, so validate all of them rather than trying to diff intent.
+          if grep -qE '^\.github/(deploy_matrix\.json|workflows/(cicd_master|cicd_pr)\.yaml)$' "$RUNNER_TEMP/changed-files.txt"; then
+            echo "force_all=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "force_all=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build validation matrix
+        id: matrix
+        env:
+          FORCE_ALL: ${{ steps.scope.outputs.force_all }}
+        run: |
+          # Build the validation matrix from the same file the deploy workflow
+          # deploys from: keep each project whose directory contains a changed
+          # file (or keep all of them when force_all is set).
+          matrix=$(jq -c \
+            --rawfile changed "$RUNNER_TEMP/changed-files.txt" \
+            --argjson force_all "$FORCE_ALL" \
+            '{
+              include: [
+                .include[]
+                | . as $project
+                | select(
+                    $force_all or
+                    ($changed | split("\n") | any(startswith($project.path + "/")))
+                  )
+              ]
+            }' .github/deploy_matrix.json)
+
+          echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
+
+  validate:
+    needs: changes
+    if: needs.changes.outputs.matrix != '{"include":[]}'
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.changes.outputs.matrix) }}
+    name: Validate ${{ matrix.id }}
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ matrix.path }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ matrix.node }}
+          # Corepack (enabled below) manages Yarn; setup-node's built-in
+          # cache runs `yarn cache dir` before corepack is enabled, which
+          # fails against the yarn@4 packageManager pin under global yarn 1.x.
+          package-manager-cache: false
+      - run: corepack enable
+      - name: Install dependencies
+        run: |
+          if grep -q '"packageManager": "yarn@1' package.json; then
+            yarn install --frozen-lockfile
+          else
+            yarn install --immutable
+          fi
+      - run: yarn lint
+      - run: yarn build
+      - name: Build container
+        run: docker build .

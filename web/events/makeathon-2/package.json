@@ -1,0 +1,29 @@
+{
+  "name": "makeathon-2",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "yarn@4.18.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint || true"
+  },
+  "dependencies": {
+    "@types/node": "20.5.9",
+    "@types/react": "19",
+    "@types/react-dom": "19",
+    "eslint-config-next": "15.5.25",
+    "next": "15.5.25",
+    "react": "19.0.8",
+    "react-dom": "19.0.8",
+    "react-icons": "^4.11.0",
+    "react-tsparticles": "^2.12.2",
+    "tsparticles": "2.12.0",
+    "tsparticles-engine": "^2.12.0",
+    "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.48.0"
+  }
+}

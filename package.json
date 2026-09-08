@@ -4,11 +4,7 @@
   "version": "1.0.0",
   "repository": "",
   "license": "MIT",
-  "workspaces": [
-    "web/*",
-    "!web/cadathon-26",
-    "!web/ugahacks-12"
-  ],
+  "workspaces": "!**/* — Web applications are intentionally independent projects; each has its own Yarn version and lockfile.",
   "scripts": {
     "husky-init": "husky install"
   },
@@ -17,13 +13,5 @@
     "husky": "^9.0.11",
     "typescript": "^5.2.2"
   },
-  "depedencies": {},
-  "packageManager": "yarn@4.3.0",
-  "dependencies": {
-    "@types/react-icons": "^3.0.0",
-    "mini-css-extract-plugin": "1.0.0",
-    "next": "^14.2.15",
-    "react-icons": "^4.11.0",
-    "tailwindcss-animate": "^1.0.5"
-  }
+  "packageManager": "yarn@4.3.0"
 }
