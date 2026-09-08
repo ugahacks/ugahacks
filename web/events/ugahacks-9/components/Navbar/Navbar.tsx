@@ -20,7 +20,7 @@ interface NavLinkProps {
 }
 
 interface NavReactIconProps {
-  image: JSX.Element;
+  image: React.JSX.Element;
   href: string;
 }
 
