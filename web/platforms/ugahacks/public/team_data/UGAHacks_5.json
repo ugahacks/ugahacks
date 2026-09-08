@@ -1,0 +1,358 @@
+[
+  {
+    "name": "Byte",
+    "role": "Mascot",
+    "quote": "Boot up your dreams - Shoot for the stars",
+    "image_path": "team_images/UGAHacks_5/byte-5.jpg",
+    "social_links": [
+      {
+        "type": "website",
+        "url": "https://5.ugahacks.com/"
+      }
+    ]
+  },
+  {
+    "name": "Mohd (TJ) Hasan",
+    "role": "Lead Director",
+    "quote": "\"Those who are seen dancing are thought to be insane by those who cannot\n\t\t\t\t\t\t\t\t\t\t\t\thear the music.\"",
+    "image_path": "team_images/UGAHacks_5/mohd-hasan.jpg",
+    "social_links": [
+      {
+        "type": "github",
+        "url": "https://github.com/tjhasan"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/mohdhasan10/"
+      },
+      {
+        "type": "website",
+        "url": "https://tjhasan.github.io/"
+      }
+    ]
+  },
+  {
+    "name": "Amy Yang",
+    "role": "Finance Director",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_5/amy-yang.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/amy-yang-2bba64102/"
+      }
+    ]
+  },
+  {
+    "name": "Glen George",
+    "role": "Logistics Director",
+    "quote": "\"Chase your dreams, pursue your passions, never be afraid to be\n\t\t\t\t\t\t\t\t\t\t\t\tuncomfortable.\"",
+    "image_path": "team_images/UGAHacks_5/glen-george.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/glenge0rge/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/glen-j-george/"
+      }
+    ]
+  },
+  {
+    "name": "Annie Lian",
+    "role": "Marketing Director",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_5/annie-lian.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/annie-lian/"
+      }
+    ]
+  },
+  {
+    "name": "Amanda Yang",
+    "role": "Sponsorship Co-director",
+    "quote": "\"Why did the java developer wear glasses? Because he couldn’t C#\"",
+    "image_path": "team_images/UGAHacks_5/amanda-yang.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/amayangg"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/amanda-yang-2019/"
+      }
+    ]
+  },
+  {
+    "name": "Shivani Nanda",
+    "role": "Sponsorship Co-director",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_5/shivani-nanda.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/shivaninanda/"
+      }
+    ]
+  },
+  {
+    "name": "Andrei Spatariu",
+    "role": "Web Director",
+    "quote": "\"If you're only good at one thing, make it everything.\"",
+    "image_path": "team_images/UGAHacks_5/andrei-spatariu.jpg",
+    "social_links": [
+      {
+        "type": "github",
+        "url": "https://github.com/andros415"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/andrei-s/"
+      }
+    ]
+  },
+  {
+    "name": "Danny Lee",
+    "role": "Advisor",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_5/danny-lee.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/dannylee25/"
+      }
+    ]
+  },
+  {
+    "name": "Jin Jeong",
+    "role": "Advisor",
+    "quote": "\"Proud of the hacks team!\"",
+    "image_path": "team_images/UGAHacks_5/jin-jeong.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jin-jeong/"
+      }
+    ]
+  },
+  {
+    "name": "Jennifer Ly",
+    "role": "Advisor",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_5/jennifer-ly.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/ngoc-jennifer-ly/"
+      }
+    ]
+  },
+  {
+    "name": "Paul Hansa",
+    "role": "Advisor",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_5/paul-hansa.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/phansa/"
+      }
+    ]
+  },
+  {
+    "name": "A.C. Willams",
+    "role": "Logistics Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_5/ac-williams.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/allen-williams-ac"
+      }
+    ]
+  },
+  {
+    "name": "Sydney Nelms",
+    "role": "Logistics Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_5/sydney-nelms.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sydney-nelms-1a1874191/"
+      }
+    ]
+  },
+  {
+    "name": "Stefan Tobler",
+    "role": "Logistics Team",
+    "quote": "\"No mom I don't know what error code 27 means on the TV\"",
+    "image_path": "team_images/UGAHacks_5/stefan-tobler.jpg",
+    "social_links": [
+      {
+        "type": "github",
+        "url": "https://github.com/stefantobler"
+      },
+      {
+        "type": "twitter",
+        "url": "https://twitter.com/stefanltobler"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/stefantobler"
+      },
+      {
+        "type": "website",
+        "url": "https://stefantobler.com"
+      }
+    ]
+  },
+  {
+    "name": "Thonny Koon",
+    "role": "Logistics Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_5/thonny-koon.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/thonnykoon/"
+      }
+    ]
+  },
+  {
+    "name": "Felise Wen",
+    "role": "Marketing Team",
+    "quote": "\"Opinions on Frozen Pop Tarts?\"",
+    "image_path": "team_images/UGAHacks_5/felise-wen.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/feliseeeeenavidad/"
+      }
+    ]
+  },
+  {
+    "name": "Connor Cummings",
+    "role": "Sponsorship Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_5/connor-cummings.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/connor-cummings-47905216b/"
+      }
+    ]
+  },
+  {
+    "name": "Jeffery John",
+    "role": "Sponsorship Team",
+    "quote": "\"Go Dawgs!\"",
+    "image_path": "team_images/UGAHacks_5/jeffery-john.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/jefferyjohn_/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/jefferyjohn"
+      },
+      {
+        "type": "twitter",
+        "url": "https://twitter.com/jefferyjohn_"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jefferyjohn/"
+      },
+      {
+        "type": "website",
+        "url": "https://jefferyajohn.com/"
+      }
+    ]
+  },
+  {
+    "name": "Hima Velaga",
+    "role": "Sponsorship Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_5/hima-velaga.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/hima-velaga/"
+      }
+    ]
+  },
+  {
+    "name": "Alex Costa",
+    "role": "Web Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_5/alex-costa.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/alexcostaluiz/"
+      }
+    ]
+  },
+  {
+    "name": "Courtney Hogan",
+    "role": "Web Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_5/courtney-hogan.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/courtney-hogan/"
+      }
+    ]
+  },
+  {
+    "name": "Danny Lopez",
+    "role": "Web Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_5/danny-lopez.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/dlopez1212/"
+      }
+    ]
+  },
+  {
+    "name": "Julian Camp",
+    "role": "Web Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_5/julian-camp.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/juliancamp/"
+      }
+    ]
+  },
+  {
+    "name": "Kane Du",
+    "role": "Web Team",
+    "quote": "\"Hello there\"",
+    "image_path": "team_images/UGAHacks_5/kane-du.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/youkaneduit/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/kanedu828"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/kane-du-517277172/"
+      }
+    ]
+  }
+]

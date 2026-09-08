@@ -1,0 +1,399 @@
+[
+  {
+    "name": "Byte",
+    "role": "Mascot",
+    "quote": "Create your own adventure.",
+    "image_path": "team_images/UGAHacks_8/byte-8.png",
+    "social_links": [
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/ugahacks"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/ugahacks/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/ugahacks"
+      },
+      {
+        "type": "twitter",
+        "url": "https://twitter.com/ugahacks"
+      }
+    ]
+  },
+  {
+    "name": "Aniyah Norman",
+    "role": "Lead Director",
+    "quote": "There’s the whole world at your feet!",
+    "image_path": "team_images/UGAHacks_8/aniyah-norman.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/aniyah-norman/\n\t\t\t\t\t\t\t\t\t\t\t"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/ani.chan/"
+      }
+    ]
+  },
+  {
+    "name": "Saba Merchant",
+    "role": "Sponsorship Director",
+    "quote": "My puns are 🐨 ☕️",
+    "image_path": "team_images/UGAHacks_8/saba-merchant.jpeg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/saba_merchant123/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sabavmerchant/"
+      }
+    ]
+  },
+  {
+    "name": "Banibe Ebegbodi",
+    "role": "Marketing Director",
+    "quote": "I think we ought to live happily ever after",
+    "image_path": "team_images/UGAHacks_8/banibe-ebegbodi.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/buni.bear/"
+      },
+      {
+        "type": "linkedin",
+        "url": " https://www.linkedin.com/in/bani-ebegbodi/"
+      }
+    ]
+  },
+  {
+    "name": "Alex Breazu",
+    "role": "Logistics Director",
+    "quote": "If you're reading this, I think you should go buy a house plant or two.",
+    "image_path": "team_images/UGAHacks_8/alex-breazu.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/alex-breazu/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/proxenceyt/"
+      }
+    ]
+  },
+  {
+    "name": "Genki Aikawa",
+    "role": "Tech Director",
+    "quote": "Would you be my Valentine?",
+    "image_path": "team_images/UGAHacks_8/genki-aikawa.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/genki-aikawa/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/__genki__/"
+      }
+    ]
+  },
+  {
+    "name": "Helium Yang",
+    "role": "Logistics Team",
+    "quote": "Boing. Just boing.",
+    "image_path": "team_images/UGAHacks_8/helium-yang.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/helium_yang"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://linkedin.com/in/heliumyang"
+      }
+    ]
+  },
+  {
+    "name": "Matthew Santoro",
+    "role": "Logistics Team",
+    "quote": "Here we go again",
+    "image_path": "team_images/UGAHacks_8/matthew-santoro.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/matthewasantoro/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/_matthew_santoro_/"
+      }
+    ]
+  },
+  {
+    "name": "Ivan Mo",
+    "role": "Logistics Team",
+    "quote": "Quote (optional)",
+    "image_path": "team_images/UGAHacks_8/ivan-mo.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/ivan-mo/"
+      }
+    ]
+  },
+  {
+    "name": "Khushi Bhatamrekar",
+    "role": "Logistics Team",
+    "quote": "One day.. I'm going to make onions cry",
+    "image_path": "team_images/UGAHacks_8/khushi-bhatamrekar-bitmoji.png",
+    "social_links": []
+  },
+  {
+    "name": "Priya Nayak",
+    "role": "Logistics Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_8/priya-nayak.PNG",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/priya-nayak-6a6377165/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/priya.026/"
+      }
+    ]
+  },
+  {
+    "name": "Shawn Pradeep",
+    "role": "Logistics Team",
+    "quote": "\"Don't let the haters stop you from doing your thang.\" -Kevin Gnapoor, \"Mean Girls\"",
+    "image_path": "team_images/UGAHacks_8/shawn-pradeep.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/shawnpradeep"
+      }
+    ]
+  },
+  {
+    "name": "Trudy Chen",
+    "role": "Logistics Team",
+    "quote": "A foolish person thinks they know everything, a wise person knows they know nothing",
+    "image_path": "team_images/UGAHacks_8/trudy-chen.jpeg",
+    "social_links": []
+  },
+  {
+    "name": "John Atkinson",
+    "role": "Logistics Team",
+    "quote": "My dog is better than yours and his name is BYTE",
+    "image_path": "team_images/UGAHacks_8/john-atkinson.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/johnatkinson2020/"
+      }
+    ]
+  },
+  {
+    "name": "Gargee Jamadagni",
+    "role": "Marketing Team",
+    "quote": "<3",
+    "image_path": "team_images/UGAHacks_8/gargee-jamadagni.JPG",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/gargeejamadagni/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/gargee.jam/"
+      }
+    ]
+  },
+  {
+    "name": "Kaytie Lin",
+    "role": "Marketing Team",
+    "quote": "nice try, go next ᕕ( ᐛ )ᕗ",
+    "image_path": "team_images/UGAHacks_8/kaytie-lin.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/kaytie-lin"
+      }
+    ]
+  },
+  {
+    "name": "Matthew Tzou",
+    "role": "Marketing Team",
+    "quote": "Seize the day",
+    "image_path": "team_images/UGAHacks_8/matthew-tzou.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/matthew-tzou/ "
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/MatzoMT"
+      }
+    ]
+  },
+  {
+    "name": "Sarah Orji",
+    "role": "Marketing Team",
+    "quote": "“It all started when I was born.” – Squidward",
+    "image_path": "team_images/UGAHacks_8/sarah-orji.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/sarah2.fyee/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sarah-orji-54619b106/"
+      }
+    ]
+  },
+  {
+    "name": "Marianne Delgado",
+    "role": "Marketing Team",
+    "quote": "I am cringe but I am free",
+    "image_path": "team_images/UGAHacks_8/marianne-delgado.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/mar.ahn/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/mariannedelgadodesign"
+      }
+    ]
+  },
+  {
+    "name": "Elodie Collier",
+    "role": "Sponsorship Team",
+    "quote": "Bonjour! Oui oui.",
+    "image_path": "team_images/UGAHacks_8/elodie-collier.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/elodiecollier/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/elodie-collier/"
+      }
+    ]
+  },
+  {
+    "name": "Siddhi Chitgopkar",
+    "role": "Sponsorship Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_8/siddhi-chitgopkar.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/siddhichitgopkar/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/siddhichitgopkar/"
+      }
+    ]
+  },
+  {
+    "name": "Matthew Chambers",
+    "role": "Sponsorship Team",
+    "quote": "Maybe luck is involved, but I don't want to give up on the things I can control.",
+    "image_path": "team_images/UGAHacks_8/matthew-chambers.JPG",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/matthewbc/"
+      }
+    ]
+  },
+  {
+    "name": "Raegan Girdley",
+    "role": "Sponsorship Team",
+    "quote": "Bad things happen to me all the time. I’m sure it’s the Dark Reunion behind all of this.",
+    "image_path": "team_images/UGAHacks_8/raegan-girdley.jpeg",
+    "social_links": []
+  },
+  {
+    "name": "Jiya Patel",
+    "role": "Sponsorship Team",
+    "quote": "Live what you love",
+    "image_path": "team_images/UGAHacks_8/jiya-patel.JPG",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/jiyanpatel31/"
+      }
+    ]
+  },
+  {
+    "name": "Justin Moon",
+    "role": "Tech Team",
+    "quote": "Oh wait, we're doing a quote? Let me think of one real quick.",
+    "image_path": "team_images/UGAHacks_8/justin-moon.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/justin-t-moon/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/jtm13"
+      }
+    ]
+  },
+  {
+    "name": "Astha Jain",
+    "role": "Tech Team",
+    "quote": "\"Alexa, tell me a quote\"",
+    "image_path": "team_images/UGAHacks_8/astha-jain.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/asthajn/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/astha_jain31/"
+      },
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/astha.jain.395"
+      }
+    ]
+  },
+  {
+    "name": "Dylan Meyer",
+    "role": "Tech Team",
+    "quote": "“Technology like art is a soaring exercise of the human imagination.” – Daniel Bell",
+    "image_path": "team_images/UGAHacks_8/dylan-meyer.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/charles-meyer-6043b2219/"
+      },
+      {
+        "type": "twitter",
+        "url": " https://twitter.com/dylmeyer"
+      },
+      {
+        "type": "website",
+        "url": "https://www.dylmeyer.com"
+      }
+    ]
+  }
+]

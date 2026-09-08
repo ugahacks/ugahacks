@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Anurag Banerjee",
+    "role": "Lead Director",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_2/person.jpg",
+    "social_links": []
+  },
+  {
+    "name": "Aditya Sood",
+    "role": "Logistics Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_2/person.jpg",
+    "social_links": []
+  },
+  {
+    "name": "Jade Glasgow",
+    "role": "Logistics Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_2/person.jpg",
+    "social_links": []
+  },
+  {
+    "name": "Kelsie Belan",
+    "role": "Marketing Team",
+    "quote": "\"Fail often, fail fast.\" ― Don Norman",
+    "image_path": "team_images/UGAHacks_2/Kelsie_Belan.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/kelsiebelan/"
+      }
+    ]
+  },
+  {
+    "name": "Jay Patel",
+    "role": "Marketing Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_2/person.jpg",
+    "social_links": []
+  },
+  {
+    "name": "Heather Hunynh",
+    "role": "Tech Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_2/person.jpg",
+    "social_links": []
+  }
+]

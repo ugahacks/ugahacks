@@ -1,0 +1,610 @@
+[
+  {
+    "name": "Byte",
+    "role": "Mascot",
+    "quote": "Be the Hero of Your Own Story",
+    "image_path": "team_images/UGAHacks_9/byte-9.png",
+    "social_links": [
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/ugahacks"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/ugahacks/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/ugahacks"
+      },
+      {
+        "type": "twitter",
+        "url": "https://twitter.com/ugahacks"
+      }
+    ]
+  },
+  {
+    "name": "Banibe Ebegbodi",
+    "role": "Lead Director",
+    "quote": "I think we ought to live happily ever after",
+    "image_path": "team_images/UGAHacks_9/banibe-ebegbodi.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/buni.bear/"
+      },
+      {
+        "type": "linkedin",
+        "url": " https://www.linkedin.com/in/bani-ebegbodi/"
+      }
+    ]
+  },
+  {
+    "name": "Siddhi Chitgopkar",
+    "role": "Sponsorship Director",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_9/siddhi-chitgopkar.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/siddhichitgopkar"
+      }
+    ]
+  },
+  {
+    "name": "Gargee Jamadagni",
+    "role": "Marketing Director",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_9/gargee-jamadagni.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/gargee.jam"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/gargeejamadagni/"
+      }
+    ]
+  },
+  {
+    "name": "Helium Yang",
+    "role": "Logistics Director",
+    "quote": "\"These donuts are great! Jelly filled are my favorites! Nothing beats a jelly filled donut\" - Brock, Pokémon",
+    "image_path": "team_images/UGAHacks_9/helium-yang.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/helium_yang"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://linkedin.com/in/heliumyang"
+      }
+    ]
+  },
+  {
+    "name": "Shawn Pradeep",
+    "role": "Tech Director",
+    "quote": "\"some dev trapped me in this div\"",
+    "image_path": "team_images/UGAHacks_9/shawn-pradeep.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/shawnprdp/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/shawnprad/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/shawnpradeep"
+      },
+      {
+        "type": "website",
+        "url": "https://shawnpradeep.com"
+      }
+    ]
+  },
+  {
+    "name": "Ivan Mo",
+    "role": "Advisor",
+    "quote": "HOLD ON HOLD ON I GOT THIS LEMME THINK",
+    "image_path": "team_images/UGAHacks_9/ivan-mo.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/ivan-mo/"
+      }
+    ]
+  },
+  {
+    "name": "Aniyah Norman",
+    "role": "Advisor",
+    "quote": "\"This Story Has Been Yours All Along. You Just Didn't Know It.\" -- GotG 3",
+    "image_path": "team_images/UGAHacks_9/aniyah-norman.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/aniyah-norman/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/ani.chan/"
+      }
+    ]
+  },
+  {
+    "name": "Saba Merchant",
+    "role": "Advisor",
+    "quote": "My puns are 🐨 ☕️",
+    "image_path": "team_images/UGAHacks_9/saba-merchant.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/saba_merchant123/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sabavmerchant/"
+      }
+    ]
+  },
+  {
+    "name": "Genki Aikawa",
+    "role": "Advisor",
+    "quote": "Would you be my Valentine?",
+    "image_path": "team_images/UGAHacks_9/genki-aikawa.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/genki-aikawa/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/__genki__/"
+      }
+    ]
+  },
+  {
+    "name": "Matthew Santoro",
+    "role": "Advisor",
+    "quote": "Here we go again",
+    "image_path": "team_images/UGAHacks_9/matthew-santoro.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/matthewasantoro/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/_matthew_santoro_/"
+      }
+    ]
+  },
+  {
+    "name": "Khushi Bhatamrekar",
+    "role": "Logistics Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_9/khushi-bhatamrekar.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/khuxhix"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/khushibhat/"
+      }
+    ]
+  },
+  {
+    "name": "Catherine Chu",
+    "role": "Logistics Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_9/catherine-chu.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/ahh.chu/"
+      }
+    ]
+  },
+  {
+    "name": "Ethan Ogle",
+    "role": "Logistics Team",
+    "quote": "It is lonely at the top",
+    "image_path": "team_images/UGAHacks_9/ethan-ogle.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/ethan-ogle/"
+      }
+    ]
+  },
+  {
+    "name": "Batu Ozdener",
+    "role": "Logistics Team",
+    "quote": "Another one bytes the dust",
+    "image_path": "team_images/UGAHacks_9/batu-ozdener.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/alibatuozdener/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/alibatuozdener/"
+      }
+    ]
+  },
+  {
+    "name": "Kevin Do",
+    "role": "Logistics Team",
+    "quote": "Weeeeeeee! Ooga Booga.+ - Me (sleep deprived)",
+    "image_path": "team_images/UGAHacks_9/kevin-do.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/sushid0e/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/kevin-do-6236f/"
+      }
+    ]
+  },
+  {
+    "name": "Elaine Chow",
+    "role": "Logistics Team",
+    "quote": ":D",
+    "image_path": "team_images/UGAHacks_9/elaine-chow.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/elaine-chow3/"
+      }
+    ]
+  },
+  {
+    "name": "Codey Borrelli",
+    "role": "Logistics Team",
+    "quote": "generating world...\n                                            loading terrain...",
+    "image_path": "team_images/UGAHacks_9/codey-borrelli.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/codey-borrelli-ab879225a/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/coco.2264/"
+      },
+      {
+        "type": "youtube",
+        "url": "https://www.youtube.com/@Coco2264"
+      }
+    ]
+  },
+  {
+    "name": "Kellen Brown",
+    "role": "Logistics Team",
+    "quote": "They call me cheap, but I don't buy that",
+    "image_path": "team_images/UGAHacks_9/kellen-brown.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/kellenkbrown/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/kellenbro/"
+      }
+    ]
+  },
+  {
+    "name": "Hemant Gautam",
+    "role": "Logistics Team",
+    "quote": "\"\"You gave me cookie, I got you cookie, man\"- Nick\"",
+    "image_path": "team_images/UGAHacks_9/hemant-gautam.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/hemant-g-510148127"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/okayhemant/"
+      }
+    ]
+  },
+  {
+    "name": "Angel Hoang",
+    "role": "Logistics Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_9/angel-hoang.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/angel_hoang28/"
+      }
+    ]
+  },
+  {
+    "name": "Ryan Majd",
+    "role": "Marketing Team",
+    "quote": "My name is Ryan and I like computers",
+    "image_path": "team_images/UGAHacks_9/ryan-majd.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/ryan-majd/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/TheRyanMajd/"
+      },
+      {
+        "type": "twitter",
+        "url": "https://twitter.com/theryanmajd"
+      }
+    ]
+  },
+  {
+    "name": "Sophia Rhoads",
+    "role": "Marketing Team",
+    "quote": "Peep peep??",
+    "image_path": "team_images/UGAHacks_9/sophia-rhoads.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sophia-rhoads-55111622a"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/sophia_the_froggo/"
+      }
+    ]
+  },
+  {
+    "name": "Hailey Hubbard",
+    "role": "Marketing Team",
+    "quote": ":)",
+    "image_path": "team_images/UGAHacks_9/hailey-hubbard.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/haileyhubbard/"
+      }
+    ]
+  },
+  {
+    "name": "Siya Sharma",
+    "role": "Marketing Team",
+    "quote": "Dream big <3",
+    "image_path": "team_images/UGAHacks_9/siya-sharma.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/siya-sharma-ss2025"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/siyasharma.03/"
+      }
+    ]
+  },
+  {
+    "name": "Kaytie Lin",
+    "role": "Marketing Team",
+    "quote": "Why do people say “ATM Machines?” The M stands for machines.",
+    "image_path": "team_images/UGAHacks_9/kaytie-lin.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/kaytie-lin"
+      }
+    ]
+  },
+  {
+    "name": "Sarah Orji",
+    "role": "Marketing Team",
+    "quote": "“I’m ugly and I’m proud!” – Spongebob",
+    "image_path": "team_images/UGAHacks_9/sarah-orji.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/sarah2.fyee/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sarah-orji-54619b106/"
+      }
+    ]
+  },
+  {
+    "name": "Jiya Patel",
+    "role": "Sponsorship Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_9/jiya-patel.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/jiyanpatel31/"
+      }
+    ]
+  },
+  {
+    "name": "Matthew Chambers",
+    "role": "Sponsorship Team",
+    "quote": "Enron ethics employee of the year, 2008",
+    "image_path": "team_images/UGAHacks_9/matthew-chambers.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/matthewbc"
+      }
+    ]
+  },
+  {
+    "name": "Raegan Girdley",
+    "role": "Sponsorship Team",
+    "quote": "“I’m The Dude.” - The Dude",
+    "image_path": "team_images/UGAHacks_9/raegan-girdley.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/raegangirdley"
+      }
+    ]
+  },
+  {
+    "name": "Matthew Jue",
+    "role": "Sponsorship Team",
+    "quote": "Live what you love",
+    "image_path": "team_images/UGAHacks_9/matthew-jue.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/matthewrjue"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/mjue26/"
+      }
+    ]
+  },
+  {
+    "name": "Samee Lalani",
+    "role": "Sponsorship Team",
+    "quote": "\"I don't want to repeat my innocence. I want the pleasure of losing it again\" - F. Scott Fitzgerald",
+    "image_path": "team_images/UGAHacks_9/samee-lalani.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/samee-lalani/"
+      }
+    ]
+  },
+  {
+    "name": "Nikita Jha",
+    "role": "Tech Team",
+    "quote": "It's a big world!",
+    "image_path": "team_images/UGAHacks_9/nikita-jha.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/nikita-jha19/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/nikita.jha_/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/nikita-jha"
+      }
+    ]
+  },
+  {
+    "name": "Vansh Arora",
+    "role": "Tech Team",
+    "quote": "Never wait for a tomorrow that may never come.",
+    "image_path": "team_images/UGAHacks_9/vansh-arora.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/vansh-arora-874707234/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/vansharora03"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/vansh.a3 /"
+      }
+    ]
+  },
+  {
+    "name": "Kasra Ghaffari",
+    "role": "Tech Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_9/kasra-ghaffari.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/kasra-g"
+      }
+    ]
+  },
+  {
+    "name": "Max Pelot",
+    "role": "Tech Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_9/max-pelot.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/max-pelot-0890a3252/"
+      }
+    ]
+  },
+  {
+    "name": "Hannah Kwak",
+    "role": "Tech Team",
+    "quote": "everything will work out the way it was supposed to be :)",
+    "image_path": "team_images/UGAHacks_9/hannah-kwak.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/hanniekwak/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/hanniekwak/"
+      }
+    ]
+  },
+  {
+    "name": "Dhruv Patel",
+    "role": "Tech Team",
+    "quote": "\"However strong you become, never seek to bear everything alone\" - Itachi Uchiha",
+    "image_path": "team_images/UGAHacks_9/dhruv-patel.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/dhruv-patel-2a3a7323a"
+      }
+    ]
+  },
+  {
+    "name": "Alex Teal",
+    "role": "Tech Team",
+    "quote": "DROP TABLE `quotes`;-- Huh... weird i really thought that would wor�â�\u0000\u0000�\u000b\u0000�è\u0000H�â�\u0000\u0000�\u000b\u0000�Hl$\u0018����",
+    "image_path": "team_images/UGAHacks_9/alex-teal.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/alex-teal/"
+      }
+    ]
+  },
+  {
+    "name": "Justin Moon",
+    "role": "Tech Team",
+    "quote": "Apparently, sunscreen expires",
+    "image_path": "team_images/UGAHacks_9/justin-moon.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/justin-t-moon/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/jtm13"
+      }
+    ]
+  }
+]

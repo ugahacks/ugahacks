@@ -1,0 +1,535 @@
+[
+  {
+    "name": "Asanti Kumera",
+    "role": "Marketing Team",
+    "quote": "does anyone wanna play outside after work",
+    "image_path": "team_images/UGAHacks_11/asanti-kumera.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/asantii._"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/asanti-kumera-b245b2332"
+      }
+    ]
+  },
+  {
+    "name": "Maya Castillo",
+    "role": "Marketing Team",
+    "quote": "What's meant to be will be",
+    "image_path": "team_images/UGAHacks_11/maya-castillo.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/mcstle"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/maya-castillo"
+      }
+    ]
+  },
+  {
+    "name": "Batu Ozdener",
+    "role": "Lead Director",
+    "quote": "Another one bytes the dust",
+    "image_path": "team_images/UGAHacks_11/batu-ozdener.png",
+    "social_links": [
+      { "type": "website", "url": "https://www.batu.dev/" },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/alibatuozdener/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/alibatuozdener/"
+      }
+    ]
+  },
+  {
+    "name": "Kataleena Mishra",
+    "role": "Marketing Director",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_11/kataleena-mishra.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/kataleenamishra"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/kataleena-mishra-81b407254/"
+      }
+    ]
+  },
+  {
+    "name": "Aishu Madanu",
+    "role": "Logistics + CE Director",
+    "quote": "^3^",
+    "image_path": "team_images/UGAHacks_11/aishu-madanu.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/aishwini._"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/aishwini-madanu"
+      }
+    ]
+  },
+  {
+    "name": "Siya Sharma",
+    "role": "Advisor",
+    "quote": "live life :)",
+    "image_path": "team_images/UGAHacks_11/siya-sharma.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/siyasharma.03"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/siya-sharma-ss2025?utm_source=share&utm_camp"
+      }
+    ]
+  },
+  {
+    "name": "Saniya Pirani",
+    "role": "Marketing Team",
+    "quote": "Spread love everywhere you go. Let no one ever come without leaving happier. —Mother Teresa",
+    "image_path": "team_images/UGAHacks_11/saniya-pirani.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/saniyapiranii"
+      },
+      {
+        "type": "linkedin",
+        "url": "http://linkedin.com/in/saniya-pirani"
+      }
+    ]
+  },
+  {
+    "name": "Nivedha Natarajan",
+    "role": "Logistics + CE Director",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_11/nivedha-natarajan.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/nivedhanatarajan/"
+      }
+    ]
+  },
+  {
+    "name": "Jacob Harris",
+    "role": "Logistics + CE Team",
+    "quote": "#OpenToWork",
+    "image_path": "team_images/UGAHacks_11/jacob-harris.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jacob-harris-4874a432a/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/JacobHarris-Dev"
+      }
+    ]
+  },
+  {
+    "name": "Anika Khatri",
+    "role": "Logistics + CE Team",
+    "quote": "☺",
+    "image_path": "team_images/UGAHacks_11/anika-khatri.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/anika.khatri15"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/anika-khatri-808227161"
+      }
+    ]
+  },
+  {
+    "name": "Andrea Ayon",
+    "role": "Logistics + CE Team",
+    "quote": "Risk is always better than regret.",
+    "image_path": "team_images/UGAHacks_11/andrea-ayon.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/andreaayon/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/andrea.ayonn/"
+      }
+    ]
+  },
+  {
+    "name": "Ethan Ogle",
+    "role": "Advisor",
+    "quote": "So what do I sacrifice? Everything! - Luthen Rael",
+    "image_path": "team_images/UGAHacks_11/ethan-ogle.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/ethan-ogle"
+      }
+    ]
+  },
+  {
+    "name": "Nikhita Kunthu",
+    "role": "Logistics + CE Team",
+    "quote": "Pineapple on pizza",
+    "image_path": "team_images/UGAHacks_11/nikhita-kunthu.png",
+    "social_links": [
+      {
+        "type": "twitter",
+        "url": "https://twitter.com/Nikhita_kunthu"
+      }
+    ]
+  },
+  {
+    "name": "Mariah Jaeck",
+    "role": "Logistics + CE Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_11/mariah-jaeck.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/mariah-jaeck-334b5628a"
+      }
+    ]
+  },
+  {
+    "name": "Disha Rachur",
+    "role": "Logistics + CE Team",
+    "quote": "why cry when you can laugh?",
+    "image_path": "team_images/UGAHacks_11/disha-rachur.png",
+    "social_links": []
+  },
+  {
+    "name": "Vini Gunasekaran",
+    "role": "Marketing Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_11/vilasini-gunasekaran.png",
+    "social_links": []
+  },
+  {
+    "name": "Nanditha Chevula",
+    "role": "Logistics + CE Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_11/nanditha-chevula.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/naandu.c"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/nanditha-chevula1"
+      }
+    ]
+  },
+  {
+    "name": "Riya Prabhu",
+    "role": "Tech Team",
+    "quote": "If you focus on what you left behind, you will never see what lies ahead. -Gusteau, Ratatouille",
+    "image_path": "team_images/UGAHacks_11/riya-prabhu.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/riya-prabhu"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/r.iyaprabhu"
+      }
+    ]
+  },
+  {
+    "name": "Maadhavan Muthuselvan",
+    "role": "Sponsorship Team",
+    "quote": "Work Hard, Play (Marginally) Harder!",
+    "image_path": "team_images/UGAHacks_11/maadhavan-muthuselvan.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/maadhavan23/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/_maadhavan/"
+      }
+    ]
+  },
+  {
+    "name": "Krishna Mohan",
+    "role": "Tech Team",
+    "quote": "Think through everything but don't overthink anything",
+    "image_path": "team_images/UGAHacks_11/krishna-mohan.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/therealkrishnam"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/krishmo118"
+      }
+    ]
+  },
+  {
+    "name": "Ashlee Tam",
+    "role": "Marketing Team",
+    "quote": "The cold never bothered me anyway. - Frozen",
+    "image_path": "team_images/UGAHacks_11/ashlee-tam.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/ashleetam"
+      }
+    ]
+  },
+  {
+    "name": "Gargee Jamadagni",
+    "role": "Advisor",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_11/gargee-jamadagni.png",
+    "social_links": []
+  },
+  {
+    "name": "Adithya Lakshmikanth",
+    "role": "Tech Team",
+    "quote": "The difference between you and me is you wanna lose small and I wanna win big",
+    "image_path": "team_images/UGAHacks_11/adithya-lakshmikanth.png",
+    "social_links": []
+  },
+  {
+    "name": "Banibe Ebegbodi",
+    "role": "Advisor",
+    "quote": "I think we ought to live happily ever after",
+    "image_path": "team_images/UGAHacks_11/banibe-ebegbodi.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/bani-ebegbodi/"
+      }
+    ]
+  },
+  {
+    "name": "Saachi Varshney",
+    "role": "Sponsorship Team",
+    "quote": "The key to happiness is to just keep yourself busy with unimportant nonsense, and eventually, you'll be dead.",
+    "image_path": "team_images/UGAHacks_11/saachi-varshney.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/saachi.var"
+      }
+    ]
+  },
+  {
+    "name": "Helium Yang",
+    "role": "Advisor",
+    "quote": "Meow meow meow meow meow",
+    "image_path": "team_images/UGAHacks_11/helium-yang.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/heliumyang"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/heliumyang"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/heliumyang"
+      }
+    ]
+  },
+  {
+    "name": "Khushi Bhatamrekar",
+    "role": "Advisor",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_11/khushi-bhatamrekar.png",
+    "social_links": []
+  },
+  {
+    "name": "Henry Lue",
+    "role": "Tech Team",
+    "quote": "I'm glad to be supporting students in bringing their ideas to life under the shared interest of new technology",
+    "image_path": "team_images/UGAHacks_11/henry-lue.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/henry.lue"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/henry-lue"
+      }
+    ]
+  },
+  {
+    "name": "Jordi Seraphin",
+    "role": "Marketing Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_11/jordi-seraphin.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/callm.ejordi/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jordan-seraphin-30a559301/"
+      }
+    ]
+  },
+  {
+    "name": "Paola Diaz",
+    "role": "Sponsorship Team",
+    "quote": "Turning charm into checks, one email at a time",
+    "image_path": "team_images/UGAHacks_11/paola-diaz.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/paoxa"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/mpaoladiaz/"
+      }
+    ]
+  },
+  {
+    "name": "Zahin Hoque",
+    "role": "Logistics + CE Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_11/zahin-hoque.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/znhoque"
+      },
+      {
+        "type": "twitter",
+        "url": "https://x.com/zahinhoque"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/zahin-hoque"
+      }
+    ]
+  },
+  {
+    "name": "Tara Ravindranathan",
+    "role": "Logistics + CE Team",
+    "quote": "The earth laughs in flowers",
+    "image_path": "team_images/UGAHacks_11/tara-ravindranathan.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/Tararav4"
+      }
+    ]
+  },
+  {
+    "name": "Ella Wileman",
+    "role": "Sponsorship Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_11/ella-wileman.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/ella.wileman"
+      },
+      {
+        "type": "linkedin",
+        "url": "http://linkedin.com/in/ella-wileman-73919627a"
+      }
+    ]
+  },
+  {
+    "name": "Daniel Rifai",
+    "role": "Sponsorship Team",
+    "quote": "May the force be with you",
+    "image_path": "team_images/UGAHacks_11/daniel-rifai.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/daniel-rifai-19226a292?utm_source=share&utm_ca"
+      }
+    ]
+  },
+  {
+    "name": "Jenny Ngo",
+    "role": "Sponsorship Director",
+    "quote": "Sponsor Us",
+    "image_path": "team_images/UGAHacks_11/jenny-ngo.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jennifer-ngo-uga?utm_source=share&utm_campaign=share_v"
+      }
+    ]
+  },
+  {
+    "name": "Nikita Jha",
+    "role": "Advisor",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_11/nikita-jha.png",
+    "social_links": []
+  },
+  {
+    "name": "Stephen Sulimani",
+    "role": "Tech Team",
+    "quote": "The only problem you’re gonna have is that you didn’t buy more",
+    "image_path": "team_images/UGAHacks_11/stephen-sulimani.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/stephensulimani"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/stephensulimani"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/stephensulimani"
+      }
+    ]
+  },
+  {
+    "name": "Ryan Majd",
+    "role": "Tech Director",
+    "quote": "Magic is just an Aura wrapper",
+    "image_path": "team_images/UGAHacks_11/ryan-majd.png",
+    "social_links": [
+      {
+        "type": "website",
+        "url": "https://ryanmajd.com"
+      },
+      { "type": "github", "url": "https://github.com/theryanmajd" },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/theryanmajd"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/ryan-majd/"
+      }
+    ]
+  }
+]
+

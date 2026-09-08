@@ -1,0 +1,210 @@
+[
+  {
+    "name": "Leaf",
+    "role": "Mascot",
+    "quote": "Sowing the seed for the next generation of coders.",
+    "image_path": "team_images/UGAHacks_4/hacks4.jpg",
+    "social_links": [
+      {
+        "type": "website",
+        "url": "https://4.ugahacks.com/"
+      }
+    ]
+  },
+  {
+    "name": "Jin Jeong",
+    "role": "Lead Director",
+    "quote": "\"Proud of the hacks team!\"",
+    "image_path": "team_images/UGAHacks_4/jin-jeong.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jin-jeong/"
+      }
+    ]
+  },
+  {
+    "name": "Beier Zhu",
+    "role": "Directors",
+    "quote": "\"I learned from the creators that you don't have ot be talented, just a\n\t\t\t\t\t\t\t\t\t\t\t\theart for the community.\"",
+    "image_path": "team_images/UGAHacks_4/beier-zhu.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/beier-zhu/"
+      }
+    ]
+  },
+  {
+    "name": "Felise Wen",
+    "role": "Marketing Director",
+    "quote": "\"Opinions on Frozen Pop Tarts?\"",
+    "image_path": "team_images/UGAHacks_4/felise-wen.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/feliseeeeenavidad/"
+      }
+    ]
+  },
+  {
+    "name": "Mohd (TJ) Hasan",
+    "role": "Logistics Director",
+    "quote": "\"Those who are seen dancing are thought to be insane by those who cannot\n\t\t\t\t\t\t\t\t\t\t\t\thear the music.\"",
+    "image_path": "team_images/UGAHacks_4/mohd-hasan.jpg",
+    "social_links": [
+      {
+        "type": "github",
+        "url": "https://github.com/tjhasan"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/mohdhasan10/"
+      },
+      {
+        "type": "website",
+        "url": "https://tjhasan.github.io/"
+      }
+    ]
+  },
+  {
+    "name": "Sunny Park",
+    "role": "Sponsorship Director",
+    "quote": "\"I'm privileged to have been part of the team to create an amazing event\n\t\t\t\t\t\t\t\t\t\t\t\tfor future talent!\"",
+    "image_path": "team_images/UGAHacks_4/sunny-park.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sunjun-park/"
+      }
+    ]
+  },
+  {
+    "name": "Danny Lee",
+    "role": "Advisor",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_4/danny-lee.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/dannylee25/"
+      }
+    ]
+  },
+  {
+    "name": "Jennifer Ly",
+    "role": "Advisor",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_4/jennifer-ly.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/ngoc-jennifer-ly/"
+      }
+    ]
+  },
+  {
+    "name": "Paul Hansa",
+    "role": "Advisor",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_4/paul-hansa.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/phansa/"
+      }
+    ]
+  },
+  {
+    "name": "Glen George",
+    "role": "Logistics Team",
+    "quote": "\"Chase your dreams, pursue your passions, never be afraid to be\n\t\t\t\t\t\t\t\t\t\t\t\tuncomfortable.\"",
+    "image_path": "team_images/UGAHacks_4/glen-george.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/glenge0rge/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/glen-j-george/"
+      }
+    ]
+  },
+  {
+    "name": "Annie Lian",
+    "role": "Marketing Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_4/annie-lian.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/annie-lian/"
+      }
+    ]
+  },
+  {
+    "name": "Amanda Yang",
+    "role": "Sponsorship Team",
+    "quote": "\"Why did the java developer wear glasses? Because he couldn’t C#\"",
+    "image_path": "team_images/UGAHacks_4/amanda-yang.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/amayangg"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/amanda-yang-2019/"
+      }
+    ]
+  },
+  {
+    "name": "Connor Cummings",
+    "role": "Sponsorship Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_4/connor-cummings.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/connor-cummings-47905216b/"
+      }
+    ]
+  },
+  {
+    "name": "Shivani Nanda",
+    "role": "Sponsorship Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_4/shivani-nanda.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/shivaninanda/"
+      }
+    ]
+  },
+  {
+    "name": "Richard Red",
+    "role": "Sponsorship Team",
+    "quote": "\"Do it\"",
+    "image_path": "team_images/UGAHacks_4/richard-red.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/richardred/"
+      }
+    ]
+  },
+  {
+    "name": "Sahil Patel",
+    "role": "Web Team",
+    "quote": "\"My motivation is making hella stacks.\"",
+    "image_path": "team_images/UGAHacks_4/sahil-patel.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sahilpatel2397/"
+      }
+    ]
+  }
+]

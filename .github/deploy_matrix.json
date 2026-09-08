@@ -1,5 +1,6 @@
 {
   "include": [
+    {"id": "ugahacks",     "path": "web/platforms/ugahacks", "node": "24", "registry": "artifact", "region": "us-east1",    "production": true, "stage": false},
     {"id": "ugahacks-11",  "path": "web/events/ugahacks-11",  "node": "24", "registry": "artifact", "region": "us-east1",    "production": true, "stage": false},
     {"id": "ugahacks-x",   "path": "web/events/ugahacks-x",   "node": "18", "registry": "gcr",      "region": "us-central1", "production": true, "stage": true},
     {"id": "ugahacks-9",   "path": "web/events/ugahacks-9",   "node": "18", "registry": "gcr",      "region": "us-central1", "production": true, "stage": true},

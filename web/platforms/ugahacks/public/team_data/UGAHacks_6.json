@@ -1,0 +1,505 @@
+[
+  {
+    "name": "Byte",
+    "role": "Mascot",
+    "quote": "Boot up your dreams - Build the future",
+    "image_path": "team_images/UGAHacks_6/byte-6.jpg",
+    "social_links": [
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/ugahacks"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/ugahacks/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/ugahacks"
+      },
+      {
+        "type": "twitter",
+        "url": "https://twitter.com/ugahacks"
+      }
+    ]
+  },
+  {
+    "name": "Glen George",
+    "role": "Lead Director",
+    "quote": "\"Chase your dreams, pursue your passions, never be afraid to be\n\t\t\t\t\t\t\t\t\t\t\t\t\tuncomfortable.\"",
+    "image_path": "team_images/UGAHacks_6/glen-george.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/glenge0rge/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/glen-j-george/"
+      }
+    ]
+  },
+  {
+    "name": "Yi Jian MaMa",
+    "role": "Finance Director",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_6/yi-jian.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/yi-jian-ma-ma-555199164/"
+      }
+    ]
+  },
+  {
+    "name": "Sydney Nelms",
+    "role": "Logistics Director",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_6/sydney-nelms.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sydney-nelms-1a1874191/"
+      }
+    ]
+  },
+  {
+    "name": "Jenny Kim",
+    "role": "Marketing Director",
+    "quote": "\"Rainy day = Noodles\"",
+    "image_path": "team_images/UGAHacks_6/jenny-kim.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jenny-kim-b005121a4/"
+      }
+    ]
+  },
+  {
+    "name": "Jeffery John",
+    "role": "Sponsorship Director",
+    "quote": "\"Go Dawgs!\"",
+    "image_path": "team_images/UGAHacks_6/jeffery-john.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/jefferyjohn_/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/jefferyjohn"
+      },
+      {
+        "type": "twitter",
+        "url": "https://twitter.com/jefferyjohn_"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jefferyjohn/"
+      },
+      {
+        "type": "website",
+        "url": "https://jefferyajohn.com/"
+      }
+    ]
+  },
+  {
+    "name": "Kane Du",
+    "role": "Web Director",
+    "quote": "\"Hello there\"",
+    "image_path": "team_images/UGAHacks_6/kane-du.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/youkaneduit/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/kanedu828"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/kane-du-517277172/"
+      }
+    ]
+  },
+  {
+    "name": "Danny Lee",
+    "role": "Advisor",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_6/danny-lee.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/dannylee25/"
+      }
+    ]
+  },
+  {
+    "name": "Jin Jeong",
+    "role": "Advisor",
+    "quote": "\"Proud of the hacks team!\"",
+    "image_path": "team_images/UGAHacks_6/jin-jeong.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jin-jeong/"
+      }
+    ]
+  },
+  {
+    "name": "Jennifer Ly",
+    "role": "Advisor",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_6/jennifer-ly.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/ngoc-jennifer-ly/"
+      }
+    ]
+  },
+  {
+    "name": "Mohd (TJ) Hasan",
+    "role": "Advisor",
+    "quote": "\"Those who are seen dancing are thought to be insane by those who cannot\n\t\t\t\t\t\t\t\t\t\t\t\thear the music.\"",
+    "image_path": "team_images/UGAHacks_6/mohd-hasan.jpg",
+    "social_links": [
+      {
+        "type": "github",
+        "url": "https://github.com/tjhasan"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/mohdhasan10/"
+      },
+      {
+        "type": "website",
+        "url": "https://tjhasan.github.io/"
+      }
+    ]
+  },
+  {
+    "name": "Paul Hansa",
+    "role": "Advisor",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_6/paul-hansa.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/phansa/"
+      }
+    ]
+  },
+  {
+    "name": "Kevin Tang",
+    "role": "Logistics Team",
+    "quote": "\"Hack on!\"",
+    "image_path": "team_images/UGAHacks_6/kevin-tang.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/kevin-tang-101a62190/"
+      }
+    ]
+  },
+  {
+    "name": "Kyle Aban",
+    "role": "Logistics Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_6/kyle-aban.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/kyle-aban/"
+      }
+    ]
+  },
+  {
+    "name": "Miranda Gomez",
+    "role": "Logistics Team",
+    "quote": "\"What matters in life is not what happens to you but what you remember\n\t\t\t\t\t\t\t\t\t\t\t\tand how\"",
+    "image_path": "team_images/UGAHacks_6/miranda-gomez.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/miranda-gomez-puche/"
+      }
+    ]
+  },
+  {
+    "name": "Stefan Tobler",
+    "role": "Logistics Team",
+    "quote": "\"No mom I don't know what error code 27 means on the TV\"",
+    "image_path": "team_images/UGAHacks_6/stefan-tobler.jpg",
+    "social_links": [
+      {
+        "type": "github",
+        "url": "https://github.com/stefantobler"
+      },
+      {
+        "type": "twitter",
+        "url": "https://twitter.com/stefanltobler"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/stefantobler"
+      },
+      {
+        "type": "website",
+        "url": "https://stefantobler.com"
+      }
+    ]
+  },
+  {
+    "name": "Aidan Ostapko",
+    "role": "Marketing Team",
+    "quote": "\"I make things move\"",
+    "image_path": "team_images/UGAHacks_6/aidan-ostapko.png",
+    "social_links": []
+  },
+  {
+    "name": "Annie Lian",
+    "role": "Marketing Advisor",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_6/annie-lian.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/annie-lian/"
+      }
+    ]
+  },
+  {
+    "name": "Felise Wen",
+    "role": "Marketing Advisor",
+    "quote": "\"Opinions on Frozen Pop Tarts?\"",
+    "image_path": "team_images/UGAHacks_6/felise-wen.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/feliseeeeenavidad/"
+      }
+    ]
+  },
+  {
+    "name": "Amanda Yang",
+    "role": "Sponsorship Advisor",
+    "quote": "\"Why did the java developer wear glasses? Because he couldn’t C#\"",
+    "image_path": "team_images/UGAHacks_6/amanda-yang.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://instagram.com/amayangg"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/amanda-yang-2019/"
+      }
+    ]
+  },
+  {
+    "name": "Chunwing Ng",
+    "role": "Sponsorship Team",
+    "quote": "\"The only time I'm not on caffeine is when I'm asleep \"",
+    "image_path": "team_images/UGAHacks_6/chunwing-ng.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/chunwing-ng/"
+      }
+    ]
+  },
+  {
+    "name": "Connor Cummings",
+    "role": "Sponsorship Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_6/connor-cummings.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/connor-cummings-47905216b/"
+      }
+    ]
+  },
+  {
+    "name": "Keshav Raviprakash",
+    "role": "Sponsorship Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_6/keshav-raviprakash.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/keshav-raviprakash-638b11113/"
+      }
+    ]
+  },
+  {
+    "name": "Sameer Annavarapu",
+    "role": "Sponsorship Team",
+    "quote": "\"Never regret anythin that made you smile\"",
+    "image_path": "team_images/UGAHacks_6/sameer-annavarapu.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/sameer_annavarapu/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sameer-annavarapu/"
+      }
+    ]
+  },
+  {
+    "name": "Shivani Nanda",
+    "role": "Sponsorship Advisor",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_6/shivani-nanda.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/shivaninanda/"
+      }
+    ]
+  },
+  {
+    "name": "Sudhan Chitgopkar",
+    "role": "Sponsorship Team",
+    "quote": "\"Some flies are too awesome for the wall\"",
+    "image_path": "team_images/UGAHacks_6/sudhan-chitgopkar.png",
+    "social_links": [
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/sudhan.chitgopkar/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/not.sudhan/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/sudhanchitgopkar"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sudhanchitgopkar/"
+      },
+      {
+        "type": "website",
+        "url": "https://sudhanchitgopkar.com"
+      }
+    ]
+  },
+  {
+    "name": "Venusly Yang",
+    "role": "Sponsorship Team",
+    "quote": "\"If Monday had a face, I would punch it.\"",
+    "image_path": "team_images/UGAHacks_6/venusly-yang.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/venusly-yang/"
+      }
+    ]
+  },
+  {
+    "name": "Andrei Spatariu",
+    "role": "Web Advisor",
+    "quote": "\"If you're good at one thing, make it everything.\"",
+    "image_path": "team_images/UGAHacks_6/andrei-spatariu.jpg",
+    "social_links": [
+      {
+        "type": "github",
+        "url": "https://github.com/andros415"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/andrei-s/"
+      }
+    ]
+  },
+  {
+    "name": "Danny Lopez",
+    "role": "Web Advisor",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_6/danny-lopez.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/dlopez1212/"
+      }
+    ]
+  },
+  {
+    "name": "Emmanuel Oni",
+    "role": "Web Team",
+    "quote": "\"The universe is change and life is opinion\"",
+    "image_path": "team_images/UGAHacks_6/emmanuel-oni.jpg",
+    "social_links": [
+      {
+        "type": "github",
+        "url": "https://github.com/emmanoni"
+      },
+      {
+        "type": "twitter",
+        "url": "https://twitter.com/milkywaysalad"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/emmanoni/"
+      },
+      {
+        "type": "website",
+        "url": "https://www.milkywaysalad.com"
+      }
+    ]
+  },
+  {
+    "name": "Neal Patel",
+    "role": "Web Team",
+    "quote": "\"Space, reading, coding.\"",
+    "image_path": "team_images/UGAHacks_6/neal-patel.jpg",
+    "social_links": [
+      {
+        "type": "website",
+        "url": "https://nealdotpy.dev"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/nealdotpy"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/thatnealpatel/"
+      }
+    ]
+  },
+  {
+    "name": "Lana Kelly",
+    "role": "Web Team",
+    "quote": "\"Your voice matters. Vote!\"",
+    "image_path": "team_images/UGAHacks_6/lana-kelly.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/elhanakelly/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/elhana/"
+      }
+    ]
+  },
+  {
+    "name": "Shawn Holman",
+    "role": "Web Team",
+    "quote": "\"My passion is code!\"",
+    "image_path": "team_images/UGAHacks_6/shawn-holman.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/shawn-holman/"
+      }
+    ]
+  }
+]
