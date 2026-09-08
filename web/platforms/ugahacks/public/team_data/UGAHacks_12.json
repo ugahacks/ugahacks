@@ -1,0 +1,540 @@
+[
+  {
+    "name": "Asanti Kumera",
+    "role": "Marketing Team",
+    "quote": "does anyone wanna play outside after work",
+    "image_path": "team_images/UGAHacks_12/Asanti-Kumera.jpeg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/asantii._"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/asanti-kumera"
+      }
+    ]
+  },
+  {
+    "name": "Jacob Harris",
+    "role": "Lead Director",
+    "quote": "What's hackin' dawgs?",
+    "image_path": "team_images/UGAHacks_12/Jacob-Harris.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jacob-harris-4874a432a/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/JacobHarris-Dev"
+      },
+      {
+        "type": "website",
+        "url": "https://www.jacob-harris.net/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/juhcooby/"
+      }
+    ]
+  },
+  {
+    "name": "Maya Castillo",
+    "role": "Sponsorship Director",
+    "quote": "wanna get a sweet treat?",
+    "image_path": "team_images/UGAHacks_12/Maya-Castillo.JPG",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/mcstle"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/maya-castillo-889b90233/ "
+      }
+    ]
+  },
+  {
+    "name": "Kataleena Mishra",
+    "role": "Advisor",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_11/kataleena-mishra.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/kataleenamishra"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/kataleena-mishra-81b407254/"
+      }
+    ]
+  },
+  {
+    "name": "Jenny Ngo",
+    "role": "Advisor",
+    "quote": "Sponsor Us",
+    "image_path": "team_images/UGAHacks_11/jenny-ngo.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jennifer-ngo-uga?utm_source=share&utm_campaign=share_v"
+      }
+    ]
+  },
+  {
+    "name": "Batu Ozdener",
+    "role": "Advisor",
+    "quote": "Another one bytes the dust",
+    "image_path": "team_images/UGAHacks_11/batu-ozdener.png",
+    "social_links": [
+      { "type": "website", "url": "https://www.batu.dev/" },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/alibatuozdener/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/alibatuozdener/"
+      }
+    ]
+  },
+  {
+    "name": "Aishu Madanu",
+    "role": "Advisor",
+    "quote": "^3^",
+    "image_path": "team_images/UGAHacks_11/aishu-madanu.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/aishwini._"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/aishwini-madanu"
+      }
+    ]
+  },
+  {
+    "name": "Saniya Pirani",
+    "role": "Marketing Team",
+    "quote": "Spread love everywhere you go. Let no one ever come without leaving happier. \u2014Mother Teresa",
+    "image_path": "team_images/UGAHacks_12/Saniya-Pirani.jpeg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/saniyapiranii"
+      },
+      {
+        "type": "linkedin",
+        "url": "http://www.linkedin.com/in/Saniya-pirani"
+      }
+    ]
+  },
+  {
+    "name": "Anika Khatri",
+    "role": "Logistics + CE Director",
+    "quote": "\u263a",
+    "image_path": "team_images/UGAHacks_11/anika-khatri.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/anika.khatri15"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/anika-khatri-808227161"
+      }
+    ]
+  },
+  {
+    "name": "Nikhita Kunthu",
+    "role": "Logistics + CE Team",
+    "quote": "Startups start here\u2026 some of them:)",
+    "image_path": "team_images/UGAHacks_12/Nikhita-Kunthu.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/Nikhita-kunthu"
+      }
+    ]
+  },
+  {
+    "name": "Vini Gunasekaran",
+    "role": "Logistics + CE Director",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_12/Vilasini-Gunasekaran.jpg",
+    "social_links": [ 
+      {
+         "type": "linkedin",
+         "url": "https://www.linkedin.com/in/vilasini-gunasekaran/"
+      }
+    ]
+  },
+  {
+    "name": "Krishna Mohan",
+    "role": "Tech Director",
+    "quote": "Think through everything but don't overthink anything",
+    "image_path": "team_images/UGAHacks_11/krishna-mohan.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/therealkrishnam"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/krishmo118"
+      }
+    ]
+  },
+  {
+    "name": "Ashlee Tam",
+    "role": "Marketing Director",
+    "quote": "We're going to create a fairytale the whole world will believe! - Anastasia",
+    "image_path": "team_images/UGAHacks_12/Ashlee-Tam.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/ashleetam"
+      }
+    ]
+  },
+  {
+    "name": "Tara Ravindranathan",
+    "role": "Tech Team",
+    "quote": "The earth laughs in flowers",
+    "image_path": "team_images/UGAHacks_11/tara-ravindranathan.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/Tararav4"
+      }
+    ]
+  },
+  {
+    "name": "Daniel Rifai",
+    "role": "Advisor",
+    "quote": "May the force be with you",
+    "image_path": "team_images/UGAHacks_11/daniel-rifai.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/daniel-rifai-19226a292?utm_source=share&utm_ca"
+      }
+    ]
+  },
+  {
+    "name": "Selina Aspesi",
+    "role": "Marketing Team",
+    "quote": "You may have challenges, but the struggle will be worth it.",
+    "image_path": "team_images/UGAHacks_12/Selina-Aspesi.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/selina.aspesi"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/selina-aspesi/"
+      }
+    ]
+  },
+  {
+    "name": "Cameron Halaby",
+    "role": "Tech Team",
+    "quote": "\u30fd\u0f3c\u0e88\u0296\u032f\u0e88\u0f3d\uff89",
+    "image_path": "team_images/UGAHacks_12/Cameron-Halaby.png",
+    "social_links": [
+      {
+        "type": "website",
+        "url": "https://cameronhalaby.com/"
+      }
+    ]
+  },
+  {
+    "name": "Shruti Mishra",
+    "role": "Tech Team",
+    "quote": "Dare to be different",
+    "image_path": "team_images/UGAHacks_12/Shruti-Mishra.jpeg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/shrutimishraa06"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/shrutibmishra/"
+      }
+    ]
+  },
+  {
+    "name": "William Tomaszewski",
+    "role": "Logistics + CE Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_12/Will-Tomaszewski.jpeg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/will_.tom"
+      }
+    ]
+  },
+  {
+    "name": "Kyle Surajh",
+    "role": "Logistics + CE Team",
+    "quote": "Get Outlook for iOS",
+    "image_path": "team_images/UGAHacks_12/Kyle-Surajh.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/kyle-surajh-5679b2324"
+      }
+    ]
+  },
+  {
+    "name": "Victory Olusola",
+    "role": "Logistics + CE Team",
+    "quote": "if u spend ur time building a garden and the butterflies don\u2019t come, u will still have ur beautiful garden \ud83e\udd0d",
+    "image_path": "team_images/UGAHacks_12/Victory-Olusola.JPG",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/flaw.less.victory"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/victoryolusola"
+      }
+    ]
+  },
+  {
+    "name": "Lana Mayes",
+    "role": "Logistics + CE Team",
+    "quote": "The sun shines not on us but in us - John Muir",
+    "image_path": "team_images/UGAHacks_12/Lana-Mayes.JPG",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/lana-k-mayes"
+      }
+    ]
+  },
+  {
+    "name": "Ariya Kasi Viswanathan",
+    "role": "Logistics + CE Team",
+    "quote": "Life is too beautiful to spend it unhappy",
+    "image_path": "team_images/UGAHacks_12/Ariya-Kasi-Viswanathan.jpeg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/ariyakv"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/ariyakv"
+      }
+    ]
+  },
+  {
+    "name": "Bhaumi Nadella",
+    "role": "Marketing Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_12/Bhaumi-Nadella.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/bhauminadella"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/nbhaumi"
+      }
+    ]
+  },
+  {
+    "name": "Leen Quazi",
+    "role": "Logistics + CE Team",
+    "quote": "Let it be late, but let it be good",
+    "image_path": "team_images/UGAHacks_12/Leen-Quazi.jfif",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/leen.quazi/"
+      }
+    ]
+  },
+  {
+    "name": "Selam Haile",
+    "role": "Marketing Team",
+    "quote": "The limit does not exist",
+    "image_path": "team_images/UGAHacks_12/Selam-Haile.JPG",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/selam-haile1"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/se1aam"
+      }
+    ]
+  },
+  {
+    "name": "Venkat Suresh",
+    "role": "Sponsorship Team",
+    "quote": "Be the best version of yourself in anything you do. You don't have to live anybody else's story - Steph Curry",
+    "image_path": "team_images/UGAHacks_12/Venkat-Suresh.PNG",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/venkat.suresh11/"
+      }
+    ]
+  },
+  {
+    "name": "Anthony Wang",
+    "role": "Sponsorship Team",
+    "quote": "Fake it till you make it",
+    "image_path": "team_images/UGAHacks_12/Anthony-Wang.jpeg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/anth0ny.wang/"
+      }
+    ]
+  },
+  {
+    "name": "Varshini Venkatasamy",
+    "role": "Tech Team",
+    "quote": "Live as if you'll die tomorrow",
+    "image_path": "team_images/UGAHacks_12/Varshini-Venkatasamy.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/varshin1venkat"
+      }
+    ]
+  },
+  {
+    "name": "Zayan Hoodani",
+    "role": "Logistics + CE Team",
+    "quote": "If at first you don't succeed, skydiving is not for you",
+    "image_path": "team_images/UGAHacks_12/Zayan-Hoodani.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/zayanh1/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/zayanh1/"
+      }
+    ]
+  },
+  {
+    "name": "Ananya Jain",
+    "role": "Logistics + CE Team",
+    "quote": "Trying matters",
+    "image_path": "team_images/UGAHacks_12/Ananya-Jain.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/ananya-jain-a3ba5b29a"
+      }
+    ]
+  },
+  {
+    "name": "Ani Venkataraghavan",
+    "role": "Sponsorship Team",
+    "quote": "just like magic, just like magic, middle finger to my thumb and then I snap it... - Ariana Grande",
+    "image_path": "team_images/UGAHacks_12/Ani-Venkataraghavan.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/ani.venkata"
+      }
+    ]
+  },
+  {
+    "name": "Akanksha Tirupati",
+    "role": "Logistics + CE Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_12/Akanksha-Tirupati.JPG",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/akshu.tirupati/"
+      },
+      {
+        "type": "linkedin",
+        "url": "www.linkedin.com/in/akanksha-tirupati"
+      }
+    ]
+  },
+  {
+    "name": "Mohan Isanaka",
+    "role": "Tech Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_12/Mohan-Isanaka.webp",
+    "social_links": []
+  },
+  {
+    "name": "Sloan Finger",
+    "role": "Tech Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_12/placeholder.jpg",
+    "social_links": []
+  },
+  {
+    "name": "Kaila Li",
+    "role": "Sponsorship Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_12/placeholder.jpg",
+    "social_links": []
+  },
+  {
+    "name": "Aadi Saharan",
+    "role": "Sponsorship Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_12/placeholder.jpg",
+    "social_links": []
+  },
+  {
+    "name": "Indra Thota",
+    "role": "Sponsorship Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_12/placeholder.jpg",
+    "social_links": []
+  },
+  {
+    "name": "Yoshna Agrawal",
+    "role": "Sponsorship Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_12/placeholder.jpg",
+    "social_links": []
+  },
+  {
+    "name": "Sreenidhi Muppiri",
+    "role": "Sponsorship Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_12/Sreenidhi-Muppiri.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/sreenidhi.m_/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sreenidhi-muppiri/ "
+      }
+    ]
+  },
+  {
+    "name": "Ronit Parikh",
+    "role": "Sponsorship Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_12/placeholder.jpg",
+    "social_links": []
+  }
+]

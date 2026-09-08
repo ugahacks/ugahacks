@@ -1,0 +1,338 @@
+[
+  {
+    "name": "Byte",
+    "role": "Mascot",
+    "quote": "Reimagine your world - one pixel at a time",
+    "image_path": "team_images/UGAHacks_7/byte-7.png",
+    "social_links": [
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/ugahacks"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/ugahacks/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/ugahacks"
+      },
+      {
+        "type": "twitter",
+        "url": "https://twitter.com/ugahacks"
+      }
+    ]
+  },
+  {
+    "name": "Jeffery John",
+    "role": "Director",
+    "quote": "Hewwo",
+    "image_path": "team_images/UGAHacks_7/jeffery-john.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jefferyjohn/\n\t\t\t\t\t\t\t\t\t\t\t"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/jefferyjohn_/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/jefferyjohn"
+      }
+    ]
+  },
+  {
+    "name": "Sudhan Chitgopkar",
+    "role": "Director",
+    "quote": "Some flies are too cool for the wall",
+    "image_path": "team_images/UGAHacks_7/sudhan-chitgopkar.png",
+    "social_links": [
+      {
+        "type": "facebook",
+        "url": "https://www.facebook.com/sudhan.chitgopkar/"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/not.sudhan/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/sudhanchitgopkar"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sudhanchitgopkar/"
+      },
+      {
+        "type": "website",
+        "url": "https://sudhanchitgopkar.com"
+      }
+    ]
+  },
+  {
+    "name": "Austin Kral",
+    "role": "Director",
+    "quote": "Ritual is the husk of true faith",
+    "image_path": "team_images/UGAHacks_7/austin-kral.jpg",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/austinkral"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/austinckral"
+      },
+      {
+        "type": "website",
+        "url": "https://austinkral.com"
+      }
+    ]
+  },
+  {
+    "name": "Pranay Kumar",
+    "role": "Director",
+    "quote": "When in doubt, radish it out",
+    "image_path": "team_images/UGAHacks_7/pranay-kumar.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/pkumar26/"
+      }
+    ]
+  },
+  {
+    "name": "Alex Breazu",
+    "role": "Logistics Team",
+    "quote": "If you're reading this, I think you should go buy a house plant.",
+    "image_path": "team_images/UGAHacks_7/alex-breazu.png",
+    "social_links": [
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/proxenceyt/"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/alex-breazu/\n\t\t\t\t\t\t\t\t\t\t\t"
+      }
+    ]
+  },
+  {
+    "name": "Alex Pausa",
+    "role": "Logistics Team",
+    "quote": "I'm a Nerd :D",
+    "image_path": "team_images/UGAHacks_7/alex-pausa.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.instagram.com/alexpausa_/\n\t\t\t\t\t\t\t\t\t\t\t"
+      }
+    ]
+  },
+  {
+    "name": "Claire Venenga",
+    "role": "Logistics Team",
+    "quote": "Have you heard of the critically acclaimed MMORPG Final Fantasy XIV with\n\t\t\t\t\t\t\t\t\t\t\t\tan expanded free trial which you can play through the entirety of A\n\t\t\t\t\t\t\t\t\t\t\t\tRealm Reborn and the award winning Heavensward expansion up to level 60\n\t\t\t\t\t\t\t\t\t\t\t\tfor free with no restrictions on playtime?",
+    "image_path": "team_images/UGAHacks_7/claire-venenga.jpg",
+    "social_links": []
+  },
+  {
+    "name": "Gally Smith",
+    "role": "Logistics Team",
+    "quote": null,
+    "image_path": "team_images/UGAHacks_7/gally-smith.jpg",
+    "social_links": []
+  },
+  {
+    "name": "Grant Jimmerson",
+    "role": "Logistics Team",
+    "quote": "Go Dawgs!",
+    "image_path": "team_images/UGAHacks_7/grant-jimmerson.PNG",
+    "social_links": []
+  },
+  {
+    "name": "Helium Yang",
+    "role": "Logistics Team",
+    "quote": "What's your favorite boba?",
+    "image_path": "team_images/UGAHacks_7/helium-yang.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/heliumyang/\n\t\t\t\t\t\t\t\t\t\t\t"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/heliumyang"
+      }
+    ]
+  },
+  {
+    "name": "Himani Yadav",
+    "role": "Logistics Team",
+    "quote": "What did the html coding dog say? href href!",
+    "image_path": "team_images/UGAHacks_7/himani-yadav.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/himaniyadav/ "
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/himani__yadav/\n\t\t\t\t\t\t\t\t\t\t\t"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/himaniyadav\n\t\t\t\t\t\t\t\t\t\t\t"
+      }
+    ]
+  },
+  {
+    "name": "Ivan Mo",
+    "role": "Logistics Team",
+    "quote": "Okay but what if",
+    "image_path": "team_images/UGAHacks_7/ivan-mo.JPG",
+    "social_links": []
+  },
+  {
+    "name": "Joseph Nguyen",
+    "role": "Logistics Team",
+    "quote": "Expect the unexpected",
+    "image_path": "team_images/UGAHacks_7/joseph-nguyen.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/josephnguyen1999/\n\n\t\t\t\t\t\t\t\t\t\t\t"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/JosephNguyen1999"
+      }
+    ]
+  },
+  {
+    "name": "Larraine Mensah",
+    "role": "Logistics Team",
+    "quote": "Aut viam inveniam aut faciam",
+    "image_path": "team_images/UGAHacks_7/larraine-mensah.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/clmensah/ "
+      },
+      {
+        "type": "website",
+        "url": "https://clmensah.github.io\n\t\t\t\t\t\t\t\t\t\t\t"
+      }
+    ]
+  },
+  {
+    "name": "Matthew Santoro",
+    "role": "Logistics Team",
+    "quote": "Gotta go fast",
+    "image_path": "team_images/UGAHacks_7/matthew-santoro.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/matthewasantoro/\n\t\t\t\t\t\t\t\t\t\t\t"
+      }
+    ]
+  },
+  {
+    "name": "Olivia Carino",
+    "role": "Logistics Team",
+    "quote": "Tea > Coffee",
+    "image_path": "team_images/UGAHacks_7/olivia-carino.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/oliviacarino/\n\t\t\t\t\t\t\t\t\t\t\t"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/oliviacarino\n\n\t\t\t\t\t\t\t\t\t\t\t"
+      },
+      {
+        "type": "website",
+        "url": "http://oliviacarino.com/\n\t\t\t\t\t\t\t\t\t\t\t"
+      }
+    ]
+  },
+  {
+    "name": "Banibe Ebegbodi",
+    "role": "Marketing Team",
+    "quote": "Good things take time.",
+    "image_path": "team_images/UGAHacks_7/banibe-ebegbodi.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/bani-ebegbodi/\n\t\t\t\t\t\t\t\t\t\t\t"
+      },
+      {
+        "type": "instagram",
+        "url": "https://www.instagram.com/buni.bear/\n\t\t\t\t\t\t\t\t\t\t\t"
+      }
+    ]
+  },
+  {
+    "name": "Elodie Collier",
+    "role": "Marketing Team",
+    "quote": "How does a computer get drunk? It takes screenshots.",
+    "image_path": "team_images/UGAHacks_7/elodie-collier.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/elodie-collier/\n\t\t\t\t\t\t\t\t\t\t\t"
+      }
+    ]
+  },
+  {
+    "name": "Saba Merchant",
+    "role": "Sponsorship Team",
+    "quote": "I'm going to stand outside, so if anyone asks I am outstanding",
+    "image_path": "team_images/UGAHacks_7/saba-merchant.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sabavmerchant/\n\t\t\t\t\t\t\t\t\t\t\t"
+      }
+    ]
+  },
+  {
+    "name": "Richard Hoepfinger",
+    "role": "Sponsorship Team",
+    "quote": "Technically, bogosort is the most efficient if you're lucky",
+    "image_path": "team_images/UGAHacks_7/richard-hoepfinger.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/richard-hoepfinger/\n\t\t\t\t\t\t\t\t\t\t\t"
+      }
+    ]
+  },
+  {
+    "name": "Genki Aikawa",
+    "role": "Tech Team",
+    "quote": "Will you be my Valentine?",
+    "image_path": "team_images/UGAHacks_7/genki-aikawa.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/genki-aikawa/\n\t\t\t\t\t\t\t\t\t\t\t"
+      }
+    ]
+  },
+  {
+    "name": "Ryan Schuster",
+    "role": "Tech Team",
+    "quote": "We are what we repeatedly do. Excellence, then, is not an act, but a\n\t\t\t\t\t\t\t\t\t\t\t\thabit",
+    "image_path": "team_images/UGAHacks_7/ryan-schuster.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/ryan-schuster-251200206/\n\t\t\t\t\t\t\t\t\t\t\t"
+      }
+    ]
+  }
+]

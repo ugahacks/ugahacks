@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Anurag Banerjee",
+    "role": "Lead Director",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_1/person.jpg",
+    "social_links": []
+  },
+  {
+    "name": "Jaicob Stewart",
+    "role": "Logistics Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_1/Jaicob_S.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jaicob/"
+      }
+    ]
+  },
+  {
+    "name": "Malinda Inthirath",
+    "role": "Marketing Team",
+    "quote": "“I feel lucky to have been a part of the\n\t\t\t\t\t\t\t\t\t\t\t\t\tinaugural UGAHacks five years ago. I’m excited for what UGAHacks 6\n\t\t\t\t\t\t\t\t\t\t\t\t\thas in store!”",
+    "image_path": "team_images/UGAHacks_1/Malinda_1.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/minth/"
+      }
+    ]
+  },
+  {
+    "name": "Caleb Adams",
+    "role": "Tech Team",
+    "quote": "Build cool shit!",
+    "image_path": "team_images/UGAHacks_1/Caleb_adams.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/caleb-adams-75433168/"
+      },
+      {
+        "type": "website",
+        "url": "http://calebadams.space"
+      }
+    ]
+  }
+]

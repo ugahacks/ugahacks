@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Table",
+    "role": "Mascot",
+    "quote": "It's amazing what you can make with a team and a table.",
+    "image_path": "team_images/UGAHacks_3/mascot-uh3.jpg",
+    "social_links": [
+      {
+        "type": "website",
+        "url": "https://3.ugahacks.com/"
+      }
+    ]
+  },
+  {
+    "name": "Danny Lee",
+    "role": "Lead Director",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_3/danny-lee.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/dannylee25/\t"
+      }
+    ]
+  },
+  {
+    "name": "Jennifer Ly",
+    "role": "Director",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_3/jennifer-ly.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/ngoc-jennifer-ly/"
+      }
+    ]
+  },
+  {
+    "name": "Paul Hansa",
+    "role": "Director",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_3/paul-hansa.jpg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/phansa/"
+      }
+    ]
+  },
+  {
+    "name": "James Wang",
+    "role": "Logistics Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_3/James_Wang.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/james-wang-771a459a/"
+      }
+    ]
+  },
+  {
+    "name": "Tyle Vox",
+    "role": "Logistics Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_3/Tyler_vox.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/tyler-yox/"
+      }
+    ]
+  },
+  {
+    "name": "Ashley Wang",
+    "role": "Marketing Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_3/Ashley_W.png",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/wang-ashley/"
+      }
+    ]
+  },
+  {
+    "name": "DJ Bradbord",
+    "role": "Marketing Team",
+    "quote": "\"Back in my day, organizer rooms were always stocked with free soylent\"",
+    "image_path": "team_images/UGAHacks_3/DJ_Bradford.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/bradfordesigns/"
+      }
+    ]
+  },
+  {
+    "name": "Jacky Fong",
+    "role": "Sponsorship Team",
+    "quote": "",
+    "image_path": "team_images/UGAHacks_3/Jacky_F.JPG",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/jackyf/\t"
+      }
+    ]
+  },
+  {
+    "name": "Nick Tang",
+    "role": "Sponsorship Team",
+    "quote": "\"CEO of 3 point stories\"",
+    "image_path": "team_images/UGAHacks_3/Nick_Tang.jpeg",
+    "social_links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/nick-tang-4a8b50127/"
+      }
+    ]
+  }
+]
