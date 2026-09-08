@@ -25,28 +25,35 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Build deployment matrix
-        id: matrix
+      - name: Collect changed files
         env:
           BASE: ${{ github.event.before }}
           HEAD: ${{ github.sha }}
         run: |
           # Files touched by this push (one path per line).
-          changed=$(git diff --name-only "$BASE" "$HEAD")
+          git diff --name-only "$BASE" "$HEAD" > "$RUNNER_TEMP/changed-files.txt"
 
+      - name: Determine deployment scope
+        id: scope
+        run: |
           # A change to the workflow or the project registry can affect every
           # project, so redeploy all of them rather than trying to diff intent.
-          if grep -qE '^\.github/(deploy_matrix\.json|workflows/cicd_master\.yaml)$' <<< "$changed"; then
-            force_all=true
+          if grep -qE '^\.github/(deploy_matrix\.json|workflows/cicd_master\.yaml)$' "$RUNNER_TEMP/changed-files.txt"; then
+            echo "force_all=true" >> "$GITHUB_OUTPUT"
           else
-            force_all=false
+            echo "force_all=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Build deployment matrix
+        id: matrix
+        env:
+          FORCE_ALL: ${{ steps.scope.outputs.force_all }}
+        run: |
           # Build the deploy matrix: keep each production project whose directory
           # contains a changed file (or keep all of them when force_all is set).
           matrix=$(jq -c \
-            --arg changed "$changed" \
-            --argjson force_all "$force_all" \
+            --rawfile changed "$RUNNER_TEMP/changed-files.txt" \
+            --argjson force_all "$FORCE_ALL" \
             '{
               include: [
                 .include[]

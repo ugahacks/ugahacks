@@ -22,29 +22,36 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Build validation matrix
-        id: matrix
+      - name: Collect changed files
         env:
           BASE: ${{ github.event.pull_request.base.sha || format('{0}^', github.sha) }}
           HEAD: ${{ github.sha }}
         run: |
           # Files touched by this PR (one path per line).
-          changed=$(git diff --name-only "$BASE" "$HEAD")
+          git diff --name-only "$BASE" "$HEAD" > "$RUNNER_TEMP/changed-files.txt"
 
+      - name: Determine validation scope
+        id: scope
+        run: |
           # A change to the workflows or the deploy matrix can affect every
           # project, so validate all of them rather than trying to diff intent.
-          if grep -qE '^\.github/(deploy_matrix\.json|workflows/(cicd_master|cicd_pr)\.yaml)$' <<< "$changed"; then
-            force_all=true
+          if grep -qE '^\.github/(deploy_matrix\.json|workflows/(cicd_master|cicd_pr)\.yaml)$' "$RUNNER_TEMP/changed-files.txt"; then
+            echo "force_all=true" >> "$GITHUB_OUTPUT"
           else
-            force_all=false
+            echo "force_all=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Build validation matrix
+        id: matrix
+        env:
+          FORCE_ALL: ${{ steps.scope.outputs.force_all }}
+        run: |
           # Build the validation matrix from the same file the deploy workflow
           # deploys from: keep each project whose directory contains a changed
           # file (or keep all of them when force_all is set).
           matrix=$(jq -c \
-            --arg changed "$changed" \
-            --argjson force_all "$force_all" \
+            --rawfile changed "$RUNNER_TEMP/changed-files.txt" \
+            --argjson force_all "$FORCE_ALL" \
             '{
               include: [
                 .include[]
