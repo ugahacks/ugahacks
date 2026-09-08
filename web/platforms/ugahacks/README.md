@@ -4,11 +4,9 @@ Official repository for [ugahacks.com](https://ugahacks.com) — built with [Nex
 
 ## 🚀 Getting Started
 
-Clone the repository and install dependencies:
+From this directory in the monorepo, install dependencies:
 
 ```bash
-git clone https://github.com/UGAHacks/ugahacks-org.git
-cd ugahacks-org
 yarn install
 ```
 
@@ -36,6 +34,7 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser. The site w
 
 ## 🚢 Deployment
 
-We deploy via [GitHub Pages](https://docs.github.com/en/pages) — commits to `master` automatically trigger production builds.
+The monorepo's production workflow builds this application as a container
+and deploys it to Cloud Run when files in this directory change on `master`.
 
 ---

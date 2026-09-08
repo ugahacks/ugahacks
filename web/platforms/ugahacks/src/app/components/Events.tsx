@@ -386,13 +386,16 @@ const Events: React.FC = () => {
   }, []);
 
   const animate = useCallback(
-    (signal: AbortSignal, prevFrame = performance.now()) => {
+    function animateFrame(
+      signal: AbortSignal,
+      prevFrame = performance.now(),
+    ) {
       if (signal.aborted) {
         return;
       }
 
       requestAnimationFrame((currentFrame) => {
-        animate(signal, renderFrame(prevFrame, currentFrame));
+        animateFrame(signal, renderFrame(prevFrame, currentFrame));
       });
     },
     [renderFrame],
