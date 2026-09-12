@@ -5,17 +5,8 @@ import { ReactNode } from "react";
  * credit, Code of Conduct, contact email) instead of plain strings. This
  * matches cadathon-26's FAQ.tsx pattern of `ReactNode` answers.
  *
- * Copy re-transcribed from the Figma on 2026-08-27. The expanded-row mocks
- * (`285:1389`, `306:1770`) draw the real answer text, which the previous
- * version of this file only paraphrased. Every answer below is now the
- * design's own wording. Questions come from the collapsed accordion in
- * `Desktop - 28` (615:304).
- *
- * The design spells the product name two ways: "UGAHacks 12" in the
- * questions and "UGA Hacks 12" in the venue answer. Questions are
- * transcribed as drawn. The venue answer is normalized to "UGAHacks 12" to
- * match every other answer, because PLAN.md §5.2 already rules that "UGA
- * Hacks" is a typo. Flagged for copy review.
+ * Answers are transcribed from the UGAHacks 12 Figma. Questions keep the
+ * exact wording used by the UGAHacks 11 FAQ.
  */
 
 const CODE_OF_CONDUCT = "https://mlh.io/code-of-conduct";
@@ -35,7 +26,7 @@ function InlineLink({ href, children }: { href: string; children: ReactNode }) {
 
 export const FAQS: { q: string; a: ReactNode }[] = [
   {
-    q: "Where will UGAHacks 12 be held this year?",
+    q: "Where will it be held this year?",
     a: "UGAHacks 12 will be an in-person event held at the Miller Learning Center on the University of Georgia campus.",
   },
   {
@@ -80,7 +71,7 @@ export const FAQS: { q: string; a: ReactNode }[] = [
     a: "There is a limit of up to 4 people per team.",
   },
   {
-    q: "What if I have more questions?",
+    q: "If I have more questions?",
     a: (
       <>
         Reach out to{" "}
