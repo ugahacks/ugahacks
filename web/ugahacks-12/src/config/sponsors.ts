@@ -1,6 +1,6 @@
 /**
- * Sponsors and Individual Donors (§5.10), still placeholder content, because
- * the Figma's Sponsors and Donors grids also still draw blank slot cards.
+ * Sponsors and Individual Donors, still placeholder content, because the
+ * Figma's Sponsors and Donors grids also still draw blank slot cards.
  * Shaped so a real name, logo, or link can replace a slot without touching
  * `LogoGrid.tsx` or its layout. `logo` and `url` stay optional until an asset
  * and link exist.
