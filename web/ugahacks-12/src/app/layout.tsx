@@ -10,11 +10,9 @@ const courierPrime = Courier_Prime({
 });
 
 /**
- * Secondary display face -- the `--font-stamp` token in globals.css.
- *
- * The Page-2 extraction (docs/TAILWIND.md §7.4) answers PLAN.md open
- * question #3: the design uses **Post No Bills Colombo ExtraBold** for the
- * Sponsor Tracks folder titles and the "TOP SECRET" stamps.
+ * Secondary display face -- the `--font-stamp` token in globals.css. The
+ * design uses **Post No Bills Colombo ExtraBold** for the Sponsor Tracks
+ * folder titles and the "TOP SECRET" stamps.
  *
  * That family cannot be loaded here. `Post No Bills Colombo` is a Google
  * Fonts *early-access* release: it is not served by the standard Google
