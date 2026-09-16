@@ -8,9 +8,9 @@ export default function SponsorSection() {
   }));
 
   return (
-    <section className="bg-[#f7f5e8] min-h-screen w-full flex flex-col items-center justify-center py-20 px-6">
-      <div className="w-full flex flex-col items-center">
-        
+    <section className="bg-[#f7f5e8] w-full py-20 overflow-hidden">
+      <div className="mx-auto w-full max-w-7xl px-6 flex flex-col items-center">
+
         {/* Sponsors Banner */}
         <div className="w-full bg-[#0b1e2f] border-4 border-[#12233b] py-5 mb-12 flex items-center justify-center">
           <h2 className="text-5xl md:text-[96px] leading-[1.5] font-bold tracking-[-0.011em] text-[#f8c62c] font-heading text-center">
