@@ -8,7 +8,7 @@ export default function SponsorSection() {
   }));
 
   return (
-    <section className="bg-[#f7f5e8] w-full py-20 overflow-hidden">
+    <section id="sponsors" className="scroll-mt-nav bg-[#f7f5e8] w-full py-20 overflow-hidden">
       <div className="mx-auto w-full max-w-7xl px-6 flex flex-col items-center">
 
         {/* Sponsors Banner */}
