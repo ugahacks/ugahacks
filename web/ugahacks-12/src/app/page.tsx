@@ -9,7 +9,7 @@ import Team from "~/components/Team/Team";
 import { FAQ } from "~/components/FAQ";
 import { Navbar } from "~/components/Navbar";
 import { Schedule } from "~/components/Schedule";
-import WhatIsUGAHacks from "~/components/WhatIsUGAHacks";
+import About from "~/components/About";
 import { Hero } from "~/components/Hero";
 
 export default function Home() {
@@ -20,8 +20,8 @@ export default function Home() {
         <Hero />
         <TapeMarquee reverseStacking />
 
-        {/* Hero / What Is UGAHacks */}
-        <WhatIsUGAHacks />
+        {/* About */}
+        <About />
         {/* Previous-year recap video */}
         <RecapVideo />
         {/* Hackathon tracks (filing cabinet accordion) */}
