@@ -5,7 +5,7 @@
  * the fallback below isn't right.
  */
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://ugahacks.com";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://12.ugahacks.com";
 
 export const SITE_NAME = "UGAHacks 12";
 

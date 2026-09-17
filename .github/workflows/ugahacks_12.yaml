@@ -1,0 +1,62 @@
+name: UGAHacks 12 Cloud Run
+
+on:
+  pull_request:
+    paths:
+      - "web/ugahacks-12/**"
+      - ".github/workflows/ugahacks_12.yaml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ugahacks-12-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  REGION: us-east1
+  SERVICE: ugahacks-12-prod
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and lint production container
+        run: docker build -t ugahacks-12:${{ github.sha }} web/ugahacks-12
+      - name: Smoke test production container
+        run: |
+          docker run -d --name ugahacks-12 -p 8080:8080 ugahacks-12:${{ github.sha }}
+          trap 'docker logs ugahacks-12; docker stop ugahacks-12' EXIT
+          curl --fail --retry 15 --retry-connrefused --retry-delay 2 http://localhost:8080/ > /dev/null
+          curl --fail http://localhost:8080/sitemap.xml | grep -F 'https://12.ugahacks.com'
+          curl --fail http://localhost:8080/robots.txt | grep -F 'https://12.ugahacks.com'
+          curl --fail http://localhost:8080/Hero-background.png > /dev/null
+      - name: Authenticate to Google Cloud
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master'
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+      - name: Set up Google Cloud CLI
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master'
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+      - name: Push container
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master'
+        env:
+          PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+        run: |
+          gcloud auth configure-docker "$REGION-docker.pkg.dev" --quiet
+          IMAGE="$REGION-docker.pkg.dev/$PROJECT_ID/ugahacks/ugahacks-12:$GITHUB_SHA"
+          docker tag "ugahacks-12:$GITHUB_SHA" "$IMAGE"
+          docker push "$IMAGE"
+      - name: Deploy to Cloud Run
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master'
+        uses: google-github-actions/deploy-cloudrun@v2
+        with:
+          service: ${{ env.SERVICE }}
+          region: ${{ env.REGION }}
+          image: ${{ env.REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/ugahacks/ugahacks-12:${{ github.sha }}
+          flags: "--port=8080 --allow-unauthenticated"

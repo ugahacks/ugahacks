@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
+  outputFileTracingRoot: __dirname,
   reactCompiler: true,
   // The repo root has its own lockfiles, so Next infers the wrong workspace
   // root. ugahacks-12 is a standalone yarn project - pin it explicitly.

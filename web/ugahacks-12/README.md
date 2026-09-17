@@ -15,6 +15,44 @@ Open [http://localhost:3000](http://localhost:3000).
 Other scripts: `yarn build`, `yarn start`, `yarn lint`, `yarn format`,
 `yarn format:check`.
 
+## Deploy to Google Cloud Run
+
+The production domain is `https://12.ugahacks.com`. The Docker image uses
+Node.js 22, the committed Yarn release, and an immutable dependency install.
+It runs lint and the production build, then serves the standalone output
+as a non-root user on `0.0.0.0:$PORT` (default `8080`). Public images and
+Next.js static assets are included in the runtime image.
+
+From the repository root, build and test locally:
+
+```bash
+docker build -t ugahacks-12 web/ugahacks-12
+docker run --rm -p 8080:8080 ugahacks-12
+```
+
+Open `http://localhost:8080`, `/robots.txt`, and `/sitemap.xml`.
+The build downloads Google Fonts, so it needs outbound internet access.
+To use another canonical URL, supply
+`--build-arg NEXT_PUBLIC_SITE_URL=https://your-domain.example` when building.
+This value is embedded at build time; changing only the Cloud Run runtime
+environment will not update the pre-rendered metadata and sitemap.
+
+The **UGAHacks 12 Cloud Run** GitHub Actions workflow builds and smoke-tests
+the container on pull requests affecting this site. To deploy, merge the
+files to `master`, then select **Actions → UGAHacks 12 Cloud Run → Run workflow**
+on `master`. Manual runs on other branches only build and test.
+There is no automatic production deployment on push.
+
+The workflow uses the existing `GCP_PROJECT_ID` and `GCP_SA_KEY` repository
+secrets, the `ugahacks` Artifact Registry repository in `us-east1`, and the
+Cloud Run service `ugahacks-12-prod` in `us-east1`. The repository must exist,
+and the service account must be able to push images, deploy Cloud Run services,
+act as the runtime service account, and allow public access.
+
+After deployment, configure the hosting/domain mapping and DNS for
+`12.ugahacks.com` to point to this service and provision HTTPS. The canonical
+URL in the code does not create a domain mapping or DNS record.
+
 ## Project layout
 
 - `src/app` - App Router routes, plus `robots.ts` / `sitemap.ts` and the
