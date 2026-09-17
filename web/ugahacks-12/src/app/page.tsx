@@ -1,4 +1,6 @@
 import FilingCabinet from "~/components/FilingCabinet";
+import Footer from "~/components/Footer";
+import IndividualDonors from "~/components/IndividualDonors";
 import RecapVideo from "~/components/RecapVideo";
 import SponsorSection from "~/components/SponsorSection";
 import SponsorTracks from "~/components/SponsorTracks/SponsorTracks";
@@ -46,9 +48,10 @@ export default function Home() {
         <Team />
         {/* Sponsors grid */}
         <SponsorSection />
-        
+        <IndividualDonors />
         <TapeMarquee reverseStacking />
       </main>
+      <Footer />
     </>
   );
 }
