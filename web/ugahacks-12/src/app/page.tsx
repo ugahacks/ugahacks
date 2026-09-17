@@ -1,4 +1,3 @@
-import About from "~/components/About/About";
 import FilingCabinet from "~/components/FilingCabinet";
 import RecapVideo from "~/components/RecapVideo";
 import SponsorSection from "~/components/SponsorSection";
@@ -9,22 +8,20 @@ import { FAQ } from "~/components/FAQ";
 import { Navbar } from "~/components/Navbar";
 import { Schedule } from "~/components/Schedule";
 import WhatIsUGAHacks from "~/components/WhatIsUGAHacks";
+import { Hero } from "~/components/Hero";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <main className="flex flex-1 flex-col">
+        <Hero />
         <TapeMarquee reverseStacking />
 
         {/* Hero / What Is UGAHacks */}
         <WhatIsUGAHacks />
-        {/* About section with media */}
-        <About />
         {/* Previous-year recap video */}
         <RecapVideo />
-        {/* Sponsor tracks (folder display) */}
-        <SponsorTracks />
         {/* Hackathon tracks (filing cabinet accordion) */}
         <section
           id="tracks"
@@ -39,14 +36,17 @@ export default function Home() {
           </h2>
           <FilingCabinet />
         </section>
-        {/* Sponsors grid */}
-        <SponsorSection />
+        {/* Sponsor tracks (folder display) */}
+        <SponsorTracks />
         {/* Schedule */}
         <Schedule />
         {/* FAQ */}
         <FAQ />
         {/* Team */}
         <Team />
+        {/* Sponsors grid */}
+        <SponsorSection />
+        
         <TapeMarquee reverseStacking />
       </main>
     </>

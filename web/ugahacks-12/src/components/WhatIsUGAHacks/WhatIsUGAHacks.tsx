@@ -3,58 +3,63 @@ import Image from "next/image";
 /**
  * "What is UGAHacks?" section with argyle background pattern.
  *
- * Displays the event overview in a centered container with:
- * - Full-bleed background image (What-Section-Background.png)
- * - Yellow heading (110px, Courier Prime Bold)
- * - Teal body copy (36px, Bold, centered)
- * - Semi-transparent green container for content
- *
- * Dimensions: 1440px × 1024px (desktop)
- * Colors from Page 2 tokens: gold, tape-teal, board-green
+ * Mobile uses a real stacked card so the heading and copy stay readable.
+ * From the medium breakpoint onward, the section returns to the supplied
+ * 1440 × 1024 desktop artwork and its original proportions.
  */
 export default function WhatIsUGAHacks() {
   return (
     <section
       id="what-is-ugahacks"
-      className="scroll-mt-nav relative flex min-h-[1024px] w-full items-center justify-center overflow-hidden px-6 py-10 sm:px-10 md:py-16 lg:px-6"
+      className="scroll-mt-nav w-full"
     >
-      {/* Full-bleed background image */}
-      <Image
-        src="/What-Section-Background.png"
-        alt=""
-        fill
-        priority
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-        aria-hidden="true"
-      />
+      <div className="bg-argyle px-4 py-12 sm:px-8 sm:py-16 md:hidden">
+        <div className="mx-auto max-w-xl bg-board-green px-5 py-8 text-center shadow-lg sm:px-8 sm:py-10">
+          <h2 className="font-heading text-4xl leading-tight font-bold tracking-case text-gold sm:text-5xl">
+            What is UGAHacks?
+          </h2>
 
-      {/* Text overlay on background */}
-      <div className="relative z-10 mx-auto w-[1150px] text-center">
-        <div className="space-y-6">
-          <p
-            className="text-[36px] font-bold tracking-case text-tape-teal leading-[1.5] pt-20"
-            style={{
-              letterSpacing: "-0.011em",
-            }}
-          >
-            UGA Hacks is an annual hackathon organized by students at the
-            University of Georgia in Athens, Georgia. Hackathons are all about
-            dedicated people coming together to create something amazing in an
-            epic 36 - hour investigation.
-          </p>
-          <p
-            className="text-[36px] font-bold tracking-case text-tape-teal leading-[1.5] pt-10"
-            style={{
-              letterSpacing: "-0.011em",
-            }}
-          >
-            Cracking the case is the main objective, but that&apos;s not all
-            there is. We&apos;ll have mentors, free food, game competitions,
-            workshops, and more – even a session for anyone who still needs to
-            recruit their partner in crime.
-          </p>
+          <div className="mt-7 space-y-5 text-base leading-relaxed font-bold tracking-case text-tape-teal sm:mt-9 sm:space-y-6 sm:text-lg">
+            <AboutCopy />
+          </div>
+        </div>
+      </div>
+
+      <div className="relative hidden aspect-[1440/1024] w-full place-items-center overflow-hidden px-[7.5vw] py-[8vw] md:grid">
+        <Image
+          src="/What-Section-Background.png"
+          alt=""
+          fill
+          sizes="100vw"
+          className="pointer-events-none absolute inset-0 object-cover object-center"
+          aria-hidden="true"
+        />
+
+        <div className="relative z-10 mx-auto w-full max-w-[1150px] translate-y-[6vw] text-center">
+          <div className="space-y-6 text-xl leading-[1.5] font-bold tracking-case text-tape-teal lg:space-y-8 lg:text-2xl xl:space-y-10 xl:text-4xl">
+            <AboutCopy />
+          </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function AboutCopy() {
+  return (
+    <>
+      <p>
+        UGA Hacks is an annual hackathon organized by students at the
+        University of Georgia in Athens, Georgia. Hackathons are all about
+        dedicated people coming together to create something amazing in an epic
+        36 - hour investigation.
+      </p>
+      <p>
+        Cracking the case is the main objective, but that&apos;s not all there
+        is. We&apos;ll have mentors, free food, game competitions, workshops,
+        and more – even a session for anyone who still needs to recruit their
+        partner in crime.
+      </p>
+    </>
   );
 }
