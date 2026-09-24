@@ -19,11 +19,12 @@
   --shadow-brutal-flipped-lg: 0.5rem 0.5rem 0 0 var(--color-black);
 }
 
-/* Honour the OS-level "reduce motion" setting everywhere at once: the
+/* Honour the OS-level "reduce motion" setting for movement: the
    checkers marquee, hover scales, the accordion, and the carousel's smooth
-   scrolling all collapse to instant rather than being animated. */
+   scrolling all collapse to instant rather than being animated.
+   The hacker limit only changes lighting, so its glow keeps cycling. */
 @media (prefers-reduced-motion: reduce) {
-  *,
+  *:not(.hacker-limit-neon),
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
@@ -51,4 +52,36 @@
   -webkit-text-stroke-width: --value([length]);
   -webkit-text-stroke-color: --value(--color-*, [color]);
   paint-order: stroke fill;
+}
+
+.hacker-limit-neon {
+  color: #fff0fa;
+  text-shadow:
+    0 0 4px #fff,
+    0 0 12px #ffb3de,
+    0 0 24px #ff49b0,
+    0 0 40px #ff1493;
+  animation: hacker-limit-pulse 2s ease-in-out infinite;
+}
+
+@keyframes hacker-limit-pulse {
+  0%,
+  100% {
+    color: var(--color-pink-300);
+    text-shadow:
+      0 0 6px transparent,
+      0 0 14px transparent,
+      0 0 26px transparent,
+      0 0 44px transparent,
+      0 0 64px transparent;
+  }
+  50% {
+    color: #fff;
+    text-shadow:
+      0 0 6px #fff,
+      0 0 14px #fff0fa,
+      0 0 26px #ffb3de,
+      0 0 44px #ff49b0,
+      0 0 64px #ff1493;
+  }
 }

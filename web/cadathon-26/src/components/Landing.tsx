@@ -108,11 +108,14 @@ export default function Landing() {
           </li>
         </ul>
 
-        <p className="text-xl sm:text-2xl">
+        <div className="flex flex-col items-center gap-4 text-xl sm:text-2xl">
           <LinkButton href="https://mybyte.ugahacks.com/dashboard">
             Register Now!
           </LinkButton>
-        </p>
+          <strong className="hacker-limit-neon text-center font-tagline font-black uppercase italic">
+            200 Hacker Limit
+          </strong>
+        </div>
       </header>
     </div>
   );
