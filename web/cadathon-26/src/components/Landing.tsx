@@ -113,7 +113,7 @@ export default function Landing() {
             Register Now!
           </LinkButton>
           <strong className="hacker-limit-neon text-center font-tagline font-black uppercase italic">
-            200 Hacker Limit
+            200 Registrant Limit
           </strong>
         </div>
       </header>
