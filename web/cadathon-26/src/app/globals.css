@@ -54,6 +54,15 @@
   paint-order: stroke fill;
 }
 
+/* Logos stay flat at rest; the offset shadow only appears as hover feedback. */
+.logo-pop {
+  filter: grayscale(1);
+}
+
+.group:hover .logo-pop {
+  filter: grayscale(0) drop-shadow(-5px 7px 4px rgb(0 0 0 / 0.48));
+}
+
 .hacker-limit-neon {
   color: #fff0fa;
   text-shadow:

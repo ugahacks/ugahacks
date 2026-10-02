@@ -11,6 +11,10 @@ export interface Logo {
    *  until this is supplied. Color logos are desaturated in CSS, so there's
    *  no need to grayscale the file itself. */
   src?: string;
+  /** Rendered dimensions. Each logo keeps its own natural footprint while the
+   *  wall supplies a consistent gap between marks. */
+  width?: number;
+  height?: number;
   /** Makes the slot a link, which is what enables the hover scale. */
   href?: string;
 }
@@ -26,28 +30,21 @@ interface Props {
   anchor?: ReactNode;
 }
 
-// Relative: the fixed size here is what an <Image fill> logo below sizes
-// itself against.
-const SLOT =
-  "relative flex h-24 w-40 items-center justify-center rounded-lg sm:h-28 sm:w-48";
+const SLOT = "relative flex items-center justify-center rounded-lg";
 const PLACEHOLDER =
   "border-2 border-dashed border-white/40 bg-black/20 px-3 text-center font-heading text-xs leading-tight font-bold tracking-wide text-white/80 uppercase";
-const INTERACTIVE =
-  "group transition duration-200 hover:scale-105 hover:drop-shadow-lg hover:drop-shadow-black/40";
+const INTERACTIVE = "group transition duration-200 hover:scale-105";
 
-function LogoSlot({ name, abbr, src, href }: Logo) {
-  // `src` is a runtime public/ path, not a build-time import, so its
-  // intrinsic size isn't known -- `fill` (sized against SLOT's own fixed
-  // dimensions, see above) plus object-contain reproduces the same
-  // "shrink to fit, keep the logo's own aspect ratio" behavior the plain
-  // <img>'s max-h-full/max-w-full had.
+function LogoSlot({ name, abbr, src, href, width = 192, height = 112 }: Logo) {
   const body = src ? (
     <Image
       src={src}
       alt={name ?? ""}
-      fill
-      sizes="(min-width: 640px) 12rem, 10rem"
-      className="object-contain grayscale transition duration-200 group-hover:grayscale-0"
+      width={width}
+      height={height}
+      sizes={`${width}px`}
+      className="logo-pop h-auto max-w-full object-contain transition duration-200"
+      style={{ height: "auto" }}
     />
   ) : (
     (abbr ?? name ?? "Your logo here")
@@ -55,7 +52,11 @@ function LogoSlot({ name, abbr, src, href }: Logo) {
 
   // Every slot gets the hover treatment, so placeholders preview the effect
   // the real logos will have once their links are filled in.
-  const className = [SLOT, src ? "" : PLACEHOLDER, INTERACTIVE]
+  const className = [
+    SLOT,
+    src ? "" : `h-24 w-40 sm:h-28 sm:w-48 ${PLACEHOLDER}`,
+    INTERACTIVE,
+  ]
     .filter(Boolean)
     .join(" ");
 
@@ -95,7 +96,7 @@ export default function LogoWall({
           {heading}
         </h1>
 
-        <ul className="mx-auto flex max-w-2xl flex-wrap justify-center gap-6 sm:gap-8">
+        <ul className="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-x-8 gap-y-10 sm:gap-x-12 sm:gap-y-12">
           {logos.map((logo, i) => (
             <li key={logo.name ?? i}>
               <LogoSlot {...logo} />
