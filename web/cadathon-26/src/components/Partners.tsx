@@ -1,18 +1,28 @@
 import LogoWall, { Logo } from "./LogoWall";
 import TrackAnchor from "./track/TrackAnchor";
 
-/**
- * Partner orgs. Logos render as named placeholder slots until each org's
- * media kit lands -- drop the file in public/partners/ and set `src`, plus
- * `href` to make the slot a link.
- */
 const PARTNERS: Logo[] = [
-  { name: "Biomedical Engineering Society", abbr: "BMES" },
-  { name: "UGA Motorsports" },
-  { name: "American Society of Mechanical Engineers", abbr: "ASME" },
-  { name: "National Society of Black Engineers", abbr: "NSBE" },
-  { name: "Society of Hispanic Professional Engineers", abbr: "SHPE" },
-  { name: "Society of Women Engineers", abbr: "SWE" },
+  {
+    name: "UGA Motorsports",
+    src: "/partners/uga-motorsports-classic.png",
+    href: "https://www.uga-motorsports.com/",
+    width: 190,
+    height: 56,
+  },
+  {
+    name: "American Society of Mechanical Engineers",
+    src: "/partners/asme-black.svg",
+    href: "https://www.asme.org/",
+    width: 190,
+    height: 114,
+  },
+  {
+    name: "National Society of Black Engineers",
+    src: "/partners/nsbe.svg",
+    href: "https://www.nsbe.org/",
+    width: 110,
+    height: 124,
+  },
 ];
 
 export default function Partners() {

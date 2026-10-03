@@ -1,12 +1,22 @@
 import LinkButton from "./LinkButton";
 import LogoWall, { Logo } from "./LogoWall";
 
-/**
- * No sponsors are confirmed yet, so these render as empty placeholder slots.
- * Fill in `name`, `src`, and `href` per sponsor as they're signed -- adding
- * `href` is what turns a slot into a link with the hover scale.
- */
-const SPONSORS: Logo[] = [{}, {}, {}, {}, {}];
+const SPONSORS: Logo[] = [
+  {
+    name: "University of Georgia School of Computing",
+    src: "/sponsors/uga-school-of-computing-mono.png",
+    href: "https://computing.uga.edu/",
+    width: 280,
+    height: 92,
+  },
+  {
+    name: "O'Reilly Media",
+    src: "/sponsors/oreilly.svg",
+    href: "https://www.oreilly.com/",
+    width: 230,
+    height: 44,
+  },
+];
 
 /** TODO: point at the sponsorship packet once it exists. */
 const SPONSORSHIP_PACKET = "#";
