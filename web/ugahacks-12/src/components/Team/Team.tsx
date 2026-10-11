@@ -51,12 +51,11 @@ export default function Team() {
 
           <div className="relative mt-10 aspect-[610/560] w-full max-w-[410px] sm:mt-12 sm:max-w-[610px] lg:mt-0 lg:max-w-[610px]">
             <Image
-              src="/Shape with text-1.png"
-              alt=""
+              src="/ugahacks-team-picture.jpg"
+              alt="The UGA Hacks 12 Team"
               fill
               priority
               className="object-contain"
-              aria-hidden="true"
             />
             <p className="absolute inset-x-0 bottom-[7%] text-center font-heading text-[11px] font-bold tracking-case text-paper sm:text-[15px] lg:text-[17px]">
               THE UGA HACKS 12 TEAM
