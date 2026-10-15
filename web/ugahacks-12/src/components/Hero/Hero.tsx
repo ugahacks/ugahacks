@@ -42,7 +42,7 @@ export default function Hero() {
         aria-label="Register for UGAHacks 12"
         className="absolute top-[80.2%] left-[5.2%] z-20 h-[13.1%] w-[38.5%] rounded-card outline-offset-4 focus-visible:outline-4 focus-visible:outline-gold sm:left-[10.2%] sm:w-[34.2%] md:left-[12.3%] md:w-[32.4%]"
       >
-        <span className="sr-only">Register here</span>
+        <span className="sr-only">Register for UGAHacks 12</span>
       </a>
     </section>
   );
