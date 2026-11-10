@@ -52,7 +52,7 @@ function AboutCopy() {
         UGA Hacks is an annual hackathon organized by students at the
         University of Georgia in Athens, Georgia. Hackathons are all about
         dedicated people coming together to create something amazing in an epic
-        36 - hour investigation.
+        48-hour investigation.
       </p>
       <p>
         Cracking the case is the main objective, but that&apos;s not all there

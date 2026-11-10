@@ -11,8 +11,10 @@
  * with this -- an open copy question rather than a schedule question,
  * because the day frames name no calendar dates at all.
  *
- * The programming also argues for 36 hours over 48. Hacking runs from Friday
- * evening to the Sunday 8:00 AM submission deadline, which is about 36 hours.
+ * The site bills the event as 48 hours, counting the full Friday-to-Sunday
+ * weekend. Hacking itself runs from Friday evening to the Sunday 8:00 AM
+ * submission deadline, so don't read the 48 as the length of the hacking
+ * window.
  *
  * `start` and `end` are ISO local timestamps, with no `Z` or offset.
  * `src/lib/ics.ts` pairs them with a static `TZID:America/New_York`
